@@ -42,8 +42,6 @@ pip install -r requirement.txt
 pip install --no-cache-dir  torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install --no-cache-dir torch_geometric
 pip install --no-cache-dir pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-1.13.1%2Bcu116.html
-wget https://zenodo.org/record/8145391/files/data.zip
-unzip data.zip 
 ```
 ** NOTE: please make sure to change the version to match the version of your GPU/CPU machine exactly.
 
