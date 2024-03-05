@@ -142,7 +142,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
 
     print("Using: ", device)
 
-    drug, cell, gene, edge_index, train_drug, train_cell, val_drug, val_cell = [
+    drug, cell, gene, edge_index, train_drug, train_cell, val_drug, val_cell, train_labels, val_labels = [
         x.to(device) if torch.is_tensor(x) else x for x in data
     ]
 
@@ -270,7 +270,7 @@ def eval(model, data, device=None):
     if not device:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    drug, cell, gene, edge_index, test_drug, test_cell = [
+    drug, cell, gene, edge_index, test_drug, test_cell, test_labels = [
         x.to(device) if torch.is_tensor(x) else x for x in data
     ]
 
