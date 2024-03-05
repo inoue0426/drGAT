@@ -7,6 +7,7 @@ If you have any quesionts, feel free to make an issue to https://github.com/inou
 """
 
 import random
+import subprocess
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -215,6 +216,13 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
             if val_acc > best_val_acc:
                 best_val_acc = val_acc
                 torch.save(model, "model_{}.pt".format(epoch))
+
+                try:
+                    subprocess.run(["rm", "-rf", f"model_{tmp}.pt"], check=True)
+                except subprocess.CalledProcessError:
+                    pass
+
+                tmp = epoch
                 early_stopping_counter = 0
             else:
                 early_stopping_counter += 1
