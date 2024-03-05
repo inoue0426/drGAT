@@ -138,7 +138,11 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
 
     print("Using: ", device)
 
-    drug, cell, gene, edge_index, train_data, val_data, test_data = [x.to(device) for x in data]
+    drug, cell, gene, edge_index, train_data, val_data = [x.to(device) for x in data]
+    train_drug = train_data.values[:, 0].to(device)
+    train_cell = train_data.values[:, 1].to(device)
+    val_drug = val_data.values[:, 0].to(device)
+    val_cell = val_data.values[:, 1].to(device)
 
     if not params:
         params = {
@@ -264,20 +268,14 @@ def eval(model, data, device=None):
     if not device:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    x, adj, test_drug, test_cell, test_labels = data
-    x = x.to(device)
-    adj = adj.to(device)
-    test_labels = test_labels.to(device)
+    drug, cell, gene, edge_index, test = [x.to(device) for x in data]
+    test_drug = test_data.values[:, 0].to(device)
+    test_cell = test_data.values[:, 1].to(device)
 
     model.eval()
     testid_loss = 0.0
     with torch.no_grad():
-        outputs, _ = model(
-            x,
-            adj,
-            test_drug,
-            test_cell,
-        )
+        outputs, _ =  model(drug, cell, gene, edge_index, test_drug, test_cell)
 
     predict = torch.round(outputs).squeeze()
 
