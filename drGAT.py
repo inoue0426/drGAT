@@ -14,8 +14,13 @@ import pandas as pd
 import torch
 import torch.nn as nn
 import torch_geometric
-from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
-                             precision_score, recall_score)
+from sklearn.metrics import (
+    accuracy_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+)
 from torch.nn import BatchNorm1d, Dropout, Linear, Module, MSELoss
 from torch.nn.functional import relu, sigmoid
 from torch_geometric.data import Data
@@ -138,11 +143,9 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
 
     print("Using: ", device)
 
-    drug, cell, gene, edge_index, train_data, val_data = [x.to(device) for x in data]
-    train_drug = train_data.values[:, 0].to(device)
-    train_cell = train_data.values[:, 1].to(device)
-    val_drug = val_data.values[:, 0].to(device)
-    val_cell = val_data.values[:, 1].to(device)
+    drug, cell, gene, edge_index, train_drug, train_cell, val_drug, val_cell = [
+        x.to(device) for x in data
+    ]
 
     if not params:
         params = {
@@ -268,14 +271,12 @@ def eval(model, data, device=None):
     if not device:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    drug, cell, gene, edge_index, test = [x.to(device) for x in data]
-    test_drug = test_data.values[:, 0].to(device)
-    test_cell = test_data.values[:, 1].to(device)
+    drug, cell, gene, edge_index, test_drug, test_cell = [x.to(device) for x in data]
 
     model.eval()
     testid_loss = 0.0
     with torch.no_grad():
-        outputs, _ =  model(drug, cell, gene, edge_index, test_drug, test_cell)
+        outputs, _ = model(drug, cell, gene, edge_index, test_drug, test_cell)
 
     predict = torch.round(outputs).squeeze()
 
