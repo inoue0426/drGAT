@@ -25,8 +25,7 @@ torch-spline-conv==1.2.2+pt113cu116
 
 ## Environment
 
-Our experiment was conducted on Ubuntu with an RTX 2080, but it also works on an M1 Mac. To use this model, please adjust the requirements to suit your environment, paying special attention to the PyTorch-related libraries. 
-**  Please note that as of October 8, 2023, this model doesn't support GPU on M1 Mac due to compatibility issues with PyTorch Geometric. 
+Our experiment was conducted on Ubuntu with an NVIDIA A100 Tensor Core GPU.
 
 ## Installation from GitHub
 
@@ -46,7 +45,7 @@ pip install --no-cache-dir pyg_lib torch_scatter torch_sparse torch_cluster torc
 ## Usage
 
 We offer a sample notebook. [Tutorial](https://github.com/inoue0426/drGAT/blob/main/Tutorial.ipynb)  
-If you just want to try the model evaluation, you can skip the Train model section
+If you want to try the model evaluation, you can skip the Train model section.
 
 After preprocessing, you can use our model as follows:
 
