@@ -138,11 +138,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
 
     print("Using: ", device)
 
-    x, adj, train_drug, train_cell, train_labels, val_drug, val_cell, val_labels = data
-    x = x.to(device)
-    adj = adj.to(device)
-    train_labels = train_labels.to(device)
-    val_labels = val_labels.to(device)
+    drug, cell, gene, edge_index, train_data, val_data, test_data = [x.to(device) for x in data]
 
     if not params:
         params = {
