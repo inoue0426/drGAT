@@ -142,9 +142,18 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
 
     print("Using: ", device)
 
-    drug, cell, gene, edge_index, train_drug, train_cell, val_drug, val_cell, train_labels, val_labels = [
-        x.to(device) if torch.is_tensor(x) else x for x in data
-    ]
+    (
+        drug,
+        cell,
+        gene,
+        edge_index,
+        train_drug,
+        train_cell,
+        val_drug,
+        val_cell,
+        train_labels,
+        val_labels,
+    ) = [x.to(device) if torch.is_tensor(x) else x for x in data]
 
     if not params:
         params = {
@@ -205,7 +214,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
 
             if val_acc > best_val_acc:
                 best_val_acc = val_acc
-                torch.save(model, "{}.pt".format(name))
+                torch.save(model, "model_{}.pt".format(epoch))
                 early_stopping_counter = 0
             else:
                 early_stopping_counter += 1
