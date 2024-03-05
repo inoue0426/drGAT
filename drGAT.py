@@ -24,8 +24,7 @@ from sklearn.metrics import (
 from torch.nn import BatchNorm1d, Dropout, Linear, Module, MSELoss
 from torch.nn.functional import relu, sigmoid
 from torch_geometric.data import Data
-from torch_geometric.nn import GATConv, GraphNorm
-from torch_sparse import SparseTensor
+from torch_geometric.nn import GATv2Conv, GraphNorm
 from tqdm import tqdm
 
 
