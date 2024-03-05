@@ -204,6 +204,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
 
         model.eval()
         valid_loss = 0.0
+        tmp = -1
 
         with torch.no_grad():
             outputs, _ = model(drug, cell, gene, edge_index, val_drug, val_cell)
@@ -217,11 +218,8 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
                 best_val_acc = val_acc
                 torch.save(model, "model_{}.pt".format(epoch))
 
-                try:
+                if tmp >= 0:
                     subprocess.run(["rm", "-rf", f"model_{tmp}.pt"], check=True)
-                except subprocess.CalledProcessError:
-                    pass
-
                 tmp = epoch
                 early_stopping_counter = 0
             else:
