@@ -1,1 +1,64 @@
-# new
+# drGAT
+
+[![DOI)](https://zenodo.org/badge/DOI/10.5281/zenodo.8145391.svg)](https://doi.org/10.5281/zenodo.8145391)
+
+![](drGAT.png)
+
+This is the official implementation for **drGAT: Attention-Guided Gene Assessment for Drug Response in Drug-Cell-Gene Heterogeneous Network**.  
+
+This model is created for the purpose of understanding how genes influence Drug Response using Graph Attention Networks (GAT) on heterogeneous networks of drugs, cells, and genes. It predicts Drug Response based on the attention coefficients generated during this process. This has been implemented in Python.
+
+
+
+## Requirement
+
+```
+numpy==1.23.5
+pandas==2.0.3
+matplotlib==3.7.1
+optuna==3.2.0
+torch==1.13.1+cu116
+torch-cluster==1.6.1+pt113cu116
+torch-geometric==2.3.1
+torch-scatter==2.1.1+pt113cu116
+torch-sparse==0.6.17+pt113cu116
+torch-spline-conv==1.2.2+pt113cu116
+```
+
+## Environment
+
+Our experiment was conducted on Ubuntu with an RTX 2080, but it also works on an M1 Mac. To use this model, please adjust the requirements to suit your environment, paying special attention to the PyTorch-related libraries. 
+**  Please note that as of October 8, 2023, this model doesn't support GPU on M1 Mac due to compatibility issues with PyTorch Geometric. 
+
+## Installation from GitHub
+
+```shell
+git clone git@github.com:inoue0426/drGAT.git
+cd drGAT
+conda create --name drGAT python=3.10 -y
+conda activate drGAT
+pip install -r requirement.txt
+# Please make sure to change the version to match the version of your GPU/CPU machine exactly.
+pip install --no-cache-dir  torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
+pip install --no-cache-dir torch_geometric
+pip install --no-cache-dir pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-1.13.1%2Bcu116.html
+wget https://zenodo.org/record/8145391/files/data.zip
+unzip data.zip 
+```
+** NOTE: please make sure to change the version to match the version of your GPU/CPU machine exactly.
+
+## Usage
+
+We offer a sample notebook. [Tutorial](https://github.com/inoue0426/drGAT/blob/main/Tutorial.ipynb)  
+If you just want to try the model evaluation, you can skip the Train model section
+
+After preprocessing, you can use our model as follows:
+
+```python
+model = torch.load('model.pt')
+model = model.to(device)
+drGAT.eval(model, data)
+```
+
+## Help
+If you have any questions or require assistance using MAGIC, please feel free to make issues on https://github.com/inoue0426/drGAT/
