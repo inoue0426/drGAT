@@ -1,12 +1,10 @@
 # drGAT
 
-[![DOI)](https://zenodo.org/badge/DOI/10.5281/zenodo.8145391.svg)](https://doi.org/10.5281/zenodo.8145391)
-
 ![](drGAT.png)
 
 This is the official implementation for **drGAT: Attention-Guided Gene Assessment for Drug Response in Drug-Cell-Gene Heterogeneous Network**.  
 
-This model is created for the purpose of understanding how genes influence Drug Response using Graph Attention Networks (GAT) on heterogeneous networks of drugs, cells, and genes. It predicts Drug Response based on the attention coefficients generated during this process. This has been implemented in Python.
+This model is created to understand how genes influence Drug Response using Graph Attention Networks (GAT) on heterogeneous networks of drugs, cells, and genes. It predicts Drug Response based on the attention coefficients generated during this process. This has been implemented in Python.
 
 
 
