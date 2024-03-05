@@ -1,0 +1,1373 @@
+,NSC,drug,gene,num,num in journals
+0,740,METHOTREXATE,ATIC,56,10
+1,740,METHOTREXATE,TYMS,63,11
+2,740,METHOTREXATE,DHFR,300,38
+3,740,METHOTREXATE,MIR330,0,0
+4,740,METHOTREXATE,SNORD16,0,0
+5,752,6-THIOGUANINE,ZAP70,0,0
+6,752,6-THIOGUANINE,PGR,1,0
+7,752,6-THIOGUANINE,EPHB6,0,0
+8,752,6-THIOGUANINE,LCK,0,0
+9,752,6-THIOGUANINE,adenosine deaminase,11,1
+10,755,6-MERCAPTOPURINE,HPRT1,4,0
+11,755,6-MERCAPTOPURINE,PPAT,0,0
+12,755,6-MERCAPTOPURINE,IMPDH1,0,0
+13,755,6-MERCAPTOPURINE,CHI3L1,0,0
+14,755,6-MERCAPTOPURINE,SNORD83B,0,0
+15,762,Nitrogen mustard,PGR,0,0
+16,762,Nitrogen mustard,ZAP70,0,0
+17,762,Nitrogen mustard,adenosine deaminase,2,0
+18,762,Nitrogen mustard,LCK,0,0
+19,762,Nitrogen mustard,UGT1A1,0,0
+20,1390,Allopurinol,XDH,0,0
+21,1390,Allopurinol,DEFA1,0,0
+22,1390,Allopurinol,SNORD16,0,0
+23,1390,Allopurinol,MIR624,0,0
+24,1390,Allopurinol,HBG2,0,0
+25,1895,GUANAZOLE,RNASE1,0,0
+26,1895,GUANAZOLE,ALDH2,0,0
+27,1895,GUANAZOLE,GAMT,0,0
+28,1895,GUANAZOLE,DLG4,0,0
+29,1895,GUANAZOLE,MIR5699,0,0
+30,3053,Actinomycin D,TOP1,0,0
+31,3053,Actinomycin D,TOP2A,0,0
+32,3053,Actinomycin D,MIR6807,0,0
+33,3053,Actinomycin D,PLA2G2A,0,0
+34,3053,Actinomycin D,SNORD83B,0,0
+35,3053,Actinomycin D,TOP2,0,0
+36,3088,Chlorambucil,PGR,0,0
+37,3088,Chlorambucil,ZAP70,0,0
+38,3088,Chlorambucil,LCK,1,0
+39,3088,Chlorambucil,adenosine deaminase,0,0
+40,3088,Chlorambucil,PRKCQ,0,0
+41,6396,Thiotepa,PGR,0,0
+42,6396,Thiotepa,ZAP70,0,0
+43,6396,Thiotepa,LCK,0,0
+44,6396,Thiotepa,adenosine deaminase,1,0
+45,6396,Thiotepa,EPHB6,0,0
+46,8806,Melphalan,PGR,8,0
+47,8806,Melphalan,ZAP70,0,0
+48,8806,Melphalan,adenosine deaminase,2,1
+49,8806,Melphalan,EPHB6,0,0
+50,8806,Melphalan,UGT1A1,0,0
+51,9706,Triethylenemelamine,PGR,0,0
+52,9706,Triethylenemelamine,ZAP70,0,0
+53,9706,Triethylenemelamine,EPHB6,0,0
+54,9706,Triethylenemelamine,LCK,0,0
+55,9706,Triethylenemelamine,adenosine deaminase,0,0
+56,14229,Acrichine,PGR,0,0
+57,14229,Acrichine,ZAP70,0,0
+58,14229,Acrichine,LCK,0,0
+59,14229,Acrichine,EPHB6,0,0
+60,14229,Acrichine,adenosine deaminase,2,0
+61,19893,Fluorouracil,TYMS,0,0
+62,19893,Fluorouracil,PLA2G2A,2,0
+63,19893,Fluorouracil,SNORD88B,0,0
+64,19893,Fluorouracil,MIR1231,0,0
+65,19893,Fluorouracil,CHI3L1,0,0
+66,24559,Mithramycin,ZAP70,0,0
+67,24559,Mithramycin,PGR,0,0
+68,24559,Mithramycin,EPHB6,0,0
+69,24559,Mithramycin,adenosine deaminase,0,0
+70,24559,Mithramycin,LCK,0,0
+71,25154,Pipobroman,PGR,0,0
+72,25154,Pipobroman,ZAP70,0,0
+73,25154,Pipobroman,EPHB6,0,0
+74,25154,Pipobroman,adenosine deaminase,0,0
+75,25154,Pipobroman,LCK,0,0
+76,26271,Cyclophosphamide,SNORD83B,0,0
+77,26271,Cyclophosphamide,MIR330,0,0
+78,26271,Cyclophosphamide,MIR5699,0,0
+79,26271,Cyclophosphamide,CSF3,0,0
+80,26271,Cyclophosphamide,DEFA1,0,0
+81,26980,Mitomycin,PGR,0,0
+82,26980,Mitomycin,ZAP70,0,0
+83,26980,Mitomycin,EPHB6,0,0
+84,26980,Mitomycin,adenosine deaminase,3,0
+85,26980,Mitomycin,RET,0,0
+86,27640,Floxuridine,TYMS,5,0
+87,27640,Floxuridine,CSF3,0,0
+88,27640,Floxuridine,HBG2,0,0
+89,27640,Floxuridine,MIR641,0,0
+90,27640,Floxuridine,SNORD16,0,0
+91,32065,Hydroxyurea,RRM1,0,0
+92,32065,Hydroxyurea,SNORD16,0,0
+93,32065,Hydroxyurea,RNASE2,0,0
+94,32065,Hydroxyurea,KRT14,0,0
+95,32065,Hydroxyurea,MIR641,0,0
+96,34462,Uracil mustard,PGR,0,0
+97,34462,Uracil mustard,ZAP70,0,0
+98,34462,Uracil mustard,EPHB6,0,0
+99,34462,Uracil mustard,LCK,0,0
+100,34462,Uracil mustard,adenosine deaminase,0,0
+101,38721,Mitotane,PGR,0,0
+102,38721,Mitotane,ESR1,0,0
+103,38721,Mitotane,FDX1,0,0
+104,38721,Mitotane,AR,4,2
+105,38721,Mitotane,CYP11B1,11,1
+106,45388,DACARBAZINE,PGD,0,0
+107,45388,DACARBAZINE,POLA2,0,0
+108,45388,DACARBAZINE,MIR641,0,0
+109,45388,DACARBAZINE,SNORD16,0,0
+110,45388,DACARBAZINE,HBG1,0,0
+111,51143,Pyrazoloimidazole,PGR,0,0
+112,51143,Pyrazoloimidazole,ZAP70,0,0
+113,51143,Pyrazoloimidazole,EPHB6,0,0
+114,51143,Pyrazoloimidazole,LCK,0,0
+115,51143,Pyrazoloimidazole,adenosine deaminase,3,0
+116,56410,PORFIROMYCIN,PGR,0,0
+117,56410,PORFIROMYCIN,ZAP70,0,0
+118,56410,PORFIROMYCIN,EPHB6,0,0
+119,56410,PORFIROMYCIN,LCK,0,0
+120,56410,PORFIROMYCIN,adenosine deaminase,0,0
+121,63878,Cytarabine,POLB,2,0
+122,63878,Cytarabine,SNORD83B,0,0
+123,63878,Cytarabine,DEFA3,0,0
+124,63878,Cytarabine,CHI3L1,0,0
+125,63878,Cytarabine,MIR455,0,0
+126,63984,Cordycepin,PGR,0,0
+127,63984,Cordycepin,ZAP70,0,0
+128,63984,Cordycepin,EPHB6,0,0
+129,63984,Cordycepin,LCK,0,0
+130,63984,Cordycepin,adenosine deaminase,48,5
+131,71261,Beta-Thioguanine Deoxyriboside,ZAP70,0,0
+132,71261,Beta-Thioguanine Deoxyriboside,PGR,0,0
+133,71261,Beta-Thioguanine Deoxyriboside,LCK,0,0
+134,71261,Beta-Thioguanine Deoxyriboside,adenosine deaminase,0,0
+135,71261,Beta-Thioguanine Deoxyriboside,EPHB6,0,0
+136,71795,ELLIPTICINE,PGR,0,0
+137,71795,ELLIPTICINE,ZAP70,0,0
+138,71795,ELLIPTICINE,LCK,0,0
+139,71795,ELLIPTICINE,EPHB6,0,0
+140,71795,ELLIPTICINE,adenosine deaminase,0,0
+141,71851,A-TGdR,PGR,0,0
+142,71851,A-TGdR,ZAP70,0,0
+143,71851,A-TGdR,EPHB6,0,0
+144,71851,A-TGdR,LCK,0,0
+145,71851,A-TGdR,UGT1A1,0,0
+146,73754,Fluorodopan,ZAP70,0,0
+147,73754,Fluorodopan,PGR,0,0
+148,73754,Fluorodopan,EPHB6,0,0
+149,73754,Fluorodopan,adenosine deaminase,0,0
+150,73754,Fluorodopan,LCK,0,0
+151,77213,Procarbazine,MAOA,2,0
+152,77213,Procarbazine,PLA2G2A,0,0
+153,77213,Procarbazine,MIR330,0,0
+154,77213,Procarbazine,MIR6728,0,0
+155,77213,Procarbazine,MMP3,0,0
+156,79037,Lomustine,STMN4,0,0
+157,79037,Lomustine,HBG1,0,0
+158,79037,Lomustine,PRTN3,0,0
+159,79037,Lomustine,MIR6807,0,0
+160,79037,Lomustine,PLA2G2A,0,0
+161,82151,Daunorubicin,TOP2B,21,2
+162,82151,Daunorubicin,TOP2A,80,12
+163,82151,Daunorubicin,MIR2278,0,0
+164,82151,Daunorubicin,SERPINA6,1,0
+165,82151,Daunorubicin,KRT14,0,0
+166,82151,Daunorubicin,TOP2,300,27
+167,83142,Daunorubicin,TOP2B,21,2
+168,83142,Daunorubicin,TOP2A,80,12
+169,83142,Daunorubicin,MIR455,0,0
+170,83142,Daunorubicin,MIR3198-1,0,0
+171,83142,Daunorubicin,KRT14,0,0
+172,83142,Daunorubicin,TOP2,300,0
+173,85998,STREPTOZOCIN,SLC2A2,37,6
+174,85998,STREPTOZOCIN,CHI3L1,0,0
+175,85998,STREPTOZOCIN,MIR2278,0,0
+176,85998,STREPTOZOCIN,MIR6807,0,0
+177,85998,STREPTOZOCIN,PLA2G2A,0,0
+178,89201,Estramustine,ESR1,0,0
+179,89201,Estramustine,MAP2,10,0
+180,89201,Estramustine,MAP1A,1,0
+181,89201,Estramustine,ESR2,0,0
+182,89201,Estramustine,MPO,0,0
+183,94600,CAMPTOTHECIN,TOP1,300,28
+184,94600,CAMPTOTHECIN,MPO,14,1
+185,94600,CAMPTOTHECIN,PRG2,0,0
+186,94600,CAMPTOTHECIN,MIR330,0,0
+187,94600,CAMPTOTHECIN,SNORD16,0,0
+188,95382,Camptothecin Derivative,PGR,2,0
+189,95382,Camptothecin Derivative,ZAP70,0,0
+190,95382,Camptothecin Derivative,adenosine deaminase,0,0
+191,95382,Camptothecin Derivative,EPHB6,0,0
+192,95382,Camptothecin Derivative,LCK,0,0
+193,95441,METHYL CCNU,ZAP70,0,0
+194,95441,METHYL CCNU,PGR,0,0
+195,95441,METHYL CCNU,adenosine deaminase,0,0
+196,95441,METHYL CCNU,EPHB6,0,0
+197,95441,METHYL CCNU,LCK,0,0
+198,95466,PCNU,PGR,0,0
+199,95466,PCNU,ZAP70,0,0
+200,95466,PCNU,EPHB6,0,0
+201,95466,PCNU,adenosine deaminase,0,0
+202,95466,PCNU,RET,0,0
+203,95678,3-HP,ZAP70,0,0
+204,95678,3-HP,PGR,0,0
+205,95678,3-HP,LCK,0,0
+206,95678,3-HP,EPHB6,0,0
+207,95678,3-HP,adenosine deaminase,0,0
+208,100880,Camptothecin,TOP1,300,28
+209,100880,Camptothecin,PLA2G2A,0,0
+210,100880,Camptothecin,SNORD88B,0,0
+211,100880,Camptothecin,MIR658,0,0
+212,100880,Camptothecin,MIR6126,0,0
+213,102627,Yoshi 864,PGR,0,0
+214,102627,Yoshi 864,ZAP70,0,0
+215,102627,Yoshi 864,EPHB6,0,0
+216,102627,Yoshi 864,adenosine deaminase,0,0
+217,102627,Yoshi 864,LCK,0,0
+218,104800,Mitozolomide,PGR,0,0
+219,104800,Mitozolomide,EPHB6,0,0
+220,104800,Mitozolomide,LCK,0,0
+221,104800,Mitozolomide,ZAP70,0,0
+222,104800,Mitozolomide,adenosine deaminase,0,0
+223,105014,Cladribine,POLE2,0,0
+224,105014,Cladribine,POLE4,0,0
+225,105014,Cladribine,POLE3,0,0
+226,105014,Cladribine,RRM2B,0,0
+227,105014,Cladribine,PNP,3,0
+228,105132,Deoxycamptothecin,PGR,0,0
+229,105132,Deoxycamptothecin,ZAP70,0,0
+230,105132,Deoxycamptothecin,adenosine deaminase,0,0
+231,105132,Deoxycamptothecin,EPHB6,0,0
+232,105132,Deoxycamptothecin,LCK,0,0
+233,107124,Camptothecin Derivative,ZAP70,0,0
+234,107124,Camptothecin Derivative,PGR,2,0
+235,107124,Camptothecin Derivative,EPHB6,0,0
+236,107124,Camptothecin Derivative,RET,8,1
+237,107124,Camptothecin Derivative,LCK,2,0
+238,107392,5-HP,PGR,0,0
+239,107392,5-HP,ZAP70,0,0
+240,107392,5-HP,LCK,0,0
+241,107392,5-HP,EPHB6,0,0
+242,107392,5-HP,adenosine deaminase,0,0
+243,109724,Ifosfamide,NR1I2,0,0
+244,109724,Ifosfamide,PLA2G2A,0,0
+245,109724,Ifosfamide,MPO,0,0
+246,109724,Ifosfamide,MIR1231,0,0
+247,109724,Ifosfamide,CHI3L1,0,0
+248,111533,Methoxycamptothecin,ZAP70,0,0
+249,111533,Methoxycamptothecin,PGR,0,0
+250,111533,Methoxycamptothecin,EPHB6,0,0
+251,111533,Methoxycamptothecin,adenosine deaminase,0,0
+252,111533,Methoxycamptothecin,LCK,0,0
+253,118218,Fludarabine,DCK,22,1
+254,118218,Fludarabine,POLA1,0,0
+255,118218,Fludarabine,RRM1,0,0
+256,118218,Fludarabine,MPO,1,1
+257,118218,Fludarabine,CSF3,0,0
+258,118994,Inosine dialdehyde,ZAP70,0,0
+259,118994,Inosine dialdehyde,PGR,0,0
+260,118994,Inosine dialdehyde,LCK,0,0
+261,118994,Inosine dialdehyde,adenosine deaminase,0,0
+262,118994,Inosine dialdehyde,EPHB6,0,0
+263,122819,Teniposide,TOP2B,2,0
+264,122819,Teniposide,NOLC1,0,0
+265,122819,Teniposide,TOP1,0,0
+266,122819,Teniposide,TOP2A,6,2
+267,122819,Teniposide,MIR6807,0,0
+268,122819,Teniposide,TOP2,198,29
+269,123127,Doxorubicin,DCK,20,1
+270,123127,Doxorubicin,POLA1,0,0
+271,123127,Doxorubicin,RRM1,8,0
+272,123127,Doxorubicin,MIR641,0,0
+273,123127,Doxorubicin,PRTN3,0,0
+274,124463,Fludarabine,TOP2A,0,0
+275,124463,Fludarabine,SNORD88B,0,0
+276,124463,Fludarabine,PLA2G2A,0,0
+277,124463,Fludarabine,MIR330,0,0
+278,124463,Fludarabine,TYROBP,0,0
+279,124463,Fludarabine,TOP2,4,1
+280,125066,Bleomycin,DNMT3A,0,0
+281,125066,Bleomycin,DNMT3B,1,0
+282,125066,Bleomycin,DNMT1,0,0
+283,125066,Bleomycin,HDAC1,5,1
+284,125066,Bleomycin,MIR2278,0,0
+285,126771,Dichloroallyl lawsone,PGR,0,0
+286,126771,Dichloroallyl lawsone,ZAP70,0,0
+287,126771,Dichloroallyl lawsone,EPHB6,0,0
+288,126771,Dichloroallyl lawsone,LCK,0,0
+289,126771,Dichloroallyl lawsone,RET,0,0
+290,127716,DECITABINE,PGR,5,0
+291,127716,DECITABINE,ZAP70,3,2
+292,127716,DECITABINE,EPHB6,1,0
+293,127716,DECITABINE,adenosine deaminase,2,1
+294,127716,DECITABINE,LCK,2,2
+295,132313,Dianhydrogalactitol,PGR,0,0
+296,132313,Dianhydrogalactitol,ZAP70,0,0
+297,132313,Dianhydrogalactitol,EPHB6,0,0
+298,132313,Dianhydrogalactitol,adenosine deaminase,0,0
+299,132313,Dianhydrogalactitol,LCK,0,0
+300,132483,Aminopterin Derivative,PGR,0,0
+301,132483,Aminopterin Derivative,ZAP70,0,0
+302,132483,Aminopterin Derivative,adenosine deaminase,0,0
+303,132483,Aminopterin Derivative,EPHB6,0,0
+304,132483,Aminopterin Derivative,PRKCQ,0,0
+305,134033,Aminopterin Derivative,CSN3,0,0
+306,134033,Aminopterin Derivative,ZAP70,0,0
+307,134033,Aminopterin Derivative,PGR,41,4
+308,134033,Aminopterin Derivative,BLK,0,0
+309,134033,Aminopterin Derivative,ORM1,0,0
+310,134679,Carboqone; Carbazilquinone,PGR,0,0
+311,134679,Carboqone; Carbazilquinone,ZAP70,0,0
+312,134679,Carboqone; Carbazilquinone,EPHB6,0,0
+313,134679,Carboqone; Carbazilquinone,adenosine deaminase,0,0
+314,134679,Carboqone; Carbazilquinone,UGT1A1,0,0
+315,134727,Mitomycin,ZAP70,0,0
+316,134727,Mitomycin,PGR,6,0
+317,134727,Mitomycin,EPHB6,0,0
+318,134727,Mitomycin,adenosine deaminase,3,0
+319,134727,Mitomycin,RET,5,0
+320,135758,Piperazinedione,PGR,0,0
+321,135758,Piperazinedione,ZAP70,0,0
+322,135758,Piperazinedione,EPHB6,0,0
+323,135758,Piperazinedione,adenosine deaminase,0,0
+324,135758,Piperazinedione,LCK,0,0
+325,138783,Bendamustine,TOP2B,0,0
+326,138783,Bendamustine,TOP2A,0,0
+327,138783,Bendamustine,MIR641,0,0
+328,138783,Bendamustine,MIR6126,0,0
+329,138783,Bendamustine,CSF3,0,0
+330,138783,Bendamustine,TOP2,0,0
+331,139105,Soluble Baker's Antifol,PGR,0,0
+332,139105,Soluble Baker's Antifol,ZAP70,0,0
+333,139105,Soluble Baker's Antifol,EPHB6,0,0
+334,139105,Soluble Baker's Antifol,adenosine deaminase,0,0
+335,139105,Soluble Baker's Antifol,LCK,0,0
+336,141540,Etoposide,KCNH2,0,0
+337,141540,Etoposide,ORM1,0,0
+338,141540,Etoposide,ALB,0,0
+339,141540,Etoposide,TOP2A,89,12
+340,141540,Etoposide,CHI3L1,2,0
+341,141540,Etoposide,TOP2,300,29
+342,141549,M-AMSA,PGR,0,0
+343,141549,M-AMSA,ZAP70,0,0
+344,141549,M-AMSA,EPHB6,0,0
+345,141549,M-AMSA,LCK,0,0
+346,141549,M-AMSA,adenosine deaminase,2,1
+347,143020,Mithramycin,MPO,1,0
+348,143020,Mithramycin,IGLL5,0,0
+349,143020,Mithramycin,MIR126,0,0
+350,143020,Mithramycin,MIR7110,0,0
+351,143020,Mithramycin,MIR3198-1,0,0
+352,143095,Pyrazofurin,PGR,0,0
+353,143095,Pyrazofurin,EPHB6,0,0
+354,143095,Pyrazofurin,ZAP70,0,0
+355,143095,Pyrazofurin,adenosine deaminase,0,0
+356,143095,Pyrazofurin,LCK,0,0
+357,145668,Ancitabine hydrochloride,ZAP70,0,0
+358,145668,Ancitabine hydrochloride,PGR,0,0
+359,145668,Ancitabine hydrochloride,LCK,0,0
+360,145668,Ancitabine hydrochloride,adenosine deaminase,0,0
+361,145668,Ancitabine hydrochloride,UGT1A1,0,0
+362,148958,Tegafur,TYMS,0,0
+363,148958,Tegafur,MIR6807,0,0
+364,148958,Tegafur,CSF3,0,0
+365,148958,Tegafur,MIR641,0,0
+366,148958,Tegafur,PRG2,0,0
+367,153353,L-Alanosine,PGR,0,0
+368,153353,L-Alanosine,ZAP70,0,0
+369,153353,L-Alanosine,adenosine deaminase,4,0
+370,153353,L-Alanosine,EPHB6,0,0
+371,153353,L-Alanosine,LCK,0,0
+372,154948,M-AMSA,KCNH2,0,0
+373,154948,M-AMSA,TOP2A,4,1
+374,154948,M-AMSA,ORM1,0,0
+375,154948,M-AMSA,ALB,0,0
+376,154948,M-AMSA,MIR6728,0,0
+377,154948,M-AMSA,TOP2,0,0
+378,156303,M-AMSA,KCNH2,1,0
+379,156303,M-AMSA,ORM1,0,0
+380,156303,M-AMSA,TOP2A,4,1
+381,156303,M-AMSA,ALB,0,0
+382,156303,M-AMSA,CHI3L1,0,0
+383,156303,M-AMSA,TOP2,300,48
+384,163501,ACIVICIN,PGR,0,0
+385,163501,ACIVICIN,ZAP70,0,0
+386,163501,ACIVICIN,LCK,0,0
+387,163501,ACIVICIN,adenosine deaminase,0,0
+388,163501,ACIVICIN,RET,0,0
+389,164011,Rubidazone,PGR,0,0
+390,164011,Rubidazone,ZAP70,0,0
+391,164011,Rubidazone,LCK,0,0
+392,164011,Rubidazone,EPHB6,0,0
+393,164011,Rubidazone,adenosine deaminase,0,0
+394,167780,Asaley,PGR,0,0
+395,167780,Asaley,ZAP70,0,0
+396,167780,Asaley,EPHB6,0,0
+397,167780,Asaley,adenosine deaminase,0,0
+398,167780,Asaley,LCK,0,0
+399,169780,Dexrazoxane,TOP2B,13,1
+400,169780,Dexrazoxane,TOP2A,8,2
+401,169780,Dexrazoxane,MIR6807,0,0
+402,169780,Dexrazoxane,MPO,1,0
+403,169780,Dexrazoxane,RNASE2,0,0
+404,169780,Dexrazoxane,TOP2,43,0
+405,172112,Spirohydantoin Mustard,ZAP70,0,0
+406,172112,Spirohydantoin Mustard,PGR,0,0
+407,172112,Spirohydantoin Mustard,EPHB6,0,0
+408,172112,Spirohydantoin Mustard,adenosine deaminase,0,0
+409,172112,Spirohydantoin Mustard,LCK,0,0
+410,174121,Methotrexate Derivative,PGR,57,9
+411,174121,Methotrexate Derivative,ZAP70,0,0
+412,174121,Methotrexate Derivative,LCK,2,0
+413,174121,Methotrexate Derivative,EPHB6,0,0
+414,174121,Methotrexate Derivative,adenosine deaminase,74,8
+415,176323,Camptothecin Derivative,ZAP70,0,0
+416,176323,Camptothecin Derivative,PGR,2,0
+417,176323,Camptothecin Derivative,EPHB6,0,0
+418,176323,Camptothecin Derivative,adenosine deaminase,2,0
+419,176323,Camptothecin Derivative,LCK,2,0
+420,178248,CHLOROZOTOCIN,PGR,0,0
+421,178248,CHLOROZOTOCIN,ZAP70,0,0
+422,178248,CHLOROZOTOCIN,EPHB6,0,0
+423,178248,CHLOROZOTOCIN,LCK,0,0
+424,178248,CHLOROZOTOCIN,adenosine deaminase,0,0
+425,182986,AZQ,PGR,0,0
+426,182986,AZQ,ZAP70,0,0
+427,182986,AZQ,EPHB6,0,0
+428,182986,AZQ,UGT1A1,0,0
+429,182986,AZQ,adenosine deaminase,0,0
+430,184692,Aminopterin Derivative,ZAP70,0,0
+431,184692,Aminopterin Derivative,PGR,41,4
+432,184692,Aminopterin Derivative,EPHB6,0,0
+433,184692,Aminopterin Derivative,adenosine deaminase,48,0
+434,184692,Aminopterin Derivative,RET,3,0
+435,218321,PENTOSTATIN,adenosine deaminase,300,33
+436,218321,PENTOSTATIN,CHI3L1,0,0
+437,218321,PENTOSTATIN,MMP3,0,0
+438,218321,PENTOSTATIN,DEFA1B,0,0
+439,218321,PENTOSTATIN,MIR2278,0,0
+440,224131,N-Phosphonacetyl-L-aspartate,ZAP70,0,0
+441,224131,N-Phosphonacetyl-L-aspartate,PGR,0,0
+442,224131,N-Phosphonacetyl-L-aspartate,EPHB6,0,0
+443,224131,N-Phosphonacetyl-L-aspartate,adenosine deaminase,2,0
+444,224131,N-Phosphonacetyl-L-aspartate,LCK,0,0
+445,241240,Carboplatin,PGR,14,5
+446,241240,Carboplatin,ZAP70,0,0
+447,241240,Carboplatin,EPHB6,0,0
+448,241240,Carboplatin,LCK,0,0
+449,241240,Carboplatin,adenosine deaminase,4,2
+450,246131,Valrubicin,TOP2A,0,0
+451,246131,Valrubicin,PLA2G2A,0,0
+452,246131,Valrubicin,ELANE,0,0
+453,246131,Valrubicin,KRT14,0,0
+454,246131,Valrubicin,MIR1296,0,0
+455,246131,Valrubicin,TOP2,0,0
+456,249910,Camptothecin Derivative,ZAP70,0,0
+457,249910,Camptothecin Derivative,PGR,0,0
+458,249910,Camptothecin Derivative,EPHB6,0,0
+459,249910,Camptothecin Derivative,adenosine deaminase,0,0
+460,249910,Camptothecin Derivative,LCK,2,0
+461,249992,M-AMSA,KCNH2,0,0
+462,249992,M-AMSA,TOP2A,4,1
+463,249992,M-AMSA,ORM1,0,0
+464,249992,M-AMSA,ALB,0,0
+465,249992,M-AMSA,MIR5699,0,0
+466,249992,M-AMSA,TOP2,300,48
+467,256439,Idarubicin,TOP2A,4,1
+468,256439,Idarubicin,MIR658,0,0
+469,256439,Idarubicin,MIR6126,0,0
+470,256439,Idarubicin,MMP3,0,0
+471,256439,Idarubicin,KRT14,0,0
+472,256439,Idarubicin,TOP2,0,0
+473,256927,CHIP,PGR,38,6
+474,256927,CHIP,ZAP70,6,1
+475,256927,CHIP,EPHB6,1,0
+476,256927,CHIP,adenosine deaminase,10,1
+477,256927,CHIP,LCK,12,4
+478,256942,Epirubicin,LIG1,0,0
+479,256942,Epirubicin,LIG3,0,0
+480,256942,Epirubicin,MIR6728,0,0
+481,256942,Epirubicin,SERPINA6,0,0
+482,256942,Epirubicin,LOC100996324,0,0
+483,264137,Elliptinium Acetate,ZAP70,0,0
+484,264137,Elliptinium Acetate,PGR,0,0
+485,264137,Elliptinium Acetate,EPHB6,0,0
+486,264137,Elliptinium Acetate,LCK,0,0
+487,264137,Elliptinium Acetate,ESR1,0,0
+488,266046,Oxaliplatin,TOP2B,0,0
+489,266046,Oxaliplatin,NOLC1,0,0
+490,266046,Oxaliplatin,TOP1,0,0
+491,266046,Oxaliplatin,TOP2A,5,0
+492,266046,Oxaliplatin,MPO,3,0
+493,266046,Oxaliplatin,TOP2,11,0
+494,267469,Deoxydoxorubicin,PGR,0,0
+495,267469,Deoxydoxorubicin,ZAP70,0,0
+496,267469,Deoxydoxorubicin,EPHB6,0,0
+497,267469,Deoxydoxorubicin,LCK,0,0
+498,267469,Deoxydoxorubicin,adenosine deaminase,0,0
+499,268242,"N,N-Dibenzyldaunorubicin",ZAP70,0,0
+500,268242,"N,N-Dibenzyldaunorubicin",PGR,0,0
+501,268242,"N,N-Dibenzyldaunorubicin",EPHB6,0,0
+502,268242,"N,N-Dibenzyldaunorubicin",adenosine deaminase,0,0
+503,268242,"N,N-Dibenzyldaunorubicin",LCK,0,0
+504,269148,MENOGARIL,ZAP70,0,0
+505,269148,MENOGARIL,PGR,0,0
+506,269148,MENOGARIL,EPHB6,0,0
+507,269148,MENOGARIL,LCK,0,0
+508,269148,MENOGARIL,adenosine deaminase,0,0
+509,271674,Carboxyphthalatoplatinum,PGR,0,0
+510,271674,Carboxyphthalatoplatinum,ZAP70,0,0
+511,271674,Carboxyphthalatoplatinum,EPHB6,0,0
+512,271674,Carboxyphthalatoplatinum,adenosine deaminase,0,0
+513,271674,Carboxyphthalatoplatinum,LCK,0,0
+514,276382,pepleo,PGR,0,0
+515,276382,pepleo,ZAP70,0,0
+516,276382,pepleo,adenosine deaminase,0,0
+517,276382,pepleo,UGT1A1,0,0
+518,276382,pepleo,LCK,0,0
+519,279836,MITOXANTRONE,TOP2A,0,0
+520,279836,MITOXANTRONE,PLA2G2A,0,0
+521,279836,MITOXANTRONE,MIR1231,0,0
+522,279836,MITOXANTRONE,MIR641,0,0
+523,279836,MITOXANTRONE,SNORD16,0,0
+524,279836,MITOXANTRONE,TOP2,172,25
+525,281612,benzaldehyde (BEN),PGR,1,0
+526,281612,benzaldehyde (BEN),ZAP70,0,0
+527,281612,benzaldehyde (BEN),EPHB6,0,0
+528,281612,benzaldehyde (BEN),LCK,1,0
+529,281612,benzaldehyde (BEN),adenosine deaminase,0,0
+530,287459,Cytarabine,POLB,2,0
+531,287459,Cytarabine,PLA2G2A,0,0
+532,287459,Cytarabine,MIR330,1,0
+533,287459,Cytarabine,KRT14,0,0
+534,287459,Cytarabine,SNORD32A,0,0
+535,295499,Camptothecin Derivative,PGR,0,0
+536,295499,Camptothecin Derivative,ZAP70,0,0
+537,295499,Camptothecin Derivative,LCK,0,0
+538,295499,Camptothecin Derivative,adenosine deaminase,2,0
+539,295499,Camptothecin Derivative,EPHB6,0,0
+540,295500,Camptothecin Derivative,ZAP70,0,0
+541,295500,Camptothecin Derivative,PGR,0,0
+542,295500,Camptothecin Derivative,EPHB6,0,0
+543,295500,Camptothecin Derivative,adenosine deaminase,0,0
+544,295500,Camptothecin Derivative,LCK,2,0
+545,295501,Camptothecin Derivative,PGR,0,0
+546,295501,Camptothecin Derivative,ZAP70,0,0
+547,295501,Camptothecin Derivative,EPHB6,0,0
+548,295501,Camptothecin Derivative,adenosine deaminase,2,0
+549,295501,Camptothecin Derivative,PRKCQ,0,0
+550,296934,Teroxirone,ZAP70,0,0
+551,296934,Teroxirone,PGR,0,0
+552,296934,Teroxirone,EPHB6,0,0
+553,296934,Teroxirone,LCK,0,0
+554,296934,Teroxirone,adenosine deaminase,0,0
+555,301739,Mitoxantrone,POLB,0,0
+556,301739,Mitoxantrone,CST4,0,0
+557,301739,Mitoxantrone,MPO,0,0
+558,301739,Mitoxantrone,MIR6807,0,0
+559,301739,Mitoxantrone,MIR568,0,0
+560,302991,Camptothecin Derivative,PGR,2,0
+561,302991,Camptothecin Derivative,ZAP70,0,0
+562,302991,Camptothecin Derivative,LCK,2,0
+563,302991,Camptothecin Derivative,EPHB6,0,0
+564,302991,Camptothecin Derivative,PRKCQ,0,0
+565,303812,Aphidicoline glycinate,PGR,0,0
+566,303812,Aphidicoline glycinate,ZAP70,0,0
+567,303812,Aphidicoline glycinate,EPHB6,0,0
+568,303812,Aphidicoline glycinate,adenosine deaminase,0,0
+569,303812,Aphidicoline glycinate,LCK,0,0
+570,308847,AMONAFIDE,TOP2B,0,0
+571,308847,AMONAFIDE,TOP2A,0,0
+572,308847,AMONAFIDE,PRTN3,0,0
+573,308847,AMONAFIDE,MPO,0,0
+574,308847,AMONAFIDE,PLA2G2A,0,0
+575,308847,AMONAFIDE,TOP2,0,0
+576,312887,Fludarabine,TOP2A,0,0
+577,312887,Fludarabine,PRG2,0,0
+578,312887,Fludarabine,KRT14,0,0
+579,312887,Fludarabine,SNORD88B,0,0
+580,312887,Fludarabine,MIR1296,0,0
+581,312887,Fludarabine,TOP2,4,0
+582,314622,Indenoisoquinoline derivative,PGR,0,0
+583,314622,Indenoisoquinoline derivative,ZAP70,0,0
+584,314622,Indenoisoquinoline derivative,EPHB6,0,0
+585,314622,Indenoisoquinoline derivative,adenosine deaminase,0,0
+586,314622,Indenoisoquinoline derivative,LCK,0,0
+587,320846,Batracylin,PGR,0,0
+588,320846,Batracylin,ZAP70,0,0
+589,320846,Batracylin,EPHB6,0,0
+590,320846,Batracylin,adenosine deaminase,0,0
+591,320846,Batracylin,UGT1A1,0,0
+592,326231,Buthionine sulphoximine,PGR,0,0
+593,326231,Buthionine sulphoximine,ZAP70,0,0
+594,326231,Buthionine sulphoximine,EPHB6,0,0
+595,326231,Buthionine sulphoximine,adenosine deaminase,0,0
+596,326231,Buthionine sulphoximine,LCK,0,0
+597,328410,Camptothecin Derivative,PGR,2,0
+598,328410,Camptothecin Derivative,ZAP70,0,0
+599,328410,Camptothecin Derivative,EPHB6,0,0
+600,328410,Camptothecin Derivative,adenosine deaminase,2,0
+601,328410,Camptothecin Derivative,LCK,2,0
+602,329680,Hepsulfam,PGR,0,0
+603,329680,Hepsulfam,ZAP70,0,0
+604,329680,Hepsulfam,EPHB6,0,0
+605,329680,Hepsulfam,adenosine deaminase,0,0
+606,329680,Hepsulfam,LCK,0,0
+607,337766,Bisantrene hydrochloride,ZAP70,0,0
+608,337766,Bisantrene hydrochloride,PGR,0,0
+609,337766,Bisantrene hydrochloride,BMX,0,0
+610,337766,Bisantrene hydrochloride,LCK,0,0
+611,337766,Bisantrene hydrochloride,EPHB6,0,0
+612,338947,CLOMESONE,ZAP70,0,0
+613,338947,CLOMESONE,PGR,0,0
+614,338947,CLOMESONE,adenosine deaminase,0,0
+615,338947,CLOMESONE,LCK,0,0
+616,338947,CLOMESONE,EPHB6,0,0
+617,343499,CI-921: amsacrine derivative,PGR,0,0
+618,343499,CI-921: amsacrine derivative,ZAP70,0,0
+619,343499,CI-921: amsacrine derivative,EPHB6,0,0
+620,343499,CI-921: amsacrine derivative,adenosine deaminase,0,0
+621,343499,CI-921: amsacrine derivative,LCK,0,0
+622,344007,Piperazine,DCK,5,1
+623,344007,Piperazine,POLA1,0,0
+624,344007,Piperazine,RRM1,0,0
+625,344007,Piperazine,MIR568,0,0
+626,344007,Piperazine,MIR455,0,0
+627,348948,CYCLODISONE,PGR,0,0
+628,348948,CYCLODISONE,ZAP70,0,0
+629,348948,CYCLODISONE,EPHB6,0,0
+630,348948,CYCLODISONE,adenosine deaminase,0,0
+631,348948,CYCLODISONE,LCK,0,0
+632,349174,Oxanthrazole,ZAP70,0,0
+633,349174,Oxanthrazole,PGR,0,0
+634,349174,Oxanthrazole,adenosine deaminase,0,0
+635,349174,Oxanthrazole,EPHB6,0,0
+636,349174,Oxanthrazole,LCK,0,0
+637,351710,2-methylellpticinium,PGR,0,0
+638,351710,2-methylellpticinium,ZAP70,0,0
+639,351710,2-methylellpticinium,EPHB6,0,0
+640,351710,2-methylellpticinium,adenosine deaminase,0,0
+641,351710,2-methylellpticinium,RET,0,0
+642,352122,TRIMETREXATE GLUCURONATE,GABRB3,0,0
+643,352122,TRIMETREXATE GLUCURONATE,IGLL5,0,0
+644,352122,TRIMETREXATE GLUCURONATE,MIR6728,0,0
+645,352122,TRIMETREXATE GLUCURONATE,RNASE2,0,0
+646,352122,TRIMETREXATE GLUCURONATE,MPO,0,0
+647,352299,2-methylellpticinium,PGR,0,0
+648,352299,2-methylellpticinium,ZAP70,0,0
+649,352299,2-methylellpticinium,EPHB6,0,0
+650,352299,2-methylellpticinium,adenosine deaminase,0,0
+651,352299,2-methylellpticinium,LCK,0,0
+652,353451,Mitozolomide,ZAP70,0,0
+653,353451,Mitozolomide,PGR,0,0
+654,353451,Mitozolomide,LCK,0,0
+655,353451,Mitozolomide,adenosine deaminase,0,0
+656,353451,Mitozolomide,RET,0,0
+657,354258,8-Chloro-adenosine,ZAP70,0,0
+658,354258,8-Chloro-adenosine,PGR,0,0
+659,354258,8-Chloro-adenosine,EPHB6,0,0
+660,354258,8-Chloro-adenosine,adenosine deaminase,5,1
+661,354258,8-Chloro-adenosine,LCK,0,0
+662,354646,Morpholinodoxorubicin,PGR,0,0
+663,354646,Morpholinodoxorubicin,ZAP70,0,0
+664,354646,Morpholinodoxorubicin,adenosine deaminase,0,0
+665,354646,Morpholinodoxorubicin,LCK,0,0
+666,354646,Morpholinodoxorubicin,RET,0,0
+667,355644,Anthrapyrazole derivative,ZAP70,0,0
+668,355644,Anthrapyrazole derivative,PGR,0,0
+669,355644,Anthrapyrazole derivative,EPHB6,0,0
+670,355644,Anthrapyrazole derivative,adenosine deaminase,0,0
+671,355644,Anthrapyrazole derivative,UGT1A1,0,0
+672,357704,Cyanomorpholinodoxorubicin,PGR,0,0
+673,357704,Cyanomorpholinodoxorubicin,ZAP70,0,0
+674,357704,Cyanomorpholinodoxorubicin,EPHB6,0,0
+675,357704,Cyanomorpholinodoxorubicin,LCK,0,0
+676,357704,Cyanomorpholinodoxorubicin,UGT1A1,0,0
+677,363812,TETRAPLATIN,PGR,0,0
+678,363812,TETRAPLATIN,ZAP70,0,0
+679,363812,TETRAPLATIN,EPHB6,0,0
+680,363812,TETRAPLATIN,adenosine deaminase,0,0
+681,363812,TETRAPLATIN,LCK,0,0
+682,364830,Camptothecin Derivative,PGR,2,0
+683,364830,Camptothecin Derivative,ZAP70,0,0
+684,364830,Camptothecin Derivative,EPHB6,0,0
+685,364830,Camptothecin Derivative,adenosine deaminase,2,0
+686,364830,Camptothecin Derivative,LCK,2,0
+687,365798,Fostamatinib,MPO,1,0
+688,365798,Fostamatinib,CSF3,0,0
+689,365798,Fostamatinib,SNORD83B,0,0
+690,365798,Fostamatinib,PLA2G2A,0,0
+691,365798,Fostamatinib,PRG2,0,0
+692,366140,PYRAZOLOACRIDINE,PGR,0,0
+693,366140,PYRAZOLOACRIDINE,ZAP70,0,0
+694,366140,PYRAZOLOACRIDINE,adenosine deaminase,0,0
+695,366140,PYRAZOLOACRIDINE,LCK,0,0
+696,366140,PYRAZOLOACRIDINE,EPHB6,0,0
+697,368390,Brequinar,DHODH,0,0
+698,368390,Brequinar,PRG2,0,0
+699,368390,Brequinar,ELANE,0,0
+700,368390,Brequinar,MIR330,0,0
+701,368390,Brequinar,TYROBP,0,0
+702,369100,Imiquimod,TLR7,300,38
+703,369100,Imiquimod,TLR8,82,10
+704,369100,Imiquimod,MIR6807,0,0
+705,369100,Imiquimod,MIR658,0,0
+706,369100,Imiquimod,SERPINA6,0,0
+707,369395,10-aminocamptothecin,PGR,0,0
+708,369395,10-aminocamptothecin,ZAP70,0,0
+709,369395,10-aminocamptothecin,adenosine deaminase,0,0
+710,369395,10-aminocamptothecin,EPHB6,0,0
+711,369395,10-aminocamptothecin,LCK,0,0
+712,374028,Camptothecin Derivative,ZAP70,0,0
+713,374028,Camptothecin Derivative,PGR,2,0
+714,374028,Camptothecin Derivative,EPHB6,0,0
+715,374028,Camptothecin Derivative,adenosine deaminase,2,0
+716,374028,Camptothecin Derivative,RET,8,1
+717,374551,FENRETINIDE,ZAP70,0,0
+718,374551,FENRETINIDE,PGR,0,0
+719,374551,FENRETINIDE,EPHB6,0,0
+720,374551,FENRETINIDE,UGT1A1,2,0
+721,374551,FENRETINIDE,LCK,0,0
+722,409962,Carmustine,GSR,2,0
+723,409962,Carmustine,MIR7110,0,0
+724,409962,Carmustine,CSF3,0,0
+725,409962,Carmustine,MIR641,0,0
+726,409962,Carmustine,SERPINA6,0,0
+727,526598,Mithramycin,DHODH,0,0
+728,526598,Mithramycin,MIR3198-1,0,0
+729,526598,Mithramycin,PRTN3,0,0
+730,526598,Mithramycin,IGLL5,0,0
+731,526598,Mithramycin,CD1E,0,0
+732,603071,Aminocamptothecin,PGR,0,0
+733,603071,Aminocamptothecin,ZAP70,0,0
+734,603071,Aminocamptothecin,EPHB6,0,0
+735,603071,Aminocamptothecin,adenosine deaminase,0,0
+736,603071,Aminocamptothecin,LCK,0,0
+737,603074,9-Nitro-10-methoxy-20(S)-camptothecin,PGR,0,0
+738,603074,9-Nitro-10-methoxy-20(S)-camptothecin,ZAP70,0,0
+739,603074,9-Nitro-10-methoxy-20(S)-camptothecin,EPHB6,0,0
+740,603074,9-Nitro-10-methoxy-20(S)-camptothecin,adenosine deaminase,0,0
+741,603074,9-Nitro-10-methoxy-20(S)-camptothecin,LCK,0,0
+742,603076,9-Nitro-10-hydroxy-20(S)-camptothecin,PGR,0,0
+743,603076,9-Nitro-10-hydroxy-20(S)-camptothecin,ZAP70,0,0
+744,603076,9-Nitro-10-hydroxy-20(S)-camptothecin,EPHB6,0,0
+745,603076,9-Nitro-10-hydroxy-20(S)-camptothecin,LCK,0,0
+746,603076,9-Nitro-10-hydroxy-20(S)-camptothecin,UGT1A1,0,0
+747,603077,9-Acetamido-10-hydroxy-20-(S)-camptothecin,ZAP70,0,0
+748,603077,9-Acetamido-10-hydroxy-20-(S)-camptothecin,PGR,0,0
+749,603077,9-Acetamido-10-hydroxy-20-(S)-camptothecin,EPHB6,0,0
+750,603077,9-Acetamido-10-hydroxy-20-(S)-camptothecin,adenosine deaminase,0,0
+751,603077,9-Acetamido-10-hydroxy-20-(S)-camptothecin,LCK,0,0
+752,606170,Zalcitabine,PLA2G2A,0,0
+753,606170,Zalcitabine,PVALB,0,0
+754,606170,Zalcitabine,MIR1231,0,0
+755,606170,Zalcitabine,MIR330,0,0
+756,606170,Zalcitabine,PRG2,0,0
+757,606172,Camptothecin Derivative,PGR,2,0
+758,606172,Camptothecin Derivative,ZAP70,0,0
+759,606172,Camptothecin Derivative,EPHB6,0,0
+760,606172,Camptothecin Derivative,adenosine deaminase,0,0
+761,606172,Camptothecin Derivative,UGT1A1,300,33
+762,606173,Camptothecin Derivative,ZAP70,0,0
+763,606173,Camptothecin Derivative,PGR,2,0
+764,606173,Camptothecin Derivative,EPHB6,0,0
+765,606173,Camptothecin Derivative,LCK,2,0
+766,606173,Camptothecin Derivative,adenosine deaminase,2,0
+767,606497,Camptothecin Derivative,ZAP70,0,0
+768,606497,Camptothecin Derivative,PGR,0,0
+769,606497,Camptothecin Derivative,adenosine deaminase,2,0
+770,606497,Camptothecin Derivative,EPHB6,0,0
+771,606497,Camptothecin Derivative,PRKCQ,0,0
+772,606498,Camptothecin Derivative,PGR,2,0
+773,606498,Camptothecin Derivative,ZAP70,0,0
+774,606498,Camptothecin Derivative,LCK,0,0
+775,606498,Camptothecin Derivative,adenosine deaminase,2,0
+776,606498,Camptothecin Derivative,EPHB6,0,0
+777,606499,Camptothecin Derivative,PGR,2,0
+778,606499,Camptothecin Derivative,ZAP70,0,0
+779,606499,Camptothecin Derivative,BMX,0,0
+780,606499,Camptothecin Derivative,EPHB6,0,0
+781,606499,Camptothecin Derivative,LCK,0,0
+782,606869,Clofarabine,CHI3L1,0,0
+783,606869,Clofarabine,KIR3DL2,0,0
+784,606869,Clofarabine,MIR6728,0,0
+785,606869,Clofarabine,DEFA1B,0,0
+786,606869,Clofarabine,HBG1,0,0
+787,606985,Camptothecin Derivative,PGR,0,0
+788,606985,Camptothecin Derivative,ZAP70,0,0
+789,606985,Camptothecin Derivative,adenosine deaminase,0,0
+790,606985,Camptothecin Derivative,LCK,2,0
+791,606985,Camptothecin Derivative,EPHB6,0,0
+792,606986,Camptothecin Derivative,PGR,2,0
+793,606986,Camptothecin Derivative,ZAP70,0,0
+794,606986,Camptothecin Derivative,EPHB6,0,0
+795,606986,Camptothecin Derivative,adenosine deaminase,0,0
+796,606986,Camptothecin Derivative,LCK,2,0
+797,609699,Topotecan,POLA1,0,0
+798,609699,Topotecan,RRM1,3,1
+799,609699,Topotecan,PRG2,0,0
+800,609699,Topotecan,MPO,2,1
+801,609699,Topotecan,RNASE2,0,0
+802,610456,Camptothecin Derivative,PGR,2,0
+803,610456,Camptothecin Derivative,ZAP70,0,0
+804,610456,Camptothecin Derivative,adenosine deaminase,2,0
+805,610456,Camptothecin Derivative,EPHB6,0,0
+806,610456,Camptothecin Derivative,PRKCQ,0,0
+807,610457,Camptothecin Derivative,PGR,2,0
+808,610457,Camptothecin Derivative,ZAP70,0,0
+809,610457,Camptothecin Derivative,adenosine deaminase,0,0
+810,610457,Camptothecin Derivative,EPHB6,0,0
+811,610457,Camptothecin Derivative,LCK,0,0
+812,610458,Camptothecin Derivative,PGR,2,0
+813,610458,Camptothecin Derivative,ZAP70,0,0
+814,610458,Camptothecin Derivative,EPHB6,0,0
+815,610458,Camptothecin Derivative,adenosine deaminase,0,0
+816,610458,Camptothecin Derivative,PRKCQ,0,0
+817,610459,Camptothecin Derivative,PGR,0,0
+818,610459,Camptothecin Derivative,ZAP70,0,0
+819,610459,Camptothecin Derivative,EPHB6,0,0
+820,610459,Camptothecin Derivative,UGT1A1,300,33
+821,610459,Camptothecin Derivative,adenosine deaminase,2,0
+822,613327,Gemcitabine,CMPK1,4,1
+823,613327,Gemcitabine,RRM1,257,34
+824,613327,Gemcitabine,TYMS,11,1
+825,613327,Gemcitabine,SNORD83B,0,0
+826,613327,Gemcitabine,PRTN3,0,0
+827,616348,Irinotecan,TOP1MT,1,0
+828,616348,Irinotecan,TOP1,127,14
+829,616348,Irinotecan,ELANE,0,0
+830,616348,Irinotecan,CHI3L1,0,0
+831,616348,Irinotecan,KIR3DL2,0,0
+832,618939,Camptothecin Derivative,ZAP70,0,0
+833,618939,Camptothecin Derivative,PGR,0,0
+834,618939,Camptothecin Derivative,EPHB6,0,0
+835,618939,Camptothecin Derivative,adenosine deaminase,0,0
+836,618939,Camptothecin Derivative,LCK,2,0
+837,619232,9-Glycinamido-20(RS)-camptothecin hydrochloride,PGR,0,0
+838,619232,9-Glycinamido-20(RS)-camptothecin hydrochloride,ZAP70,0,0
+839,619232,9-Glycinamido-20(RS)-camptothecin hydrochloride,EPHB6,0,0
+840,619232,9-Glycinamido-20(RS)-camptothecin hydrochloride,LCK,0,0
+841,619232,9-Glycinamido-20(RS)-camptothecin hydrochloride,adenosine deaminase,0,0
+842,623017,An Antifol,PGR,43,4
+843,623017,An Antifol,ZAP70,0,0
+844,623017,An Antifol,EPHB6,0,0
+845,623017,An Antifol,adenosine deaminase,51,8
+846,623017,An Antifol,LCK,2,0
+847,627168,Pyrazoloacridine,PGR,0,0
+848,627168,Pyrazoloacridine,EPHB6,0,0
+849,627168,Pyrazoloacridine,ZAP70,0,0
+850,627168,Pyrazoloacridine,adenosine deaminase,0,0
+851,627168,Pyrazoloacridine,LCK,0,0
+852,627505,ellipticine,ZAP70,0,0
+853,627505,ellipticine,PGR,0,0
+854,627505,ellipticine,EPHB6,0,0
+855,627505,ellipticine,RET,2,0
+856,627505,ellipticine,UGT1A1,0,0
+857,629971,Camptothecin Derivative,PGR,2,0
+858,629971,Camptothecin Derivative,ZAP70,0,0
+859,629971,Camptothecin Derivative,EPHB6,0,0
+860,629971,Camptothecin Derivative,adenosine deaminase,0,0
+861,629971,Camptothecin Derivative,LCK,2,0
+862,633782,Simvastatin,ITGAL,0,0
+863,633782,Simvastatin,HDAC2,0,0
+864,633782,Simvastatin,HMGCR,110,16
+865,633782,Simvastatin,SNORD83B,0,0
+866,633782,Simvastatin,CSF3,0,0
+867,634724,"10,11-methylenedioxycamptothecin",PGR,0,0
+868,634724,"10,11-methylenedioxycamptothecin",ZAP70,0,0
+869,634724,"10,11-methylenedioxycamptothecin",ITK,0,0
+870,634724,"10,11-methylenedioxycamptothecin",EPHB6,0,0
+871,634724,"10,11-methylenedioxycamptothecin",BTK,0,0
+872,637037,O-6-Benzylguanine,ZAP70,0,0
+873,637037,O-6-Benzylguanine,PGR,1,1
+874,637037,O-6-Benzylguanine,EPHB6,0,0
+875,637037,O-6-Benzylguanine,adenosine deaminase,1,0
+876,637037,O-6-Benzylguanine,LCK,0,0
+877,637651,ellipticine,TYMS,0,0
+878,637651,ellipticine,MPO,0,0
+879,637651,ellipticine,IGLL5,0,0
+880,637651,ellipticine,MMP3,0,0
+881,637651,ellipticine,MIR1231,0,0
+882,638066,2-n-methyl-6-thiaellipticinum iodide,PGR,0,0
+883,638066,2-n-methyl-6-thiaellipticinum iodide,ZAP70,0,0
+884,638066,2-n-methyl-6-thiaellipticinum iodide,adenosine deaminase,0,0
+885,638066,2-n-methyl-6-thiaellipticinum iodide,LCK,7,0
+886,638066,2-n-methyl-6-thiaellipticinum iodide,EPHB6,0,0
+887,639174,Camptothecin Derivative,PGR,2,0
+888,639174,Camptothecin Derivative,ZAP70,0,0
+889,639174,Camptothecin Derivative,EPHB6,0,0
+890,639174,Camptothecin Derivative,adenosine deaminase,2,0
+891,639174,Camptothecin Derivative,UGT1A1,300,33
+892,639186,Raltitrexed,FPGS,23,1
+893,639186,Raltitrexed,TYMS,7,1
+894,639186,Raltitrexed,ELANE,0,0
+895,639186,Raltitrexed,KRT14,0,0
+896,639186,Raltitrexed,MIR3198-1,0,0
+897,643833,Camptothecin Derivative,ZAP70,0,0
+898,643833,Camptothecin Derivative,PGR,2,0
+899,643833,Camptothecin Derivative,EPHB6,0,0
+900,643833,Camptothecin Derivative,RET,0,0
+901,643833,Camptothecin Derivative,adenosine deaminase,2,0
+902,656889,XK-469,PGR,0,0
+903,656889,XK-469,ZAP70,0,0
+904,656889,XK-469,LCK,0,0
+905,656889,XK-469,PRKCQ,0,0
+906,656889,XK-469,adenosine deaminase,0,0
+907,673596,7-Ethyl-10-hydroxycamptothecin,TOP1,127,14
+908,673596,7-Ethyl-10-hydroxycamptothecin,MIR126,0,0
+909,673596,7-Ethyl-10-hydroxycamptothecin,MIR3198-1,0,0
+910,673596,7-Ethyl-10-hydroxycamptothecin,MIR5699,0,0
+911,673596,7-Ethyl-10-hydroxycamptothecin,HBZ,0,0
+912,681632,Camptothecin Derivative,ZAP70,0,0
+913,681632,Camptothecin Derivative,PGR,2,0
+914,681632,Camptothecin Derivative,LCK,2,0
+915,681632,Camptothecin Derivative,UGT1A1,300,33
+916,681632,Camptothecin Derivative,PRKCQ,0,0
+917,681633,Camptothecin Derivative,PGR,2,0
+918,681633,Camptothecin Derivative,ZAP70,0,0
+919,681633,Camptothecin Derivative,UGT1A1,300,33
+920,681633,Camptothecin Derivative,adenosine deaminase,2,0
+921,681633,Camptothecin Derivative,EPHB6,0,0
+922,681634,Camptothecin Derivative,ZAP70,0,0
+923,681634,Camptothecin Derivative,PGR,2,0
+924,681634,Camptothecin Derivative,adenosine deaminase,2,0
+925,681634,Camptothecin Derivative,LCK,2,0
+926,681634,Camptothecin Derivative,EPHB6,0,0
+927,681635,Camptothecin Derivative,ZAP70,0,0
+928,681635,Camptothecin Derivative,PGR,2,0
+929,681635,Camptothecin Derivative,EPHB6,0,0
+930,681635,Camptothecin Derivative,adenosine deaminase,2,0
+931,681635,Camptothecin Derivative,LCK,2,0
+932,681636,Camptothecin Derivative,ZAP70,0,0
+933,681636,Camptothecin Derivative,PGR,0,0
+934,681636,Camptothecin Derivative,EPHB6,0,0
+935,681636,Camptothecin Derivative,LCK,0,0
+936,681636,Camptothecin Derivative,adenosine deaminase,2,0
+937,681637,Camptothecin Derivative,ZAP70,0,0
+938,681637,Camptothecin Derivative,PGR,2,0
+939,681637,Camptothecin Derivative,adenosine deaminase,2,0
+940,681637,Camptothecin Derivative,LCK,2,0
+941,681637,Camptothecin Derivative,UGT1A1,300,33
+942,681638,Camptothecin Derivative,CSN3,0,0
+943,681638,Camptothecin Derivative,BLK,0,0
+944,681638,Camptothecin Derivative,PGR,2,0
+945,681638,Camptothecin Derivative,ZAP70,0,0
+946,681638,Camptothecin Derivative,BMX,2,0
+947,681639,Camptothecin Derivative,ZAP70,0,0
+948,681639,Camptothecin Derivative,PGR,0,0
+949,681639,Camptothecin Derivative,EPHB6,0,0
+950,681639,Camptothecin Derivative,adenosine deaminase,2,0
+951,681639,Camptothecin Derivative,UGT1A1,300,33
+952,681640,Camptothecin Derivative,ZAP70,0,0
+953,681640,Camptothecin Derivative,PGR,2,0
+954,681640,Camptothecin Derivative,adenosine deaminase,2,0
+955,681640,Camptothecin Derivative,EPHB6,0,0
+956,681640,Camptothecin Derivative,PRKCQ,0,0
+957,681641,Camptothecin Derivative,ZAP70,0,0
+958,681641,Camptothecin Derivative,PGR,2,0
+959,681641,Camptothecin Derivative,adenosine deaminase,2,0
+960,681641,Camptothecin Derivative,EPHB6,0,0
+961,681641,Camptothecin Derivative,LCK,0,0
+962,681642,Camptothecin Derivative,PGR,2,0
+963,681642,Camptothecin Derivative,ZAP70,0,0
+964,681642,Camptothecin Derivative,adenosine deaminase,0,0
+965,681642,Camptothecin Derivative,PRKCQ,0,0
+966,681642,Camptothecin Derivative,EPHB6,0,0
+967,681643,Camptothecin Derivative,PGR,2,0
+968,681643,Camptothecin Derivative,ZAP70,0,0
+969,681643,Camptothecin Derivative,EPHB6,0,0
+970,681643,Camptothecin Derivative,adenosine deaminase,0,0
+971,681643,Camptothecin Derivative,LCK,2,0
+972,681644,Camptothecin Derivative,PGR,2,0
+973,681644,Camptothecin Derivative,ZAP70,0,0
+974,681644,Camptothecin Derivative,LCK,0,0
+975,681644,Camptothecin Derivative,EPHB6,0,0
+976,681644,Camptothecin Derivative,adenosine deaminase,0,0
+977,681645,Camptothecin Derivative,PGR,2,0
+978,681645,Camptothecin Derivative,ZAP70,0,0
+979,681645,Camptothecin Derivative,EPHB6,0,0
+980,681645,Camptothecin Derivative,LCK,0,0
+981,681645,Camptothecin Derivative,adenosine deaminase,2,0
+982,681646,Camptothecin Derivative,ZAP70,0,0
+983,681646,Camptothecin Derivative,PGR,2,0
+984,681646,Camptothecin Derivative,LCK,2,0
+985,681646,Camptothecin Derivative,EPHB6,0,0
+986,681646,Camptothecin Derivative,PRKCQ,0,0
+987,682298,Camptothecin Derivative,ZAP70,0,0
+988,682298,Camptothecin Derivative,PGR,2,0
+989,682298,Camptothecin Derivative,adenosine deaminase,0,0
+990,682298,Camptothecin Derivative,LCK,2,0
+991,682298,Camptothecin Derivative,EPHB6,0,0
+992,683555,Camptothecin Derivative,PGR,2,0
+993,683555,Camptothecin Derivative,ZAP70,0,0
+994,683555,Camptothecin Derivative,adenosine deaminase,2,0
+995,683555,Camptothecin Derivative,EPHB6,0,0
+996,683555,Camptothecin Derivative,LCK,2,0
+997,683556,Camptothecin Derivative,ZAP70,0,0
+998,683556,Camptothecin Derivative,PGR,2,0
+999,683556,Camptothecin Derivative,EPHB6,0,0
+1000,683556,Camptothecin Derivative,LCK,2,0
+1001,683556,Camptothecin Derivative,adenosine deaminase,0,0
+1002,683557,Camptothecin Derivative,PGR,2,0
+1003,683557,Camptothecin Derivative,ZAP70,0,0
+1004,683557,Camptothecin Derivative,EPHB6,0,0
+1005,683557,Camptothecin Derivative,adenosine deaminase,2,0
+1006,683557,Camptothecin Derivative,LCK,2,0
+1007,683558,Camptothecin Derivative,PGR,2,0
+1008,683558,Camptothecin Derivative,ZAP70,0,0
+1009,683558,Camptothecin Derivative,EPHB6,0,0
+1010,683558,Camptothecin Derivative,adenosine deaminase,2,0
+1011,683558,Camptothecin Derivative,UGT1A1,0,0
+1012,694501,BN-2629,ZAP70,0,0
+1013,694501,BN-2629,PGR,0,0
+1014,694501,BN-2629,adenosine deaminase,0,0
+1015,694501,BN-2629,EPHB6,0,0
+1016,694501,BN-2629,LCK,0,0
+1017,697887,XK-469,ZAP70,0,0
+1018,697887,XK-469,PGR,0,0
+1019,697887,XK-469,EPHB6,0,0
+1020,697887,XK-469,adenosine deaminase,0,0
+1021,697887,XK-469,LCK,0,0
+1022,697912,5-Fluoro deoxy uridine 10mer,ESR1,0,0
+1023,697912,5-Fluoro deoxy uridine 10mer,MAP2,0,0
+1024,697912,5-Fluoro deoxy uridine 10mer,MAP1A,0,0
+1025,697912,5-Fluoro deoxy uridine 10mer,ESR2,0,0
+1026,697912,5-Fluoro deoxy uridine 10mer,MIR641,0,0
+1027,698037,Pemetrexed,GART,0,0
+1028,698037,Pemetrexed,TYMS,32,4
+1029,698037,Pemetrexed,ATIC,4,3
+1030,698037,Pemetrexed,DHFR,49,3
+1031,698037,Pemetrexed,SNORD83B,0,0
+1032,702294,Estramustine,ESR1,0,0
+1033,702294,Estramustine,MAP2,10,0
+1034,702294,Estramustine,MAP1A,1,0
+1035,702294,Estramustine,ESR2,0,0
+1036,702294,Estramustine,IGLL5,0,0
+1037,706744,Indenoisoquinoline derivative,ZAP70,0,0
+1038,706744,Indenoisoquinoline derivative,PGR,0,0
+1039,706744,Indenoisoquinoline derivative,adenosine deaminase,0,0
+1040,706744,Indenoisoquinoline derivative,EPHB6,0,0
+1041,706744,Indenoisoquinoline derivative,LCK,0,0
+1042,708298,AR-67,PGR,0,0
+1043,708298,AR-67,ZAP70,0,0
+1044,708298,AR-67,adenosine deaminase,0,0
+1045,708298,AR-67,EPHB6,0,0
+1046,708298,AR-67,PRKCQ,0,0
+1047,709237,Camptothecin Derivative,ZAP70,0,0
+1048,709237,Camptothecin Derivative,PGR,2,0
+1049,709237,Camptothecin Derivative,EPHB6,0,0
+1050,709237,Camptothecin Derivative,adenosine deaminase,0,0
+1051,709237,Camptothecin Derivative,LCK,2,0
+1052,710270,Karenitecin,TOP1,0,0
+1053,710270,Karenitecin,MIR5699,0,0
+1054,710270,Karenitecin,MIR1231,0,0
+1055,710270,Karenitecin,SERPINA6,0,0
+1056,710270,Karenitecin,HBG2,0,0
+1057,719276,Fulvestrant,ESR1,300,39
+1058,719276,Fulvestrant,MIR6728,0,0
+1059,719276,Fulvestrant,PRG2,0,0
+1060,719276,Fulvestrant,MIR330,0,0
+1061,719276,Fulvestrant,MPO,0,0
+1062,719627,Celecoxib,CDH11,2,1
+1063,719627,Celecoxib,PTGS2,300,45
+1064,719627,Celecoxib,CA2,47,3
+1065,719627,Celecoxib,NEU1,1,0
+1066,719627,Celecoxib,PDPK1,8,1
+1067,721517,Zoledronate,FDPS,15,3
+1068,721517,Zoledronate,GGPS1,2,1
+1069,721517,Zoledronate,MPO,1,0
+1070,721517,Zoledronate,MIR6728,0,0
+1071,721517,Zoledronate,MIR126,0,0
+1072,724998,LMP-400,PGR,0,0
+1073,724998,LMP-400,ZAP70,0,0
+1074,724998,LMP-400,adenosine deaminase,0,0
+1075,724998,LMP-400,EPHB6,0,0
+1076,724998,LMP-400,LCK,0,0
+1077,725776,LMP776,ZAP70,0,0
+1078,725776,LMP776,PGR,0,0
+1079,725776,LMP776,EPHB6,0,0
+1080,725776,LMP776,adenosine deaminase,0,0
+1081,725776,LMP776,LCK,0,0
+1082,728073,Irinotecan,TOP1MT,1,0
+1083,728073,Irinotecan,TOP1,127,14
+1084,728073,Irinotecan,MIR6807,0,0
+1085,728073,Irinotecan,MPO,13,0
+1086,728073,Irinotecan,KRT14,0,0
+1087,734294,Indenoisoquinoline derivative,ZAP70,0,0
+1088,734294,Indenoisoquinoline derivative,PGR,0,0
+1089,734294,Indenoisoquinoline derivative,adenosine deaminase,0,0
+1090,734294,Indenoisoquinoline derivative,PRKCQ,0,0
+1091,734294,Indenoisoquinoline derivative,UGT1A1,0,0
+1092,735037,Camptothecin Derivative,PGR,2,0
+1093,735037,Camptothecin Derivative,BMX,2,0
+1094,735037,Camptothecin Derivative,ITK,0,0
+1095,735037,Camptothecin Derivative,ZAP70,0,0
+1096,735037,Camptothecin Derivative,BTK,2,0
+1097,736198,Indenoisoquinoline derivative,PGR,0,0
+1098,736198,Indenoisoquinoline derivative,ZAP70,0,0
+1099,736198,Indenoisoquinoline derivative,EPHB6,0,0
+1100,736198,Indenoisoquinoline derivative,adenosine deaminase,0,0
+1101,736198,Indenoisoquinoline derivative,LCK,0,0
+1102,736201,Indenoisoquinoline derivative,PGR,0,0
+1103,736201,Indenoisoquinoline derivative,ZAP70,0,0
+1104,736201,Indenoisoquinoline derivative,EPHB6,0,0
+1105,736201,Indenoisoquinoline derivative,LCK,0,0
+1106,736201,Indenoisoquinoline derivative,RET,0,0
+1107,736202,Indenoisoquinoline derivative,PGR,0,0
+1108,736202,Indenoisoquinoline derivative,ZAP70,0,0
+1109,736202,Indenoisoquinoline derivative,adenosine deaminase,0,0
+1110,736202,Indenoisoquinoline derivative,LCK,0,0
+1111,736202,Indenoisoquinoline derivative,EPHB6,0,0
+1112,736493,Indenoisoquinoline derivative,PGR,0,0
+1113,736493,Indenoisoquinoline derivative,ZAP70,0,0
+1114,736493,Indenoisoquinoline derivative,LCK,0,0
+1115,736493,Indenoisoquinoline derivative,UGT1A1,0,0
+1116,736493,Indenoisoquinoline derivative,EPHB6,0,0
+1117,736624,Indenoisoquinoline derivative,PGR,0,0
+1118,736624,Indenoisoquinoline derivative,ZAP70,0,0
+1119,736624,Indenoisoquinoline derivative,EPHB6,0,0
+1120,736624,Indenoisoquinoline derivative,adenosine deaminase,0,0
+1121,736624,Indenoisoquinoline derivative,RET,0,0
+1122,737518,Indenoisoquinoline derivative,PGR,0,0
+1123,737518,Indenoisoquinoline derivative,ZAP70,0,0
+1124,737518,Indenoisoquinoline derivative,EPHB6,0,0
+1125,737518,Indenoisoquinoline derivative,LCK,0,0
+1126,737518,Indenoisoquinoline derivative,adenosine deaminase,0,0
+1127,740268,Indenoisoquinoline derivative,PGR,0,0
+1128,740268,Indenoisoquinoline derivative,ZAP70,0,0
+1129,740268,Indenoisoquinoline derivative,EPHB6,0,0
+1130,740268,Indenoisoquinoline derivative,adenosine deaminase,0,0
+1131,740268,Indenoisoquinoline derivative,PRKCQ,0,0
+1132,740521,Indenoisoquinoline derivative,ZAP70,0,0
+1133,740521,Indenoisoquinoline derivative,PGR,0,0
+1134,740521,Indenoisoquinoline derivative,EPHB6,0,0
+1135,740521,Indenoisoquinoline derivative,adenosine deaminase,0,0
+1136,740521,Indenoisoquinoline derivative,LCK,0,0
+1137,740645,Indenoisoquinoline derivative,PGR,0,0
+1138,740645,Indenoisoquinoline derivative,EPHB6,0,0
+1139,740645,Indenoisoquinoline derivative,ZAP70,0,0
+1140,740645,Indenoisoquinoline derivative,LCK,0,0
+1141,740645,Indenoisoquinoline derivative,adenosine deaminase,0,0
+1142,747856,Olaparib,AKR1C3,0,0
+1143,747856,Olaparib,PARP2,71,12
+1144,747856,Olaparib,PARP3,11,2
+1145,747856,Olaparib,PARP1,300,53
+1146,747856,Olaparib,KIR3DL2,0,0
+1147,752840,Veliparib,PARP2,39,0
+1148,752840,Veliparib,PARP1,152,18
+1149,752840,Veliparib,MIR5699,0,0
+1150,752840,Veliparib,RNASE2,0,0
+1151,752840,Veliparib,MIR658,0,0
+1152,753686,Olaparib,AKR1C3,1,0
+1153,753686,Olaparib,PARP2,71,12
+1154,753686,Olaparib,PARP3,11,2
+1155,753686,Olaparib,PARP1,300,53
+1156,753686,Olaparib,IGLL5,0,0
+1157,754230,pralatrexate,FPGS,6,0
+1158,754230,pralatrexate,TYMS,0,0
+1159,754230,pralatrexate,DHFR,14,0
+1160,754230,pralatrexate,MPO,0,0
+1161,754230,pralatrexate,PRTN3,0,0
+1162,754365,XR-11576,CYP51A1,0,0
+1163,754365,XR-11576,RNASE2,0,0
+1164,754365,XR-11576,MIR6728,0,0
+1165,754365,XR-11576,MIR126,0,0
+1166,754365,XR-11576,PIP,0,0
+1167,754366,XR-5944,EPHB6,0,0
+1168,754366,XR-5944,PGR,0,0
+1169,754366,XR-5944,ZAP70,0,0
+1170,754366,XR-5944,LCK,0,0
+1171,754366,XR-5944,adenosine deaminase,0,0
+1172,754771,Itraconazole,GART,0,0
+1173,754771,Itraconazole,TYMS,0,0
+1174,754771,Itraconazole,ATIC,0,0
+1175,754771,Itraconazole,DHFR,0,0
+1176,754771,Itraconazole,KRT14,0,0
+1177,755384,Pemetrexed,TOP1,0,0
+1178,755384,Pemetrexed,TOP2A,4,0
+1179,755384,Pemetrexed,PRTN3,0,0
+1180,755384,Pemetrexed,MIR330,0,0
+1181,755384,Pemetrexed,PLA2G2A,0,0
+1182,755384,Pemetrexed,TOP2,3,1
+1183,755841,Actinomycin D,ZAP70,2,0
+1184,755841,Actinomycin D,PGR,4,0
+1185,755841,Actinomycin D,LCK,4,0
+1186,755841,Actinomycin D,RET,3,1
+1187,755841,Actinomycin D,adenosine deaminase,11,1
+1188,755880,Mitomycin,TOP2B,0,0
+1189,755880,Mitomycin,TOP2A,0,0
+1190,755880,Mitomycin,KIR3DL2,0,0
+1191,755880,Mitomycin,CSF3,0,0
+1192,755880,Mitomycin,MIR624,0,0
+1193,755880,Mitomycin,TOP2,49,4
+1194,755985,Nelarabine,POLA1,0,0
+1195,755985,Nelarabine,PLA2G2A,0,0
+1196,755985,Nelarabine,CHI3L1,0,0
+1197,755985,Nelarabine,ELANE,0,0
+1198,755985,Nelarabine,CST4,0,0
+1199,756660,Quercetin,ESR1,108,0
+1200,756660,Quercetin,HSPA2,1,0
+1201,756660,Quercetin,CYP1B1,34,3
+1202,756660,Quercetin,HIBCH,0,0
+1203,756660,Quercetin,RUVBL2,0,0
+1204,756717,DAUNORUBICIN,TOP2B,21,2
+1205,756717,DAUNORUBICIN,TOP2A,80,12
+1206,756717,DAUNORUBICIN,MIR5699,0,0
+1207,756717,DAUNORUBICIN,SNORD32A,0,0
+1208,756717,DAUNORUBICIN,HBG2,1,0
+1209,756717,DAUNORUBICIN,TOP2,0,0
+1210,757036,Fluorouracil,TYMS,215,32
+1211,757036,Fluorouracil,KIR3DL2,0,0
+1212,757036,Fluorouracil,RNASE2,0,0
+1213,757036,Fluorouracil,DEFA3,0,0
+1214,757036,Fluorouracil,MIR5699,0,0
+1215,757087,Nitrogen mustard,PGR,0,0
+1216,757087,Nitrogen mustard,ZAP70,2,1
+1217,757087,Nitrogen mustard,adenosine deaminase,2,0
+1218,757087,Nitrogen mustard,EPHB6,0,0
+1219,757087,Nitrogen mustard,RET,0,0
+1220,757098,Melphalan,ZAP70,0,0
+1221,757098,Melphalan,PGR,8,1
+1222,757098,Melphalan,RET,3,0
+1223,757098,Melphalan,EPHB6,0,0
+1224,757098,Melphalan,LCK,0,0
+1225,757348,6-Thioguanine,PGR,1,0
+1226,757348,6-Thioguanine,ZAP70,0,0
+1227,757348,6-Thioguanine,LCK,0,0
+1228,757348,6-Thioguanine,EPHB6,0,0
+1229,757348,6-Thioguanine,adenosine deaminase,11,1
+1230,757804,Etoposide,TYMS,4,0
+1231,757804,Etoposide,MIR641,0,0
+1232,757804,Etoposide,PRTN3,0,0
+1233,757804,Etoposide,MIR2278,0,0
+1234,757804,Etoposide,KRT14,0,0
+1235,758230,Floxuridine,KCNH2,0,0
+1236,758230,Floxuridine,ORM1,0,0
+1237,758230,Floxuridine,TOP2A,0,0
+1238,758230,Floxuridine,ALB,0,0
+1239,758230,Floxuridine,MIR2278,0,0
+1240,758230,Floxuridine,TOP2,0,0
+1241,758251,Amonafide,TOP2B,0,0
+1242,758251,Amonafide,TOP2A,0,0
+1243,758251,Amonafide,KRT14,0,0
+1244,758251,Amonafide,RNASE2,0,0
+1245,758251,Amonafide,SNORD16,0,0
+1246,758251,Amonafide,TOP2,0,0
+1247,758255,Teniposide,TOP2A,6,2
+1248,758255,Teniposide,MPO,1,0
+1249,758255,Teniposide,KRT14,0,0
+1250,758255,Teniposide,MIR5699,0,0
+1251,758255,Teniposide,MIR641,0,0
+1252,758255,Teniposide,TOP2,198,29
+1253,758423,M-AMSA,LIG1,0,0
+1254,758423,M-AMSA,LIG3,0,0
+1255,758423,M-AMSA,RNASE2,0,0
+1256,758423,M-AMSA,MIR6728,0,0
+1257,758423,M-AMSA,ITGB7,0,0
+1258,758612,Bleomycin,TOP2A,0,0
+1259,758612,Bleomycin,MIR7110,0,0
+1260,758612,Bleomycin,PRTN3,0,0
+1261,758612,Bleomycin,MIR641,0,0
+1262,758612,Bleomycin,CSF3,0,0
+1263,758612,Bleomycin,TOP2,39,4
+1264,758667,Teniposide,NOLC1,0,0
+1265,758667,Teniposide,TOP2B,2,0
+1266,758667,Teniposide,TOP1,1,0
+1267,758667,Teniposide,TOP2A,6,2
+1268,758667,Teniposide,SNORD16,0,0
+1269,758667,Teniposide,TOP2,198,29
+1270,758671,ANCITABINE HYDROCHLORIDE,PGR,0,0
+1271,758671,ANCITABINE HYDROCHLORIDE,ZAP70,0,0
+1272,758671,ANCITABINE HYDROCHLORIDE,EPHB6,0,0
+1273,758671,ANCITABINE HYDROCHLORIDE,adenosine deaminase,0,0
+1274,758671,ANCITABINE HYDROCHLORIDE,RET,0,0
+1275,758706,Simvastatin,ITGAL,0,0
+1276,758706,Simvastatin,HDAC2,3,0
+1277,758706,Simvastatin,HMGCR,110,16
+1278,758706,Simvastatin,MPO,30,7
+1279,758706,Simvastatin,RNASE2,0,0
+1280,759155,Doxorubicin,TOP2A,107,0
+1281,759155,Doxorubicin,KIR3DL2,1,0
+1282,759155,Doxorubicin,SNORD16,0,0
+1283,759155,Doxorubicin,KRT14,1,0
+1284,759155,Doxorubicin,SERPINA6,1,0
+1285,759155,Doxorubicin,TOP2,300,31
+1286,759195,Epirubicin,TOP1MT,0,0
+1287,759195,Epirubicin,TOP1,3,0
+1288,759195,Epirubicin,KRT14,0,0
+1289,759195,Epirubicin,MPO,3,0
+1290,759195,Epirubicin,SERPINA6,0,0
+1291,759263,Topotecan,TOP1MT,1,0
+1292,759263,Topotecan,TOP1,134,18
+1293,759263,Topotecan,MIR2278,0,0
+1294,759263,Topotecan,MIR6728,0,0
+1295,759263,Topotecan,MMP3,1,0
+1296,759614,6-Mercaptopurine,HPRT1,4,0
+1297,759614,6-Mercaptopurine,PPAT,0,0
+1298,759614,6-Mercaptopurine,IMPDH1,0,0
+1299,759614,6-Mercaptopurine,SNORD88B,0,0
+1300,759614,6-Mercaptopurine,RNASE2,0,0
+1301,759857,Clofarabine,RRM1,4,3
+1302,759857,Clofarabine,POLA1,0,0
+1303,759857,Clofarabine,SNORD16,0,0
+1304,759857,Clofarabine,HBG1,0,0
+1305,759857,Clofarabine,MMP3,0,0
+1306,759878,Irinotecan,TOP1MT,1,0
+1307,759878,Irinotecan,TOP1,127,14
+1308,759878,Irinotecan,MIR624,0,0
+1309,759878,Irinotecan,DEFA3,0,0
+1310,759878,Irinotecan,DEFA1,0,0
+1311,760419,Fenretinide,PGR,0,0
+1312,760419,Fenretinide,ZAP70,0,0
+1313,760419,Fenretinide,EPHB6,0,0
+1314,760419,Fenretinide,UGT1A1,2,1
+1315,760419,Fenretinide,LCK,0,0
+1316,760764,Voreloxin,PGR,0,0
+1317,760764,Voreloxin,ZAP70,0,0
+1318,760764,Voreloxin,LCK,0,0
+1319,760764,Voreloxin,adenosine deaminase,0,0
+1320,760764,Voreloxin,RET,0,0
+1321,765396,BMN-673,TOP1MT,0,0
+1322,765396,BMN-673,TOP1,0,0
+1323,765396,BMN-673,MIR6126,0,0
+1324,765396,BMN-673,KRT14,0,0
+1325,765396,BMN-673,MIR641,0,0
+1326,765775,Gemcitabine elaidate,ZAP70,0,0
+1327,765775,Gemcitabine elaidate,PGR,0,0
+1328,765775,Gemcitabine elaidate,EPHB6,0,0
+1329,765775,Gemcitabine elaidate,adenosine deaminase,0,0
+1330,765775,Gemcitabine elaidate,LCK,0,0
+1331,767125,BMN-673,PARP2,0,0
+1332,767125,BMN-673,PARP1,122,28
+1333,767125,BMN-673,KRT14,0,0
+1334,767125,BMN-673,SERPINA3,0,0
+1335,767125,BMN-673,MIR2278,0,0
+1336,768112,SAR-402674,ZAP70,0,0
+1337,768112,SAR-402674,PGR,0,0
+1338,768112,SAR-402674,adenosine deaminase,0,0
+1339,768112,SAR-402674,EPHB6,0,0
+1340,768112,SAR-402674,RET,0,0
+1341,768593,CEP-9722,ZAP70,0,0
+1342,768593,CEP-9722,PGR,0,0
+1343,768593,CEP-9722,EPHB6,0,0
+1344,768593,CEP-9722,adenosine deaminase,0,0
+1345,768593,CEP-9722,LCK,0,0
+1346,772992,Fostamatinib,PARP2,0,0
+1347,772992,Fostamatinib,PARP1,0,0
+1348,772992,Fostamatinib,MIR6807,0,0
+1349,772992,Fostamatinib,PLA2G2A,0,0
+1350,772992,Fostamatinib,MIR6126,0,0
+1351,783107,E-7449,ZAP70,0,0
+1352,783107,E-7449,EPHB6,0,0
+1353,783107,E-7449,LCK,0,0
+1354,783107,E-7449,PRKCQ,0,0
+1355,783107,E-7449,UGT1A1,0,0
+1356,784722,aldoxorubicin,TOP2A,0,0
+1357,784722,aldoxorubicin,PLA2G2A,0,0
+1358,784722,aldoxorubicin,DEFA1,0,0
+1359,784722,aldoxorubicin,SNORD88B,0,0
+1360,784722,aldoxorubicin,MIR330,0,0
+1361,784722,aldoxorubicin,TOP2,0,0
+1362,789797,SW-044248,PGR,0,0
+1363,789797,SW-044248,ZAP70,0,0
+1364,789797,SW-044248,EPHB6,0,0
+1365,789797,SW-044248,adenosine deaminase,0,0
+1366,789797,SW-044248,LCK,0,0
+1367,791785,Sapacitabine,PGR,0,0
+1368,791785,Sapacitabine,ZAP70,0,0
+1369,791785,Sapacitabine,adenosine deaminase,0,0
+1370,791785,Sapacitabine,EPHB6,0,0
+1371,791785,Sapacitabine,LCK,0,0
