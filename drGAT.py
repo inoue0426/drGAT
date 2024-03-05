@@ -217,7 +217,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
             if val_acc > best_val_acc:
                 best_val_acc = val_acc
                 torch.save(model, "model_{}.pt".format(epoch))
-
+                print(type(tmp))
                 if tmp >= 0:
                     subprocess.run(["rm", "-rf", f"model_{tmp}.pt"], check=True)
                 tmp = epoch
