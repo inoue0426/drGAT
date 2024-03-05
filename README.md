@@ -1,6 +1,6 @@
 # drGAT
 
-![](drGAT.png)
+![](Figs/Fig1.png)
 
 This is the official implementation for **drGAT: Attention-Guided Gene Assessment for Drug Response in Drug-Cell-Gene Heterogeneous Network**.  
 
