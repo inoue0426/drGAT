@@ -34,8 +34,13 @@ def get_attention_mat(attention):
     attention: attention tensor from Graph Attention layer.
     """
 
-    return (attention[1]).mean(axis=1)
+    edge_index, attention_weights = [i.detach().cpu() for i in attention]
+    
+    num_nodes = torch.max(edge_index) + 1
+    attention_matrix = torch.zeros((num_nodes, num_nodes), dtype=attention_weights.dtype)
+    attention_matrix[edge_index[0], edge_index[1]] = attention_weights.squeeze().mean()
 
+    return attention_matrix
 
 class GAT(Module):
     """A class to generate a drGAT model.
@@ -80,7 +85,6 @@ class GAT(Module):
         )
 
         x, attention = self.gat1(x, edges, return_attention_weights=True)
-
         all_attention = get_attention_mat(attention)
         del attention
 
@@ -185,6 +189,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
     best_model = None
     early_stopping_counter = 0
     max_early_stopping = 10
+    tmp = -1
 
     for epoch in tqdm(range(params["epochs"])):
         model.train()
@@ -204,7 +209,6 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
 
         model.eval()
         valid_loss = 0.0
-        tmp = -1
 
         with torch.no_grad():
             outputs, _ = model(drug, cell, gene, edge_index, val_drug, val_cell)
@@ -216,8 +220,9 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
 
             if val_acc > best_val_acc:
                 best_val_acc = val_acc
-                torch.save(model, "model_{}.pt".format(epoch))
-                print(type(tmp))
+                if is_save:
+                    torch.save(model, "model_{}.pt".format(epoch))
+                
                 if tmp >= 0:
                     subprocess.run(["rm", "-rf", f"model_{tmp}.pt"], check=True)
                 tmp = epoch
