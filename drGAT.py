@@ -15,13 +15,8 @@ import pandas as pd
 import torch
 import torch.nn as nn
 import torch_geometric
-from sklearn.metrics import (
-    accuracy_score,
-    confusion_matrix,
-    f1_score,
-    precision_score,
-    recall_score,
-)
+from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
+                             precision_score, recall_score)
 from torch.nn import BatchNorm1d, Dropout, Linear, Module, MSELoss
 from torch.nn.functional import relu, sigmoid
 from torch_geometric.data import Data
@@ -35,12 +30,15 @@ def get_attention_mat(attention):
     """
 
     edge_index, attention_weights = [i.detach().cpu() for i in attention]
-    
+
     num_nodes = torch.max(edge_index) + 1
-    attention_matrix = torch.zeros((num_nodes, num_nodes), dtype=attention_weights.dtype)
+    attention_matrix = torch.zeros(
+        (num_nodes, num_nodes), dtype=attention_weights.dtype
+    )
     attention_matrix[edge_index[0], edge_index[1]] = attention_weights.squeeze().mean()
 
     return attention_matrix
+
 
 class GAT(Module):
     """A class to generate a drGAT model.
@@ -222,7 +220,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
                 best_val_acc = val_acc
                 if is_save:
                     torch.save(model, "model_{}.pt".format(epoch))
-                
+
                 if tmp >= 0:
                     subprocess.run(["rm", "-rf", f"model_{tmp}.pt"], check=True)
                 tmp = epoch
