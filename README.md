@@ -50,7 +50,7 @@ If you want to try the model evaluation, you can skip the Train model section.
 After preprocessing, you can use our model as follows:
 
 ```python
-model = torch.load('model.pt')
+model = torch.load('sample.pt')
 model = model.to(device)
 drGAT.eval(model, data)
 ```
