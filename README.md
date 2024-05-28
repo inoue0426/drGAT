@@ -38,7 +38,18 @@ torch-spline-conv==1.2.2+pt113cu116
 
 Our experiment was conducted on Ubuntu with an NVIDIA A100 Tensor Core GPU.
 
-## Installation from GitHub
+## Installation using Conda
+
+```shell
+git clone git@github.com:inoue0426/drGAT.git
+cd drGAT
+conda env create -f environment.yml
+conda activate drGAT
+```
+** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
+
+
+## Installation using requirement.txt
 
 ```shell
 git clone git@github.com:inoue0426/drGAT.git
@@ -51,7 +62,7 @@ pip install --no-cache-dir  torch==1.13.1+cu116 --extra-index-url https://downlo
 pip install --no-cache-dir torch_geometric
 pip install --no-cache-dir pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-1.13.1%2Bcu116.html
 ```
-** NOTE: please make sure to change the version to match the version of your GPU/CPU machine exactly.
+** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
 
 ## Usage
 
