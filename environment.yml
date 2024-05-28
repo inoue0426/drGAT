@@ -16,5 +16,3 @@ dependencies:
       - torch-scatter==2.1.1+pt113cu116
       - torch-sparse==0.6.17+pt113cu116
       - torch-spline-conv==1.2.2+pt113cu116
-
-prefix: /path/to/your/envs/drGAT 
