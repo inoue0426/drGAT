@@ -36,7 +36,19 @@ torch-spline-conv==1.2.2+pt113cu116
 
 ## Environment
 
-Our experiment was conducted on Ubuntu with an NVIDIA A100 Tensor Core GPU.
+Our experiment was conducted on Ubuntu with an NVIDIA A100 Tensor Core GPU.  
+If you want to re-train model, we reccomend to use GPU.
+
+## Installation using Docker
+
+```shell
+git clone git@github.com:inoue0426/drGAT.git
+cd drGAT
+docker run -it -p 9999:9999 drgat:latest
+docker build -t drgat:latest .
+```
+
+Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
 
 ## Installation using Conda
 
