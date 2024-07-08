@@ -4373,8 +4373,8 @@
 4371,609397,5386397,COC1=C(C=C(C=C1)C=CC2=CC(=C(C(=C2)OC)OC)OC)O,Other,E-Combretastatin A-4
 4372,609694,355642,C(CSSCCCCl)CCl,Other,3-Chloropropyl disulfide
 4373,609695,355643,C(CSS(=O)(=O)CCCCl)CCl,Other,1-Chloro-3-(3-chloropropylsulfonylsulfanyl)propane
-4374,609699,60699,CCC1(C2=C(COC1=O)C(=O)N3CC4=CC5=C(C=CC(=C5CN(C)C)O)N=C4C3=C2)O.Cl,DNA,Topotecan hydrochloride
-4375,759263,60699,CCC1(C2=C(COC1=O)C(=O)N3CC4=CC5=C(C=CC(=C5CN(C)C)O)N=C4C3=C2)O.Cl,DNA,Topotecan hydrochloride
+4374,609699,60699,CCC1(C2=C(COC1=O)C(=O)N3CC4=CC5=C(C=CC(=C5CN(C)C)O)N=C4C3=C2)O.Cl,DNA,Topotecan
+4375,759263,60699,CCC1(C2=C(COC1=O)C(=O)N3CC4=CC5=C(C=CC(=C5CN(C)C)O)N=C4C3=C2)O.Cl,DNA,Topotecan
 4376,609700,6711271,CCCCCCCCCCC(C1CCC(O1)C2CCC(O2)C(CCCCCCCCCCC(CC3=CC(OC3=O)C)O)O)O,Other,"4-[(13R)-2,13-dihydroxy-13-[(2R)-5-[(5R)-5-(1-hydroxyundecyl)oxolan-2-yl]oxolan-2-yl]tridecyl]-2-methyl-2H-furan-5-one"
 4377,609815,355710,C1=CC=C(C=C1)C(=O)NC2=CC=CC=C2C(=O)NC3=NC=CS3,Other,"2-Benzoylaminobenzamide, N-thiazol-2-yl-"
 4378,609821,355716,CC(C)CCCC(C)C1CCC(C1(C)CCO)C2CC(C3CC(C(CC3(C2=O)CO)O)O)O,Other,"(4R,4aR,7S,8aS)-4,6,7-trihydroxy-2-[(2R,3R)-2-(2-hydroxyethyl)-2-methyl-3-(6-methylheptan-2-yl)cyclopentyl]-8a-(hydroxymethyl)-2,3,4,4a,5,6,7,8-octahydronaphthalen-1-one"
