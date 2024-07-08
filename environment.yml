@@ -9,5 +9,5 @@ dependencies:
       - matplotlib==3.9.0
       - numpy==1.26.4
       - pandas==2.2.2
-      - torch==2.3.0
-      - torch-geometric==2.5.3
+      - torch==2.0.1
+      - torch-geometric==2.3.1
