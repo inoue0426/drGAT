@@ -44,8 +44,8 @@ If you want to re-train model, we reccomend to use GPU.
 ```shell
 git clone git@github.com:inoue0426/drGAT.git
 cd drGAT
-docker run -it -p 9999:9999 drgat:latest
 docker build -t drgat:latest .
+docker run -it -p 9999:9999 drgat:latest
 ```
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
