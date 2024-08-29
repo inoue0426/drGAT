@@ -8,12 +8,7 @@ This is the official implementation for **drGAT: Attention-Guided Gene Assessmen
 
 This model is created to understand how genes influence Drug Response using Graph Attention Networks (GAT) on heterogeneous networks of drugs, cells, and genes. It predicts Drug Response based on the attention coefficients generated during this process. This has been implemented in Python.
 
-## Environment
-
-Our experiment was conducted on Ubuntu with an NVIDIA A100 Tensor Core GPU.  
-If you want to re-train model, we reccomend to use GPU.
-
-## Installation using Docker
+## Quick start
 
 ```shell
 git clone git@github.com:inoue0426/drGAT.git
@@ -23,6 +18,3 @@ docker run -it -p 9999:9999 inoue0426/drgat
 ```
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
-
-## Help
-If you have any questions or require assistance using MAGIC, please feel free to make issues on https://github.com/inoue0426/drGAT/
