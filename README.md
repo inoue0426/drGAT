@@ -20,3 +20,24 @@ docker run -it -p 9999:9999 inoue0426/drgat
 ```
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
+
+
+## Requirement
+
+```
+numpy==1.23.5
+pandas==2.0.3
+matplotlib==3.7.1
+optuna==3.2.0
+torch==1.13.1+cu116
+torch-cluster==1.6.1+pt113cu116
+torch-geometric==2.3.1
+torch-scatter==2.1.1+pt113cu116
+torch-sparse==0.6.17+pt113cu116
+torch-spline-conv==1.2.2+pt113cu116
+```
+
+## Environment
+
+Our experiment was conducted on Ubuntu with an NVIDIA A100 Tensor Core GPU.  
+If you want to re-train model, we reccomend to use GPU.
