@@ -10,8 +10,7 @@ This model is created to understand how genes influence Drug Response using Grap
 
 ## Quick start
 
-This quick start allows you to run the drGAT training with the dataset on CPU and GPU.   
-If you just would like to predict, run the preprocess and evaluation section.
+This quick start allows you to run the drGAT training with the dataset on CPU and GPU. If you just would like to predict, run the preprocess and evaluation section. For demonstration purposese, the tutorial notebook runs a limited number of epochs, so the notebook run in a few minutes.
 
 ```shell
 git clone git@github.com:inoue0426/drGAT.git
