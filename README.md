@@ -8,18 +8,6 @@ This is the official implementation for **drGAT: Attention-Guided Gene Assessmen
 
 This model is created to understand how genes influence Drug Response using Graph Attention Networks (GAT) on heterogeneous networks of drugs, cells, and genes. It predicts Drug Response based on the attention coefficients generated during this process. This has been implemented in Python.
 
-## Citation 
-
-```
-@article{inoue2024drgat,
-  title={drGAT: Attention-Guided Gene Assessment of Drug Response Utilizing a Drug-Cell-Gene Heterogeneous Network},
-  author={Inoue, Yoshitaka and Lee, Hunmin and Fu, Tianfan and Luna, Augustin},
-  journal={ArXiv},
-  year={2024},
-  publisher={arXiv}
-}
-```
-
 ## Quick start
 
 This quick start guide demonstrates how to run drGAT predictions on both CPU and GPU, completing the process within seconds.
@@ -100,3 +88,15 @@ pip install --no-cache-dir torch_geometric
 pip install --no-cache-dir pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-1.13.1%2Bcu116.html
 ```
 ** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
+
+## Citation 
+
+```
+@article{inoue2024drgat,
+  title={drGAT: Attention-Guided Gene Assessment of Drug Response Utilizing a Drug-Cell-Gene Heterogeneous Network},
+  author={Inoue, Yoshitaka and Lee, Hunmin and Fu, Tianfan and Luna, Augustin},
+  journal={ArXiv},
+  year={2024},
+  publisher={arXiv}
+}
+```
