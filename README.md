@@ -10,7 +10,7 @@ This model is created to understand how genes influence Drug Response using Grap
 
 ## Quick start
 
-This quick start allows you to run the drGAT training with the dataset on CPU and GPU. If you just would like to predict, run the preprocess and evaluation section. For demonstration purposes, the tutorial notebook runs a limited number of epochs, so the notebook run in a few minutes.
+This quick start guide demonstrates how to run drGAT predictions on both CPU and GPU, completing the process within seconds.
 
 ```shell
 git clone git@github.com:inoue0426/drGAT.git
@@ -19,7 +19,7 @@ docker pull inoue0426/drgat
 docker run -it -p 9999:9999 inoue0426/drgat
 ```
 
-Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
+Then access to http://localhost:9999/notebooks/Tutorial.ipynb and run all cells.
 
 
 ## Training
