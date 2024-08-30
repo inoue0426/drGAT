@@ -15,8 +15,8 @@ This quick start guide demonstrates how to run drGAT predictions on both CPU and
 ```shell
 git clone git@github.com:inoue0426/drGAT.git
 cd drGAT
-docker build -t drgat:latest .
-docker run -it -p 9999:9999 drgat:latest
+docker pull inoue0426/drgat
+docker run -it -p 9999:9999 inoue0426/drgat
 ```
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb and run all cells.
