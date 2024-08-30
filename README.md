@@ -24,7 +24,7 @@ Then access to http://localhost:9999/notebooks/Tutorial.ipynb
 
 ## Training
 
-For re-training the model, refer to model_training.ipynb. If you want to use your dataset, generate_dataset.ipynb might be useful.
+For re-training the model, refer to model_training.ipynb. If you want to use your dataset, create_dataset.ipynb might be useful.
 
 
 ## Requirement
