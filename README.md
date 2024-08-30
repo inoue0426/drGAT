@@ -42,6 +42,8 @@ torch-sparse==0.6.17+pt113cu116
 torch-spline-conv==1.2.2+pt113cu116
 ```
 
+** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
+
 ## Environment
 
 Our experiment was conducted on Ubuntu with an NVIDIA A100 Tensor Core GPU.  
@@ -68,7 +70,6 @@ cd drGAT
 conda env create -f environment.yml
 conda activate drGAT
 ```
-** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
 
 
 ## Installation using requirement.txt
