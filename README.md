@@ -15,8 +15,10 @@ This quick start guide demonstrates how to run drGAT predictions on both CPU and
 ```shell
 git clone git@github.com:inoue0426/drGAT.git
 cd drGAT
-docker pull inoue0426/drgat
-docker run -it -p 9999:9999 inoue0426/drgat
+conda env create -f environment.yml
+conda activate drGAT
+python -m ipykernel install --user --name=drGAT
+jupyter notebook --port=9999
 ```
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb and run all cells.
@@ -57,19 +59,6 @@ git clone git@github.com:inoue0426/drGAT.git
 cd drGAT
 docker build -t drgat:latest .
 docker run -it -p 9999:9999 drgat:latest
-```
-
-Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
-
-## Installation using Conda
-
-```shell
-git clone git@github.com:inoue0426/drGAT.git
-cd drGAT
-conda env create -f environment.yml
-conda activate drGAT
-python -m ipykernel install --user --name=drGAT
-jupyter notebook --port=9999
 ```
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
