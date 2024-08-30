@@ -75,6 +75,8 @@ pip install -r requirement.txt
 pip install --no-cache-dir  torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install --no-cache-dir torch_geometric
 pip install --no-cache-dir pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-1.13.1%2Bcu116.html
+python -m ipykernel install --user --name=drGAT
+jupyter notebook --port=9999
 ```
 ** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
 
