@@ -10,7 +10,7 @@ This model is created to understand how genes influence Drug Response using Grap
 
 ## Quick start
 
-This quick start allows you to run the drGAT training with the dataset on CPU and GPU. If you just would like to predict, run the preprocess and evaluation section. For demonstration purposese, the tutorial notebook runs a limited number of epochs, so the notebook run in a few minutes.
+This quick start allows you to run the drGAT training with the dataset on CPU and GPU. If you just would like to predict, run the preprocess and evaluation section. For demonstration purposes, the tutorial notebook runs a limited number of epochs, so the notebook run in a few minutes.
 
 ```shell
 git clone git@github.com:inoue0426/drGAT.git
@@ -20,6 +20,11 @@ docker run -it -p 9999:9999 inoue0426/drgat
 ```
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
+
+
+## Training
+
+For re-training the model, refer to model_training.ipynb. If you want to use your dataset, generate_dataset.ipynb might be useful.
 
 
 ## Requirement
@@ -40,7 +45,7 @@ torch-spline-conv==1.2.2+pt113cu116
 ## Environment
 
 Our experiment was conducted on Ubuntu with an NVIDIA A100 Tensor Core GPU.  
-If you want to re-train model, we reccomend to use GPU.
+If you want to re-train model, we recommend using GPU.
 
 ---
 
