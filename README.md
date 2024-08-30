@@ -8,6 +8,18 @@ This is the official implementation for **drGAT: Attention-Guided Gene Assessmen
 
 This model is created to understand how genes influence Drug Response using Graph Attention Networks (GAT) on heterogeneous networks of drugs, cells, and genes. It predicts Drug Response based on the attention coefficients generated during this process. This has been implemented in Python.
 
+## Citation 
+
+```
+@article{inoue2024drgat,
+  title={drGAT: Attention-Guided Gene Assessment of Drug Response Utilizing a Drug-Cell-Gene Heterogeneous Network},
+  author={Inoue, Yoshitaka and Lee, Hunmin and Fu, Tianfan and Luna, Augustin},
+  journal={ArXiv},
+  year={2024},
+  publisher={arXiv}
+}
+```
+
 ## Quick start
 
 This quick start guide demonstrates how to run drGAT predictions on both CPU and GPU, completing the process within seconds.
@@ -20,7 +32,6 @@ docker run -it -p 9999:9999 inoue0426/drgat
 ```
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb and run all cells.
-
 
 ## Training
 
