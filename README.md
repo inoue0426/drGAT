@@ -69,8 +69,11 @@ git clone git@github.com:inoue0426/drGAT.git
 cd drGAT
 conda env create -f environment.yml
 conda activate drGAT
+python -m ipykernel install --user --name=drGAT
+jupyter notebook --port=9999
 ```
 
+Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
 
 ## Installation using requirement.txt
 
