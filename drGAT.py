@@ -250,6 +250,9 @@ def print_binary_classification_metrics(y_true, y_pred):
     y_true: true labels
     y_pred: predicted labels
     """
+    if len(y_true) == 1:
+        return None
+
     accuracy = accuracy_score(y_true, y_pred)
     precision = precision_score(y_true, y_pred)
     recall = recall_score(y_true, y_pred)
@@ -297,10 +300,11 @@ def eval(model, data, device=None):
     with torch.no_grad():
         outputs, _ = model(drug, cell, gene, edge_index, test_drug, test_cell)
 
+    probability = outputs.squeeze()
     predict = torch.round(outputs).squeeze()
 
     res = print_binary_classification_metrics(
         test_labels.cpu().detach().numpy(), predict.cpu().detach().numpy()
     )
 
-    return predict, res
+    return probability, res
