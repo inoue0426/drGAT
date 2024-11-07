@@ -21,6 +21,34 @@ docker run -it -p 9999:9999 inoue0426/drgat
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb and run all cells.
 
+## Input Data
+
+The model takes the following data structure:
+
+```python
+data = [
+    drug,          # Drug similarity matrix
+    cell,          # Cell line similarity matrix
+    gene,          # Gene similarity matrix
+    edge_index,    # Graph edge indices
+    train_drug,    # Training set drug indices
+    train_cell,    # Training set cell line indices
+    val_drug,      # Validation set drug indices
+    val_cell,      # Validation set cell line indices
+    train_labels,  # Training set binary labels
+    val_labels     # Validation set binary labels
+]
+```
+
+Output is as follows:
+
+| Accuracy | Precision | Recall | F1 Score | True Positive | True Negative | False Positive | False Negative |
+|-----------|-----------|---------|-----------|----------------|---------------|----------------|-----------------|
+| 0.771375 | 0.740881 | 0.783245 | 0.761474 | 1178 | 1312 | 412 | 326 |
+
+\* You can change the output to the probability or binary prediction easily.
+
+
 ## Training
 
 For re-training the model, refer to model_training.ipynb. If you want to use your dataset, create_dataset.ipynb might be useful.
