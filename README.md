@@ -15,7 +15,7 @@ This quick start guide demonstrates how to run drGAT predictions on both CPU and
 ```shell
 git clone git@github.com:inoue0426/drGAT.git
 cd drGAT
-docker pull inoue0426/drgat
+docker build -t drgat:latest .
 docker run -it -p 9999:9999 inoue0426/drgat
 ```
 
