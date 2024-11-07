@@ -52,20 +52,17 @@ Output is as follows:
 
 ```python
 predict, res = drGAT.eval(model, test)
-res
-```
-
+res # Metrics
 
 | Accuracy | Precision | Recall | F1 Score | True Positive | True Negative | False Positive | False Negative |
 |-----------|-----------|---------|-----------|----------------|---------------|----------------|-----------------|
 | 0.771375 | 0.740881 | 0.783245 | 0.761474 | 1178 | 1312 | 412 | 326 |
 
-```python
-predict
-
-```
+predict # Probability
 
 tensor([1., 0., 0.,  ..., 1., 0., 0.])
+```
+
 
 ## Training
 
