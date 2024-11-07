@@ -50,12 +50,22 @@ data = [
 
 Output is as follows:
 
+```python
+predict, res = drGAT.eval(model, test)
+res
+```
+
+
 | Accuracy | Precision | Recall | F1 Score | True Positive | True Negative | False Positive | False Negative |
 |-----------|-----------|---------|-----------|----------------|---------------|----------------|-----------------|
 | 0.771375 | 0.740881 | 0.783245 | 0.761474 | 1178 | 1312 | 412 | 326 |
 
-\* You can change the output to the probability or binary prediction easily.
+```python
+predict
 
+```
+
+tensor([1., 0., 0.,  ..., 1., 0., 0.])
 
 ## Training
 
