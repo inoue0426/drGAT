@@ -82,7 +82,7 @@ jupyter notebook --port=9999
 
 ## Data
 
-The data is in [data direcotry](https://github.com/inoue0426/drGAT/tree/main/data) and the preprocess is shown in the [preprocess directory](https://github.com/inoue0426/drGAT/tree/main/preprocess).
+Data for this pro is in [data direcotry](https://github.com/inoue0426/drGAT/tree/main/data) and the preprocessing code [here](https://github.com/inoue0426/drGAT/tree/main/preprocess).
 
 ## Citation 
 
