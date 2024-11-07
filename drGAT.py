@@ -1,5 +1,5 @@
 """
-This is the official implementation of "drGAT: Attention-Guided Gene Assessment 
+This is the official implementation of "drGAT: Attention-Guided Gene Assessment
 for Drug Response in Drug-Cell-Gene Heterogeneous Network."
 
 Written by inoue0426
@@ -303,4 +303,4 @@ def eval(model, data, device=None):
         test_labels.cpu().detach().numpy(), predict.cpu().detach().numpy()
     )
 
-    return res
+    return predict, res
