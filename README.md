@@ -80,6 +80,10 @@ jupyter notebook --port=9999
 ```
 ** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
 
+## Data
+
+The data is in [data direcotry](https://github.com/inoue0426/drGAT/tree/main/data) and the preprocess is shown in the [preprocess directory](https://github.com/inoue0426/drGAT/tree/main/preprocess).
+
 ## Citation 
 
 ```
