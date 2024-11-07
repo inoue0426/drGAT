@@ -31,7 +31,7 @@ If so, please follow this:
 
 ## Input Data
 
-The model takes the following data structure:
+The model takes the following data structure (please refer to the [notebook](https://github.com/inoue0426/drGAT/blob/main/create_dateset.ipynb) for detailed information):
 
 ```python
 data = [
