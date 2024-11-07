@@ -82,7 +82,7 @@ jupyter notebook --port=9999
 
 ## Data
 
-Data for this pro is in [data direcotry](https://github.com/inoue0426/drGAT/tree/main/data) and the preprocessing code [here](https://github.com/inoue0426/drGAT/tree/main/preprocess).
+Data for this project came from [CellMinerCDB](https://pubmed.ncbi.nlm.nih.gov/30553813/) and is in the [data direcotry](https://github.com/inoue0426/drGAT/tree/main/data) as well as the preprocessing code [here](https://github.com/inoue0426/drGAT/tree/main/preprocess).
 
 ## Citation 
 
