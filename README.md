@@ -48,10 +48,12 @@ data = [
 ]
 ```
 
-Output is as follows:
+## Output Data
+
+### For multiple drugs and cell lines
 
 ```python
-predict, res = drGAT.eval(model, test)
+predict, res = drGAT.eval(model, test) # Probability of sensitivity and Metrics.
 res # Metrics
 
 | Accuracy | Precision | Recall | F1 Score | True Positive | True Negative | False Positive | False Negative |
@@ -60,7 +62,17 @@ res # Metrics
 
 predict # Probability
 
-tensor([1., 0., 0.,  ..., 1., 0., 0.])
+tensor([0.7653, 0.3292, 0.3037,  ..., 0.9121, 0.4277, 0.2037])
+```
+
+### For single drug and cell line
+
+```python
+predict, _ = drGAT.eval(model, test)
+predict
+
+# Probability of sensitivity.
+tensor(0.7653)
 ```
 
 
