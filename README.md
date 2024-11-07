@@ -21,6 +21,14 @@ docker run -it -p 9999:9999 inoue0426/drgat
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb and run all cells.
 
+\* This might be required you to increase the memory usage on docker.
+If so, please follow this:
+1. Open Docker Desktop Dashboard
+2. Click on the Settings icon
+3. Navigate to Resources > Advanced
+4. Adjust the Memory slider to increase the limit
+5. Click "Apply & Restart" to save changes
+
 ## Input Data
 
 The model takes the following data structure:
