@@ -19,9 +19,9 @@ docker build -t drgat:latest .
 docker run -it -p 9999:9999 inoue0426/drgat
 ```
 
-Then access to http://localhost:9999/notebooks/Tutorial.ipynb and run all cells.
+Then access http://localhost:9999/notebooks/Tutorial.ipynb and run all cells.
 
-\* This might be required you to increase the memory usage on docker.
+\* This might require you to increase the memory usage on docker.
 If so, please follow this:
 1. Open Docker Desktop Dashboard
 2. Click on the Settings icon
@@ -29,7 +29,7 @@ If so, please follow this:
 4. Adjust the Memory slider to increase the limit
 5. Click "Apply & Restart" to save changes
 
-## Input Data
+## Input
 
 The model takes the following data structure (please refer to the [notebook](https://github.com/inoue0426/drGAT/blob/main/create_dateset.ipynb) for detailed information):
 
@@ -48,7 +48,7 @@ data = [
 ]
 ```
 
-## Output Data
+## Output
 
 ### For multiple drugs and cell lines
 
@@ -78,22 +78,19 @@ tensor(0.7653)
 
 ## Training
 
-For re-training the model, refer to model_training.ipynb. If you want to use your dataset, create_dataset.ipynb might be useful.
+Refer to model_training.ipynb to retrain the model. If you want to use your dataset, create_dataset.ipynb might be useful.
 
 
 ## Requirement
 
 ```
-numpy==1.23.5
-pandas==2.0.3
-matplotlib==3.7.1
-optuna==3.2.0
-torch==1.13.1+cu116
-torch-cluster==1.6.1+pt113cu116
-torch-geometric==2.3.1
-torch-scatter==2.1.1+pt113cu116
-torch-sparse==0.6.17+pt113cu116
-torch-spline-conv==1.2.2+pt113cu116
+    "torch==2.0.1",
+    "torch-geometric==2.3.1",
+    "numpy==1.26.4",
+    "matplotlib",
+    "pandas==2.2.2",
+    "jupyter",
+    "ipykernel"
 ```
 
 ** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
@@ -101,38 +98,20 @@ torch-spline-conv==1.2.2+pt113cu116
 ## Environment
 
 Our experiment was conducted on Ubuntu with an NVIDIA A100 Tensor Core GPU.  
-If you want to re-train model, we recommend using GPU.
+If you want to re-train the model, we recommend using GPUs.
 
 ---
 
-## Installation using Conda
+## Installation
 
 ```shell
-git clone git@github.com:inoue0426/drGAT.git
-cd drGAT
-conda env create -f environment.yml
-conda activate drGAT
-python -m ipykernel install --user --name=drGAT
-jupyter notebook --port=9999
+uv venv --python 3.10
+uv pip install -r pyproject.toml
+jupyter notebook --port 9999
 ```
 
 Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
 
-## Installation using requirement.txt
-
-```shell
-git clone git@github.com:inoue0426/drGAT.git
-cd drGAT
-conda create --name drGAT python=3.10 -y
-conda activate drGAT
-pip install -r requirement.txt
-# Please make sure to change the version to match the version of your GPU/CPU machine exactly.
-pip install --no-cache-dir  torch==1.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
-pip install --no-cache-dir torch_geometric
-pip install --no-cache-dir pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-1.13.1%2Bcu116.html
-python -m ipykernel install --user --name=drGAT
-jupyter notebook --port=9999
-```
 ** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
 
 ## Data
