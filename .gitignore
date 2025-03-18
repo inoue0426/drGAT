@@ -6,6 +6,7 @@ __pycache__/
 # C extensions
 *.so
 
+git_find_big.sh
 .DS_Store
 
 # Distribution / packaging
