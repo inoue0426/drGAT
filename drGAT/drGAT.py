@@ -1,14 +1,20 @@
-import subprocess
-
 import pandas as pd
 import torch
 import torch.nn as nn
-from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
-                             precision_score, recall_score)
+from sklearn.metrics import (
+    accuracy_score,
+    average_precision_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 from torch.amp import GradScaler, autocast
 from torch.nn import Dropout, Linear, Module
-from torch.nn.functional import relu
+from torch.optim import lr_scheduler
 from torch_geometric.nn import GATv2Conv, GraphNorm
+from tqdm import tqdm
 
 
 def get_attention_mat(attention):
@@ -64,6 +70,16 @@ class drGAT(Module):
             params["hidden3"] * params["heads"] + params["hidden3"] * params["heads"], 1
         )
 
+        self.activation = self._get_activation(params.get("activation", "relu"))
+
+    def _get_activation(self, name):
+        activations = {
+            "relu": nn.ReLU(),
+            "gelu": nn.GELU(),
+            "swish": nn.SiLU(),  # PyTorch 1.7+で正式実装
+        }
+        return activations.get(name.lower(), nn.ReLU())
+
     def forward(self, drug, cell, gene, edge_index, edge_attr, idx_drug, idx_cell):
 
         x = torch.concat(
@@ -79,7 +95,7 @@ class drGAT(Module):
         all_attention = get_attention_mat(attention)
         del attention
 
-        x = self.dropout1(relu(self.graph_norm1(x)))
+        x = self.dropout1(self.activation(self.graph_norm1(x)))
 
         x, attention = self.gat2(
             x=x,
@@ -90,7 +106,7 @@ class drGAT(Module):
         all_attention += get_attention_mat(attention)
         del attention
 
-        x = self.dropout2(relu(self.graph_norm2(x)))
+        x = self.dropout2(self.activation(self.graph_norm2(x)))
 
         x = torch.concat(
             [
@@ -108,21 +124,55 @@ class drGAT(Module):
 def get_model(params, device):
     """
     A function to get a model.
-    params: contains params for the model
+    params: contains params for the model and optimizer
     device: device to use
     """
-
     model = drGAT(params).to(device)
     criterion = nn.BCELoss().to(device)
-    optimizer = getattr(torch.optim, "Adam")(
-        model.parameters(),
-        lr=params["lr"],
-    )
-    scaler = GradScaler(device=device)
-    return model, criterion, optimizer, scaler
+
+    # 最適化アルゴリズムの動的選択
+    optimizer_class = getattr(torch.optim, params["optimizer"])
+
+    # オプティマイザパラメータ設定
+    optimizer_kwargs = {
+        "params": model.parameters(),
+        "lr": params["lr"],
+        "weight_decay": params.get("weight_decay", 0.0),
+    }
+
+    # Adam系特有のパラメータ
+    if params["optimizer"].lower() in ["adam", "adamw"]:
+        optimizer_kwargs["amsgrad"] = params.get("amsgrad", False)
+
+    # SGD用パラメータ（必要に応じて追加）
+    if params["optimizer"].lower() == "sgd":
+        optimizer_kwargs["momentum"] = params.get("momentum", 0.9)
+        optimizer_kwargs["nesterov"] = params.get("nesterov", True)
+
+    optimizer = optimizer_class(**optimizer_kwargs)
+
+    schedulers = {
+        "Cosine": lambda: lr_scheduler.CosineAnnealingLR(
+            optimizer, T_max=params["T_max"]
+        ),
+        "Step": lambda: lr_scheduler.StepLR(
+            optimizer, step_size=params["step_size"], gamma=params["scheduler_gamma"]
+        ),
+        "Plateau": lambda: lr_scheduler.ReduceLROnPlateau(
+            optimizer,
+            mode="min",
+            patience=params["patience"],
+            threshold=params["threshold"],
+        ),
+    }
+    scheduler = schedulers.get(params["scheduler"], lambda: None)()
+
+    scaler = GradScaler()  # デバイス指定不要（PyTorchの仕様）
+
+    return model, criterion, optimizer, scheduler, scaler
 
 
-def train(data, params=None, is_sample=False, device=None, is_save=False):
+def train(data, params=None, is_sample=False, device=None, is_save=False, verbose=True):
     device = device or torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Using: ", device)
 
@@ -144,14 +194,17 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
     params = initialize_params(params, drug, cell, gene, is_sample)
 
     train_losses, train_accs, val_losses, val_accs = [], [], [], []
-    model, criterion, optimizer, scaler = get_model(params, device)
+    model, criterion, optimizer, scheduler, scaler = get_model(params, device)
 
-    best_val_acc = 0.0
     best_model_state = None
     early_stopping_counter = 0
     max_early_stopping = 10
+    early_stopping_epoch = None
+    epoch_range = range(params["epochs"])
+    if not verbose:
+        epoch_range = tqdm(epoch_range)
 
-    for epoch in range(params["epochs"]):
+    for epoch in epoch_range:
         train_attention = train_one_epoch(
             model,
             optimizer,
@@ -170,7 +223,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
             device,
         )
 
-        val_acc, val_attention = validate_model(
+        val_acc, val_f1, val_auroc, val_aupr, val_attention = validate_model(
             model,
             criterion,
             drug,
@@ -186,11 +239,27 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
             device,
         )
 
-        if val_acc > best_val_acc:
-            best_val_acc = val_acc
+        # スケジューラの更新
+        if scheduler is not None:
+            if isinstance(scheduler, lr_scheduler.ReduceLROnPlateau):
+                scheduler.step(val_losses[-1])
+            else:
+                scheduler.step()
+
+        best_metrics = [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+        ]  # [best_val_acc, best_val_aupr, best_val_auroc, best_val_f1]
+        best_epoch = None
+
+        if val_acc > best_metrics[0]:
+            best_metrics = [val_acc, val_aupr, val_auroc, val_f1]
             best_model_state = model.state_dict()
             best_train_attention = train_attention
             best_val_attention = val_attention
+            best_epoch = epoch + 1
             early_stopping_counter = 0
         else:
             early_stopping_counter += 1
@@ -199,18 +268,29 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
             print(
                 f"Early stopping at epoch {epoch + 1} because validation accuracy did not improve for {max_early_stopping} epochs."
             )
+            early_stopping_epoch = epoch + 1
             break
 
-        print(
-            f"Epoch {epoch + 1}: Train Loss = {round(train_losses[-1], 4)}, Val Loss = {round(val_losses[-1], 4)}, Train Acc = {round(train_accs[-1], 4)}, Val Acc = {round(val_accs[-1], 4)}"
-        )
+        if verbose:
+            print(
+                f"Epoch {epoch + 1}: Train Loss = {round(train_losses[-1], 4)}, Val Loss = {round(val_losses[-1], 4)}, Train Acc = {round(train_accs[-1], 4)}, \nVal Acc = {round(val_accs[-1], 4)}, Val F1 = {round(val_f1, 4)}, Val AUROC = {round(val_auroc, 4)}, Val AUPR = {round(val_aupr, 4)}"
+            )
+
+    if best_epoch is not None:
+        print(f"Best model found at epoch {best_epoch}")
 
     if is_save and best_model_state is not None:
         torch.save(best_model_state, "best_model_CTRP.pt")
 
     model.load_state_dict(best_model_state)
 
-    return model, best_train_attention, best_val_attention
+    return (
+        model,
+        best_train_attention,
+        best_val_attention,
+        best_metrics,
+        early_stopping_epoch,
+    )
 
 
 def initialize_params(params, drug, cell, gene, is_sample):
@@ -293,33 +373,14 @@ def validate_model(
             )
             loss = criterion(outputs.squeeze(), val_labels)
         val_losses.append(loss.item())
-        predict = torch.round(outputs).squeeze()
+        outputs = outputs.float().cpu()
+        predict = torch.round(outputs).squeeze().numpy()
         val_acc = (predict == val_labels).sum().item() / len(predict)
         val_accs.append(val_acc)
-    return val_acc, attention
-
-
-def check_early_stopping(
-    val_acc,
-    best_val_acc,
-    early_stopping_counter,
-    max_early_stopping,
-    is_save,
-    model,
-    epoch,
-    tmp,
-):
-    if val_acc > best_val_acc:
-        best_val_acc = val_acc
-        if is_save:
-            torch.save(model, f"model_{epoch}.pt")
-        if tmp >= 0:
-            subprocess.run(["rm", "-rf", f"model_{tmp}.pt"], check=True)
-        tmp = epoch
-        early_stopping_counter = 0
-    else:
-        early_stopping_counter += 1
-    return best_val_acc, early_stopping_counter, tmp
+        val_f1 = f1_score(val_labels.cpu(), predict)
+        val_auroc = roc_auc_score(val_labels.cpu().numpy(), outputs.numpy())
+        val_aupr = average_precision_score(val_labels.cpu().numpy(), outputs.numpy())
+    return val_acc, val_f1, val_auroc, val_aupr, attention
 
 
 def print_binary_classification_metrics(y_true, y_pred):
