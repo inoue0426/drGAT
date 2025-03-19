@@ -121,30 +121,37 @@ def get_model(params, device):
     params: contains params for the model and optimizer
     device: device to use
     """
+    # Initialize model and criterion
     model = drGAT(params).to(device)
     criterion = nn.BCELoss().to(device)
 
-    # 最適化アルゴリズムの動的選択
+    # Select optimizer class dynamically
     optimizer_class = getattr(torch.optim, params["optimizer"])
 
-    # オプティマイザパラメータ設定
+    # Set optimizer parameters
     optimizer_kwargs = {
         "params": model.parameters(),
         "lr": params["lr"],
         "weight_decay": params.get("weight_decay", 0.0),
     }
 
-    # Adam系特有のパラメータ
+    # Additional parameters for Adam-based optimizers
     if params["optimizer"].lower() in ["adam", "adamw"]:
-        optimizer_kwargs["amsgrad"] = params.get("amsgrad", False)
+        optimizer_kwargs.update({"amsgrad": params.get("amsgrad", False)})
 
-    # SGD用パラメータ（必要に応じて追加）
+    # Additional parameters for SGD optimizer
     if params["optimizer"].lower() == "sgd":
-        optimizer_kwargs["momentum"] = params.get("momentum", 0.9)
-        optimizer_kwargs["nesterov"] = params.get("nesterov", True)
+        optimizer_kwargs.update(
+            {
+                "momentum": params.get("momentum", 0.9),
+                "nesterov": params.get("nesterov", True),
+            }
+        )
 
+    # Initialize optimizer
     optimizer = optimizer_class(**optimizer_kwargs)
 
+    # Scheduler selection
     schedulers = {
         "Cosine": lambda: lr_scheduler.CosineAnnealingLR(
             optimizer, T_max=params["T_max"]
@@ -161,7 +168,8 @@ def get_model(params, device):
     }
     scheduler = schedulers.get(params["scheduler"], lambda: None)()
 
-    scaler = GradScaler()  # デバイス指定不要（PyTorchの仕様）
+    # Initialize scaler
+    scaler = GradScaler()
 
     return model, criterion, optimizer, scheduler, scaler
 
