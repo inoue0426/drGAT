@@ -6,20 +6,20 @@ Written by inoue0426
 If you have any quesionts, feel free to make an issue to https://github.com/inoue0426/drGAT
 """
 
-import random
 import subprocess
 
-import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
-import torch_geometric
-from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
-                             precision_score, recall_score)
-from torch.nn import BatchNorm1d, Dropout, Linear, Module, MSELoss
-from torch.nn.functional import relu, sigmoid
-from torch_geometric.data import Data
+from sklearn.metrics import (
+    accuracy_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+)
+from torch.nn import Dropout, Linear, Module
+from torch.nn.functional import relu
 from torch_geometric.nn import GATv2Conv, GraphNorm
 from tqdm import tqdm
 
@@ -58,12 +58,13 @@ class GAT(Module):
         self.linear_gene = Linear(params["n_gene"], params["hidden1"])
 
         self.gat1 = GATv2Conv(
-            params["hidden1"], params["hidden2"], heads=params["heads"]
+            params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
         )
         self.gat2 = GATv2Conv(
             params["hidden2"] * params["heads"],
             params["hidden3"],
             heads=params["heads"],
+            edge_dim=1,
         )
 
         self.dropout1 = Dropout(params["dropout1"])
@@ -76,19 +77,29 @@ class GAT(Module):
             params["hidden3"] * params["heads"] + params["hidden3"] * params["heads"], 1
         )
 
-    def forward(self, drug, cell, gene, edges, idx_drug, idx_cell):
+    def forward(self, drug, cell, gene, edge_index, edge_attr, idx_drug, idx_cell):
 
         x = torch.concat(
             [self.linear_drug(drug), self.linear_cell(cell), self.linear_gene(gene)]
         )
 
-        x, attention = self.gat1(x, edges, return_attention_weights=True)
+        x, attention = self.gat1(
+            x=x,
+            edge_index=edge_index,
+            edge_attr=edge_attr,
+            return_attention_weights=True,
+        )
         all_attention = get_attention_mat(attention)
         del attention
 
         x = self.dropout1(relu(self.graph_norm1(x)))
 
-        x, attention = self.gat2(x, edges, return_attention_weights=True)
+        x, attention = self.gat2(
+            x=x,
+            edge_index=edge_index,
+            edge_attr=edge_attr,
+            return_attention_weights=True,
+        )
         all_attention += get_attention_mat(attention)
         del attention
 
@@ -125,21 +136,27 @@ def get_model(params, device):
 
 def train(data, params=None, is_sample=False, device=None, is_save=False):
     """
-    A function to train a model.
-    data: contains data for training
-        - x: feature matrix
-        - adj: adjacency matrix
-        - train_drug: indices of drug nodes for training
-        - train_cell: indices of cell nodes for training
-        - train_labels: labels for training
-        - val_drug: indices of drug nodes for validation
-        - val_cell: indices of cell nodes for validation
-        - val_labels: labels for validation
-    params: contains params for the model
-    is_sample: whether to use small epochs for training
-    device: device to use
-    is_save: whether to save the best model
+    Trains a model using the provided data and parameters.
+
+    Parameters:
+    - data: A tuple containing the following elements:
+        - drug: Feature matrix for drug nodes.
+        - cell: Feature matrix for cell nodes.
+        - gene: Feature matrix for gene nodes.
+        - edge_index: Adjacency matrix for the graph.
+        - edge_attr: Edge attributes for the graph.
+        - train_drug: Indices of drug nodes used for training.
+        - train_cell: Indices of cell nodes used for training.
+        - train_labels: Labels corresponding to the training data.
+        - val_drug: Indices of drug nodes used for validation.
+        - val_cell: Indices of cell nodes used for validation.
+        - val_labels: Labels corresponding to the validation data.
+    - params: Dictionary containing parameters for the model.
+    - is_sample: Boolean indicating whether to use a reduced number of epochs for training.
+    - device: The device to use for computation (e.g., 'cpu' or 'cuda').
+    - is_save: Boolean indicating whether to save the best model during training.
     """
+
     if device is None:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -150,6 +167,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
         cell,
         gene,
         edge_index,
+        edge_attr,
         train_drug,
         train_cell,
         val_drug,
@@ -184,7 +202,6 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
     model, criterion, optimizer = get_model(params, device)
 
     best_val_acc = 0.0
-    best_model = None
     early_stopping_counter = 0
     max_early_stopping = 10
     tmp = -1
@@ -193,7 +210,9 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
         model.train()
         optimizer.zero_grad()
 
-        outputs, attention = model(drug, cell, gene, edge_index, train_drug, train_cell)
+        outputs, attention = model(
+            drug, cell, gene, edge_index, edge_attr, train_drug, train_cell
+        )
 
         loss = criterion(outputs.squeeze(), train_labels)
         train_losses.append(loss.item())
@@ -206,10 +225,11 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
         optimizer.step()
 
         model.eval()
-        valid_loss = 0.0
 
         with torch.no_grad():
-            outputs, _ = model(drug, cell, gene, edge_index, val_drug, val_cell)
+            outputs, _ = model(
+                drug, cell, gene, edge_index, edge_attr, val_drug, val_cell
+            )
             loss = criterion(outputs.squeeze(), val_labels)
             val_losses.append(loss.item())
             predict = torch.round(outputs).squeeze()
@@ -279,26 +299,43 @@ def print_binary_classification_metrics(y_true, y_pred):
 def eval(model, data, device=None):
     """
     A function to evaluate a model.
-    model: model to evaluate
-    data: contains data for evaluation
-        - x: feature matrix
-        - adj: adjacency matrix
-        - test_drug: indices of drug nodes for testing
-        - test_cell: indices of cell nodes for testing
-        - test_labels: labels for testing
-    device: device to use
+
+    Parameters:
+    model: torch.nn.Module
+        The model to evaluate.
+    data: tuple
+        A tuple containing the data for evaluation:
+        - drug: torch.Tensor
+            Feature matrix for drug nodes.
+        - cell: torch.Tensor
+            Feature matrix for cell nodes.
+        - gene: torch.Tensor
+            Feature matrix for gene nodes.
+        - edge_index: torch.Tensor
+            Edge indices for the graph.
+        - edge_attr: torch.Tensor
+            Edge attributes for the graph.
+        - test_drug: torch.Tensor
+            Indices of drug nodes for testing.
+        - test_cell: torch.Tensor
+            Indices of cell nodes for testing.
+        - test_labels: torch.Tensor
+            Labels for testing.
+    device: torch.device, optional
+        The device to use for computation. If not provided, it will default to CUDA if available, otherwise CPU.
     """
     if not device:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    drug, cell, gene, edge_index, test_drug, test_cell, test_labels = [
+    drug, cell, gene, edge_index, edge_attr, test_drug, test_cell, test_labels = [
         x.to(device) if torch.is_tensor(x) else x for x in data
     ]
 
     model.eval()
-    testid_loss = 0.0
     with torch.no_grad():
-        outputs, _ = model(drug, cell, gene, edge_index, test_drug, test_cell)
+        outputs, _ = model(
+            drug, cell, gene, edge_index, edge_attr, test_drug, test_cell
+        )
 
     probability = outputs.squeeze()
     predict = torch.round(outputs).squeeze()
