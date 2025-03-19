@@ -3,13 +3,8 @@ import subprocess
 import pandas as pd
 import torch
 import torch.nn as nn
-from sklearn.metrics import (
-    accuracy_score,
-    confusion_matrix,
-    f1_score,
-    precision_score,
-    recall_score,
-)
+from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
+                             precision_score, recall_score)
 from torch.amp import GradScaler, autocast
 from torch.nn import Dropout, Linear, Module
 from torch.nn.functional import relu
