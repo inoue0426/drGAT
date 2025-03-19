@@ -1,22 +1,19 @@
-"""
-This is the official implementation of "drGAT: Attention-Guided Gene Assessment
-for Drug Response in Drug-Cell-Gene Heterogeneous Network."
-
-Written by inoue0426
-If you have any quesionts, feel free to make an issue to https://github.com/inoue0426/drGAT
-"""
-
 import subprocess
 
 import pandas as pd
 import torch
 import torch.nn as nn
-from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
-                             precision_score, recall_score)
+from sklearn.metrics import (
+    accuracy_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+)
+from torch.amp import GradScaler, autocast
 from torch.nn import Dropout, Linear, Module
 from torch.nn.functional import relu
 from torch_geometric.nn import GATv2Conv, GraphNorm
-from tqdm import tqdm
 
 
 def get_attention_mat(attention):
@@ -35,7 +32,7 @@ def get_attention_mat(attention):
     return attention_matrix
 
 
-class GAT(Module):
+class drGAT(Module):
     """A class to generate a drGAT model.
     params: contains params for the model
         - dropout1: dropout rate for dropout 1
@@ -47,7 +44,7 @@ class GAT(Module):
     """
 
     def __init__(self, params):
-        super(GAT, self).__init__()
+        super(drGAT, self).__init__()
         self.linear_drug = Linear(params["n_drug"], params["hidden1"])
         self.linear_cell = Linear(params["n_cell"], params["hidden1"])
         self.linear_gene = Linear(params["n_gene"], params["hidden1"])
@@ -120,43 +117,21 @@ def get_model(params, device):
     device: device to use
     """
 
-    model = GAT(params).to(device)
+    model = drGAT(params).to(device)
     criterion = nn.BCELoss().to(device)
     optimizer = getattr(torch.optim, "Adam")(
         model.parameters(),
         lr=params["lr"],
     )
-    return model, criterion, optimizer
+    scaler = GradScaler(device=device)
+    return model, criterion, optimizer, scaler
 
 
 def train(data, params=None, is_sample=False, device=None, is_save=False):
-    """
-    Trains a model using the provided data and parameters.
-
-    Parameters:
-    - data: A tuple containing the following elements:
-        - drug: Feature matrix for drug nodes.
-        - cell: Feature matrix for cell nodes.
-        - gene: Feature matrix for gene nodes.
-        - edge_index: Adjacency matrix for the graph.
-        - edge_attr: Edge attributes for the graph.
-        - train_drug: Indices of drug nodes used for training.
-        - train_cell: Indices of cell nodes used for training.
-        - train_labels: Labels corresponding to the training data.
-        - val_drug: Indices of drug nodes used for validation.
-        - val_cell: Indices of cell nodes used for validation.
-        - val_labels: Labels corresponding to the validation data.
-    - params: Dictionary containing parameters for the model.
-    - is_sample: Boolean indicating whether to use a reduced number of epochs for training.
-    - device: The device to use for computation (e.g., 'cpu' or 'cuda').
-    - is_save: Boolean indicating whether to save the best model during training.
-    """
-
-    if device is None:
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
+    device = device or torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Using: ", device)
 
+    data = [x.to(device) if torch.is_tensor(x) else x for x in data]
     (
         drug,
         cell,
@@ -169,94 +144,187 @@ def train(data, params=None, is_sample=False, device=None, is_save=False):
         val_cell,
         train_labels,
         val_labels,
-    ) = [x.to(device) if torch.is_tensor(x) else x for x in data]
+    ) = data
 
-    if not params:
-        params = {
-            "dropout1": 0.1,
-            "dropout2": 0.1,
-            "n_drug": drug.shape[0],
-            "n_cell": cell.shape[0],
-            "n_gene": gene.shape[0],
-            "hidden1": 256,
-            "hidden2": 32,
-            "hidden3": 128,
-            "epochs": 1500,
-            "lr": 0.001,
-            "heads": 5,
-        }
+    params = initialize_params(params, drug, cell, gene, is_sample)
 
-    if is_sample:
-        params["epochs"] = 5
-
-    train_losses = []
-    train_accs = []
-    val_losses = []
-    val_accs = []
-
-    model, criterion, optimizer = get_model(params, device)
+    train_losses, train_accs, val_losses, val_accs = [], [], [], []
+    model, criterion, optimizer, scaler = get_model(params, device)
 
     best_val_acc = 0.0
+    best_model_state = None
     early_stopping_counter = 0
     max_early_stopping = 10
-    tmp = -1
 
-    for epoch in tqdm(range(params["epochs"])):
-        model.train()
-        optimizer.zero_grad()
+    for epoch in range(params["epochs"]):
+        train_attention = train_one_epoch(
+            model,
+            optimizer,
+            criterion,
+            scaler,
+            drug,
+            cell,
+            gene,
+            edge_index,
+            edge_attr,
+            train_drug,
+            train_cell,
+            train_labels,
+            train_losses,
+            train_accs,
+            device,
+        )
 
+        val_acc, val_attention = validate_model(
+            model,
+            criterion,
+            drug,
+            cell,
+            gene,
+            edge_index,
+            edge_attr,
+            val_drug,
+            val_cell,
+            val_labels,
+            val_losses,
+            val_accs,
+            device,
+        )
+
+        if val_acc > best_val_acc:
+            best_val_acc = val_acc
+            best_model_state = model.state_dict()
+            best_train_attention = train_attention
+            best_val_attention = val_attention
+            early_stopping_counter = 0
+        else:
+            early_stopping_counter += 1
+
+        if early_stopping_counter >= max_early_stopping:
+            print(
+                f"Early stopping at epoch {epoch + 1} because validation accuracy did not improve for {max_early_stopping} epochs."
+            )
+            break
+
+        print(
+            f"Epoch {epoch + 1}: Train Loss = {round(train_losses[-1], 4)}, Val Loss = {round(val_losses[-1], 4)}, Train Acc = {round(train_accs[-1], 4)}, Val Acc = {round(val_accs[-1], 4)}"
+        )
+
+    if is_save and best_model_state is not None:
+        torch.save(best_model_state, "best_model_CTRP.pt")
+
+    model.load_state_dict(best_model_state)
+
+    return model, best_train_attention, best_val_attention
+
+
+def initialize_params(params, drug, cell, gene, is_sample):
+    params = params or {
+        "dropout1": 0.1,
+        "dropout2": 0.1,
+        "n_drug": drug.shape[0],
+        "n_cell": cell.shape[0],
+        "n_gene": gene.shape[0],
+        "hidden1": 256,
+        "hidden2": 32,
+        "hidden3": 128,
+        "epochs": 1500,
+        "lr": 0.001,
+        "heads": 5,
+    }
+    if is_sample:
+        params["epochs"] = 5
+    return params
+
+
+def train_one_epoch(
+    model,
+    optimizer,
+    criterion,
+    scaler,
+    drug,
+    cell,
+    gene,
+    edge_index,
+    edge_attr,
+    train_drug,
+    train_cell,
+    train_labels,
+    train_losses,
+    train_accs,
+    device,
+):
+    model.train()
+    optimizer.zero_grad()
+
+    with autocast(device_type=device.type):
         outputs, attention = model(
             drug, cell, gene, edge_index, edge_attr, train_drug, train_cell
         )
-
         loss = criterion(outputs.squeeze(), train_labels)
-        train_losses.append(loss.item())
 
-        predict = torch.round(outputs).squeeze()
-        train_acc = (predict == train_labels).sum().item() / len(predict)
-        train_accs.append(train_acc)
+    train_losses.append(loss.item())
 
-        loss.backward()
-        optimizer.step()
+    predict = torch.round(outputs).squeeze()
+    train_acc = (predict == train_labels).sum().item() / len(predict)
+    train_accs.append(train_acc)
 
-        model.eval()
+    scaler.scale(loss).backward()
+    scaler.step(optimizer)
+    scaler.update()
+    return attention
 
-        with torch.no_grad():
-            outputs, _ = model(
+
+def validate_model(
+    model,
+    criterion,
+    drug,
+    cell,
+    gene,
+    edge_index,
+    edge_attr,
+    val_drug,
+    val_cell,
+    val_labels,
+    val_losses,
+    val_accs,
+    device,
+):
+    model.eval()
+    with torch.no_grad():
+        with autocast(device_type=device.type):
+            outputs, attention = model(
                 drug, cell, gene, edge_index, edge_attr, val_drug, val_cell
             )
             loss = criterion(outputs.squeeze(), val_labels)
-            val_losses.append(loss.item())
-            predict = torch.round(outputs).squeeze()
-            val_acc = (predict == val_labels).sum().item() / len(predict)
-            val_accs.append(val_acc)
+        val_losses.append(loss.item())
+        predict = torch.round(outputs).squeeze()
+        val_acc = (predict == val_labels).sum().item() / len(predict)
+        val_accs.append(val_acc)
+    return val_acc, attention
 
-            if val_acc > best_val_acc:
-                best_val_acc = val_acc
-                if is_save:
-                    torch.save(model, "model_{}.pt".format(epoch))
 
-                if tmp >= 0:
-                    subprocess.run(["rm", "-rf", f"model_{tmp}.pt"], check=True)
-                tmp = epoch
-                early_stopping_counter = 0
-            else:
-                early_stopping_counter += 1
-
-            if early_stopping_counter >= max_early_stopping:
-                print(
-                    f"Early stopping at epoch {epoch + 1} because validation accuracy did not improve for {max_early_stopping} epochs."
-                )
-                break
-
-        if (epoch + 1) % 10 == 0:
-            print("Epoch: ", epoch + 1)
-            print("Train Loss: ", train_losses[-1])
-            print("Val Loss: ", val_losses[-1])
-            print("Train Accuracy: ", train_accs[-1])
-            print("Val Accuracy: ", val_accs[-1], "\n")
-
-    return model, attention
+def check_early_stopping(
+    val_acc,
+    best_val_acc,
+    early_stopping_counter,
+    max_early_stopping,
+    is_save,
+    model,
+    epoch,
+    tmp,
+):
+    if val_acc > best_val_acc:
+        best_val_acc = val_acc
+        if is_save:
+            torch.save(model, f"model_{epoch}.pt")
+        if tmp >= 0:
+            subprocess.run(["rm", "-rf", f"model_{tmp}.pt"], check=True)
+        tmp = epoch
+        early_stopping_counter = 0
+    else:
+        early_stopping_counter += 1
+    return best_val_acc, early_stopping_counter, tmp
 
 
 def print_binary_classification_metrics(y_true, y_pred):
@@ -292,33 +360,6 @@ def print_binary_classification_metrics(y_true, y_pred):
 
 
 def eval(model, data, device=None):
-    """
-    A function to evaluate a model.
-
-    Parameters:
-    model: torch.nn.Module
-        The model to evaluate.
-    data: tuple
-        A tuple containing the data for evaluation:
-        - drug: torch.Tensor
-            Feature matrix for drug nodes.
-        - cell: torch.Tensor
-            Feature matrix for cell nodes.
-        - gene: torch.Tensor
-            Feature matrix for gene nodes.
-        - edge_index: torch.Tensor
-            Edge indices for the graph.
-        - edge_attr: torch.Tensor
-            Edge attributes for the graph.
-        - test_drug: torch.Tensor
-            Indices of drug nodes for testing.
-        - test_cell: torch.Tensor
-            Indices of cell nodes for testing.
-        - test_labels: torch.Tensor
-            Labels for testing.
-    device: torch.device, optional
-        The device to use for computation. If not provided, it will default to CUDA if available, otherwise CPU.
-    """
     if not device:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -328,15 +369,16 @@ def eval(model, data, device=None):
 
     model.eval()
     with torch.no_grad():
-        outputs, _ = model(
-            drug, cell, gene, edge_index, edge_attr, test_drug, test_cell
-        )
+        with autocast(device_type=device.type):
+            outputs, test_attention = model(
+                drug, cell, gene, edge_index, edge_attr, test_drug, test_cell
+            )
 
-    probability = outputs.squeeze()
-    predict = torch.round(outputs).squeeze()
+    probability = outputs.squeeze().float()
+    predict = torch.round(outputs).squeeze().float()
 
     res = print_binary_classification_metrics(
         test_labels.cpu().detach().numpy(), predict.cpu().detach().numpy()
     )
 
-    return probability, res
+    return probability, res, test_attention
