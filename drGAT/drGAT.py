@@ -1,13 +1,19 @@
 import pandas as pd
 import torch
 import torch.nn as nn
-from sklearn.metrics import (accuracy_score, average_precision_score,
-                             confusion_matrix, f1_score, precision_score,
-                             recall_score, roc_auc_score)
+from sklearn.metrics import (
+    accuracy_score,
+    average_precision_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 from torch.amp import GradScaler, autocast
 from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
-from torch_geometric.nn import GATv2Conv, GraphNorm
+from torch_geometric.nn import GATConv, GATv2Conv, GraphNorm, TransformerConv
 from tqdm import tqdm
 
 
@@ -44,15 +50,37 @@ class drGAT(Module):
         self.linear_cell = Linear(params["n_cell"], params["hidden1"])
         self.linear_gene = Linear(params["n_gene"], params["hidden1"])
 
-        self.gat1 = GATv2Conv(
-            params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
-        )
-        self.gat2 = GATv2Conv(
-            params["hidden2"] * params["heads"],
-            params["hidden3"],
-            heads=params["heads"],
-            edge_dim=1,
-        )
+        self.gnn_layer = params["gnn_layer"]
+        if self.gnn_layer == "GAT":
+            self.gat1 = GATConv(
+                params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
+            )
+            self.gat2 = GATConv(
+                params["hidden2"] * params["heads"],
+                params["hidden3"],
+                heads=params["heads"],
+                edge_dim=1,
+            )
+        elif self.gnn_layer == "GATv2":
+            self.gat1 = GATv2Conv(
+                params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
+            )
+            self.gat2 = GATv2Conv(
+                params["hidden2"] * params["heads"],
+                params["hidden3"],
+                heads=params["heads"],
+                edge_dim=1,
+            )
+        elif self.gnn_layer == "Transformer":
+            self.gat1 = TransformerConv(
+                params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
+            )
+            self.gat2 = TransformerConv(
+                params["hidden2"] * params["heads"],
+                params["hidden3"],
+                heads=params["heads"],
+                edge_dim=1,
+            )
 
         self.dropout1 = Dropout(params["dropout1"])
         self.dropout2 = Dropout(params["dropout2"])
@@ -79,6 +107,9 @@ class drGAT(Module):
         x = torch.concat(
             [self.linear_drug(drug), self.linear_cell(cell), self.linear_gene(gene)]
         )
+
+        if self.gnn_layer == "Transformer":
+            edge_attr = edge_attr.unsqueeze(-1)
 
         x, attention = self.gat1(
             x=x,
