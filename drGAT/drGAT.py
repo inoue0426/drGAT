@@ -401,7 +401,7 @@ def validate_model(
             loss = criterion(outputs.squeeze(), val_labels)
         val_losses.append(loss.item())
         outputs = outputs.float().cpu()
-        predict = torch.round(outputs).squeeze().numpy()
+        predict = torch.round(outputs).cpu().squeeze().numpy()
         val_acc = (predict == val_labels).sum().item() / len(predict)
         val_accs.append(val_acc)
         val_f1 = f1_score(val_labels.cpu(), predict)
