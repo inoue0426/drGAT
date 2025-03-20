@@ -376,6 +376,7 @@ def train_one_epoch(
     scaler.update()
     return attention
 
+
 def validate_model(
     model,
     criterion,
@@ -403,7 +404,7 @@ def validate_model(
         probabilities = torch.sigmoid(outputs).numpy()
         predict = (probabilities > 0.5).astype(int)
         val_labels = val_labels.cpu().numpy()
-        val_acc = (predict == val_labels).sum().item() / len(predict)        
+        val_acc = (predict == val_labels).sum().item() / len(predict)
         val_accs.append(val_acc)
         val_f1 = f1_score(val_labels, predict)
         val_auroc = roc_auc_score(val_labels, probabilities)
