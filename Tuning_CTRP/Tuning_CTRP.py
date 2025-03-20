@@ -30,10 +30,12 @@ converter = {idxs[1, i]: int(idxs[0, i]) for i in range(idxs.shape[1])}
 edge_index = np.load("../CTRP_data/edge_idxs.npy")
 edge_attr = np.load("../CTRP_data/edge_attr.npy")
 
+
 def get_idx(X):
     X["Drug"] = [converter[(i)] for i in X["DRUG_NAME"]]
     X["Cell"] = [converter[(i)] for i in X["CELL_LINE_NAME"]]
     return X
+
 
 train_data = get_idx(train_data)
 val_data = get_idx(val_data)
@@ -95,6 +97,7 @@ params = {
     "heads": 2,
 }
 
+
 def objective(trial):
     params = {
         "n_drug": drug.shape[0],
@@ -104,16 +107,11 @@ def objective(trial):
         "dropout2": trial.suggest_categorical("dropout2", [0.1, 0.2, 0.3, 0.4, 0.5]),
         "hidden1": trial.suggest_categorical(
             "hidden1",
-            [
-                256,
-                512,
-                1028
-            ],
+            [256, 512, 1028],
         ),
         "hidden2": trial.suggest_categorical(
             "hidden2",
             [
-
                 128,
                 256,
                 512,
@@ -122,7 +120,6 @@ def objective(trial):
         "hidden3": trial.suggest_categorical(
             "hidden3",
             [
-
                 64,
                 128,
                 256,
@@ -196,6 +193,7 @@ def objective(trial):
             return [float("-inf")] * 4
         else:
             raise e
+
 
 name = "CTRP"
 study = optuna.create_study(
