@@ -367,7 +367,7 @@ def train_one_epoch(
 
     train_losses.append(loss.item())
 
-    predict = torch.round(outputs).squeeze()
+    predict = (torch.sigmoid(outputs) > 0.5).float().squeeze()
     train_acc = (predict == train_labels).sum().item() / len(predict)
     train_accs.append(train_acc)
 
@@ -375,7 +375,6 @@ def train_one_epoch(
     scaler.step(optimizer)
     scaler.update()
     return attention
-
 
 def validate_model(
     model,
@@ -401,12 +400,14 @@ def validate_model(
             loss = criterion(outputs.squeeze(), val_labels)
         val_losses.append(loss.item())
         outputs = outputs.float().cpu()
-        predict = torch.round(outputs).cpu().squeeze().numpy()
-        val_acc = (predict == val_labels).sum().item() / len(predict)
+        probabilities = torch.sigmoid(outputs).numpy()
+        predict = (probabilities > 0.5).astype(int)
+        val_labels = val_labels.cpu().numpy()
+        val_acc = (predict == val_labels).sum().item() / len(predict)        
         val_accs.append(val_acc)
-        val_f1 = f1_score(val_labels.cpu(), predict)
-        val_auroc = roc_auc_score(val_labels.cpu().numpy(), outputs.numpy())
-        val_aupr = average_precision_score(val_labels.cpu().numpy(), outputs.numpy())
+        val_f1 = f1_score(val_labels, predict)
+        val_auroc = roc_auc_score(val_labels, probabilities)
+        val_aupr = average_precision_score(val_labels, probabilities)
     return val_acc, val_f1, val_auroc, val_aupr, attention
 
 
