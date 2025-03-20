@@ -1,9 +1,15 @@
 import pandas as pd
 import torch
 import torch.nn as nn
-from sklearn.metrics import (accuracy_score, average_precision_score,
-                             confusion_matrix, f1_score, precision_score,
-                             recall_score, roc_auc_score)
+from sklearn.metrics import (
+    accuracy_score,
+    average_precision_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 from torch.amp import GradScaler, autocast
 from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
@@ -137,7 +143,7 @@ class drGAT(Module):
 
         x = self.linear1(x)
 
-        return torch.sigmoid(x), all_attention
+        return x, all_attention
 
 
 def get_model(params, device):
@@ -148,7 +154,7 @@ def get_model(params, device):
     """
     # Initialize model and criterion
     model = drGAT(params).to(device)
-    criterion = nn.BCELoss().to(device)
+    criterion = nn.BCEWithLogitsLoss()().to(device)
 
     # Select optimizer class dynamically
     optimizer_class = getattr(torch.optim, params["optimizer"])
