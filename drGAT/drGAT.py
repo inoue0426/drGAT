@@ -1,13 +1,26 @@
 import pandas as pd
 import torch
 import torch.nn as nn
-from sklearn.metrics import (accuracy_score, average_precision_score,
-                             confusion_matrix, f1_score, precision_score,
-                             recall_score, roc_auc_score)
+from sklearn.metrics import (
+    accuracy_score,
+    average_precision_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 from torch.amp import GradScaler, autocast
 from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
-from torch_geometric.nn import GATConv, GATv2Conv, GraphNorm, TransformerConv
+from torch_geometric.nn import (
+    GATConv,
+    GATv2Conv,
+    GCNConv,
+    GraphNorm,
+    MessagePassing,
+    TransformerConv,
+)
 from tqdm import tqdm
 
 
@@ -75,16 +88,34 @@ class drGAT(Module):
                 heads=params["heads"],
                 edge_dim=1,
             )
+        elif self.gnn_layer == "GCN":
+            self.gat1 = GCNConv(params["hidden1"], params["hidden2"])
+            self.gat2 = GCNConv(params["hidden2"], params["hidden3"])
+        elif self.gnn_layer == "MPNN":
+            self.gat1 = MessagePassing(
+                aggr="add", flow="source_to_target", node_dim=0, edge_dim=1
+            )
+            self.gat2 = MessagePassing(
+                aggr="add", flow="source_to_target", node_dim=0, edge_dim=1
+            )
 
         self.dropout1 = Dropout(params["dropout1"])
         self.dropout2 = Dropout(params["dropout2"])
 
-        self.graph_norm1 = GraphNorm(params["hidden2"] * params["heads"])
-        self.graph_norm2 = GraphNorm(params["hidden3"] * params["heads"])
+        if (self.gnn_layer == "MPNN") or (self.gnn_layer == "GCN"):
+            self.graph_norm1 = GraphNorm(params["hidden2"])
+            self.graph_norm2 = GraphNorm(params["hidden3"])
 
-        self.linear1 = Linear(
-            params["hidden3"] * params["heads"] + params["hidden3"] * params["heads"], 1
-        )
+            self.linear1 = Linear(params["hidden3"] + params["hidden3"], 1)
+        else:
+            self.graph_norm1 = GraphNorm(params["hidden2"] * params["heads"])
+            self.graph_norm2 = GraphNorm(params["hidden3"] * params["heads"])
+
+            self.linear1 = Linear(
+                params["hidden3"] * params["heads"]
+                + params["hidden3"] * params["heads"],
+                1,
+            )
 
         self.activation = self._get_activation(params.get("activation", "relu"))
 
@@ -105,25 +136,31 @@ class drGAT(Module):
         if self.gnn_layer == "Transformer":
             edge_attr = edge_attr.unsqueeze(-1)
 
-        x, attention = self.gat1(
-            x=x,
-            edge_index=edge_index,
-            edge_attr=edge_attr,
-            return_attention_weights=True,
-        )
-        all_attention = get_attention_mat(attention)
-        del attention
+        if (self.gnn_layer == "MPNN") or (self.gnn_layer == "GCN"):
+            x = self.gat1(x=x, edge_index=edge_index)
+            x = self.dropout1(self.activation(self.graph_norm1(x)))
 
-        x = self.dropout1(self.activation(self.graph_norm1(x)))
+            x = self.gat2(x=x, edge_index=edge_index)
+        else:
+            x, attention = self.gat1(
+                x=x,
+                edge_index=edge_index,
+                edge_attr=edge_attr,
+                return_attention_weights=True,
+            )
+            all_attention = get_attention_mat(attention)
+            del attention
 
-        x, attention = self.gat2(
-            x=x,
-            edge_index=edge_index,
-            edge_attr=edge_attr,
-            return_attention_weights=True,
-        )
-        all_attention += get_attention_mat(attention)
-        del attention
+            x = self.dropout1(self.activation(self.graph_norm1(x)))
+
+            x, attention = self.gat2(
+                x=x,
+                edge_index=edge_index,
+                edge_attr=edge_attr,
+                return_attention_weights=True,
+            )
+            all_attention += get_attention_mat(attention)
+            del attention
 
         x = self.dropout2(self.activation(self.graph_norm2(x)))
 
@@ -400,7 +437,8 @@ def validate_model(
             )
             loss = criterion(outputs.squeeze(), val_labels)
         val_losses.append(loss.item())
-        outputs = outputs.float().cpu()
+
+        outputs = outputs.squeeze().float().cpu()  # ここで次元を調整
         probabilities = torch.sigmoid(outputs).numpy()
         predict = (probabilities > 0.5).astype(int)
         val_labels = val_labels.cpu().numpy()
