@@ -191,4 +191,4 @@ study = optuna.create_study(
     study_name=name,
     load_if_exists=True,
 )
-study.optimize(objective, n_trials=200, n_jobs=8)
+study.optimize(objective, n_trials=200)
