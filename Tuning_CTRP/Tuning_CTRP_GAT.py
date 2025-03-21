@@ -7,11 +7,11 @@ import optuna
 import pandas as pd
 import torch
 
-from drGAT import drGAT
+current_dir = os.getcwd()  # noqa: E402
+parent_dir = os.path.abspath(os.path.join(current_dir, ".."))  # noqa: E402
+sys.path.append(parent_dir)  # noqa: E402
 
-current_dir = os.getcwd()
-parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
-sys.path.append(parent_dir)
+from drGAT import drGAT  # noqa: E402
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
