@@ -1,4 +1,5 @@
 import gc
+import glob
 import os
 import sys
 
@@ -22,8 +23,21 @@ test_data = pd.read_csv("../nci_data/test.csv")
 idxs = np.load("../nci_data/idxs.npy", allow_pickle=True)
 converter = {idxs[1, i]: int(idxs[0, i]) for i in range(idxs.shape[1])}
 
-edge_index = np.load("../nci_data/edge_idxs.npy")
-edge_attr = np.load("../nci_data/edge_attr.npy")
+
+def load_and_combine_chunks(pattern, axis=0):
+    chunk_files = sorted(
+        glob.glob(pattern), key=lambda x: int(x.split("_")[-1].split(".")[0])
+    )
+
+    chunks = [np.load(f) for f in chunk_files]
+    return np.concatenate(chunks, axis=axis)
+
+
+edge_index = load_and_combine_chunks("../nci_data/edge_idxs/*.npy", axis=1)
+edge_attr = load_and_combine_chunks("../nci_data/edge_attrs/*.npy", axis=0)
+
+idxs = np.load("../nci_data/idxs.npy", allow_pickle=True)
+converter = {idxs[1, i]: int(idxs[0, i]) for i in range(idxs.shape[1])}
 
 
 def get_idx(X):
