@@ -12,4 +12,4 @@
 
 source /data/$USER/conda/etc/profile.d/conda.sh && source /data/$USER/conda/etc/profile.d/mamba.sh
 conda activate genex
-python Tuning_CTRP.py
+python Tuning_CTRP_MPNN.py

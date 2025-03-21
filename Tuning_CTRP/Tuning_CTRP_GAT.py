@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 import gc
 import os
 import sys
@@ -10,19 +7,17 @@ import optuna
 import pandas as pd
 import torch
 
+from drGAT import drGAT
+
 current_dir = os.getcwd()
 parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
 sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-from drGAT import drGAT
-
 train_data = pd.read_csv("../CTRP_data/train.csv")
 val_data = pd.read_csv("../CTRP_data/val.csv")
 test_data = pd.read_csv("../CTRP_data/test.csv")
-
-train_data.head()
 
 idxs = np.load("../CTRP_data/idxs.npy", allow_pickle=True)
 converter = {idxs[1, i]: int(idxs[0, i]) for i in range(idxs.shape[1])}
@@ -32,8 +27,8 @@ edge_attr = np.load("../CTRP_data/edge_attr.npy")
 
 
 def get_idx(X):
-    X["Drug"] = [converter[(i)] for i in X["DRUG_NAME"]]
-    X["Cell"] = [converter[(i)] for i in X["CELL_LINE_NAME"]]
+    X["Drug"] = [converter[(i)] for i in X["Drug"]]
+    X["Cell"] = [converter[(i)] for i in X["Cell"]]
     return X
 
 
@@ -57,8 +52,6 @@ val_labels = np.load("../CTRP_data/val_labels.npy")
 train_labels = torch.tensor(train_labels).float()
 val_labels = torch.tensor(val_labels).float()
 
-# Get feature matrix
-
 drug = pd.read_csv("../CTRP_data/drug_sim.csv", index_col=0)
 cell = pd.read_csv("../CTRP_data/cell_sim.csv", index_col=0)
 gene = pd.read_csv("../CTRP_data/gene_sim.csv", index_col=0)
@@ -66,8 +59,6 @@ gene = pd.read_csv("../CTRP_data/gene_sim.csv", index_col=0)
 drug = torch.tensor(drug.values).float()
 cell = torch.tensor(cell.values).float()
 gene = torch.tensor(gene.values).float()
-
-# Create the dataset
 
 data = [
     drug,
@@ -82,20 +73,6 @@ data = [
     train_labels,
     val_labels,
 ]
-
-params = {
-    "dropout1": 0.1,
-    "dropout2": 0.1,
-    "n_drug": drug.shape[0],
-    "n_cell": cell.shape[0],
-    "n_gene": gene.shape[0],
-    "hidden1": 256,
-    "hidden2": 32,
-    "hidden3": 128,
-    "epochs": 3,
-    "lr": 0.001,
-    "heads": 2,
-}
 
 
 def objective(trial):
@@ -141,7 +118,6 @@ def objective(trial):
         ),
     }
 
-    # スケジューラ関連パラメータの条件付き追加
     if params["scheduler"] == "Cosine":
         params["T_max"] = trial.suggest_int("T_max", 20, 50)
     elif params["scheduler"] == "Step":
@@ -163,7 +139,6 @@ def objective(trial):
         params["momentum"] = trial.suggest_float("momentum", 0.8, 0.95)
         params["nesterov"] = trial.suggest_categorical("nesterov", [True, False])
 
-    # 隠れ層サイズとバッチサイズの関係を制約
     if (params["hidden1"] > 512) and (params["hidden2"] > 256):
         raise optuna.TrialPruned("Memory intensive configuration")
 
@@ -171,6 +146,9 @@ def objective(trial):
         _, _, _, best_metrics, early_stopping_epoch = drGAT.train(
             data, params=params, device=device, verbose=False
         )
+        print("#####")
+        print(best_metrics)
+        print("#####")
 
         early_stop_threshold = trial.suggest_float("early_stop_threshold", 0.3, 0.7)
         if (
@@ -190,12 +168,12 @@ def objective(trial):
             torch.cuda.empty_cache()
             gc.collect()
 
-            return [float("-inf")] * 4
+            return [None] * 4
         else:
             raise e
 
 
-name = "CTRP"
+name = "CTRP_GAT"
 study = optuna.create_study(
     directions=["maximize"] * 4,
     sampler=optuna.samplers.TPESampler(),

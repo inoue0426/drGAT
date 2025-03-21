@@ -13,24 +13,20 @@ from sklearn.metrics import (
 from torch.amp import GradScaler, autocast
 from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
-from torch_geometric.nn import GATConv, GATv2Conv, GraphNorm, TransformerConv
+from torch_geometric.nn import GCNConv, GraphNorm, MessagePassing
 from tqdm import tqdm
 
 
-def get_attention_mat(attention):
-    """A function to make attention coefficient tensor to matrix.
-    attention: attention tensor from Graph Attention layer.
-    """
+class MPNNConv(MessagePassing):
+    def __init__(self, in_channels, out_channels):
+        super().__init__(aggr="add", flow="source_to_target", node_dim=0)
+        self.lin = Linear(in_channels + 1, out_channels)  # +1 for edge_attr
 
-    edge_index, attention_weights = [i.detach().cpu() for i in attention]
+    def forward(self, x, edge_index, edge_attr):
+        return self.propagate(edge_index, x=x, edge_attr=edge_attr)
 
-    num_nodes = torch.max(edge_index) + 1
-    attention_matrix = torch.zeros(
-        (num_nodes, num_nodes), dtype=attention_weights.dtype
-    )
-    attention_matrix[edge_index[0], edge_index[1]] = attention_weights.squeeze().mean()
-
-    return attention_matrix
+    def message(self, x_j, edge_attr):
+        return self.lin(torch.cat([x_j, edge_attr], dim=-1))
 
 
 class drGAT(Module):
@@ -51,47 +47,20 @@ class drGAT(Module):
         self.linear_gene = Linear(params["n_gene"], params["hidden1"])
 
         self.gnn_layer = params["gnn_layer"]
-        if self.gnn_layer == "GAT":
-            self.gat1 = GATConv(
-                params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
-            )
-            self.gat2 = GATConv(
-                params["hidden2"] * params["heads"],
-                params["hidden3"],
-                heads=params["heads"],
-                edge_dim=1,
-            )
-        elif self.gnn_layer == "GATv2":
-            self.gat1 = GATv2Conv(
-                params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
-            )
-            self.gat2 = GATv2Conv(
-                params["hidden2"] * params["heads"],
-                params["hidden3"],
-                heads=params["heads"],
-                edge_dim=1,
-            )
-        elif self.gnn_layer == "Transformer":
-            self.gat1 = TransformerConv(
-                params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
-            )
-            self.gat2 = TransformerConv(
-                params["hidden2"] * params["heads"],
-                params["hidden3"],
-                heads=params["heads"],
-                edge_dim=1,
-            )
+        if self.gnn_layer == "GCN":
+            self.gat1 = GCNConv(params["hidden1"], params["hidden2"])
+            self.gat2 = GCNConv(params["hidden2"], params["hidden3"])
+        elif self.gnn_layer == "MPNN":
+            self.gat1 = MPNNConv(params["hidden1"], params["hidden2"])
+            self.gat2 = MPNNConv(params["hidden2"], params["hidden3"])
 
         self.dropout1 = Dropout(params["dropout1"])
         self.dropout2 = Dropout(params["dropout2"])
 
-        self.graph_norm1 = GraphNorm(params["hidden2"] * params["heads"])
-        self.graph_norm2 = GraphNorm(params["hidden3"] * params["heads"])
+        self.graph_norm1 = GraphNorm(params["hidden2"])
+        self.graph_norm2 = GraphNorm(params["hidden3"])
 
-        self.linear1 = Linear(
-            params["hidden3"] * params["heads"] + params["hidden3"] * params["heads"],
-            1,
-        )
+        self.linear1 = Linear(params["hidden3"] + params["hidden3"], 1)
 
         self.activation = self._get_activation(params.get("activation", "relu"))
 
@@ -109,30 +78,19 @@ class drGAT(Module):
             [self.linear_drug(drug), self.linear_cell(cell), self.linear_gene(gene)]
         )
 
-        if self.gnn_layer == "Transformer":
-            edge_attr = edge_attr.unsqueeze(-1)
+        if edge_attr.dim() == 1:
+            edge_attr = edge_attr.unsqueeze(1)
 
-        x, attention = self.gat1(
-            x=x,
-            edge_index=edge_index,
-            edge_attr=edge_attr,
-            return_attention_weights=True,
-        )
-        all_attention = get_attention_mat(attention)
-        del attention
-
-        x = self.dropout1(self.activation(self.graph_norm1(x)))
-
-        x, attention = self.gat2(
-            x=x,
-            edge_index=edge_index,
-            edge_attr=edge_attr,
-            return_attention_weights=True,
-        )
-        all_attention += get_attention_mat(attention)
-        del attention
-
-        x = self.dropout2(self.activation(self.graph_norm2(x)))
+        if self.gnn_layer == "GCN":
+            x = self.gat1(x=x, edge_index=edge_index)
+            x = self.dropout1(self.activation(self.graph_norm1(x)))
+            x = self.gat2(x=x, edge_index=edge_index)
+            x = self.dropout2(self.activation(self.graph_norm2(x)))
+        else:
+            x = self.gat1(x=x, edge_index=edge_index, edge_attr=edge_attr)
+            x = self.dropout1(self.activation(self.graph_norm1(x)))
+            x = self.gat2(x=x, edge_index=edge_index, edge_attr=edge_attr)
+            x = self.dropout2(self.activation(self.graph_norm2(x)))
 
         x = torch.concat(
             [
@@ -144,7 +102,7 @@ class drGAT(Module):
 
         x = self.linear1(x)
 
-        return x, all_attention
+        return x
 
 
 def get_model(params, device):
@@ -239,7 +197,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False, verbos
         epoch_range = tqdm(epoch_range)
 
     for epoch in epoch_range:
-        train_attention = train_one_epoch(
+        train_one_epoch(
             model,
             optimizer,
             criterion,
@@ -257,7 +215,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False, verbos
             device,
         )
 
-        val_acc, val_f1, val_auroc, val_aupr, val_attention = validate_model(
+        val_acc, val_f1, val_auroc, val_aupr = validate_model(
             model,
             criterion,
             drug,
@@ -291,8 +249,6 @@ def train(data, params=None, is_sample=False, device=None, is_save=False, verbos
         if val_acc > best_metrics[0]:
             best_metrics = [val_acc, val_aupr, val_auroc, val_f1]
             best_model_state = model.state_dict()
-            best_train_attention = train_attention
-            best_val_attention = val_attention
             best_epoch = epoch + 1
             early_stopping_counter = 0
         else:
@@ -320,8 +276,6 @@ def train(data, params=None, is_sample=False, device=None, is_save=False, verbos
 
     return (
         model,
-        best_train_attention,
-        best_val_attention,
         best_metrics,
         early_stopping_epoch,
     )
@@ -339,7 +293,6 @@ def initialize_params(params, drug, cell, gene, is_sample):
         "hidden3": 128,
         "epochs": 1500,
         "lr": 0.001,
-        "heads": 5,
     }
     if is_sample:
         params["epochs"] = 5
@@ -367,9 +320,7 @@ def train_one_epoch(
     optimizer.zero_grad()
 
     with autocast(device_type=device.type):
-        outputs, attention = model(
-            drug, cell, gene, edge_index, edge_attr, train_drug, train_cell
-        )
+        outputs = model(drug, cell, gene, edge_index, edge_attr, train_drug, train_cell)
         loss = criterion(outputs.squeeze(), train_labels)
 
     train_losses.append(loss.item())
@@ -381,7 +332,6 @@ def train_one_epoch(
     scaler.scale(loss).backward()
     scaler.step(optimizer)
     scaler.update()
-    return attention
 
 
 def validate_model(
@@ -402,9 +352,7 @@ def validate_model(
     model.eval()
     with torch.no_grad():
         with autocast(device_type=device.type):
-            outputs, attention = model(
-                drug, cell, gene, edge_index, edge_attr, val_drug, val_cell
-            )
+            outputs = model(drug, cell, gene, edge_index, edge_attr, val_drug, val_cell)
             loss = criterion(outputs.squeeze(), val_labels)
         val_losses.append(loss.item())
 
@@ -417,7 +365,7 @@ def validate_model(
         val_f1 = f1_score(val_labels, predict)
         val_auroc = roc_auc_score(val_labels, probabilities)
         val_aupr = average_precision_score(val_labels, probabilities)
-    return val_acc, val_f1, val_auroc, val_aupr, attention
+    return val_acc, val_f1, val_auroc, val_aupr
 
 
 def print_binary_classification_metrics(y_true, y_pred):
@@ -463,7 +411,7 @@ def eval(model, data, device=None):
     model.eval()
     with torch.no_grad():
         with autocast(device_type=device.type):
-            outputs, test_attention = model(
+            outputs = model(
                 drug, cell, gene, edge_index, edge_attr, test_drug, test_cell
             )
 
@@ -474,4 +422,4 @@ def eval(model, data, device=None):
         test_labels.cpu().detach().numpy(), predict.cpu().detach().numpy()
     )
 
-    return probability, res, test_attention
+    return probability, res
