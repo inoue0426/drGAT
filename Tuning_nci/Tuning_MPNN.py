@@ -1,12 +1,14 @@
 import gc
 import glob
 import os
+import re
 import sys
 
 import numpy as np
 import optuna
 import pandas as pd
 import torch
+from tqdm import tqdm
 
 current_dir = os.getcwd()  # noqa: E402
 parent_dir = os.path.abspath(os.path.join(current_dir, ".."))  # noqa: E402
@@ -36,6 +38,10 @@ def load_and_combine_chunks(pattern, axis=0):
 edge_index = load_and_combine_chunks("../nci_data/edge_idxs/*.npy", axis=1)
 edge_attr = load_and_combine_chunks("../nci_data/edge_attrs/*.npy", axis=0)
 
+edge_index = torch.tensor(edge_index).int()
+edge_index = edge_index.type(torch.int64)
+edge_attr = torch.tensor(edge_attr).float()
+
 idxs = np.load("../nci_data/idxs.npy", allow_pickle=True)
 converter = {idxs[1, i]: int(idxs[0, i]) for i in range(idxs.shape[1])}
 
@@ -64,9 +70,19 @@ val_labels = np.load("../nci_data/val_labels.npy")
 train_labels = torch.tensor(train_labels).float()
 val_labels = torch.tensor(val_labels).float()
 
-drug = pd.read_csv("../nci_data/drug_sim.csv", index_col=0)
 cell = pd.read_csv("../nci_data/cell_sim.csv", index_col=0)
 gene = pd.read_csv("../nci_data/gene_sim.csv", index_col=0)
+
+
+# How to read
+def natural_sort_key(s):
+    return [int(c) if c.isdigit() else c for c in re.split(r"(\d+)", s)]
+
+
+file_paths = glob.glob("../nci_data/drug_sim/drug_sim_part_*.parquet")
+sorted_file_paths = sorted(file_paths, key=natural_sort_key)
+
+drug = pd.concat([pd.read_parquet(file) for file in tqdm(sorted_file_paths)])
 
 drug = torch.tensor(drug.values).float()
 cell = torch.tensor(cell.values).float()
