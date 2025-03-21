@@ -126,7 +126,7 @@ class drGAT(Module):
         )
         all_attention += get_attention_mat(attention)
         del attention
-        
+
         x = x.to(torch.float32)
         x = self.dropout2(self.activation(self.graph_norm2(x)))
 
