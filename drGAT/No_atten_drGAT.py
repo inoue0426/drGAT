@@ -76,14 +76,14 @@ class drGAT(Module):
             edge_attr = edge_attr.unsqueeze(1)
 
         if self.gnn_layer == "GCN":
-            x = self.gat1(x=x, edge_index=edge_index)
+            x = self.gat1(x=x, edge_index=edge_index).to(torch.float32)
             x = self.dropout1(self.activation(self.graph_norm1(x)))
-            x = self.gat2(x=x, edge_index=edge_index)
+            x = self.gat2(x=x, edge_index=edge_index).to(torch.float32)
             x = self.dropout2(self.activation(self.graph_norm2(x)))
         else:
-            x = self.gat1(x=x, edge_index=edge_index, edge_attr=edge_attr)
+            x = self.gat1(x=x, edge_index=edge_index, edge_attr=edge_attr).to(torch.float32)
             x = self.dropout1(self.activation(self.graph_norm1(x)))
-            x = self.gat2(x=x, edge_index=edge_index, edge_attr=edge_attr)
+            x = self.gat2(x=x, edge_index=edge_index, edge_attr=edge_attr).to(torch.float32)
             x = self.dropout2(self.activation(self.graph_norm2(x)))
 
         x = torch.concat(

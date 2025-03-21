@@ -168,7 +168,7 @@ def objective(trial):
             torch.cuda.empty_cache()
             gc.collect()
 
-            return [None] * 4
+            return [float("-inf")] * 4
         else:
             raise e
 
@@ -182,4 +182,4 @@ study = optuna.create_study(
     study_name=name,
     load_if_exists=True,
 )
-study.optimize(objective, n_trials=100)
+study.optimize(objective, n_trials=200, n_jobs=5)
