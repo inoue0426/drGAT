@@ -1,0 +1,7633 @@
+Drug,Cell
+Dactolisib,EoL-1-cell
+Paclitaxel,LOXIMVI
+OSI-027,NH-12
+CCT245232,LXF-289
+CCT245232,HCC1569
+Epothilone B,FU97
+Luminespib,NCI-H847
+Bortezomib,KGN
+Paclitaxel,COR-L88
+Epothilone B,EKVX
+ARRY-520,NCI-H2052
+AZD4877,NCI-H2172
+CCT245232,HOS
+Ara-G,CCRF-CEM
+Epothilone B,BICR10
+SN-38_1490,Calu-6
+SN-38_1490,Caov-4
+AKT inhibitor VIII_228,ALL-SIL
+Dactolisib,ATN-1
+SN-38_1490,COLO-829
+AZD2014,SNU-81
+SN-38_1490,LB647-SCLC
+ZG-10,ALL-SIL
+SN-38_1490,TE-5
+Trichostatin A,ABC-1
+Temsirolimus,P31-FUJ
+AZ20,Becker
+Trametinib,PA-TU-8902
+Doxorubicin_133,MS751
+Epothilone B,EB2
+Panobinostat,DoTc2-4510
+Navitoclax,BICR22
+Epothilone B,EW-7
+CCT245232,A427
+Trichostatin A,SW872
+Epothilone B,PANC-04-03
+SN-38_1490,SCC-15
+ARRY-520,JHH-7
+Doxorubicin_133,SJSA-1
+Trametinib,Hs-683
+Gemcitabine_135,G-361
+Temsirolimus,SW1271
+Trichostatin A,UACC-893
+Temsirolimus,BPH-1
+OSI-027,NB4
+Panobinostat,SNU-449
+Gemcitabine_135,TK
+Dactolisib,LXF-289
+AKT inhibitor VIII_228,KARPAS-45
+CCT245232,SU-DHL-6
+AZD4877,NB13
+Epothilone B,KOSC-2
+Doxorubicin_133,TE-9
+Doxorubicin_133,HCE-4
+ARRY-520,BEN
+Epothilone B,ML-2
+Trichostatin A,TT2609-C02
+CCT245232,DOV13
+Afatinib_1377,OE21
+Navitoclax,SUP-B15
+ARRY-520,D-336MG
+Luminespib,RPMI-7951
+Luminespib,SIG-M5
+Doxorubicin_133,NH-12
+Trichostatin A,NCI-H1355
+Temsirolimus,LCLC-103H
+Panobinostat,NCI-H2228
+Doxorubicin_133,LB647-SCLC
+AKT inhibitor VIII_171,MDA-MB-361
+AZD2014,CAL-39
+Doxorubicin_133,RD
+Doxorubicin_133,NCI-H187
+AZD4547_1497,HSC-39
+AZD5582,ML-2
+CCT245232,BxPC-3
+Foretinib,NCI-H2227
+ARRY-520,no-10
+Luminespib,8305C
+Luminespib,EW-3
+Doxorubicin_133,SH-4
+OSI-027,Hey
+Foretinib,CESS
+Palbociclib,KOSC-2
+Paclitaxel,NU-DUL-1
+Trametinib,JHH-7
+AZD4877,NCI-H322M
+ARRY-520,BICR78
+Panobinostat,NCI-H2087
+Luminespib,EC-GI-10
+Dactolisib,NCI-H847
+AZD4877,Hs-766T
+Panobinostat,no-10
+AZD4877,DMS-114
+Paclitaxel,KMS-12-BM
+Temsirolimus,SK-GT-4
+Trametinib,LXF-289
+Bortezomib,L-363
+Paclitaxel,NB69
+Trichostatin A,NB4
+Foretinib,Hs-633T
+CCT245232,SW620
+ARRY-520,SW1271
+Epothilone B,TE-11
+Dactolisib,Mo-T
+Selumetinib_1498,BICR22
+AZD4877,OVTOKO
+S-Trityl-L-cysteine,EoL-1-cell
+Gemcitabine_135,RPMI-8866
+Gemcitabine_135,KMS-12-BM
+ARRY-520,EoL-1-cell
+Luminespib,697
+CCT245232,OS-RC-2
+CI-1040,LOXIMVI
+Gemcitabine_135,SKG-IIIa
+Fedratinib,ES1
+Doxorubicin_133,CAL-120
+Selumetinib_1062,Hey
+Capivasertib,CCRF-CEM
+Gemcitabine_135,MES-SA
+Panobinostat,EW-22
+Paclitaxel,EB2
+Epothilone B,BT-20
+Panobinostat,SNU-61
+Navitoclax,NCI-H1304
+Gemcitabine_135,LC4-1
+Bortezomib,SU-DHL-1
+Trichostatin A,22RV1
+SN-38_1490,OVTOKO
+Bortezomib,SIMA
+NPK76-II-72-1,GDM-1
+AZD2014,SK-CO-1
+Trichostatin A,WM793B
+Temsirolimus,KARPAS-1106P
+Trichostatin A,A431
+Foretinib,JHH-7
+Doxorubicin_133,TE-5
+Capivasertib,UACC-893
+AZD2014,EW-3
+Dactolisib,SU-DHL-6
+Temsirolimus,TOV-21G
+Foretinib,MOLT-4
+Doxorubicin_133,TOV-21G
+AZD2014,697
+NPK76-II-72-1,EW-1
+Foretinib,T98G
+Gemcitabine_135,MOG-G-CCM
+Bortezomib,NCI-H1155
+Foretinib,FU97
+Temsirolimus,C-33-A
+ARRY-520,ML-2
+ARRY-520,BICR10
+AZD4877,EC-GI-10
+Temsirolimus,G-292-Clone-A141B1
+Dactolisib,MOLT-4
+Dactolisib,COLO-824
+CCT245232,NCI-H2228
+Doxorubicin_133,NCI-H1688
+ARRY-520,GDM-1
+Epothilone B,RD
+NPK76-II-72-1,EW-7
+AZD2014,UWB1.289
+Luminespib,AGS
+Doxorubicin_133,A431
+Luminespib,C-33-A
+S-Trityl-L-cysteine,SU-DHL-6
+Trichostatin A,EFO-27
+Luminespib,CCRF-CEM
+AZD4877,C-33-A
+Doxorubicin_133,786-0
+Epothilone B,CAL-62
+Epothilone B,JHH-7
+AZD2014,EW-22
+ARRY-520,RPMI-8402
+Panobinostat,NCI-H292
+AZD5582,GDM-1
+Pelitinib,SNU-61
+Luminespib,BALL-1
+AZD2014,PANC-03-27
+ARRY-520,HT-29
+OSI-027,KGN
+Gemcitabine_135,SF295
+Pelitinib,BPH-1
+Doxorubicin_133,DOK
+Luminespib,SU-DHL-6
+CHIR-99021_154,G-292-Clone-A141B1
+YK-4-279,LC-2-ad
+Panobinostat,ML-2
+Fedratinib,ALL-SIL
+Epothilone B,786-0
+AZD2014,OCI-LY7
+Doxorubicin_133,697
+Temsirolimus,HuO9
+Luminespib,NCI-H292
+AZD4877,SH-4
+AZD4547_1497,NCI-H2227
+Dactolisib,huH-1
+SN-38_1490,CAL-39
+Temsirolimus,Hs-766T
+Doxorubicin_133,NCI-H2172
+AZD2014,EoL-1-cell
+Trichostatin A,JHH-1
+ARRY-520,PFSK-1
+Epothilone B,AsPC-1
+Trichostatin A,HCC1937
+Paclitaxel,ATN-1
+AZD2014,ATN-1
+Dactolisib,NB69
+ARRY-520,DMS-114
+CCT245232,HT55
+Luminespib,GP5d
+AZD4877,SW837
+Temsirolimus,CAL-62
+Navitoclax,COR-L88
+CCT245232,SF126
+Dactolisib,SK-GT-2
+Temsirolimus,VA-ES-BJ
+Bortezomib,RL95-2
+CCT245232,TE-9
+Luminespib,Becker
+AZD2014,T-T
+Temsirolimus,BICR22
+Trichostatin A,SF295
+Epothilone B,COR-L88
+CCT245232,ML-2
+S-Trityl-L-cysteine,NB4
+Luminespib,DMS-114
+ARRY-520,HT55
+ARRY-520,OV-17R
+AZD8186,EFO-27
+Bexarotene,SIG-M5
+CCT245232,ACHN
+AZ20,OE21
+Panobinostat,SU-DHL-8
+Pelitinib,ALL-SIL
+ZG-10,NB4
+NPK76-II-72-1,697
+Epothilone B,NCI-H841
+Pelitinib,KARPAS-45
+SN-38_1490,SW620
+SN-38_1490,TE-1
+Navitoclax,BEN
+Luminespib,NCI-H2172
+Doxorubicin_133,NCI-H1563
+BMS-536924_62,LXF-289
+AZD2014,JHH-7
+Doxorubicin_133,SNU-449
+Foretinib,PA-TU-8902
+CCT245232,CA46
+Selumetinib_1498,NCI-H1355
+Paclitaxel,TE-11
+Temsirolimus,SW620
+Trichostatin A,JHH-7
+Gemcitabine_135,G-402
+Epothilone B,COR-L105
+SN-38_1490,NB69
+YK-4-279,Becker
+Pelitinib,SNU-407
+ARRY-520,NCI-H1355
+Epothilone B,SNU-449
+Trametinib,A498
+Palbociclib,SU-DHL-6
+CCT245232,NCI-H841
+Trichostatin A,MOG-G-CCM
+Trichostatin A,Hs-633T
+ARRY-520,NCI-H847
+SN-38_1490,MDA-MB-157
+Epothilone B,BICR22
+AZD8186,REH
+Trichostatin A,NCI-H1435
+AZ20,NEC8
+Trichostatin A,MDA-MB-361
+Bortezomib,NCI-H1355
+AZD4877,GP5d
+AZ20,NB69
+AZD4877,AGS
+Epothilone B,TOV-21G
+AZD2014,JHU-029
+AZD4877,L-428
+AZD4877,MN-60
+AZD5582,ALL-SIL
+SN-38_1490,22RV1
+Panobinostat,COLO-783
+Luminespib,BPH-1
+Afatinib_1377,NCI-H1623
+AZD5582,BxPC-3
+Palbociclib,NB4
+SB505124_476,ESO26
+Epothilone B,no-10
+CCT245232,AsPC-1
+CI-1040,AGS
+Doxorubicin_133,KGN
+BMS-536924_62,NCI-H1355
+Palbociclib,RPMI-8402
+OSI-027,DMS-114
+AZD2014,MOLT-4
+Bortezomib,SUP-B15
+Epothilone B,HLE
+SN-38_1490,KON
+CCT245232,Mo-T
+Paclitaxel,DG-75
+Trichostatin A,D-336MG
+OSI-027,ES1
+Foretinib,HuO9
+Epothilone B,CAPAN-1
+Capivasertib,L-363
+Panobinostat,L-428
+Dactolisib,KMRC-20
+CCT245232,OV-17R
+Panobinostat,NCI-H1105
+Paclitaxel,NCI-H187
+Epothilone B,TE-5
+Trametinib,KOSC-2
+Selumetinib_1062,Hs-633T
+AKT inhibitor VIII_171,786-0
+Trametinib,SNU-449
+Trichostatin A,AGS
+AZD5582,WM1552C
+SN-38_1490,DBTRG-05MG
+Epothilone B,NEC8
+YK-4-279,MES-SA
+Doxorubicin_133,ABC-1
+Bortezomib,DMS-114
+ARRY-520,SW837
+AZD4877,BICR22
+Dactolisib,BEN
+CCT245232,NCI-H1355
+Dactolisib,UACC-893
+Panobinostat,CAL-120
+Paclitaxel,NCI-H1876
+Doxorubicin_133,NCI-H841
+Doxorubicin_133,HCC1937
+Palbociclib,ABC-1
+Dactolisib,SW620
+AZD2014,SCC-15
+SN-38_1490,Hs-766T
+Epothilone B,HCC-827
+ARRY-520,K-562
+AZD2014,RCH-ACV
+AZD4547_1497,JHH-7
+ARRY-520,PANC-03-27
+Bortezomib,ML-2
+AZD4877,P31-FUJ
+Dactolisib,LCLC-103H
+CCT245232,BALL-1
+Gemcitabine_135,NCI-H847
+ARRY-520,HCE-4
+Luminespib,NCI-H2141
+Dactolisib,NCI-H1092
+SN-38_1490,NCI-H1092
+CCT245232,BFTC-909
+AZD4877,SW948
+Gemcitabine_135,CAL-51
+Selumetinib_1062,RL95-2
+Luminespib,BICR10
+OSI-027,GDM-1
+Epothilone B,DoTc2-4510
+Bleomycin (10 uM),CAL-62
+Trametinib,FU97
+Navitoclax,P12-ICHIKAWA
+Bortezomib,CA46
+Palbociclib,Hs-633T
+Luminespib,LC-2-ad
+AZD4877,NH-12
+Palbociclib,OCI-LY7
+Dactolisib,MS751
+AKT inhibitor VIII_228,SIG-M5
+Trametinib,HT-115
+Gemcitabine_135,EJM
+Dactolisib,PA-TU-8902
+Paclitaxel,SHP-77
+Luminespib,MOLT-4
+CCT245232,SHP-77
+AZ20,L-363
+Trichostatin A,DOK
+SN-38_1490,786-0
+ARRY-520,8505C
+SN-38_1490,PA-TU-8902
+Gemcitabine_135,SW872
+AZD2014,TE-5
+Trichostatin A,NCI-H322M
+Panobinostat,HTC-C3
+Selumetinib_1062,M14
+Luminespib,EoL-1-cell
+ARRY-520,ESO26
+AZD2014,CAL-120
+Trichostatin A,COR-L105
+CCT245232,NB4
+Trametinib,SW1271
+Dactolisib,UWB1.289
+Doxorubicin_133,CA46
+CI-1040,GP5d
+Temsirolimus,NCI-H1105
+AZD4877,A498
+Doxorubicin_133,BICR22
+Afatinib_1377,JHH-1
+Trichostatin A,BICR10
+CCT245232,K-562
+SN-38_1490,FU97
+SN-38_1490,KOSC-2
+Luminespib,SHP-77
+Temsirolimus,COLO-792
+Epothilone B,LS-1034
+Trichostatin A,697
+Trichostatin A,ML-2
+Luminespib,IM-95
+Trametinib,SNU-407
+Gemcitabine_135,P12-ICHIKAWA
+CCT245232,NCI-H2444
+CCT245232,NH-12
+AZ20,VA-ES-BJ
+Panobinostat,BT-474
+Gemcitabine_135,697
+CI-1033,C-33-A
+Paclitaxel,ALL-SIL
+Panobinostat,HuP-T4
+Trametinib,Caov-4
+Trametinib,UACC-893
+AZD2014,HOS
+AZD2014,8305C
+Luminespib,NB69
+Luminespib,BT-20
+AZ20,EJM
+AZD4877,LC-2-ad
+Bortezomib,LAN-6
+Dactolisib,SNU-81
+AZD4877,NCI-H1355
+AZD4877,SNU-61
+Bleomycin (10 uM),ACHN
+Capivasertib,WSU-DLCL2
+SN-38_1490,SK-GT-2
+Trametinib,T84
+Crizotinib,ALL-SIL
+OSI-027,JJN-3
+ARRY-520,TT
+Gemcitabine_135,REH
+Dactolisib,TE-9
+Selumetinib_1498,LS-1034
+SN-38_1490,G-361
+Trametinib,C32
+NPK76-II-72-1,C-33-A
+Trametinib,BFTC-909
+Temsirolimus,ACHN
+CCT245232,CADO-ES1
+CCT245232,Hs-766T
+Paclitaxel,TE-1
+Luminespib,SUP-B15
+AZD4547_1497,EW-11
+AZD4877,NCI-H1666
+Navitoclax,KARPAS-231
+CCT245232,OVTOKO
+Panobinostat,Hs-766T
+CCT245232,NCI-H1876
+Panobinostat,WSU-DLCL2
+S-Trityl-L-cysteine,SUP-B15
+OSI-027,CESS
+Bortezomib,LC4-1
+Trichostatin A,NCI-H1563
+Foretinib,SF295
+Doxorubicin_133,ALL-SIL
+Dactolisib,C32
+Trichostatin A,IPC-298
+CAY10566,LOXIMVI
+Epothilone B,M14
+Gemcitabine_135,EW-1
+Foretinib,697
+Navitoclax,NCI-H1092
+Epothilone B,TK
+AZD4877,NCI-H1155
+Selumetinib_1498,COLO-783
+SN-38_1490,NCI-H2141
+Trichostatin A,SW1271
+AZD2014,SNU-449
+Dactolisib,JHH-2
+Foretinib,RL95-2
+AZD2014,NCI-H358
+Luminespib,HSC-39
+Temsirolimus,NCI-H1666
+Foretinib,OS-RC-2
+AZD8186,JHH-2
+SN-38_1490,WSU-DLCL2
+Trametinib,Becker
+Temsirolimus,LU-135
+AZD4877,OS-RC-2
+Foretinib,DMS-114
+ARRY-520,NCI-H841
+Gemcitabine_135,DU-145
+S-Trityl-L-cysteine,SJSA-1
+AZD2014,MOG-G-CCM
+SN-38_1490,KMRC-20
+Temsirolimus,SW872
+Dactolisib,Hs-683
+Trichostatin A,RPMI-7951
+Temsirolimus,SNU-407
+Trametinib,NCI-H596
+Trichostatin A,SIMA
+Dactolisib,EW-22
+Dactolisib,8505C
+Paclitaxel,BALL-1
+AZD4877,BICR10
+ARRY-520,WM793B
+AZD5582,ESO26
+Trichostatin A,DG-75
+Gemcitabine_135,SW837
+Selumetinib_1498,SK-CO-1
+Paclitaxel,JJN-3
+SN-38_1490,WM793B
+Doxorubicin_133,IST-SL2
+Epothilone B,OS-RC-2
+Trichostatin A,MS751
+SN-38_1490,NCI-H596
+Doxorubicin_133,MN-60
+Bortezomib,GDM-1
+CCT245232,D-283MED
+Gemcitabine_135,SU-DHL-1
+Epothilone B,KON
+CCT245232,LOXIMVI
+AZD2014,Jurkat
+Trichostatin A,KINGS-1
+Doxorubicin_133,OVCAR-8
+Luminespib,Hs-683
+Temsirolimus,MS751
+Fedratinib,EW-1
+Dactolisib,EW-7
+Foretinib,ML-2
+ARRY-520,BxPC-3
+Fedratinib,KMS-12-BM
+Temsirolimus,NCI-H2052
+AZD4877,DG-75
+Panobinostat,NCI-H1304
+Navitoclax,NCI-H187
+AZ20,CHP-126
+AZD2014,ACHN
+Luminespib,RD
+Trametinib,NCI-H1563
+Epothilone B,ES1
+Trichostatin A,A427
+CCT245232,LC-2-ad
+Dactolisib,AsPC-1
+SN-38_1490,NCI-H1105
+SN-38_1490,HuO-3N1
+Panobinostat,GDM-1
+Trametinib,Hs-766T
+Doxorubicin_133,NCI-H847
+ARRY-520,TOV-21G
+Panobinostat,NCI-H1666
+Selumetinib_1062,NCI-H292
+Trichostatin A,LC-2-ad
+Gemcitabine_135,BICR78
+Paclitaxel,SW872
+Luminespib,HLE
+Foretinib,COLO-668
+Doxorubicin_133,EW-7
+Fedratinib,KARPAS-231
+Panobinostat,SU-DHL-1
+Panobinostat,NCI-H2452
+Panobinostat,SW1271
+AZD4877,OV-56
+BX795,EoL-1-cell
+Panobinostat,PA-TU-8902
+Temsirolimus,RPMI-8866
+AZD4877,NCI-H358
+Gemcitabine_135,LCLC-103H
+Panobinostat,CAPAN-1
+ARRY-520,M14
+Panobinostat,NCI-H1155
+ZG-10,OE21
+Bortezomib,EW-22
+ARRY-520,WSU-DLCL2
+Trichostatin A,JJN-3
+CCT245232,JHH-7
+SN-38_1490,SK-GT-4
+Dactolisib,TOV-21G
+Luminespib,SCC-15
+Panobinostat,LC4-1
+AZD4877,IST-SL2
+CCT245232,VA-ES-BJ
+Temsirolimus,HCC1937
+Panobinostat,DG-75
+CCT245232,KARPAS-231
+ARRY-520,JJN-3
+Luminespib,L-363
+CCT245232,Hs-683
+Dactolisib,SCC-15
+AZD4877,JHH-7
+AZD2014,SH-4
+Doxorubicin_133,BPH-1
+OSI-027,RPMI-8402
+Trichostatin A,LXF-289
+AZD4547_1497,GDM-1
+Dactolisib,NCI-H1651
+SN-38_1490,SF295
+Gemcitabine_135,EW-11
+Panobinostat,SK-GT-4
+SN-38_1490,LU-135
+AZD4877,Jurkat
+ARRY-520,LXF-289
+Gemcitabine_135,AGS
+Doxorubicin_133,RPMI-8402
+Trichostatin A,COLO-824
+Foretinib,SIMA
+Bortezomib,SCC-15
+NPK76-II-72-1,NCI-H847
+Panobinostat,SKM-1
+SN-38_1490,NCI-H1688
+SN-38_1490,RPMI-7951
+CCT245232,AGS
+Gemcitabine_135,SNU-449
+Temsirolimus,PANC-04-03
+Epothilone B,BICR78
+CCT245232,SNU-61
+Bleomycin (10 uM),C-33-A
+Temsirolimus,OE21
+Doxorubicin_133,L-428
+Bleomycin (10 uM),NB69
+CAY10566,HSC-39
+Dactolisib,CADO-ES1
+Temsirolimus,HTC-C3
+CCT245232,SUP-B15
+Bortezomib,K-562
+CCT245232,G-292-Clone-A141B1
+CCT245232,HT-1376
+Dactolisib,NCI-H1105
+ARRY-520,KGN
+Trichostatin A,BICR22
+Gemcitabine_135,CA46
+AZD2014,CCRF-CEM
+AZD2014,Hey
+Panobinostat,NU-DUL-1
+ARRY-520,NCI-H1092
+Panobinostat,EW-1
+Temsirolimus,SIMA
+Trichostatin A,786-0
+Foretinib,LS-1034
+Luminespib,DBTRG-05MG
+Epothilone B,BALL-1
+ARRY-520,NCI-H292
+Doxorubicin_133,SIMA
+Panobinostat,KINGS-1
+SN-38_1490,P12-ICHIKAWA
+Dactolisib,EB2
+Gemcitabine_135,Hs-633T
+Temsirolimus,DU-145
+Paclitaxel,Calu-6
+Doxorubicin_133,ATN-1
+Panobinostat,NCI-H2172
+Gemcitabine_135,LC-2-ad
+Temsirolimus,8505C
+CCT245232,G-402
+Dactolisib,NU-DUL-1
+CCT245232,HCC1937
+Dactolisib,HuO-3N1
+Epothilone B,NCI-H292
+Foretinib,C-33-A
+CCT245232,SKG-IIIa
+Trichostatin A,SW1116
+Bortezomib,RPMI-8402
+Trichostatin A,NCI-H1155
+Luminespib,LOU-NH91
+Luminespib,SKG-IIIa
+Trametinib,OE21
+ARRY-520,NCI-H2228
+Trametinib,JHU-029
+Foretinib,SK-GT-4
+Gemcitabine_135,BFTC-909
+Temsirolimus,BEN
+Bleomycin (10 uM),SF126
+Bleomycin (10 uM),CHSA0011
+Doxorubicin_133,LXF-289
+AZD4877,IM-95
+BX795,OCI-LY7
+Trichostatin A,DU-145
+AZ20,KON
+SN-38_1490,BxPC-3
+ARRY-520,P31-FUJ
+Luminespib,NCI-H2227
+Epothilone B,CAL-39
+Pelitinib,REH
+Doxorubicin_133,SU-DHL-8
+Temsirolimus,PANC-03-27
+ARRY-520,CAL-39
+SN-38_1490,NCI-H1304
+Panobinostat,HCC1937
+CCT245232,CAPAN-1
+Trichostatin A,CAPAN-1
+Temsirolimus,NCI-H28
+SN-38_1490,CESS
+SN-38_1490,C-33-A
+Trichostatin A,LB647-SCLC
+Bortezomib,ATN-1
+BMS-536924_62,ML-2
+Epothilone B,D-283MED
+Bortezomib,SIG-M5
+Trichostatin A,MEG-01
+Panobinostat,TT
+CCT245232,HLE
+Trichostatin A,SJSA-1
+AZD4877,NCI-H847
+Dactolisib,Hs-766T
+Doxorubicin_133,NU-DUL-1
+Trichostatin A,NEC8
+Bleomycin (10 uM),LOXIMVI
+Temsirolimus,NB69
+AZD2014,huH-1
+TPCA-1,EB2
+Gemcitabine_135,NCI-H1155
+Gemcitabine_135,NCI-H596
+Trichostatin A,HCC-827
+AZ20,PANC-03-27
+Panobinostat,CCRF-CEM
+Panobinostat,MS751
+Gemcitabine_135,NB69
+ARRY-520,22RV1
+Gemcitabine_135,EW-3
+OSI-027,EW-3
+Afatinib_1377,UACC-893
+AZD4547_1497,DMS-114
+AZD4877,NCI-H1435
+SN-38_1490,SK-OV-3
+ARRY-520,BALL-1
+Panobinostat,OVMIU
+Luminespib,GDM-1
+Navitoclax,NCI-H1105
+AZD2014,EFO-27
+AZD4877,COLO-783
+YK-4-279,KOSC-2
+Pelitinib,RPMI-8402
+Epothilone B,G-402
+Dactolisib,AGS
+AZD4877,BFTC-909
+OSI-027,HCC1569
+AZD4547_1497,G-292-Clone-A141B1
+Doxorubicin_133,KNS-81-FD
+CI-1040,DOK
+Trichostatin A,OE21
+Panobinostat,MOLT-4
+OSI-027,COLO-829
+Capivasertib,MOLT-4
+Dactolisib,BxPC-3
+Gemcitabine_135,NH-12
+BX795,ATN-1
+AZD4877,KYSE-510
+Epothilone B,KARPAS-231
+SN-38_1490,D-283MED
+Luminespib,VA-ES-BJ
+Doxorubicin_133,WSU-DLCL2
+Bortezomib,NB69
+Bortezomib,Calu-6
+SN-38_1490,HOS
+Luminespib,HT-29
+Temsirolimus,NCI-H2227
+CI-1040,C32
+SN-38_1490,VA-ES-BJ
+AZD4877,BT-474
+Trichostatin A,HCE-4
+Tenovin-6,SIG-M5
+Temsirolimus,OVCAR-8
+Dactolisib,C-33-A
+Luminespib,KINGS-1
+Temsirolimus,BT-20
+Panobinostat,SF295
+ARRY-520,NCI-H1155
+CCT245232,NCI-H28
+Afatinib_1377,COR-L105
+ARRY-520,DOV13
+Luminespib,COLO-668
+Trametinib,HT-29
+Gemcitabine_135,NEC8
+Luminespib,TT2609-C02
+Panobinostat,IPC-298
+Bortezomib,EJM
+Trichostatin A,MES-SA
+OSI-027,SUP-B15
+Trichostatin A,AsPC-1
+Luminespib,NCI-H2228
+Panobinostat,Calu-6
+Doxorubicin_133,CAL-39
+Gemcitabine_135,NCI-H358
+Temsirolimus,Hey
+AZD4877,EoL-1-cell
+SN-38_1490,SKG-IIIa
+ARRY-520,HuP-T4
+CCT245232,HCC-827
+Dactolisib,A431
+AZD8186,SNU-81
+Dactolisib,DG-75
+Bortezomib,NCI-H1304
+Dactolisib,PANC-03-27
+Paclitaxel,TE-5
+Selumetinib_1498,CAL-62
+AZD4877,Mo-T
+SN-38_1490,NCI-H1623
+ARRY-520,T-T
+Foretinib,EW-11
+Doxorubicin_133,NCI-H1623
+CCT245232,KYSE-510
+OSI-027,MEG-01
+Gemcitabine_135,CHP-126
+Doxorubicin_133,LC-2-ad
+CCT245232,NCI-H1688
+Doxorubicin_133,JHH-7
+Trichostatin A,CADO-ES1
+AZD4877,NB4
+Foretinib,SU-DHL-1
+Trametinib,HTC-C3
+Panobinostat,BALL-1
+Paclitaxel,BT-474
+SN-38_1490,NCI-H1876
+Dactolisib,NCI-H1666
+Doxorubicin_133,NCI-H1355
+CCT245232,KARPAS-1106P
+Palbociclib,VA-ES-BJ
+CAY10566,L-363
+Trichostatin A,ALL-SIL
+Epothilone B,SW620
+Dactolisib,no-10
+Trichostatin A,OVMIU
+Trametinib,NCI-H2452
+CCT245232,MEG-01
+KIN001-244,CESS
+AZD4877,KOSC-2
+Epothilone B,L-363
+CCT245232,BICR10
+CCT245232,TK
+Foretinib,CAL-39
+Gemcitabine_135,22RV1
+Panobinostat,PANC-03-27
+Luminespib,PANC-04-03
+Luminespib,LAN-6
+AZD2014,SW872
+Trametinib,LOU-NH91
+Trametinib,RD
+S-Trityl-L-cysteine,LXF-289
+CCT245232,OE21
+OSI-027,UACC-893
+OSI-027,NCI-H847
+Trichostatin A,DBTRG-05MG
+Temsirolimus,JHH-7
+Doxorubicin_133,SF126
+Foretinib,M14
+Trametinib,SW620
+Navitoclax,NCI-H1435
+Epothilone B,A427
+Temsirolimus,697
+Trichostatin A,EW-22
+Temsirolimus,EKVX
+AZD2014,L-363
+BMS-536924_62,SJSA-1
+Dactolisib,697
+Panobinostat,NCI-H1876
+Panobinostat,NCI-H596
+Paclitaxel,COLO-824
+Gemcitabine_135,SCC-15
+Doxorubicin_133,DBTRG-05MG
+Trichostatin A,NCI-H28
+CCT245232,WM35
+Epothilone B,NCI-H1568
+AZD4877,HCE-4
+AZD4877,MOLT-4
+Epothilone B,LOXIMVI
+Luminespib,NCI-H1092
+Doxorubicin_133,EKVX
+Panobinostat,SH-4
+Doxorubicin_133,8305C
+Temsirolimus,LS-1034
+Trametinib,NCI-H1568
+Trametinib,OVCAR-8
+Doxorubicin_133,NB4
+Panobinostat,NCI-H1355
+KIN001-244,697
+Fedratinib,SIG-M5
+Dactolisib,G-361
+Tamoxifen,WSU-DLCL2
+ARRY-520,EW-22
+Doxorubicin_133,CHP-126
+AZ20,RPMI-8866
+Foretinib,CCRF-CEM
+AZD2014,T98G
+CCT245232,BPH-1
+Temsirolimus,TK
+AZ20,KMS-12-BM
+Luminespib,COLO-824
+Navitoclax,IST-SL2
+Dactolisib,YKG-1
+CAY10566,EB2
+CCT245232,SF295
+Trametinib,SW872
+ARRY-520,KMS-12-BM
+Trichostatin A,VA-ES-BJ
+OSI-027,786-0
+AZD2014,G-292-Clone-A141B1
+Doxorubicin_133,LS-1034
+SN-38_1490,SNU-61
+AZ20,IPC-298
+AZD2014,KNS-81-FD
+Bortezomib,KARPAS-231
+OSI-027,CCRF-CEM
+Bortezomib,EoL-1-cell
+S-Trityl-L-cysteine,TE-9
+CCT245232,Jurkat
+Epothilone B,NCI-H1666
+Luminespib,CAL-51
+Doxorubicin_133,AGS
+Panobinostat,LOU-NH91
+Panobinostat,BxPC-3
+Panobinostat,COLO-824
+SN-38_1490,OS-RC-2
+Trichostatin A,L-428
+AZD4877,JHH-2
+Doxorubicin_133,NCI-H2052
+KIN001-244,CCRF-CEM
+AZD2014,JJN-3
+Bortezomib,NB13
+Temsirolimus,BFTC-909
+Doxorubicin_133,REH
+SN-38_1490,NCI-H2172
+Afatinib_1377,JHU-029
+Paclitaxel,NEC8
+CCT245232,RCH-ACV
+Pelitinib,SU-DHL-6
+Epothilone B,AGS
+SN-38_1490,EW-3
+Luminespib,NCI-H1876
+SN-38_1490,JHU-029
+Temsirolimus,EC-GI-10
+CCT245232,KNS-81-FD
+SN-38_1490,RCH-ACV
+Afatinib_1377,SCC-15
+SN-38_1490,BT-20
+Trametinib,G-361
+Paclitaxel,KARPAS-231
+Doxorubicin_133,Calu-6
+NPK76-II-72-1,CESS
+Paclitaxel,TE-9
+CCT245232,huH-1
+Gemcitabine_135,NCI-H1876
+SN-38_1490,HLE
+Luminespib,FU97
+Epothilone B,KYSE-510
+S-Trityl-L-cysteine,ML-2
+Gemcitabine_135,ABC-1
+Palbociclib,SIMA
+Temsirolimus,RL95-2
+Epothilone B,CAL-120
+Luminespib,COLO-792
+CCT245232,MS751
+Foretinib,KINGS-1
+Gemcitabine_135,ALL-SIL
+Epothilone B,NCI-H1155
+Navitoclax,COLO-783
+Paclitaxel,CA46
+Navitoclax,NCI-H1876
+SN-38_1490,UWB1.289
+Palbociclib,D-283MED
+ARRY-520,HSC-39
+AZD2014,KOSC-2
+Luminespib,OVMIU
+Gemcitabine_135,8305C
+Dactolisib,NCI-H1693
+Epothilone B,REH
+Dactolisib,MDA-MB-157
+Epothilone B,ALL-SIL
+AZD2014,CAL-62
+ARRY-520,JHH-1
+Trichostatin A,DoTc2-4510
+SN-38_1490,NCI-H1355
+Selumetinib_1498,NB4
+Epothilone B,TT2609-C02
+Paclitaxel,K-562
+Panobinostat,G-361
+Navitoclax,ATN-1
+CCT245232,DMS-114
+AZD2014,DOV13
+SN-38_1490,CAPAN-1
+AZD4877,TK
+Trichostatin A,P31-FUJ
+Luminespib,MDA-MB-361
+ARRY-520,EW-1
+Selumetinib_1498,IPC-298
+Temsirolimus,HT-1376
+Temsirolimus,DOV13
+Panobinostat,EC-GI-10
+Dactolisib,CMK
+SN-38_1490,L-363
+ARRY-520,UWB1.289
+CCT245232,YKG-1
+Gemcitabine_135,ACHN
+Bortezomib,UACC-812
+CCT245232,ATN-1
+ARRY-520,Hs-683
+Trametinib,OV-17R
+AZD4877,HuP-T4
+OSI-027,SU-DHL-6
+SN-38_1490,HCC1569
+Temsirolimus,EFO-27
+BX795,KARPAS-45
+ARRY-520,CAPAN-1
+GSK429286A,GDM-1
+Panobinostat,EW-7
+CCT245232,SH-4
+Epothilone B,HTC-C3
+Doxorubicin_133,CCRF-CEM
+Foretinib,WM35
+Panobinostat,TE-5
+Epothilone B,SF295
+AZD4877,KMRC-20
+CCT245232,NCI-H847
+AZD4877,LS-1034
+Trichostatin A,NCI-H1651
+Epothilone B,CHP-126
+BMS-536924_62,L-363
+Temsirolimus,NCI-H322M
+Selumetinib_1498,SW872
+Epothilone B,KMS-12-BM
+AZD4877,TE-1
+CCT245232,UACC-893
+Epothilone B,Caov-4
+Bortezomib,COLO-668
+S-Trityl-L-cysteine,BALL-1
+CCT245232,TT
+SN-38_1490,CCRF-CEM
+SN-38_1490,MS751
+Temsirolimus,RD
+CCT245232,L-363
+Temsirolimus,8305C
+Selumetinib_1498,HTC-C3
+AZD4877,786-0
+Panobinostat,NB69
+Gemcitabine_135,EFO-27
+Dactolisib,SU-DHL-8
+Gemcitabine_135,D-283MED
+ARRY-520,HCC1569
+Selumetinib_1062,NB69
+ARRY-520,HTC-C3
+SN-38_1490,TK
+SN-38_1490,JHH-2
+AZD2014,SK-GT-4
+CCT245232,EoL-1-cell
+ARRY-520,KOSC-2
+Luminespib,NCI-H28
+Gemcitabine_135,NCI-H1355
+Navitoclax,NCI-H1688
+OSI-027,RPMI-7951
+Temsirolimus,OS-RC-2
+Dactolisib,RPMI-8402
+SN-38_1490,T-T
+CCT245232,NCI-H1693
+Trichostatin A,MDA-MB-157
+CCT245232,SW1271
+Trichostatin A,WSU-DLCL2
+CCT245232,NCI-H1666
+AZD2014,EW-7
+Trametinib,RCC-FG2
+Panobinostat,MN-60
+ARRY-520,NCI-H2141
+ARRY-520,Hs-766T
+Foretinib,TK
+Navitoclax,GDM-1
+Navitoclax,REH
+Bortezomib,NCI-H1092
+Bortezomib,REH
+Dactolisib,DoTc2-4510
+Trametinib,EFO-27
+Doxorubicin_133,EW-1
+Selumetinib_1498,PA-TU-8902
+Panobinostat,HCC1569
+AZD4877,LCLC-103H
+YK-4-279,ALL-SIL
+CCT245232,JHH-2
+Temsirolimus,786-0
+AZD4877,REH
+Bortezomib,WSU-DLCL2
+Doxorubicin_133,WM1552C
+Temsirolimus,EoL-1-cell
+AZD4877,D-336MG
+Trametinib,SK-OV-3
+AZD2014,MDA-MB-361
+AZD2014,FU97
+CCT245232,Hey
+Paclitaxel,LB647-SCLC
+Doxorubicin_133,LCLC-103H
+Trichostatin A,CCRF-CEM
+Trametinib,RL95-2
+Gemcitabine_135,no-10
+Paclitaxel,EJM
+Epothilone B,EoL-1-cell
+AZD4877,ALL-SIL
+AZD2014,KARPAS-231
+SN-38_1490,NB13
+SN-38_1490,SNU-449
+Paclitaxel,HSC-39
+Doxorubicin_133,WM793B
+Temsirolimus,SK-OV-3
+NPK76-II-72-1,ATN-1
+Selumetinib_1498,RD
+CCT245232,CAL-62
+Temsirolimus,OVTOKO
+Paclitaxel,NCI-H847
+ARRY-520,COR-L105
+Epothilone B,IPC-298
+OSI-027,K-562
+Doxorubicin_133,TE-11
+ARRY-520,huH-1
+CCT245232,EW-3
+Temsirolimus,ALL-SIL
+AZD4877,TOV-21G
+Bortezomib,CCRF-CEM
+Dactolisib,BICR22
+Pelitinib,CESS
+SN-38_1490,ATN-1
+BMS-536924_62,LS-1034
+OSI-027,Mo-T
+SN-38_1490,RPMI-8866
+"Brivanib, BMS-540215",HSC-39
+Foretinib,A431
+Panobinostat,NCI-H358
+Panobinostat,EoL-1-cell
+AZD5582,NCI-H596
+Epothilone B,LAN-6
+Trichostatin A,G-402
+SN-38_1490,NCI-H841
+Panobinostat,CA46
+Trichostatin A,LOXIMVI
+Epothilone B,LN-229
+Trichostatin A,REH
+Dactolisib,JHU-029
+ARRY-520,BT-20
+ARRY-520,ABC-1
+AZ20,NCI-H1568
+AZD4877,EW-7
+Temsirolimus,SHP-77
+Bortezomib,697
+AZD4877,TE-11
+CCT245232,KON
+Dactolisib,HuO9
+Trametinib,COLO-829
+Gemcitabine_135,BxPC-3
+AZD2014,SK-GT-2
+AZD4877,CA46
+Trichostatin A,EW-7
+SN-38_1490,8505C
+Epothilone B,BFTC-909
+AZD5582,TOV-21G
+ARRY-520,NCI-H596
+Dactolisib,OS-RC-2
+AZ20,TOV-21G
+ARRY-520,LN-229
+Navitoclax,DU-145
+AZD4877,CAL-62
+AZD2014,SF126
+Gemcitabine_135,HuP-T4
+AKT inhibitor VIII_228,SU-DHL-6
+Trichostatin A,RD
+Foretinib,RPMI-7951
+Panobinostat,NEC8
+AZD4877,SNU-449
+Temsirolimus,WM793B
+Panobinostat,TE-1
+Capivasertib,IST-SL2
+Epothilone B,HSC-39
+AZD2014,WM35
+Dactolisib,GP5d
+Temsirolimus,EJM
+ARRY-520,UACC-893
+Trichostatin A,IST-SL2
+Temsirolimus,ML-2
+Dactolisib,OCI-LY7
+Luminespib,EB2
+Epothilone B,RPMI-7951
+Bortezomib,COLO-829
+AZD4877,BxPC-3
+Trametinib,DBTRG-05MG
+Gemcitabine_135,OS-RC-2
+Pelitinib,OVMIU
+Doxorubicin_133,HTC-C3
+GSK-J4,PFSK-1
+Doxorubicin_133,HOS
+Trametinib,M14
+Panobinostat,BEN
+Epothilone B,SKG-IIIa
+Bleomycin (10 uM),CAL-51
+CCT245232,CAL-51
+Temsirolimus,KMS-12-BM
+Gemcitabine_135,BPH-1
+Bortezomib,OS-RC-2
+Dactolisib,NCI-H1688
+Dactolisib,RD
+Panobinostat,Hs-683
+Dactolisib,COLO-783
+Doxorubicin_133,HuP-T4
+Panobinostat,SKG-IIIa
+AZD4877,T98G
+Foretinib,LOXIMVI
+CCT245232,KOSC-2
+ARRY-520,NCI-H1876
+AZD2014,KON
+ARRY-520,AGS
+Gemcitabine_135,T98G
+Dactolisib,ES1
+Bortezomib,EKVX
+CAY10566,CA46
+AZD4877,KARPAS-231
+CCT245232,BICR78
+Temsirolimus,IST-SL2
+CCT245232,REH
+Gemcitabine_135,BT-20
+Bortezomib,SKM-1
+Luminespib,PA-TU-8902
+Dactolisib,NCI-H292
+Doxorubicin_133,JJN-3
+Panobinostat,D-336MG
+Temsirolimus,NCI-H1688
+AZ20,SUP-B15
+Panobinostat,REH
+Trametinib,CAL-120
+Dactolisib,SIMA
+Epothilone B,C-33-A
+Dactolisib,BT-20
+Paclitaxel,OS-RC-2
+ARRY-520,BFTC-909
+CCT245232,NCI-H2227
+Temsirolimus,huH-1
+Panobinostat,JHH-2
+Temsirolimus,Becker
+AZD2014,HTC-C3
+Luminespib,NB4
+Gemcitabine_135,NCI-H1435
+Palbociclib,DOV13
+Panobinostat,KMS-12-BM
+Doxorubicin_133,HT-1376
+Trichostatin A,SKM-1
+Gemcitabine_135,Hs-683
+Selumetinib_1498,NCI-H292
+SN-38_1490,no-10
+Luminespib,HT55
+Trametinib,TE-5
+Doxorubicin_133,DU-145
+Selumetinib_1062,NCI-H2087
+Bleomycin (10 uM),8505C
+Bexarotene,EKVX
+Luminespib,ALL-SIL
+ARRY-520,KMRC-20
+Pelitinib,IM-95
+Luminespib,DG-75
+Gemcitabine_135,SK-OV-3
+Dactolisib,K-562
+AZD4877,K-562
+Pelitinib,ATN-1
+CCT245232,JJN-3
+Gemcitabine_135,OVTOKO
+Trametinib,NCI-H358
+Selumetinib_1062,TT2609-C02
+Doxorubicin_133,PANC-03-27
+Panobinostat,IST-SL2
+OSI-027,KMS-12-BM
+Trichostatin A,NH-12
+SN-38_1490,TT
+AZD4877,G-402
+AZD2014,SU-DHL-8
+CCT245232,ALL-SIL
+AZD2014,A431
+Trametinib,OVMIU
+AZ20,MDA-MB-157
+Selumetinib_1498,JHU-029
+SN-38_1490,K-562
+ARRY-520,IST-SL2
+CCT245232,OVMIU
+NPK76-II-72-1,NCI-H2227
+Epothilone B,NCI-H2228
+ARRY-520,PANC-04-03
+Paclitaxel,NCI-H1155
+Temsirolimus,HSC-39
+Bortezomib,TK
+Luminespib,NCI-H1304
+Panobinostat,NCI-H1568
+Panobinostat,WM1552C
+Temsirolimus,SF126
+Dactolisib,IST-SL2
+Panobinostat,SIMA
+Bortezomib,EW-1
+Dactolisib,CA46
+Bortezomib,SH-4
+Dactolisib,SW872
+Trichostatin A,RPMI-8402
+AZ20,MEG-01
+AZD2014,HCE-4
+ARRY-520,NCI-H1304
+Doxorubicin_133,LC4-1
+ARRY-520,ATN-1
+Bortezomib,EW-3
+Trichostatin A,UWB1.289
+CCT245232,EC-GI-10
+Trichostatin A,RPMI-8866
+CCT245232,SW1116
+Doxorubicin_133,Caov-4
+OSI-027,SNU-81
+AZ20,RCH-ACV
+Epothilone B,NCI-H2444
+Panobinostat,HCC-827
+Palbociclib,CAL-39
+Luminespib,CESS
+CCT245232,KARPAS-45
+Dactolisib,ESO26
+Gemcitabine_135,HTC-C3
+Trichostatin A,SNU-81
+AZ20,CAL-51
+TPCA-1,RPMI-8866
+Bortezomib,D-336MG
+SN-38_1490,SW872
+CCT245232,NCI-H596
+Luminespib,BxPC-3
+AZD2014,A498
+Luminespib,LC4-1
+Trichostatin A,NCI-H847
+AZ20,KARPAS-1106P
+Paclitaxel,DMS-114
+SN-38_1490,A427
+SN-38_1490,SNU-81
+AZD2014,HSC-39
+Gemcitabine_135,T84
+Luminespib,PANC-03-27
+Pelitinib,SNU-449
+Doxorubicin_133,FU97
+Paclitaxel,IST-SL2
+Temsirolimus,OVKATE
+Epothilone B,RPMI-8402
+AZD2014,NCI-H1666
+CCT245232,HuO-3N1
+Navitoclax,SK-GT-2
+AZD4877,RCC-FG2
+Foretinib,ESO26
+Temsirolimus,C32
+Epothilone B,OVTOKO
+SN-38_1490,OVMIU
+YK-4-279,NH-12
+Dactolisib,BT-474
+Temsirolimus,TE-1
+Paclitaxel,KINGS-1
+ARRY-520,NCI-H1435
+Trichostatin A,EW-1
+Epothilone B,HuP-T4
+Bortezomib,no-10
+CCT245232,COLO-792
+Bortezomib,LC-2-ad
+CCT245232,IM-95
+Doxorubicin_133,SW620
+Dactolisib,KALS-1
+Panobinostat,P12-ICHIKAWA
+AZD2014,REH
+AZD4877,PANC-03-27
+NPK76-II-72-1,ML-2
+Panobinostat,DOV13
+SN-38_1490,CAL-62
+Dactolisib,MES-SA
+Trametinib,YKG-1
+Panobinostat,HuO9
+Trichostatin A,GP5d
+Dactolisib,FU97
+Temsirolimus,NCI-H2444
+Temsirolimus,Jurkat
+Luminespib,LXF-289
+CCT245232,M14
+AZD4877,NCI-H1623
+Gemcitabine_135,K-562
+Temsirolimus,EW-3
+AKT inhibitor VIII_228,NU-DUL-1
+Trametinib,JHH-1
+Afatinib_1377,EC-GI-10
+Navitoclax,L-428
+ARRY-520,AsPC-1
+Foretinib,IPC-298
+Doxorubicin_133,TT2609-C02
+Luminespib,G-361
+Dactolisib,NCI-H2087
+Dactolisib,NCI-H322M
+Luminespib,ACHN
+Doxorubicin_133,Mo-T
+Dactolisib,KARPAS-45
+Dactolisib,BALL-1
+Doxorubicin_133,K-562
+ARRY-520,NCI-H1105
+SN-38_1490,OVCAR-8
+AZD2014,EJM
+CCT245232,LAN-6
+CCT245232,NCI-H2141
+Epothilone B,SHP-77
+Epothilone B,K-562
+Luminespib,IPC-298
+OSI-027,MN-60
+Luminespib,MN-60
+QL-XI-92,EoL-1-cell
+AZ20,RPMI-8402
+Gemcitabine_135,M14
+TPCA-1,GDM-1
+Fedratinib,CESS
+Epothilone B,COLO-824
+SN-38_1490,697
+CCT245232,IPC-298
+AZD4877,P12-ICHIKAWA
+Epothilone B,WM793B
+Epothilone B,Mo-T
+Selumetinib_1062,AsPC-1
+Trametinib,G-292-Clone-A141B1
+Epothilone B,HT55
+OSI-027,PFSK-1
+TPCA-1,NU-DUL-1
+ARRY-520,HuO-3N1
+Temsirolimus,BALL-1
+CI-1040,HuP-T4
+OSI-027,MOG-G-CCM
+Trichostatin A,SU-DHL-8
+SN-38_1490,DOK
+AZD4877,SKM-1
+AZD5582,SK-GT-2
+Luminespib,P31-FUJ
+Trichostatin A,HuP-T4
+AZD2014,BPH-1
+Paclitaxel,ML-2
+AZ20,D-283MED
+CCT245232,KMRC-20
+Foretinib,CADO-ES1
+AZ20,huH-1
+AZD2014,MN-60
+Doxorubicin_133,NCI-H1876
+Foretinib,DBTRG-05MG
+Doxorubicin_133,SK-OV-3
+Paclitaxel,KGN
+Panobinostat,SNU-81
+Paclitaxel,RPMI-8402
+Selumetinib_1498,LOXIMVI
+Panobinostat,NCI-H1623
+Capivasertib,NU-DUL-1
+Crizotinib,SU-DHL-1
+Paclitaxel,NCI-H2141
+Epothilone B,NH-12
+YK-4-279,K-562
+Dactolisib,HOS
+Temsirolimus,L-363
+CCT245232,G-361
+Temsirolimus,CHSA0011
+Epothilone B,BPH-1
+Paclitaxel,KARPAS-45
+Doxorubicin_133,NCI-H1693
+Dactolisib,SK-CO-1
+CCT245232,ESO26
+Epothilone B,Hs-766T
+Dactolisib,SKG-IIIa
+Trametinib,SK-CO-1
+AZ20,EFO-27
+Temsirolimus,NCI-H1623
+Navitoclax,CMK
+Foretinib,NB69
+Trichostatin A,C-33-A
+Temsirolimus,CHP-126
+Luminespib,OS-RC-2
+SN-38_1490,RCC-FG2
+Epothilone B,SJSA-1
+CCT245232,L-428
+Bortezomib,L-428
+SN-38_1490,SK-CO-1
+AZD2014,OS-RC-2
+Foretinib,LU-135
+CI-1040,M14
+Panobinostat,BPH-1
+SN-38_1490,HCC1937
+Luminespib,CHP-126
+SN-38_1490,IST-SL2
+Dactolisib,NEC8
+Bortezomib,SHP-77
+Bortezomib,TE-1
+Trametinib,NCI-H1666
+ARRY-520,TE-9
+Panobinostat,786-0
+Luminespib,SK-OV-3
+Selumetinib_1062,LOXIMVI
+CCT245232,OV-56
+AZD2014,HLE
+Gemcitabine_135,SIG-M5
+Epothilone B,NCI-H1651
+Pelitinib,NB4
+Epothilone B,LXF-289
+Doxorubicin_133,KMS-12-BM
+Trichostatin A,LC4-1
+Panobinostat,LC-2-ad
+AZ20,CCRF-CEM
+OSI-027,COR-L105
+Luminespib,SU-DHL-8
+Trametinib,BxPC-3
+TPCA-1,EoL-1-cell
+SN-38_1490,Hey
+SN-38_1490,COLO-668
+SN-38_1490,8305C
+Doxorubicin_133,LN-229
+ARRY-520,LS-1034
+CCT245232,no-10
+Paclitaxel,EW-1
+AZD4877,CHSA0011
+Luminespib,IST-SL2
+Trichostatin A,LOU-NH91
+Luminespib,CAPAN-1
+AZD4877,KGN
+Panobinostat,KMRC-20
+Navitoclax,SU-DHL-6
+Doxorubicin_133,MOLT-4
+ARRY-520,NCI-H187
+Epothilone B,EW-1
+SN-38_1490,LS-1034
+Paclitaxel,SCC-15
+SN-38_1490,LC-2-ad
+SN-38_1490,Hs-633T
+Epothilone B,SW872
+CCT245232,P12-ICHIKAWA
+AZD4877,huH-1
+Epothilone B,SCC-15
+Pelitinib,NCI-H358
+OSI-027,C-33-A
+Luminespib,CAL-39
+AZD8186,FU97
+CCT245232,CESS
+Temsirolimus,NCI-H2066
+ARRY-520,COLO-783
+Panobinostat,SW837
+SN-38_1490,WM35
+Doxorubicin_133,TK
+Pelitinib,UACC-893
+AZD4877,NB69
+Dactolisib,HuP-T4
+CCT245232,P31-FUJ
+Trichostatin A,COLO-783
+CCT245232,CMK
+Epothilone B,NCI-H1092
+SN-38_1490,HCE-4
+AZD4877,JJN-3
+Panobinostat,CADO-ES1
+Luminespib,KYSE-510
+Dactolisib,SK-GT-4
+Doxorubicin_133,KON
+Pelitinib,HuP-T4
+Trichostatin A,NCI-H841
+OSI-027,NCI-H1876
+Doxorubicin_133,NCI-H1092
+Epothilone B,DU-145
+AZD4877,HCC1937
+Epothilone B,GP5d
+Temsirolimus,MES-SA
+Temsirolimus,CAL-51
+Gemcitabine_135,NCI-H2228
+CCT245232,786-0
+Foretinib,SNU-407
+Luminespib,DU-145
+Trametinib,KALS-1
+AZD5582,EoL-1-cell
+Luminespib,COR-L88
+Temsirolimus,LC4-1
+Epothilone B,MEG-01
+Epothilone B,P12-ICHIKAWA
+Trametinib,MEG-01
+Trichostatin A,NB13
+Temsirolimus,NH-12
+Paclitaxel,RL95-2
+AZD2014,OVTOKO
+Afatinib_1377,NCI-H1666
+Foretinib,OVMIU
+Trametinib,SW1116
+Epothilone B,NCI-H358
+Bortezomib,MN-60
+AZD2014,K-562
+Trichostatin A,K-562
+Gemcitabine_135,NU-DUL-1
+BX795,Hs-633T
+Selumetinib_1498,Hs-633T
+Temsirolimus,GP5d
+Epothilone B,TE-9
+Panobinostat,IM-95
+AZD4877,PANC-04-03
+ARRY-520,SNU-61
+Temsirolimus,NU-DUL-1
+Dactolisib,BICR10
+Luminespib,LN-229
+Temsirolimus,HLE
+Doxorubicin_133,NCI-H358
+AZD4877,ES1
+SN-38_1490,LCLC-103H
+Luminespib,LOXIMVI
+CI-1033,NCI-H1623
+Trametinib,SW837
+Palbociclib,Hey
+BMS-536924_62,HSC-39
+Trichostatin A,huH-1
+Foretinib,BPH-1
+Bleomycin (10 uM),Hey
+Temsirolimus,MOLT-4
+Gemcitabine_135,COLO-668
+SN-38_1490,UACC-893
+Gemcitabine_135,LB647-SCLC
+Selumetinib_1498,COLO-792
+Gemcitabine_135,SW620
+ARRY-520,NCI-H2087
+Panobinostat,SF126
+Luminespib,KARPAS-231
+Pelitinib,GDM-1
+Dactolisib,NCI-H1623
+Trichostatin A,NB69
+Trametinib,WM793B
+Dactolisib,JJN-3
+BMS-536924_62,RL95-2
+AZD8186,RCH-ACV
+ARRY-520,SK-GT-4
+Pelitinib,HTC-C3
+Panobinostat,DBTRG-05MG
+Trametinib,T-T
+Epothilone B,ABC-1
+Temsirolimus,DBTRG-05MG
+Trametinib,BICR22
+YK-4-279,TK
+AZD4877,COR-L88
+AZD4877,ML-2
+Doxorubicin_133,NCI-H292
+Doxorubicin_133,T84
+Fedratinib,LC4-1
+Trametinib,SIMA
+AZD2014,NB69
+AZD2014,CHSA0011
+SN-38_1490,Becker
+Foretinib,LC-2-ad
+AZD4877,NCI-H2087
+Epothilone B,RPMI-8866
+Trichostatin A,SW948
+Trichostatin A,NCI-H187
+Temsirolimus,CAL-120
+Dactolisib,NCI-H841
+Afatinib_1377,BPH-1
+CCT245232,NCI-H2052
+Bortezomib,SU-DHL-6
+Epothilone B,DBTRG-05MG
+AZD4877,HT-29
+Paclitaxel,SIMA
+Luminespib,KOSC-2
+Temsirolimus,BICR10
+Bortezomib,SF126
+CCT245232,NCI-H1563
+Epothilone B,COLO-792
+Paclitaxel,GDM-1
+Gemcitabine_135,HCE-4
+Luminespib,SH-4
+AZD4877,PFSK-1
+Luminespib,UACC-812
+Epothilone B,SU-DHL-8
+Panobinostat,NCI-H2066
+Gemcitabine_135,8505C
+Panobinostat,OVKATE
+SN-38_1490,EJM
+CRT0105950,ES1
+AZD4877,DOV13
+Gemcitabine_135,PA-TU-8902
+Trametinib,UWB1.289
+Dactolisib,RL95-2
+Dactolisib,LC-2-ad
+Gemcitabine_135,NB4
+Trichostatin A,NCI-H1688
+Trichostatin A,BFTC-909
+Paclitaxel,L-363
+Doxorubicin_133,TE-1
+Temsirolimus,RCH-ACV
+ARRY-520,SIMA
+ARRY-520,SW620
+Trichostatin A,CESS
+Afatinib_1377,NCI-H292
+CCT245232,EFO-27
+Paclitaxel,LXF-289
+Dactolisib,REH
+AZD4877,FU97
+Palbociclib,EoL-1-cell
+TPCA-1,NCI-H847
+Temsirolimus,K-562
+Bortezomib,NCI-H1666
+SN-38_1490,DMS-114
+Foretinib,MEG-01
+Gemcitabine_135,NCI-H1568
+AZ20,TK
+CI-1033,UACC-893
+SN-38_1490,SKM-1
+AZD2014,HT-115
+Foretinib,EW-1
+AZD5582,SH-4
+SN-38_1490,LOU-NH91
+Gemcitabine_135,IST-SL2
+SN-38_1490,IM-95
+AZD4877,697
+Paclitaxel,KALS-1
+Temsirolimus,KARPAS-231
+Luminespib,CAL-120
+ARRY-520,G-361
+AZD4877,Hs-683
+AZD5582,REH
+AZD2014,NCI-H292
+Temsirolimus,LOXIMVI
+Dactolisib,NCI-H1435
+Temsirolimus,NCI-H1304
+Dactolisib,M14
+ARRY-520,CESS
+Panobinostat,NB4
+CHIR-99021_154,COLO-829
+Epothilone B,NCI-H1435
+Trichostatin A,KON
+YK-4-279,Jurkat
+ARRY-520,NCI-H2452
+ARRY-520,MOG-G-CCM
+Temsirolimus,EW-1
+S-Trityl-L-cysteine,RPMI-8402
+Navitoclax,NCI-H2227
+Trichostatin A,BPH-1
+AZD2014,TOV-21G
+Trichostatin A,SW837
+Epothilone B,NCI-H187
+Foretinib,KARPAS-45
+Trichostatin A,HT-115
+Paclitaxel,NB4
+Dactolisib,KOSC-2
+Luminespib,M14
+Trichostatin A,NCI-H2444
+CI-1033,BPH-1
+SN-38_1490,ESO26
+SN-38_1490,NCI-H847
+Gemcitabine_135,Caov-4
+OSI-027,OVMIU
+AZD4877,KARPAS-45
+Paclitaxel,SF126
+AZD4877,LAN-6
+Luminespib,A431
+Temsirolimus,HuO-3N1
+Trichostatin A,SU-DHL-1
+Dactolisib,HCE-4
+AZD2014,G-402
+CI-1033,SU-DHL-6
+Epothilone B,HCC1569
+AZD4877,HCC-827
+Luminespib,8505C
+CCT245232,JHH-1
+AZ20,WM793B
+ARRY-520,Hs-633T
+AZD4877,NCI-H2228
+Selumetinib_1062,COLO-792
+Dactolisib,EW-11
+Dactolisib,A498
+ARRY-520,Hey
+AZD4877,RL95-2
+Epothilone B,LB647-SCLC
+Pelitinib,EB2
+Dactolisib,NCI-H1876
+Selumetinib_1062,HTC-C3
+AZ20,BICR22
+CCT245232,TE-1
+Epothilone B,BT-474
+ARRY-520,ACHN
+Luminespib,HT-1376
+AZD2014,HuP-T4
+Dactolisib,L-428
+Doxorubicin_133,NCI-H2087
+ARRY-520,C-33-A
+OSI-027,CAL-120
+Pelitinib,HCC-827
+Bleomycin (10 uM),OE21
+ARRY-520,YKG-1
+SN-38_1490,HCC-827
+Epothilone B,PANC-03-27
+Navitoclax,RPMI-8866
+OSI-027,OVCAR-8
+Temsirolimus,T-T
+Bleomycin (10 uM),HCE-4
+Selumetinib_1498,M14
+ARRY-520,NCI-H2172
+Trichostatin A,BEN
+Dactolisib,CAL-120
+Gemcitabine_135,huH-1
+Epothilone B,HCC1937
+Luminespib,COLO-829
+Selumetinib_1498,SH-4
+AZD5582,NCI-H2228
+Dactolisib,LB647-SCLC
+SN-38_1490,T84
+Epothilone B,OVCAR-8
+Doxorubicin_133,NEC8
+Foretinib,EW-7
+Temsirolimus,A431
+AZD4877,EW-22
+OSI-027,PA-TU-8902
+Doxorubicin_133,BFTC-909
+Luminespib,TE-9
+Epothilone B,HT-1376
+AZD4877,RCH-ACV
+Luminespib,ES1
+QL-XI-92,KARPAS-231
+Epothilone B,LU-135
+TPCA-1,NB4
+Trichostatin A,SU-DHL-6
+AZD4547_1497,CHSA0011
+Luminespib,KMS-12-BM
+Dactolisib,SF295
+Afatinib_1377,ACHN
+Epothilone B,WM1552C
+Doxorubicin_133,KARPAS-231
+Gemcitabine_135,NCI-H292
+Trametinib,BICR10
+Gemcitabine_135,NCI-H2052
+Epothilone B,SW1271
+ARRY-520,MS751
+Luminespib,no-10
+Luminespib,OVTOKO
+Panobinostat,HT-115
+AZD2014,OVCAR-8
+Navitoclax,CCRF-CEM
+Dactolisib,NCI-H2172
+AZD2014,SK-OV-3
+OSI-027,SNU-449
+SN-38_1490,KGN
+SN-38_1490,NCI-H1435
+Trametinib,HSC-39
+SN-38_1490,A498
+ARRY-520,OVTOKO
+Palbociclib,SKM-1
+Bortezomib,NU-DUL-1
+Dactolisib,DOV13
+Dactolisib,KYSE-510
+ARRY-520,KALS-1
+ARRY-520,NH-12
+Luminespib,BEN
+AZD4877,CMK
+Epothilone B,KMRC-20
+ARRY-520,EW-3
+AZ20,NB4
+SN-38_1490,BFTC-909
+Doxorubicin_133,HT-29
+Trichostatin A,OVCAR-8
+Navitoclax,BICR10
+Dactolisib,RPMI-7951
+KIN001-244,SUP-B15
+SN-38_1490,HuO9
+Foretinib,IM-95
+SN-38_1490,NH-12
+AZD2014,NCI-H1568
+CCT245232,GP5d
+CCT245232,8305C
+Trichostatin A,PANC-03-27
+Panobinostat,EB2
+Trichostatin A,TOV-21G
+AZD4877,SNU-407
+AZD4877,KON
+ARRY-520,NCI-H1666
+Doxorubicin_133,ML-2
+Panobinostat,ATN-1
+CCT245232,CAL-39
+AZD2014,MES-SA
+Luminespib,NCI-H596
+CI-1033,BT-474
+ARRY-520,NEC8
+OSI-027,JHH-1
+CCT245232,RD
+Navitoclax,LU-135
+OSI-027,EW-1
+Temsirolimus,DOK
+CCT245232,NCI-H1092
+AKT inhibitor VIII_228,BT-474
+Panobinostat,UWB1.289
+Luminespib,NEC8
+AZD2014,OVMIU
+OSI-027,EJM
+Trichostatin A,HT-1376
+Trichostatin A,NCI-H1666
+Dactolisib,NCI-H596
+Bortezomib,D-283MED
+Panobinostat,A427
+Luminespib,JHH-2
+AZD4877,NCI-H2444
+CCT245232,DoTc2-4510
+SN-38_1490,KNS-81-FD
+ARRY-520,EFO-27
+Gemcitabine_135,RPMI-8402
+Gemcitabine_135,JHU-029
+SN-38_1490,CAL-51
+Gemcitabine_135,HLE
+Trichostatin A,LN-229
+Doxorubicin_133,NCI-H1435
+AZD4877,COLO-668
+AZD4877,HOS
+ARRY-520,ALL-SIL
+Fedratinib,RPMI-8402
+SN-38_1490,LN-229
+Pelitinib,MOLT-4
+AZD2014,KYSE-510
+AZD4877,EJM
+CCT245232,HuO9
+Gemcitabine_135,YKG-1
+Selumetinib_1498,PANC-03-27
+Panobinostat,MEG-01
+AZD2014,JHH-2
+ARRY-520,DoTc2-4510
+AZD2014,RPMI-8402
+Epothilone B,HOS
+Panobinostat,NCI-H847
+Foretinib,NB4
+Bortezomib,CHP-126
+AZD4877,NCI-H2141
+Bortezomib,KINGS-1
+Dactolisib,WM35
+AZ20,ACHN
+SN-38_1490,YKG-1
+Navitoclax,NU-DUL-1
+Bleomycin (10 uM),Hs-683
+Bortezomib,NCI-H187
+Gemcitabine_135,Calu-6
+Gemcitabine_135,NCI-H1623
+Panobinostat,NCI-H1688
+Trichostatin A,SW620
+CAY10566,697
+CCT245232,SIMA
+Dactolisib,ACHN
+Trichostatin A,KMS-12-BM
+SN-38_1490,DU-145
+SN-38_1490,L-428
+CI-1040,NB4
+Epothilone B,EC-GI-10
+OSI-027,BPH-1
+Luminespib,HCC1937
+Pelitinib,P12-ICHIKAWA
+Trametinib,C-33-A
+Gemcitabine_135,WM35
+Doxorubicin_133,D-283MED
+CCT245232,KMS-12-BM
+Panobinostat,EFO-27
+SN-38_1490,KARPAS-231
+AZD2014,YKG-1
+AZD4547_1497,NEC8
+Bleomycin (10 uM),BICR22
+Panobinostat,Hey
+AZD4877,CAPAN-1
+SN-38_1490,NCI-H2227
+Pelitinib,KMS-12-BM
+Gemcitabine_135,NB13
+Trichostatin A,SKG-IIIa
+Gemcitabine_135,L-428
+ARRY-520,BICR22
+Selumetinib_1062,BFTC-909
+Temsirolimus,COLO-829
+AZD2014,BICR22
+Foretinib,OVCAR-8
+Luminespib,KNS-81-FD
+Temsirolimus,LN-229
+SN-38_1490,PFSK-1
+Foretinib,NCI-H1688
+AZD2014,D-283MED
+Gemcitabine_135,JJN-3
+Foretinib,GDM-1
+Panobinostat,LXF-289
+ARRY-520,HOS
+Gemcitabine_135,MS751
+AZD2014,NB4
+Trametinib,EC-GI-10
+Selumetinib_1498,PANC-04-03
+Panobinostat,8505C
+S-Trityl-L-cysteine,RL95-2
+Luminespib,MEG-01
+Temsirolimus,SH-4
+Paclitaxel,ES1
+Temsirolimus,22RV1
+Temsirolimus,DoTc2-4510
+Temsirolimus,KINGS-1
+AZD2014,DMS-114
+Foretinib,SK-OV-3
+Temsirolimus,CAL-39
+Navitoclax,RPMI-8402
+Trichostatin A,Becker
+AZD4877,MOG-G-CCM
+AZD4877,HT55
+Navitoclax,Hs-683
+CAY10566,P31-FUJ
+SN-38_1490,ALL-SIL
+AZD4877,LU-135
+ARRY-520,CA46
+Epothilone B,22RV1
+Doxorubicin_133,BT-474
+Navitoclax,NCI-H1155
+OSI-027,OV-17R
+Gemcitabine_135,PANC-04-03
+Temsirolimus,SU-DHL-6
+AZD4877,NCI-H1563
+Temsirolimus,LC-2-ad
+CCT245232,KINGS-1
+AZ20,NCI-H292
+AZD4877,NCI-H2066
+SN-38_1490,MN-60
+Luminespib,Hs-633T
+Gemcitabine_135,CAPAN-1
+Panobinostat,T98G
+Epothilone B,ATN-1
+AZ20,Hs-633T
+ZG-10,EoL-1-cell
+CI-1040,SKM-1
+Luminespib,22RV1
+Panobinostat,LN-229
+Temsirolimus,CMK
+Doxorubicin_133,T-T
+Gemcitabine_135,BICR22
+Bortezomib,NH-12
+Luminespib,SU-DHL-1
+Foretinib,HT-29
+AZ20,C-33-A
+SN-38_1490,ML-2
+AZD4877,A431
+AZ20,MOLT-4
+Luminespib,ABC-1
+ARRY-520,A498
+ARRY-520,NCI-H2066
+Luminespib,T-T
+Trichostatin A,TT
+Doxorubicin_133,GP5d
+Epothilone B,NCI-H2141
+Dactolisib,SKM-1
+Luminespib,NCI-H2087
+AZD2014,KGN
+Panobinostat,A431
+Trichostatin A,MOLT-4
+Doxorubicin_133,LOXIMVI
+CHIR-99021_154,LOXIMVI
+Luminespib,NU-DUL-1
+Panobinostat,SU-DHL-6
+Epothilone B,DG-75
+OSI-027,NU-DUL-1
+Trametinib,TE-1
+Bortezomib,NCI-H847
+Dactolisib,WM793B
+Dactolisib,LOXIMVI
+SN-38_1490,NCI-H2452
+Dactolisib,OVCAR-8
+ARRY-520,COLO-824
+Trametinib,NCI-H292
+ARRY-520,A427
+Temsirolimus,FU97
+SN-38_1490,NU-DUL-1
+Doxorubicin_133,CESS
+AZD5582,NB4
+Temsirolimus,T98G
+SN-38_1490,SU-DHL-6
+OSI-027,EB2
+AZD4877,NCI-H1688
+OSI-027,SU-DHL-8
+Luminespib,JHU-029
+Trichostatin A,NCI-H2052
+Crizotinib,KINGS-1
+AZ20,ATN-1
+AZD4877,DBTRG-05MG
+CCT245232,RCC-FG2
+Temsirolimus,NCI-H1563
+Temsirolimus,MDA-MB-157
+BMS-536924_62,SH-4
+ARRY-520,NB13
+AZD4877,JHU-029
+Trichostatin A,PA-TU-8902
+Gemcitabine_135,SU-DHL-6
+CCT245232,NB69
+Gemcitabine_135,SW1271
+Trichostatin A,HT55
+Temsirolimus,LXF-289
+SN-38_1490,BEN
+Panobinostat,8305C
+Paclitaxel,EoL-1-cell
+AZD2014,Becker
+AKT inhibitor VIII_228,CESS
+Temsirolimus,UWB1.289
+AZD4877,SW620
+SN-38_1490,NCI-H28
+AZD5582,SW872
+Trichostatin A,UACC-812
+AZD8186,RPMI-8866
+ARRY-520,KON
+Doxorubicin_133,PA-TU-8902
+Foretinib,HLE
+Epothilone B,CAL-51
+Afatinib_1377,BT-474
+Gemcitabine_135,JHH-7
+SN-38_1490,NCI-H1651
+Trametinib,LOXIMVI
+NPK76-II-72-1,SU-DHL-8
+Fedratinib,BPH-1
+Navitoclax,TK
+Trichostatin A,KGN
+ARRY-520,EW-7
+Dactolisib,CESS
+AZD2014,CAL-51
+Panobinostat,RPMI-8866
+CCT245232,NCI-H292
+Gemcitabine_135,EoL-1-cell
+Epothilone B,NB69
+Paclitaxel,no-10
+AZD4877,L-363
+Epothilone B,VA-ES-BJ
+AZ20,DG-75
+Bleomycin (10 uM),NEC8
+Trametinib,LS-1034
+S-Trityl-L-cysteine,SIG-M5
+SN-38_1490,NCI-H1568
+Selumetinib_1498,JHH-1
+Foretinib,Hs-683
+SN-38_1490,TOV-21G
+AZD4877,RPMI-7951
+Foretinib,8505C
+Paclitaxel,REH
+AZD8186,697
+Epothilone B,P31-FUJ
+SN-38_1490,JHH-7
+SN-38_1490,ES1
+ARRY-520,KINGS-1
+ARRY-520,SUP-B15
+AZD4547_1497,FU97
+Gemcitabine_135,EB2
+Epothilone B,NCI-H1304
+Temsirolimus,RCC-FG2
+AZD4877,SJSA-1
+Trametinib,Calu-6
+CCT245232,HuP-T4
+AZD4877,SK-CO-1
+Paclitaxel,SU-DHL-1
+SN-38_1490,EC-GI-10
+CCT245232,NCI-H1155
+AZD4877,SNU-81
+Dactolisib,EKVX
+ARRY-520,NCI-H1651
+SN-38_1490,NCI-H2228
+Bortezomib,COR-L88
+CCT245232,TOV-21G
+CCT245232,COLO-829
+Dactolisib,T98G
+Doxorubicin_133,OVMIU
+Foretinib,YKG-1
+Foretinib,EB2
+Capivasertib,EFO-27
+Epothilone B,NCI-H1563
+SN-38_1490,NCI-H1666
+Trichostatin A,HLE
+SN-38_1490,CADO-ES1
+Trichostatin A,P12-ICHIKAWA
+Epothilone B,TE-1
+AZD2014,BFTC-909
+Trichostatin A,ESO26
+Doxorubicin_133,MES-SA
+Luminespib,HCE-4
+Gemcitabine_135,CCRF-CEM
+Panobinostat,HuO-3N1
+BMS-536924_62,EW-1
+AZD4877,OV-17R
+ARRY-520,TE-1
+AZD2014,CESS
+Dactolisib,HTC-C3
+Pelitinib,EW-1
+Bortezomib,COLO-824
+AZD4877,C32
+Luminespib,NCI-H1688
+CCT245232,SW837
+Dactolisib,MEG-01
+Trichostatin A,RL95-2
+CCT245232,NCI-H1651
+AZD4547_1497,KGN
+PLX-4720_1371,SH-4
+Panobinostat,HCE-4
+Dactolisib,LU-135
+AZD4547_1497,BICR10
+Temsirolimus,JHH-2
+SN-38_1490,LXF-289
+CAY10566,CESS
+Trichostatin A,MN-60
+CCT245232,PFSK-1
+Trichostatin A,BxPC-3
+CCT245232,EW-7
+AZD4877,T-T
+Temsirolimus,CAPAN-1
+Trichostatin A,NCI-H1876
+Epothilone B,SU-DHL-6
+Capivasertib,SU-DHL-6
+AZD4877,NCI-H292
+Panobinostat,GP5d
+Epothilone B,KINGS-1
+Foretinib,NCI-H292
+Dactolisib,SW1271
+Temsirolimus,WM35
+AKT inhibitor VIII_171,NCI-H1563
+AZD4877,HSC-39
+Epothilone B,NCI-H1623
+CI-1040,NCI-H1666
+Foretinib,RPMI-8402
+Luminespib,MES-SA
+AZD2014,LC4-1
+Luminespib,JJN-3
+OSI-027,SU-DHL-1
+Palbociclib,MOLT-4
+Foretinib,OVTOKO
+AZD4877,WM35
+Temsirolimus,G-361
+Gemcitabine_135,WM793B
+AZD4877,TE-9
+Dactolisib,TK
+AZD4877,KINGS-1
+Paclitaxel,SH-4
+Panobinostat,C32
+AZD4547_1497,EFO-27
+SN-38_1490,NCI-H2444
+Afatinib_1377,HCC-827
+Gemcitabine_135,HOS
+Palbociclib,697
+Temsirolimus,ES1
+Panobinostat,ESO26
+Trichostatin A,NCI-H2228
+Trichostatin A,Hs-683
+Luminespib,JHH-7
+Pelitinib,697
+Doxorubicin_133,IPC-298
+Epothilone B,NCI-H1693
+AZD2014,AGS
+Palbociclib,HTC-C3
+BX795,TOV-21G
+QL-XI-92,SUP-B15
+Doxorubicin_133,NCI-H2141
+Trichostatin A,T-T
+Temsirolimus,KALS-1
+CCT245232,HSC-39
+Trichostatin A,Hey
+CCT245232,LOU-NH91
+Pelitinib,CCRF-CEM
+Temsirolimus,M14
+SN-38_1490,EB2
+Dactolisib,DBTRG-05MG
+Doxorubicin_133,ACHN
+AZD4877,22RV1
+CI-1040,SH-4
+Trichostatin A,DOV13
+Doxorubicin_133,NCI-H1155
+SN-38_1490,JJN-3
+Trametinib,KON
+Luminespib,LCLC-103H
+Navitoclax,EW-3
+OSI-027,JHH-2
+SN-38_1490,NCI-H1563
+Foretinib,786-0
+Luminespib,UACC-893
+Epothilone B,LCLC-103H
+OSI-027,WM35
+ARRY-520,DOK
+S-Trityl-L-cysteine,SU-DHL-8
+Doxorubicin_133,Hs-633T
+AZD4877,SF295
+ARRY-520,SCC-15
+Trichostatin A,Jurkat
+Panobinostat,JJN-3
+Paclitaxel,D-336MG
+ARRY-520,LC-2-ad
+NPK76-II-72-1,EoL-1-cell
+Trichostatin A,OVTOKO
+Dactolisib,HT-29
+SN-38_1490,HuP-T4
+ZG-10,DG-75
+Luminespib,NCI-H1435
+Dactolisib,NCI-H1568
+Navitoclax,ML-2
+ARRY-520,SF126
+CCT245232,WM793B
+Temsirolimus,NB4
+Doxorubicin_133,ES1
+Dactolisib,Becker
+CCT245232,TE-5
+Doxorubicin_133,COR-L105
+CCT245232,C-33-A
+AZ20,BICR10
+AZD2014,TK
+Panobinostat,ABC-1
+ARRY-520,MDA-MB-157
+Bortezomib,TE-9
+CCT245232,GDM-1
+Doxorubicin_133,MDA-MB-361
+Trichostatin A,SHP-77
+Trichostatin A,BICR78
+SN-38_1490,SIMA
+CCT245232,BEN
+ARRY-520,RD
+Gemcitabine_135,KON
+OSI-027,BEN
+Trichostatin A,COLO-829
+Doxorubicin_133,YKG-1
+Temsirolimus,AsPC-1
+OSI-027,TE-5
+ARRY-520,CADO-ES1
+Trichostatin A,M14
+Temsirolimus,SK-CO-1
+AKT inhibitor VIII_228,P12-ICHIKAWA
+Dactolisib,DMS-114
+Panobinostat,LCLC-103H
+Dactolisib,SJSA-1
+Luminespib,WM793B
+Gemcitabine_135,KYSE-510
+Panobinostat,OE21
+Bortezomib,BALL-1
+Trametinib,CAL-62
+Trichostatin A,Calu-6
+AZD5582,BICR22
+Foretinib,G-361
+Trichostatin A,HuO9
+Bortezomib,VA-ES-BJ
+AKT inhibitor VIII_228,697
+Trametinib,SNU-61
+AZD4877,NEC8
+Luminespib,SW837
+Bleomycin (10 uM),BT-20
+SN-38_1490,AGS
+SN-38_1490,GP5d
+AZD4877,NCI-H1568
+Panobinostat,G-292-Clone-A141B1
+CHIR-99021_1241,VA-ES-BJ
+Trichostatin A,GDM-1
+AZD5582,OVCAR-8
+Navitoclax,CHP-126
+ARRY-520,IM-95
+Gemcitabine_135,Becker
+Dactolisib,EJM
+Epothilone B,NCI-H2172
+Panobinostat,NCI-H2141
+AZD4877,Calu-6
+AZD4877,DOK
+Doxorubicin_133,JHH-1
+AZD4877,ABC-1
+AZD2014,CMK
+Panobinostat,BICR78
+Temsirolimus,BT-474
+Panobinostat,SHP-77
+Doxorubicin_133,L-363
+Paclitaxel,SUP-B15
+Temsirolimus,COR-L105
+Doxorubicin_133,EW-3
+Trametinib,SKM-1
+AZD2014,SKM-1
+Panobinostat,JHH-7
+SN-38_1490,SW948
+AZ20,SIMA
+ARRY-520,G-292-Clone-A141B1
+Trametinib,HCC1569
+Dactolisib,NCI-H2228
+OSI-027,IST-SL2
+AZD4877,KNS-81-FD
+AKT inhibitor VIII_228,SUP-B15
+Trametinib,BICR78
+AZD4877,ATN-1
+Panobinostat,HT55
+Pelitinib,SIG-M5
+S-Trityl-L-cysteine,TE-11
+Temsirolimus,NCI-H1876
+Temsirolimus,SNU-449
+OSI-027,SJSA-1
+Dactolisib,NCI-H1355
+Temsirolimus,A427
+Selumetinib_1062,WM35
+AZD5582,AGS
+CI-1033,A431
+AZD2014,NEC8
+Epothilone B,huH-1
+CCT245232,OVCAR-8
+Pelitinib,SCC-15
+Gemcitabine_135,NCI-H1688
+Foretinib,SJSA-1
+Paclitaxel,SIG-M5
+OSI-027,P12-ICHIKAWA
+Bortezomib,TE-5
+Dactolisib,SK-OV-3
+Epothilone B,EW-3
+Foretinib,SIG-M5
+Dactolisib,MN-60
+Luminespib,JHH-1
+Trametinib,SK-GT-2
+Doxorubicin_133,NB69
+OSI-027,CADO-ES1
+AZ20,NU-DUL-1
+Afatinib_1377,OVMIU
+Trametinib,KNS-81-FD
+Trichostatin A,SCC-15
+Paclitaxel,SJSA-1
+Trichostatin A,NCI-H596
+Dactolisib,OE21
+S-Trityl-L-cysteine,Becker
+Luminespib,D-283MED
+Gemcitabine_135,NCI-H2087
+Gemcitabine_135,A427
+Selumetinib_1498,HT-29
+CCT245232,RPMI-7951
+AZD4877,T84
+Dactolisib,NCI-H2141
+ARRY-520,MEG-01
+Bortezomib,NEC8
+Trametinib,ABC-1
+Fedratinib,697
+Trichostatin A,NCI-H358
+Luminespib,SF295
+Panobinostat,COLO-829
+Bleomycin (10 uM),Hs-633T
+BMS-536924_62,LAN-6
+Panobinostat,NCI-H322M
+ARRY-520,Jurkat
+CCT245232,COR-L105
+Trametinib,KGN
+SN-38_1490,C32
+Luminespib,MDA-MB-157
+Navitoclax,NCI-H847
+Trichostatin A,NCI-H1304
+Dactolisib,CHP-126
+Trametinib,ACHN
+Epothilone B,Calu-6
+Epothilone B,WSU-DLCL2
+SN-38_1490,SU-DHL-8
+Bleomycin (10 uM),SK-CO-1
+Panobinostat,K-562
+Bortezomib,CESS
+Trametinib,Hs-633T
+Gemcitabine_135,KGN
+Panobinostat,TT2609-C02
+OSI-027,REH
+Trametinib,Hey
+SN-38_1490,MES-SA
+Luminespib,MS751
+Epothilone B,SIMA
+Temsirolimus,WSU-DLCL2
+AZD4877,SCC-15
+Panobinostat,C-33-A
+Epothilone B,MDA-MB-361
+ARRY-520,HT-115
+Luminespib,SJSA-1
+CCT245232,HT-115
+Trichostatin A,ATN-1
+AZD4877,CAL-51
+S-Trityl-L-cysteine,Calu-6
+Luminespib,SW872
+Luminespib,ML-2
+Epothilone B,CESS
+AZD4877,HT-115
+CCT245232,Hs-633T
+Luminespib,NCI-H2052
+AZD4877,WM793B
+BMS-536924_62,TE-1
+Paclitaxel,EC-GI-10
+SN-38_1490,SJSA-1
+Temsirolimus,HOS
+Selumetinib_1498,SKM-1
+Trametinib,TT2609-C02
+Gemcitabine_135,NCI-H1304
+AZD2014,RPMI-7951
+AZD4877,SU-DHL-8
+SN-38_1490,RL95-2
+Luminespib,COR-L105
+Temsirolimus,SNU-81
+Temsirolimus,Caov-4
+Temsirolimus,LOU-NH91
+Trichostatin A,NCI-H2087
+Selumetinib_1498,CAL-39
+Doxorubicin_133,8505C
+SN-38_1490,HT-115
+Trametinib,SH-4
+AZD4877,EFO-27
+CCT245232,T-T
+Panobinostat,SW872
+Temsirolimus,D-336MG
+Dactolisib,BICR78
+Panobinostat,MDA-MB-361
+Bortezomib,LXF-289
+ARRY-520,EKVX
+Temsirolimus,DMS-114
+Trichostatin A,EC-GI-10
+Panobinostat,AGS
+Panobinostat,ACHN
+Gemcitabine_135,JHH-1
+Epothilone B,C32
+ARRY-520,HT-1376
+Trichostatin A,FU97
+Selumetinib_1062,SH-4
+Bortezomib,HSC-39
+AZD4877,BICR78
+Panobinostat,KOSC-2
+AZD8186,SU-DHL-6
+Gemcitabine_135,LXF-289
+CCT245232,LB647-SCLC
+CCT245232,BICR22
+Epothilone B,DOK
+CI-1033,HCC-827
+Epothilone B,PFSK-1
+Trametinib,NCI-H2087
+Dactolisib,MOG-G-CCM
+ARRY-520,NB4
+ZG-10,PFSK-1
+AZD2014,IPC-298
+ARRY-520,DBTRG-05MG
+Doxorubicin_133,DG-75
+Gemcitabine_135,786-0
+CCT245232,LN-229
+AZD4877,SKG-IIIa
+Luminespib,TK
+Luminespib,KGN
+Paclitaxel,MOLT-4
+Temsirolimus,TE-11
+Temsirolimus,ESO26
+AZD4877,OCI-LY7
+OSI-027,Hs-633T
+CCT245232,D-336MG
+ARRY-520,SU-DHL-6
+Panobinostat,BFTC-909
+CCT245232,SNU-81
+AZD2014,C-33-A
+Trametinib,NCI-H1355
+ARRY-520,MES-SA
+Panobinostat,COR-L88
+Panobinostat,EKVX
+AZD5582,PANC-03-27
+CCT245232,NCC010
+AKT inhibitor VIII_228,EW-1
+Luminespib,TE-1
+Gemcitabine_135,NCI-H28
+AZD2014,BICR78
+AZD2014,Hs-633T
+Trametinib,KINGS-1
+Navitoclax,EoL-1-cell
+AZD4877,BPH-1
+Temsirolimus,ABC-1
+Capivasertib,RCH-ACV
+Panobinostat,FU97
+Trametinib,DOV13
+Foretinib,ES1
+SN-38_1490,SF126
+Luminespib,NB13
+AZD4877,COLO-792
+Luminespib,EW-1
+Panobinostat,RCH-ACV
+TPCA-1,SIG-M5
+Trichostatin A,RCH-ACV
+AZD5582,SU-DHL-6
+Paclitaxel,LC-2-ad
+Temsirolimus,TE-5
+Doxorubicin_133,HCC-827
+Luminespib,LU-135
+CCT245232,697
+Dactolisib,TE-5
+AZD4877,NCI-H28
+Temsirolimus,NCI-H596
+CCT245232,PANC-04-03
+AKT inhibitor VIII_228,EB2
+Gemcitabine_135,SUP-B15
+Luminespib,EJM
+Luminespib,NCI-H1651
+Trichostatin A,no-10
+AZD4877,YKG-1
+OSI-027,BT-474
+SN-38_1490,PANC-03-27
+Epothilone B,SIG-M5
+Doxorubicin_133,SU-DHL-1
+Dactolisib,NCI-H1155
+AZD2014,NCI-H847
+Epothilone B,EJM
+Epothilone B,T84
+AZD5582,NCI-H1568
+Dactolisib,WM1552C
+SN-38_1490,HT-29
+Dactolisib,LOU-NH91
+Doxorubicin_133,EJM
+Epothilone B,NCI-H1688
+CCT245232,CCRF-CEM
+Trametinib,LAN-6
+Foretinib,SU-DHL-8
+Dactolisib,NCI-H2052
+Dactolisib,KARPAS-1106P
+Dactolisib,NH-12
+Temsirolimus,KOSC-2
+AZD4877,HuO-3N1
+Temsirolimus,PFSK-1
+CCT245232,EW-11
+Trametinib,LN-229
+Foretinib,P12-ICHIKAWA
+CCT245232,A498
+Epothilone B,NCI-H847
+CCT245232,HTC-C3
+SN-38_1490,BPH-1
+Afatinib_1377,DOK
+SN-38_1490,KALS-1
+Pelitinib,ESO26
+Navitoclax,Mo-T
+CCT245232,SK-CO-1
+Panobinostat,NCI-H187
+AZD4877,BT-20
+Dactolisib,NCI-H1563
+Dactolisib,BPH-1
+CCT245232,NCI-H358
+Panobinostat,SJSA-1
+Trametinib,COR-L105
+Foretinib,NCI-H358
+Palbociclib,22RV1
+Panobinostat,RPMI-8402
+ARRY-520,MN-60
+Epothilone B,L-428
+AZD2014,DG-75
+Gemcitabine_135,T-T
+Dactolisib,A427
+Epothilone B,A498
+Temsirolimus,NCI-H1568
+CCT245232,SK-GT-4
+ARRY-520,VA-ES-BJ
+Dactolisib,NCC010
+OSI-027,LC4-1
+SN-38_1490,OV-17R
+Panobinostat,RPMI-7951
+Bleomycin (10 uM),LOU-NH91
+Pelitinib,NU-DUL-1
+Panobinostat,LB647-SCLC
+Gemcitabine_135,KARPAS-231
+Trichostatin A,CAL-39
+Bortezomib,LB647-SCLC
+BMS-536924_62,NB69
+Panobinostat,HOS
+Panobinostat,UACC-893
+Luminespib,EKVX
+Luminespib,G-292-Clone-A141B1
+Bortezomib,NCI-H322M
+Navitoclax,NB13
+Foretinib,BxPC-3
+Luminespib,EFO-27
+AZD4877,OVCAR-8
+AZD4877,CADO-ES1
+AZD4877,MDA-MB-157
+Doxorubicin_133,OS-RC-2
+BMS-536924_62,KGN
+ARRY-520,OVKATE
+Epothilone B,IM-95
+SN-38_1490,NCI-H322M
+Dactolisib,HCC-827
+Dactolisib,NCI-H187
+Epothilone B,NCI-H596
+Trichostatin A,KARPAS-231
+Trichostatin A,T84
+Dactolisib,LS-1034
+Bortezomib,MOLT-4
+Panobinostat,DMS-114
+AZD4877,LXF-289
+CCT245232,TT2609-C02
+S-Trityl-L-cysteine,HCE-4
+Temsirolimus,OV-56
+Doxorubicin_133,SU-DHL-6
+Panobinostat,Mo-T
+Trichostatin A,SNU-407
+Panobinostat,EW-3
+ARRY-520,LC4-1
+Epothilone B,NCI-H2052
+Paclitaxel,CHP-126
+Panobinostat,HT-1376
+AZD4877,UACC-893
+Panobinostat,VA-ES-BJ
+Luminespib,WM1552C
+Epothilone B,MOG-G-CCM
+Foretinib,SF126
+Luminespib,KON
+Foretinib,WM793B
+Panobinostat,A498
+CCT245232,OCI-LY7
+AZD4877,8505C
+Gemcitabine_135,MDA-MB-361
+Trichostatin A,COR-L88
+Dactolisib,HT-1376
+Paclitaxel,LAN-6
+AZD4877,WM1552C
+AZD4877,SK-GT-4
+Epothilone B,SH-4
+Foretinib,Hey
+Trichostatin A,LAN-6
+SN-38_1490,HT-1376
+Epothilone B,NCI-H2452
+Palbociclib,TT2609-C02
+Trametinib,SCC-15
+SN-38_1490,OE21
+ARRY-520,BT-474
+CCT245232,LCLC-103H
+Luminespib,BICR78
+Palbociclib,P12-ICHIKAWA
+Doxorubicin_133,PANC-04-03
+Doxorubicin_133,NCI-H1568
+Panobinostat,Jurkat
+Dactolisib,G-292-Clone-A141B1
+SN-38_1490,TE-9
+AZD2014,LOXIMVI
+Dactolisib,P31-FUJ
+CCT245232,NCI-H1623
+AZD4877,SIMA
+SN-38_1490,HT55
+SN-38_1490,BICR22
+Luminespib,K-562
+Doxorubicin_133,no-10
+AZD2014,MEG-01
+Epothilone B,NB4
+Bortezomib,KARPAS-45
+ARRY-520,LOXIMVI
+SN-38_1490,BALL-1
+Panobinostat,SW948
+Epothilone B,MDA-MB-157
+Epothilone B,COLO-829
+Dactolisib,EC-GI-10
+Doxorubicin_133,NCI-H1304
+PLX-4720_1371,M14
+Dactolisib,ABC-1
+Trichostatin A,LCLC-103H
+ARRY-520,L-428
+Doxorubicin_133,JHU-029
+Panobinostat,BICR22
+Luminespib,COLO-783
+Foretinib,MOG-G-CCM
+Trichostatin A,PFSK-1
+AKT inhibitor VIII_228,CCRF-CEM
+Luminespib,Mo-T
+Gemcitabine_135,A431
+ARRY-520,CAL-62
+Gemcitabine_135,ATN-1
+Temsirolimus,COR-L88
+Doxorubicin_133,RPMI-8866
+Trametinib,SK-GT-4
+Epothilone B,HuO-3N1
+ARRY-520,NCI-H1623
+Panobinostat,RCC-FG2
+Temsirolimus,RPMI-7951
+Foretinib,HuP-T4
+Temsirolimus,SUP-B15
+SN-38_1490,DOV13
+Dactolisib,ALL-SIL
+Temsirolimus,HuP-T4
+AZD4877,NCI-H596
+CCT245232,EKVX
+Doxorubicin_133,M14
+Panobinostat,NCI-H2444
+AZD4877,KALS-1
+SN-38_1490,A431
+Paclitaxel,COLO-668
+BMS-536924_62,LC-2-ad
+CCT245232,22RV1
+Trametinib,8305C
+Epothilone B,KNS-81-FD
+Foretinib,CA46
+Doxorubicin_133,22RV1
+Paclitaxel,HCE-4
+Doxorubicin_133,EFO-27
+ARRY-520,NCI-H322M
+OSI-027,ATN-1
+OSI-027,EW-7
+SN-38_1490,NCI-H292
+Panobinostat,AsPC-1
+Selumetinib_1062,PA-TU-8902
+AZD2014,GDM-1
+Panobinostat,SIG-M5
+AZD4877,WSU-DLCL2
+Temsirolimus,NCI-H2452
+CCT245232,NEC8
+Panobinostat,JHH-1
+SN-38_1490,Jurkat
+SN-38_1490,T98G
+Panobinostat,YKG-1
+Epothilone B,NU-DUL-1
+Dactolisib,RCC-FG2
+Temsirolimus,SJSA-1
+Gemcitabine_135,LU-135
+Gemcitabine_135,RD
+CCT245232,NCI-H1568
+Paclitaxel,LS-1034
+Temsirolimus,KNS-81-FD
+Dactolisib,HT-115
+AZD5582,OE21
+Epothilone B,JHH-2
+Epothilone B,SW837
+Panobinostat,NCI-H2052
+Temsirolimus,NCI-H841
+CCT245232,CHSA0011
+Doxorubicin_133,PFSK-1
+Selumetinib_1062,IPC-298
+Epothilone B,A431
+Paclitaxel,NCI-H1092
+Foretinib,SW1271
+Fedratinib,GDM-1
+AZD4877,VA-ES-BJ
+S-Trityl-L-cysteine,ATN-1
+Dactolisib,8305C
+AZD4877,SW1271
+Paclitaxel,MEG-01
+Temsirolimus,Mo-T
+Dactolisib,CAL-62
+AZD8186,A498
+CCT245232,MOG-G-CCM
+AZD4877,HLE
+Dactolisib,SH-4
+Panobinostat,LS-1034
+Luminespib,SF126
+AZD8186,RCC-FG2
+SN-38_1490,MEG-01
+Temsirolimus,CADO-ES1
+Dactolisib,KARPAS-231
+ARRY-520,T84
+ARRY-520,RCH-ACV
+AZD4877,SHP-77
+CCT245232,RPMI-8402
+Panobinostat,KON
+Selumetinib_1498,NCI-H1666
+Doxorubicin_133,SUP-B15
+Dactolisib,EFO-27
+SN-38_1490,KARPAS-1106P
+CCT245232,EW-22
+SN-38_1490,EW-22
+Doxorubicin_133,EB2
+Trichostatin A,HT-29
+Gemcitabine_135,OE21
+CCT245232,SJSA-1
+NPK76-II-72-1,NU-DUL-1
+CCT245232,BT-20
+Paclitaxel,MN-60
+Epothilone B,697
+SN-38_1490,CA46
+Doxorubicin_133,CAL-51
+ARRY-520,Calu-6
+Luminespib,786-0
+CCT245232,COLO-668
+SN-38_1490,BICR10
+Palbociclib,OS-RC-2
+Dactolisib,SNU-407
+Palbociclib,HOS
+ARRY-520,SNU-81
+Epothilone B,CHSA0011
+SN-38_1490,MDA-MB-361
+Trichostatin A,HOS
+Trichostatin A,EW-3
+Selumetinib_1498,BICR78
+AZD2014,786-0
+CCT245232,A431
+Temsirolimus,NCI-H1651
+Doxorubicin_133,EoL-1-cell
+Trichostatin A,NCI-H1105
+AZD4877,NCC010
+AZD5582,G-402
+ARRY-520,RPMI-7951
+Luminespib,NCI-H1155
+Luminespib,L-428
+Dactolisib,KNS-81-FD
+CCT245232,FU97
+Bortezomib,LS-1034
+CCT245232,PA-TU-8902
+CCT245232,SW872
+Capivasertib,CAL-51
+AZD4877,NCI-H1105
+Luminespib,NH-12
+Trichostatin A,Hs-766T
+Bleomycin (10 uM),NCI-H292
+CCT245232,SNU-407
+Temsirolimus,CESS
+Gemcitabine_135,IPC-298
+Foretinib,RD
+ARRY-520,SJSA-1
+Trametinib,786-0
+S-Trityl-L-cysteine,SW872
+Trametinib,COLO-792
+AZD4877,A427
+OSI-027,COLO-792
+AKT inhibitor VIII_228,LC4-1
+Dactolisib,BFTC-909
+PHA-665752,KINGS-1
+Trametinib,BPH-1
+Bortezomib,EC-GI-10
+Epothilone B,LOU-NH91
+Trichostatin A,LU-135
+Navitoclax,SU-DHL-8
+Panobinostat,D-283MED
+Gemcitabine_135,MOLT-4
+AZD4877,SU-DHL-6
+TPCA-1,697
+Epothilone B,MS751
+Panobinostat,ALL-SIL
+Gemcitabine_135,IM-95
+CI-1040,ML-2
+Temsirolimus,NCI-H292
+Epothilone B,8305C
+Epothilone B,LC-2-ad
+Doxorubicin_133,OVTOKO
+Panobinostat,RL95-2
+SN-38_1490,NB4
+CCT245232,ABC-1
+CAY10566,DG-75
+ARRY-520,Mo-T
+Temsirolimus,MN-60
+Navitoclax,D-283MED
+Panobinostat,CAL-62
+Luminespib,EW-11
+LIMK1 inhibitor BMS4,SIG-M5
+SN-38_1490,ACHN
+AZ20,BALL-1
+Panobinostat,HT-29
+AZD4877,M14
+ARRY-520,C32
+CCT245232,NCI-H2087
+SN-38_1490,HTC-C3
+ARRY-520,P12-ICHIKAWA
+AKT inhibitor VIII_228,MOLT-4
+Gemcitabine_135,HT-29
+Trichostatin A,YKG-1
+Trametinib,OV-56
+Dactolisib,VA-ES-BJ
+AZD8186,MOLT-4
+Doxorubicin_133,C-33-A
+Epothilone B,MN-60
+Paclitaxel,CCRF-CEM
+Foretinib,PANC-03-27
+Doxorubicin_133,RPMI-7951
+ARRY-520,UACC-812
+Bortezomib,SW872
+AZD2014,NCI-H1876
+Doxorubicin_133,LAN-6
+Temsirolimus,D-283MED
+Pelitinib,BT-474
+Temsirolimus,ATN-1
+ARRY-520,SNU-407
+CCT245232,LU-135
+Epothilone B,BEN
+Foretinib,D-336MG
+SN-38_1490,MOLT-4
+Gemcitabine_135,C-33-A
+AZD4877,COLO-824
+AZD4877,BALL-1
+Foretinib,NB13
+Epothilone B,JHU-029
+SN-38_1490,MOG-G-CCM
+AZD4877,MES-SA
+Dactolisib,SNU-449
+Selumetinib_1498,SK-GT-4
+AZD4877,SW872
+CCT245232,C32
+Dactolisib,IM-95
+CCT245232,COR-L88
+AKT inhibitor VIII_228,RPMI-8402
+ARRY-520,SNU-449
+CCT245232,MDA-MB-361
+Paclitaxel,LC4-1
+Dactolisib,SHP-77
+Epothilone B,GDM-1
+Epothilone B,8505C
+AZD2014,RPMI-8866
+AZ20,OCI-LY7
+Luminespib,HuP-T4
+Gemcitabine_135,OVMIU
+Dactolisib,LC4-1
+Tenovin-6,KARPAS-231
+AZD8186,OS-RC-2
+BX795,LXF-289
+Trichostatin A,CA46
+ARRY-520,CAL-51
+CI-1040,TT2609-C02
+Panobinostat,Becker
+Luminespib,BT-474
+Paclitaxel,RPMI-8866
+CCT245232,MOLT-4
+Doxorubicin_133,KALS-1
+Trametinib,TOV-21G
+Dactolisib,COLO-829
+CI-1033,SCC-15
+AZD2014,PA-TU-8902
+CCT245232,HCE-4
+ARRY-520,8305C
+AZD4877,DU-145
+Selumetinib_1062,SW872
+AZD4877,UWB1.289
+Panobinostat,HLE
+Fedratinib,ATN-1
+Trichostatin A,Mo-T
+Trichostatin A,BT-20
+S-Trityl-L-cysteine,L-363
+Bortezomib,SJSA-1
+Dactolisib,TT2609-C02
+CCT245232,SKM-1
+Paclitaxel,SU-DHL-8
+SN-38_1490,P31-FUJ
+OSI-027,22RV1
+Bortezomib,NCI-H2141
+AZD4877,LOXIMVI
+Paclitaxel,L-428
+Panobinostat,COR-L105
+Gemcitabine_135,BALL-1
+Gemcitabine_135,PFSK-1
+Foretinib,K-562
+SN-38_1490,BT-474
+ZG-10,JHU-029
+BX795,RCH-ACV
+SN-38_1490,EFO-27
+Panobinostat,T84
+BMS-536924_62,TE-11
+Trichostatin A,NCI-H2141
+CCT245232,MDA-MB-157
+AZD8186,RPMI-8402
+Trichostatin A,HCC1569
+Dactolisib,NCI-H2444
+Bortezomib,LOXIMVI
+AZD4877,Caov-4
+S-Trityl-L-cysteine,697
+Doxorubicin_133,DoTc2-4510
+AZD2014,OV-56
+Gemcitabine_135,CAL-62
+Epothilone B,OE21
+KIN001-244,SIG-M5
+Trichostatin A,NU-DUL-1
+Dactolisib,Hey
+Bleomycin (10 uM),G-402
+Temsirolimus,EW-22
+Trametinib,BT-20
+SN-38_1490,COLO-792
+Selumetinib_1498,BPH-1
+Gemcitabine_135,ES1
+Dactolisib,OVTOKO
+SN-38_1490,OV-56
+Luminespib,HTC-C3
+AZD4877,EW-3
+OSI-027,CA46
+Temsirolimus,SKG-IIIa
+Panobinostat,Hs-633T
+Foretinib,SNU-449
+Trichostatin A,JHH-2
+Dactolisib,HLE
+AZD2014,ML-2
+Dactolisib,JHH-7
+Doxorubicin_133,SKG-IIIa
+Temsirolimus,HCE-4
+Foretinib,KGN
+ARRY-520,HLE
+Panobinostat,T-T
+Epothilone B,T98G
+Panobinostat,PFSK-1
+CCT245232,8505C
+Gemcitabine_135,GDM-1
+Doxorubicin_133,DMS-114
+Panobinostat,LAN-6
+Fedratinib,NB4
+S-Trityl-L-cysteine,NU-DUL-1
+Trichostatin A,SNU-449
+Gemcitabine_135,ML-2
+Temsirolimus,A498
+ARRY-520,G-402
+CCT245232,EJM
+ARRY-520,EJM
+Trametinib,DMS-114
+Temsirolimus,JHH-1
+Dactolisib,HCC1569
+Dactolisib,CAL-39
+Paclitaxel,WSU-DLCL2
+Panobinostat,NCI-H1651
+AZD2014,LXF-289
+Temsirolimus,NCI-H1693
+Panobinostat,LOXIMVI
+AZD4877,Hs-633T
+Trichostatin A,EB2
+CCT245232,DOK
+Trametinib,VA-ES-BJ
+Dactolisib,NCI-H2227
+Panobinostat,KARPAS-45
+CCT245232,SK-OV-3
+AZ20,SU-DHL-8
+Epothilone B,UACC-893
+Epothilone B,COLO-783
+Bleomycin (10 uM),AGS
+Panobinostat,697
+CCT245232,WSU-DLCL2
+ARRY-520,COR-L88
+Trichostatin A,8505C
+OSI-027,WM793B
+Luminespib,HCC-827
+AZD2014,PFSK-1
+Temsirolimus,SF295
+ARRY-520,SKG-IIIa
+Trichostatin A,L-363
+Temsirolimus,G-402
+CCT245232,HT-29
+BMS-536924_62,ATN-1
+Panobinostat,CAL-39
+Navitoclax,KARPAS-45
+Trichostatin A,CAL-120
+AZD8186,SH-4
+ARRY-520,LB647-SCLC
+Dactolisib,Hs-633T
+CI-1040,JHH-1
+Trichostatin A,NCI-H1623
+Foretinib,SW620
+Temsirolimus,MEG-01
+Doxorubicin_133,JHH-2
+Gemcitabine_135,HCC1569
+Temsirolimus,NEC8
+Temsirolimus,TT
+Foretinib,REH
+Temsirolimus,Hs-683
+Dactolisib,NB4
+YK-4-279,WM1552C
+Epothilone B,KARPAS-45
+ARRY-520,HCC-827
+Foretinib,JHH-2
+Navitoclax,RCH-ACV
+Foretinib,NCI-H2228
+Trametinib,EKVX
+Trametinib,RPMI-8866
+AZD4877,NCI-H841
+AZD4877,D-283MED
+CCT245232,NU-DUL-1
+TPCA-1,ATN-1
+Luminespib,Calu-6
+AZD4877,no-10
+Trametinib,G-402
+AZD4877,SK-OV-3
+Temsirolimus,NCI-H187
+AKT inhibitor VIII_228,REH
+Temsirolimus,HCC-827
+SN-38_1490,EW-7
+Epothilone B,MOLT-4
+Navitoclax,EW-7
+SN-38_1490,NCI-H358
+Doxorubicin_133,GDM-1
+SN-38_1490,IPC-298
+ARRY-520,RCC-FG2
+Luminespib,REH
+Panobinostat,SCC-15
+Trametinib,SF295
+Fedratinib,EB2
+OSI-027,ABC-1
+Selumetinib_1498,WM35
+ARRY-520,DU-145
+Dactolisib,OV-56
+Dactolisib,COR-L88
+OSI-027,TK
+Gemcitabine_135,NCI-H2141
+AZD4877,BEN
+Trichostatin A,8305C
+Temsirolimus,NCI-H2087
+AZD4877,Becker
+Trametinib,SJSA-1
+NPK76-II-72-1,NB4
+Doxorubicin_133,SCC-15
+ARRY-520,TE-11
+Bortezomib,Becker
+AZ20,Hey
+SN-38_1490,SHP-77
+SN-38_1490,LC4-1
+Gemcitabine_135,CESS
+OSI-027,ML-2
+Panobinostat,HSC-39
+OSI-027,L-363
+SN-38_1490,DoTc2-4510
+AZ20,SKM-1
+Doxorubicin_133,VA-ES-BJ
+Luminespib,NCI-H1355
+Trametinib,JHH-2
+Paclitaxel,697
+Foretinib,NU-DUL-1
+Gemcitabine_135,SIMA
+Temsirolimus,MOG-G-CCM
+AZD4877,SK-GT-2
+AZD4877,ESO26
+CCT245232,JHU-029
+SN-38_1490,G-292-Clone-A141B1
+ARRY-520,OVCAR-8
+ARRY-520,NB69
+AZD4877,RD
+Navitoclax,NCI-H2141
+CCT245232,LC4-1
+CCT245232,COLO-824
+Trichostatin A,OVKATE
+CCT245232,RPMI-8866
+CCT245232,Calu-6
+AZD2014,BxPC-3
+Foretinib,SH-4
+AZD4877,JHH-1
+AZ20,KARPAS-231
+AZD2014,DOK
+SN-38_1490,CHP-126
+OSI-027,A431
+Doxorubicin_133,BxPC-3
+Dactolisib,RPMI-8866
+Trametinib,K-562
+Selumetinib_1498,RL95-2
+Foretinib,NCI-H847
+Luminespib,WM35
+Trametinib,8505C
+CCT245232,PANC-03-27
+CCT245232,SNU-449
+CCT245232,MES-SA
+Dactolisib,D-283MED
+ARRY-520,NCI-H2444
+Bortezomib,KALS-1
+Panobinostat,22RV1
+SN-38_1490,NCI-H187
+Luminespib,BFTC-909
+Temsirolimus,EW-7
+Gemcitabine_135,GP5d
+AZD4877,HuO9
+Luminespib,TE-11
+CCT245232,TE-11
+AZD4877,OE21
+Doxorubicin_133,SW1271
+AZD5582,JHU-029
+AZD5582,NCI-H1693
+AZD2014,OE21
+Epothilone B,SK-OV-3
+Trichostatin A,KARPAS-45
+AZD2014,DU-145
+Temsirolimus,NB13
+ARRY-520,EC-GI-10
+SN-38_1490,CAL-120
+CCT245232,NCI-H1304
+Bleomycin (10 uM),KOSC-2
+SN-38_1490,BICR78
+Panobinostat,OVTOKO
+CCT245232,SCC-15
+Trametinib,CAL-39
+CI-1040,HTC-C3
+Doxorubicin_133,EW-11
+Epothilone B,OVMIU
+AZD4877,TE-5
+Panobinostat,TE-11
+ARRY-520,OVMIU
+ARRY-520,SK-OV-3
+Panobinostat,huH-1
+AZD5582,KOSC-2
+Epothilone B,NCI-H28
+Doxorubicin_133,KOSC-2
+Navitoclax,MEG-01
+Selumetinib_1062,BPH-1
+Capivasertib,TOV-21G
+AZD4877,HT-1376
+Gemcitabine_135,KALS-1
+Doxorubicin_133,CAPAN-1
+AZD4877,NCI-H1651
+Trichostatin A,NCI-H2066
+Bortezomib,NCI-H2227
+Temsirolimus,NCC010
+Dactolisib,RCH-ACV
+Dactolisib,HCC1937
+Gemcitabine_135,SU-DHL-8
+SN-38_1490,RPMI-8402
+AZD2014,ES1
+Palbociclib,KON
+Panobinostat,MOG-G-CCM
+SN-38_1490,EW-1
+Trichostatin A,SF126
+SN-38_1490,EoL-1-cell
+ARRY-520,SU-DHL-8
+Doxorubicin_133,OE21
+Panobinostat,TK
+Dactolisib,EW-1
+NPK76-II-72-1,KARPAS-45
+AZD4877,ACHN
+Gemcitabine_135,SH-4
+Luminespib,T98G
+Trametinib,PANC-03-27
+Navitoclax,OVTOKO
+S-Trityl-L-cysteine,CCRF-CEM
+Doxorubicin_133,IM-95
+Dactolisib,COR-L105
+AZD4877,HCC1569
+AZD2014,EC-GI-10
+AZD4877,CAL-120
+ARRY-520,CCRF-CEM
+AZ20,G-402
+Epothilone B,G-292-Clone-A141B1
+Doxorubicin_133,P12-ICHIKAWA
+Selumetinib_1062,CAL-39
+SN-38_1490,CMK
+Trichostatin A,SK-OV-3
+Pelitinib,KARPAS-231
+Bortezomib,EW-11
+AZD4877,LOU-NH91
+Foretinib,G-402
+Palbociclib,OVTOKO
+SN-38_1490,TE-11
+Pelitinib,A431
+CCT245232,Caov-4
+Epothilone B,T-T
+Luminespib,LS-1034
+Fedratinib,EoL-1-cell
+AZD5582,L-363
+Dactolisib,DOK
+Trametinib,A431
+SN-38_1490,COLO-783
+Dactolisib,SW837
+AZD2014,WM793B
+Temsirolimus,WM1552C
+ARRY-520,COLO-668
+Panobinostat,BT-20
+Gemcitabine_135,BEN
+AZD4877,NU-DUL-1
+ARRY-520,REH
+Panobinostat,P31-FUJ
+Dactolisib,PANC-04-03
+ARRY-520,786-0
+ARRY-520,T98G
+AZD2014,EW-1
+ARRY-520,EB2
+SN-38_1490,D-336MG
+Navitoclax,HCC1569
+AZD2014,G-361
+Dactolisib,22RV1
+NPK76-II-72-1,RPMI-8402
+S-Trityl-L-cysteine,JJN-3
+Doxorubicin_133,SF295
+Paclitaxel,NCI-H1304
+AZD4877,RPMI-8402
+Gemcitabine_135,TT2609-C02
+Selumetinib_1498,NCI-H2087
+Luminespib,RPMI-8402
+CI-1040,EoL-1-cell
+Trametinib,DOK
+SN-38_1490,COLO-824
+Dactolisib,KINGS-1
+Panobinostat,NCI-H1563
+Temsirolimus,NCI-H358
+Afatinib_1377,NCI-H1568
+CCT245232,NB13
+Doxorubicin_133,G-402
+Trichostatin A,SK-GT-4
+NPK76-II-72-1,CCRF-CEM
+Dactolisib,786-0
+AZD8186,DU-145
+ARRY-520,LU-135
+Foretinib,OV-17R
+Panobinostat,L-363
+Panobinostat,DOK
+AZD4877,G-292-Clone-A141B1
+Dactolisib,GDM-1
+Trichostatin A,NCI-H2172
+ARRY-520,LCLC-103H
+Palbociclib,ES1
+ARRY-520,NU-DUL-1
+Doxorubicin_133,Becker
+Dactolisib,NCI-H2452
+Luminespib,NCI-H1568
+AZD5582,697
+AZD4877,COLO-829
+OSI-027,697
+Trichostatin A,RCC-FG2
+Trichostatin A,TE-9
+AZD4877,PA-TU-8902
+Dactolisib,CAL-51
+Foretinib,NCI-H1876
+Epothilone B,EFO-27
+Temsirolimus,L-428
+AZD4877,LC4-1
+Doxorubicin_133,CAL-62
+SN-38_1490,OVKATE
+S-Trityl-L-cysteine,KGN
+SN-38_1490,WM1552C
+Epothilone B,SF126
+Temsirolimus,SK-GT-2
+Trametinib,AsPC-1
+Doxorubicin_133,SIG-M5
+Gemcitabine_135,DBTRG-05MG
+Epothilone B,Hs-683
+Doxorubicin_133,NCI-H2228
+AZD8186,ACHN
+CI-1040,RL95-2
+Temsirolimus,KARPAS-45
+Gemcitabine_135,PANC-03-27
+Epothilone B,SU-DHL-1
+SN-38_1490,CHSA0011
+SN-38_1490,OCI-LY7
+SN-38_1490,TT2609-C02
+AZD4877,HTC-C3
+Epothilone B,CCRF-CEM
+Trametinib,WM1552C
+Paclitaxel,KNS-81-FD
+Dactolisib,L-363
+Doxorubicin_133,MEG-01
+CHIR-99021_154,A498
+Luminespib,SNU-449
+OSI-027,YKG-1
+Foretinib,LXF-289
+Navitoclax,RD
+CI-1033,ESO26
+Epothilone B,YKG-1
+Bortezomib,ALL-SIL
+Trichostatin A,G-361
+AZD4877,EW-1
+AZD4877,COR-L105
+Doxorubicin_133,SW837
+AZD4877,CHP-126
+Navitoclax,AGS
+Panobinostat,BICR10
+Temsirolimus,NCI-H2228
+AZ20,T98G
+Luminespib,EW-7
+AZD2014,TE-9
+Temsirolimus,TT2609-C02
+AZD2014,NCI-H28
+AZ20,EoL-1-cell
+Epothilone B,NCI-H2227
+Panobinostat,NB13
+Epothilone B,HCE-4
+CCT245232,SK-GT-2
+AZ20,697
+AZD2014,SF295
+Temsirolimus,YKG-1
+Trichostatin A,CAL-62
+Temsirolimus,COLO-783
+Panobinostat,SW1116
+Bortezomib,RPMI-8866
+Selumetinib_1498,SW837
+Epothilone B,IST-SL2
+Bleomycin (10 uM),ES1
+Dactolisib,PFSK-1
+Temsirolimus,NCI-H1355
+CCT245232,DG-75
+CI-1040,SNU-81
+Luminespib,ATN-1
+Pelitinib,MEG-01
+Trametinib,SNU-81
+Bleomycin (10 uM),KYSE-510
+Epothilone B,NCI-H2087
+Dactolisib,WSU-DLCL2
+Temsirolimus,NCI-H1092
+Epothilone B,MES-SA
+Bleomycin (10 uM),KGN
+Luminespib,OVCAR-8
+Paclitaxel,EW-3
+Luminespib,CA46
+AKT inhibitor VIII_228,ES1
+Luminespib,YKG-1
+ARRY-520,OE21
+Panobinostat,UACC-812
+Dactolisib,COLO-668
+Bleomycin (10 uM),T98G
+Luminespib,HCC1569
+AKT inhibitor VIII_228,GDM-1
+SN-38_1490,Hs-683
+SN-38_1490,huH-1
+Pelitinib,JHH-1
+ARRY-520,WM1552C
+Trichostatin A,HSC-39
+ARRY-520,TT2609-C02
+Dactolisib,P12-ICHIKAWA
+Dactolisib,Jurkat
+Epothilone B,ACHN
+Panobinostat,KGN
+AZ20,ES1
+Navitoclax,SK-CO-1
+Paclitaxel,P31-FUJ
+Paclitaxel,VA-ES-BJ
+AZD4877,EB2
+AZD4877,LN-229
+Palbociclib,RCH-ACV
+Trametinib,LC-2-ad
+Epothilone B,NB13
+Luminespib,A427
+Panobinostat,TE-9
+AZD4877,NCI-H2452
+NPK76-II-72-1,SIG-M5
+Navitoclax,SKM-1
+Doxorubicin_133,BALL-1
+ARRY-520,A431
+Navitoclax,HuO9
+Epothilone B,HuO9
+ARRY-520,KARPAS-231
+AZD4877,CESS
+Trametinib,CHSA0011
+Dactolisib,KGN
+Trichostatin A,SIG-M5
+Dactolisib,ML-2
+Doxorubicin_133,NB13
+Paclitaxel,Becker
+SN-38_1490,G-402
+Palbociclib,NB69
+Bortezomib,P31-FUJ
+Palbociclib,KARPAS-45
+ARRY-520,SIG-M5
+ARRY-520,TE-5
+Temsirolimus,MDA-MB-361
+ARRY-520,RPMI-8866
+Trichostatin A,TK
+Dactolisib,SF126
+Luminespib,C32
+Temsirolimus,NCI-H1155
+Epothilone B,HT-29
+Foretinib,RCC-FG2
+Dactolisib,MDA-MB-361
+CCT245232,EB2
+S-Trityl-L-cysteine,VA-ES-BJ
+Dactolisib,CHSA0011
+Gemcitabine_135,NCI-H1651
+Luminespib,T84
+Foretinib,KOSC-2
+Trichostatin A,BALL-1
+Epothilone B,KALS-1
+AZD2014,SU-DHL-6
+ARRY-520,HuO9
+Dactolisib,NB13
+CCT245232,LS-1034
+AZD4877,NCI-H2227
+Doxorubicin_133,KYSE-510
+Doxorubicin_133,COLO-668
+Palbociclib,huH-1
+Trametinib,NCI-H1623
+CCT245232,NCI-H322M
+ARRY-520,TK
+SN-38_1490,LOXIMVI
+Panobinostat,RD
+CCT245232,CAL-120
+ARRY-520,LAN-6
+Trichostatin A,KMRC-20
+AZD2014,PANC-04-03
+Gemcitabine_135,SJSA-1
+SN-38_1490,ABC-1
+ARRY-520,JHH-2
+Doxorubicin_133,LU-135
+CAY10566,Hey
+Bortezomib,NCI-H1876
+Doxorubicin_133,WM35
+SN-38_1490,REH
+AZD4877,OVMIU
+Trametinib,COLO-783
+Trichostatin A,KOSC-2
+Foretinib,SUP-B15
+CCT245232,NCI-H2172
+Bortezomib,SU-DHL-8
+AZD2014,ALL-SIL
+Dactolisib,G-402
+Panobinostat,SK-OV-3
+CCT245232,CHP-126
+SN-38_1490,Mo-T
+Panobinostat,OVCAR-8
+ARRY-520,LOU-NH91
+Gemcitabine_135,RPMI-7951
+Foretinib,ALL-SIL
+Luminespib,PFSK-1
+Paclitaxel,NCI-H1355
+AZD2014,BICR10
+BMS-536924_62,D-336MG
+Epothilone B,Becker
+AZ20,A498
+OSI-027,SK-GT-4
+OSI-027,ALL-SIL
+Foretinib,T-T
+Selumetinib_1498,DOK
+Foretinib,NCI-H1155
+AZD2014,HuO9
+Temsirolimus,KMRC-20
+CCT245232,KGN
+Gemcitabine_135,WM1552C
+Temsirolimus,KGN
+Gemcitabine_135,VA-ES-BJ
+Panobinostat,G-402
+OSI-027,KARPAS-231
+SN-38_1490,SW837
+Gemcitabine_135,NCI-H1693
+Gemcitabine_135,TE-5
+Panobinostat,KNS-81-FD
+CCT245232,DU-145
+Epothilone B,JJN-3
+AZD4877,NCI-H1092
+Epothilone B,COLO-668
+AZD2014,22RV1
+Navitoclax,MOLT-4
+AZD2014,COR-L105
+Epothilone B,WM35
+Palbociclib,REH
+Luminespib,KALS-1
+OSI-027,SIG-M5
+Panobinostat,SW620
+Luminespib,SW620
+Dactolisib,HSC-39
+Luminespib,TOV-21G
+SN-38_1490,NCI-H2087
+Dactolisib,JHH-1
+SN-38_1490,LAN-6
+Selumetinib_1498,G-361
+Temsirolimus,SKM-1
+CCT245232,UWB1.289
+CCT245232,KALS-1
+Selumetinib_1498,SW1271
+AZD8186,LXF-289
+Dactolisib,COLO-792
+ARRY-520,COLO-829
+Doxorubicin_133,HLE
+Gemcitabine_135,TE-9
+Luminespib,BICR22
+Trichostatin A,COLO-668
+Luminespib,HuO-3N1
+ARRY-520,IPC-298
+Pelitinib,COR-L105
+Trichostatin A,SUP-B15
+AZ20,HSC-39
+Dactolisib,KON
+Panobinostat,ES1
+Foretinib,NEC8
+SN-38_1490,NEC8
+Epothilone B,HT-115
+Temsirolimus,Hs-633T
+Doxorubicin_133,Hs-683
+CRT0105950,SKM-1
+YK-4-279,NB4
+Selumetinib_1062,SKM-1
+Trametinib,IPC-298
+Epothilone B,SUP-B15
+Doxorubicin_133,MDA-MB-157
+Selumetinib_1062,JHH-1
+Panobinostat,KARPAS-231
+OSI-027,HTC-C3
+CCT245232,WM1552C
+Trametinib,WM35
+AZD4877,KARPAS-1106P
+AZ20,EW-7
+Bortezomib,DG-75
+Navitoclax,NH-12
+Temsirolimus,RPMI-8402
+Temsirolimus,JJN-3
+ARRY-520,NCI-H358
+Capivasertib,OCI-LY7
+Doxorubicin_133,NCI-H596
+Gemcitabine_135,L-363
+ARRY-520,SHP-77
+SN-38_1490,SNU-407
+SN-38_1490,KINGS-1
+Y-39983,GDM-1
+Panobinostat,NCI-H28
+Gemcitabine_135,EW-7
+Luminespib,CAL-62
+Afatinib_1377,SK-GT-2
+Luminespib,KARPAS-45
+Gemcitabine_135,OVCAR-8
+Doxorubicin_133,UACC-893
+ARRY-520,SW872
+AZD2014,NCI-H2228
+Navitoclax,KNS-81-FD
+Gemcitabine_135,LN-229
+Doxorubicin_133,A427
+OSI-027,EW-11
+AZD5582,CCRF-CEM
+Panobinostat,SNU-407
+Bleomycin (10 uM),OVCAR-8
+Trametinib,DU-145
+CI-1040,IPC-298
+AZD2014,RCC-FG2
+Bleomycin (10 uM),TOV-21G
+S-Trityl-L-cysteine,LC-2-ad
+Dactolisib,EW-3
+QL-XI-92,ALL-SIL
+ARRY-520,Becker
+Trametinib,OVTOKO
+Gemcitabine_135,DoTc2-4510
+CCT245232,Becker
+CI-1033,OVMIU
+Epothilone B,UACC-812
+ARRY-520,SKM-1
+Navitoclax,EW-22
+Foretinib,NH-12
+Dactolisib,IPC-298
+S-Trityl-L-cysteine,NCI-H847
+CCT245232,ES1
+Bleomycin (10 uM),JHU-029
+Dactolisib,OV-17R
+Epothilone B,LC4-1
+Navitoclax,OCI-LY7
+ARRY-520,MOLT-4
+SN-38_1490,DG-75
+Bortezomib,KNS-81-FD
+AZD4877,TT2609-C02
+Epothilone B,NCI-H1876
+AZD4877,CAL-39
+ARRY-520,SF295
+AZD4877,SF126
+SN-38_1490,RD
+CCT245232,DBTRG-05MG
+Luminespib,LB647-SCLC
+NPK76-II-72-1,ALL-SIL
+Bortezomib,Mo-T
+Temsirolimus,SCC-15
+Panobinostat,MES-SA
+AZD4877,RPMI-8866
+Trichostatin A,NCI-H1092
+Dactolisib,TE-11
+ARRY-520,KYSE-510
+Bortezomib,BT-474
+CCT245232,NCI-H1435
+Epothilone B,BxPC-3
+Epothilone B,KGN
+Trichostatin A,BT-474
+Panobinostat,NCI-H841
+Epothilone B,JHH-1
+AZD4877,GDM-1
+ARRY-520,SH-4
+Temsirolimus,IPC-298
+Panobinostat,NH-12
+SN-38_1490,M14
+Luminespib,G-402
+AZD4877,Hey
+Dactolisib,NCI-H28
+AZD4877,8305C
+Bortezomib,MEG-01
+SN-38_1490,GDM-1
+Gemcitabine_135,SF126
+Gemcitabine_135,CAL-120
+CCT245232,BT-474
+Trametinib,NB4
+Trichostatin A,D-283MED
+SN-38_1490,NCC010
+ARRY-520,DG-75
+CI-1033,EoL-1-cell
+Bortezomib,EB2
+Temsirolimus,BICR78
+Panobinostat,OS-RC-2
+Panobinostat,NCI-H1435
+Epothilone B,EW-11
+Luminespib,HOS
+CCT245232,T98G
+Selumetinib_1498,C32
+Trichostatin A,SNU-61
+Epothilone B,DMS-114
+AZD2014,NCI-H1355
+CCT245232,EW-1
+Trichostatin A,LS-1034
+Navitoclax,ALL-SIL
+Foretinib,ACHN
+Temsirolimus,JHU-029
+Temsirolimus,OV-17R
+AZD4877,NCI-H1876
+CI-1033,COR-L105
+CCT245232,IST-SL2
+Doxorubicin_133,G-361
+OSI-027,NCI-H358
+Selumetinib_1498,SW620
+Temsirolimus,EW-11
+Luminespib,RPMI-8866
+Pelitinib,SW620
+Bortezomib,JJN-3
+Gemcitabine_135,LOXIMVI
+SN-38_1490,SH-4
+OSI-027,NB69
+Navitoclax,697
+Trametinib,D-336MG
+AZD2014,NCI-H2452
+Epothilone B,SW948
+Trichostatin A,IM-95
+Temsirolimus,REH
+Epothilone B,Hs-633T
+Luminespib,MOG-G-CCM
+Trichostatin A,HTC-C3
+OSI-027,RCC-FG2
+Luminespib,NCI-H358
+Dactolisib,SUP-B15
+Selumetinib_1498,OVMIU
+Panobinostat,MDA-MB-157
+Palbociclib,AsPC-1
+AZD4877,MEG-01
+CI-1033,NCI-H1568
+Panobinostat,CESS
+Trametinib,NCI-H1693
+SN-38_1490,HSC-39
+Bortezomib,NB4
+Temsirolimus,PA-TU-8902
+Gemcitabine_135,MEG-01
+Panobinostat,COLO-668
+Trichostatin A,TE-1
+Luminespib,SIMA
+SN-38_1490,JHH-1
+Epothilone B,PA-TU-8902
+AZ20,HOS
+AZD4877,TT
+Navitoclax,LC4-1
+AZD4877,CCRF-CEM
+Navitoclax,WSU-DLCL2
+Temsirolimus,OCI-LY7
+ARRY-520,RL95-2
+BMS-536924_62,ALL-SIL
+SN-38_1490,KYSE-510
+Trichostatin A,ES1
+Palbociclib,OE21
+Dactolisib,TE-1
+AZD4877,MDA-MB-361
+Panobinostat,WM793B
+CCT245232,NCI-H2452
+Foretinib,EoL-1-cell
+Temsirolimus,CA46
+Panobinostat,TOV-21G
+Pelitinib,PANC-03-27
+ARRY-520,D-283MED
+SN-38_1490,NCI-H1155
+BX795,697
+Paclitaxel,SU-DHL-6
+AZD2014,CA46
+ARRY-520,GP5d
+Epothilone B,NCI-H1355
+ARRY-520,ES1
+Doxorubicin_133,HCC1569
+Luminespib,NCI-H1693
+Luminespib,P12-ICHIKAWA
+Doxorubicin_133,SW872
+AZD2014,JHH-1
+Doxorubicin_133,NCI-H1651
+CHIR-99021_154,D-336MG
+Foretinib,SU-DHL-6
+SN-38_1490,KARPAS-45
+Paclitaxel,A498
+PLX-4720_1371,WM35
+SN-38_1490,PANC-04-03
+BMS-536924_62,SIG-M5
+SN-38_1490,SW1271
+Doxorubicin_133,MOG-G-CCM
+AZD4877,IPC-298
+Doxorubicin_133,BICR78
+AZD5582,HCE-4
+Epothilone B,CA46
+AZD4877,MS751
+Panobinostat,KALS-1
+Foretinib,SCC-15
+Trametinib,WSU-DLCL2
+Trametinib,EoL-1-cell
+Epothilone B,G-361
+Navitoclax,HSC-39
+Panobinostat,DU-145
+Dactolisib,T-T
+CI-1033,SIG-M5
+CPI-613,SW948
+NPK76-II-72-1,SU-DHL-6
+TAK-715,EW-1
+"eEF2K Inhibitor, A-484954",CADO-ES1
+AICA Ribonucleotide,NCI-H1623
+AZ20,OV-17R
+OSI-027,G-361
+Selumetinib_1498,EW-22
+Afatinib_1377,WM1552C
+Bleomycin (10 uM),DBTRG-05MG
+"Brivanib, BMS-540215",NCI-H847
+AZD5582,RCC-FG2
+Pelitinib,Hey
+XMD8-92,D-336MG
+CPI-613,SNU-449
+KIN001-266,MDA-MB-157
+WZ-1-84,KALS-1
+TAK-715,JHH-2
+BX795,A427
+Navitoclax,NCI-H2444
+CHIR-99021_154,EW-7
+Ara-G,Calu-6
+CI-1033,JHH-7
+AZ20,AsPC-1
+Bicalutamide_150,LC-2-ad
+Tenovin-6,CAPAN-1
+AZD2014,Calu-6
+Olaparib_1495,NCI-H1666
+BX795,SKG-IIIa
+JNK Inhibitor VIII,TK
+Fulvestrant,EW-22
+NSC-207895,ESO26
+CHIR-99021_154,WM35
+AZD4547_1497,OVTOKO
+KIN001-244,WM793B
+Tubastatin A,KMS-12-BM
+Kobe2602,HSC-39
+Tamoxifen,SNU-61
+KIN001-266,HuP-T4
+BX795,MOG-G-CCM
+ZG-10,NCI-H1651
+AICA Ribonucleotide,TT
+XMD8-92,HT-115
+"Brivanib, BMS-540215",HuP-T4
+Selumetinib_1062,LC-2-ad
+XMD8-92,LXF-289
+AZ20,UWB1.289
+Seliciclib,NCI-H1155
+KIN001-266,SKG-IIIa
+TPCA-1,SH-4
+OSI-027,LN-229
+AZD5582,EW-11
+I-CBP112,WM793B
+I-CBP112,SH-4
+Navitoclax,SIMA
+Capivasertib,A427
+Cyclopamine,NB13
+AZD4547_1497,EW-7
+Crizotinib,KALS-1
+Olaparib_1495,NCI-H2452
+Ara-G,LOXIMVI
+Bleomycin (10 uM),HCC1937
+AZD8186,8305C
+Foretinib,huH-1
+BAM7,JJN-3
+Bicalutamide_150,SW1271
+Capivasertib,NCI-H1092
+Selumetinib_1498,REH
+Y-39983,MES-SA
+Tamoxifen,OS-RC-2
+JNK Inhibitor VIII,RCC-FG2
+AZD8186,ABC-1
+Luminespib,Caov-4
+Tamoxifen,CA46
+Kobe2602,G-402
+AICA Ribonucleotide,PANC-04-03
+BX795,NCI-H596
+AZD4547_1497,CADO-ES1
+Bicalutamide_150,NCI-H187
+NPK76-II-72-1,P31-FUJ
+AZD4547_1497,CMK
+Y-39983,NCI-H1876
+CAY10566,EW-3
+Selumetinib_1498,EoL-1-cell
+AICA Ribonucleotide,JJN-3
+Navitoclax,NB69
+"eEF2K Inhibitor, A-484954",BICR22
+GSK429286A,HT-1376
+Voxtalisib,NCI-H596
+S-Trityl-L-cysteine,NH-12
+AZD5582,NCI-H358
+Crizotinib,SCC-15
+Bicalutamide_150,BICR10
+AKT inhibitor VIII_228,NCI-H1355
+Afatinib_1377,COLO-824
+AKT inhibitor VIII_228,L-363
+Tubastatin A,NCI-H187
+Selumetinib_1062,GDM-1
+NPK76-II-72-1,NCI-H322M
+Bexarotene,T-T
+TPCA-1,LS-1034
+BAM7,KARPAS-45
+KIN001-244,HT-29
+Bexarotene,NCI-H2141
+Fedratinib,COLO-792
+Selumetinib_1062,MDA-MB-361
+CHIR-99021_154,KYSE-510
+CI-1040,PFSK-1
+QL-XI-92,HuP-T4
+Afatinib_1377,NCI-H1304
+Trametinib,NU-DUL-1
+CI-1033,L-363
+CPI-613,OV-56
+AICA Ribonucleotide,OV-17R
+"Brivanib, BMS-540215",LCLC-103H
+AKT inhibitor VIII_171,SF126
+Fedratinib,NCI-H1563
+Y-39983,NCI-H292
+Gemcitabine_135,DOK
+CI-1033,EC-GI-10
+CCT007093,NEC8
+PLX-4720_1371,G-402
+Bleomycin (10 uM),P12-ICHIKAWA
+I-CBP112,BICR22
+CHIR-99021_154,UACC-812
+AZD5582,HOS
+KIN001-244,PANC-03-27
+Cyclopamine,ML-2
+"Brivanib, BMS-540215",COLO-668
+Y-39983,Becker
+Foretinib,EFO-27
+CI-1040,P31-FUJ
+CHIR-99021_154,JHH-2
+BAM7,HuO-3N1
+Capivasertib,CAL-39
+I-CBP112,HOS
+Bleomycin (10 uM),NCI-H2066
+AZD5582,8305C
+NSC-207895,BxPC-3
+Doxorubicin_133,HuO-3N1
+AICA Ribonucleotide,SW837
+Pelitinib,JHH-7
+TAK-715,AGS
+AICA Ribonucleotide,SK-GT-4
+C-75,D-283MED
+Tubastatin A,EoL-1-cell
+Fedratinib,SW1116
+PLX-4720_1371,EW-1
+AZD8186,KOSC-2
+Foretinib,BT-20
+QL-XI-92,OV-56
+Pelitinib,NCI-H1304
+CI-1033,NCI-H1092
+C-75,ABC-1
+Luminespib,Hs-766T
+Navitoclax,LOU-NH91
+PLX-4720_1371,NCI-H2444
+TAK-715,697
+AZD8186,M14
+Y-39983,OVCAR-8
+AZD2014,WM1552C
+GSK429286A,NCI-H2227
+CAY10566,TK
+CI-1040,no-10
+CPI-613,WM1552C
+ZG-10,NCI-H1155
+KIN001-244,NEC8
+CCT007093,HCC1569
+AZD4547_1497,MDA-MB-361
+AZD5582,SF126
+BAM7,SW948
+CHIR-99021_1241,ACHN
+AKT inhibitor VIII_228,COLO-824
+Selumetinib_1498,JJN-3
+KIN001-244,RPMI-8866
+NPK76-II-72-1,NCI-H1435
+"eEF2K Inhibitor, A-484954",UACC-893
+KIN001-244,KOSC-2
+AZD5582,TK
+I-CBP112,TT
+Ara-G,NCI-H1666
+Y-39983,NCI-H358
+CRT0105950,CCRF-CEM
+PHA-665752,SHP-77
+"Brivanib, BMS-540215",EoL-1-cell
+YK-4-279,NCI-H322M
+CPI-613,AsPC-1
+CRT0105950,LS-1034
+CI-1033,OVTOKO
+Ara-G,NU-DUL-1
+CCT007093,A431
+KIN001-266,NCI-H2228
+Navitoclax,FU97
+"eEF2K Inhibitor, A-484954",M14
+AICA Ribonucleotide,KGN
+Ara-G,RPMI-8866
+Afatinib_1377,G-292-Clone-A141B1
+Bleomycin (10 uM),VA-ES-BJ
+Selumetinib_1062,A427
+Bicalutamide_150,G-402
+Fedratinib,ML-2
+Selumetinib_1498,Hey
+JNK Inhibitor VIII,HCC1569
+KIN001-266,HT-29
+AZD4547_1497,D-336MG
+Cyclopamine,SU-DHL-1
+CRT0105950,RCH-ACV
+Fulvestrant,NCI-H1563
+Foretinib,NCI-H1355
+Bexarotene,G-361
+Kobe2602,CA46
+Bexarotene,BxPC-3
+GSK-J4,WM793B
+Afatinib_1377,SK-OV-3
+AZD5582,DMS-114
+CHIR-99021_154,WSU-DLCL2
+NPK76-II-72-1,UACC-812
+I-CBP112,HTC-C3
+"eEF2K Inhibitor, A-484954",REH
+NPK76-II-72-1,NCI-H1651
+"eEF2K Inhibitor, A-484954",KNS-81-FD
+AZ20,OVMIU
+LIMK1 inhibitor BMS4,SU-DHL-6
+AZ20,PANC-04-03
+NPK76-II-72-1,NCI-H2087
+JNJ38877605,SUP-B15
+AKT inhibitor VIII_228,HCC-827
+Afatinib_1377,LN-229
+CHIR-99021_1241,KYSE-510
+CRT0105950,SUP-B15
+AZD5582,MN-60
+Seliciclib,SF126
+GSK-J4,LAN-6
+Tenovin-6,NCI-H2452
+Capivasertib,RD
+CHIR-99021_1241,K-562
+CHIR-99021_1241,SW620
+XMD8-92,NCI-H1876
+I-CBP112,SW1116
+AZD2014,NCI-H841
+TAK-715,TE-1
+CHIR-99021_154,NCI-H1304
+CPI-613,NCI-H847
+LIMK1 inhibitor BMS4,EC-GI-10
+AKT inhibitor VIII_228,LB647-SCLC
+GSK-J4,NCI-H1304
+I-CBP112,LCLC-103H
+TPCA-1,EFO-27
+AZD4547_1497,BFTC-909
+Bleomycin (10 uM),DOV13
+CRT0105950,P12-ICHIKAWA
+Fedratinib,SF295
+Tenovin-6,NCI-H1355
+Tubastatin A,CCRF-CEM
+Seliciclib,COLO-824
+CI-1033,CAL-39
+Fedratinib,HLE
+XMD8-92,HT55
+Foretinib,TOV-21G
+CI-1033,CAL-120
+CHIR-99021_154,22RV1
+Ara-G,SW837
+"eEF2K Inhibitor, A-484954",ABC-1
+KIN001-266,SW1271
+TAK-715,BT-20
+SB505124_476,WM793B
+"Brivanib, BMS-540215",SNU-407
+AZD2014,COLO-668
+TPCA-1,NCI-H1623
+PLX-4720_1371,SU-DHL-8
+Afatinib_1377,BALL-1
+Tenovin-6,NCI-H1568
+AKT inhibitor VIII_228,NCI-H1435
+GSK429286A,TT2609-C02
+Gemcitabine_135,DMS-114
+CI-1040,SK-GT-4
+Capivasertib,Hs-766T
+AICA Ribonucleotide,EB2
+AZD5582,SK-GT-4
+AZ20,SW1271
+AZD2014,LCLC-103H
+YK-4-279,EJM
+NSC-207895,BT-20
+TAK-715,CHSA0011
+Bicalutamide_150,EJM
+AZD4547_1497,K-562
+GSK-J4,ACHN
+AZD4547_1497,UWB1.289
+JNJ38877605,NCI-H187
+Bexarotene,HCC1569
+Palbociclib,HuP-T4
+CRT0105950,Hey
+QL-XI-92,TE-11
+Y-39983,BEN
+Voxtalisib,KON
+Gemcitabine_135,COLO-829
+CI-1040,PANC-04-03
+NSC-207895,COLO-668
+BX795,CAL-39
+Tubastatin A,JHH-2
+AZ20,CA46
+Tamoxifen,SH-4
+Voxtalisib,NH-12
+XMD8-92,TT2609-C02
+Afatinib_1377,ESO26
+XMD8-92,8305C
+"eEF2K Inhibitor, A-484954",COLO-792
+ZG-10,NCI-H2087
+Trametinib,Jurkat
+C-75,NCI-H1355
+JNJ38877605,BEN
+Kobe2602,A431
+BX795,SW620
+Tamoxifen,CAL-39
+Navitoclax,TE-5
+Crizotinib,SUP-B15
+GSK-J4,Mo-T
+GSK429286A,NCI-H1563
+JNK Inhibitor VIII,LCLC-103H
+CRT0105950,TE-1
+Fulvestrant,SK-GT-2
+Selumetinib_1498,CADO-ES1
+Bexarotene,CAL-62
+CHIR-99021_154,PANC-04-03
+C-75,G-292-Clone-A141B1
+JNK Inhibitor VIII,RPMI-8866
+Navitoclax,JHU-029
+KIN001-266,IPC-298
+Ara-G,LS-1034
+Bexarotene,HCC1937
+Kobe2602,NCI-H292
+CHIR-99021_1241,DoTc2-4510
+JNK Inhibitor VIII,EC-GI-10
+OSI-027,NCI-H1092
+JNK Inhibitor VIII,SW1116
+AZD5582,C32
+CHIR-99021_154,HCC-827
+BX795,SW948
+CI-1040,KOSC-2
+JNJ38877605,SF126
+WZ-1-84,OS-RC-2
+CPI-613,HCC1937
+KIN001-266,MN-60
+JNJ38877605,OVTOKO
+TPCA-1,NCI-H292
+AICA Ribonucleotide,REH
+Tubastatin A,LB647-SCLC
+OSI-027,TT2609-C02
+Afatinib_1377,KGN
+CCT007093,MDA-MB-361
+"eEF2K Inhibitor, A-484954",EKVX
+GSK429286A,EJM
+Bicalutamide_150,NCI-H1693
+AZD4547_1497,KARPAS-231
+CCT007093,COLO-792
+CHIR-99021_1241,LB647-SCLC
+Tubastatin A,HTC-C3
+BAM7,MS751
+Crizotinib,EJM
+AKT inhibitor VIII_171,EB2
+AKT inhibitor VIII_171,KMRC-20
+CPI-613,SW620
+CAY10566,SW948
+C-75,KINGS-1
+Ara-G,MS751
+AZD8186,A427
+Foretinib,ABC-1
+TPCA-1,C-33-A
+AICA Ribonucleotide,BT-474
+JNJ38877605,NCI-H2141
+PHA-665752,KGN
+TPCA-1,SK-OV-3
+Voxtalisib,HuO-3N1
+Fulvestrant,L-363
+BAM7,G-292-Clone-A141B1
+TAK-715,SK-GT-4
+CI-1033,RL95-2
+JNJ38877605,HCC-827
+AZD4547_1497,NCI-H2141
+Y-39983,KNS-81-FD
+Foretinib,HT-115
+CRT0105950,RCC-FG2
+AZD8186,SNU-61
+Y-39983,NEC8
+AICA Ribonucleotide,COR-L105
+AZD8186,D-336MG
+JNJ38877605,Jurkat
+XMD8-92,NEC8
+Bexarotene,WM35
+GSK429286A,SNU-407
+C-75,TE-1
+XMD8-92,IST-SL2
+Selumetinib_1498,D-336MG
+Fedratinib,NCI-H1435
+Selumetinib_1498,NB13
+C-75,HCC-827
+Bicalutamide_150,NCI-H1563
+Tamoxifen,NCI-H2444
+OSI-027,HLE
+CHIR-99021_1241,CA46
+TAK-715,NCI-H2141
+Afatinib_1377,L-428
+YK-4-279,COR-L105
+Kobe2602,NCI-H847
+CI-1040,NCI-H596
+Bicalutamide_150,COLO-792
+TAK-715,A431
+"eEF2K Inhibitor, A-484954",SNU-407
+I-CBP112,NB13
+Olaparib_1495,NCI-H1876
+Capivasertib,NCI-H292
+I-CBP112,NCI-H1355
+Palbociclib,CHP-126
+JNJ38877605,A427
+TPCA-1,PANC-03-27
+Capivasertib,NH-12
+Y-39983,ACHN
+CAY10566,ML-2
+ZG-10,OVCAR-8
+XMD8-92,NB69
+PLX-4720_1371,JHH-1
+Bicalutamide_150,NCI-H322M
+NSC-207895,MES-SA
+AZ20,NCI-H1666
+YK-4-279,NCI-H2227
+GSK429286A,WM35
+Tenovin-6,RPMI-7951
+AZ20,LC-2-ad
+Olaparib_1495,LU-135
+NPK76-II-72-1,G-292-Clone-A141B1
+PLX-4720_1371,NCI-H2228
+CRT0105950,LB647-SCLC
+CHIR-99021_1241,NH-12
+NPK76-II-72-1,TE-1
+GSK-J4,NCI-H1355
+AZD5582,NU-DUL-1
+"eEF2K Inhibitor, A-484954",HSC-39
+QL-XI-92,TK
+Crizotinib,HSC-39
+SB505124_476,SW948
+CHIR-99021_1241,KMRC-20
+TAK-715,22RV1
+KIN001-244,KMS-12-BM
+TAK-715,NB4
+Voxtalisib,WM1552C
+Bleomycin (10 uM),A431
+BAM7,WSU-DLCL2
+GSK-J4,BICR78
+CPI-613,no-10
+CPI-613,Calu-6
+AKT inhibitor VIII_171,CAL-39
+TAK-715,CCRF-CEM
+CCT007093,OV-56
+KIN001-266,NCI-H2141
+Foretinib,LOU-NH91
+Fulvestrant,RD
+JNJ38877605,COLO-829
+Tamoxifen,D-283MED
+NPK76-II-72-1,SCC-15
+JNK Inhibitor VIII,HCC-827
+"Brivanib, BMS-540215",22RV1
+Tubastatin A,HCE-4
+CCT007093,JHH-2
+SB505124_476,HOS
+NSC-207895,NCI-H2452
+Tubastatin A,P31-FUJ
+Tubastatin A,Becker
+Tubastatin A,MN-60
+XMD8-92,SH-4
+TPCA-1,FU97
+Bicalutamide_150,DMS-114
+Foretinib,CHSA0011
+Ara-G,AsPC-1
+Tamoxifen,C32
+AZD4547_1497,NCI-H1666
+BX795,MOLT-4
+Pelitinib,Becker
+Cyclopamine,CESS
+JNK Inhibitor VIII,TE-9
+Bicalutamide_150,Becker
+Tamoxifen,SW872
+AICA Ribonucleotide,GP5d
+TPCA-1,PA-TU-8902
+TAK-715,no-10
+CI-1033,ES1
+Seliciclib,L-428
+"Brivanib, BMS-540215",MN-60
+AZD5582,JHH-2
+XMD8-92,NB4
+OSI-027,BICR10
+Y-39983,CHSA0011
+CI-1040,EW-7
+Ara-G,EW-22
+KIN001-244,KINGS-1
+CCT007093,BFTC-909
+CI-1040,A431
+Fulvestrant,22RV1
+CAY10566,EC-GI-10
+AZ20,TE-5
+JNK Inhibitor VIII,NCC010
+Ara-G,LC-2-ad
+KIN001-266,LC4-1
+Y-39983,NCI-H1623
+Navitoclax,RPMI-7951
+CAY10566,TT2609-C02
+GSK429286A,NCI-H1693
+GSK-J4,KARPAS-1106P
+CCT007093,A498
+Tubastatin A,8505C
+Bleomycin (10 uM),NB13
+NPK76-II-72-1,HuO9
+KIN001-244,MDA-MB-361
+AZD4547_1497,SW837
+CAY10566,P12-ICHIKAWA
+Capivasertib,SNU-81
+JNJ38877605,LC-2-ad
+KIN001-244,D-283MED
+Palbociclib,P31-FUJ
+CHIR-99021_154,MES-SA
+WZ-1-84,EoL-1-cell
+Tenovin-6,697
+GSK-J4,IST-SL2
+"eEF2K Inhibitor, A-484954",C-33-A
+YK-4-279,RPMI-8866
+BX795,TT2609-C02
+Selumetinib_1062,TOV-21G
+CPI-613,NCI-H1155
+AKT inhibitor VIII_171,NCI-H358
+AKT inhibitor VIII_171,A427
+Trametinib,SF126
+CHIR-99021_1241,L-363
+CPI-613,EW-22
+KIN001-244,MN-60
+YK-4-279,NCI-H1155
+AZD8186,UACC-893
+CRT0105950,HCC1937
+CI-1040,NCI-H2227
+Y-39983,EKVX
+CAY10566,NH-12
+Pelitinib,NCI-H187
+ZG-10,D-336MG
+Tamoxifen,SU-DHL-6
+Seliciclib,KARPAS-231
+Kobe2602,NCI-H596
+Olaparib_1495,HCC1937
+Y-39983,NB69
+WZ-1-84,A498
+CAY10566,BICR22
+CCT007093,Hs-633T
+PLX-4720_1371,GDM-1
+XMD8-92,DOK
+Bicalutamide_150,MOG-G-CCM
+Tenovin-6,YKG-1
+XMD8-92,UACC-893
+JNJ38877605,C32
+Tamoxifen,NCI-H2066
+CI-1033,EJM
+GSK-J4,NCI-H1563
+GSK-J4,SNU-61
+BX795,8305C
+Tamoxifen,DBTRG-05MG
+CPI-613,PANC-04-03
+GSK-J4,KARPAS-45
+JNJ38877605,22RV1
+Capivasertib,CAPAN-1
+BAM7,AsPC-1
+GSK429286A,EW-1
+Afatinib_1377,A498
+LIMK1 inhibitor BMS4,LOU-NH91
+C-75,LCLC-103H
+KIN001-244,CAL-120
+Palbociclib,NCI-H1092
+Y-39983,UACC-893
+AKT inhibitor VIII_171,TE-1
+Tenovin-6,COLO-668
+Tenovin-6,SW1116
+CAY10566,SIG-M5
+CCT007093,NCI-H847
+Bexarotene,JHH-1
+"Brivanib, BMS-540215",Mo-T
+Palbociclib,WM35
+SB505124_476,NCI-H2087
+Y-39983,SU-DHL-8
+QL-XI-92,NCI-H1355
+KIN001-244,NCI-H841
+YK-4-279,ESO26
+XMD8-92,EW-22
+CRT0105950,HT-1376
+Pelitinib,TT
+Afatinib_1377,HuO9
+AZD8186,Calu-6
+Fulvestrant,SU-DHL-6
+Seliciclib,RPMI-8402
+C-75,JHH-7
+AKT inhibitor VIII_171,SU-DHL-6
+Fulvestrant,NEC8
+Trametinib,EJM
+LIMK1 inhibitor BMS4,UWB1.289
+CAY10566,NCI-H2452
+KIN001-266,RPMI-7951
+Foretinib,OE21
+BAM7,LXF-289
+AKT inhibitor VIII_228,EFO-27
+AZD8186,HCC1569
+Fulvestrant,PA-TU-8902
+CAY10566,HuO9
+QL-XI-92,LS-1034
+AZD4547_1497,C32
+TPCA-1,C32
+AKT inhibitor VIII_228,LN-229
+GSK-J4,NCI-H28
+BX795,KARPAS-1106P
+Crizotinib,TE-11
+TAK-715,MOG-G-CCM
+Selumetinib_1498,HuO-3N1
+Fedratinib,NCI-H2141
+CCT007093,Becker
+"eEF2K Inhibitor, A-484954",BT-474
+BX795,HT-115
+LIMK1 inhibitor BMS4,Hs-766T
+"Brivanib, BMS-540215",SF295
+AZD8186,no-10
+"eEF2K Inhibitor, A-484954",A427
+CI-1033,HOS
+KIN001-266,T98G
+Navitoclax,EC-GI-10
+CI-1040,EJM
+Capivasertib,KMS-12-BM
+CI-1040,RPMI-8402
+Navitoclax,HCC-827
+Selumetinib_1062,LOU-NH91
+CCT007093,NB13
+ZG-10,NB69
+Fedratinib,LC-2-ad
+Bicalutamide_150,JHH-7
+Tubastatin A,697
+CPI-613,NCI-H1568
+Palbociclib,FU97
+CI-1040,TE-1
+Afatinib_1377,NCI-H187
+NPK76-II-72-1,Hs-766T
+Olaparib_1495,HTC-C3
+CRT0105950,CHP-126
+Selumetinib_1062,NCI-H847
+CI-1033,NCI-H2087
+Capivasertib,GP5d
+BAM7,ALL-SIL
+Ara-G,BICR78
+CI-1033,RCC-FG2
+Capivasertib,NCI-H2141
+WZ-1-84,COLO-829
+XMD8-92,NCI-H1623
+JNK Inhibitor VIII,LAN-6
+CCT007093,YKG-1
+Bexarotene,MOLT-4
+TPCA-1,NCI-H2052
+Selumetinib_1498,EFO-27
+AKT inhibitor VIII_228,NCI-H1563
+GSK429286A,LAN-6
+GSK429286A,GP5d
+JNK Inhibitor VIII,NB69
+CPI-613,NCI-H2228
+KIN001-244,NCI-H1876
+Bicalutamide_150,HuP-T4
+Tubastatin A,EKVX
+YK-4-279,COLO-824
+Afatinib_1377,JHH-2
+Foretinib,KYSE-510
+Bleomycin (10 uM),TE-9
+YK-4-279,KARPAS-1106P
+BX795,BICR22
+I-CBP112,RPMI-8402
+QL-XI-92,MS751
+CPI-613,L-428
+AZD8186,LOU-NH91
+AZD4547_1497,Caov-4
+KIN001-244,NCI-H2228
+KIN001-266,NB4
+Cyclopamine,JJN-3
+Cyclopamine,ES1
+Selumetinib_1062,HCC1569
+CHIR-99021_1241,8305C
+ZG-10,RPMI-8866
+Bicalutamide_150,PA-TU-8902
+"Brivanib, BMS-540215",CESS
+PLX-4720_1371,T-T
+QL-XI-92,COR-L88
+Temsirolimus,NCI-H2172
+ZG-10,TT2609-C02
+LIMK1 inhibitor BMS4,G-292-Clone-A141B1
+CI-1033,no-10
+AZD5582,SK-CO-1
+WZ-1-84,SU-DHL-1
+Selumetinib_1062,L-363
+Y-39983,BICR10
+"eEF2K Inhibitor, A-484954",HT-29
+LIMK1 inhibitor BMS4,NCI-H1876
+WZ-1-84,Becker
+AICA Ribonucleotide,KARPAS-45
+AZD8186,BT-474
+Palbociclib,DOK
+CCT007093,KNS-81-FD
+KIN001-244,HT-1376
+Tubastatin A,LAN-6
+OSI-027,LAN-6
+GSK-J4,COLO-783
+C-75,COLO-824
+PHA-665752,CHP-126
+Afatinib_1377,K-562
+NPK76-II-72-1,Becker
+NSC-207895,ATN-1
+PLX-4720_1371,CESS
+BAM7,NCI-H358
+Navitoclax,PA-TU-8902
+AZD4547_1497,A427
+CHIR-99021_1241,CCRF-CEM
+QL-XI-92,C32
+Navitoclax,KARPAS-1106P
+Tamoxifen,Mo-T
+Bleomycin (10 uM),ML-2
+Afatinib_1377,BICR78
+PLX-4720_1371,OVTOKO
+CCT007093,IPC-298
+CRT0105950,NCI-H2141
+Selumetinib_1062,RCH-ACV
+Crizotinib,JJN-3
+Bleomycin (10 uM),MOLT-4
+Luminespib,NCI-H1563
+CPI-613,HCC-827
+PLX-4720_1371,JHU-029
+Bicalutamide_150,HTC-C3
+Kobe2602,CAL-51
+SB505124_476,NCI-H1651
+JNJ38877605,KARPAS-45
+AZD8186,TE-1
+CI-1033,NCI-H1435
+Y-39983,SIMA
+BAM7,HCE-4
+CPI-613,OV-17R
+CPI-613,NCI-H1666
+Selumetinib_1498,HuO9
+Bexarotene,ML-2
+Pelitinib,NCI-H2141
+QL-XI-92,KGN
+Selumetinib_1498,COR-L88
+CHIR-99021_1241,SK-GT-4
+TPCA-1,HOS
+C-75,IM-95
+Foretinib,HSC-39
+KIN001-266,OVCAR-8
+Voxtalisib,LOU-NH91
+"Brivanib, BMS-540215",KINGS-1
+Tamoxifen,MOG-G-CCM
+Trametinib,NCI-H2172
+CI-1033,Hs-633T
+CI-1033,NCI-H1105
+BX795,BEN
+Pelitinib,AsPC-1
+PLX-4720_1371,Hs-683
+Navitoclax,SW1271
+BX795,D-283MED
+Ara-G,TT
+Kobe2602,MN-60
+GSK429286A,COLO-783
+AZD4547_1497,COR-L105
+CHIR-99021_1241,HCC1569
+CPI-613,IM-95
+Bexarotene,HT55
+CCT007093,DOK
+Selumetinib_1498,UWB1.289
+CPI-613,RL95-2
+TAK-715,LS-1034
+BAM7,YKG-1
+KIN001-266,JJN-3
+Navitoclax,NCI-H1651
+Y-39983,L-363
+Selumetinib_1062,RCC-FG2
+Fedratinib,C-33-A
+SB505124_476,NCI-H1105
+AZD4547_1497,CCRF-CEM
+CRT0105950,MEG-01
+Tenovin-6,BEN
+AKT inhibitor VIII_171,DG-75
+Luminespib,CHSA0011
+KIN001-266,TT2609-C02
+TAK-715,Caov-4
+WZ-1-84,COLO-668
+Bexarotene,DMS-114
+LIMK1 inhibitor BMS4,KALS-1
+GSK-J4,EW-7
+Selumetinib_1062,MEG-01
+CHIR-99021_154,KARPAS-231
+Selumetinib_1498,CCRF-CEM
+Tenovin-6,CAL-39
+SB505124_476,BALL-1
+SB505124_476,COR-L105
+NSC-207895,OV-17R
+"eEF2K Inhibitor, A-484954",UWB1.289
+"eEF2K Inhibitor, A-484954",KGN
+TPCA-1,NEC8
+AZD4547_1497,HLE
+TAK-715,SH-4
+Kobe2602,NCI-H2141
+Foretinib,SKG-IIIa
+Tamoxifen,A498
+ARRY-520,NCI-H1563
+NSC-207895,SNU-449
+Bicalutamide_150,L-428
+Capivasertib,FU97
+NSC-207895,HT-115
+Pelitinib,SW1271
+Y-39983,RPMI-7951
+AKT inhibitor VIII_171,NB13
+KIN001-266,SNU-449
+I-CBP112,MOG-G-CCM
+Selumetinib_1062,SF295
+Bicalutamide_150,SW948
+BMS-536924_62,COLO-668
+Tubastatin A,SHP-77
+Fedratinib,NCI-H2052
+LIMK1 inhibitor BMS4,NCI-H1563
+AZ20,NCI-H1563
+Fulvestrant,JHU-029
+Navitoclax,NCI-H1623
+Ara-G,NCI-H1105
+Bleomycin (10 uM),no-10
+Capivasertib,BT-474
+Pelitinib,OV-17R
+JNK Inhibitor VIII,GP5d
+CAY10566,DMS-114
+AKT inhibitor VIII_228,SW1116
+Fedratinib,Hs-683
+Selumetinib_1498,OS-RC-2
+Cyclopamine,KINGS-1
+Voxtalisib,COR-L105
+"Brivanib, BMS-540215",8305C
+Capivasertib,BxPC-3
+ZG-10,Becker
+NSC-207895,EB2
+CRT0105950,LC-2-ad
+GSK-J4,LU-135
+Y-39983,A498
+Tamoxifen,CHP-126
+Bicalutamide_150,LB647-SCLC
+AZD2014,HuO-3N1
+CI-1033,NCI-H1563
+"Brivanib, BMS-540215",BT-474
+Tenovin-6,SNU-449
+Ara-G,697
+PLX-4720_1371,NCI-H2227
+Tenovin-6,L-428
+Kobe2602,DBTRG-05MG
+Fulvestrant,C-33-A
+Tamoxifen,NCI-H1876
+Navitoclax,SF126
+AICA Ribonucleotide,MDA-MB-361
+JNJ38877605,OV-56
+CI-1040,OV-17R
+AKT inhibitor VIII_171,NB69
+Trametinib,NCI-H1105
+C-75,MOG-G-CCM
+Afatinib_1377,IPC-298
+C-75,EoL-1-cell
+Selumetinib_1498,EW-7
+SB505124_476,SK-OV-3
+PLX-4720_1371,A431
+PLX-4720_1371,G-361
+BMS-536924_62,Becker
+GSK-J4,WSU-DLCL2
+AICA Ribonucleotide,COLO-792
+Tamoxifen,OE21
+Cyclopamine,HSC-39
+KIN001-244,LN-229
+YK-4-279,LOU-NH91
+NSC-207895,ML-2
+Olaparib_1495,FU97
+Foretinib,DU-145
+Tamoxifen,BEN
+Selumetinib_1498,KINGS-1
+Ara-G,BALL-1
+Palbociclib,Hs-683
+AZD2014,LAN-6
+C-75,NCI-H358
+TPCA-1,CAL-120
+Tenovin-6,DOK
+LIMK1 inhibitor BMS4,NCI-H1304
+PHA-665752,L-363
+"Brivanib, BMS-540215",MEG-01
+PLX-4720_1371,SIMA
+JNK Inhibitor VIII,SH-4
+PLX-4720_1371,NCI-H187
+CCT007093,SNU-81
+Tamoxifen,CAL-120
+CI-1040,MN-60
+CCT007093,SK-GT-4
+Selumetinib_1062,LS-1034
+Olaparib_1495,G-361
+Ara-G,DMS-114
+AKT inhibitor VIII_171,EKVX
+Ara-G,22RV1
+JNJ38877605,UACC-812
+Fedratinib,IPC-298
+YK-4-279,WSU-DLCL2
+BX795,HCC1937
+AKT inhibitor VIII_228,G-292-Clone-A141B1
+AKT inhibitor VIII_228,NH-12
+KIN001-266,NH-12
+KIN001-266,TE-11
+TPCA-1,NCI-H2172
+CRT0105950,huH-1
+AICA Ribonucleotide,VA-ES-BJ
+CI-1033,CADO-ES1
+Palbociclib,KYSE-510
+AZD4547_1497,T98G
+AZ20,NCI-H596
+Pelitinib,OVCAR-8
+AZD2014,SIMA
+Tubastatin A,DG-75
+Kobe2602,HT-29
+AZD2014,T84
+AZD5582,LB647-SCLC
+CPI-613,LB647-SCLC
+PLX-4720_1371,KOSC-2
+KIN001-244,OS-RC-2
+NSC-207895,G-292-Clone-A141B1
+JNJ38877605,EoL-1-cell
+Fulvestrant,TK
+Trichostatin A,TE-5
+AZD4547_1497,NCI-H1435
+BMS-536924_62,RPMI-8402
+Temsirolimus,SW948
+Capivasertib,EW-3
+Afatinib_1377,KARPAS-1106P
+AKT inhibitor VIII_228,TT2609-C02
+BX795,KALS-1
+Bicalutamide_150,DU-145
+Tenovin-6,ML-2
+"Brivanib, BMS-540215",SCC-15
+PLX-4720_1371,NCI-H1563
+Capivasertib,EW-11
+TPCA-1,NCI-H358
+AZD5582,PA-TU-8902
+Capivasertib,HOS
+BAM7,RPMI-7951
+NPK76-II-72-1,UACC-893
+Afatinib_1377,EJM
+Kobe2602,EFO-27
+CI-1033,HT-29
+Fedratinib,OE21
+LIMK1 inhibitor BMS4,LN-229
+Kobe2602,DU-145
+Bexarotene,DOK
+Capivasertib,SK-GT-2
+Capivasertib,PANC-04-03
+CCT007093,VA-ES-BJ
+BAM7,RPMI-8866
+AZ20,SK-GT-4
+CPI-613,K-562
+Seliciclib,CESS
+KIN001-244,KNS-81-FD
+Fulvestrant,SK-CO-1
+Kobe2602,G-292-Clone-A141B1
+AICA Ribonucleotide,CAPAN-1
+I-CBP112,NCI-H1304
+Tenovin-6,NCI-H358
+CI-1033,AsPC-1
+Tamoxifen,EW-3
+KIN001-266,NU-DUL-1
+OSI-027,MOLT-4
+NSC-207895,NCI-H322M
+CHIR-99021_1241,D-283MED
+C-75,NCI-H292
+TPCA-1,BPH-1
+Selumetinib_1498,K-562
+I-CBP112,PANC-03-27
+AZD8186,NCI-H1623
+Fedratinib,NCI-H358
+Olaparib_1495,Hs-683
+Cyclopamine,DG-75
+NSC-207895,BICR22
+WZ-1-84,SHP-77
+CI-1040,EW-3
+Navitoclax,UACC-893
+Capivasertib,CAL-120
+AZ20,KARPAS-45
+NSC-207895,LU-135
+Selumetinib_1062,SUP-B15
+Navitoclax,HTC-C3
+JNJ38877605,HTC-C3
+Selumetinib_1498,ESO26
+Bicalutamide_150,KGN
+Doxorubicin_133,CHSA0011
+AZD4547_1497,NCI-H322M
+Tamoxifen,SIMA
+TPCA-1,OVKATE
+Y-39983,CADO-ES1
+GSK-J4,NCI-H1666
+BAM7,NCI-H2052
+Selumetinib_1498,NCI-H28
+Bexarotene,ABC-1
+PLX-4720_1371,WM793B
+Pelitinib,BICR10
+KIN001-244,COLO-829
+LIMK1 inhibitor BMS4,SKM-1
+YK-4-279,NCI-H841
+YK-4-279,EFO-27
+Trichostatin A,NCI-H292
+GSK-J4,IPC-298
+Bleomycin (10 uM),ATN-1
+OSI-027,LOXIMVI
+Tamoxifen,SK-GT-4
+Afatinib_1377,DG-75
+CCT007093,HuO9
+Bleomycin (10 uM),WM793B
+JNK Inhibitor VIII,Mo-T
+Crizotinib,REH
+CHIR-99021_1241,MDA-MB-361
+Olaparib_1495,SNU-449
+PLX-4720_1371,BICR78
+Bexarotene,OVCAR-8
+CRT0105950,FU97
+KIN001-244,LOXIMVI
+QL-XI-92,WM1552C
+CI-1033,AGS
+AZD4877,NCI-H187
+BAM7,UACC-812
+Tenovin-6,OVCAR-8
+NSC-207895,COR-L105
+Ara-G,WM1552C
+BMS-536924_62,ES1
+Pelitinib,no-10
+GSK429286A,T98G
+BAM7,NB13
+Bexarotene,TE-9
+Tenovin-6,NCI-H2444
+LIMK1 inhibitor BMS4,NCI-H292
+Capivasertib,NCI-H2227
+YK-4-279,NCI-H1651
+KIN001-266,CA46
+Olaparib_1495,P12-ICHIKAWA
+Pelitinib,NCI-H1693
+TPCA-1,DBTRG-05MG
+Fulvestrant,BICR10
+CHIR-99021_154,BxPC-3
+Tenovin-6,OVMIU
+AZD5582,KARPAS-45
+Bicalutamide_150,JHH-1
+CRT0105950,BALL-1
+"Brivanib, BMS-540215",D-336MG
+GSK-J4,LOXIMVI
+AICA Ribonucleotide,LCLC-103H
+LIMK1 inhibitor BMS4,YKG-1
+GSK429286A,NEC8
+CI-1033,COLO-829
+Tubastatin A,LS-1034
+NSC-207895,NCI-H2052
+Bleomycin (10 uM),NCI-H1688
+KIN001-244,NCI-H358
+WZ-1-84,D-283MED
+Navitoclax,HT-29
+Voxtalisib,SNU-449
+"eEF2K Inhibitor, A-484954",CA46
+AZD8186,T98G
+Afatinib_1377,C32
+BX795,CADO-ES1
+AZD8186,OVKATE
+CI-1033,MDA-MB-157
+Voxtalisib,NCI-H1435
+AZD5582,JHH-7
+CHIR-99021_1241,Jurkat
+Olaparib_1495,TE-9
+CHIR-99021_154,KINGS-1
+I-CBP112,LS-1034
+WZ-1-84,NB4
+Selumetinib_1498,COLO-824
+Tamoxifen,NCI-H2452
+AKT inhibitor VIII_228,MDA-MB-361
+C-75,no-10
+CRT0105950,ML-2
+KIN001-244,T98G
+C-75,TE-11
+Voxtalisib,TE-11
+CHIR-99021_1241,NCI-H187
+Bleomycin (10 uM),NCI-H2444
+C-75,PA-TU-8902
+CRT0105950,MN-60
+QL-XI-92,SW948
+AZD8186,SW948
+AKT inhibitor VIII_171,CHP-126
+CCT007093,HT55
+Tamoxifen,KARPAS-45
+Bexarotene,PANC-03-27
+Fulvestrant,SW872
+Voxtalisib,NCI-H28
+"eEF2K Inhibitor, A-484954",D-336MG
+Ara-G,HuP-T4
+Fulvestrant,LC-2-ad
+KIN001-244,M14
+YK-4-279,SIMA
+Kobe2602,REH
+CAY10566,TE-1
+AZD8186,HuO9
+Trametinib,IST-SL2
+CI-1033,Calu-6
+Afatinib_1377,huH-1
+AZD4547_1497,KON
+AKT inhibitor VIII_171,IM-95
+LIMK1 inhibitor BMS4,HuP-T4
+CI-1033,HCC1569
+CHIR-99021_1241,OS-RC-2
+"eEF2K Inhibitor, A-484954",HLE
+CHIR-99021_1241,EFO-27
+YK-4-279,SU-DHL-8
+CAY10566,JHH-7
+CI-1033,SW620
+AZ20,SHP-77
+CHIR-99021_1241,HSC-39
+AZD8186,Hs-766T
+AZD5582,BICR10
+AZD4547_1497,RL95-2
+XMD8-92,KMRC-20
+Tenovin-6,NCI-H2228
+Seliciclib,OS-RC-2
+Fulvestrant,HuO-3N1
+Tenovin-6,A431
+Selumetinib_1498,OE21
+Pelitinib,KALS-1
+Bexarotene,EFO-27
+Kobe2602,A427
+GSK-J4,SW837
+Bicalutamide_150,TE-9
+AZ20,BPH-1
+Bleomycin (10 uM),SKG-IIIa
+Trametinib,NCI-H322M
+JNJ38877605,NCI-H1688
+QL-XI-92,AGS
+Fulvestrant,WM35
+NPK76-II-72-1,COLO-829
+GSK429286A,Mo-T
+XMD8-92,DOV13
+CI-1033,TT2609-C02
+AZD5582,OVMIU
+Navitoclax,LN-229
+Bleomycin (10 uM),LAN-6
+BX795,NCI-H2227
+I-CBP112,EFO-27
+BMS-536924_62,KARPAS-231
+NSC-207895,HCC-827
+NPK76-II-72-1,Caov-4
+Selumetinib_1062,EKVX
+CRT0105950,MOG-G-CCM
+AKT inhibitor VIII_228,NB13
+OSI-027,NCI-H2228
+Tubastatin A,NCI-H1435
+JNK Inhibitor VIII,BICR78
+PLX-4720_1371,NCI-H841
+Selumetinib_1062,NCI-H2066
+Fulvestrant,8505C
+Kobe2602,NCI-H1304
+AZ20,SKG-IIIa
+Voxtalisib,UACC-812
+Cyclopamine,ATN-1
+Bexarotene,JHH-2
+Palbociclib,COLO-792
+"eEF2K Inhibitor, A-484954",SJSA-1
+Olaparib_1495,TE-1
+QL-XI-92,BICR10
+C-75,697
+Bicalutamide_150,IST-SL2
+Fulvestrant,NCI-H1568
+CI-1033,MEG-01
+Voxtalisib,NCI-H358
+CAY10566,SHP-77
+Trametinib,CADO-ES1
+TPCA-1,Mo-T
+BAM7,EKVX
+Tenovin-6,NCI-H1623
+"eEF2K Inhibitor, A-484954",NCI-H2087
+TAK-715,P12-ICHIKAWA
+AZ20,NCI-H1092
+PLX-4720_1371,22RV1
+Afatinib_1377,KALS-1
+YK-4-279,MS751
+Navitoclax,LXF-289
+NPK76-II-72-1,KINGS-1
+Selumetinib_1062,HCC-827
+KIN001-266,JHH-1
+I-CBP112,DMS-114
+AZ20,NCI-H1623
+YK-4-279,SNU-407
+Selumetinib_1062,NCI-H2444
+AICA Ribonucleotide,Mo-T
+Bleomycin (10 uM),HOS
+Fedratinib,PANC-04-03
+AKT inhibitor VIII_228,NCI-H2052
+XMD8-92,CHSA0011
+BAM7,C32
+AZD2014,RL95-2
+Pelitinib,OE21
+GSK-J4,Hs-633T
+GSK-J4,HCC1937
+XMD8-92,TK
+SB505124_476,OV-56
+AICA Ribonucleotide,RPMI-8866
+KIN001-266,NCI-H2087
+I-CBP112,BT-20
+AZD8186,LS-1034
+Tenovin-6,SHP-77
+Tamoxifen,KON
+BX795,RPMI-7951
+Ara-G,WM793B
+CHIR-99021_154,EW-3
+Cyclopamine,P31-FUJ
+Voxtalisib,NCI-H1623
+Bicalutamide_150,OVKATE
+Fulvestrant,MOG-G-CCM
+AZ20,Caov-4
+Voxtalisib,8305C
+"Brivanib, BMS-540215",SU-DHL-8
+Palbociclib,LAN-6
+CHIR-99021_154,NCI-H1568
+CCT007093,HSC-39
+TAK-715,KMRC-20
+Fulvestrant,TE-5
+KIN001-266,NCI-H841
+Selumetinib_1498,TE-11
+AZD8186,COLO-792
+Capivasertib,SK-CO-1
+BX795,Calu-6
+NPK76-II-72-1,HCC1569
+Fulvestrant,NB69
+TPCA-1,SUP-B15
+TAK-715,BEN
+CI-1040,8305C
+Foretinib,Mo-T
+TAK-715,SNU-81
+TPCA-1,DU-145
+KIN001-244,Becker
+CI-1040,WM793B
+CHIR-99021_1241,GDM-1
+Fulvestrant,AGS
+AKT inhibitor VIII_228,C-33-A
+I-CBP112,CA46
+CHIR-99021_1241,HCC1937
+Kobe2602,BICR78
+CI-1040,NCI-H1651
+CRT0105950,ACHN
+"Brivanib, BMS-540215",DMS-114
+CHIR-99021_1241,CADO-ES1
+CHIR-99021_154,T98G
+AZD2014,NCI-H1304
+Tubastatin A,L-428
+KIN001-244,EoL-1-cell
+TAK-715,GDM-1
+GSK429286A,HuO-3N1
+Olaparib_1495,NCI-H1092
+AICA Ribonucleotide,A498
+CHIR-99021_154,HuO9
+Gemcitabine_135,Hs-766T
+BX795,NCI-H1355
+CHIR-99021_154,IPC-298
+CI-1040,EB2
+AZD5582,SF295
+TPCA-1,NCI-H1563
+GSK-J4,SKG-IIIa
+KIN001-266,EFO-27
+Crizotinib,COLO-829
+BAM7,ESO26
+Bexarotene,KYSE-510
+ZG-10,TT
+Cyclopamine,VA-ES-BJ
+Fulvestrant,T-T
+OSI-027,EC-GI-10
+S-Trityl-L-cysteine,NCI-H1355
+Ara-G,MDA-MB-157
+Navitoclax,HT55
+CCT007093,EW-7
+Ara-G,HTC-C3
+CPI-613,HT-1376
+Cyclopamine,NH-12
+BAM7,CAL-51
+Bexarotene,NCI-H2444
+AZD2014,ABC-1
+JNJ38877605,WSU-DLCL2
+CCT007093,NCI-H1105
+Gemcitabine_135,NCI-H2172
+AZD8186,786-0
+QL-XI-92,BxPC-3
+AZD4547_1497,SNU-81
+XMD8-92,RCC-FG2
+Navitoclax,NCC010
+AKT inhibitor VIII_171,huH-1
+GSK429286A,NCI-H1304
+Kobe2602,22RV1
+CAY10566,SNU-449
+Kobe2602,SU-DHL-8
+Bicalutamide_150,NCI-H2172
+Bexarotene,HuO9
+BX795,UACC-893
+Bleomycin (10 uM),COR-L105
+CRT0105950,DOK
+Bexarotene,NCI-H322M
+Fulvestrant,NCI-H292
+I-CBP112,RCH-ACV
+CAY10566,BEN
+Tamoxifen,huH-1
+CHIR-99021_154,CAL-39
+I-CBP112,RPMI-8866
+AICA Ribonucleotide,T-T
+TPCA-1,COLO-829
+AKT inhibitor VIII_228,Mo-T
+JNJ38877605,LOXIMVI
+AZD4547_1497,NCI-H841
+Selumetinib_1062,DBTRG-05MG
+Tenovin-6,NU-DUL-1
+AZ20,MS751
+Trametinib,HuO-3N1
+YK-4-279,KARPAS-231
+ZG-10,HuO9
+Kobe2602,NCI-H1155
+"Brivanib, BMS-540215",KARPAS-231
+CHIR-99021_154,LS-1034
+Kobe2602,JJN-3
+LIMK1 inhibitor BMS4,IPC-298
+KIN001-244,NCI-H847
+Tubastatin A,SJSA-1
+QL-XI-92,KON
+AZ20,REH
+"eEF2K Inhibitor, A-484954",SK-GT-4
+CHIR-99021_1241,MN-60
+CRT0105950,DBTRG-05MG
+KIN001-266,NCI-H1693
+Pelitinib,SW1116
+AZ20,NCI-H358
+CRT0105950,TE-5
+CCT007093,SW1116
+CI-1040,SK-OV-3
+JNJ38877605,SK-OV-3
+JNJ38877605,MES-SA
+Y-39983,CHP-126
+AKT inhibitor VIII_171,REH
+Bleomycin (10 uM),YKG-1
+YK-4-279,HTC-C3
+Selumetinib_1062,P12-ICHIKAWA
+YK-4-279,RCH-ACV
+Fedratinib,HuO9
+JNJ38877605,SW620
+CI-1033,OV-56
+I-CBP112,MEG-01
+LIMK1 inhibitor BMS4,KMRC-20
+GSK429286A,SW620
+JNJ38877605,LB647-SCLC
+Bexarotene,EJM
+AZD5582,KGN
+BAM7,WM793B
+CI-1033,ML-2
+Capivasertib,OVKATE
+CI-1040,LB647-SCLC
+AKT inhibitor VIII_171,KON
+AICA Ribonucleotide,BICR22
+Trametinib,SU-DHL-8
+PHA-665752,EB2
+Olaparib_1495,DBTRG-05MG
+Ara-G,PFSK-1
+CI-1040,SF126
+Cyclopamine,SJSA-1
+S-Trityl-L-cysteine,P31-FUJ
+NSC-207895,OVKATE
+AZD4547_1497,LC4-1
+Fulvestrant,G-292-Clone-A141B1
+Kobe2602,BICR10
+GSK-J4,RCC-FG2
+Afatinib_1377,TOV-21G
+Capivasertib,HCC1937
+SB505124_476,SJSA-1
+Kobe2602,NCI-H1092
+YK-4-279,JHU-029
+AZD4547_1497,G-402
+CRT0105950,EB2
+NSC-207895,GDM-1
+PLX-4720_1371,MOG-G-CCM
+AZD4547_1497,8305C
+AKT inhibitor VIII_171,EW-1
+"eEF2K Inhibitor, A-484954",BALL-1
+ZG-10,NCI-H2141
+S-Trityl-L-cysteine,NCI-H322M
+JNK Inhibitor VIII,HT55
+GSK429286A,NCI-H1568
+AZD8186,HT-1376
+NSC-207895,NCI-H2172
+BAM7,JHH-1
+"eEF2K Inhibitor, A-484954",CAL-120
+CHIR-99021_1241,EW-11
+CI-1040,NU-DUL-1
+GSK429286A,M14
+CHIR-99021_154,SNU-449
+Kobe2602,NCI-H358
+AKT inhibitor VIII_228,NCI-H1651
+PHA-665752,KMS-12-BM
+YK-4-279,HSC-39
+Voxtalisib,LAN-6
+AZD4547_1497,Hs-683
+Selumetinib_1062,DOV13
+GSK-J4,NCI-H2444
+JNJ38877605,KON
+WZ-1-84,NH-12
+AZ20,no-10
+AZD5582,NCI-H841
+CPI-613,ML-2
+CHIR-99021_154,RD
+Bicalutamide_150,BT-20
+BAM7,RPMI-8402
+Doxorubicin_133,G-292-Clone-A141B1
+Fedratinib,8505C
+Fulvestrant,LCLC-103H
+Selumetinib_1498,T98G
+Trametinib,KMRC-20
+Selumetinib_1062,FU97
+Y-39983,RL95-2
+BX795,DOK
+Selumetinib_1498,22RV1
+Tenovin-6,ABC-1
+TAK-715,OE21
+Selumetinib_1062,HT-29
+BMS-536924_62,KMS-12-BM
+Paclitaxel,EKVX
+Olaparib_1495,SK-GT-4
+Trametinib,Mo-T
+Crizotinib,NB69
+Fulvestrant,G-361
+Foretinib,SW837
+Selumetinib_1062,SJSA-1
+BX795,LC-2-ad
+Afatinib_1377,OS-RC-2
+AICA Ribonucleotide,C32
+TPCA-1,JJN-3
+Tenovin-6,RL95-2
+GSK429286A,786-0
+Kobe2602,A498
+AZ20,DOV13
+AZ20,HCC-827
+"Brivanib, BMS-540215",CCRF-CEM
+CI-1033,BICR22
+QL-XI-92,LN-229
+JNJ38877605,CESS
+"eEF2K Inhibitor, A-484954",NCI-H2444
+CHIR-99021_1241,DG-75
+Foretinib,NCI-H2087
+CRT0105950,PANC-03-27
+Afatinib_1377,RPMI-8402
+JNK Inhibitor VIII,NCI-H2087
+Navitoclax,HuO-3N1
+NSC-207895,Becker
+CRT0105950,MOLT-4
+SB505124_476,HuO9
+TPCA-1,TE-5
+Tamoxifen,COLO-792
+Palbociclib,NCI-H1355
+Dactolisib,Caov-4
+AKT inhibitor VIII_171,VA-ES-BJ
+Capivasertib,NCI-H841
+I-CBP112,T-T
+Tubastatin A,KMRC-20
+GSK-J4,CAL-39
+"eEF2K Inhibitor, A-484954",NCI-H1651
+Pelitinib,SW837
+Bicalutamide_150,SIG-M5
+AKT inhibitor VIII_228,Caov-4
+Olaparib_1495,NCI-H2066
+CHIR-99021_1241,IM-95
+CI-1033,M14
+Tenovin-6,NCI-H847
+GSK-J4,MES-SA
+AICA Ribonucleotide,NB69
+"Brivanib, BMS-540215",COR-L88
+PLX-4720_1371,Hs-633T
+C-75,SJSA-1
+Fulvestrant,BFTC-909
+JNK Inhibitor VIII,ESO26
+Palbociclib,BALL-1
+PLX-4720_1371,TT2609-C02
+Y-39983,G-292-Clone-A141B1
+BX795,NCI-H2087
+CI-1033,BEN
+JNK Inhibitor VIII,LC4-1
+Epothilone B,NCI-H322M
+"Brivanib, BMS-540215",T-T
+Cyclopamine,KNS-81-FD
+QL-XI-92,BPH-1
+Kobe2602,DMS-114
+AKT inhibitor VIII_171,HSC-39
+AKT inhibitor VIII_228,NEC8
+PLX-4720_1371,SK-GT-2
+C-75,LOXIMVI
+YK-4-279,NCI-H1435
+AZD4547_1497,BICR78
+Tamoxifen,Hey
+Tenovin-6,ES1
+Voxtalisib,ES1
+Selumetinib_1062,EJM
+Bexarotene,CHSA0011
+"Brivanib, BMS-540215",EW-7
+CPI-613,DOK
+NPK76-II-72-1,CAPAN-1
+CHIR-99021_1241,A498
+BX795,BT-20
+CHIR-99021_154,CAL-120
+Pelitinib,EW-3
+C-75,UWB1.289
+AKT inhibitor VIII_228,SU-DHL-8
+GSK-J4,KALS-1
+Palbociclib,M14
+Kobe2602,EW-3
+Tenovin-6,ATN-1
+Ara-G,OVCAR-8
+NPK76-II-72-1,OS-RC-2
+CCT245232,SW948
+KIN001-244,EB2
+JNJ38877605,CADO-ES1
+SB505124_476,SNU-81
+TAK-715,NCI-H2444
+CPI-613,CAL-51
+CPI-613,EJM
+Bexarotene,NEC8
+Fulvestrant,K-562
+Ara-G,CESS
+QL-XI-92,NCI-H1563
+KIN001-266,RL95-2
+Bexarotene,TT
+AKT inhibitor VIII_228,G-361
+CHIR-99021_154,A427
+Olaparib_1495,NCI-H1563
+CCT007093,P12-ICHIKAWA
+NSC-207895,T98G
+LIMK1 inhibitor BMS4,EJM
+Pelitinib,LU-135
+Capivasertib,NCI-H1563
+KIN001-244,L-363
+Seliciclib,CA46
+GSK-J4,Jurkat
+CI-1040,NCI-H841
+CI-1033,NB69
+CCT007093,EW-11
+BAM7,NCI-H1105
+Selumetinib_1498,LC4-1
+AKT inhibitor VIII_228,HTC-C3
+GSK-J4,JHH-7
+Bleomycin (10 uM),T-T
+ZG-10,ESO26
+PLX-4720_1371,NCI-H2141
+AZD2014,BT-20
+Tubastatin A,WM1552C
+Navitoclax,SJSA-1
+Fedratinib,SU-DHL-8
+Bicalutamide_150,786-0
+Seliciclib,LB647-SCLC
+CHIR-99021_1241,G-361
+AZD4547_1497,UACC-893
+"eEF2K Inhibitor, A-484954",NCI-H1623
+Olaparib_1495,KOSC-2
+Tubastatin A,REH
+QL-XI-92,SNU-81
+Y-39983,NB4
+Bexarotene,SIMA
+CPI-613,HOS
+CAY10566,REH
+Capivasertib,IPC-298
+BX795,EJM
+SB505124_476,ALL-SIL
+CAY10566,786-0
+GSK429286A,G-402
+Palbociclib,NCI-H841
+JNJ38877605,COR-L105
+CI-1040,WM1552C
+BAM7,KON
+Fulvestrant,YKG-1
+GSK-J4,GP5d
+NPK76-II-72-1,PANC-04-03
+JNJ38877605,NCI-H2444
+AKT inhibitor VIII_228,TT
+WZ-1-84,HSC-39
+Tamoxifen,RCC-FG2
+C-75,Becker
+KIN001-244,ATN-1
+Tamoxifen,OVMIU
+Tenovin-6,NCI-H292
+BX795,SF126
+Fedratinib,REH
+Voxtalisib,DBTRG-05MG
+Bexarotene,JHU-029
+Kobe2602,IPC-298
+GSK-J4,COLO-792
+QL-XI-92,786-0
+AKT inhibitor VIII_228,D-336MG
+Selumetinib_1498,P12-ICHIKAWA
+Voxtalisib,G-361
+CAY10566,OV-17R
+TPCA-1,LXF-289
+CPI-613,C-33-A
+Tenovin-6,RD
+"Brivanib, BMS-540215",HTC-C3
+Selumetinib_1498,COLO-668
+AICA Ribonucleotide,LAN-6
+Kobe2602,OVCAR-8
+PHA-665752,NCI-H847
+Fulvestrant,NCI-H2066
+BAM7,COLO-668
+Y-39983,P12-ICHIKAWA
+AZD5582,NCI-H322M
+Bexarotene,IM-95
+CHIR-99021_1241,OV-56
+CPI-613,HT-115
+Tamoxifen,WM1552C
+Kobe2602,CAPAN-1
+C-75,HLE
+GSK429286A,DMS-114
+NSC-207895,IPC-298
+GSK-J4,LC4-1
+CRT0105950,EKVX
+BX795,HuO9
+AZD4547_1497,SK-GT-2
+Navitoclax,COLO-792
+Palbociclib,G-402
+"eEF2K Inhibitor, A-484954",BxPC-3
+CPI-613,NB4
+TAK-715,COR-L88
+LIMK1 inhibitor BMS4,DU-145
+AICA Ribonucleotide,OCI-LY7
+CI-1033,G-361
+SB505124_476,JHH-2
+Olaparib_1495,RCH-ACV
+BX795,LC4-1
+GSK429286A,CAL-39
+BX795,SU-DHL-8
+TPCA-1,NCI-H841
+Palbociclib,MS751
+KIN001-244,22RV1
+AZD4547_1497,LXF-289
+"Brivanib, BMS-540215",JJN-3
+CI-1033,OVCAR-8
+PHA-665752,P31-FUJ
+CAY10566,OVMIU
+PLX-4720_1371,huH-1
+"eEF2K Inhibitor, A-484954",RCH-ACV
+Crizotinib,CESS
+Foretinib,HT-1376
+Olaparib_1495,RPMI-8866
+C-75,BFTC-909
+AZD5582,no-10
+Palbociclib,SW872
+YK-4-279,BEN
+Tamoxifen,SW948
+Dactolisib,LAN-6
+CI-1040,COLO-792
+Capivasertib,NCI-H1355
+LIMK1 inhibitor BMS4,OS-RC-2
+Voxtalisib,NCI-H1155
+OSI-027,JHH-7
+XMD8-92,HCC1569
+LIMK1 inhibitor BMS4,NH-12
+CPI-613,NCI-H2066
+Capivasertib,T98G
+AZD4547_1497,ES1
+BAM7,SCC-15
+TAK-715,SUP-B15
+Fulvestrant,OVTOKO
+LIMK1 inhibitor BMS4,AsPC-1
+AZD4547_1497,786-0
+AICA Ribonucleotide,EW-1
+AZD8186,BICR78
+CPI-613,TT
+AZD5582,huH-1
+"Brivanib, BMS-540215",MOG-G-CCM
+CCT245232,SU-DHL-8
+AICA Ribonucleotide,NB4
+Bleomycin (10 uM),BICR10
+BMS-536924_62,COLO-824
+Bexarotene,NCI-H1304
+Bleomycin (10 uM),SW620
+AICA Ribonucleotide,DMS-114
+PHA-665752,CA46
+Foretinib,HCC-827
+Tenovin-6,22RV1
+BAM7,NCI-H2087
+BX795,COLO-792
+CHIR-99021_154,YKG-1
+Foretinib,SNU-61
+JNK Inhibitor VIII,Hey
+OSI-027,SKG-IIIa
+CI-1040,K-562
+Bexarotene,NCI-H2052
+CRT0105950,EoL-1-cell
+AZ20,WM1552C
+Kobe2602,BxPC-3
+JNJ38877605,CAL-51
+Bleomycin (10 uM),NCI-H1092
+Pelitinib,RCC-FG2
+AZD8186,LC-2-ad
+"Brivanib, BMS-540215",NCI-H1651
+C-75,NCI-H28
+Capivasertib,SW872
+NPK76-II-72-1,OVCAR-8
+ZG-10,Hey
+Tamoxifen,GDM-1
+Pelitinib,LOU-NH91
+AZ20,EW-1
+Y-39983,WSU-DLCL2
+AZ20,JHH-1
+Gemcitabine_135,NCI-H2452
+Voxtalisib,MS751
+BAM7,PANC-04-03
+Palbociclib,SK-GT-2
+C-75,JHH-1
+JNK Inhibitor VIII,MES-SA
+QL-XI-92,DMS-114
+I-CBP112,CHSA0011
+Fulvestrant,SKM-1
+AZD4547_1497,ESO26
+Tenovin-6,KINGS-1
+AKT inhibitor VIII_171,KGN
+AKT inhibitor VIII_228,A498
+Kobe2602,KYSE-510
+Y-39983,JHH-2
+ZG-10,UACC-893
+TPCA-1,LOXIMVI
+TPCA-1,JHH-7
+TPCA-1,Hs-633T
+Selumetinib_1498,NCI-H1693
+CI-1033,UACC-812
+PLX-4720_1371,MEG-01
+Tenovin-6,CA46
+CI-1033,LB647-SCLC
+CI-1033,BFTC-909
+KIN001-266,NB69
+Bicalutamide_150,SF126
+Fulvestrant,BALL-1
+CI-1040,SJSA-1
+Olaparib_1495,WM793B
+NPK76-II-72-1,A498
+"Brivanib, BMS-540215",YKG-1
+CCT007093,EW-22
+Bexarotene,BICR22
+Bicalutamide_150,NCI-H1304
+Cyclopamine,COLO-668
+CRT0105950,CAL-39
+CHIR-99021_1241,MOLT-4
+AICA Ribonucleotide,HCE-4
+NPK76-II-72-1,8305C
+TAK-715,CAL-39
+Tamoxifen,EW-11
+AZD4547_1497,SNU-61
+SB505124_476,DoTc2-4510
+XMD8-92,LS-1034
+GSK429286A,EW-7
+JNJ38877605,8505C
+Tubastatin A,AGS
+XMD8-92,DMS-114
+GSK-J4,C32
+Bicalutamide_150,MEG-01
+Tamoxifen,NCI-H2228
+Bleomycin (10 uM),SNU-449
+OSI-027,SK-OV-3
+Navitoclax,COLO-668
+PHA-665752,SIG-M5
+Tenovin-6,NEC8
+Fulvestrant,CAL-51
+Capivasertib,LS-1034
+Pelitinib,786-0
+NPK76-II-72-1,CAL-120
+Bicalutamide_150,OVCAR-8
+Selumetinib_1498,EJM
+NSC-207895,VA-ES-BJ
+Olaparib_1495,KNS-81-FD
+"Brivanib, BMS-540215",SU-DHL-1
+AICA Ribonucleotide,HCC1937
+C-75,YKG-1
+NSC-207895,NCI-H1693
+Afatinib_1377,SF295
+KIN001-244,TE-1
+GSK429286A,BxPC-3
+YK-4-279,EW-11
+PLX-4720_1371,DoTc2-4510
+Kobe2602,AsPC-1
+Capivasertib,NCI-H358
+CRT0105950,NCI-H1688
+Tamoxifen,NCI-H1688
+BX795,NCI-H1688
+Selumetinib_1062,ESO26
+Bicalutamide_150,NCI-H28
+BX795,HT55
+AKT inhibitor VIII_171,KNS-81-FD
+PLX-4720_1371,Calu-6
+NSC-207895,NCI-H841
+KIN001-244,NCI-H1355
+KIN001-244,TK
+PLX-4720_1371,TE-1
+Tamoxifen,EC-GI-10
+GSK-J4,NCI-H2227
+Selumetinib_1062,LAN-6
+C-75,KNS-81-FD
+ZG-10,no-10
+XMD8-92,NCI-H841
+Tamoxifen,TE-1
+CRT0105950,COLO-829
+GSK429286A,697
+Foretinib,NCI-H1563
+JNK Inhibitor VIII,SF126
+JNK Inhibitor VIII,KARPAS-1106P
+TPCA-1,MDA-MB-157
+C-75,DBTRG-05MG
+CAY10566,CADO-ES1
+"eEF2K Inhibitor, A-484954",SW948
+"Brivanib, BMS-540215",G-402
+KIN001-266,DoTc2-4510
+CI-1040,EFO-27
+AZD4547_1497,IST-SL2
+YK-4-279,HT-29
+KIN001-244,A498
+AZD5582,NCI-H1563
+AKT inhibitor VIII_228,CAL-39
+BAM7,SU-DHL-1
+Bleomycin (10 uM),LXF-289
+I-CBP112,LU-135
+Pelitinib,P31-FUJ
+Selumetinib_1062,HOS
+I-CBP112,KARPAS-45
+I-CBP112,HLE
+JNK Inhibitor VIII,PFSK-1
+GSK429286A,OV-17R
+BAM7,OVKATE
+Foretinib,TE-5
+AZD8186,huH-1
+Pelitinib,SIMA
+Ara-G,SIG-M5
+Bleomycin (10 uM),A427
+Tenovin-6,JJN-3
+I-CBP112,FU97
+CCT007093,PANC-03-27
+JNJ38877605,SU-DHL-6
+Tamoxifen,KMRC-20
+CPI-613,ALL-SIL
+CHIR-99021_154,OVKATE
+CCT007093,SW620
+CI-1033,D-336MG
+PHA-665752,ALL-SIL
+WZ-1-84,MN-60
+Cyclopamine,CCRF-CEM
+JNJ38877605,NCI-H1304
+Fulvestrant,CESS
+CHIR-99021_154,no-10
+Selumetinib_1062,NH-12
+C-75,NCI-H2228
+CCT007093,HOS
+CI-1033,NCI-H1876
+KIN001-266,TE-5
+Selumetinib_1498,Mo-T
+CI-1040,SK-CO-1
+SN-38_1490,EKVX
+Tenovin-6,HT55
+Pelitinib,HT-1376
+I-CBP112,M14
+CHIR-99021_1241,ABC-1
+AZD2014,DBTRG-05MG
+LIMK1 inhibitor BMS4,TT
+CPI-613,TOV-21G
+AZD8186,KON
+Voxtalisib,697
+AZD2014,NCI-H1563
+Crizotinib,EB2
+CRT0105950,BPH-1
+AKT inhibitor VIII_228,NCI-H358
+Tubastatin A,LN-229
+BAM7,BxPC-3
+CCT007093,P31-FUJ
+I-CBP112,EW-22
+Tubastatin A,ESO26
+TPCA-1,SIMA
+KIN001-266,WM1552C
+NSC-207895,COR-L88
+CI-1033,NCI-H358
+KIN001-244,ALL-SIL
+CRT0105950,JJN-3
+I-CBP112,LOXIMVI
+Y-39983,LXF-289
+AZD8186,COLO-829
+Tamoxifen,COR-L105
+I-CBP112,C-33-A
+"Brivanib, BMS-540215",RD
+Y-39983,L-428
+CI-1033,SW948
+KIN001-266,HCC1569
+Tamoxifen,EB2
+JNJ38877605,OVMIU
+BX795,NU-DUL-1
+Pelitinib,IPC-298
+AZD2014,SW1271
+Trametinib,COLO-824
+CPI-613,RPMI-8866
+GSK429286A,JHH-2
+"Brivanib, BMS-540215",HOS
+Cyclopamine,MN-60
+YK-4-279,LAN-6
+Tubastatin A,SF126
+Foretinib,COLO-829
+GSK429286A,ACHN
+JNJ38877605,G-402
+CRT0105950,EW-7
+Voxtalisib,COLO-829
+Fedratinib,HCC1569
+Bicalutamide_150,JJN-3
+AZ20,NCI-H28
+Pelitinib,COLO-783
+AZ20,OVTOKO
+Trichostatin A,EoL-1-cell
+AKT inhibitor VIII_171,TE-11
+AZD2014,NCI-H1105
+Kobe2602,OV-17R
+CI-1033,TE-9
+"Brivanib, BMS-540215",AsPC-1
+Bexarotene,NCI-H1355
+Afatinib_1377,NB13
+C-75,22RV1
+Olaparib_1495,NCI-H1568
+C-75,IST-SL2
+CAY10566,LS-1034
+TPCA-1,CAL-62
+AZD4547_1497,KARPAS-45
+NPK76-II-72-1,HuP-T4
+LIMK1 inhibitor BMS4,RPMI-7951
+Tubastatin A,A427
+CI-1033,OE21
+KIN001-244,LC4-1
+Selumetinib_1498,HCC1937
+Afatinib_1377,DoTc2-4510
+PHA-665752,EW-11
+S-Trityl-L-cysteine,NEC8
+AICA Ribonucleotide,NCI-H2172
+SB505124_476,ATN-1
+SB505124_476,NCI-H2444
+Ara-G,NCI-H1623
+Selumetinib_1498,MOG-G-CCM
+Pelitinib,EW-11
+AICA Ribonucleotide,T84
+BMS-536924_62,EC-GI-10
+Fulvestrant,LAN-6
+TPCA-1,MN-60
+Ara-G,NCI-H1651
+Tubastatin A,NH-12
+CPI-613,KALS-1
+PHA-665752,NB69
+Y-39983,FU97
+SB505124_476,SW620
+NSC-207895,NCI-H187
+S-Trityl-L-cysteine,NB69
+Selumetinib_1498,BALL-1
+BAM7,DMS-114
+Navitoclax,T-T
+Voxtalisib,SK-GT-4
+Fulvestrant,PANC-04-03
+Y-39983,Hs-683
+Fedratinib,NB13
+CPI-613,RCC-FG2
+KIN001-244,Hs-766T
+SB505124_476,DG-75
+Bleomycin (10 uM),EoL-1-cell
+Ara-G,HT-115
+Tubastatin A,LU-135
+NSC-207895,HuP-T4
+CCT007093,AsPC-1
+Fedratinib,CCRF-CEM
+PLX-4720_1371,TE-11
+QL-XI-92,C-33-A
+"eEF2K Inhibitor, A-484954",NB13
+CPI-613,BFTC-909
+AZD8186,BPH-1
+NPK76-II-72-1,CHP-126
+TPCA-1,OV-56
+Tamoxifen,MDA-MB-157
+"Brivanib, BMS-540215",LS-1034
+KIN001-266,COLO-829
+GSK429286A,DU-145
+Gemcitabine_135,LS-1034
+CI-1033,T98G
+S-Trityl-L-cysteine,SU-DHL-1
+JNJ38877605,TOV-21G
+Tubastatin A,T84
+Olaparib_1495,NCI-H2087
+Cyclopamine,SHP-77
+CHIR-99021_154,NB4
+BMS-536924_62,DMS-114
+Bleomycin (10 uM),PANC-03-27
+Y-39983,SW837
+"Brivanib, BMS-540215",WM1552C
+CPI-613,JHH-7
+C-75,ACHN
+GSK429286A,KARPAS-45
+CI-1033,TK
+PLX-4720_1371,NCI-H1355
+AKT inhibitor VIII_171,KALS-1
+NPK76-II-72-1,HT-29
+Voxtalisib,OS-RC-2
+Kobe2602,NH-12
+Bexarotene,FU97
+Tamoxifen,NEC8
+CRT0105950,Hs-633T
+NSC-207895,Hs-633T
+NSC-207895,TT2609-C02
+KIN001-266,NCI-H1304
+NSC-207895,HSC-39
+BAM7,WM1552C
+CI-1040,NCI-H1563
+Tubastatin A,SUP-B15
+BX795,SW872
+BX795,JHU-029
+Palbociclib,OV-56
+Tubastatin A,UWB1.289
+Selumetinib_1498,NCI-H1688
+AKT inhibitor VIII_171,NCI-H1435
+Cyclopamine,SCC-15
+Selumetinib_1062,BT-474
+I-CBP112,L-363
+AZD8186,EC-GI-10
+Tubastatin A,COLO-792
+YK-4-279,OVMIU
+Bleomycin (10 uM),MES-SA
+BX795,SUP-B15
+Pelitinib,BEN
+Voxtalisib,OVMIU
+Ara-G,ES1
+Afatinib_1377,SK-CO-1
+CPI-613,WM793B
+NSC-207895,BALL-1
+Pelitinib,LC-2-ad
+NSC-207895,JHH-1
+Navitoclax,BT-20
+CHIR-99021_154,KMRC-20
+Selumetinib_1498,COLO-829
+Capivasertib,MES-SA
+CI-1033,SNU-407
+Tamoxifen,HOS
+NSC-207895,UACC-812
+AICA Ribonucleotide,MOLT-4
+Tenovin-6,HLE
+Selumetinib_1062,NCI-H1092
+C-75,SK-OV-3
+CI-1033,ACHN
+CHIR-99021_1241,CESS
+Fedratinib,P12-ICHIKAWA
+GSK429286A,CHSA0011
+CHIR-99021_154,T-T
+Y-39983,BPH-1
+JNJ38877605,RPMI-8402
+AICA Ribonucleotide,NCI-H1651
+CHIR-99021_1241,CMK
+GSK429286A,NCI-H1666
+Foretinib,NCI-H841
+KIN001-244,EKVX
+C-75,DOK
+AICA Ribonucleotide,WM1552C
+AZ20,PA-TU-8902
+GSK-J4,EJM
+Tubastatin A,IM-95
+Navitoclax,EW-11
+CAY10566,WM793B
+BX795,HTC-C3
+Navitoclax,NCI-H1355
+Tamoxifen,OVCAR-8
+CHIR-99021_1241,CHSA0011
+CPI-613,NCI-H1876
+Capivasertib,NCI-H2452
+CHIR-99021_154,SF126
+ZG-10,SW620
+Fulvestrant,Hs-683
+C-75,K-562
+Pelitinib,SNU-81
+QL-XI-92,ML-2
+Foretinib,T84
+CPI-613,8305C
+Bexarotene,YKG-1
+CHIR-99021_1241,DOV13
+AZD4547_1497,NCI-H1355
+Tubastatin A,RPMI-7951
+Fedratinib,IST-SL2
+KIN001-266,ESO26
+Olaparib_1495,VA-ES-BJ
+Bicalutamide_150,HSC-39
+Bexarotene,HT-1376
+Capivasertib,HuO-3N1
+WZ-1-84,LOXIMVI
+Tubastatin A,NCI-H1688
+AZD8186,P31-FUJ
+AZ20,NCI-H841
+Palbociclib,CMK
+Kobe2602,M14
+PLX-4720_1371,EJM
+PLX-4720_1371,KARPAS-45
+S-Trityl-L-cysteine,IST-SL2
+AZD5582,ATN-1
+C-75,T-T
+"eEF2K Inhibitor, A-484954",no-10
+GSK-J4,EC-GI-10
+Bexarotene,BFTC-909
+Ara-G,LXF-289
+Voxtalisib,BPH-1
+CHIR-99021_154,GP5d
+Voxtalisib,GP5d
+ZG-10,8305C
+QL-XI-92,ACHN
+CI-1040,NCI-H2141
+CAY10566,Becker
+NSC-207895,PANC-03-27
+Ara-G,SW1271
+AKT inhibitor VIII_228,SHP-77
+Bexarotene,TK
+KIN001-266,LOU-NH91
+PLX-4720_1371,NCI-H358
+PLX-4720_1371,ML-2
+Tubastatin A,SIMA
+BAM7,TE-11
+Doxorubicin_133,KARPAS-45
+"eEF2K Inhibitor, A-484954",JHH-2
+XMD8-92,SIMA
+GSK429286A,FU97
+CCT007093,TT2609-C02
+SB505124_476,SW837
+Kobe2602,SU-DHL-6
+AKT inhibitor VIII_228,CAL-120
+"Brivanib, BMS-540215",KMRC-20
+Bicalutamide_150,COLO-783
+S-Trityl-L-cysteine,KNS-81-FD
+WZ-1-84,ATN-1
+Voxtalisib,PANC-03-27
+Selumetinib_1498,EW-1
+NPK76-II-72-1,RCC-FG2
+CHIR-99021_1241,BPH-1
+BAM7,NCI-H1688
+"Brivanib, BMS-540215",G-292-Clone-A141B1
+Tubastatin A,KYSE-510
+Selumetinib_1498,A498
+CHIR-99021_1241,CAL-51
+AZ20,L-428
+Y-39983,NCI-H28
+Capivasertib,LXF-289
+Bleomycin (10 uM),NCI-H847
+KIN001-266,BFTC-909
+YK-4-279,IM-95
+Fulvestrant,NCI-H187
+CRT0105950,BEN
+Fulvestrant,EW-3
+Bleomycin (10 uM),TT2609-C02
+XMD8-92,SU-DHL-8
+Seliciclib,LAN-6
+AZD5582,Becker
+"Brivanib, BMS-540215",JHH-2
+I-CBP112,OS-RC-2
+AZD4547_1497,L-363
+TAK-715,RD
+TAK-715,G-402
+CCT007093,Calu-6
+CAY10566,NCI-H187
+Voxtalisib,SKM-1
+NSC-207895,EFO-27
+Trametinib,EB2
+Selumetinib_1062,Hs-683
+Tamoxifen,JHH-1
+NSC-207895,NCI-H1688
+Olaparib_1495,CHSA0011
+Fulvestrant,Jurkat
+CPI-613,CADO-ES1
+WZ-1-84,NU-DUL-1
+"eEF2K Inhibitor, A-484954",MOLT-4
+TPCA-1,BT-20
+BX795,KGN
+KIN001-244,MOLT-4
+AZD5582,SW1116
+Fulvestrant,RPMI-7951
+"eEF2K Inhibitor, A-484954",Hs-633T
+ZG-10,EW-11
+AICA Ribonucleotide,RCC-FG2
+PHA-665752,Becker
+"Brivanib, BMS-540215",BICR10
+CHIR-99021_1241,BICR78
+JNJ38877605,NEC8
+Tenovin-6,BICR10
+Navitoclax,KMRC-20
+PLX-4720_1371,CAL-120
+QL-XI-92,OVCAR-8
+KIN001-266,KARPAS-45
+NSC-207895,SK-GT-4
+BAM7,LOU-NH91
+BMS-536924_62,DG-75
+Selumetinib_1498,WSU-DLCL2
+Capivasertib,D-283MED
+I-CBP112,RL95-2
+Afatinib_1377,NCI-H2444
+OSI-027,LOU-NH91
+Bleomycin (10 uM),EW-1
+CHIR-99021_154,CHP-126
+Doxorubicin_133,C32
+NSC-207895,L-363
+AKT inhibitor VIII_171,IPC-298
+GSK-J4,SW948
+CPI-613,CA46
+Selumetinib_1498,Jurkat
+BX795,HCC-827
+Voxtalisib,CA46
+Olaparib_1495,A427
+AICA Ribonucleotide,EW-22
+Capivasertib,COLO-824
+XMD8-92,DG-75
+Pelitinib,NCI-H1563
+Bleomycin (10 uM),JJN-3
+ZG-10,NCI-H292
+KIN001-244,TOV-21G
+AZD5582,SKG-IIIa
+KIN001-244,ES1
+Crizotinib,TE-5
+"Brivanib, BMS-540215",RPMI-8402
+Fedratinib,OV-17R
+Palbociclib,8505C
+OSI-027,NCI-H596
+Selumetinib_1062,COLO-824
+BX795,NCI-H2228
+Trametinib,NCI-H1688
+C-75,NCI-H1623
+KIN001-266,LOXIMVI
+AZ20,MN-60
+Kobe2602,HCC-827
+CI-1040,LS-1034
+CAY10566,Hs-633T
+CHIR-99021_154,NCI-H1666
+Crizotinib,KNS-81-FD
+LIMK1 inhibitor BMS4,SNU-61
+CI-1040,KNS-81-FD
+Voxtalisib,no-10
+BAM7,EoL-1-cell
+KIN001-244,IM-95
+CAY10566,Caov-4
+Pelitinib,UWB1.289
+JNK Inhibitor VIII,LOU-NH91
+Kobe2602,P12-ICHIKAWA
+"Brivanib, BMS-540215",NCI-H2452
+JNK Inhibitor VIII,MOLT-4
+Fulvestrant,RCC-FG2
+Fedratinib,COLO-783
+JNK Inhibitor VIII,KARPAS-45
+PLX-4720_1371,NCI-H596
+Doxorubicin_133,Hs-766T
+CHIR-99021_154,Calu-6
+Pelitinib,OVKATE
+JNJ38877605,HuO9
+QL-XI-92,RD
+Trametinib,REH
+Bexarotene,MN-60
+LIMK1 inhibitor BMS4,NCI-H2087
+JNK Inhibitor VIII,NCI-H1563
+CI-1033,KON
+Tamoxifen,YKG-1
+GSK-J4,REH
+CPI-613,D-336MG
+AICA Ribonucleotide,BICR10
+AZD8186,CCRF-CEM
+Navitoclax,GP5d
+Bexarotene,PFSK-1
+SB505124_476,697
+AZ20,LB647-SCLC
+AZ20,SW837
+KIN001-244,NCI-H1304
+Y-39983,8305C
+AZD2014,NCI-H1155
+AICA Ribonucleotide,697
+AZD5582,TE-9
+Kobe2602,NU-DUL-1
+AICA Ribonucleotide,SW1271
+BX795,K-562
+Navitoclax,SKG-IIIa
+AICA Ribonucleotide,ABC-1
+AICA Ribonucleotide,HTC-C3
+BAM7,RL95-2
+PLX-4720_1371,EFO-27
+CRT0105950,NCI-H1155
+ARRY-520,Caov-4
+"eEF2K Inhibitor, A-484954",RCC-FG2
+AKT inhibitor VIII_228,SW872
+Afatinib_1377,SH-4
+AZD5582,A498
+CHIR-99021_1241,KARPAS-45
+Y-39983,SUP-B15
+Trametinib,huH-1
+GSK-J4,KYSE-510
+Fulvestrant,Caov-4
+Bleomycin (10 uM),NU-DUL-1
+GSK429286A,NCI-H322M
+I-CBP112,WSU-DLCL2
+Tenovin-6,HuO-3N1
+AZD4547_1497,NCI-H1304
+BX795,LB647-SCLC
+TAK-715,IST-SL2
+TPCA-1,A427
+Bicalutamide_150,CAL-51
+Capivasertib,BALL-1
+PLX-4720_1371,CCRF-CEM
+SB505124_476,EC-GI-10
+XMD8-92,AGS
+KIN001-244,BT-474
+Ara-G,LAN-6
+NSC-207895,HT-29
+Pelitinib,T98G
+Olaparib_1495,NCI-H1105
+OSI-027,FU97
+Olaparib_1495,WM35
+LIMK1 inhibitor BMS4,OVMIU
+Tubastatin A,HCC1937
+Afatinib_1377,DOV13
+Olaparib_1495,NCI-H1688
+PHA-665752,COR-L88
+CRT0105950,LAN-6
+NPK76-II-72-1,OVTOKO
+Voxtalisib,G-292-Clone-A141B1
+GSK429286A,DOK
+GSK-J4,NCI-H1688
+CHIR-99021_154,OVMIU
+GSK-J4,LS-1034
+LIMK1 inhibitor BMS4,CESS
+NSC-207895,HT-1376
+CCT007093,EJM
+AKT inhibitor VIII_171,NCI-H1568
+CI-1040,HLE
+Fulvestrant,JHH-1
+XMD8-92,A427
+NPK76-II-72-1,DoTc2-4510
+TPCA-1,Calu-6
+YK-4-279,NCI-H847
+AKT inhibitor VIII_228,Calu-6
+BX795,LAN-6
+Selumetinib_1062,EB2
+WZ-1-84,NCI-H1355
+AZ20,KYSE-510
+Tenovin-6,LC-2-ad
+JNJ38877605,D-283MED
+Doxorubicin_133,HT55
+BMS-536924_62,NCI-H322M
+CI-1040,NCI-H847
+LIMK1 inhibitor BMS4,OV-56
+OSI-027,MES-SA
+Bexarotene,CAL-39
+Capivasertib,TT
+CCT007093,D-283MED
+Olaparib_1495,EB2
+Selumetinib_1498,SNU-61
+Fulvestrant,SIMA
+KIN001-266,BPH-1
+CRT0105950,C-33-A
+Bleomycin (10 uM),SHP-77
+Capivasertib,HCC-827
+TAK-715,UACC-893
+Trametinib,NCI-H2141
+Kobe2602,COLO-824
+AKT inhibitor VIII_171,CCRF-CEM
+LIMK1 inhibitor BMS4,EoL-1-cell
+Bleomycin (10 uM),SJSA-1
+Selumetinib_1062,TE-1
+KIN001-266,Becker
+WZ-1-84,NB13
+"eEF2K Inhibitor, A-484954",RPMI-7951
+CPI-613,EFO-27
+CPI-613,BT-20
+S-Trityl-L-cysteine,LB647-SCLC
+GSK429286A,A498
+OSI-027,ACHN
+C-75,CCRF-CEM
+Olaparib_1495,LCLC-103H
+Bexarotene,NCI-H1651
+Ara-G,SW872
+NSC-207895,KMRC-20
+Foretinib,NCI-H1304
+Ara-G,REH
+"eEF2K Inhibitor, A-484954",ES1
+CCT007093,D-336MG
+Y-39983,NCI-H1092
+NSC-207895,DMS-114
+AKT inhibitor VIII_228,WM35
+Pelitinib,MS751
+AKT inhibitor VIII_171,DBTRG-05MG
+Voxtalisib,NCI-H847
+AKT inhibitor VIII_228,AGS
+AKT inhibitor VIII_171,MOG-G-CCM
+Kobe2602,KNS-81-FD
+CCT007093,G-402
+BMS-536924_62,NB4
+BMS-536924_62,NCI-H187
+SB505124_476,NCI-H2228
+Pelitinib,SHP-77
+Trametinib,LC4-1
+CI-1040,Mo-T
+Bleomycin (10 uM),697
+Olaparib_1495,HCC1569
+Trametinib,NCI-H847
+CI-1040,TE-5
+ARRY-520,NCI-H1568
+Y-39983,HT-115
+Selumetinib_1498,CA46
+Kobe2602,FU97
+Tubastatin A,GDM-1
+NPK76-II-72-1,LXF-289
+Pelitinib,G-402
+TAK-715,NB13
+CRT0105950,8505C
+GSK429286A,DG-75
+QL-XI-92,KMS-12-BM
+AZD4547_1497,MES-SA
+Tubastatin A,PA-TU-8902
+Palbociclib,NCI-H1651
+CAY10566,Hs-683
+Doxorubicin_133,NCI-H2227
+AKT inhibitor VIII_171,ATN-1
+Selumetinib_1062,DU-145
+CPI-613,Hs-683
+GSK-J4,NCI-H187
+Tamoxifen,NCI-H322M
+PLX-4720_1371,NCI-H1105
+GSK-J4,G-292-Clone-A141B1
+TPCA-1,ESO26
+KIN001-244,EC-GI-10
+Kobe2602,G-361
+Ara-G,P31-FUJ
+Selumetinib_1498,Calu-6
+AICA Ribonucleotide,SW620
+CI-1033,EW-1
+ARRY-520,SU-DHL-1
+CHIR-99021_154,KARPAS-45
+Afatinib_1377,YKG-1
+QL-XI-92,CESS
+"Brivanib, BMS-540215",RPMI-7951
+BMS-536924_62,SIMA
+Selumetinib_1062,NCI-H2141
+Gemcitabine_135,NCI-H841
+AZD5582,MOLT-4
+Voxtalisib,BxPC-3
+GSK-J4,DMS-114
+BAM7,EJM
+Selumetinib_1498,NCI-H841
+AZD4547_1497,WM793B
+AKT inhibitor VIII_171,G-292-Clone-A141B1
+OSI-027,BxPC-3
+Afatinib_1377,786-0
+TAK-715,WM1552C
+AZD5582,LOXIMVI
+Afatinib_1377,8505C
+GSK429286A,LOXIMVI
+Fedratinib,EKVX
+CI-1040,TE-9
+Palbociclib,GDM-1
+Kobe2602,C32
+AKT inhibitor VIII_171,SW948
+Tamoxifen,8305C
+BAM7,TE-5
+Afatinib_1377,SW872
+Tubastatin A,RPMI-8866
+"Brivanib, BMS-540215",M14
+I-CBP112,SW1271
+Ara-G,COLO-668
+NPK76-II-72-1,LOU-NH91
+Bicalutamide_150,NCI-H1666
+Fedratinib,DMS-114
+CHIR-99021_154,COR-L105
+BAM7,SK-OV-3
+Bexarotene,HOS
+Tenovin-6,RPMI-8402
+OSI-027,NCI-H2087
+Bexarotene,EW-7
+Y-39983,NCI-H1563
+Foretinib,EJM
+Ara-G,NCI-H1155
+CRT0105950,Mo-T
+JNK Inhibitor VIII,UWB1.289
+GSK429286A,NCI-H2141
+"Brivanib, BMS-540215",C32
+Crizotinib,LS-1034
+I-CBP112,NCI-H187
+Palbociclib,EW-1
+Bicalutamide_150,TK
+CCT007093,LS-1034
+AZD8186,MES-SA
+AZD2014,CHP-126
+AKT inhibitor VIII_171,TE-9
+AZD8186,CHP-126
+Fulvestrant,NCI-H841
+Kobe2602,OE21
+AZD5582,KYSE-510
+Y-39983,NCI-H841
+TAK-715,SHP-77
+Bexarotene,NCI-H847
+YK-4-279,OV-56
+JNK Inhibitor VIII,NCI-H358
+CPI-613,ABC-1
+JNK Inhibitor VIII,HT-29
+BX795,NCI-H1666
+AZD4547_1497,KOSC-2
+AZD5582,NB69
+TAK-715,NCI-H1651
+C-75,NCI-H1876
+CRT0105950,SHP-77
+OSI-027,GP5d
+LIMK1 inhibitor BMS4,RCH-ACV
+Capivasertib,EW-1
+AKT inhibitor VIII_171,EFO-27
+AKT inhibitor VIII_171,TE-5
+GSK-J4,WM1552C
+ZG-10,KINGS-1
+Bexarotene,SW948
+XMD8-92,OVKATE
+KIN001-244,KARPAS-45
+Bexarotene,GP5d
+"Brivanib, BMS-540215",ML-2
+CRT0105950,NCI-H2066
+Olaparib_1495,TT2609-C02
+Olaparib_1495,BxPC-3
+NSC-207895,ABC-1
+WZ-1-84,ALL-SIL
+Bicalutamide_150,MS751
+GSK429286A,HCC1569
+YK-4-279,G-292-Clone-A141B1
+AZD8186,LOXIMVI
+AKT inhibitor VIII_228,COR-L105
+Foretinib,JJN-3
+NSC-207895,NCI-H1623
+CRT0105950,A427
+Tenovin-6,SH-4
+Navitoclax,CAL-120
+Palbociclib,NCI-H2172
+AICA Ribonucleotide,NCI-H1355
+AZD4547_1497,MDA-MB-157
+AZD2014,NCI-H1651
+Capivasertib,TE-5
+Y-39983,T84
+TAK-715,NCI-H292
+C-75,NCI-H187
+C-75,NCI-H2066
+Palbociclib,EW-3
+AZD2014,HT-29
+PLX-4720_1371,TK
+Capivasertib,T84
+Selumetinib_1498,NU-DUL-1
+CPI-613,EW-3
+"Brivanib, BMS-540215",DOV13
+Foretinib,Calu-6
+JNJ38877605,JHH-7
+CI-1033,OVKATE
+SB505124_476,BICR22
+I-CBP112,G-292-Clone-A141B1
+Seliciclib,COLO-829
+Navitoclax,PFSK-1
+AZD5582,NCI-H2172
+Navitoclax,ACHN
+BAM7,MDA-MB-157
+Tubastatin A,SNU-449
+CI-1040,SIMA
+KIN001-244,G-292-Clone-A141B1
+Selumetinib_1062,DMS-114
+Bexarotene,KGN
+GSK429286A,MOLT-4
+NPK76-II-72-1,M14
+AZ20,NCI-H2141
+Kobe2602,SU-DHL-1
+QL-XI-92,P12-ICHIKAWA
+PLX-4720_1371,LXF-289
+Capivasertib,EKVX
+NSC-207895,RL95-2
+Fedratinib,A498
+TPCA-1,MEG-01
+CPI-613,KARPAS-45
+Palbociclib,TE-1
+Bicalutamide_150,C32
+Capivasertib,BICR22
+BX795,SK-OV-3
+YK-4-279,PANC-03-27
+AZD4547_1497,BEN
+S-Trityl-L-cysteine,NCI-H2141
+JNK Inhibitor VIII,LS-1034
+C-75,MDA-MB-361
+Palbociclib,OVCAR-8
+Bleomycin (10 uM),TE-1
+BX795,G-292-Clone-A141B1
+QL-XI-92,SJSA-1
+NSC-207895,SIMA
+Tamoxifen,KALS-1
+BX795,DG-75
+I-CBP112,BALL-1
+Olaparib_1495,CADO-ES1
+OSI-027,WM1552C
+Selumetinib_1062,GP5d
+"eEF2K Inhibitor, A-484954",697
+GSK429286A,A431
+NPK76-II-72-1,SHP-77
+Voxtalisib,EW-22
+AKT inhibitor VIII_171,COLO-829
+AICA Ribonucleotide,AsPC-1
+Palbociclib,G-361
+Bleomycin (10 uM),Mo-T
+Capivasertib,Hs-633T
+Afatinib_1377,SNU-61
+Bleomycin (10 uM),LB647-SCLC
+KIN001-244,COLO-824
+JNK Inhibitor VIII,EW-7
+Kobe2602,DG-75
+KIN001-244,NCI-H1688
+LIMK1 inhibitor BMS4,OVCAR-8
+WZ-1-84,TE-1
+Bexarotene,NCI-H1666
+Tamoxifen,ABC-1
+GSK429286A,ATN-1
+BMS-536924_62,JJN-3
+Voxtalisib,OVKATE
+Y-39983,JJN-3
+GSK429286A,BT-474
+Pelitinib,LAN-6
+Tamoxifen,HLE
+Navitoclax,22RV1
+AZ20,CAPAN-1
+Navitoclax,WM35
+Gemcitabine_135,HCC-827
+"eEF2K Inhibitor, A-484954",FU97
+Palbociclib,MOG-G-CCM
+NPK76-II-72-1,SW872
+I-CBP112,SK-OV-3
+PLX-4720_1371,SK-GT-4
+BAM7,NCI-H2066
+Trametinib,BT-474
+ZG-10,MOG-G-CCM
+WZ-1-84,TE-5
+AZD8186,A431
+KIN001-244,LAN-6
+AKT inhibitor VIII_171,NB4
+Voxtalisib,RPMI-8866
+Bicalutamide_150,ABC-1
+TPCA-1,NCI-H1092
+BAM7,NCI-H1304
+Tamoxifen,DU-145
+Voxtalisib,DMS-114
+YK-4-279,D-283MED
+PLX-4720_1371,A427
+SB505124_476,NU-DUL-1
+Fulvestrant,LOXIMVI
+AICA Ribonucleotide,NCI-H847
+Cyclopamine,TE-1
+Navitoclax,DMS-114
+Luminespib,NCI-H187
+AZD8186,BICR10
+Selumetinib_1062,KARPAS-45
+AICA Ribonucleotide,ESO26
+BAM7,GDM-1
+CPI-613,NCI-H1435
+Bicalutamide_150,T84
+GSK-J4,D-283MED
+AICA Ribonucleotide,RPMI-7951
+C-75,BT-20
+AKT inhibitor VIII_228,LOXIMVI
+AZD4547_1497,TT
+LIMK1 inhibitor BMS4,22RV1
+AZ20,P12-ICHIKAWA
+AZD4547_1497,NCI-H292
+Voxtalisib,NCI-H2087
+Capivasertib,KARPAS-231
+"eEF2K Inhibitor, A-484954",MEG-01
+YK-4-279,TE-5
+CI-1033,NCI-H841
+LIMK1 inhibitor BMS4,G-402
+Kobe2602,SH-4
+JNK Inhibitor VIII,SKM-1
+Navitoclax,BT-474
+Tubastatin A,JHH-7
+Pelitinib,COLO-824
+Bicalutamide_150,VA-ES-BJ
+NPK76-II-72-1,OVKATE
+Voxtalisib,NCI-H2052
+Fulvestrant,CAL-39
+AZD4547_1497,KNS-81-FD
+Ara-G,SU-DHL-8
+CRT0105950,G-402
+AICA Ribonucleotide,KARPAS-231
+NSC-207895,IM-95
+JNJ38877605,T98G
+TAK-715,RPMI-7951
+Foretinib,COR-L105
+JNJ38877605,DMS-114
+Y-39983,SNU-61
+XMD8-92,SF295
+Selumetinib_1062,8305C
+GSK-J4,NU-DUL-1
+Bexarotene,CCRF-CEM
+Selumetinib_1062,NCI-H28
+NSC-207895,ALL-SIL
+I-CBP112,COLO-668
+NPK76-II-72-1,NCI-H1568
+Afatinib_1377,Calu-6
+CPI-613,BxPC-3
+NPK76-II-72-1,SNU-407
+CAY10566,OVTOKO
+C-75,EW-7
+AZD8186,CAL-120
+CRT0105950,COLO-792
+Bleomycin (10 uM),CCRF-CEM
+LIMK1 inhibitor BMS4,SH-4
+WZ-1-84,KARPAS-45
+GSK-J4,OS-RC-2
+KIN001-244,SK-GT-4
+Selumetinib_1498,NCC010
+Fulvestrant,SW1116
+AZD8186,NCI-H28
+CRT0105950,ABC-1
+AZD4547_1497,LCLC-103H
+Selumetinib_1062,BEN
+Bicalutamide_150,CAL-39
+Navitoclax,LCLC-103H
+JNJ38877605,TE-11
+TPCA-1,IPC-298
+AZD4547_1497,KARPAS-1106P
+Kobe2602,huH-1
+KIN001-266,DG-75
+Capivasertib,T-T
+AZD2014,BT-474
+Ara-G,MDA-MB-361
+C-75,COLO-829
+AZ20,HCE-4
+TPCA-1,huH-1
+Tubastatin A,MOG-G-CCM
+QL-XI-92,HuO9
+Voxtalisib,SNU-407
+AKT inhibitor VIII_228,COLO-792
+YK-4-279,NCI-H1092
+Bleomycin (10 uM),Jurkat
+C-75,AGS
+Ara-G,NCI-H847
+TAK-715,ATN-1
+CHIR-99021_1241,DBTRG-05MG
+C-75,SW1116
+KIN001-266,AsPC-1
+AICA Ribonucleotide,OVCAR-8
+Navitoclax,CAL-62
+Bleomycin (10 uM),SK-GT-2
+TAK-715,MDA-MB-157
+AZD4547_1497,MOG-G-CCM
+LIMK1 inhibitor BMS4,NCI-H187
+Bexarotene,AsPC-1
+Bleomycin (10 uM),KARPAS-231
+Voxtalisib,HCE-4
+Bleomycin (10 uM),GDM-1
+JNK Inhibitor VIII,LC-2-ad
+AZD5582,TE-11
+AZD8186,NB13
+YK-4-279,LCLC-103H
+Bicalutamide_150,NCI-H292
+CHIR-99021_1241,NCI-H1651
+"eEF2K Inhibitor, A-484954",ESO26
+CRT0105950,AsPC-1
+CPI-613,NCI-H2141
+AZD5582,T98G
+YK-4-279,P31-FUJ
+AZD8186,CAL-62
+Tamoxifen,HT-29
+Fulvestrant,BT-474
+Tubastatin A,DU-145
+KIN001-244,WM1552C
+TAK-715,M14
+Bexarotene,IST-SL2
+Tamoxifen,NCI-H1435
+NPK76-II-72-1,K-562
+CPI-613,COLO-783
+BAM7,HT55
+Selumetinib_1498,OVTOKO
+CI-1040,NCI-H1105
+AZD5582,RPMI-8402
+CHIR-99021_1241,KALS-1
+Voxtalisib,Becker
+Bleomycin (10 uM),AsPC-1
+AZ20,SF126
+Trichostatin A,SH-4
+AKT inhibitor VIII_228,BT-20
+Capivasertib,VA-ES-BJ
+Fulvestrant,MS751
+Cyclopamine,CA46
+Pelitinib,NCI-H1688
+Bleomycin (10 uM),NCI-H1568
+Selumetinib_1062,COR-L105
+KIN001-266,CHSA0011
+YK-4-279,NCI-H2444
+Tubastatin A,Mo-T
+S-Trityl-L-cysteine,ES1
+Tamoxifen,HCE-4
+S-Trityl-L-cysteine,NCI-H1666
+CRT0105950,KINGS-1
+Seliciclib,CCRF-CEM
+Fulvestrant,huH-1
+QL-XI-92,no-10
+AZ20,TE-9
+QL-XI-92,KNS-81-FD
+AZD5582,CHP-126
+AZD4547_1497,SW1271
+PLX-4720_1371,SNU-407
+Voxtalisib,P12-ICHIKAWA
+AKT inhibitor VIII_228,RD
+OSI-027,NCI-H2227
+Fulvestrant,KNS-81-FD
+KIN001-244,ESO26
+AKT inhibitor VIII_228,NCI-H2444
+NPK76-II-72-1,DG-75
+Capivasertib,NCI-H1651
+TAK-715,DU-145
+KIN001-266,HCC1937
+Selumetinib_1062,CAL-120
+BAM7,OV-17R
+Palbociclib,LCLC-103H
+Ara-G,EB2
+TPCA-1,ACHN
+YK-4-279,SW837
+Voxtalisib,Jurkat
+Cyclopamine,ALL-SIL
+AZD5582,CAL-120
+CAY10566,SW620
+TAK-715,COLO-824
+XMD8-92,SK-CO-1
+AZD8186,NB69
+Tamoxifen,EW-1
+Afatinib_1377,MDA-MB-157
+SB505124_476,Mo-T
+Bexarotene,SW1271
+JNK Inhibitor VIII,RPMI-7951
+WZ-1-84,SCC-15
+AICA Ribonucleotide,HCC1569
+JNJ38877605,NU-DUL-1
+Selumetinib_1062,HT-1376
+AKT inhibitor VIII_171,TT
+CRT0105950,NCI-H2052
+CCT007093,8305C
+AZD8186,NCI-H1092
+Tubastatin A,G-361
+PHA-665752,COLO-668
+KIN001-266,NCI-H1666
+CAY10566,CCRF-CEM
+KIN001-266,BICR22
+Doxorubicin_133,huH-1
+NSC-207895,SW620
+AZ20,SK-CO-1
+Fedratinib,BxPC-3
+TAK-715,NCI-H2228
+Tubastatin A,Hey
+Bicalutamide_150,NCI-H847
+AKT inhibitor VIII_171,T-T
+Cyclopamine,MEG-01
+CI-1040,SCC-15
+JNK Inhibitor VIII,SU-DHL-6
+CI-1033,REH
+Capivasertib,BT-20
+"Brivanib, BMS-540215",NCI-H2228
+TAK-715,LCLC-103H
+Y-39983,COLO-668
+GSK429286A,OVKATE
+PLX-4720_1371,NU-DUL-1
+Palbociclib,NCI-H847
+Y-39983,NCI-H847
+"eEF2K Inhibitor, A-484954",LOU-NH91
+Kobe2602,Mo-T
+Selumetinib_1498,EB2
+ZG-10,HT55
+GSK-J4,TOV-21G
+Seliciclib,NEC8
+LIMK1 inhibitor BMS4,JHH-7
+"Brivanib, BMS-540215",SNU-449
+AZD4547_1497,C-33-A
+SB505124_476,no-10
+PHA-665752,697
+CI-1040,MOLT-4
+Ara-G,VA-ES-BJ
+Navitoclax,SW872
+NPK76-II-72-1,OV-56
+TPCA-1,NCI-H322M
+Ara-G,UACC-812
+TPCA-1,KARPAS-45
+PLX-4720_1371,SNU-81
+Temsirolimus,LB647-SCLC
+Navitoclax,TOV-21G
+ZG-10,TK
+BMS-536924_62,NB13
+Fedratinib,SU-DHL-6
+NSC-207895,SNU-81
+CHIR-99021_1241,MS751
+Palbociclib,ESO26
+AZD5582,BICR78
+OSI-027,D-283MED
+Y-39983,NCI-H2141
+JNK Inhibitor VIII,A498
+Olaparib_1495,KARPAS-1106P
+QL-XI-92,NCI-H2228
+Palbociclib,HCC-827
+Tenovin-6,M14
+Pelitinib,NCI-H1876
+CPI-613,Caov-4
+AZD4547_1497,SCC-15
+CCT007093,MN-60
+C-75,A498
+Bicalutamide_150,PFSK-1
+AKT inhibitor VIII_228,CADO-ES1
+Navitoclax,UWB1.289
+GSK429286A,LCLC-103H
+AZD4547_1497,NCI-H358
+XMD8-92,NB13
+I-CBP112,TE-5
+KIN001-244,HCC1569
+TAK-715,PANC-04-03
+BAM7,SU-DHL-8
+Fulvestrant,HCE-4
+Navitoclax,BFTC-909
+Tamoxifen,DG-75
+Ara-G,PANC-03-27
+AZD4547_1497,DBTRG-05MG
+Foretinib,NCI-H1435
+BMS-536924_62,SW872
+AZD2014,LC-2-ad
+Tubastatin A,NEC8
+Y-39983,NCI-H2228
+Olaparib_1495,KALS-1
+AKT inhibitor VIII_228,OV-17R
+Kobe2602,T-T
+TAK-715,LOXIMVI
+Fulvestrant,CAL-120
+Fulvestrant,DOV13
+Palbociclib,EKVX
+Selumetinib_1498,BxPC-3
+Bleomycin (10 uM),KARPAS-1106P
+KIN001-244,EJM
+GSK429286A,BALL-1
+PLX-4720_1371,WSU-DLCL2
+Fedratinib,SNU-61
+Bleomycin (10 uM),HSC-39
+ZG-10,WM35
+C-75,OVTOKO
+AZD8186,KGN
+CI-1040,NB13
+CAY10566,A498
+LIMK1 inhibitor BMS4,BT-474
+WZ-1-84,RPMI-8866
+Pelitinib,DOV13
+TAK-715,EFO-27
+LIMK1 inhibitor BMS4,IM-95
+Bicalutamide_150,BICR78
+AZD5582,G-361
+CHIR-99021_154,697
+OSI-027,DOK
+BX795,EW-11
+CPI-613,OVTOKO
+GSK429286A,OE21
+Kobe2602,HOS
+Bexarotene,A427
+Crizotinib,IST-SL2
+Selumetinib_1498,OVCAR-8
+GSK429286A,PA-TU-8902
+Crizotinib,L-428
+QL-XI-92,CHP-126
+PHA-665752,LB647-SCLC
+GSK429286A,CAL-51
+Tenovin-6,T84
+"Brivanib, BMS-540215",RL95-2
+NSC-207895,EW-7
+Tenovin-6,SNU-81
+NSC-207895,A427
+BX795,WSU-DLCL2
+Pelitinib,YKG-1
+CI-1040,SW948
+Trametinib,EW-3
+Tenovin-6,CAL-51
+CI-1033,RD
+CI-1033,LCLC-103H
+NSC-207895,786-0
+YK-4-279,huH-1
+CPI-613,LAN-6
+NPK76-II-72-1,LOXIMVI
+SB505124_476,MES-SA
+Pelitinib,SUP-B15
+"Brivanib, BMS-540215",NB69
+Fulvestrant,NCI-H596
+TPCA-1,REH
+YK-4-279,MEG-01
+Y-39983,CAL-51
+BAM7,NCI-H841
+JNJ38877605,697
+"Brivanib, BMS-540215",NCI-H1155
+JNK Inhibitor VIII,BT-20
+Fulvestrant,HCC1569
+Selumetinib_1062,HLE
+JNK Inhibitor VIII,DOK
+"eEF2K Inhibitor, A-484954",DU-145
+Gemcitabine_135,TT
+Afatinib_1377,KARPAS-231
+Bicalutamide_150,NCI-H2452
+JNJ38877605,AGS
+GSK-J4,VA-ES-BJ
+Capivasertib,IM-95
+OSI-027,M14
+Bicalutamide_150,SU-DHL-6
+AZD8186,EW-1
+Tenovin-6,NB69
+QL-XI-92,VA-ES-BJ
+GSK429286A,TE-9
+Tamoxifen,LC-2-ad
+AZD4547_1497,697
+XMD8-92,VA-ES-BJ
+BMS-536924_62,NCI-H2141
+Voxtalisib,PA-TU-8902
+Capivasertib,OE21
+PLX-4720_1371,NCI-H2066
+Tamoxifen,RL95-2
+BAM7,SIG-M5
+Cyclopamine,EW-3
+NSC-207895,LOXIMVI
+QL-XI-92,NCI-H2087
+Capivasertib,huH-1
+I-CBP112,NCI-H2452
+Fedratinib,KON
+Capivasertib,SH-4
+OSI-027,OE21
+Bleomycin (10 uM),SCC-15
+TAK-715,BFTC-909
+BX795,ABC-1
+GSK429286A,C32
+TAK-715,COLO-783
+GSK-J4,TT
+Afatinib_1377,M14
+AZD4547_1497,NCI-H1623
+Voxtalisib,C-33-A
+NSC-207895,TE-11
+"Brivanib, BMS-540215",NCI-H1876
+OSI-027,DBTRG-05MG
+Palbociclib,MES-SA
+Kobe2602,LC-2-ad
+BMS-536924_62,LOXIMVI
+Fedratinib,SF126
+Selumetinib_1062,LCLC-103H
+"eEF2K Inhibitor, A-484954",EB2
+AZD5582,WM35
+Bleomycin (10 uM),RPMI-7951
+Selumetinib_1062,MS751
+AICA Ribonucleotide,Hs-683
+CHIR-99021_1241,NCI-H1876
+KIN001-266,SK-GT-4
+Pelitinib,ML-2
+CHIR-99021_1241,NCI-H2452
+QL-XI-92,SK-GT-4
+BX795,NCI-H1105
+SB505124_476,MN-60
+AKT inhibitor VIII_171,OS-RC-2
+AZD8186,SNU-407
+CI-1033,786-0
+AKT inhibitor VIII_228,SCC-15
+Selumetinib_1498,HCE-4
+Bicalutamide_150,LXF-289
+AICA Ribonucleotide,TE-1
+CCT007093,BT-474
+Ara-G,LCLC-103H
+Fedratinib,GP5d
+Doxorubicin_133,NCI-H2444
+CPI-613,LU-135
+KIN001-244,UACC-893
+NSC-207895,NCI-H2227
+Fulvestrant,ES1
+XMD8-92,8505C
+AKT inhibitor VIII_171,RPMI-8402
+Trametinib,NCI-H841
+Cyclopamine,BT-474
+QL-XI-92,JHH-1
+Olaparib_1495,MN-60
+Voxtalisib,KINGS-1
+AZD8186,LU-135
+BAM7,CAPAN-1
+CPI-613,SW837
+CRT0105950,SW1116
+Fulvestrant,TE-11
+Cyclopamine,NB4
+TPCA-1,WM793B
+NSC-207895,WM1552C
+BMS-536924_62,SF126
+AZD2014,L-428
+Fulvestrant,D-336MG
+Seliciclib,ATN-1
+CI-1033,NCI-H847
+TPCA-1,DG-75
+CI-1040,ESO26
+Navitoclax,BICR78
+Voxtalisib,EW-7
+Gemcitabine_135,HT-1376
+AICA Ribonucleotide,DOV13
+CCT007093,SW837
+CPI-613,IST-SL2
+CHIR-99021_1241,COLO-792
+XMD8-92,HuO9
+Olaparib_1495,MDA-MB-157
+Palbociclib,EW-22
+GSK-J4,SF126
+GSK429286A,PFSK-1
+CAY10566,huH-1
+Selumetinib_1498,TE-9
+I-CBP112,SNU-61
+Y-39983,Mo-T
+AZD5582,LN-229
+AZD4547_1497,WM1552C
+YK-4-279,KMRC-20
+CRT0105950,WSU-DLCL2
+Kobe2602,RD
+Afatinib_1377,MDA-MB-361
+KIN001-244,CAL-62
+CHIR-99021_1241,huH-1
+ARRY-520,PA-TU-8902
+Ara-G,HOS
+KIN001-266,EoL-1-cell
+Selumetinib_1498,Hs-683
+Voxtalisib,UACC-893
+AZD4547_1497,AsPC-1
+Tenovin-6,NCI-H1666
+Pelitinib,Hs-633T
+Fulvestrant,HSC-39
+Kobe2602,COLO-829
+AZD8186,NCI-H596
+Ara-G,NCI-H2172
+AICA Ribonucleotide,EoL-1-cell
+NPK76-II-72-1,SW837
+SB505124_476,NCI-H1155
+Bicalutamide_150,OVTOKO
+CHIR-99021_154,JHH-7
+Bleomycin (10 uM),EB2
+AKT inhibitor VIII_171,T98G
+CI-1033,NCI-H28
+YK-4-279,G-402
+CI-1040,EW-22
+TAK-715,UACC-812
+Afatinib_1377,SW620
+Cyclopamine,no-10
+CAY10566,WM1552C
+AICA Ribonucleotide,SK-OV-3
+S-Trityl-L-cysteine,LS-1034
+TAK-715,TE-11
+S-Trityl-L-cysteine,EC-GI-10
+Dactolisib,SW948
+GSK-J4,LC-2-ad
+AKT inhibitor VIII_228,HSC-39
+Tamoxifen,PANC-04-03
+Voxtalisib,MDA-MB-361
+LIMK1 inhibitor BMS4,MDA-MB-157
+LIMK1 inhibitor BMS4,GDM-1
+Navitoclax,MOG-G-CCM
+AZD8186,RD
+XMD8-92,UWB1.289
+CHIR-99021_154,NCI-H2444
+Afatinib_1377,PA-TU-8902
+CI-1033,CAL-51
+GSK-J4,CAL-120
+TPCA-1,UACC-812
+"Brivanib, BMS-540215",NCI-H358
+LIMK1 inhibitor BMS4,KMS-12-BM
+JNK Inhibitor VIII,ABC-1
+CI-1040,L-428
+Tenovin-6,786-0
+Bexarotene,G-402
+NSC-207895,SU-DHL-6
+CI-1033,KALS-1
+TPCA-1,HCC-827
+Tubastatin A,LXF-289
+Bexarotene,SF295
+QL-XI-92,COLO-783
+Kobe2602,RPMI-8402
+I-CBP112,HSC-39
+YK-4-279,BFTC-909
+AZD4877,EKVX
+AZD5582,Jurkat
+BX795,COLO-783
+Foretinib,NCI-H1092
+KIN001-266,COR-L88
+Olaparib_1495,A498
+LIMK1 inhibitor BMS4,EKVX
+TPCA-1,MES-SA
+Afatinib_1377,CADO-ES1
+BAM7,MDA-MB-361
+Palbociclib,NCI-H322M
+QL-XI-92,NCI-H292
+ARRY-520,MDA-MB-361
+Fulvestrant,SNU-61
+Cyclopamine,SU-DHL-6
+AZD5582,ABC-1
+KIN001-266,JHH-2
+GSK429286A,AsPC-1
+AZD4547_1497,TE-1
+C-75,EB2
+Bicalutamide_150,Caov-4
+Bexarotene,BICR78
+"eEF2K Inhibitor, A-484954",NB4
+KIN001-266,SW620
+Bleomycin (10 uM),KMRC-20
+I-CBP112,NCI-H1651
+Tamoxifen,OVKATE
+Trametinib,EW-22
+"eEF2K Inhibitor, A-484954",Becker
+JNJ38877605,Hey
+JNJ38877605,CAL-62
+TAK-715,NCI-H847
+AZD5582,NCI-H187
+WZ-1-84,MOLT-4
+YK-4-279,IPC-298
+AZD8186,DoTc2-4510
+SB505124_476,NB69
+Selumetinib_1062,CAL-62
+Bleomycin (10 uM),WSU-DLCL2
+BAM7,TT2609-C02
+CHIR-99021_1241,SNU-61
+OSI-027,BICR78
+Pelitinib,TE-5
+TPCA-1,NB69
+Foretinib,UACC-812
+OSI-027,SW872
+Tenovin-6,JHH-2
+Selumetinib_1498,NCI-H1563
+Bexarotene,COLO-668
+JNJ38877605,SF295
+Voxtalisib,WM793B
+SB505124_476,EFO-27
+Bexarotene,Hs-633T
+GSK-J4,L-363
+AKT inhibitor VIII_171,C-33-A
+GSK429286A,HCC-827
+GSK429286A,OS-RC-2
+Tamoxifen,MN-60
+C-75,HCC1937
+AKT inhibitor VIII_171,COLO-668
+AZD2014,KARPAS-1106P
+NSC-207895,KINGS-1
+AKT inhibitor VIII_171,CHSA0011
+Foretinib,GP5d
+CI-1040,SW1271
+Palbociclib,Calu-6
+Pelitinib,SU-DHL-1
+CHIR-99021_1241,RPMI-8402
+Tubastatin A,FU97
+Tamoxifen,CAPAN-1
+Palbociclib,NCI-H292
+JNK Inhibitor VIII,DG-75
+Afatinib_1377,no-10
+Seliciclib,SW872
+C-75,NB13
+"Brivanib, BMS-540215",L-428
+Pelitinib,G-361
+BX795,SK-GT-4
+Tubastatin A,NCI-H1693
+I-CBP112,AsPC-1
+CCT007093,NCI-H2444
+OSI-027,BALL-1
+Kobe2602,ML-2
+CPI-613,MDA-MB-361
+Bexarotene,KALS-1
+AZD5582,HT-29
+CI-1033,G-292-Clone-A141B1
+Ara-G,HLE
+Fedratinib,COLO-829
+Fedratinib,RD
+"Brivanib, BMS-540215",KOSC-2
+CPI-613,SHP-77
+Cyclopamine,NCI-H2227
+TAK-715,UWB1.289
+CRT0105950,HCC-827
+Navitoclax,VA-ES-BJ
+PLX-4720_1371,JHH-7
+"eEF2K Inhibitor, A-484954",OE21
+CI-1040,NCI-H1355
+CRT0105950,GP5d
+BX795,NB13
+Trichostatin A,KYSE-510
+Selumetinib_1498,HSC-39
+JNK Inhibitor VIII,C-33-A
+WZ-1-84,LC4-1
+Ara-G,MN-60
+GSK-J4,SW620
+KIN001-244,P12-ICHIKAWA
+Fulvestrant,MDA-MB-361
+CHIR-99021_1241,NCI-H28
+"Brivanib, BMS-540215",NCI-H1623
+CCT007093,ES1
+AKT inhibitor VIII_228,NCI-H2228
+"Brivanib, BMS-540215",KALS-1
+"eEF2K Inhibitor, A-484954",Calu-6
+GSK-J4,786-0
+Kobe2602,NCI-H1435
+AZD8186,SNU-449
+CHIR-99021_1241,TE-9
+Bexarotene,DG-75
+Fedratinib,UWB1.289
+PLX-4720_1371,SF295
+Bexarotene,BALL-1
+CHIR-99021_1241,NB4
+AICA Ribonucleotide,NCI-H1435
+Capivasertib,SKG-IIIa
+JNJ38877605,A498
+KIN001-266,NCI-H1688
+"eEF2K Inhibitor, A-484954",RPMI-8402
+AZD5582,EJM
+Bicalutamide_150,ML-2
+CHIR-99021_1241,NCI-H292
+Capivasertib,SW620
+AZD5582,SW837
+BAM7,BT-474
+LIMK1 inhibitor BMS4,M14
+Kobe2602,SHP-77
+Ara-G,Hey
+JNK Inhibitor VIII,YKG-1
+Fulvestrant,IST-SL2
+Cyclopamine,NCI-H1666
+Fulvestrant,NCI-H2141
+JNJ38877605,DOV13
+CI-1033,COLO-792
+AZD8186,SKG-IIIa
+JNK Inhibitor VIII,HuO-3N1
+LIMK1 inhibitor BMS4,TE-5
+TAK-715,DMS-114
+KIN001-244,GDM-1
+Olaparib_1495,L-363
+JNK Inhibitor VIII,NCI-H1304
+WZ-1-84,KNS-81-FD
+LIMK1 inhibitor BMS4,NCI-H1666
+Selumetinib_1498,KARPAS-1106P
+I-CBP112,EC-GI-10
+Capivasertib,KNS-81-FD
+Navitoclax,KOSC-2
+GSK-J4,NCI-H1092
+AKT inhibitor VIII_228,SF295
+CAY10566,KALS-1
+QL-XI-92,A431
+CHIR-99021_154,NCI-H358
+CRT0105950,EW-11
+Tenovin-6,RCC-FG2
+Selumetinib_1498,D-283MED
+Kobe2602,KARPAS-231
+AICA Ribonucleotide,22RV1
+CCT007093,NCI-H2141
+PLX-4720_1371,LOU-NH91
+Bicalutamide_150,DOK
+"Brivanib, BMS-540215",RCH-ACV
+CI-1033,MS751
+I-CBP112,HuO9
+GSK429286A,OV-56
+BMS-536924_62,SCC-15
+AKT inhibitor VIII_171,PFSK-1
+AICA Ribonucleotide,LS-1034
+KIN001-244,MOG-G-CCM
+JNK Inhibitor VIII,OCI-LY7
+TPCA-1,TT2609-C02
+"Brivanib, BMS-540215",COLO-792
+CI-1040,KGN
+Y-39983,SKG-IIIa
+NPK76-II-72-1,Hs-683
+Capivasertib,CESS
+PLX-4720_1371,EB2
+YK-4-279,NCI-H1355
+Trametinib,MDA-MB-361
+CI-1033,HSC-39
+OSI-027,HuO9
+Tenovin-6,WSU-DLCL2
+Tamoxifen,HT55
+"eEF2K Inhibitor, A-484954",NCI-H1435
+AZ20,HuP-T4
+KIN001-266,TE-9
+CI-1033,NCI-H2172
+AKT inhibitor VIII_171,JHH-2
+AZD5582,G-292-Clone-A141B1
+Kobe2602,KARPAS-45
+Luminespib,HT-115
+JNJ38877605,RCC-FG2
+OSI-027,WSU-DLCL2
+Selumetinib_1498,L-363
+Tubastatin A,8305C
+Olaparib_1495,HuO9
+AKT inhibitor VIII_171,HT-115
+Capivasertib,EoL-1-cell
+Pelitinib,HT-115
+Selumetinib_1498,KARPAS-45
+"Brivanib, BMS-540215",BEN
+AZ20,MDA-MB-361
+QL-XI-92,22RV1
+CCT007093,22RV1
+C-75,HuO-3N1
+AKT inhibitor VIII_228,NCI-H1568
+Tubastatin A,CAL-62
+Tenovin-6,EW-7
+CAY10566,PANC-04-03
+Y-39983,NH-12
+NPK76-II-72-1,SJSA-1
+JNK Inhibitor VIII,L-363
+YK-4-279,LC4-1
+Bexarotene,WM793B
+GSK-J4,SK-OV-3
+Tenovin-6,NB13
+BAM7,NB4
+CCT007093,UACC-893
+AZD8186,SW1271
+S-Trityl-L-cysteine,WSU-DLCL2
+Crizotinib,OS-RC-2
+CPI-613,LS-1034
+Fedratinib,NCI-H1623
+AKT inhibitor VIII_171,JHU-029
+AICA Ribonucleotide,TE-5
+"Brivanib, BMS-540215",UACC-812
+JNJ38877605,EB2
+Navitoclax,8505C
+BX795,NCI-H358
+QL-XI-92,A498
+CAY10566,NCI-H1623
+AZD4547_1497,P12-ICHIKAWA
+CHIR-99021_1241,HTC-C3
+CCT007093,ACHN
+TAK-715,HT-115
+C-75,LOU-NH91
+Olaparib_1495,LB647-SCLC
+CHIR-99021_1241,SCC-15
+AZ20,NCI-H2066
+CI-1033,VA-ES-BJ
+Bicalutamide_150,SUP-B15
+Palbociclib,TE-9
+KIN001-266,A498
+Selumetinib_1498,UACC-893
+NPK76-II-72-1,HCE-4
+I-CBP112,COLO-792
+TAK-715,LN-229
+Crizotinib,L-363
+BAM7,AGS
+Selumetinib_1062,TE-11
+CPI-613,SU-DHL-6
+"Brivanib, BMS-540215",ATN-1
+SB505124_476,YKG-1
+CPI-613,HSC-39
+BAM7,FU97
+KIN001-266,CAL-120
+KIN001-244,AsPC-1
+KIN001-266,T-T
+BAM7,BALL-1
+Selumetinib_1062,EW-1
+"eEF2K Inhibitor, A-484954",LU-135
+Bicalutamide_150,FU97
+CHIR-99021_154,NCI-H1435
+Pelitinib,Hs-766T
+"Brivanib, BMS-540215",KON
+GSK429286A,SJSA-1
+PHA-665752,SH-4
+Afatinib_1377,COR-L88
+"eEF2K Inhibitor, A-484954",CAPAN-1
+Fulvestrant,G-402
+CCT007093,RPMI-8866
+Tubastatin A,MDA-MB-361
+YK-4-279,KON
+YK-4-279,Mo-T
+CI-1033,DOK
+Fedratinib,WM1552C
+NSC-207895,TT
+Tenovin-6,CADO-ES1
+Y-39983,KYSE-510
+BAM7,LU-135
+AKT inhibitor VIII_171,TT2609-C02
+Foretinib,AGS
+"Brivanib, BMS-540215",SIG-M5
+Cyclopamine,REH
+KIN001-244,SNU-61
+CHIR-99021_1241,BICR22
+Tubastatin A,HLE
+Y-39983,NCI-H2452
+LIMK1 inhibitor BMS4,COR-L105
+Pelitinib,COLO-668
+BMS-536924_62,Mo-T
+XMD8-92,NCI-H2141
+Y-39983,EW-7
+XMD8-92,HuP-T4
+S-Trityl-L-cysteine,REH
+Ara-G,G-292-Clone-A141B1
+Bicalutamide_150,NCI-H1876
+NSC-207895,SCC-15
+Seliciclib,SCC-15
+Tamoxifen,BFTC-909
+AZD2014,WSU-DLCL2
+TPCA-1,SNU-449
+Selumetinib_1062,G-292-Clone-A141B1
+"Brivanib, BMS-540215",FU97
+I-CBP112,BEN
+JNJ38877605,HOS
+Trametinib,NCI-H1876
+CAY10566,OVCAR-8
+Ara-G,ML-2
+SB505124_476,KARPAS-231
+TPCA-1,ML-2
+CPI-613,KNS-81-FD
+Tubastatin A,NCI-H1666
+TAK-715,HT-1376
+AKT inhibitor VIII_228,CAL-62
+CCT007093,EKVX
+CAY10566,HT-1376
+GSK-J4,UWB1.289
+PLX-4720_1371,EW-22
+AICA Ribonucleotide,LXF-289
+GSK-J4,COLO-829
+Ara-G,HT55
+TAK-715,MES-SA
+BMS-536924_62,SU-DHL-6
+I-CBP112,Jurkat
+KIN001-266,WM35
+Tenovin-6,SNU-61
+NSC-207895,LOU-NH91
+AICA Ribonucleotide,FU97
+GSK-J4,BPH-1
+SB505124_476,HLE
+TPCA-1,SW872
+SB505124_476,SU-DHL-8
+GSK429286A,RPMI-8866
+WZ-1-84,KMS-12-BM
+BX795,CMK
+JNJ38877605,C-33-A
+CI-1033,BT-20
+TPCA-1,KMRC-20
+Cyclopamine,RL95-2
+Afatinib_1377,D-283MED
+TPCA-1,BICR22
+SB505124_476,Hs-683
+JNK Inhibitor VIII,SW1271
+C-75,SW948
+Capivasertib,JHH-7
+BMS-536924_62,RPMI-8866
+Selumetinib_1062,TE-5
+AZD8186,NEC8
+Tenovin-6,HCE-4
+Bicalutamide_150,BPH-1
+SB505124_476,LS-1034
+"eEF2K Inhibitor, A-484954",MS751
+CCT007093,NCC010
+"Brivanib, BMS-540215",EB2
+AZD8186,NCI-H1651
+Ara-G,TOV-21G
+AZD5582,MOG-G-CCM
+ZG-10,SK-CO-1
+Y-39983,CAL-62
+Ara-G,ALL-SIL
+CHIR-99021_1241,Hs-766T
+Foretinib,Becker
+Capivasertib,YKG-1
+Y-39983,G-402
+Tenovin-6,NB4
+CHIR-99021_154,SU-DHL-6
+KIN001-244,DOK
+TPCA-1,HCE-4
+Bleomycin (10 uM),G-292-Clone-A141B1
+CCT007093,C32
+CHIR-99021_1241,SKG-IIIa
+C-75,KMRC-20
+Bleomycin (10 uM),PANC-04-03
+Fedratinib,RCC-FG2
+NSC-207895,OVTOKO
+BMS-536924_62,MN-60
+SB505124_476,OVCAR-8
+Tamoxifen,T-T
+AZD2014,NCI-H2141
+Tenovin-6,COR-L105
+Fedratinib,KOSC-2
+Pelitinib,NCI-H1623
+Ara-G,SHP-77
+LIMK1 inhibitor BMS4,LXF-289
+Selumetinib_1498,HT55
+CPI-613,LOXIMVI
+CHIR-99021_1241,RPMI-8866
+TPCA-1,Hs-766T
+Capivasertib,HCC1569
+AICA Ribonucleotide,SJSA-1
+GSK-J4,RPMI-8402
+CHIR-99021_154,OE21
+Pelitinib,NCI-H2087
+YK-4-279,KARPAS-45
+JNK Inhibitor VIII,RD
+AZ20,UACC-893
+TPCA-1,DMS-114
+C-75,NCI-H1105
+CPI-613,NB69
+CAY10566,HLE
+Kobe2602,NCI-H1876
+Selumetinib_1062,C-33-A
+"eEF2K Inhibitor, A-484954",HuO-3N1
+QL-XI-92,KMRC-20
+Voxtalisib,NCI-H2172
+PLX-4720_1371,NCI-H1435
+CPI-613,ES1
+"eEF2K Inhibitor, A-484954",EC-GI-10
+YK-4-279,BALL-1
+AZD8186,HTC-C3
+PHA-665752,RPMI-8866
+Tenovin-6,KMRC-20
+AICA Ribonucleotide,NCI-H1876
+Fulvestrant,HCC-827
+KIN001-266,COLO-668
+AZ20,EW-22
+AZD4547_1497,EKVX
+BX795,AGS
+Bexarotene,RPMI-8402
+Fulvestrant,C32
+PHA-665752,NCI-H1092
+PHA-665752,TE-1
+SB505124_476,PFSK-1
+QL-XI-92,SNU-61
+Seliciclib,NB69
+Fedratinib,EFO-27
+CPI-613,A498
+Kobe2602,HuO-3N1
+CHIR-99021_1241,SF295
+CPI-613,LCLC-103H
+BAM7,KMS-12-BM
+C-75,Hs-683
+I-CBP112,A498
+CAY10566,RPMI-8866
+AZD8186,ALL-SIL
+TPCA-1,CHP-126
+AZD2014,TE-11
+JNK Inhibitor VIII,NCI-H187
+AKT inhibitor VIII_228,NCI-H1092
+Foretinib,COLO-824
+AZD2014,SW620
+TAK-715,COLO-792
+AZD8186,RPMI-7951
+QL-XI-92,8505C
+TPCA-1,KINGS-1
+TAK-715,PFSK-1
+Luminespib,WSU-DLCL2
+ZG-10,RCC-FG2
+CAY10566,EW-22
+Tamoxifen,LOXIMVI
+AICA Ribonucleotide,NCI-H1563
+XMD8-92,huH-1
+Selumetinib_1062,JHU-029
+"eEF2K Inhibitor, A-484954",TT2609-C02
+Capivasertib,JHU-029
+CHIR-99021_154,EKVX
+CCT007093,OVMIU
+CI-1033,KGN
+Navitoclax,OVKATE
+Pelitinib,CHP-126
+GSK429286A,UWB1.289
+Tamoxifen,CHSA0011
+AKT inhibitor VIII_228,HT-115
+Tamoxifen,VA-ES-BJ
+GSK429286A,SW837
+XMD8-92,OV-56
+AKT inhibitor VIII_228,TE-1
+AZ20,BICR78
+Afatinib_1377,CAL-120
+CPI-613,ESO26
+C-75,GP5d
+KIN001-244,EW-11
+Tubastatin A,NCI-H1355
+AKT inhibitor VIII_171,PANC-04-03
+XMD8-92,SJSA-1
+CHIR-99021_154,C32
+CI-1033,NCI-H322M
+JNK Inhibitor VIII,CCRF-CEM
+AICA Ribonucleotide,HOS
+AKT inhibitor VIII_171,Calu-6
+Selumetinib_1498,P31-FUJ
+I-CBP112,P31-FUJ
+WZ-1-84,NCI-H1155
+LIMK1 inhibitor BMS4,A427
+Voxtalisib,SCC-15
+Capivasertib,ATN-1
+Bleomycin (10 uM),KALS-1
+AKT inhibitor VIII_228,UACC-893
+"eEF2K Inhibitor, A-484954",NCI-H1568
+JNK Inhibitor VIII,EW-22
+CI-1040,SW1116
+JNK Inhibitor VIII,SKG-IIIa
+QL-XI-92,DG-75
+C-75,HT-115
+Bicalutamide_150,SW620
+Selumetinib_1498,WM793B
+Ara-G,HCC1569
+AICA Ribonucleotide,NCC010
+Selumetinib_1062,DOK
+CI-1040,DBTRG-05MG
+AZD2014,NCC010
+Tubastatin A,DoTc2-4510
+CPI-613,SCC-15
+GSK429286A,Hs-633T
+Tubastatin A,RPMI-8402
+PHA-665752,UACC-812
+Bexarotene,JJN-3
+GSK429286A,DoTc2-4510
+Navitoclax,NCI-H1666
+CHIR-99021_1241,LS-1034
+Voxtalisib,DOK
+YK-4-279,SK-GT-4
+JNJ38877605,NCI-H1876
+AZD5582,SJSA-1
+Tenovin-6,HSC-39
+NPK76-II-72-1,EKVX
+LIMK1 inhibitor BMS4,C-33-A
+QL-XI-92,HT-1376
+NPK76-II-72-1,IM-95
+NSC-207895,A431
+AZ20,OVKATE
+AKT inhibitor VIII_228,PA-TU-8902
+OSI-027,COLO-668
+BX795,LOU-NH91
+Fedratinib,SU-DHL-1
+WZ-1-84,NEC8
+Tubastatin A,NCI-H1092
+Voxtalisib,LU-135
+AKT inhibitor VIII_171,NCI-H1092
+WZ-1-84,ES1
+AZD8186,G-292-Clone-A141B1
+"eEF2K Inhibitor, A-484954",T-T
+LIMK1 inhibitor BMS4,HLE
+KIN001-244,NCI-H2087
+NPK76-II-72-1,LU-135
+AZ20,HT-29
+CAY10566,DoTc2-4510
+NPK76-II-72-1,COLO-824
+CRT0105950,NCI-H2228
+C-75,RCC-FG2
+AKT inhibitor VIII_171,COR-L105
+KIN001-266,SIMA
+AZD8186,HuO-3N1
+AICA Ribonucleotide,SK-CO-1
+AZD2014,NCI-H2066
+CCT007093,NCI-H1693
+CRT0105950,NEC8
+Trametinib,CESS
+Capivasertib,HT-115
+Ara-G,BT-474
+PLX-4720_1371,BFTC-909
+AZD5582,PANC-04-03
+CI-1040,REH
+AZD8186,WSU-DLCL2
+JNJ38877605,Hs-766T
+BAM7,DU-145
+"Brivanib, BMS-540215",DG-75
+NSC-207895,NCI-H1666
+BAM7,EFO-27
+Kobe2602,NCI-H28
+Y-39983,CAL-120
+TAK-715,WSU-DLCL2
+Ara-G,SNU-449
+JNJ38877605,SIMA
+AICA Ribonucleotide,PA-TU-8902
+GSK429286A,P12-ICHIKAWA
+CCT007093,KOSC-2
+AICA Ribonucleotide,LC-2-ad
+AKT inhibitor VIII_171,OE21
+Voxtalisib,HuO9
+KIN001-266,LS-1034
+GSK429286A,NB69
+S-Trityl-L-cysteine,LOXIMVI
+CCT007093,HT-1376
+GSK429286A,LXF-289
+Capivasertib,COR-L88
+Bexarotene,SU-DHL-8
+WZ-1-84,MEG-01
+KIN001-266,NCI-H2452
+Trichostatin A,C32
+KIN001-244,BICR22
+Bexarotene,BPH-1
+Olaparib_1495,JHH-2
+Voxtalisib,CAPAN-1
+Ara-G,KMS-12-BM
+Afatinib_1377,BICR22
+CHIR-99021_1241,NCI-H1688
+Ara-G,SW948
+GSK-J4,SK-GT-2
+Selumetinib_1498,Hs-766T
+Kobe2602,SKG-IIIa
+Fulvestrant,OVKATE
+"Brivanib, BMS-540215",HuO9
+JNK Inhibitor VIII,MDA-MB-361
+AZD4547_1497,COR-L88
+Seliciclib,697
+CPI-613,SW872
+GSK429286A,DOV13
+Tamoxifen,COLO-829
+Ara-G,Caov-4
+PLX-4720_1371,COR-L105
+CHIR-99021_1241,Calu-6
+AZD8186,EW-11
+Kobe2602,T98G
+YK-4-279,COLO-668
+SB505124_476,NCI-H358
+LIMK1 inhibitor BMS4,HT-115
+Afatinib_1377,NCI-H2141
+AZD5582,NB13
+PHA-665752,DMS-114
+Y-39983,SNU-449
+CHIR-99021_154,BICR22
+Selumetinib_1498,TT2609-C02
+KIN001-266,COLO-824
+TAK-715,NCI-H1693
+NSC-207895,SNU-61
+SB505124_476,CA46
+Crizotinib,ES1
+LIMK1 inhibitor BMS4,COLO-824
+Kobe2602,DOK
+AZD5582,WSU-DLCL2
+QL-XI-92,SIMA
+NSC-207895,NCI-H596
+Selumetinib_1062,SCC-15
+TAK-715,VA-ES-BJ
+Crizotinib,MEG-01
+C-75,OVMIU
+"Brivanib, BMS-540215",GP5d
+SB505124_476,DMS-114
+Olaparib_1495,WSU-DLCL2
+PLX-4720_1371,DBTRG-05MG
+AZ20,22RV1
+JNJ38877605,KOSC-2
+LIMK1 inhibitor BMS4,COLO-829
+AICA Ribonucleotide,SHP-77
