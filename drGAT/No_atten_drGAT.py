@@ -81,9 +81,13 @@ class drGAT(Module):
             x = self.gat2(x=x, edge_index=edge_index).to(torch.float32)
             x = self.dropout2(self.activation(self.graph_norm2(x)))
         else:
-            x = self.gat1(x=x, edge_index=edge_index, edge_attr=edge_attr).to(torch.float32)
+            x = self.gat1(x=x, edge_index=edge_index, edge_attr=edge_attr).to(
+                torch.float32
+            )
             x = self.dropout1(self.activation(self.graph_norm1(x)))
-            x = self.gat2(x=x, edge_index=edge_index, edge_attr=edge_attr).to(torch.float32)
+            x = self.gat2(x=x, edge_index=edge_index, edge_attr=edge_attr).to(
+                torch.float32
+            )
             x = self.dropout2(self.activation(self.graph_norm2(x)))
 
         x = torch.concat(
