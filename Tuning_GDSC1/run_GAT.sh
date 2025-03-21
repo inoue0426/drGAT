@@ -2,7 +2,7 @@
 
 #SBATCH --mem=50gb
 #SBATCH --requeue
-#SBATCH --job-name='CTRP GAT'
+#SBATCH --job-name='GDSC1 GAT'
 #SBATCH --partition gpu
 #SBATCH --gres=gpu:a100:1
 #SBATCH --nodes=1
