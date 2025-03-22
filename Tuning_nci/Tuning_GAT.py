@@ -67,7 +67,14 @@ train_labels = torch.tensor(train_labels).float()
 val_labels = torch.tensor(val_labels).float()
 
 cell = pd.read_csv("../nci_data/cell_sim.csv", index_col=0)
-gene = pd.read_csv("../nci_data/gene_sim.csv", index_col=0)
+
+def natural_sort_key(s):
+    return [int(c) if c.isdigit() else c for c in re.split(r"(\d+)", s)]
+    
+file_paths = glob.glob("../nci_data/gene_sim/gene_sim_part_*.parquet")
+sorted_file_paths = sorted(file_paths, key=natural_sort_key)
+
+gene = pd.concat([pd.read_parquet(file) for file in tqdm(sorted_file_paths)])
 
 
 # How to read
