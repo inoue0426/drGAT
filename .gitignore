@@ -8,6 +8,7 @@ __pycache__/
 
 git_find_big.sh
 .DS_Store
+slurm*
 
 # Distribution / packaging
 .Python

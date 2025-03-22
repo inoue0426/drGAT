@@ -33,7 +33,6 @@ def load_and_combine_chunks(pattern, axis=0):
 
 edge_index = load_and_combine_chunks("../nci_data/edge_idxs/*.npy", axis=1)
 edge_attr = load_and_combine_chunks("../nci_data/edge_attrs/*.npy", axis=0)
-
 edge_index = torch.tensor(edge_index).int()
 edge_index = edge_index.type(torch.int64)
 edge_attr = torch.tensor(edge_attr).float()
@@ -68,14 +67,6 @@ val_labels = torch.tensor(val_labels).float()
 
 cell = pd.read_csv("../nci_data/cell_sim.csv", index_col=0)
 
-def natural_sort_key(s):
-    return [int(c) if c.isdigit() else c for c in re.split(r"(\d+)", s)]
-    
-file_paths = glob.glob("../nci_data/gene_sim/gene_sim_part_*.parquet")
-sorted_file_paths = sorted(file_paths, key=natural_sort_key)
-
-gene = pd.concat([pd.read_parquet(file) for file in tqdm(sorted_file_paths)])
-
 
 # How to read
 def natural_sort_key(s):
@@ -86,6 +77,12 @@ file_paths = glob.glob("../nci_data/drug_sim/drug_sim_part_*.parquet")
 sorted_file_paths = sorted(file_paths, key=natural_sort_key)
 
 drug = pd.concat([pd.read_parquet(file) for file in tqdm(sorted_file_paths)])
+
+
+file_paths = glob.glob("../nci_data/gene_sim/gene_sim_part_*.parquet")
+sorted_file_paths = sorted(file_paths, key=natural_sort_key)
+
+gene = pd.concat([pd.read_parquet(file) for file in tqdm(sorted_file_paths)])
 
 drug = torch.tensor(drug.values).float()
 cell = torch.tensor(cell.values).float()
@@ -149,6 +146,7 @@ def objective(trial):
         ),
     }
 
+    # スケジューラ関連パラメータの条件付き追加
     if params["scheduler"] == "Cosine":
         params["T_max"] = trial.suggest_int("T_max", 20, 50)
     elif params["scheduler"] == "Step":
@@ -170,6 +168,7 @@ def objective(trial):
         params["momentum"] = trial.suggest_float("momentum", 0.8, 0.95)
         params["nesterov"] = trial.suggest_categorical("nesterov", [True, False])
 
+    # 隠れ層サイズとバッチサイズの関係を制約
     if (params["hidden1"] > 512) and (params["hidden2"] > 256):
         raise optuna.TrialPruned("Memory intensive configuration")
 
@@ -193,18 +192,20 @@ def objective(trial):
 
     except RuntimeError as e:
         if "CUDA out of memory" in str(e):
-            print("CUDA out of memory")
-            trial.set_user_attr("status", "CUDA OOM")
-
-            torch.cuda.empty_cache()
+            print(f"Pruned trial {trial.number}: CUDA OOM")
+            
+            # メモリ解放処理
+            with torch.cuda.device('cuda'):
+                torch.cuda.empty_cache()
             gc.collect()
-
-            return [float("-inf")] * 4
+            
+            # Pruning通知
+            raise optuna.TrialPruned(f"OOM at trial {trial.number}")
+        
         else:
             raise e
 
-
-name = "nci_GAT"
+name = "NCI_GAT"
 study = optuna.create_study(
     directions=["maximize"] * 4,
     sampler=optuna.samplers.TPESampler(),
@@ -213,4 +214,4 @@ study = optuna.create_study(
     study_name=name,
     load_if_exists=True,
 )
-study.optimize(objective, n_trials=200)
+study.optimize(objective, n_trials=100)
