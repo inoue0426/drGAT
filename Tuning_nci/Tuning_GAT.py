@@ -193,17 +193,18 @@ def objective(trial):
     except RuntimeError as e:
         if "CUDA out of memory" in str(e):
             print(f"Pruned trial {trial.number}: CUDA OOM")
-            
+
             # メモリ解放処理
-            with torch.cuda.device('cuda'):
+            with torch.cuda.device("cuda"):
                 torch.cuda.empty_cache()
             gc.collect()
-            
+
             # Pruning通知
             raise optuna.TrialPruned(f"OOM at trial {trial.number}")
-        
+
         else:
             raise e
+
 
 name = "NCI_GAT"
 study = optuna.create_study(

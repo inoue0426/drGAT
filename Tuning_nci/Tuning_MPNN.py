@@ -192,26 +192,27 @@ def objective(trial):
     except RuntimeError as e:
         if "CUDA out of memory" in str(e):
             print(f"Pruned trial {trial.number}: CUDA OOM")
-            
+
             # メモリ解放処理
-            with torch.cuda.device('cuda'):
+            with torch.cuda.device("cuda"):
                 torch.cuda.empty_cache()
             gc.collect()
-            
+
             # Pruning通知
             raise optuna.TrialPruned(f"OOM at trial {trial.number}")
-        
+
         else:
             raise e
-            
+
     except ValueError as e:
         if "Input contains NaN" in str(e):
             print(f"Pruned trial {trial.number}: Input contains NaN")
-            
+
             # Pruning通知
             raise optuna.TrialPruned(f"NaN input at trial {trial.number}")
         else:
             raise e
+
 
 name = "NCI"
 study = optuna.create_study(
