@@ -6,12 +6,8 @@ import pandas as pd
 from scipy import sparse as sp
 from sklearn.preprocessing import StandardScaler
 from tqdm import tqdm
-from utility import (
-    get_morgan_fingerprint,
-    min_max_scale,
-    natural_sort_key,
-    normalize_similarity_matrix,
-)
+from utility import (get_morgan_fingerprint, min_max_scale, natural_sort_key,
+                     normalize_similarity_matrix)
 
 
 def load_data(data=None):
