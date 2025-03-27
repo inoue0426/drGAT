@@ -116,7 +116,7 @@ class RandomSampler(object):
 
         # Convert to PyTorch tensors
         edge_index = torch.tensor(np.array(base.values.nonzero())).type(torch.int64)
-        edge_attr = torch.tensor(np.array(base.values[base.values.nonzero()])).int()
+        edge_attr = torch.tensor(np.array(base.values[base.values.nonzero()]))
 
         return edge_index, edge_attr
 
