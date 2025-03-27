@@ -1,18 +1,13 @@
-# type: ignore
-# ruff: noqa
 import numpy as np
+import pandas as pd
 import scipy.sparse as sp
-import torch
 from myutils import mask, to_coo_matrix, to_tensor
 
 
 class RandomSampler(object):
-    # 对原始边进行采样
-    # 采样后生成测试集、训练集
-    # 处理完后的训练集转换为torch.tensor格式
-
-    def __init__(self, adj_mat_original, train_index, test_index, null_mask):
-        super(RandomSampler, self).__init__()
+    def __init__(
+        self, adj_mat_original, train_index, test_index, null_mask, A_cg, A_dg, PATH
+    ):
         self.adj_mat = to_coo_matrix(adj_mat_original)
         self.train_index = train_index
         self.test_index = test_index
@@ -24,6 +19,31 @@ class RandomSampler(object):
         self.test_mask = mask(self.test_pos, self.test_neg, dtype=bool)
         self.train_data = to_tensor(self.train_pos)
         self.test_data = to_tensor(self.test_pos)
+        self.PATH = PATH
+        self.A_cg = A_cg
+        self.A_dg = A_dg
+        self.edge_index, self.edge_attr = self.update_unified_matrix()
+
+    def update_unified_matrix(self):
+        A_dc = pd.DataFrame(
+            self.adj_mat.toarray(), index=self.A_dg.index, columns=self.A_cg.index
+        )
+
+        indexes = list(A_dc.index) + list(self.A_cg.index) + list(self.A_dg.columns)
+        n_all = len(indexes)
+        base = pd.DataFrame(np.zeros([n_all, n_all]), index=indexes, columns=indexes)
+        # 各行列を統合
+        base.loc[self.A_cg.index, self.A_cg.columns] = self.A_cg
+        base.loc[self.A_cg.columns, self.A_cg.index] = self.A_cg.T
+        base.loc[A_dc.index, A_dc.columns] = A_dc
+        base.loc[A_dc.columns, A_dc.index] = A_dc.T
+        base.loc[self.A_dg.index, self.A_dg.columns] = self.A_dg
+        base.loc[self.A_dg.columns, self.A_dg.index] = self.A_dg.T
+
+        matrix = base
+        edge_index = np.array(matrix.values.nonzero())
+        edge_attr = np.array(matrix.values[matrix.values.nonzero()])
+        return edge_index, edge_attr
 
     def sample(self, index):
         row = self.adj_mat.row
@@ -38,8 +58,8 @@ class RandomSampler(object):
         return sample
 
     def sample_negative(self):
-        # identity 表示邻接矩阵是否为二部图
-        # 二部图：边的两个节点，是否属于同类结点集
+        # identity indicates whether the adjacency matrix is a bipartite graph
+        # bipartite graph: whether the two nodes of an edge belong to the same node set
         pos_adj_mat = self.null_mask + self.adj_mat.toarray()
         neg_adj_mat = sp.coo_matrix(np.abs(pos_adj_mat - np.array(1)))
         all_row = neg_adj_mat.row
@@ -47,7 +67,7 @@ class RandomSampler(object):
         all_data = neg_adj_mat.data
         index = np.arange(all_data.shape[0])
 
-        # 采样负测试集
+        # Sample negative test set
         test_n = self.test_index.shape[0]
         test_neg_index = np.random.choice(index, test_n, replace=False)
         test_row = all_row[test_neg_index]
@@ -57,7 +77,7 @@ class RandomSampler(object):
             (test_data, (test_row, test_col)), shape=self.adj_mat.shape
         )
 
-        # 采样训练集
+        # Sample training set
         train_neg_index = np.delete(index, test_neg_index)
         # train_n = self.train_index.shape[0]
         # train_neg_index = np.random.choice(train_neg_index, train_n, replace=False)
@@ -70,226 +90,62 @@ class RandomSampler(object):
         return train, test
 
 
-class NewSampler(object):
-    def __init__(self, original_adj_mat, null_mask, target_dim, target_index):
-        super(NewSampler, self).__init__()
-        self.adj_mat = original_adj_mat
-        self.null_mask = null_mask
-        self.dim = target_dim
-        self.target_index = target_index
-        self.train_data, self.test_data = self.sample_train_test_data()
-        self.train_mask, self.test_mask = self.sample_train_test_mask()
+# class NewSampler(object):
+#     def __init__(self, original_adj_mat, null_mask, target_dim, target_index):
+#         super(NewSampler, self).__init__()
+#         self.adj_mat = original_adj_mat
+#         self.null_mask = null_mask
+#         self.dim = target_dim
+#         self.target_index = target_index
+#         self.train_data, self.test_data = self.sample_train_test_data()
+#         self.train_mask, self.test_mask = self.sample_train_test_mask()
 
-    def sample_target_test_index(self):
-        if self.dim:
-            target_pos_index = np.where(self.adj_mat[:, self.target_index] == 1)[0]
-        else:
-            target_pos_index = np.where(self.adj_mat[self.target_index, :] == 1)[0]
-        return target_pos_index
+#     def sample_target_test_index(self):
+#         if self.dim:
+#             target_pos_index = np.where(self.adj_mat[:, self.target_index] == 1)[0]
+#         else:
+#             target_pos_index = np.where(self.adj_mat[self.target_index, :] == 1)[0]
+#         return target_pos_index
 
-    def sample_train_test_data(self):
-        test_data = np.zeros(self.adj_mat.shape, dtype=np.float32)
-        test_index = self.sample_target_test_index()
-        if self.dim:
-            test_data[test_index, self.target_index] = 1
-        else:
-            test_data[self.target_index, test_index] = 1
-        train_data = self.adj_mat - test_data
-        train_data = torch.from_numpy(train_data)
-        test_data = torch.from_numpy(test_data)
-        return train_data, test_data
+#     def sample_train_test_data(self):
+#         test_data = np.zeros(self.adj_mat.shape, dtype=np.float32)
+#         test_index = self.sample_target_test_index()
+#         if self.dim:
+#             test_data[test_index, self.target_index] = 1
+#         else:
+#             test_data[self.target_index, test_index] = 1
+#         train_data = self.adj_mat - test_data
+#         train_data = torch.from_numpy(train_data)
+#         test_data = torch.from_numpy(test_data)
+#         return train_data, test_data
 
-    def sample_train_test_mask(self):
-        test_index = self.sample_target_test_index()
-        neg_value = np.ones(self.adj_mat.shape, dtype=np.float32)
-        neg_value = neg_value - self.adj_mat - self.null_mask
-        neg_test_mask = np.zeros(self.adj_mat.shape, dtype=np.float32)
-        if self.dim:
-            target_neg_index = np.where(neg_value[:, self.target_index] == 1)[0]
-            if test_index.shape[0] < target_neg_index.shape[0]:
-                target_neg_test_index = np.random.choice(
-                    target_neg_index, test_index.shape[0], replace=False
-                )
-            else:
-                target_neg_test_index = target_neg_index
-            neg_test_mask[target_neg_test_index, self.target_index] = 1
-            neg_value[:, self.target_index] = 0
-        else:
-            target_neg_index = np.where(neg_value[self.target_index, :] == 1)[0]
-            if test_index.shape[0] < target_neg_index.shape[0]:
-                target_neg_test_index = np.random.choice(
-                    target_neg_index, test_index.shape[0], replace=False
-                )
-            else:
-                target_neg_test_index = target_neg_index
-            neg_test_mask[self.target_index, target_neg_test_index] = 1
-            neg_value[self.target_index, :] = 0
-        train_mask = (self.train_data.numpy() + neg_value).astype(np.bool)
-        test_mask = (self.test_data.numpy() + neg_test_mask).astype(np.bool)
-        train_mask = torch.from_numpy(train_mask)
-        test_mask = torch.from_numpy(test_mask)
-        return train_mask, test_mask
-
-
-class SingleSampler(object):
-    """
-    对指定目标进行采样
-    采样返回结果为torch.tensor
-    """
-
-    def __init__(
-        self, origin_adj_mat, null_mask, target_index, train_index, test_index
-    ):
-        super(SingleSampler, self).__init__()
-        self.adj_mat = origin_adj_mat
-        self.null_mask = null_mask
-        self.target_index = target_index
-        self.train_index = train_index
-        self.test_index = test_index
-        self.train_data, self.test_data = self.sample_train_test_data()
-        self.train_mask, self.test_mask = self.sample_train_test_mask()
-
-    def sample_train_test_data(self):
-        test_data = np.zeros(self.adj_mat.shape, dtype=np.float32)
-        test_data[self.test_index, self.target_index] = 1
-        train_data = self.adj_mat - test_data
-        train_data = torch.from_numpy(train_data)
-        test_data = torch.from_numpy(test_data)
-        return train_data, test_data
-
-    def sample_train_test_mask(self):
-        neg_value = np.ones(self.adj_mat.shape, dtype=np.float32)
-        neg_value = neg_value - self.adj_mat - self.null_mask
-        neg_test_mask = np.zeros(self.adj_mat.shape, dtype=np.float32)
-        target_neg_index = np.where(neg_value[:, self.target_index] == 1)[0]
-        target_neg_test_index = np.random.choice(
-            target_neg_index, self.test_index.shape[0], replace=False
-        )
-        neg_test_mask[target_neg_test_index, self.target_index] = 1
-        neg_value[target_neg_test_index, self.target_index] = 0
-        train_mask = (self.train_data.numpy() + neg_value).astype(np.bool)
-        test_mask = (self.test_data.numpy() + neg_test_mask).astype(np.bool)
-        train_mask = torch.from_numpy(train_mask)
-        test_mask = torch.from_numpy(test_mask)
-        return train_mask, test_mask
-
-
-class TargetSampler(object):
-    def __init__(
-        self,
-        response_mat: np.ndarray,
-        null_mask: np.ndarray,
-        target_indexes: np.ndarray,
-        pos_train_index: np.ndarray,
-        pos_test_index: np.ndarray,
-    ):
-        self.response_mat = response_mat
-        self.null_mask = null_mask
-        self.target_indexes = target_indexes
-        self.pos_train_index = pos_train_index
-        self.pos_test_index = pos_test_index
-        self.train_data, self.test_data = self.sample_train_test_data()
-        self.train_mask, self.test_mask = self.sample_train_test_mask()
-
-    def sample_train_test_data(self):
-        n_target = self.target_indexes.shape[0]
-        target_response = self.response_mat[:, self.target_indexes].reshape(
-            (-1, n_target)
-        )
-        train_data = self.response_mat.copy()
-        train_data[:, self.target_indexes] = 0
-        target_pos_value = sp.coo_matrix(target_response)
-        target_train_data = sp.coo_matrix(
-            (
-                target_pos_value.data[self.pos_train_index],
-                (
-                    target_pos_value.row[self.pos_train_index],
-                    target_pos_value.col[self.pos_train_index],
-                ),
-            ),
-            shape=target_response.shape,
-        ).toarray()
-        target_test_data = sp.coo_matrix(
-            (
-                target_pos_value.data[self.pos_test_index],
-                (
-                    target_pos_value.row[self.pos_test_index],
-                    target_pos_value.col[self.pos_test_index],
-                ),
-            ),
-            shape=target_response.shape,
-        ).toarray()
-        test_data = np.zeros(self.response_mat.shape, dtype=np.float32)
-        for i, value in enumerate(self.target_indexes):
-            train_data[:, value] = target_train_data[:, i]
-            test_data[:, value] = target_test_data[:, i]
-        train_data = torch.from_numpy(train_data)
-        test_data = torch.from_numpy(test_data)
-        return train_data, test_data
-
-    def sample_train_test_mask(self):
-        target_response = self.response_mat[:, self.target_indexes]
-        target_ones = np.ones(target_response.shape, dtype=np.float32)
-        target_neg_value = (
-            target_ones - target_response - self.null_mask[:, self.target_indexes]
-        )
-        target_neg_value = sp.coo_matrix(target_neg_value)
-        ids = np.arange(target_neg_value.data.shape[0])
-        target_neg_test_index = np.random.choice(
-            ids, self.pos_test_index.shape[0], replace=False
-        )
-        target_neg_test_mask = sp.coo_matrix(
-            (
-                target_neg_value.data[target_neg_test_index],
-                (
-                    target_neg_value.row[target_neg_test_index],
-                    target_neg_value.col[target_neg_test_index],
-                ),
-            ),
-            shape=target_response.shape,
-        ).toarray()
-        neg_test_mask = np.zeros(self.response_mat.shape, dtype=np.float32)
-        for i, value in enumerate(self.target_indexes):
-            neg_test_mask[:, value] = target_neg_test_mask[:, i]
-        other_neg_value = (
-            np.ones(self.response_mat.shape, dtype=np.float32)
-            - neg_test_mask
-            - self.response_mat
-            - self.null_mask
-        )
-        test_mask = (self.test_data.numpy() + neg_test_mask).astype(np.bool)
-        train_mask = (self.train_data.numpy() + other_neg_value).astype(np.bool)
-        test_mask = torch.from_numpy(test_mask)
-        train_mask = torch.from_numpy(train_mask)
-        return train_mask, test_mask
-
-
-class ExterSampler(object):
-    def __init__(self, original_adj_mat, null_mask, train_index, test_index):
-        super(ExterSampler, self).__init__()
-        self.adj_mat = original_adj_mat
-        self.null_mask = null_mask
-        self.train_index = train_index
-        self.test_index = test_index
-        self.train_data, self.test_data = self.sample_train_test_data()
-        self.train_mask, self.test_mask = self.sample_train_test_mask()
-
-    def sample_train_test_data(self):
-        test_data = self.adj_mat - 0
-        test_data[self.train_index, :] = 0
-        train_data = self.adj_mat - test_data
-        train_data = torch.from_numpy(train_data)
-        test_data = torch.from_numpy(test_data)
-        return train_data, test_data
-
-    def sample_train_test_mask(self):
-        neg_value = np.ones(self.adj_mat.shape, dtype=np.float32)
-        neg_train = neg_value - self.adj_mat - self.null_mask
-        neg_train[self.test_index, :] = 0
-        neg_test = neg_value - self.adj_mat - self.null_mask
-        neg_test[self.train_index, :] = 0
-        train_mask = (self.train_data.numpy() + neg_train).astype(np.bool)
-        test_mask = (self.test_data.numpy() + neg_test).astype(np.bool)
-        train_mask = torch.from_numpy(train_mask)
-        test_mask = torch.from_numpy(test_mask)
-        return train_mask, test_mask
+#     def sample_train_test_mask(self):
+#         test_index = self.sample_target_test_index()
+#         neg_value = np.ones(self.adj_mat.shape, dtype=np.float32)
+#         neg_value = neg_value - self.adj_mat - self.null_mask
+#         neg_test_mask = np.zeros(self.adj_mat.shape, dtype=np.float32)
+#         if self.dim:
+#             target_neg_index = np.where(neg_value[:, self.target_index] == 1)[0]
+#             if test_index.shape[0] < target_neg_index.shape[0]:
+#                 target_neg_test_index = np.random.choice(
+#                     target_neg_index, test_index.shape[0], replace=False
+#                 )
+#             else:
+#                 target_neg_test_index = target_neg_index
+#             neg_test_mask[target_neg_test_index, self.target_index] = 1
+#             neg_value[:, self.target_index] = 0
+#         else:
+#             target_neg_index = np.where(neg_value[self.target_index, :] == 1)[0]
+#             if test_index.shape[0] < target_neg_index.shape[0]:
+#                 target_neg_test_index = np.random.choice(
+#                     target_neg_index, test_index.shape[0], replace=False
+#                 )
+#             else:
+#                 target_neg_test_index = target_neg_index
+#             neg_test_mask[self.target_index, target_neg_test_index] = 1
+#             neg_value[self.target_index, :] = 0
+#         train_mask = (self.train_data.numpy() + neg_value).astype(np.bool)
+#         test_mask = (self.test_data.numpy() + neg_test_mask).astype(np.bool)
+#         train_mask = torch.from_numpy(train_mask)
+#         test_mask = torch.from_numpy(test_mask)
+#         return train_mask, test_mask
