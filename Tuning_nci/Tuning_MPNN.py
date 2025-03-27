@@ -1,117 +1,36 @@
+# type: ignore
+# ruff: noqa
+
 import gc
-import glob
 import os
-import re
 import sys
 
 import numpy as np
 import optuna
 import pandas as pd
 import torch
-from tqdm import tqdm
+from sklearn.model_selection import KFold
 
-current_dir = os.getcwd()  # noqa: E402
-parent_dir = os.path.abspath(os.path.join(current_dir, ".."))  # noqa: E402
-sys.path.append(parent_dir)  # noqa: E402
-
-from drGAT import No_atten_drGAT  # noqa: E402
+current_dir = os.getcwd()
+parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
+sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-train_data = pd.read_csv("../nci_data/train.csv")
-val_data = pd.read_csv("../nci_data/val.csv")
-test_data = pd.read_csv("../nci_data/test.csv")
+from drGAT import No_atten_drGAT
+from drGAT.load_data import load_data
+from drGAT.sampler import RandomSampler
 
-idxs = np.load("../nci_data/idxs.npy", allow_pickle=True)
-converter = {idxs[1, i]: int(idxs[0, i]) for i in range(idxs.shape[1])}
+drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg = load_data()
 
-
-def load_and_combine_chunks(pattern, axis=0):
-    chunk_files = sorted(
-        glob.glob(pattern), key=lambda x: int(x.split("_")[-1].split(".")[0])
-    )
-
-    chunks = [np.load(f) for f in chunk_files]
-    return np.concatenate(chunks, axis=axis)
-
-
-edge_index = load_and_combine_chunks("../nci_data/edge_idxs/*.npy", axis=1)
-edge_attr = load_and_combine_chunks("../nci_data/edge_attrs/*.npy", axis=0)
-edge_index = torch.tensor(edge_index).int()
-edge_index = edge_index.type(torch.int64)
-edge_attr = torch.tensor(edge_attr).float()
-
-idxs = np.load("../nci_data/idxs.npy", allow_pickle=True)
-converter = {idxs[1, i]: int(idxs[0, i]) for i in range(idxs.shape[1])}
-
-
-def get_idx(X):
-    X["Drug"] = [converter[(i)] for i in X["Drug"]]
-    X["Cell"] = [converter[(i)] for i in X["Cell"]]
-    return X
-
-
-train_data = pd.read_csv("../nci_data/train.csv")
-val_data = pd.read_csv("../nci_data/val.csv")
-test_data = pd.read_csv("../nci_data/test.csv")
-train_data = get_idx(train_data)
-val_data = get_idx(val_data)
-test_data = get_idx(test_data)
-
-train_drug = train_data["Drug"].values
-train_cell = train_data["Cell"].values
-val_drug = val_data["Drug"].values
-val_cell = val_data["Cell"].values
-
-train_labels = np.load("../nci_data/train_labels.npy")
-val_labels = np.load("../nci_data/val_labels.npy")
-
-train_labels = torch.tensor(train_labels).float()
-val_labels = torch.tensor(val_labels).float()
-
-cell = pd.read_csv("../nci_data/cell_sim.csv", index_col=0)
-
-
-# How to read
-def natural_sort_key(s):
-    return [int(c) if c.isdigit() else c for c in re.split(r"(\d+)", s)]
-
-
-file_paths = glob.glob("../nci_data/drug_sim/drug_sim_part_*.parquet")
-sorted_file_paths = sorted(file_paths, key=natural_sort_key)
-
-drug = pd.concat([pd.read_parquet(file) for file in tqdm(sorted_file_paths)])
-
-
-file_paths = glob.glob("../nci_data/gene_sim/gene_sim_part_*.parquet")
-sorted_file_paths = sorted(file_paths, key=natural_sort_key)
-
-gene = pd.concat([pd.read_parquet(file) for file in tqdm(sorted_file_paths)])
-
-drug = torch.tensor(drug.values).float()
-cell = torch.tensor(cell.values).float()
-gene = torch.tensor(gene.values).float()
-
-data = [
-    drug,
-    cell,
-    gene,
-    edge_index,
-    edge_attr,
-    train_drug,
-    train_cell,
-    val_drug,
-    val_cell,
-    train_labels,
-    val_labels,
-]
+PATH = "../nci_data/"
 
 
 def objective(trial):
     params = {
-        "n_drug": drug.shape[0],
-        "n_cell": cell.shape[0],
-        "n_gene": gene.shape[0],
+        "n_drug": S_d.shape[0],
+        "n_cell": S_c.shape[0],
+        "n_gene": S_g.shape[0],
         "dropout1": trial.suggest_categorical("dropout1", [0.1, 0.2, 0.3, 0.4, 0.5]),
         "dropout2": trial.suggest_categorical("dropout2", [0.1, 0.2, 0.3, 0.4, 0.5]),
         "hidden1": trial.suggest_categorical(
@@ -134,7 +53,8 @@ def objective(trial):
                 256,
             ],
         ),
-        "epochs": trial.suggest_int("epochs", 10, 200, step=50),
+        "epochs": 2,
+        "heads": trial.suggest_categorical("heads", [1, 2, 3, 4, 5]),
         "activation": trial.suggest_categorical(
             "activation", ["relu", "gelu", "swish"]
         ),
@@ -150,6 +70,7 @@ def objective(trial):
         ),
     }
 
+    # スケジューラ関連パラメータの条件付き追加
     if params["scheduler"] == "Cosine":
         params["T_max"] = trial.suggest_int("T_max", 20, 50)
     elif params["scheduler"] == "Step":
@@ -171,23 +92,40 @@ def objective(trial):
         params["momentum"] = trial.suggest_float("momentum", 0.8, 0.95)
         params["nesterov"] = trial.suggest_categorical("nesterov", [True, False])
 
+    # 隠れ層サイズとバッチサイズの関係を制約
     if (params["hidden1"] > 512) and (params["hidden2"] > 256):
         raise optuna.TrialPruned("Memory intensive configuration")
 
     try:
-        _, best_metrics, early_stopping_epoch = No_atten_drGAT.train(
-            data, params=params, device=device, verbose=False
-        )
+        k = 5
+        kfold = KFold(n_splits=k, shuffle=True, random_state=42)
 
-        early_stop_threshold = trial.suggest_float("early_stop_threshold", 0.3, 0.7)
-        if (
-            early_stopping_epoch is not None
-            and early_stopping_epoch < params["epochs"] * early_stop_threshold
-        ):
-            raise optuna.TrialPruned("Early stopping occurred too early")
+        res = pd.DataFrame()
+        for train_index, test_index in kfold.split(np.arange(pos_num)):
+            sampler = RandomSampler(
+                drugAct,
+                train_index,
+                test_index,
+                null_mask,
+                S_d,
+                S_c,
+                S_g,
+                A_cg,
+                A_dg,
+                PATH,
+            )
+            _, best_metrics, _ = No_atten_drGAT.train(
+                sampler, params=params, device=device, verbose=False
+            )
 
-        trial.set_user_attr("early_stopping_epoch", early_stopping_epoch)
-        return best_metrics
+            res = pd.concat(
+                [
+                    res,
+                    pd.DataFrame(best_metrics, index=["acc", "f1", "auroc", "aupr"]).T,
+                ]
+            )
+
+        return [float(i) for i in res.mean()]
 
     except RuntimeError as e:
         if "CUDA out of memory" in str(e):
@@ -201,15 +139,6 @@ def objective(trial):
             # Pruning通知
             raise optuna.TrialPruned(f"OOM at trial {trial.number}")
 
-        else:
-            raise e
-
-    except ValueError as e:
-        if "Input contains NaN" in str(e):
-            print(f"Pruned trial {trial.number}: Input contains NaN")
-
-            # Pruning通知
-            raise optuna.TrialPruned(f"NaN input at trial {trial.number}")
         else:
             raise e
 
