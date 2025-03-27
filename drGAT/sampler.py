@@ -1,10 +1,14 @@
+# type: ignore
+# ruff: noqa
+
 import os
 
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 import torch
-from myutils import mask, to_coo_matrix, to_tensor
+
+from .myutils import mask, to_coo_matrix, to_tensor
 
 
 class RandomSampler(object):
