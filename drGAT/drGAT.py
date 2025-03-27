@@ -105,6 +105,8 @@ class drGAT(Module):
 
         if self.gnn_layer == "Transformer":
             edge_attr = edge_attr.unsqueeze(-1)
+            
+        edge_attr = edge_attr.to(torch.float32)
 
         x, attention = self.gat1(
             x=x,
