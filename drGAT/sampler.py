@@ -1,38 +1,102 @@
+import os
+
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
+import torch
 from myutils import mask, to_coo_matrix, to_tensor
 
 
 class RandomSampler(object):
     def __init__(
-        self, adj_mat_original, train_index, test_index, null_mask, A_cg, A_dg, PATH
+        self,
+        adj_mat_original,
+        train_index,
+        test_index,
+        null_mask,
+        S_d,
+        S_c,
+        S_g,
+        A_cg,
+        A_dg,
+        PATH,
     ):
+        # Initialize basic attributes
+        self.adj_mat_original = adj_mat_original
         self.adj_mat = to_coo_matrix(adj_mat_original)
         self.train_index = train_index
         self.test_index = test_index
         self.null_mask = null_mask
+        self.PATH = PATH
+
+        # Initialize similarity matrices
+        self.S_d = S_d
+        self.S_c = S_c
+        self.S_g = S_g
+
+        # Initialize adjacency matrices
+        self.A_cg = A_cg
+        self.A_dg = A_dg
+
+        # Sample positive and negative examples
         self.train_pos = self.sample(train_index)
         self.test_pos = self.sample(test_index)
         self.train_neg, self.test_neg = self.sample_negative()
+
+        # Create masks and tensors
         self.train_mask = mask(self.train_pos, self.train_neg, dtype=int)
         self.test_mask = mask(self.test_pos, self.test_neg, dtype=bool)
         self.train_data = to_tensor(self.train_pos)
         self.test_data = to_tensor(self.test_pos)
-        self.PATH = PATH
-        self.A_cg = A_cg
-        self.A_dg = A_dg
+
+        # Create unified graph representation
         self.edge_index, self.edge_attr = self.update_unified_matrix()
+        self.train_labels = self.get_train_labels(is_train=True)
+        self.test_labels = self.get_train_labels(is_train=False)
+
+    def get_train_labels(self, is_train=False):
+        """Get labels for training or testing data"""
+        # Get indices based on mask
+        masked_indices = (
+            self.train_mask.numpy().nonzero()
+            if is_train
+            else self.test_mask.numpy().nonzero()
+        )
+
+        # Extract labels from original adjacency matrix
+        row_labels = [self.adj_mat_original.index[i] for i in masked_indices[0]]
+        column_labels = [self.adj_mat_original.columns[j] for j in masked_indices[1]]
+        values = [
+            self.adj_mat_original.iloc[i, j]
+            for i, j in zip(masked_indices[0], masked_indices[1])
+        ]
+
+        # Convert indices using mapping
+        conv = dict(
+            pd.DataFrame(np.load("../nci_data/idxs.npy", allow_pickle=True))
+            .T[[1, 0]]
+            .values
+        )
+        row_labels = [conv[i] for i in row_labels]
+        column_labels = [conv[i] for i in column_labels]
+
+        return pd.DataFrame(
+            {"Drug": row_labels, "Cell": column_labels, "Label": values}
+        )
 
     def update_unified_matrix(self):
+        """Create unified adjacency matrix combining drug-cell, cell-gene and drug-gene interactions"""
+        # Create drug-cell adjacency matrix
         A_dc = pd.DataFrame(
             self.adj_mat.toarray(), index=self.A_dg.index, columns=self.A_cg.index
         )
 
+        # Initialize unified matrix
         indexes = list(A_dc.index) + list(self.A_cg.index) + list(self.A_dg.columns)
         n_all = len(indexes)
         base = pd.DataFrame(np.zeros([n_all, n_all]), index=indexes, columns=indexes)
-        # 各行列を統合
+
+        # Fill unified matrix with interactions
         base.loc[self.A_cg.index, self.A_cg.columns] = self.A_cg
         base.loc[self.A_cg.columns, self.A_cg.index] = self.A_cg.T
         base.loc[A_dc.index, A_dc.columns] = A_dc
@@ -40,53 +104,64 @@ class RandomSampler(object):
         base.loc[self.A_dg.index, self.A_dg.columns] = self.A_dg
         base.loc[self.A_dg.columns, self.A_dg.index] = self.A_dg.T
 
-        matrix = base
-        edge_index = np.array(matrix.values.nonzero())
-        edge_attr = np.array(matrix.values[matrix.values.nonzero()])
+        # Save index mapping
+        idxs_path = os.path.join(self.PATH, "idxs.npy")
+        if not os.path.exists(idxs_path):
+            idxs = np.array([np.arange(len(base.index)), base.index])
+            np.save(idxs_path, idxs)
+
+        # Convert to PyTorch tensors
+        edge_index = torch.tensor(np.array(base.values.nonzero())).type(torch.int64)
+        edge_attr = torch.tensor(np.array(base.values[base.values.nonzero()])).int()
+
         return edge_index, edge_attr
 
     def sample(self, index):
+        """Sample positive examples from adjacency matrix"""
         row = self.adj_mat.row
         col = self.adj_mat.col
         data = self.adj_mat.data
+
         sample_row = row[index]
         sample_col = col[index]
         sample_data = data[index]
-        sample = sp.coo_matrix(
+
+        return sp.coo_matrix(
             (sample_data, (sample_row, sample_col)), shape=self.adj_mat.shape
         )
-        return sample
 
     def sample_negative(self):
-        # identity indicates whether the adjacency matrix is a bipartite graph
-        # bipartite graph: whether the two nodes of an edge belong to the same node set
+        """Sample negative examples for training and testing"""
+        # Create negative adjacency matrix
         pos_adj_mat = self.null_mask + self.adj_mat.toarray()
         neg_adj_mat = sp.coo_matrix(np.abs(pos_adj_mat - np.array(1)))
+
         all_row = neg_adj_mat.row
         all_col = neg_adj_mat.col
         all_data = neg_adj_mat.data
         index = np.arange(all_data.shape[0])
 
-        # Sample negative test set
+        # Sample negative test examples
         test_n = self.test_index.shape[0]
         test_neg_index = np.random.choice(index, test_n, replace=False)
-        test_row = all_row[test_neg_index]
-        test_col = all_col[test_neg_index]
-        test_data = all_data[test_neg_index]
         test = sp.coo_matrix(
-            (test_data, (test_row, test_col)), shape=self.adj_mat.shape
+            (
+                all_data[test_neg_index],
+                (all_row[test_neg_index], all_col[test_neg_index]),
+            ),
+            shape=self.adj_mat.shape,
         )
 
-        # Sample training set
+        # Sample negative training examples
         train_neg_index = np.delete(index, test_neg_index)
-        # train_n = self.train_index.shape[0]
-        # train_neg_index = np.random.choice(train_neg_index, train_n, replace=False)
-        train_row = all_row[train_neg_index]
-        train_col = all_col[train_neg_index]
-        train_data = all_data[train_neg_index]
         train = sp.coo_matrix(
-            (train_data, (train_row, train_col)), shape=self.adj_mat.shape
+            (
+                all_data[train_neg_index],
+                (all_row[train_neg_index], all_col[train_neg_index]),
+            ),
+            shape=self.adj_mat.shape,
         )
+
         return train, test
 
 

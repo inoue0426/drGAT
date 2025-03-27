@@ -1,9 +1,15 @@
 import pandas as pd
 import torch
 import torch.nn as nn
-from sklearn.metrics import (accuracy_score, average_precision_score,
-                             confusion_matrix, f1_score, precision_score,
-                             recall_score, roc_auc_score)
+from sklearn.metrics import (
+    accuracy_score,
+    average_precision_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 from torch.amp import GradScaler, autocast
 from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
@@ -202,80 +208,89 @@ def get_model(params, device):
     return model, criterion, optimizer, scheduler, scaler
 
 
-def train(data, params=None, is_sample=False, device=None, is_save=False, verbose=True):
+def train(
+    sampler,
+    params=None,
+    is_sample=False,
+    device=None,
+    is_save=False,
+    verbose=True,
+):
+    # Set device
     device = device or torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print("Using: ", device)
+    print(f"Using device: {device}")
 
-    data = [x.to(device) if torch.is_tensor(x) else x for x in data]
-    (
-        drug,
-        cell,
-        gene,
-        edge_index,
-        edge_attr,
-        train_drug,
-        train_cell,
-        val_drug,
-        val_cell,
-        train_labels,
-        val_labels,
-    ) = data
+    tensors = get_data_dict(sampler, device)
 
-    params = initialize_params(params, drug, cell, gene, is_sample)
+    # Initialize parameters
+    params = initialize_params(
+        params, tensors["drug"], tensors["cell"], tensors["gene"], is_sample
+    )
 
-    train_losses, train_accs, val_losses, val_accs = [], [], [], []
+    # Set up model and optimizer
     model, criterion, optimizer, scheduler, scaler = get_model(params, device)
 
+    # Lists for recording losses
+    train_losses, train_accs, val_losses, val_accs = [], [], [], []
+
+    # Best model and early stopping settings
     best_model_state = None
     early_stopping_counter = 0
     max_early_stopping = 10
     early_stopping_epoch = None
+
+    # Set epoch range
     epoch_range = range(params["epochs"])
     if not verbose:
         epoch_range = tqdm(epoch_range)
 
     for epoch in epoch_range:
+        # Train one epoch
         train_attention = train_one_epoch(
             model,
             optimizer,
             criterion,
             scaler,
-            drug,
-            cell,
-            gene,
-            edge_index,
-            edge_attr,
-            train_drug,
-            train_cell,
-            train_labels,
+            tensors["drug"],
+            tensors["cell"],
+            tensors["gene"],
+            tensors["edge_index"],
+            tensors["edge_attr"],
+            tensors["train_drug"],
+            tensors["train_cell"],
+            tensors["train_labels"],
             train_losses,
             train_accs,
             device,
         )
 
-        val_acc, val_f1, val_auroc, val_aupr, val_attention = validate_model(
-            model,
-            criterion,
-            drug,
-            cell,
-            gene,
-            edge_index,
-            edge_attr,
-            val_drug,
-            val_cell,
-            val_labels,
-            val_losses,
-            val_accs,
-            device,
+        # Validation
+        val_acc, val_f1, val_auroc, val_aupr, val_attention, val_labels, val_prob = (
+            validate_model(
+                model,
+                criterion,
+                tensors["drug"],
+                tensors["cell"],
+                tensors["gene"],
+                tensors["edge_index"],
+                tensors["edge_attr"],
+                tensors["val_drug"],
+                tensors["val_cell"],
+                tensors["val_labels"],
+                val_losses,
+                val_accs,
+                device,
+            )
         )
 
-        # スケジューラの更新
+        # Update scheduler
         if scheduler is not None:
             if isinstance(scheduler, lr_scheduler.ReduceLROnPlateau):
                 scheduler.step(val_losses[-1])
             else:
                 scheduler.step()
 
+        # Update best model
         best_metrics = [
             0.0,
             0.0,
@@ -294,6 +309,7 @@ def train(data, params=None, is_sample=False, device=None, is_save=False, verbos
         else:
             early_stopping_counter += 1
 
+        # Early stopping
         if early_stopping_counter >= max_early_stopping:
             print(
                 f"Early stopping at epoch {epoch + 1} because validation accuracy did not improve for {max_early_stopping} epochs."
@@ -301,11 +317,17 @@ def train(data, params=None, is_sample=False, device=None, is_save=False, verbos
             early_stopping_epoch = epoch + 1
             break
 
+        # Log output
         if verbose:
             print(
-                f"Epoch {epoch + 1}: Train Loss = {round(train_losses[-1], 4)}, Val Loss = {round(val_losses[-1], 4)}, Train Acc = {round(train_accs[-1], 4)}, \nVal Acc = {round(val_accs[-1], 4)}, Val F1 = {round(val_f1, 4)}, Val AUROC = {round(val_auroc, 4)}, Val AUPR = {round(val_aupr, 4)}"
+                "epoch:%4d" % (epoch + 1),
+                "train_loss:%.6f" % train_losses[-1],
+                "val_loss:%.6f" % val_losses[-1],
+                "train_acc:%.4f" % train_accs[-1],
+                "val_acc:%.4f" % val_accs[-1],
             )
 
+    # Save best model
     if best_epoch is not None:
         print(f"Best model found at epoch {best_epoch}")
 
@@ -320,7 +342,26 @@ def train(data, params=None, is_sample=False, device=None, is_save=False, verbos
         best_val_attention,
         best_metrics,
         early_stopping_epoch,
+        val_labels,
+        val_prob,
     )
+
+
+def get_data_dict(sampler, device):
+    # Move tensors to device
+    return {
+        "drug": sampler.S_d.to(device),
+        "cell": sampler.S_c.to(device),
+        "gene": sampler.S_g.to(device),
+        "edge_index": sampler.edge_index.to(device),
+        "edge_attr": sampler.edge_attr.to(device),
+        "train_drug": torch.tensor(sampler.train_labels["Drug"].values).to(device),
+        "train_cell": torch.tensor(sampler.train_labels["Cell"].values).to(device),
+        "train_labels": torch.tensor(sampler.train_labels["Label"].values).to(device),
+        "val_drug": torch.tensor(sampler.test_labels["Drug"].values).to(device),
+        "val_cell": torch.tensor(sampler.test_labels["Cell"].values).to(device),
+        "val_labels": torch.tensor(sampler.test_labels["Label"].values).to(device),
+    }
 
 
 def initialize_params(params, drug, cell, gene, is_sample):
@@ -335,8 +376,14 @@ def initialize_params(params, drug, cell, gene, is_sample):
         "hidden3": 128,
         "epochs": 1500,
         "lr": 0.001,
-        "heads": 5,
+        "heads": 2,
+        "gnn_layer": "GATv2",
+        "activation": "relu",
+        "optimizer": "Adam",
+        "weight_decay": 1e-4,
+        "scheduler": None,
     }
+
     if is_sample:
         params["epochs"] = 5
     return params
@@ -366,7 +413,7 @@ def train_one_epoch(
         outputs, attention = model(
             drug, cell, gene, edge_index, edge_attr, train_drug, train_cell
         )
-        loss = criterion(outputs.squeeze(), train_labels)
+        loss = criterion(outputs.squeeze(), train_labels.float())
 
     train_losses.append(loss.item())
 
@@ -401,10 +448,10 @@ def validate_model(
             outputs, attention = model(
                 drug, cell, gene, edge_index, edge_attr, val_drug, val_cell
             )
-            loss = criterion(outputs.squeeze(), val_labels)
+            loss = criterion(outputs.squeeze(), val_labels.float())
         val_losses.append(loss.item())
 
-        outputs = outputs.squeeze().float().cpu()  # ここで次元を調整
+        outputs = outputs.squeeze().float().cpu()
         probabilities = torch.sigmoid(outputs).numpy()
         predict = (probabilities > 0.5).astype(int)
         val_labels = val_labels.cpu().numpy()
@@ -413,7 +460,7 @@ def validate_model(
         val_f1 = f1_score(val_labels, predict)
         val_auroc = roc_auc_score(val_labels, probabilities)
         val_aupr = average_precision_score(val_labels, probabilities)
-    return val_acc, val_f1, val_auroc, val_aupr, attention
+    return val_acc, val_f1, val_auroc, val_aupr, attention, val_labels, probabilities
 
 
 def print_binary_classification_metrics(y_true, y_pred):

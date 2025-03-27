@@ -3,11 +3,16 @@ import os
 
 import numpy as np
 import pandas as pd
+import torch
 from scipy import sparse as sp
 from sklearn.preprocessing import StandardScaler
 from tqdm import tqdm
-from utility import (get_morgan_fingerprint, min_max_scale, natural_sort_key,
-                     normalize_similarity_matrix)
+from utility import (
+    get_morgan_fingerprint,
+    min_max_scale,
+    natural_sort_key,
+    normalize_similarity_matrix,
+)
 
 
 def load_data(data=None):
@@ -23,7 +28,8 @@ def load_data(data=None):
     #     return _load_ctrp()
     # else:
     print("load nci")
-    return _load_nci()
+    PATH = "../nci_data/"
+    return _load_nci(PATH)
 
 
 def _load_nci(PATH="../nci_data/"):
@@ -148,5 +154,10 @@ def _load_nci(PATH="../nci_data/"):
 
     # Create null mask for missing drug activity data
     null_mask = (drugAct.isna()).astype(int)
+
+    drug_sim = torch.tensor(drug_sim.values).float()
+    cell_sim = torch.tensor(cell_sim.values).float()
+    gene_sim = torch.tensor(gene_sim.values).float()
+
     print("Done!")
-    return res, exprs, null_mask, pos_num, drug_sim, cell_sim, gene_sim, dti, A_cg, A_dg
+    return res, pos_num, null_mask, drug_sim, cell_sim, gene_sim, A_cg, A_dg
