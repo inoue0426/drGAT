@@ -77,7 +77,7 @@ class RandomSampler(object):
 
         # Convert indices using mapping
         conv = dict(
-            pd.DataFrame(np.load("../nci_data/idxs.npy", allow_pickle=True))
+            pd.DataFrame(np.load(self.PATH + "idxs.npy", allow_pickle=True))
             .T[[1, 0]]
             .values
         )
