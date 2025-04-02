@@ -21,7 +21,7 @@ from drGAT import drGAT
 from drGAT.load_data import load_data
 from drGAT.sampler import RandomSampler
 
-drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg = load_data('nci')
+drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg = load_data("nci")
 
 PATH = "../nci_data/"
 
@@ -45,7 +45,7 @@ def objective(trial):
             "hidden3",
             [64, 128, 256, 512],
         ),
-        "epochs":trial.suggest_int("epochs", 1000, 10000, step=1000),
+        "epochs": trial.suggest_int("epochs", 1000, 10000, step=1000),
         "heads": trial.suggest_categorical("heads", [1, 2, 3, 4, 5]),
         "activation": trial.suggest_categorical(
             "activation", ["relu", "gelu", "swish"]
