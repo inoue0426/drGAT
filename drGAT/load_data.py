@@ -154,9 +154,6 @@ def _load_data(PATH, is_ctrp=False):
     # Load original drug response data
     drugAct, exprs = _get_base_data(PATH)
 
-    if is_ctrp:
-        drugAct = drugAct.apply(lambda x: (x - np.nanmean(x)) / np.nanstd(x))
-
     cells = sorted(
         set(drugAct.columns)
         & set(exprs.index)
@@ -166,6 +163,9 @@ def _load_data(PATH, is_ctrp=False):
     SMILES = pd.read_csv(PATH + "drug2smiles.csv", index_col=0)
     exprs = exprs.loc[cells]
     drugAct = drugAct.loc[sorted(SMILES.drugs), cells]
+
+    if is_ctrp:
+        drugAct = drugAct.apply(lambda x: (x - np.nanmean(x)) / np.nanstd(x))
 
     # Convert drug activity to binary response matrix
     res = (drugAct > 0).astype(int)
