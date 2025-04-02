@@ -17,8 +17,6 @@ sys.path.append(parent_dir)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-get_ipython().run_line_magic("load_ext", "autoreload")
-get_ipython().run_line_magic("autoreload", "2")
 from drGAT import drGAT
 from drGAT.load_data import load_data
 from drGAT.sampler import RandomSampler

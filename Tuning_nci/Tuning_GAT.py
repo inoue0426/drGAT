@@ -21,7 +21,7 @@ from drGAT import drGAT
 from drGAT.load_data import load_data
 from drGAT.sampler import RandomSampler
 
-drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg = load_data()
+drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg = load_data('nci')
 
 PATH = "../nci_data/"
 
@@ -35,17 +35,17 @@ def objective(trial):
         "dropout2": trial.suggest_categorical("dropout2", [0.1, 0.2, 0.3, 0.4, 0.5]),
         "hidden1": trial.suggest_categorical(
             "hidden1",
-            [256, 512, 1028],
+            [256, 512, 1028, 2048],
         ),
         "hidden2": trial.suggest_categorical(
             "hidden2",
-            [128, 256, 512],
+            [128, 256, 512, 1024],
         ),
         "hidden3": trial.suggest_categorical(
             "hidden3",
-            [64, 128, 256],
+            [64, 128, 256, 512],
         ),
-        "epochs": trial.suggest_categorical("epochs", [10, 50, 100, 200, 500]),
+        "epochs":trial.suggest_int("epochs", 1000, 10000, step=1000),
         "heads": trial.suggest_categorical("heads", [1, 2, 3, 4, 5]),
         "activation": trial.suggest_categorical(
             "activation", ["relu", "gelu", "swish"]
@@ -83,9 +83,9 @@ def objective(trial):
         params["momentum"] = trial.suggest_float("momentum", 0.8, 0.95)
         params["nesterov"] = trial.suggest_categorical("nesterov", [True, False])
 
-    # Constraint on hidden layer sizes and batch size
-    if (params["hidden1"] > 512) and (params["hidden2"] > 256):
-        raise optuna.TrialPruned("Memory intensive configuration")
+    # # Constraint on hidden layer sizes and batch size
+    # if (params["hidden1"] > 512) and (params["hidden2"] > 256):
+    #     raise optuna.TrialPruned("Memory intensive configuration")
 
     try:
         k = 5
@@ -133,7 +133,7 @@ def objective(trial):
             raise e
 
 
-name = "NCI_GAT"
+name = "NCI_GAT_More"
 study = optuna.create_study(
     directions=["maximize"] * 4,
     sampler=optuna.samplers.TPESampler(),
