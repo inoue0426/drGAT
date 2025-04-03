@@ -145,13 +145,13 @@ def get_model(params, device):
             optimizer, T_max=params["T_max"]
         ),
         "Step": lambda: lr_scheduler.StepLR(
-            optimizer, step_size=params["step_size"], gamma=params["scheduler_gamma"]
+            optimizer, step_size=params["step_size"], gamma=params["gamma_step"]
         ),
         "Plateau": lambda: lr_scheduler.ReduceLROnPlateau(
             optimizer,
             mode="min",
-            patience=params["patience"],
-            threshold=params["threshold"],
+            patience=params["patience_plateau"],
+            threshold=params["thresh_plateau"],
         ),
     }
     scheduler = schedulers.get(params["scheduler"], lambda: None)()
@@ -282,8 +282,7 @@ def train(
 
 
 def get_data_dict(sampler, device):
-    # Move tensors to device
-    return {
+    data = {
         "drug": sampler.S_d.to(device),
         "cell": sampler.S_c.to(device),
         "gene": sampler.S_g.to(device),
@@ -292,14 +291,23 @@ def get_data_dict(sampler, device):
         "train_drug": torch.tensor(sampler.train_labels["Drug"].values).to(device),
         "train_cell": torch.tensor(sampler.train_labels["Cell"].values).to(device),
         "train_labels": torch.tensor(sampler.train_labels["Label"].values)
-        .to(torch.float)
-        .to(device),
+            .to(torch.float)
+            .to(device),
         "val_drug": torch.tensor(sampler.test_labels["Drug"].values).to(device),
         "val_cell": torch.tensor(sampler.test_labels["Cell"].values).to(device),
         "val_labels": torch.tensor(sampler.test_labels["Label"].values)
-        .to(torch.float)
-        .to(device),
+            .to(torch.float)
+            .to(device),
     }
+
+    # NaNを検出して修正
+    for key, tensor in data.items():
+        if torch.is_tensor(tensor) and torch.isnan(tensor).any():
+            print(f"NaN detected in {key}, replacing with 0.")
+            data[key] = tensor.nan_to_num()
+
+    return data
+
 
 
 def initialize_params(params, drug, cell, gene, is_sample):
@@ -350,7 +358,10 @@ def train_one_epoch(
     train_acc = (predict == train_labels).sum().item() / len(predict)
     train_accs.append(train_acc)
 
+    # train_one_epoch関数内
     scaler.scale(loss).backward()
+    scaler.unscale_(optimizer)  # スケーリング解除後にクリッピング
+    torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)  # 勾配クリッピング
     scaler.step(optimizer)
     scaler.update()
 
@@ -374,6 +385,12 @@ def validate_model(
     with torch.no_grad():
         with autocast(device_type=device.type):
             outputs = model(drug, cell, gene, edge_index, edge_attr, val_drug, val_cell)
+            
+            # NaNチェック
+            if torch.isnan(outputs).any():
+                print("NaN detected in model outputs!")
+                print("Outputs:", outputs)
+            
             loss = criterion(outputs.squeeze(), val_labels)
         val_losses.append(loss.item())
 

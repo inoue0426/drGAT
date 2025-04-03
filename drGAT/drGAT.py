@@ -40,50 +40,57 @@ class drGAT(Module):
 
     def __init__(self, params):
         super(drGAT, self).__init__()
-        self.linear_drug = Linear(params["n_drug"], params["hidden1"])
-        self.linear_cell = Linear(params["n_cell"], params["hidden1"])
-        self.linear_gene = Linear(params["n_gene"], params["hidden1"])
 
+        hidden1: int = int(params["hidden1"])
+        hidden2: int = int(params["hidden2"])
+        hidden3: int = int(params["hidden3"])
+        heads: int = int(params["heads"])
+        
+        
+        self.linear_drug = Linear(int(params["n_drug"]), hidden1)
+        self.linear_cell = Linear(int(params["n_cell"]), hidden1)
+        self.linear_gene = Linear(int(params["n_gene"]), hidden1)
+        
         self.gnn_layer = params["gnn_layer"]
         if self.gnn_layer == "GAT":
             self.gat1 = GATConv(
-                params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
+                hidden1, hidden2, heads=heads, edge_dim=1
             )
             self.gat2 = GATConv(
-                params["hidden2"] * params["heads"],
-                params["hidden3"],
-                heads=params["heads"],
+                hidden2 * heads,
+                hidden3,
+                heads=heads,
                 edge_dim=1,
             )
         elif self.gnn_layer == "GATv2":
             self.gat1 = GATv2Conv(
-                params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
+                hidden1, hidden2, heads=heads, edge_dim=1
             )
             self.gat2 = GATv2Conv(
-                params["hidden2"] * params["heads"],
-                params["hidden3"],
-                heads=params["heads"],
+                hidden2 * heads,
+                hidden3,
+                heads=heads,
                 edge_dim=1,
             )
         elif self.gnn_layer == "Transformer":
             self.gat1 = TransformerConv(
-                params["hidden1"], params["hidden2"], heads=params["heads"], edge_dim=1
+                hidden1, hidden2, heads=heads, edge_dim=1
             )
             self.gat2 = TransformerConv(
-                params["hidden2"] * params["heads"],
-                params["hidden3"],
-                heads=params["heads"],
+                hidden2 * heads,
+                hidden3,
+                heads=heads,
                 edge_dim=1,
             )
 
         self.dropout1 = Dropout(params["dropout1"])
         self.dropout2 = Dropout(params["dropout2"])
 
-        self.graph_norm1 = GraphNorm(params["hidden2"] * params["heads"])
-        self.graph_norm2 = GraphNorm(params["hidden3"] * params["heads"])
+        self.graph_norm1 = GraphNorm(hidden2 * heads)
+        self.graph_norm2 = GraphNorm(hidden3 * heads)
 
         self.linear1 = Linear(
-            params["hidden3"] * params["heads"] + params["hidden3"] * params["heads"],
+            hidden3 * heads + hidden3 * heads,
             1,
         )
 
@@ -187,13 +194,13 @@ def get_model(params, device):
             optimizer, T_max=params["T_max"]
         ),
         "Step": lambda: lr_scheduler.StepLR(
-            optimizer, step_size=params["step_size"], gamma=params["scheduler_gamma"]
+            optimizer, step_size=params["step_size"], gamma=params["gamma_step"]
         ),
         "Plateau": lambda: lr_scheduler.ReduceLROnPlateau(
             optimizer,
             mode="min",
-            patience=params["patience"],
-            threshold=params["threshold"],
+            patience=params["patience_plateau"],
+            threshold=params["thresh_plateau"],
         ),
     }
     scheduler = schedulers.get(params["scheduler"], lambda: None)()
