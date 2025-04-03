@@ -1,9 +1,15 @@
 import pandas as pd
 import torch
 import torch.nn as nn
-from sklearn.metrics import (accuracy_score, average_precision_score,
-                             confusion_matrix, f1_score, precision_score,
-                             recall_score, roc_auc_score)
+from sklearn.metrics import (
+    accuracy_score,
+    average_precision_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 from torch.amp import GradScaler, autocast
 from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
@@ -205,7 +211,7 @@ def train(
             device,
         )
 
-        val_acc, val_f1, val_auroc, val_aupr = validate_model(
+        val_acc, val_f1, val_auroc, val_aupr, val_labels, val_prob = validate_model(
             model,
             criterion,
             tensors["drug"],
@@ -239,6 +245,7 @@ def train(
         if val_acc > best_metrics[0]:
             best_metrics = [val_acc, val_aupr, val_auroc, val_f1]
             best_model_state = model.state_dict()
+            best_val_labels, best_val_prob = val_labels, val_prob
             best_epoch = epoch + 1
             early_stopping_counter = 0
         else:
@@ -271,8 +278,12 @@ def train(
 
     return (
         model,
+        best_val_labels,
+        best_val_prob,
         best_metrics,
         early_stopping_epoch,
+        val_labels,
+        val_prob,
     )
 
 
@@ -381,7 +392,7 @@ def validate_model(
         val_f1 = f1_score(val_labels, predict)
         val_auroc = roc_auc_score(val_labels, probabilities)
         val_aupr = average_precision_score(val_labels, probabilities)
-    return val_acc, val_f1, val_auroc, val_aupr
+    return val_acc, val_f1, val_auroc, val_aupr, val_labels, probabilities
 
 
 def print_binary_classification_metrics(y_true, y_pred):
