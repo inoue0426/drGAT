@@ -45,17 +45,14 @@ class drGAT(Module):
         hidden2: int = int(params["hidden2"])
         hidden3: int = int(params["hidden3"])
         heads: int = int(params["heads"])
-        
-        
+
         self.linear_drug = Linear(int(params["n_drug"]), hidden1)
         self.linear_cell = Linear(int(params["n_cell"]), hidden1)
         self.linear_gene = Linear(int(params["n_gene"]), hidden1)
-        
+
         self.gnn_layer = params["gnn_layer"]
         if self.gnn_layer == "GAT":
-            self.gat1 = GATConv(
-                hidden1, hidden2, heads=heads, edge_dim=1
-            )
+            self.gat1 = GATConv(hidden1, hidden2, heads=heads, edge_dim=1)
             self.gat2 = GATConv(
                 hidden2 * heads,
                 hidden3,
@@ -63,9 +60,7 @@ class drGAT(Module):
                 edge_dim=1,
             )
         elif self.gnn_layer == "GATv2":
-            self.gat1 = GATv2Conv(
-                hidden1, hidden2, heads=heads, edge_dim=1
-            )
+            self.gat1 = GATv2Conv(hidden1, hidden2, heads=heads, edge_dim=1)
             self.gat2 = GATv2Conv(
                 hidden2 * heads,
                 hidden3,
@@ -73,9 +68,7 @@ class drGAT(Module):
                 edge_dim=1,
             )
         elif self.gnn_layer == "Transformer":
-            self.gat1 = TransformerConv(
-                hidden1, hidden2, heads=heads, edge_dim=1
-            )
+            self.gat1 = TransformerConv(hidden1, hidden2, heads=heads, edge_dim=1)
             self.gat2 = TransformerConv(
                 hidden2 * heads,
                 hidden3,

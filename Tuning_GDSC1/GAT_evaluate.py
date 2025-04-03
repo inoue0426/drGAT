@@ -1,7 +1,8 @@
 import gc
+import math
 import os
 import sys
-import math
+
 import numpy as np
 import optuna
 import pandas as pd
@@ -47,6 +48,7 @@ params = {
 # Load data
 drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg = load_data(data)
 
+
 def auto_convert_params(params, nan_replace=None):
     """Convert parameter types automatically
 
@@ -67,14 +69,17 @@ def auto_convert_params(params, nan_replace=None):
             converted[k] = v
     return converted
 
+
 params = auto_convert_params(params, nan_replace=0)
 
-params.update({
-    "n_drug": S_d.shape[0],
-    "n_cell": S_c.shape[0],
-    "n_gene": S_g.shape[0],
-    "epochs": 1000,
-})
+params.update(
+    {
+        "n_drug": S_d.shape[0],
+        "n_cell": S_c.shape[0],
+        "n_gene": S_g.shape[0],
+        "epochs": 1000,
+    }
+)
 
 print(params)
 
@@ -113,6 +118,6 @@ for train_index, test_index in kfold.split(np.arange(pos_num)):
         ignore_index=True,
         axis=1,
     )
-    
+
 true_datas.to_csv(f"true_{data}_{method}_1.csv")
 predict_datas.to_csv(f"pred_{data}_{method}_1.csv")

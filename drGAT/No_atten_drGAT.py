@@ -291,13 +291,13 @@ def get_data_dict(sampler, device):
         "train_drug": torch.tensor(sampler.train_labels["Drug"].values).to(device),
         "train_cell": torch.tensor(sampler.train_labels["Cell"].values).to(device),
         "train_labels": torch.tensor(sampler.train_labels["Label"].values)
-            .to(torch.float)
-            .to(device),
+        .to(torch.float)
+        .to(device),
         "val_drug": torch.tensor(sampler.test_labels["Drug"].values).to(device),
         "val_cell": torch.tensor(sampler.test_labels["Cell"].values).to(device),
         "val_labels": torch.tensor(sampler.test_labels["Label"].values)
-            .to(torch.float)
-            .to(device),
+        .to(torch.float)
+        .to(device),
     }
 
     # NaNを検出して修正
@@ -307,7 +307,6 @@ def get_data_dict(sampler, device):
             data[key] = tensor.nan_to_num()
 
     return data
-
 
 
 def initialize_params(params, drug, cell, gene, is_sample):
@@ -385,12 +384,12 @@ def validate_model(
     with torch.no_grad():
         with autocast(device_type=device.type):
             outputs = model(drug, cell, gene, edge_index, edge_attr, val_drug, val_cell)
-            
+
             # NaNチェック
             if torch.isnan(outputs).any():
                 print("NaN detected in model outputs!")
                 print("Outputs:", outputs)
-            
+
             loss = criterion(outputs.squeeze(), val_labels)
         val_losses.append(loss.item())
 
