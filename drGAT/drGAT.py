@@ -1,6 +1,7 @@
-import pandas as pd
-import numpy as np
 import random
+
+import numpy as np
+import pandas as pd
 import torch
 import torch.nn as nn
 from sklearn.metrics import (accuracy_score, average_precision_score,
@@ -20,7 +21,8 @@ def set_seed(seed=42):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-set_seed(42)  
+
+set_seed(42)
 
 
 def get_attention_mat(attention):

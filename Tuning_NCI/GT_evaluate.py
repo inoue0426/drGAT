@@ -20,7 +20,7 @@ from drGAT.sampler import RandomSampler
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Create and load optuna study
-name = 'NCI'
+name = "NCI"
 method = "Transformer"  # 任意のstudy名
 storage_path = f"./{method}.sqlite3"  # "./subdir"は1階層下のディレクトリ
 study = optuna.create_study(
