@@ -20,12 +20,12 @@ from drGAT.sampler import RandomSampler
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Create and load optuna study
-method = "Transformer"
-name = "NCI_GAT_New"
-data = "nci"
+name = 'NCI'
+method = "Transformer"  # 任意のstudy名
+storage_path = f"./{method}.sqlite3"  # "./subdir"は1階層下のディレクトリ
 study = optuna.create_study(
-    storage="sqlite:///{}.sqlite3".format(name),
-    study_name=name,
+    storage=f"sqlite:///{storage_path}",
+    study_name=method,
     load_if_exists=True,
 )
 df = study.trials_dataframe()
@@ -118,5 +118,5 @@ for train_index, test_index in kfold.split(np.arange(pos_num)):
         axis=1,
     )
 
-true_datas.to_csv(f"true_{data}_{method}_1.csv")
-predict_datas.to_csv(f"pred_{data}_{method}_1.csv")
+true_datas.to_csv(f"true_{data}_{method}_2.csv")
+predict_datas.to_csv(f"pred_{data}_{method}_2.csv")

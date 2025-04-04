@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+import random
 import torch
 import torch.nn as nn
 from sklearn.metrics import (accuracy_score, average_precision_score,
@@ -9,6 +11,16 @@ from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
 from torch_geometric.nn import GATConv, GATv2Conv, GraphNorm, TransformerConv
 from tqdm import tqdm
+
+
+def set_seed(seed=42):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+set_seed(42)  
 
 
 def get_attention_mat(attention):
