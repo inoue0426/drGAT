@@ -8,8 +8,12 @@ from scipy import sparse as sp
 from sklearn.preprocessing import StandardScaler
 from tqdm import tqdm
 
-from .utility import (get_morgan_fingerprint, min_max_scale, natural_sort_key,
-                      normalize_similarity_matrix)
+from .utility import (
+    get_morgan_fingerprint,
+    min_max_scale,
+    natural_sort_key,
+    normalize_similarity_matrix,
+)
 
 
 def load_data(data=None):
@@ -216,8 +220,25 @@ def _load_data(PATH, is_ctrp=False):
     cell_sim = torch.tensor(cell_sim.values).float()
     gene_sim = torch.tensor(gene_sim.values).float()
 
+    drug, cell, gene = drug_feature, gene_norm_gene, gene_norm_cell
+    drug = torch.tensor(drug.values).float()
+    cell = torch.tensor(cell.values).float()
+    gene = torch.tensor(gene.values).float()
+
     print("Done!")
-    return res, pos_num, null_mask, drug_sim, cell_sim, gene_sim, A_cg, A_dg
+    return (
+        res,
+        pos_num,
+        null_mask,
+        drug_sim,
+        cell_sim,
+        gene_sim,
+        A_cg,
+        A_dg,
+        drug,
+        cell,
+        gene,
+    )
 
 
 def _load_nci(PATH):
@@ -300,5 +321,22 @@ def _load_nci(PATH):
     cell_sim = torch.tensor(cell_sim.values).float()
     gene_sim = torch.tensor(gene_sim.values).float()
 
+    drug, cell, gene = drug_feature, gene_norm_gene, gene_norm_cell.T
+    drug = torch.tensor(drug.values).float()
+    cell = torch.tensor(cell.values).float()
+    gene = torch.tensor(gene.values).float()
+
     print("Done!")
-    return res, pos_num, null_mask, drug_sim, cell_sim, gene_sim, A_cg, A_dg
+    return (
+        res,
+        pos_num,
+        null_mask,
+        drug_sim,
+        cell_sim,
+        gene_sim,
+        A_cg,
+        A_dg,
+        drug,
+        cell,
+        gene,
+    )
