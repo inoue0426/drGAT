@@ -28,7 +28,7 @@ name = "nci"
 PATH = f"../{name}_data/"
 method = "Transformer"
 
-drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg = load_data(name)
+drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg, _, _, _ = load_data(name)
 
 
 def objective(trial):
