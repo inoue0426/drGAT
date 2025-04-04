@@ -157,6 +157,14 @@ def objective(trial):
             print(f"RuntimeError in trial {trial.number}: {str(e)}")
             raise e
 
+    except ValueError as e:
+        if "Input contains NaN" in str(e):
+            print(f"Pruned trial {trial.number}: Input contains NaN")
+            raise optuna.TrialPruned(f"NaN input at trial {trial.number}")
+        else:
+            print(f"ValueError in trial {trial.number}: {str(e)}")
+            raise e
+
     except ZeroDivisionError:
         print(f"Pruned trial {trial.number}: ZeroDivisionError in CosineAnnealingLR")
         raise optuna.TrialPruned("ZeroDivisionError in CosineAnnealingLR")

@@ -1,3 +1,5 @@
+# mypy: ignore-errors
+# ruff: noqa
 import gc
 import os
 import sys
@@ -69,10 +71,6 @@ def objective(trial):
         k = 5
         kfold = KFold(n_splits=k, shuffle=True, random_state=42)
 
-        res = pd.DataFrame()
-
-        metrics_collector = {"acc": [], "f1": [], "auroc": [], "aupr": []}
-
         true_datas = pd.DataFrame()
         predict_datas = pd.DataFrame()
 
@@ -131,6 +129,14 @@ def objective(trial):
             raise optuna.TrialPruned(f"OOM at trial {trial.number}")
         else:
             print(f"RuntimeError in trial {trial.number}: {str(e)}")
+            raise e
+
+    except ValueError as e:
+        if "Input contains NaN" in str(e):
+            print(f"Pruned trial {trial.number}: Input contains NaN")
+            raise optuna.TrialPruned(f"NaN input at trial {trial.number}")
+        else:
+            print(f"ValueError in trial {trial.number}: {str(e)}")
             raise e
 
     except ZeroDivisionError:
