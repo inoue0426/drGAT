@@ -8,8 +8,12 @@ from scipy import sparse as sp
 from sklearn.preprocessing import StandardScaler
 from tqdm import tqdm
 
-from .utility import (get_morgan_fingerprint, min_max_scale, natural_sort_key,
-                      normalize_similarity_matrix)
+from .utility import (
+    get_morgan_fingerprint,
+    min_max_scale,
+    natural_sort_key,
+    normalize_similarity_matrix,
+)
 
 
 def load_data(data=None):
@@ -242,6 +246,11 @@ def _load_nci(PATH):
     # Load original drug response data
     drugAct, exprs = _get_base_data(PATH)
     drugAct.columns = exprs.index
+    cells = sorted(
+        set(drugAct.columns)
+        & set(exprs.index)
+        & set(pd.read_csv(PATH + "mut.csv", index_col=0).T.index)
+    )
 
     # Load mechanism of action (moa) data
     moa = pd.read_csv("../Figs/nsc_cid_smiles_class_name.csv", index_col=0)
@@ -265,6 +274,10 @@ def _load_nci(PATH):
             & (set(moa[moa["MECHANISM"] != "Other"]["NSC"]) | set(tmp))
         )
     ]
+
+    exprs = exprs.loc[cells]
+    drugAct = drugAct.loc[:, cells]
+    # exprs = np.array(exprs, dtype=np.float32)
 
     # Convert drug activity to binary response matrix
     res = (drugAct > 0).astype(int)
