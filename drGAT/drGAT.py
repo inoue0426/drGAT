@@ -4,9 +4,15 @@ import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
-from sklearn.metrics import (accuracy_score, average_precision_score,
-                             confusion_matrix, f1_score, precision_score,
-                             recall_score, roc_auc_score)
+from sklearn.metrics import (
+    accuracy_score,
+    average_precision_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 from torch.amp import GradScaler, autocast
 from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
@@ -251,7 +257,7 @@ def train(
 
     # Set epoch range
     epoch_range = range(params["epochs"])
-    if not verbose:
+    if verbose:
         epoch_range = tqdm(epoch_range)
 
     for epoch in epoch_range:
