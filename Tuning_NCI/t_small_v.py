@@ -27,7 +27,7 @@ from metrics import compute_metrics_stats
 
 name = "nci"
 PATH = f"../{name}_data/"
-method = "Transformer"
+method = "GATv2"
 
 drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg, _, _, _ = load_data(name)
 

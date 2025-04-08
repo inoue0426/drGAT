@@ -27,13 +27,23 @@ class RandomSampler(object):
         seed,
     ):
         # Initialize basic attributes
+        self.seed = seed
+        self.set_seed()
+
         self.adj_mat_original = adj_mat_original
         self.adj_mat = to_coo_matrix(adj_mat_original)
         self.train_index = train_index
         self.test_index = test_index
         self.null_mask = null_mask
         self.PATH = PATH
-        self.seed = seed
+
+        self.train_pos = self.sample(train_index)
+        self.test_pos = self.sample(test_index)
+        self.train_neg, self.test_neg = self.sample_negative()
+        self.train_mask = mask(self.train_pos, self.train_neg, dtype=int)
+        self.test_mask = mask(self.test_pos, self.test_neg, dtype=bool)
+        self.train_data = to_tensor(self.train_pos)
+        self.test_data = to_tensor(self.test_pos)
 
         # Initialize similarity matrices
         self.S_d = S_d
@@ -44,21 +54,14 @@ class RandomSampler(object):
         self.A_cg = A_cg
         self.A_dg = A_dg
 
-        # Sample positive and negative examples
-        self.train_pos = self.sample(train_index)
-        self.test_pos = self.sample(test_index)
-        self.train_neg, self.test_neg = self.sample_negative()
-
-        # Create masks and tensors
-        self.train_mask = mask(self.train_pos, self.train_neg, dtype=int)
-        self.test_mask = mask(self.test_pos, self.test_neg, dtype=bool)
-        self.train_data = to_tensor(self.train_pos)
-        self.test_data = to_tensor(self.test_pos)
-
         # Create unified graph representation
         self.edge_index, self.edge_attr = self.update_unified_matrix()
         self.train_labels = self.get_train_labels(is_train=True)
         self.test_labels = self.get_train_labels(is_train=False)
+
+    def set_seed(self):
+        np.random.seed(self.seed)  # NumPyのシードを設定
+        torch.manual_seed(self.seed)  # PyTorchのシードを設定
 
     def get_train_labels(self, is_train=False):
         """Get labels for training or testing data"""
@@ -94,7 +97,7 @@ class RandomSampler(object):
         """Create unified adjacency matrix combining drug-cell, cell-gene and drug-gene interactions"""
         # Create drug-cell adjacency matrix
         A_dc = pd.DataFrame(
-            self.adj_mat.toarray(), index=self.A_dg.index, columns=self.A_cg.index
+            self.adj_mat.toarray().T, index=self.A_dg.index, columns=self.A_cg.index
         )
 
         # Initialize unified matrix
@@ -149,7 +152,6 @@ class RandomSampler(object):
 
         # Sample negative test examples
         test_n = self.test_index.shape[0]
-        np.random.seed(self.seed)
         test_neg_index = np.random.choice(index, test_n, replace=False)
         test = sp.coo_matrix(
             (

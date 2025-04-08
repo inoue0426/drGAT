@@ -20,14 +20,14 @@ sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-from drGAT import drGAT
+from drGAT import No_atten_drGAT
 from drGAT.load_data import load_data
 from drGAT.sampler import RandomSampler
 from metrics import compute_metrics_stats
 
 name = "nci"
 PATH = f"../{name}_data/"
-method = "Transformer"
+method = "GCN"
 
 drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg, _, _, _ = load_data(name)
 
@@ -44,7 +44,6 @@ def objective(trial):
         "hidden3": trial.suggest_int("hidden3", 32, min(256, trial.params["hidden2"])),
         "epochs": 100,
         # trial.suggest_int("epochs", 100, 10000, step=100),
-        "heads": trial.suggest_int("heads", 2, 8),
         "activation": trial.suggest_categorical("activation", ["relu", "gelu"]),
         "optimizer": trial.suggest_categorical("optimizer", ["Adam", "AdamW"]),
         "lr": trial.suggest_float("lr", 1e-5, 1e-2, log=True),
@@ -91,7 +90,7 @@ def objective(trial):
                     seed=seed,
                 )
             (_, _, _, best_val_labels, best_val_prob, best_metrics, _, _, _) = (
-                drGAT.train(sampler, params=params, device=device, verbose=False)
+                No_atten_drGAT.train(sampler, params=params, device=device, verbose=False)
             )
 
             true_datas = pd.concat(
