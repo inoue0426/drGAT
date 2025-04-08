@@ -188,6 +188,8 @@ class NewSampler(object):
         seed,
     ):
         super().__init__()
+        self.seed = seed
+        self.set_seed()
         self.adj_mat_original = original_adj_mat
         self.adj_mat = original_adj_mat.values
         self.null_mask = null_mask
@@ -197,7 +199,6 @@ class NewSampler(object):
         self.train_mask, self.test_mask = self.sample_train_test_mask()
 
         self.PATH = PATH
-        self.seed = seed
 
         # Initialize similarity matrices
         self.S_d = S_d
@@ -213,8 +214,6 @@ class NewSampler(object):
 
         # # Create unified graph representation
         self.edge_index, self.edge_attr = self.update_unified_matrix()
-
-        self.set_seed()
 
     def set_seed(self):
         np.random.seed(self.seed)  # NumPyのシードを設定
