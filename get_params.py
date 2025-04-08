@@ -5,10 +5,8 @@ import pandas as pd
 
 
 def get_params(method, name):
-    method = "GAT"
-    name = "NCI_GAT_New"
     study = optuna.create_study(
-        storage="sqlite:///../Tuning_nci/{}.sqlite3".format(name),
+        storage="sqlite:///../Tuning_NCI/{}.sqlite3".format(name),
         study_name=name,
         load_if_exists=True,
     )

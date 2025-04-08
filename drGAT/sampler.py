@@ -214,11 +214,17 @@ class NewSampler(object):
         # # Create unified graph representation
         self.edge_index, self.edge_attr = self.update_unified_matrix()
 
+        self.set_seed()
+
+    def set_seed(self):
+        np.random.seed(self.seed)  # NumPyのシードを設定
+        torch.manual_seed(self.seed)  # PyTorchのシードを設定
+
     def update_unified_matrix(self):
         """Create unified adjacency matrix combining drug-cell, cell-gene and drug-gene interactions"""
         # Create drug-cell adjacency matrix
         A_dc = pd.DataFrame(
-            self.adj_mat, columns=self.A_cg.index, index=self.A_dg.index
+            self.adj_mat.T, columns=self.A_cg.index, index=self.A_dg.index
         )
 
         # Initialize unified matrix
