@@ -76,20 +76,22 @@ def objective(trial):
         true_datas = pd.DataFrame()
         predict_datas = pd.DataFrame()
 
-            for seed, (train_index, test_index) in enumerate(tqdm(kfold.split(np.arange(pos_num)))):
-                sampler = RandomSampler(
-                    drugAct.T,
-                    train_index,
-                    test_index,
-                    null_mask.T,
-                    S_d,
-                    S_c,
-                    S_g,
-                    A_cg,
-                    A_dg,
-                    PATH,
-                    seed=seed,
-                )
+        for seed, (train_index, test_index) in enumerate(
+            tqdm(kfold.split(np.arange(pos_num)))
+        ):
+            sampler = RandomSampler(
+                drugAct.T,
+                train_index,
+                test_index,
+                null_mask.T,
+                S_d,
+                S_c,
+                S_g,
+                A_cg,
+                A_dg,
+                PATH,
+                seed=seed,
+            )
             (_, _, _, best_val_labels, best_val_prob, best_metrics, _, _, _) = (
                 drGAT.train(sampler, params=params, device=device, verbose=False)
             )
