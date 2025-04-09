@@ -12,4 +12,4 @@
 
 source /data/$USER/conda/etc/profile.d/conda.sh && source /data/$USER/conda/etc/profile.d/mamba.sh
 conda activate genex
-python new_drug_nci_v2.py
+python new_drug_v2.py
