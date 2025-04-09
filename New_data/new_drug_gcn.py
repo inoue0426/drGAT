@@ -96,8 +96,8 @@ def drGAT_new(
         seed,
     )
 
-    (_, best_val_labels, best_val_prob, best_metrics, _, _, _) = (
-        No_atten_drGAT.train(sampler, params=params, device=device, verbose=False)
+    (_, best_val_labels, best_val_prob, best_metrics, _, _, _) = No_atten_drGAT.train(
+        sampler, params=params, device=device, verbose=False
     )
 
     return best_val_labels, best_val_prob
