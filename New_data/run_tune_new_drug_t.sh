@@ -2,7 +2,7 @@
 
 #SBATCH --mem=50gb
 #SBATCH --requeue
-#SBATCH --job-name='NC T'
+#SBATCH --job-name='ND T'
 #SBATCH --partition gpu
 #SBATCH --gres=gpu:a100:1
 #SBATCH --nodes=1
