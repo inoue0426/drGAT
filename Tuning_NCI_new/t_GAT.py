@@ -74,7 +74,9 @@ def objective(trial):
         true_datas = pd.DataFrame()
         predict_datas = pd.DataFrame()
 
-        for seed, (train_index, test_index) in enumerate(kfold.split(np.arange(pos_num))):
+        for seed, (train_index, test_index) in enumerate(
+            kfold.split(np.arange(pos_num))
+        ):
             sampler = RandomSampler(
                 drugAct,
                 train_index,
@@ -86,7 +88,7 @@ def objective(trial):
                 A_cg,
                 A_dg,
                 PATH,
-                seed
+                seed,
             )
             (_, _, _, best_val_labels, best_val_prob, best_metrics, _, _, _) = (
                 drGAT.train(sampler, params=params, device=device, verbose=False)
