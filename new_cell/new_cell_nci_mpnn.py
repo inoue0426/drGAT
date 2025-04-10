@@ -21,32 +21,17 @@ sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-from drGAT import drGAT
+from drGAT import No_atten_drGAT
 from drGAT.load_data import load_data
 from drGAT.sampler import NewSampler
 from get_params import get_params
 from metrics import compute_metrics_stats
 
-name = "gdsc2"
+name = "nci"
 if name == "nci":
     task = "cell"
 else:
     task = "drug"
-
-
-method = "Transoformer"
-PATH = f"../{name}_data/"
-
-if name == "nci":
-    target_dim = [
-        0,  # Cell
-        # 1  # Drug
-    ]
-else:
-    target_dim = [
-        1,  # Drug
-        # 0  # Cell
-    ]
 
 (
     res,
@@ -100,11 +85,15 @@ def drGAT_new(
         seed,
     )
 
-    (_, _, _, best_val_labels, best_val_prob, best_metrics, _, _, _) = drGAT.train(
+    (_, best_val_labels, best_val_prob, best_metrics, _, _, _) = No_atten_drGAT.train(
         sampler, params=params, device=device, verbose=False
     )
 
     return best_val_labels, best_val_prob
+
+
+method = "MPNN"
+PATH = f"../{name}_data/"
 
 
 def objective(trial):
@@ -157,8 +146,6 @@ def objective(trial):
                     if cell_sum[target_index] < 10:
                         continue
 
-                true_datas = pd.DataFrame()
-                true_datas = pd.DataFrame()
                 for fold in range(n_kfold):
                     true_data, predict_data = drGAT_new(
                         res_mat=res,

@@ -92,7 +92,7 @@ def drGAT_new(
     return best_val_labels, best_val_prob
 
 
-method = "Transformer"
+method = "GATv2"
 PATH = f"../{name}_data/"
 
 
@@ -106,7 +106,7 @@ def objective(trial):
         "hidden1": trial.suggest_int("hidden1", 256, 1024),
         "hidden2": trial.suggest_int("hidden2", 64, min(512, trial.params["hidden1"])),
         "hidden3": trial.suggest_int("hidden3", 32, min(256, trial.params["hidden2"])),
-        "epochs": 100,
+        "epochs": 1,
         # trial.suggest_int("epochs", 100, 10000, step=100),
         "heads": trial.suggest_int("heads", 2, 8),
         "activation": trial.suggest_categorical("activation", ["relu", "gelu"]),
@@ -146,8 +146,6 @@ def objective(trial):
                     if cell_sum[target_index] < 10:
                         continue
 
-                true_datas = pd.DataFrame()
-                true_datas = pd.DataFrame()
                 for fold in range(n_kfold):
                     true_data, predict_data = drGAT_new(
                         res_mat=res,
@@ -172,6 +170,8 @@ def objective(trial):
                         [predict_datas, pd.DataFrame(predict_data).T], ignore_index=True
                     )
 
+        true_datas.to_csv('true.csv')
+        predict_datas.to_csv('predict.csv')
         metrics_result = compute_metrics_stats(
             trial=trial,
             true=true_datas,

@@ -2,7 +2,7 @@
 
 #SBATCH --mem=50gb
 #SBATCH --requeue
-#SBATCH --job-name='NC GAT'
+#SBATCH --job-name='sample'
 #SBATCH --partition gpu
 #SBATCH --gres=gpu:a100:1
 #SBATCH --nodes=1
@@ -12,4 +12,4 @@
 
 source /data/$USER/conda/etc/profile.d/conda.sh && source /data/$USER/conda/etc/profile.d/mamba.sh
 conda activate genex
-python new_cell_nci_v2.py
+python sample.py

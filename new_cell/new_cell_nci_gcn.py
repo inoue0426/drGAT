@@ -92,7 +92,7 @@ def drGAT_new(
     return best_val_labels, best_val_prob
 
 
-method = "MPNN"
+method = "GCN"
 PATH = f"../{name}_data/"
 
 
@@ -146,8 +146,6 @@ def objective(trial):
                     if cell_sum[target_index] < 10:
                         continue
 
-                true_datas = pd.DataFrame()
-                true_datas = pd.DataFrame()
                 for fold in range(n_kfold):
                     true_data, predict_data = drGAT_new(
                         res_mat=res,

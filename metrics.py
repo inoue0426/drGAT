@@ -9,9 +9,10 @@ from sklearn.metrics import (accuracy_score, average_precision_score,
 
 def get_result(true, pred, data):
     res = pd.DataFrame()
-    for i in range(5):
+    for i in range(true.shape[0]):
         true_labels = true.loc[i].dropna()
         pred_values = pred.loc[i].dropna()
+
         pred_labels = np.round(pred_values)
 
         # 主要メトリクスの計算
@@ -80,10 +81,13 @@ def compute_metrics_stats(trial, true, pred, data=None, target_metrics=None):
         target_metrics = ["ACC", "F1", "AUROC", "AUPR", "MCC"]
 
     res = pd.DataFrame()
-    for i in range(5):
+    for i in range(true.shape[0]):
         # データ前処理
         true_labels = true.loc[i].dropna()
         pred_values = pred.loc[i].dropna()
+
+        assert len(true_labels) == len(pred_values), f"Mismatch: {len(true_labels)} vs {len(pred_values)}"
+        
         pred_labels = np.round(pred_values).astype(int)
 
         # メトリクス計算
