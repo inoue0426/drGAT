@@ -86,8 +86,10 @@ def compute_metrics_stats(trial, true, pred, data=None, target_metrics=None):
         true_labels = true.loc[i].dropna()
         pred_values = pred.loc[i].dropna()
 
-        assert len(true_labels) == len(pred_values), f"Mismatch: {len(true_labels)} vs {len(pred_values)}"
-        
+        assert len(true_labels) == len(
+            pred_values
+        ), f"Mismatch: {len(true_labels)} vs {len(pred_values)}"
+
         pred_labels = np.round(pred_values).astype(int)
 
         # メトリクス計算
