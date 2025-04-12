@@ -40,7 +40,6 @@ def get_attention_mat(attention):
 
     return attention_matrix
 
-
 class drGAT(Module):
     """A class to generate a drGAT model.
     params: contains params for the model
@@ -50,102 +49,122 @@ class drGAT(Module):
         - hidden2: shape for the hidden2
         - hidden3: shape for the hidden3
         - heads: The number of heads for graph attention
+        - n_layers: Number of GNN layers
+        - gnn_layer: Type of GNN layer to use ("GAT", "GATv2", or "Transformer")
+        - activation: Activation function to use ("relu", "gelu", or "swish")
     """
 
     def __init__(self, params):
         super(drGAT, self).__init__()
 
+        # Initialize hidden layer dimensions and number of attention heads
         hidden1: int = int(params["hidden1"])
         hidden2: int = int(params["hidden2"])
         hidden3: int = int(params["hidden3"])
         heads: int = int(params["heads"])
+        self.n_layers: int = int(params.get("n_layers", 2))  # Default is 2 layers
 
+        # Linear layers for initial feature transformation
         self.linear_drug = Linear(int(params["n_drug"]), hidden1)
         self.linear_cell = Linear(int(params["n_cell"]), hidden1)
         self.linear_gene = Linear(int(params["n_gene"]), hidden1)
 
+        # Store GNN layer type
         self.gnn_layer = params["gnn_layer"]
-        if self.gnn_layer == "GAT":
-            self.gat1 = GATConv(hidden1, hidden2, heads=heads, edge_dim=1)
-            self.gat2 = GATConv(
-                hidden2 * heads,
-                hidden3,
-                heads=heads,
-                edge_dim=1,
-            )
-        elif self.gnn_layer == "GATv2":
-            self.gat1 = GATv2Conv(hidden1, hidden2, heads=heads, edge_dim=1)
-            self.gat2 = GATv2Conv(
-                hidden2 * heads,
-                hidden3,
-                heads=heads,
-                edge_dim=1,
-            )
-        elif self.gnn_layer == "Transformer":
-            self.gat1 = TransformerConv(hidden1, hidden2, heads=heads, edge_dim=1)
-            self.gat2 = TransformerConv(
-                hidden2 * heads,
-                hidden3,
-                heads=heads,
-                edge_dim=1,
-            )
 
-        self.dropout1 = Dropout(params["dropout1"])
-        self.dropout2 = Dropout(params["dropout2"])
+        # Initialize lists for GNN layers, normalization, and dropout
+        self.gat_layers = nn.ModuleList()
+        self.graph_norms = nn.ModuleList()
+        self.dropouts = nn.ModuleList()
 
-        self.graph_norm1 = GraphNorm(hidden2 * heads)
-        self.graph_norm2 = GraphNorm(hidden3 * heads)
+        # Configure dimensions for each layer
+        in_channels = [hidden1] + [hidden2 * heads] * (self.n_layers - 1)
+        out_channels = [hidden2] * (self.n_layers - 1) + [hidden3]
 
+        # Create GNN layers based on specified type
+        for i in range(self.n_layers):
+            if self.gnn_layer == "GAT":
+                self.gat_layers.append(
+                    GATConv(in_channels[i], out_channels[i], heads=heads, edge_dim=1)
+                )
+            elif self.gnn_layer == "GATv2":
+                self.gat_layers.append(
+                    GATv2Conv(in_channels[i], out_channels[i], heads=heads, edge_dim=1)
+                )
+            elif self.gnn_layer == "Transformer":
+                self.gat_layers.append(
+                    TransformerConv(in_channels[i], out_channels[i], heads=heads, edge_dim=1)
+                )
+
+            # Add normalization and dropout layers
+            self.graph_norms.append(GraphNorm(out_channels[i] * heads))
+            self.dropouts.append(Dropout(params["dropout1"] if i == 0 else params["dropout2"]))
+
+        # Final linear layer for prediction
         self.linear1 = Linear(
             hidden3 * heads + hidden3 * heads,
             1,
         )
 
+        # Set activation function
         self.activation = self._get_activation(params.get("activation", "relu"))
 
     def _get_activation(self, name):
+        """Helper method to get activation function
+        Args:
+            name: Name of activation function ("relu", "gelu", or "swish")
+        Returns:
+            Activation function module
+        """
         activations = {
             "relu": nn.ReLU(),
             "gelu": nn.GELU(),
-            "swish": nn.SiLU(),  # PyTorch 1.7+で正式実装
+            "swish": nn.SiLU(),
         }
         return activations.get(name.lower(), nn.ReLU())
 
     def forward(self, drug, cell, gene, edge_index, edge_attr, idx_drug, idx_cell):
-
+        """Forward pass of the model
+        Args:
+            drug: Drug features
+            cell: Cell features
+            gene: Gene features
+            edge_index: Graph edge indices
+            edge_attr: Edge attributes
+            idx_drug: Drug indices
+            idx_cell: Cell indices
+        Returns:
+            x: Model predictions
+            all_attention: Accumulated attention weights
+        """
+        # Concatenate transformed features
         x = torch.concat(
             [self.linear_drug(drug), self.linear_cell(cell), self.linear_gene(gene)]
         )
 
+        # Adjust edge attributes for Transformer layer
         if self.gnn_layer == "Transformer":
             edge_attr = edge_attr.unsqueeze(-1)
 
         edge_attr = edge_attr.to(torch.float32)
+        all_attention = 0
 
-        x, attention = self.gat1(
-            x=x,
-            edge_index=edge_index,
-            edge_attr=edge_attr,
-            return_attention_weights=True,
-        )
-        all_attention = get_attention_mat(attention)
-        del attention
+        # Apply GNN layers sequentially
+        for i in range(self.n_layers):
+            x, attention = self.gat_layers[i](
+                x=x,
+                edge_index=edge_index,
+                edge_attr=edge_attr,
+                return_attention_weights=True,
+            )
+            all_attention += get_attention_mat(attention)
+            del attention
 
-        x = x.to(torch.float32)
-        x = self.dropout1(self.activation(self.graph_norm1(x)))
+            # Apply normalization, activation, and dropout
+            x = x.to(torch.float32)
+            x = self.dropouts[i](self.activation(self.graph_norms[i](x)))
 
-        x, attention = self.gat2(
-            x=x,
-            edge_index=edge_index,
-            edge_attr=edge_attr,
-            return_attention_weights=True,
-        )
-        all_attention += get_attention_mat(attention)
-        del attention
-
-        x = x.to(torch.float32)
-        x = self.dropout2(self.activation(self.graph_norm2(x)))
-
+        # Extract and concatenate relevant node features
         x = torch.concat(
             [
                 x[idx_drug],
@@ -154,6 +173,7 @@ class drGAT(Module):
             1,
         )
 
+        # Final prediction
         x = self.linear1(x)
 
         return x, all_attention
