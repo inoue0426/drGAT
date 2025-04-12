@@ -78,10 +78,10 @@ def objective(trial):
             kfold.split(np.arange(pos_num))
         ):
             sampler = RandomSampler(
-                drugAct,
+                drugAct.T,
                 train_index,
                 test_index,
-                null_mask,
+                null_mask.T,
                 S_d,
                 S_c,
                 S_g,

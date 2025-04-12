@@ -17,11 +17,11 @@ sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-from drGAT import drGAT
+from drGAT import No_atten_drGAT
 from drGAT.load_data import load_data
 from drGAT.sampler import RandomSampler
 
-drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg = load_data("nci")
+drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg = load_data()
 
 PATH = "../nci_data/"
 
@@ -35,17 +35,25 @@ def objective(trial):
         "dropout2": trial.suggest_categorical("dropout2", [0.1, 0.2, 0.3, 0.4, 0.5]),
         "hidden1": trial.suggest_categorical(
             "hidden1",
-            [256, 512, 1028, 2048],
+            [256, 512, 1028],
         ),
         "hidden2": trial.suggest_categorical(
             "hidden2",
-            [128, 256, 512, 1024],
+            [
+                128,
+                256,
+                512,
+            ],
         ),
         "hidden3": trial.suggest_categorical(
             "hidden3",
-            [64, 128, 256, 512],
+            [
+                64,
+                128,
+                256,
+            ],
         ),
-        "epochs": trial.suggest_int("epochs", 1000, 10000, step=1000),
+        "epochs": 2,
         "heads": trial.suggest_categorical("heads", [1, 2, 3, 4, 5]),
         "activation": trial.suggest_categorical(
             "activation", ["relu", "gelu", "swish"]
@@ -56,12 +64,11 @@ def objective(trial):
         "scheduler": trial.suggest_categorical(
             "scheduler", [None, "Cosine", "Step", "Plateau"]
         ),
-        "gnn_layer": trial.suggest_categorical(
-            "gnn_layer", ["GAT", "GATv2", "Transformer"]
+        "gnn_layer": 'GCN',
         ),
     }
 
-    # Add scheduler-related parameters conditionally
+    # スケジューラ関連パラメータの条件付き追加
     if params["scheduler"] == "Cosine":
         params["T_max"] = trial.suggest_int("T_max", 20, 50)
     elif params["scheduler"] == "Step":
@@ -83,9 +90,9 @@ def objective(trial):
         params["momentum"] = trial.suggest_float("momentum", 0.8, 0.95)
         params["nesterov"] = trial.suggest_categorical("nesterov", [True, False])
 
-    # # Constraint on hidden layer sizes and batch size
-    # if (params["hidden1"] > 512) and (params["hidden2"] > 256):
-    #     raise optuna.TrialPruned("Memory intensive configuration")
+    # 隠れ層サイズとバッチサイズの関係を制約
+    if (params["hidden1"] > 512) and (params["hidden2"] > 256):
+        raise optuna.TrialPruned("Memory intensive configuration")
 
     try:
         k = 5
@@ -106,7 +113,7 @@ def objective(trial):
                 PATH,
                 seed=seed,
             )
-            (_, _, _, best_metrics, _, _, _) = drGAT.train(
+            _, best_metrics, _ = No_atten_drGAT.train(
                 sampler, params=params, device=device, verbose=False
             )
 
@@ -123,26 +130,25 @@ def objective(trial):
         if "CUDA out of memory" in str(e):
             print(f"Pruned trial {trial.number}: CUDA OOM")
 
-            # Free memory
+            # メモリ解放処理
             with torch.cuda.device("cuda"):
                 torch.cuda.empty_cache()
             gc.collect()
 
+            # Pruning通知
             raise optuna.TrialPruned(f"OOM at trial {trial.number}")
 
         else:
             raise e
 
 
-name = "NCI_GAT_More"
+name = "NCI"
 study = optuna.create_study(
     directions=["maximize"] * 4,
     sampler=optuna.samplers.TPESampler(),
     pruner=optuna.pruners.HyperbandPruner(),
-    storage="sqlite:///{}.sqlite3".format(name),
+    storage="sqlite:///{}_{}.sqlite3".format(name, "GCN_MPNN"),
     study_name=name,
     load_if_exists=True,
 )
 study.optimize(objective, n_trials=100)
-
-study.trials_dataframe()

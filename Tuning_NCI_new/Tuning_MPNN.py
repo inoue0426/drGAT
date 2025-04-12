@@ -64,10 +64,7 @@ def objective(trial):
         "scheduler": trial.suggest_categorical(
             "scheduler", [None, "Cosine", "Step", "Plateau"]
         ),
-        "gnn_layer": trial.suggest_categorical(
-            "gnn_layer",
-            ["GCN", "MPNN"],
-        ),
+        "gnn_layer": 'MPNN',
     }
 
     # スケジューラ関連パラメータの条件付き追加
@@ -103,16 +100,17 @@ def objective(trial):
         res = pd.DataFrame()
         for train_index, test_index in kfold.split(np.arange(pos_num)):
             sampler = RandomSampler(
-                drugAct,
+                drugAct.T,
                 train_index,
                 test_index,
-                null_mask,
+                null_mask.T,
                 S_d,
                 S_c,
                 S_g,
                 A_cg,
                 A_dg,
                 PATH,
+                seed=seed,
             )
             _, best_metrics, _ = No_atten_drGAT.train(
                 sampler, params=params, device=device, verbose=False
