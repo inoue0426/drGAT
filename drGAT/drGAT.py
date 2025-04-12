@@ -40,6 +40,7 @@ def get_attention_mat(attention):
 
     return attention_matrix
 
+
 class drGAT(Module):
     """A class to generate a drGAT model.
     params: contains params for the model
@@ -93,12 +94,16 @@ class drGAT(Module):
                 )
             elif self.gnn_layer == "Transformer":
                 self.gat_layers.append(
-                    TransformerConv(in_channels[i], out_channels[i], heads=heads, edge_dim=1)
+                    TransformerConv(
+                        in_channels[i], out_channels[i], heads=heads, edge_dim=1
+                    )
                 )
 
             # Add normalization and dropout layers
             self.graph_norms.append(GraphNorm(out_channels[i] * heads))
-            self.dropouts.append(Dropout(params["dropout1"] if i == 0 else params["dropout2"]))
+            self.dropouts.append(
+                Dropout(params["dropout1"] if i == 0 else params["dropout2"])
+            )
 
         # Final linear layer for prediction
         self.linear1 = Linear(

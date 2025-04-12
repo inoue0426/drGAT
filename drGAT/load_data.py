@@ -131,6 +131,7 @@ def _get_drug_features(PATH, drugAct, smiles_data, smiles_key="SMILES", drug_key
 
     return drug_feature
 
+
 def _get_normalized_gene_data(exprs):
     """Normalize gene expression data."""
     gene_norm_cell = pd.DataFrame(
@@ -146,6 +147,7 @@ def _get_normalized_gene_data(exprs):
     ).T
 
     return gene_norm_cell, gene_norm_gene
+
 
 def _load_data(PATH, is_ctrp=False):
     """Load and process GDSC1 dataset."""
@@ -193,7 +195,7 @@ def _load_data(PATH, is_ctrp=False):
     cell_sim = _get_cell_similarity(PATH, gene_norm_gene)
 
     # Create adjacency matrices
-    A_cg = gene_norm_cell*(gene_norm_cell > 0).astype(int)
+    A_cg = gene_norm_cell * (gene_norm_cell > 0).astype(int)
 
     A_dg = (
         pd.DataFrame(
