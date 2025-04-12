@@ -147,29 +147,29 @@ def objective(trial):
                         if cell_sum[target_index] < 10:
                             continue
         
-                    for fold in range(n_kfold):
-                        sampler = NewSampler(
-                            res,
-                            null_mask.T.values,
-                            target_dim,
-                            target_index,
-                            S_d,
-                            S_c,
-                            S_g,
-                            A_cg,
-                            A_dg,
-                            PATH,
-                            seed,
+                        true_data, predict_data = drGAT_new(
+                            res_mat=res,
+                            null_mask=null_mask.T.values,
+                            target_dim=dim,
+                            target_index=target_index,
+                            S_d=S_d,
+                            S_c=S_c,
+                            S_g=S_g,
+                            A_cg=A_cg,
+                            A_dg=A_dg,
+                            PATH=PATH,
+                            params=params,
+                            device=device,
+                            seed=seed,
                         )
-                    else:
-                        print(f"Target {target_index} skipped: All labels are {'0' if tmp == 0 else '1'}.")
-
-                    true_datas = pd.concat(
-                        [true_datas, pd.DataFrame(true_data).T], ignore_index=True
-                    )
-                    predict_datas = pd.concat(
-                        [predict_datas, pd.DataFrame(predict_data).T], ignore_index=True
-                    )
+                        true_datas = pd.concat(
+                            [true_datas, pd.DataFrame(true_data).T], ignore_index=True
+                        )
+                        predict_datas = pd.concat(
+                            [predict_datas, pd.DataFrame(predict_data).T], ignore_index=True
+                        )
+                else:
+                    print(f"Target {target_index} skipped: All labels are {'0' if tmp == 0 else '1'}.")
 
         metrics_result = compute_metrics_stats(
             trial=trial,
