@@ -104,7 +104,7 @@ def objective(trial):
         "hidden1": trial.suggest_int("hidden1", 256, 1024),
         "hidden2": trial.suggest_int("hidden2", 64, min(512, trial.params["hidden1"])),
         "hidden3": trial.suggest_int("hidden3", 32, min(256, trial.params["hidden2"])),
-        "epochs": 1,
+        "epochs": 100,
         # trial.suggest_int("epochs", 100, 10000, step=100),
         "heads": trial.suggest_int("heads", 2, 8),
         "activation": trial.suggest_categorical("activation", ["relu", "gelu"]),

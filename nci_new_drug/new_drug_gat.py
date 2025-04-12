@@ -53,8 +53,8 @@ PATH = f"../{name}_data/"
     _,
 ) = load_data(name)
 res = res.T
-cell_sum = np.sum(res, axis=1)
-drug_sum = np.sum(res, axis=0)
+cell_sum = np.sum(res.values, axis=1)
+drug_sum = np.sum(res.values, axis=0)
 
 
 def drGAT_new(
