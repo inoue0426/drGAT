@@ -71,23 +71,6 @@ def _process_gene_expression(exprs, dti, genes=None):
     return exprs
 
 
-def _get_normalized_gene_data(exprs):
-    """Normalize gene expression data."""
-    gene_norm_cell = pd.DataFrame(
-        StandardScaler().fit_transform(exprs),
-        index=exprs.index,
-        columns=exprs.columns,
-    )
-
-    gene_norm_gene = pd.DataFrame(
-        StandardScaler().fit_transform(exprs.T),
-        index=exprs.columns,
-        columns=exprs.index,
-    ).T
-
-    return gene_norm_cell, gene_norm_gene
-
-
 def _get_gene_similarity(PATH, gene_norm_cell):
     """Get or compute gene similarity matrix."""
     gene_sim_files = glob.glob(PATH + "gene_sim/gene_sim_part_*.parquet")
@@ -148,6 +131,21 @@ def _get_drug_features(PATH, drugAct, smiles_data, smiles_key="SMILES", drug_key
 
     return drug_feature
 
+def _get_normalized_gene_data(exprs):
+    """Normalize gene expression data."""
+    gene_norm_cell = pd.DataFrame(
+        StandardScaler().fit_transform(exprs),
+        index=exprs.index,
+        columns=exprs.columns,
+    )
+
+    gene_norm_gene = pd.DataFrame(
+        StandardScaler().fit_transform(exprs.T),
+        index=exprs.columns,
+        columns=exprs.index,
+    ).T
+
+    return gene_norm_cell, gene_norm_gene
 
 def _load_data(PATH, is_ctrp=False):
     """Load and process GDSC1 dataset."""
@@ -195,7 +193,7 @@ def _load_data(PATH, is_ctrp=False):
     cell_sim = _get_cell_similarity(PATH, gene_norm_gene)
 
     # Create adjacency matrices
-    A_cg = min_max_scale(gene_norm_gene + gene_norm_cell)
+    A_cg = gene_norm_cell*(gene_norm_cell > 0).astype(int)
 
     A_dg = (
         pd.DataFrame(
