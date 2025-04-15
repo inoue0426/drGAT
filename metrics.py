@@ -62,7 +62,7 @@ def get_result(true, pred, data):
     return result_table
 
 
-def compute_metrics_stats(trial, true, pred, data=None, target_metrics=None):
+def compute_metrics_stats(true, pred, trial=None, data=None, target_metrics=None):
     """
     Optuna統合用メトリクス計算関数
 
@@ -113,15 +113,17 @@ def compute_metrics_stats(trial, true, pred, data=None, target_metrics=None):
     # 統計量計算
     stats = {"means": res.mean().to_dict(), "stds": res.std().to_dict()}
 
-    # Optunaへの結果保存
-    for metric in stats["means"]:
-        # ユーザー属性として保存
-        trial.set_user_attr(f"{metric}_mean", float(stats["means"][metric]))
-        trial.set_user_attr(f"{metric}_std", float(stats["stds"][metric]))
 
-        if metric in target_metrics:
-            print(f"{metric}_mean: {stats['means'][metric]:.4f}")
-            print(f"{metric}_std: {stats['stds'][metric]:.4f}")
+    if trial is not None:
+        # Optunaへの結果保存
+        for metric in stats["means"]:
+            # ユーザー属性として保存
+            trial.set_user_attr(f"{metric}_mean", float(stats["means"][metric]))
+            trial.set_user_attr(f"{metric}_std", float(stats["stds"][metric]))
+    
+            if metric in target_metrics:
+                print(f"{metric}_mean: {stats['means'][metric]:.4f}")
+                print(f"{metric}_std: {stats['stds'][metric]:.4f}")
 
     # フォーマット済み結果（オプション）
     formatted_stats = {
