@@ -30,15 +30,14 @@ def get_attention_mat(attention):
     attention: attention tensor from Graph Attention layer.
     """
 
-    edge_index, attention_weights = [i.detach().cpu() for i in attention]
+    tmp = attention[1].cpu().detach().numpy()
+    edge = attention[0].cpu().detach().numpy()
+    
+    idx = max(edge[0]) + 1
+    graph = np.zeros((idx, idx))
+    graph[edge[0], edge[1]] = tmp.mean(axis=1)
 
-    num_nodes = torch.max(edge_index) + 1
-    attention_matrix = torch.zeros(
-        (num_nodes, num_nodes), dtype=attention_weights.dtype
-    )
-    attention_matrix[edge_index[0], edge_index[1]] = attention_weights.squeeze().mean()
-
-    return attention_matrix
+    return graph
 
 
 class drGAT(Module):
@@ -162,7 +161,8 @@ class drGAT(Module):
                 edge_attr=edge_attr,
                 return_attention_weights=True,
             )
-            all_attention += get_attention_mat(attention)
+            tmp = get_attention_mat(attention)
+            all_attention += tmp
             del attention
 
             # Apply normalization, activation, and dropout
@@ -459,7 +459,14 @@ def train_one_epoch(
     train_acc = (predict == train_labels).sum().item() / len(predict)
     train_accs.append(train_acc)
 
+    
     scaler.scale(loss).backward()
+
+    del outputs, loss, predict
+    torch.cuda.empty_cache() 
+    
+    scaler.unscale_(optimizer)
+    torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
     scaler.step(optimizer)
     scaler.update()
     return attention
