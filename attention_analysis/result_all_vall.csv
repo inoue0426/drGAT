@@ -1,0 +1,5026 @@
+NSC,drug,gene,num
+740,METHOTREXATE,LINC01287,0
+740,METHOTREXATE,PVALB,0
+740,METHOTREXATE,IGLL5,0
+740,METHOTREXATE,JCHAIN,0
+740,METHOTREXATE,TLR7,5
+752,6-THIOGUANINE,MAPK8,0
+752,6-THIOGUANINE,THYN1,0
+752,6-THIOGUANINE,CDK7,0
+752,6-THIOGUANINE,TTK,0
+752,6-THIOGUANINE,CWC15,0
+755,6-MERCAPTOPURINE,HPRT1,4
+755,6-MERCAPTOPURINE,CWC15,0
+755,6-MERCAPTOPURINE,THYN1,0
+755,6-MERCAPTOPURINE,PPAT,0
+755,6-MERCAPTOPURINE,RPL5,0
+757,Colchicine,MIR658,0
+757,Colchicine,LINC01287,0
+757,Colchicine,IGLL5,0
+757,Colchicine,PVALB,0
+757,Colchicine,JCHAIN,0
+762,Nitrogen mustard,CWC15,0
+762,Nitrogen mustard,THYN1,0
+762,Nitrogen mustard,RPL5,0
+762,Nitrogen mustard,PSMA2,0
+762,Nitrogen mustard,CDK7,0
+1390,Allopurinol,CWC15,0
+1390,Allopurinol,THYN1,0
+1390,Allopurinol,CDK7,0
+1390,Allopurinol,MAPK8,0
+1390,Allopurinol,PARP2,0
+1895,GUANAZOLE,CWC15,0
+1895,GUANAZOLE,THYN1,0
+1895,GUANAZOLE,RPL5,0
+1895,GUANAZOLE,PARP2,0
+1895,GUANAZOLE,CDK7,0
+3053,Actinomycin D,LINC01287,0
+3053,Actinomycin D,JCHAIN,0
+3053,Actinomycin D,PVALB,0
+3053,Actinomycin D,IGLL5,0
+3053,Actinomycin D,TLR7,0
+3061,malacid,MAPK8,0
+3061,malacid,THYN1,0
+3061,malacid,CDK7,0
+3061,malacid,TTK,0
+3061,malacid,CWC15,0
+3088,Chlorambucil,MAPK8,0
+3088,Chlorambucil,THYN1,0
+3088,Chlorambucil,CDK7,0
+3088,Chlorambucil,FDX1,0
+3088,Chlorambucil,TTK,0
+6396,Thiotepa,CWC15,0
+6396,Thiotepa,THYN1,0
+6396,Thiotepa,PSMA2,0
+6396,Thiotepa,RPL5,0
+6396,Thiotepa,NUP37,0
+8806,Melphalan,MAPK8,0
+8806,Melphalan,THYN1,0
+8806,Melphalan,FDX1,0
+8806,Melphalan,CDK7,1
+8806,Melphalan,TTK,1
+9706,Triethylenemelamine,CWC15,0
+9706,Triethylenemelamine,PSMA2,0
+9706,Triethylenemelamine,C14orf166,0
+9706,Triethylenemelamine,RPL5,0
+9706,Triethylenemelamine,THYN1,0
+12198,Dromostanolone Propionate,MIR641,0
+12198,Dromostanolone Propionate,MIR5699,0
+12198,Dromostanolone Propionate,PVALB,0
+12198,Dromostanolone Propionate,JCHAIN,0
+12198,Dromostanolone Propionate,IGLL5,0
+14229,Acrichine,LINC01287,0
+14229,Acrichine,PVALB,0
+14229,Acrichine,JCHAIN,0
+14229,Acrichine,IGLL5,0
+14229,Acrichine,HBG1,0
+19893,Fluorouracil,TYMS,230
+19893,Fluorouracil,CWC15,0
+19893,Fluorouracil,THYN1,0
+19893,Fluorouracil,RPL5,1
+19893,Fluorouracil,CDK7,5
+23162,Nandrolone phenpropionate,PVALB,0
+23162,Nandrolone phenpropionate,JCHAIN,0
+23162,Nandrolone phenpropionate,IGLL5,0
+23162,Nandrolone phenpropionate,LINC01287,0
+23162,Nandrolone phenpropionate,HBG1,0
+23759,TESTOLACTONE,MAPK8,0
+23759,TESTOLACTONE,REC8,0
+23759,TESTOLACTONE,NEK11,0
+23759,TESTOLACTONE,DKK3,0
+23759,TESTOLACTONE,SPEG,0
+24559,Mithramycin,LINC01287,0
+24559,Mithramycin,JCHAIN,0
+24559,Mithramycin,PVALB,0
+24559,Mithramycin,IGLL5,0
+24559,Mithramycin,TLR7,1
+25154,Pipobroman,CWC15,0
+25154,Pipobroman,THYN1,0
+25154,Pipobroman,RPL5,0
+25154,Pipobroman,PARP2,0
+25154,Pipobroman,PSMA2,0
+26271,Cyclophosphamide,MAPK8,1
+26271,Cyclophosphamide,THYN1,0
+26271,Cyclophosphamide,FDX1,1
+26271,Cyclophosphamide,CWC15,0
+26271,Cyclophosphamide,CDK7,1
+26980,Mitomycin,PVALB,0
+26980,Mitomycin,IGLL5,0
+26980,Mitomycin,JCHAIN,0
+26980,Mitomycin,LINC01287,0
+26980,Mitomycin,HBG1,0
+27640,Floxuridine,REC8,0
+27640,Floxuridine,MAPK8,0
+27640,Floxuridine,SH2D1A,0
+27640,Floxuridine,ITK,0
+27640,Floxuridine,ZAP70,0
+32065,Hydroxyurea,RRM1,12
+32065,Hydroxyurea,CWC15,0
+32065,Hydroxyurea,PSMA2,0
+32065,Hydroxyurea,C14orf166,0
+32065,Hydroxyurea,RPL5,0
+32982,Curcumin,THYN1,0
+32982,Curcumin,MAPK8,8
+32982,Curcumin,CWC15,0
+32982,Curcumin,CDK7,2
+32982,Curcumin,TTK,0
+33410,Colchicine Derivative,LINC01287,0
+33410,Colchicine Derivative,IGLL5,0
+33410,Colchicine Derivative,PVALB,0
+33410,Colchicine Derivative,JCHAIN,0
+33410,Colchicine Derivative,TLR7,1
+34462,Uracil mustard,MAPK8,0
+34462,Uracil mustard,THYN1,0
+34462,Uracil mustard,TTK,0
+34462,Uracil mustard,CDK7,0
+34462,Uracil mustard,FDX1,0
+34521,Dexamethasone Decadron,MAPK8,1
+34521,Dexamethasone Decadron,DKK3,1
+34521,Dexamethasone Decadron,NEK11,0
+34521,Dexamethasone Decadron,SPEG,2
+34521,Dexamethasone Decadron,REC8,0
+36405,Chelerythrine,MAPK8,1
+36405,Chelerythrine,REC8,0
+36405,Chelerythrine,NEK11,0
+36405,Chelerythrine,DKK3,0
+36405,Chelerythrine,SPEG,1
+38721,Mitotane,MAPK8,0
+38721,Mitotane,THYN1,0
+38721,Mitotane,CWC15,0
+38721,Mitotane,CDK7,0
+38721,Mitotane,TTK,0
+45388,DACARBAZINE,MAPK8,3
+45388,DACARBAZINE,THYN1,0
+45388,DACARBAZINE,TTK,1
+45388,DACARBAZINE,CDK7,1
+45388,DACARBAZINE,FDX1,0
+49842,Vinblastine,LINC01287,0
+49842,Vinblastine,JCHAIN,0
+49842,Vinblastine,PVALB,0
+49842,Vinblastine,IGLL5,0
+49842,Vinblastine,MIR5699,0
+51143,Pyrazoloimidazole,CWC15,0
+51143,Pyrazoloimidazole,THYN1,0
+51143,Pyrazoloimidazole,NUP37,0
+51143,Pyrazoloimidazole,PARP2,0
+51143,Pyrazoloimidazole,CDK7,0
+56410,PORFIROMYCIN,PVALB,0
+56410,PORFIROMYCIN,JCHAIN,0
+56410,PORFIROMYCIN,IGLL5,0
+56410,PORFIROMYCIN,LINC01287,0
+56410,PORFIROMYCIN,MIR5699,0
+59687,Acetalax,MAPK8,0
+59687,Acetalax,THYN1,0
+59687,Acetalax,CDK7,0
+59687,Acetalax,TTK,0
+59687,Acetalax,FDX1,0
+59814,Critex,MAPK8,0
+59814,Critex,THYN1,0
+59814,Critex,CWC15,0
+59814,Critex,CDK7,0
+59814,Critex,TTK,0
+63878,Cytarabine,MAPK8,0
+63878,Cytarabine,FDX1,0
+63878,Cytarabine,MND1,0
+63878,Cytarabine,REC8,0
+63878,Cytarabine,THYN1,0
+63984,Cordycepin,REC8,0
+63984,Cordycepin,SH2D1A,0
+63984,Cordycepin,ITK,0
+63984,Cordycepin,ZAP70,1
+63984,Cordycepin,CD3E,0
+67574,Vincristine,LINC01287,0
+67574,Vincristine,JCHAIN,3
+67574,Vincristine,PVALB,0
+67574,Vincristine,IGLL5,2
+67574,Vincristine,MIR5699,0
+71261,Beta-Thioguanine Deoxyriboside,IGLL5,0
+71261,Beta-Thioguanine Deoxyriboside,PVALB,0
+71261,Beta-Thioguanine Deoxyriboside,JCHAIN,0
+71261,Beta-Thioguanine Deoxyriboside,LINC01287,0
+71261,Beta-Thioguanine Deoxyriboside,MIR5699,0
+71423,Megestrol acetate,MIR330,0
+71423,Megestrol acetate,MIR6807,0
+71423,Megestrol acetate,MIR6728,0
+71423,Megestrol acetate,HPGDS,0
+71423,Megestrol acetate,MIR1231,0
+71795,ELLIPTICINE,MAPK8,0
+71795,ELLIPTICINE,FDX1,0
+71795,ELLIPTICINE,MND1,0
+71795,ELLIPTICINE,THYN1,0
+71795,ELLIPTICINE,REC8,0
+71851,A-TGdR,MIR5699,0
+71851,A-TGdR,MIR658,0
+71851,A-TGdR,MIR641,0
+71851,A-TGdR,IGLL5,0
+71851,A-TGdR,JCHAIN,0
+73754,Fluorodopan,MAPK8,0
+73754,Fluorodopan,REC8,0
+73754,Fluorodopan,FDX1,0
+73754,Fluorodopan,MND1,0
+73754,Fluorodopan,THYN1,0
+77213,Procarbazine,THYN1,0
+77213,Procarbazine,MAPK8,0
+77213,Procarbazine,CWC15,0
+77213,Procarbazine,NUP37,0
+77213,Procarbazine,CDK7,0
+79037,Lomustine,MAPK8,0
+79037,Lomustine,THYN1,0
+79037,Lomustine,FDX1,0
+79037,Lomustine,MND1,0
+79037,Lomustine,TTK,0
+82151,Daunorubicin,LINC01287,0
+82151,Daunorubicin,JCHAIN,2
+82151,Daunorubicin,PVALB,0
+82151,Daunorubicin,IGLL5,0
+82151,Daunorubicin,TLR7,6
+83142,Daunorubicin,LINC01287,0
+83142,Daunorubicin,PVALB,0
+83142,Daunorubicin,JCHAIN,2
+83142,Daunorubicin,IGLL5,0
+83142,Daunorubicin,TLR7,6
+83265,Trityl cysteine,THYN1,0
+83265,Trityl cysteine,MAPK8,0
+83265,Trityl cysteine,CWC15,0
+83265,Trityl cysteine,CDK7,0
+83265,Trityl cysteine,TTK,0
+85998,STREPTOZOCIN,MAPK8,4
+85998,STREPTOZOCIN,THYN1,0
+85998,STREPTOZOCIN,FDX1,0
+85998,STREPTOZOCIN,ACTB,3
+85998,STREPTOZOCIN,SPEG,0
+87877,8-hydroxy-7-((6-sulfonaphthalen-2-yl) diazenyl)quinoline...,MAPK8,0
+87877,8-hydroxy-7-((6-sulfonaphthalen-2-yl) diazenyl)quinoline...,THYN1,0
+87877,8-hydroxy-7-((6-sulfonaphthalen-2-yl) diazenyl)quinoline...,ACTB,0
+87877,8-hydroxy-7-((6-sulfonaphthalen-2-yl) diazenyl)quinoline...,FDX1,0
+87877,8-hydroxy-7-((6-sulfonaphthalen-2-yl) diazenyl)quinoline...,DKK3,0
+88536,Calusterone,REC8,0
+88536,Calusterone,SH2D1A,0
+88536,Calusterone,ZAP70,0
+88536,Calusterone,CD3E,0
+88536,Calusterone,ITK,0
+89201,Estramustine,PVALB,0
+89201,Estramustine,JCHAIN,0
+89201,Estramustine,MIR641,0
+89201,Estramustine,IGLL5,0
+89201,Estramustine,MIR5699,0
+90636,Vinblastine,LINC01287,0
+90636,Vinblastine,JCHAIN,0
+90636,Vinblastine,PVALB,0
+90636,Vinblastine,IGLL5,0
+90636,Vinblastine,MIR5699,0
+94600,CAMPTOTHECIN,MIR658,0
+94600,CAMPTOTHECIN,RNASE2,0
+94600,CAMPTOTHECIN,MPO,14
+94600,CAMPTOTHECIN,TYROBP,0
+94600,CAMPTOTHECIN,MIR2278,0
+95382,Camptothecin Derivative,MIR5699,0
+95382,Camptothecin Derivative,MIR658,0
+95382,Camptothecin Derivative,MIR641,0
+95382,Camptothecin Derivative,IGLL5,0
+95382,Camptothecin Derivative,JCHAIN,0
+95441,METHYL CCNU,MAPK8,0
+95441,METHYL CCNU,REC8,0
+95441,METHYL CCNU,MND1,0
+95441,METHYL CCNU,FDX1,0
+95441,METHYL CCNU,THYN1,0
+95466,PCNU,REC8,0
+95466,PCNU,MAPK8,0
+95466,PCNU,SH2D1A,0
+95466,PCNU,ZAP70,0
+95466,PCNU,CD3E,0
+95678,3-HP,MAPK8,0
+95678,3-HP,FDX1,0
+95678,3-HP,MND1,0
+95678,3-HP,THYN1,0
+95678,3-HP,CDK7,0
+100880,Camptothecin,PVALB,0
+100880,Camptothecin,IGLL5,0
+100880,Camptothecin,JCHAIN,0
+100880,Camptothecin,LINC01287,0
+100880,Camptothecin,MIR5699,0
+102627,Yoshi 864,THYN1,0
+102627,Yoshi 864,MAPK8,0
+102627,Yoshi 864,CWC15,0
+102627,Yoshi 864,CDK7,0
+102627,Yoshi 864,TTK,0
+102816,AZACITIDINE,MAPK8,0
+102816,AZACITIDINE,REC8,0
+102816,AZACITIDINE,MND1,0
+102816,AZACITIDINE,FDX1,1
+102816,AZACITIDINE,SLC35G2,0
+104800,Mitozolomide,CWC15,0
+104800,Mitozolomide,THYN1,0
+104800,Mitozolomide,RPL5,0
+104800,Mitozolomide,PSMA2,0
+104800,Mitozolomide,PARP2,0
+105014,Cladribine,SH2D1A,0
+105014,Cladribine,ITK,0
+105014,Cladribine,ZAP70,6
+105014,Cladribine,CD3E,0
+105014,Cladribine,MIR142,0
+105132,Deoxycamptothecin,RNASE2,0
+105132,Deoxycamptothecin,MIR3198-1,0
+105132,Deoxycamptothecin,MIR2278,0
+105132,Deoxycamptothecin,TYROBP,0
+105132,Deoxycamptothecin,MIR658,0
+107124,Camptothecin Derivative,IGLL5,0
+107124,Camptothecin Derivative,PVALB,0
+107124,Camptothecin Derivative,LINC01287,0
+107124,Camptothecin Derivative,JCHAIN,0
+107124,Camptothecin Derivative,MIR5699,0
+107392,5-HP,MAPK8,0
+107392,5-HP,FDX1,0
+107392,5-HP,MND1,0
+107392,5-HP,THYN1,0
+107392,5-HP,REC8,0
+109724,Ifosfamide,MAPK8,1
+109724,Ifosfamide,FDX1,0
+109724,Ifosfamide,MND1,0
+109724,Ifosfamide,REC8,0
+109724,Ifosfamide,THYN1,0
+109874,Benzimate,CWC15,0
+109874,Benzimate,THYN1,0
+109874,Benzimate,CDK7,0
+109874,Benzimate,RPL5,0
+109874,Benzimate,TTK,0
+111180,Acetylcysteine,THYN1,0
+111180,Acetylcysteine,CWC15,0
+111180,Acetylcysteine,CDK7,0
+111180,Acetylcysteine,PARP2,0
+111180,Acetylcysteine,TTK,1
+111533,Methoxycamptothecin,PVALB,0
+111533,Methoxycamptothecin,JCHAIN,0
+111533,Methoxycamptothecin,IGLL5,0
+111533,Methoxycamptothecin,LINC01287,0
+111533,Methoxycamptothecin,MIR5699,0
+117186,Acetalax,MAPK8,0
+117186,Acetalax,THYN1,0
+117186,Acetalax,CDK7,0
+117186,Acetalax,TTK,0
+117186,Acetalax,CWC15,0
+118218,Fludarabine,SH2D1A,2
+118218,Fludarabine,REC8,0
+118218,Fludarabine,ITK,0
+118218,Fludarabine,CD3E,0
+118218,Fludarabine,ZAP70,68
+118994,Inosine dialdehyde,REC8,0
+118994,Inosine dialdehyde,SH2D1A,0
+118994,Inosine dialdehyde,ITK,0
+118994,Inosine dialdehyde,CD3E,0
+118994,Inosine dialdehyde,ZAP70,0
+122758,Isotretinoin,FLT3,0
+122758,Isotretinoin,ITK,1
+122758,Isotretinoin,MIR3198-1,0
+122758,Isotretinoin,MIR2278,0
+122758,Isotretinoin,CD1E,0
+122819,Teniposide,LINC01287,0
+122819,Teniposide,JCHAIN,0
+122819,Teniposide,PVALB,0
+122819,Teniposide,IGLL5,0
+122819,Teniposide,TLR7,0
+123127,Doxorubicin,LINC01287,0
+123127,Doxorubicin,JCHAIN,2
+123127,Doxorubicin,PVALB,0
+123127,Doxorubicin,IGLL5,2
+123127,Doxorubicin,TLR7,12
+124463,Fludarabine,REC8,0
+124463,Fludarabine,MAPK8,0
+124463,Fludarabine,SH2D1A,2
+124463,Fludarabine,CD3E,0
+124463,Fludarabine,ITK,0
+125066,Bleomycin,MIR5699,0
+125066,Bleomycin,MIR641,0
+125066,Bleomycin,MIR7110,0
+125066,Bleomycin,HPGDS,2
+125066,Bleomycin,MIR6126,0
+125973,Paclitaxel,LINC01287,0
+125973,Paclitaxel,JCHAIN,0
+125973,Paclitaxel,PVALB,0
+125973,Paclitaxel,IGLL5,0
+125973,Paclitaxel,TLR7,6
+126771,Dichloroallyl lawsone,MAPK8,0
+126771,Dichloroallyl lawsone,THYN1,0
+126771,Dichloroallyl lawsone,CDK7,0
+126771,Dichloroallyl lawsone,CWC15,0
+126771,Dichloroallyl lawsone,TTK,0
+127716,DECITABINE,MAPK8,0
+127716,DECITABINE,THYN1,0
+127716,DECITABINE,FDX1,0
+127716,DECITABINE,TTK,0
+127716,DECITABINE,CDK7,1
+129185,melbex,LINC01287,0
+129185,melbex,IGLL5,0
+129185,melbex,PVALB,0
+129185,melbex,JCHAIN,0
+129185,melbex,MIR5699,0
+132313,Dianhydrogalactitol,CWC15,0
+132313,Dianhydrogalactitol,THYN1,0
+132313,Dianhydrogalactitol,RPL5,0
+132313,Dianhydrogalactitol,PSMA2,0
+132313,Dianhydrogalactitol,PARP2,0
+132483,Aminopterin Derivative,LINC01287,0
+132483,Aminopterin Derivative,PVALB,0
+132483,Aminopterin Derivative,IGLL5,0
+132483,Aminopterin Derivative,JCHAIN,0
+132483,Aminopterin Derivative,TLR7,0
+134033,Aminopterin Derivative,LINC01287,0
+134033,Aminopterin Derivative,PVALB,0
+134033,Aminopterin Derivative,JCHAIN,0
+134033,Aminopterin Derivative,IGLL5,0
+134033,Aminopterin Derivative,TLR7,0
+134679,Carboqone; Carbazilquinone,MAPK8,0
+134679,Carboqone; Carbazilquinone,REC8,0
+134679,Carboqone; Carbazilquinone,MND1,0
+134679,Carboqone; Carbazilquinone,FDX1,0
+134679,Carboqone; Carbazilquinone,NEK11,0
+134727,Mitomycin,LINC01287,0
+134727,Mitomycin,PVALB,0
+134727,Mitomycin,JCHAIN,0
+134727,Mitomycin,IGLL5,0
+134727,Mitomycin,TLR7,1
+135758,Piperazinedione,MAPK8,0
+135758,Piperazinedione,THYN1,0
+135758,Piperazinedione,CDK7,0
+135758,Piperazinedione,TTK,0
+135758,Piperazinedione,CWC15,0
+138783,Bendamustine,REC8,0
+138783,Bendamustine,SH2D1A,0
+138783,Bendamustine,MAPK8,0
+138783,Bendamustine,CD3E,1
+138783,Bendamustine,ITK,1
+139105,Soluble Baker's Antifol,LINC01287,0
+139105,Soluble Baker's Antifol,PVALB,0
+139105,Soluble Baker's Antifol,IGLL5,0
+139105,Soluble Baker's Antifol,JCHAIN,0
+139105,Soluble Baker's Antifol,TLR7,0
+141540,Etoposide,LINC01287,0
+141540,Etoposide,JCHAIN,0
+141540,Etoposide,PVALB,0
+141540,Etoposide,IGLL5,0
+141540,Etoposide,TLR7,0
+141549,M-AMSA,MAPK8,0
+141549,M-AMSA,REC8,0
+141549,M-AMSA,MND1,0
+141549,M-AMSA,FDX1,0
+141549,M-AMSA,NEK11,0
+141633,Homoharringtonine,LINC01287,0
+141633,Homoharringtonine,PVALB,0
+141633,Homoharringtonine,JCHAIN,0
+141633,Homoharringtonine,IGLL5,0
+141633,Homoharringtonine,TLR7,0
+143020,Mithramycin,LINC01287,0
+143020,Mithramycin,JCHAIN,0
+143020,Mithramycin,PVALB,0
+143020,Mithramycin,IGLL5,0
+143020,Mithramycin,TLR7,1
+143095,Pyrazofurin,REC8,0
+143095,Pyrazofurin,MAPK8,0
+143095,Pyrazofurin,SH2D1A,0
+143095,Pyrazofurin,CD3E,0
+143095,Pyrazofurin,ITK,0
+145668,Ancitabine hydrochloride,REC8,0
+145668,Ancitabine hydrochloride,SH2D1A,0
+145668,Ancitabine hydrochloride,ITK,0
+145668,Ancitabine hydrochloride,CD3E,0
+145668,Ancitabine hydrochloride,ZAP70,0
+148958,Tegafur,MAPK8,0
+148958,Tegafur,FDX1,0
+148958,Tegafur,THYN1,0
+148958,Tegafur,MND1,0
+148958,Tegafur,CDK7,0
+153353,L-Alanosine,MAPK8,0
+153353,L-Alanosine,THYN1,0
+153353,L-Alanosine,CDK7,0
+153353,L-Alanosine,CWC15,0
+153353,L-Alanosine,TTK,0
+153858,MAYTANSINE,LINC01287,0
+153858,MAYTANSINE,JCHAIN,0
+153858,MAYTANSINE,PVALB,0
+153858,MAYTANSINE,IGLL5,0
+153858,MAYTANSINE,TLR7,0
+154948,M-AMSA,MAPK8,0
+154948,M-AMSA,REC8,0
+154948,M-AMSA,MND1,0
+154948,M-AMSA,FDX1,0
+154948,M-AMSA,NEK11,0
+156303,M-AMSA,MAPK8,0
+156303,M-AMSA,REC8,0
+156303,M-AMSA,MND1,0
+156303,M-AMSA,FDX1,0
+156303,M-AMSA,NEK11,0
+157035,Parthenolide,SH2D1A,0
+157035,Parthenolide,REC8,0
+157035,Parthenolide,ZAP70,1
+157035,Parthenolide,CD3E,0
+157035,Parthenolide,ITK,0
+163062,Triptolid,LINC01287,0
+163062,Triptolid,PVALB,0
+163062,Triptolid,JCHAIN,0
+163062,Triptolid,IGLL5,0
+163062,Triptolid,TLR7,0
+163501,ACIVICIN,MAPK8,0
+163501,ACIVICIN,THYN1,0
+163501,ACIVICIN,CDK7,0
+163501,ACIVICIN,CWC15,0
+163501,ACIVICIN,TTK,0
+164011,Rubidazone,LINC01287,0
+164011,Rubidazone,JCHAIN,0
+164011,Rubidazone,PVALB,0
+164011,Rubidazone,IGLL5,0
+164011,Rubidazone,TLR7,0
+167780,Asaley,LINC01287,0
+167780,Asaley,JCHAIN,0
+167780,Asaley,PVALB,0
+167780,Asaley,IGLL5,0
+167780,Asaley,HBG1,0
+169780,Dexrazoxane,THYN1,0
+169780,Dexrazoxane,CWC15,0
+169780,Dexrazoxane,MAPK8,1
+169780,Dexrazoxane,TOP2A,8
+169780,Dexrazoxane,CDK7,0
+172112,Spirohydantoin Mustard,MAPK8,0
+172112,Spirohydantoin Mustard,THYN1,0
+172112,Spirohydantoin Mustard,FDX1,0
+172112,Spirohydantoin Mustard,MND1,0
+172112,Spirohydantoin Mustard,CDK7,0
+174121,Methotrexate Derivative,LINC01287,0
+174121,Methotrexate Derivative,PVALB,0
+174121,Methotrexate Derivative,JCHAIN,0
+174121,Methotrexate Derivative,TLR7,5
+174121,Methotrexate Derivative,IGLL5,0
+174939,Elesclomol,THYN1,0
+174939,Elesclomol,CWC15,0
+174939,Elesclomol,CDK7,0
+174939,Elesclomol,PARP2,0
+174939,Elesclomol,NUP37,0
+176323,Camptothecin Derivative,LINC01287,0
+176323,Camptothecin Derivative,IGLL5,0
+176323,Camptothecin Derivative,PVALB,0
+176323,Camptothecin Derivative,JCHAIN,0
+176323,Camptothecin Derivative,SNORD83B,0
+178248,CHLOROZOTOCIN,SH2D1A,0
+178248,CHLOROZOTOCIN,ZAP70,0
+178248,CHLOROZOTOCIN,CD3E,0
+178248,CHLOROZOTOCIN,ITK,0
+178248,CHLOROZOTOCIN,CD1E,0
+178296,mato,MAPK8,0
+178296,mato,REC8,0
+178296,mato,SH2D1A,0
+178296,mato,NEK11,0
+178296,mato,ITK,3
+179940,wln: t56 bnonj bo fnw i- at6n dntj d1,SH2D1A,0
+179940,wln: t56 bnonj bo fnw i- at6n dntj d1,ITK,0
+179940,wln: t56 bnonj bo fnw i- at6n dntj d1,ZAP70,0
+179940,wln: t56 bnonj bo fnw i- at6n dntj d1,MIR142,0
+179940,wln: t56 bnonj bo fnw i- at6n dntj d1,CD3E,0
+180973,Tamoxifen,PVALB,1
+180973,Tamoxifen,IGLL5,0
+180973,Tamoxifen,JCHAIN,1
+180973,Tamoxifen,LINC01287,0
+180973,Tamoxifen,MIR5699,0
+182986,AZQ,MAPK8,0
+182986,AZQ,THYN1,0
+182986,AZQ,CWC15,0
+182986,AZQ,CDK7,0
+182986,AZQ,TTK,0
+184692,Aminopterin Derivative,LINC01287,0
+184692,Aminopterin Derivative,PVALB,0
+184692,Aminopterin Derivative,IGLL5,0
+184692,Aminopterin Derivative,JCHAIN,0
+184692,Aminopterin Derivative,TLR7,0
+186301,Thiocolchicine,LINC01287,0
+186301,Thiocolchicine,PVALB,0
+186301,Thiocolchicine,IGLL5,0
+186301,Thiocolchicine,JCHAIN,0
+186301,Thiocolchicine,TLR7,0
+207895,wln: t56 bnonj bo fnw i- at6n dntj d1,SH2D1A,0
+207895,wln: t56 bnonj bo fnw i- at6n dntj d1,ITK,0
+207895,wln: t56 bnonj bo fnw i- at6n dntj d1,MIR142,0
+207895,wln: t56 bnonj bo fnw i- at6n dntj d1,ZAP70,0
+207895,wln: t56 bnonj bo fnw i- at6n dntj d1,CD1E,0
+218321,PENTOSTATIN,MAPK8,0
+218321,PENTOSTATIN,THYN1,0
+218321,PENTOSTATIN,ACTB,0
+218321,PENTOSTATIN,DKK3,0
+218321,PENTOSTATIN,FDX1,0
+221019,WORTMANNIN,LINC01287,0
+221019,WORTMANNIN,PVALB,0
+221019,WORTMANNIN,JCHAIN,0
+221019,WORTMANNIN,IGLL5,0
+221019,WORTMANNIN,TLR7,2
+224131,N-Phosphonacetyl-L-aspartate,MAPK8,0
+224131,N-Phosphonacetyl-L-aspartate,THYN1,0
+224131,N-Phosphonacetyl-L-aspartate,CDK7,0
+224131,N-Phosphonacetyl-L-aspartate,TTK,0
+224131,N-Phosphonacetyl-L-aspartate,FDX1,0
+226080,RAPAMYCIN,MIR5699,0
+226080,RAPAMYCIN,JCHAIN,0
+226080,RAPAMYCIN,IGLL5,0
+226080,RAPAMYCIN,PVALB,1
+226080,RAPAMYCIN,LINC01287,0
+241240,Carboplatin,CWC15,0
+241240,Carboplatin,THYN1,0
+241240,Carboplatin,RPL5,0
+241240,Carboplatin,PARP2,6
+241240,Carboplatin,PSMA2,0
+246131,Valrubicin,LINC01287,0
+246131,Valrubicin,JCHAIN,0
+246131,Valrubicin,PVALB,0
+246131,Valrubicin,IGLL5,0
+246131,Valrubicin,TLR7,0
+249910,Camptothecin Derivative,MIR658,0
+249910,Camptothecin Derivative,MIR5699,0
+249910,Camptothecin Derivative,IGLL5,0
+249910,Camptothecin Derivative,PVALB,0
+249910,Camptothecin Derivative,JCHAIN,0
+249992,M-AMSA,MAPK8,0
+249992,M-AMSA,REC8,0
+249992,M-AMSA,MND1,0
+249992,M-AMSA,FDX1,0
+249992,M-AMSA,THYN1,0
+252844,shikonin,MAPK8,1
+252844,shikonin,FDX1,0
+252844,shikonin,MND1,0
+252844,shikonin,REC8,0
+252844,shikonin,THYN1,0
+255109,geldanamycin analog,LINC01287,0
+255109,geldanamycin analog,TLR7,0
+255109,geldanamycin analog,PVALB,0
+255109,geldanamycin analog,JCHAIN,0
+255109,geldanamycin analog,IGLL5,0
+256439,Idarubicin,LINC01287,0
+256439,Idarubicin,PVALB,0
+256439,Idarubicin,JCHAIN,0
+256439,Idarubicin,IGLL5,0
+256439,Idarubicin,TLR7,0
+256927,CHIP,CWC15,0
+256927,CHIP,THYN1,0
+256927,CHIP,RPL5,1
+256927,CHIP,PSMA2,3
+256927,CHIP,PARP2,1
+256942,Epirubicin,LINC01287,0
+256942,Epirubicin,JCHAIN,0
+256942,Epirubicin,PVALB,0
+256942,Epirubicin,IGLL5,0
+256942,Epirubicin,TLR7,1
+264137,Elliptinium Acetate,SH2D1A,0
+264137,Elliptinium Acetate,ITK,0
+264137,Elliptinium Acetate,ZAP70,0
+264137,Elliptinium Acetate,CD3E,0
+264137,Elliptinium Acetate,MIR142,0
+264880,DIHYDRO-5-AZACYTIDINE,MAPK8,0
+264880,DIHYDRO-5-AZACYTIDINE,REC8,0
+264880,DIHYDRO-5-AZACYTIDINE,MND1,0
+264880,DIHYDRO-5-AZACYTIDINE,SH2D1A,0
+264880,DIHYDRO-5-AZACYTIDINE,NEK11,0
+266046,Oxaliplatin,CWC15,0
+266046,Oxaliplatin,THYN1,0
+266046,Oxaliplatin,CDK7,0
+266046,Oxaliplatin,NUP37,0
+266046,Oxaliplatin,RPL5,2
+267469,Deoxydoxorubicin,LINC01287,0
+267469,Deoxydoxorubicin,PVALB,0
+267469,Deoxydoxorubicin,JCHAIN,0
+267469,Deoxydoxorubicin,IGLL5,0
+267469,Deoxydoxorubicin,TLR7,0
+268242,"N,N-Dibenzyldaunorubicin",LINC01287,0
+268242,"N,N-Dibenzyldaunorubicin",JCHAIN,0
+268242,"N,N-Dibenzyldaunorubicin",PVALB,0
+268242,"N,N-Dibenzyldaunorubicin",IGLL5,0
+268242,"N,N-Dibenzyldaunorubicin",TLR7,0
+269148,MENOGARIL,LINC01287,0
+269148,MENOGARIL,PVALB,0
+269148,MENOGARIL,JCHAIN,0
+269148,MENOGARIL,IGLL5,0
+269148,MENOGARIL,TLR7,0
+271674,Carboxyphthalatoplatinum,MAPK8,0
+271674,Carboxyphthalatoplatinum,THYN1,0
+271674,Carboxyphthalatoplatinum,CWC15,0
+271674,Carboxyphthalatoplatinum,CDK7,0
+271674,Carboxyphthalatoplatinum,TTK,0
+276382,pepleo,MIR5699,0
+276382,pepleo,MIR641,0
+276382,pepleo,MIR7110,0
+276382,pepleo,HPGDS,0
+276382,pepleo,MIR6126,0
+279836,MITOXANTRONE,MAPK8,0
+279836,MITOXANTRONE,THYN1,0
+279836,MITOXANTRONE,CDK7,2
+279836,MITOXANTRONE,FDX1,0
+279836,MITOXANTRONE,TTK,1
+280594,TRICIRIBINE PHOSPHATE,LINC01287,0
+280594,TRICIRIBINE PHOSPHATE,PVALB,0
+280594,TRICIRIBINE PHOSPHATE,JCHAIN,0
+280594,TRICIRIBINE PHOSPHATE,IGLL5,0
+280594,TRICIRIBINE PHOSPHATE,TLR7,0
+281612,benzaldehyde (BEN),MAPK8,0
+281612,benzaldehyde (BEN),REC8,0
+281612,benzaldehyde (BEN),FDX1,0
+281612,benzaldehyde (BEN),MND1,0
+281612,benzaldehyde (BEN),THYN1,0
+287459,Cytarabine,MAPK8,0
+287459,Cytarabine,FDX1,0
+287459,Cytarabine,MND1,0
+287459,Cytarabine,CDK7,3
+287459,Cytarabine,REC8,0
+295499,Camptothecin Derivative,LINC01287,0
+295499,Camptothecin Derivative,PVALB,0
+295499,Camptothecin Derivative,JCHAIN,0
+295499,Camptothecin Derivative,IGLL5,0
+295499,Camptothecin Derivative,TLR7,5
+295500,Camptothecin Derivative,JCHAIN,0
+295500,Camptothecin Derivative,PVALB,0
+295500,Camptothecin Derivative,IGLL5,0
+295500,Camptothecin Derivative,LINC01287,0
+295500,Camptothecin Derivative,MIR5699,0
+295501,Camptothecin Derivative,PVALB,0
+295501,Camptothecin Derivative,MIR5699,0
+295501,Camptothecin Derivative,IGLL5,0
+295501,Camptothecin Derivative,MIR658,0
+295501,Camptothecin Derivative,JCHAIN,0
+296934,Teroxirone,CWC15,0
+296934,Teroxirone,THYN1,0
+296934,Teroxirone,PSMA2,0
+296934,Teroxirone,RPL5,0
+296934,Teroxirone,NUP37,0
+299933,thapsigargin,LINC01287,0
+299933,thapsigargin,PVALB,0
+299933,thapsigargin,JCHAIN,0
+299933,thapsigargin,IGLL5,0
+299933,thapsigargin,TLR7,2
+301739,Mitoxantrone,MAPK8,0
+301739,Mitoxantrone,THYN1,0
+301739,Mitoxantrone,FDX1,0
+301739,Mitoxantrone,TTK,1
+301739,Mitoxantrone,CDK7,2
+302991,Camptothecin Derivative,MIR658,0
+302991,Camptothecin Derivative,MPO,14
+302991,Camptothecin Derivative,TYROBP,0
+302991,Camptothecin Derivative,RNASE2,0
+302991,Camptothecin Derivative,MIR2278,0
+303812,Aphidicoline glycinate,LINC01287,0
+303812,Aphidicoline glycinate,PVALB,0
+303812,Aphidicoline glycinate,JCHAIN,0
+303812,Aphidicoline glycinate,IGLL5,0
+303812,Aphidicoline glycinate,TLR7,0
+308847,AMONAFIDE,MAPK8,0
+308847,AMONAFIDE,FDX1,0
+308847,AMONAFIDE,MND1,0
+308847,AMONAFIDE,THYN1,0
+308847,AMONAFIDE,REC8,0
+312887,Fludarabine,MIR641,0
+312887,Fludarabine,MIR5699,0
+312887,Fludarabine,PVALB,0
+312887,Fludarabine,JCHAIN,0
+312887,Fludarabine,IGLL5,0
+314622,Indenoisoquinoline derivative,MAPK8,0
+314622,Indenoisoquinoline derivative,REC8,0
+314622,Indenoisoquinoline derivative,MND1,0
+314622,Indenoisoquinoline derivative,NEK11,0
+314622,Indenoisoquinoline derivative,SH2D1A,0
+319726,"Azetidinecarbothioic acid, [1-(2-pyridinyl)ethylidene] h...",MAPK8,0
+319726,"Azetidinecarbothioic acid, [1-(2-pyridinyl)ethylidene] h...",MND1,0
+319726,"Azetidinecarbothioic acid, [1-(2-pyridinyl)ethylidene] h...",FDX1,0
+319726,"Azetidinecarbothioic acid, [1-(2-pyridinyl)ethylidene] h...",REC8,0
+319726,"Azetidinecarbothioic acid, [1-(2-pyridinyl)ethylidene] h...",THYN1,0
+320301,Colchicine Derivative,LINC01287,0
+320301,Colchicine Derivative,PVALB,0
+320301,Colchicine Derivative,IGLL5,0
+320301,Colchicine Derivative,JCHAIN,0
+320301,Colchicine Derivative,TLR7,1
+320846,Batracylin,MAPK8,0
+320846,Batracylin,THYN1,0
+320846,Batracylin,FDX1,0
+320846,Batracylin,CDK7,0
+320846,Batracylin,TTK,0
+324646,Malformin A,FLT3,0
+324646,Malformin A,MIR3198-1,0
+324646,Malformin A,MIR2278,0
+324646,Malformin A,MIR1231,0
+324646,Malformin A,MPO,0
+326231,Buthionine sulphoximine,MAPK8,0
+326231,Buthionine sulphoximine,THYN1,0
+326231,Buthionine sulphoximine,TTK,0
+326231,Buthionine sulphoximine,CDK7,0
+326231,Buthionine sulphoximine,FDX1,2
+328410,Camptothecin Derivative,MIR5699,0
+328410,Camptothecin Derivative,MIR641,0
+328410,Camptothecin Derivative,MIR658,0
+328410,Camptothecin Derivative,PVALB,0
+328410,Camptothecin Derivative,IGLL5,0
+329680,Hepsulfam,CWC15,0
+329680,Hepsulfam,THYN1,0
+329680,Hepsulfam,NUP37,0
+329680,Hepsulfam,CDK7,0
+329680,Hepsulfam,TTK,0
+330500,MACBECIN II,LINC01287,0
+330500,MACBECIN II,PVALB,0
+330500,MACBECIN II,JCHAIN,0
+330500,MACBECIN II,IGLL5,0
+330500,MACBECIN II,TLR7,0
+330507,Tanespimycin,LINC01287,0
+330507,Tanespimycin,JCHAIN,0
+330507,Tanespimycin,PVALB,0
+330507,Tanespimycin,IGLL5,0
+330507,Tanespimycin,TLR7,1
+332598,RHIZOXIN,LINC01287,0
+332598,RHIZOXIN,JCHAIN,0
+332598,RHIZOXIN,PVALB,0
+332598,RHIZOXIN,IGLL5,0
+332598,RHIZOXIN,TLR7,0
+337766,Bisantrene hydrochloride,MAPK8,0
+337766,Bisantrene hydrochloride,MND1,0
+337766,Bisantrene hydrochloride,FDX1,0
+337766,Bisantrene hydrochloride,REC8,0
+337766,Bisantrene hydrochloride,THYN1,0
+338947,CLOMESONE,MAPK8,0
+338947,CLOMESONE,THYN1,0
+338947,CLOMESONE,CWC15,0
+338947,CLOMESONE,CDK7,0
+338947,CLOMESONE,TTK,0
+339555,Bryostatin 1,MIR5699,0
+339555,Bryostatin 1,JCHAIN,0
+339555,Bryostatin 1,IGLL5,0
+339555,Bryostatin 1,PVALB,0
+339555,Bryostatin 1,LINC01287,0
+343499,CI-921: amsacrine derivative,LINC01287,0
+343499,CI-921: amsacrine derivative,PVALB,0
+343499,CI-921: amsacrine derivative,IGLL5,0
+343499,CI-921: amsacrine derivative,JCHAIN,0
+343499,CI-921: amsacrine derivative,TLR7,0
+344007,Piperazine,CWC15,0
+344007,Piperazine,THYN1,0
+344007,Piperazine,CDK7,9
+344007,Piperazine,PARP2,40
+344007,Piperazine,TTK,8
+348948,CYCLODISONE,CWC15,0
+348948,CYCLODISONE,THYN1,0
+348948,CYCLODISONE,RPL5,0
+348948,CYCLODISONE,PSMA2,0
+348948,CYCLODISONE,PARP2,0
+349174,Oxanthrazole,LINC01287,0
+349174,Oxanthrazole,PVALB,0
+349174,Oxanthrazole,JCHAIN,0
+349174,Oxanthrazole,IGLL5,0
+349174,Oxanthrazole,TLR7,0
+351710,2-methylellpticinium,MAPK8,0
+351710,2-methylellpticinium,REC8,0
+351710,2-methylellpticinium,NEK11,0
+351710,2-methylellpticinium,MND1,0
+351710,2-methylellpticinium,SH2D1A,0
+352122,TRIMETREXATE GLUCURONATE,LINC01287,0
+352122,TRIMETREXATE GLUCURONATE,PVALB,0
+352122,TRIMETREXATE GLUCURONATE,TLR7,0
+352122,TRIMETREXATE GLUCURONATE,IGLL5,0
+352122,TRIMETREXATE GLUCURONATE,JCHAIN,0
+352299,2-methylellpticinium,SH2D1A,0
+352299,2-methylellpticinium,ITK,0
+352299,2-methylellpticinium,CD3E,0
+352299,2-methylellpticinium,ZAP70,0
+352299,2-methylellpticinium,REC8,0
+353451,Mitozolomide,MAPK8,0
+353451,Mitozolomide,FDX1,0
+353451,Mitozolomide,REC8,0
+353451,Mitozolomide,MND1,0
+353451,Mitozolomide,THYN1,0
+354258,8-Chloro-adenosine,MIR2278,0
+354258,8-Chloro-adenosine,MIR3198-1,0
+354258,8-Chloro-adenosine,ITK,0
+354258,8-Chloro-adenosine,FLT3,1
+354258,8-Chloro-adenosine,SH2D1A,0
+354462,HYPOTHEMYCIN,PVALB,0
+354462,HYPOTHEMYCIN,IGLL5,0
+354462,HYPOTHEMYCIN,LINC01287,0
+354462,HYPOTHEMYCIN,JCHAIN,0
+354462,HYPOTHEMYCIN,SNORD83B,0
+354646,Morpholinodoxorubicin,LINC01287,0
+354646,Morpholinodoxorubicin,JCHAIN,0
+354646,Morpholinodoxorubicin,PVALB,0
+354646,Morpholinodoxorubicin,IGLL5,0
+354646,Morpholinodoxorubicin,TLR7,0
+355644,Anthrapyrazole derivative,LINC01287,0
+355644,Anthrapyrazole derivative,PVALB,0
+355644,Anthrapyrazole derivative,JCHAIN,0
+355644,Anthrapyrazole derivative,IGLL5,0
+355644,Anthrapyrazole derivative,TLR7,0
+357704,Cyanomorpholinodoxorubicin,LINC01287,0
+357704,Cyanomorpholinodoxorubicin,JCHAIN,0
+357704,Cyanomorpholinodoxorubicin,PVALB,0
+357704,Cyanomorpholinodoxorubicin,IGLL5,0
+357704,Cyanomorpholinodoxorubicin,TLR7,0
+361792,Thiocolchicine,LINC01287,0
+361792,Thiocolchicine,IGLL5,0
+361792,Thiocolchicine,PVALB,0
+361792,Thiocolchicine,JCHAIN,0
+361792,Thiocolchicine,TLR7,0
+363812,TETRAPLATIN,CWC15,0
+363812,TETRAPLATIN,THYN1,0
+363812,TETRAPLATIN,RPL5,0
+363812,TETRAPLATIN,CDK7,0
+363812,TETRAPLATIN,PSMA2,0
+364830,Camptothecin Derivative,LINC01287,0
+364830,Camptothecin Derivative,PVALB,0
+364830,Camptothecin Derivative,JCHAIN,0
+364830,Camptothecin Derivative,IGLL5,0
+364830,Camptothecin Derivative,TLR7,5
+365798,Fostamatinib,THYN1,0
+365798,Fostamatinib,CWC15,0
+365798,Fostamatinib,MAPK8,0
+365798,Fostamatinib,CDK7,0
+365798,Fostamatinib,TTK,1
+366140,PYRAZOLOACRIDINE,JCHAIN,0
+366140,PYRAZOLOACRIDINE,PVALB,0
+366140,PYRAZOLOACRIDINE,IGLL5,0
+366140,PYRAZOLOACRIDINE,LINC01287,0
+366140,PYRAZOLOACRIDINE,SNORD83B,0
+368390,Brequinar,MAPK8,0
+368390,Brequinar,REC8,0
+368390,Brequinar,SH2D1A,0
+368390,Brequinar,NEK11,0
+368390,Brequinar,ITK,0
+369100,Imiquimod,MAPK8,0
+369100,Imiquimod,THYN1,0
+369100,Imiquimod,FDX1,0
+369100,Imiquimod,MND1,0
+369100,Imiquimod,CDK7,1
+369395,10-aminocamptothecin,LINC01287,0
+369395,10-aminocamptothecin,IGLL5,0
+369395,10-aminocamptothecin,JCHAIN,0
+369395,10-aminocamptothecin,PVALB,0
+369395,10-aminocamptothecin,MIR5699,0
+374028,Camptothecin Derivative,LINC01287,0
+374028,Camptothecin Derivative,PVALB,0
+374028,Camptothecin Derivative,JCHAIN,0
+374028,Camptothecin Derivative,IGLL5,0
+374028,Camptothecin Derivative,TLR7,5
+374551,FENRETINIDE,LINC01287,0
+374551,FENRETINIDE,PVALB,0
+374551,FENRETINIDE,JCHAIN,0
+374551,FENRETINIDE,IGLL5,0
+374551,FENRETINIDE,HBG1,0
+376128,DOLASTATIN 10,LINC01287,0
+376128,DOLASTATIN 10,JCHAIN,0
+376128,DOLASTATIN 10,PVALB,0
+376128,DOLASTATIN 10,IGLL5,0
+376128,DOLASTATIN 10,TLR7,0
+406042,Allocolchicine,LINC01287,0
+406042,Allocolchicine,PVALB,0
+406042,Allocolchicine,IGLL5,0
+406042,Allocolchicine,JCHAIN,0
+406042,Allocolchicine,TLR7,0
+409962,Carmustine,MAPK8,0
+409962,Carmustine,THYN1,0
+409962,Carmustine,TTK,0
+409962,Carmustine,CDK7,0
+409962,Carmustine,CWC15,0
+526598,Mithramycin,LINC01287,0
+526598,Mithramycin,JCHAIN,0
+526598,Mithramycin,PVALB,0
+526598,Mithramycin,IGLL5,0
+526598,Mithramycin,TLR7,1
+600222,Benzenepropanoic acid,LINC01287,0
+600222,Benzenepropanoic acid,JCHAIN,0
+600222,Benzenepropanoic acid,PVALB,0
+600222,Benzenepropanoic acid,IGLL5,0
+600222,Benzenepropanoic acid,TLR7,0
+603071,Aminocamptothecin,PVALB,0
+603071,Aminocamptothecin,IGLL5,0
+603071,Aminocamptothecin,JCHAIN,0
+603071,Aminocamptothecin,LINC01287,0
+603071,Aminocamptothecin,MIR5699,0
+603074,9-Nitro-10-methoxy-20(S)-camptothecin,JCHAIN,0
+603074,9-Nitro-10-methoxy-20(S)-camptothecin,LINC01287,0
+603074,9-Nitro-10-methoxy-20(S)-camptothecin,PVALB,0
+603074,9-Nitro-10-methoxy-20(S)-camptothecin,IGLL5,0
+603074,9-Nitro-10-methoxy-20(S)-camptothecin,SNORD83B,0
+603076,9-Nitro-10-hydroxy-20(S)-camptothecin,JCHAIN,0
+603076,9-Nitro-10-hydroxy-20(S)-camptothecin,PVALB,0
+603076,9-Nitro-10-hydroxy-20(S)-camptothecin,IGLL5,0
+603076,9-Nitro-10-hydroxy-20(S)-camptothecin,LINC01287,0
+603076,9-Nitro-10-hydroxy-20(S)-camptothecin,SNORD83B,0
+603077,9-Acetamido-10-hydroxy-20-(S)-camptothecin,LINC01287,0
+603077,9-Acetamido-10-hydroxy-20-(S)-camptothecin,PVALB,0
+603077,9-Acetamido-10-hydroxy-20-(S)-camptothecin,JCHAIN,0
+603077,9-Acetamido-10-hydroxy-20-(S)-camptothecin,IGLL5,0
+603077,9-Acetamido-10-hydroxy-20-(S)-camptothecin,SNORD83B,0
+606170,Zalcitabine,THYN1,0
+606170,Zalcitabine,MAPK8,0
+606170,Zalcitabine,CWC15,0
+606170,Zalcitabine,CDK7,0
+606170,Zalcitabine,NUP37,0
+606172,Camptothecin Derivative,LINC01287,0
+606172,Camptothecin Derivative,JCHAIN,0
+606172,Camptothecin Derivative,PVALB,0
+606172,Camptothecin Derivative,IGLL5,0
+606172,Camptothecin Derivative,SNORD83B,0
+606173,Camptothecin Derivative,JCHAIN,0
+606173,Camptothecin Derivative,PVALB,0
+606173,Camptothecin Derivative,MIR5699,0
+606173,Camptothecin Derivative,IGLL5,0
+606173,Camptothecin Derivative,MIR641,0
+606497,Camptothecin Derivative,LINC01287,0
+606497,Camptothecin Derivative,JCHAIN,0
+606497,Camptothecin Derivative,PVALB,0
+606497,Camptothecin Derivative,IGLL5,0
+606497,Camptothecin Derivative,TLR7,5
+606498,Camptothecin Derivative,LINC01287,0
+606498,Camptothecin Derivative,PVALB,0
+606498,Camptothecin Derivative,JCHAIN,0
+606498,Camptothecin Derivative,IGLL5,0
+606498,Camptothecin Derivative,TLR7,5
+606499,Camptothecin Derivative,LINC01287,0
+606499,Camptothecin Derivative,PVALB,0
+606499,Camptothecin Derivative,IGLL5,0
+606499,Camptothecin Derivative,JCHAIN,0
+606499,Camptothecin Derivative,TLR7,5
+606698,Rapamycin,MIR5699,0
+606698,Rapamycin,JCHAIN,0
+606698,Rapamycin,IGLL5,0
+606698,Rapamycin,PVALB,1
+606698,Rapamycin,MIR641,0
+606869,Clofarabine,IGLL5,0
+606869,Clofarabine,PVALB,0
+606869,Clofarabine,JCHAIN,0
+606869,Clofarabine,LINC01287,0
+606869,Clofarabine,MIR5699,0
+606985,Camptothecin Derivative,LINC01287,0
+606985,Camptothecin Derivative,PVALB,0
+606985,Camptothecin Derivative,JCHAIN,0
+606985,Camptothecin Derivative,IGLL5,0
+606985,Camptothecin Derivative,TLR7,5
+606986,Camptothecin Derivative,LINC01287,0
+606986,Camptothecin Derivative,PVALB,0
+606986,Camptothecin Derivative,JCHAIN,0
+606986,Camptothecin Derivative,IGLL5,0
+606986,Camptothecin Derivative,TLR7,5
+608210,Vinorelbine,LINC01287,0
+608210,Vinorelbine,JCHAIN,0
+608210,Vinorelbine,IGLL5,1
+608210,Vinorelbine,PVALB,0
+608210,Vinorelbine,MIR5699,0
+608832,Taxol derivative,MIR5699,0
+608832,Taxol derivative,LINC01287,0
+608832,Taxol derivative,JCHAIN,0
+608832,Taxol derivative,IGLL5,0
+608832,Taxol derivative,PVALB,0
+609395,HALICHONDRIN B,MIR5699,0
+609395,HALICHONDRIN B,LINC01287,0
+609395,HALICHONDRIN B,JCHAIN,0
+609395,HALICHONDRIN B,IGLL5,0
+609395,HALICHONDRIN B,PVALB,0
+609699,Topotecan,LINC01287,0
+609699,Topotecan,PVALB,0
+609699,Topotecan,IGLL5,0
+609699,Topotecan,JCHAIN,0
+609699,Topotecan,TLR7,0
+610456,Camptothecin Derivative,LINC01287,0
+610456,Camptothecin Derivative,PVALB,0
+610456,Camptothecin Derivative,JCHAIN,0
+610456,Camptothecin Derivative,IGLL5,0
+610456,Camptothecin Derivative,TLR7,5
+610457,Camptothecin Derivative,LINC01287,0
+610457,Camptothecin Derivative,PVALB,0
+610457,Camptothecin Derivative,JCHAIN,0
+610457,Camptothecin Derivative,IGLL5,0
+610457,Camptothecin Derivative,TLR7,5
+610458,Camptothecin Derivative,LINC01287,0
+610458,Camptothecin Derivative,PVALB,0
+610458,Camptothecin Derivative,IGLL5,0
+610458,Camptothecin Derivative,JCHAIN,0
+610458,Camptothecin Derivative,SNORD83B,0
+610459,Camptothecin Derivative,LINC01287,0
+610459,Camptothecin Derivative,PVALB,0
+610459,Camptothecin Derivative,JCHAIN,0
+610459,Camptothecin Derivative,IGLL5,0
+610459,Camptothecin Derivative,TLR7,5
+613327,Gemcitabine,MAPK8,0
+613327,Gemcitabine,REC8,0
+613327,Gemcitabine,MND1,0
+613327,Gemcitabine,NEK11,0
+613327,Gemcitabine,SH2D1A,0
+616348,Irinotecan,LINC01287,0
+616348,Irinotecan,JCHAIN,0
+616348,Irinotecan,PVALB,0
+616348,Irinotecan,IGLL5,0
+616348,Irinotecan,TLR7,2
+618487,Staurosporine,LINC01287,0
+618487,Staurosporine,JCHAIN,1
+618487,Staurosporine,PVALB,0
+618487,Staurosporine,IGLL5,0
+618487,Staurosporine,TLR7,1
+618939,Camptothecin Derivative,LINC01287,0
+618939,Camptothecin Derivative,PVALB,0
+618939,Camptothecin Derivative,JCHAIN,0
+618939,Camptothecin Derivative,IGLL5,0
+618939,Camptothecin Derivative,TLR7,5
+619232,9-Glycinamido-20(RS)-camptothecin hydrochloride,LINC01287,0
+619232,9-Glycinamido-20(RS)-camptothecin hydrochloride,JCHAIN,0
+619232,9-Glycinamido-20(RS)-camptothecin hydrochloride,PVALB,0
+619232,9-Glycinamido-20(RS)-camptothecin hydrochloride,IGLL5,0
+619232,9-Glycinamido-20(RS)-camptothecin hydrochloride,TLR7,0
+623017,An Antifol,LINC01287,0
+623017,An Antifol,PVALB,0
+623017,An Antifol,JCHAIN,0
+623017,An Antifol,IGLL5,0
+623017,An Antifol,TLR7,0
+627168,Pyrazoloacridine,PVALB,0
+627168,Pyrazoloacridine,JCHAIN,0
+627168,Pyrazoloacridine,IGLL5,0
+627168,Pyrazoloacridine,LINC01287,0
+627168,Pyrazoloacridine,HBG1,0
+627505,ellipticine,MIR5699,0
+627505,ellipticine,PVALB,0
+627505,ellipticine,IGLL5,0
+627505,ellipticine,JCHAIN,0
+627505,ellipticine,MIR658,0
+628503,Docetaxel,LINC01287,0
+628503,Docetaxel,JCHAIN,0
+628503,Docetaxel,PVALB,0
+628503,Docetaxel,IGLL5,0
+628503,Docetaxel,TLR7,0
+629971,Camptothecin Derivative,PVALB,0
+629971,Camptothecin Derivative,IGLL5,0
+629971,Camptothecin Derivative,LINC01287,0
+629971,Camptothecin Derivative,JCHAIN,0
+629971,Camptothecin Derivative,MIR5699,0
+630176,Depsipeptide,LINC01287,0
+630176,Depsipeptide,TLR7,3
+630176,Depsipeptide,PVALB,0
+630176,Depsipeptide,JCHAIN,0
+630176,Depsipeptide,IGLL5,0
+633781,Lovastatin,JCHAIN,0
+633781,Lovastatin,PVALB,0
+633781,Lovastatin,IGLL5,0
+633781,Lovastatin,LINC01287,0
+633781,Lovastatin,MIR641,0
+633782,Simvastatin,JCHAIN,0
+633782,Simvastatin,PVALB,0
+633782,Simvastatin,IGLL5,0
+633782,Simvastatin,LINC01287,0
+633782,Simvastatin,MIR641,0
+634724,"10,11-methylenedioxycamptothecin",LINC01287,0
+634724,"10,11-methylenedioxycamptothecin",JCHAIN,0
+634724,"10,11-methylenedioxycamptothecin",PVALB,0
+634724,"10,11-methylenedioxycamptothecin",IGLL5,0
+634724,"10,11-methylenedioxycamptothecin",SNORD83B,0
+637037,O-6-Benzylguanine,MAPK8,0
+637037,O-6-Benzylguanine,REC8,0
+637037,O-6-Benzylguanine,MND1,0
+637037,O-6-Benzylguanine,FDX1,0
+637037,O-6-Benzylguanine,THYN1,0
+637651,ellipticine,FLT3,1
+637651,ellipticine,MIR658,0
+637651,ellipticine,MIR3198-1,0
+637651,ellipticine,MIR2278,0
+637651,ellipticine,TYROBP,0
+638066,2-n-methyl-6-thiaellipticinum iodide,REC8,0
+638066,2-n-methyl-6-thiaellipticinum iodide,MAPK8,4
+638066,2-n-methyl-6-thiaellipticinum iodide,SH2D1A,0
+638066,2-n-methyl-6-thiaellipticinum iodide,ZAP70,0
+638066,2-n-methyl-6-thiaellipticinum iodide,NEK11,0
+638646,7-Hydroxystaurosporine,REC8,0
+638646,7-Hydroxystaurosporine,SH2D1A,0
+638646,7-Hydroxystaurosporine,CD3E,0
+638646,7-Hydroxystaurosporine,ZAP70,0
+638646,7-Hydroxystaurosporine,ITK,0
+638850,7-Hydroxystaurosporine,LINC01287,0
+638850,7-Hydroxystaurosporine,PVALB,0
+638850,7-Hydroxystaurosporine,JCHAIN,0
+638850,7-Hydroxystaurosporine,IGLL5,0
+638850,7-Hydroxystaurosporine,TLR7,1
+639174,Camptothecin Derivative,LINC01287,0
+639174,Camptothecin Derivative,PVALB,0
+639174,Camptothecin Derivative,JCHAIN,0
+639174,Camptothecin Derivative,IGLL5,0
+639174,Camptothecin Derivative,TLR7,5
+639186,Raltitrexed,LINC01287,0
+639186,Raltitrexed,PVALB,0
+639186,Raltitrexed,JCHAIN,0
+639186,Raltitrexed,IGLL5,0
+639186,Raltitrexed,TLR7,0
+639966,Perifosine,SH2D1A,0
+639966,Perifosine,ITK,0
+639966,Perifosine,ZAP70,0
+639966,Perifosine,MIR142,0
+639966,Perifosine,CD3E,0
+643833,Camptothecin Derivative,MIR658,0
+643833,Camptothecin Derivative,RNASE2,0
+643833,Camptothecin Derivative,TYROBP,0
+643833,Camptothecin Derivative,MPO,14
+643833,Camptothecin Derivative,MIR5699,0
+649890,Alvocidib,LINC01287,0
+649890,Alvocidib,IGLL5,0
+649890,Alvocidib,PVALB,0
+649890,Alvocidib,JCHAIN,0
+649890,Alvocidib,HBG1,0
+656178,7-Epi-10-deacetylbaccatin III,LINC01287,0
+656178,7-Epi-10-deacetylbaccatin III,PVALB,4
+656178,7-Epi-10-deacetylbaccatin III,JCHAIN,4
+656178,7-Epi-10-deacetylbaccatin III,IGLL5,3
+656178,7-Epi-10-deacetylbaccatin III,TLR7,136
+656576,Midostaurin,LINC01287,0
+656576,Midostaurin,PVALB,0
+656576,Midostaurin,JCHAIN,0
+656576,Midostaurin,IGLL5,0
+656576,Midostaurin,TLR7,0
+656889,XK-469,REC8,0
+656889,XK-469,MAPK8,0
+656889,XK-469,SH2D1A,0
+656889,XK-469,ITK,0
+656889,XK-469,ZAP70,0
+658831,"[(1S,4S,7R,10S,12R)-4-Acetyloxy-15-[(3S)-3-(hexanoylamino)-2-hydroxy-3-phenylpropanoyl]oxy-1,12-dihydroxy-10,14,17,17-tetramethyl-11-oxo-9-(3,4,5-trihydroxyoxan-2-yl)oxy-6-oxatetracyclo[11.3.1.03,10.0",LINC01287,0
+658831,"[(1S,4S,7R,10S,12R)-4-Acetyloxy-15-[(3S)-3-(hexanoylamino)-2-hydroxy-3-phenylpropanoyl]oxy-1,12-dihydroxy-10,14,17,17-tetramethyl-11-oxo-9-(3,4,5-trihydroxyoxan-2-yl)oxy-6-oxatetracyclo[11.3.1.03,10.0",JCHAIN,0
+658831,"[(1S,4S,7R,10S,12R)-4-Acetyloxy-15-[(3S)-3-(hexanoylamino)-2-hydroxy-3-phenylpropanoyl]oxy-1,12-dihydroxy-10,14,17,17-tetramethyl-11-oxo-9-(3,4,5-trihydroxyoxan-2-yl)oxy-6-oxatetracyclo[11.3.1.03,10.0",IGLL5,0
+658831,"[(1S,4S,7R,10S,12R)-4-Acetyloxy-15-[(3S)-3-(hexanoylamino)-2-hydroxy-3-phenylpropanoyl]oxy-1,12-dihydroxy-10,14,17,17-tetramethyl-11-oxo-9-(3,4,5-trihydroxyoxan-2-yl)oxy-6-oxatetracyclo[11.3.1.03,10.0",MIR5699,0
+658831,"[(1S,4S,7R,10S,12R)-4-Acetyloxy-15-[(3S)-3-(hexanoylamino)-2-hydroxy-3-phenylpropanoyl]oxy-1,12-dihydroxy-10,14,17,17-tetramethyl-11-oxo-9-(3,4,5-trihydroxyoxan-2-yl)oxy-6-oxatetracyclo[11.3.1.03,10.0",PVALB,0
+661746,"2-debenzoyl-2-(3',5'-difluorobenzoyl)-a-nortaxol",LINC01287,0
+661746,"2-debenzoyl-2-(3',5'-difluorobenzoyl)-a-nortaxol",JCHAIN,0
+661746,"2-debenzoyl-2-(3',5'-difluorobenzoyl)-a-nortaxol",PVALB,0
+661746,"2-debenzoyl-2-(3',5'-difluorobenzoyl)-a-nortaxol",IGLL5,0
+661746,"2-debenzoyl-2-(3',5'-difluorobenzoyl)-a-nortaxol",TLR7,0
+664402,"[(1S,3R,4S,7R,9S,10S,12R)-4,12-Diacetyloxy-15-[(3S)-3-(2,2-dimethylpropanoylamino)-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptad",LINC01287,0
+664402,"[(1S,3R,4S,7R,9S,10S,12R)-4,12-Diacetyloxy-15-[(3S)-3-(2,2-dimethylpropanoylamino)-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptad",JCHAIN,0
+664402,"[(1S,3R,4S,7R,9S,10S,12R)-4,12-Diacetyloxy-15-[(3S)-3-(2,2-dimethylpropanoylamino)-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptad",PVALB,0
+664402,"[(1S,3R,4S,7R,9S,10S,12R)-4,12-Diacetyloxy-15-[(3S)-3-(2,2-dimethylpropanoylamino)-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptad",IGLL5,0
+664402,"[(1S,3R,4S,7R,9S,10S,12R)-4,12-Diacetyloxy-15-[(3S)-3-(2,2-dimethylpropanoylamino)-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptad",TLR7,0
+664404,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-1,9-dihydroxy-15-[(2R,3S)-2-hydroxy-3-(3-methylbutanoylamino)-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]h",LINC01287,0
+664404,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-1,9-dihydroxy-15-[(2R,3S)-2-hydroxy-3-(3-methylbutanoylamino)-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]h",JCHAIN,0
+664404,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-1,9-dihydroxy-15-[(2R,3S)-2-hydroxy-3-(3-methylbutanoylamino)-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]h",PVALB,0
+664404,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-1,9-dihydroxy-15-[(2R,3S)-2-hydroxy-3-(3-methylbutanoylamino)-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]h",IGLL5,0
+664404,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-1,9-dihydroxy-15-[(2R,3S)-2-hydroxy-3-(3-methylbutanoylamino)-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]h",TLR7,0
+666608,"[(1S,2S,3R,4S,7R,9S,10S,12R)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-naphthalen-2-ylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-1",LINC01287,0
+666608,"[(1S,2S,3R,4S,7R,9S,10S,12R)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-naphthalen-2-ylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-1",JCHAIN,0
+666608,"[(1S,2S,3R,4S,7R,9S,10S,12R)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-naphthalen-2-ylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-1",PVALB,0
+666608,"[(1S,2S,3R,4S,7R,9S,10S,12R)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-naphthalen-2-ylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-1",IGLL5,0
+666608,"[(1S,2S,3R,4S,7R,9S,10S,12R)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-naphthalen-2-ylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-1",TLR7,0
+669364,AC1L8IIJ,FLT3,0
+669364,AC1L8IIJ,MIR658,0
+669364,AC1L8IIJ,MIR5699,0
+669364,AC1L8IIJ,RNASE2,0
+669364,AC1L8IIJ,MPO,0
+669365,AC1L8IIM,REC8,0
+669365,AC1L8IIM,MAPK8,0
+669365,AC1L8IIM,SH2D1A,0
+669365,AC1L8IIM,NEK11,0
+669365,AC1L8IIM,HHIP-AS1,0
+671867,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-1,9-dihydroxy-15-[(2R,3S)-2-hydroxy-3-[(2-methylpropan-2-yl)oxycarbonylamino]-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.",LINC01287,0
+671867,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-1,9-dihydroxy-15-[(2R,3S)-2-hydroxy-3-[(2-methylpropan-2-yl)oxycarbonylamino]-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.",JCHAIN,0
+671867,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-1,9-dihydroxy-15-[(2R,3S)-2-hydroxy-3-[(2-methylpropan-2-yl)oxycarbonylamino]-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.",PVALB,0
+671867,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-1,9-dihydroxy-15-[(2R,3S)-2-hydroxy-3-[(2-methylpropan-2-yl)oxycarbonylamino]-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.",IGLL5,0
+671867,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-1,9-dihydroxy-15-[(2R,3S)-2-hydroxy-3-[(2-methylpropan-2-yl)oxycarbonylamino]-3-phenylpropanoyl]oxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.",MIR5699,0
+671870,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-(2-methylphenyl)propanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]hepta",LINC01287,0
+671870,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-(2-methylphenyl)propanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]hepta",JCHAIN,0
+671870,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-(2-methylphenyl)propanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]hepta",PVALB,0
+671870,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-(2-methylphenyl)propanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]hepta",IGLL5,0
+671870,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-(2-methylphenyl)propanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]hepta",TLR7,0
+673187,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-13-en-",LINC01287,0
+673187,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-13-en-",JCHAIN,0
+673187,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-13-en-",PVALB,0
+673187,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-13-en-",IGLL5,0
+673187,"[(1S,2S,3R,4S,7R,9S,10S,12R,15S)-4,12-Diacetyloxy-15-[(2R,3S)-3-benzamido-2-hydroxy-3-phenylpropanoyl]oxy-1,9-dihydroxy-10,14,17,17-tetramethyl-11-oxo-6-oxatetracyclo[11.3.1.03,10.04,7]heptadec-13-en-",TLR7,0
+673188,2-Debenzoyl-2-(p-fluorobenzoyl)paclitaxel,LINC01287,0
+673188,2-Debenzoyl-2-(p-fluorobenzoyl)paclitaxel,JCHAIN,0
+673188,2-Debenzoyl-2-(p-fluorobenzoyl)paclitaxel,PVALB,0
+673188,2-Debenzoyl-2-(p-fluorobenzoyl)paclitaxel,IGLL5,0
+673188,2-Debenzoyl-2-(p-fluorobenzoyl)paclitaxel,TLR7,0
+673596,7-Ethyl-10-hydroxycamptothecin,LINC01287,0
+673596,7-Ethyl-10-hydroxycamptothecin,PVALB,0
+673596,7-Ethyl-10-hydroxycamptothecin,JCHAIN,0
+673596,7-Ethyl-10-hydroxycamptothecin,IGLL5,0
+673596,7-Ethyl-10-hydroxycamptothecin,TLR7,2
+677411,leflunomide,MAPK8,0
+677411,leflunomide,THYN1,0
+677411,leflunomide,FDX1,0
+677411,leflunomide,TTK,0
+677411,leflunomide,CDK7,0
+679828,PD-98059,MAPK8,3
+679828,PD-98059,FDX1,0
+679828,PD-98059,THYN1,0
+679828,PD-98059,MND1,0
+679828,PD-98059,TTK,0
+681239,Bortezomib,IGLL5,0
+681239,Bortezomib,PVALB,0
+681239,Bortezomib,JCHAIN,0
+681239,Bortezomib,LINC01287,0
+681239,Bortezomib,MIR5699,0
+681632,Camptothecin Derivative,LINC01287,0
+681632,Camptothecin Derivative,JCHAIN,0
+681632,Camptothecin Derivative,PVALB,0
+681632,Camptothecin Derivative,IGLL5,0
+681632,Camptothecin Derivative,TLR7,5
+681633,Camptothecin Derivative,LINC01287,0
+681633,Camptothecin Derivative,PVALB,0
+681633,Camptothecin Derivative,JCHAIN,0
+681633,Camptothecin Derivative,IGLL5,0
+681633,Camptothecin Derivative,TLR7,5
+681634,Camptothecin Derivative,LINC01287,0
+681634,Camptothecin Derivative,PVALB,0
+681634,Camptothecin Derivative,JCHAIN,0
+681634,Camptothecin Derivative,IGLL5,0
+681634,Camptothecin Derivative,TLR7,5
+681635,Camptothecin Derivative,LINC01287,0
+681635,Camptothecin Derivative,JCHAIN,0
+681635,Camptothecin Derivative,PVALB,0
+681635,Camptothecin Derivative,IGLL5,0
+681635,Camptothecin Derivative,TLR7,5
+681636,Camptothecin Derivative,LINC01287,0
+681636,Camptothecin Derivative,JCHAIN,0
+681636,Camptothecin Derivative,PVALB,0
+681636,Camptothecin Derivative,IGLL5,0
+681636,Camptothecin Derivative,TLR7,5
+681637,Camptothecin Derivative,LINC01287,0
+681637,Camptothecin Derivative,JCHAIN,0
+681637,Camptothecin Derivative,PVALB,0
+681637,Camptothecin Derivative,IGLL5,0
+681637,Camptothecin Derivative,TLR7,5
+681638,Camptothecin Derivative,LINC01287,0
+681638,Camptothecin Derivative,JCHAIN,0
+681638,Camptothecin Derivative,PVALB,0
+681638,Camptothecin Derivative,IGLL5,0
+681638,Camptothecin Derivative,TLR7,5
+681639,Camptothecin Derivative,LINC01287,0
+681639,Camptothecin Derivative,JCHAIN,0
+681639,Camptothecin Derivative,PVALB,0
+681639,Camptothecin Derivative,IGLL5,0
+681639,Camptothecin Derivative,TLR7,5
+681640,Camptothecin Derivative,LINC01287,0
+681640,Camptothecin Derivative,JCHAIN,0
+681640,Camptothecin Derivative,PVALB,0
+681640,Camptothecin Derivative,IGLL5,0
+681640,Camptothecin Derivative,TLR7,5
+681641,Camptothecin Derivative,LINC01287,0
+681641,Camptothecin Derivative,PVALB,0
+681641,Camptothecin Derivative,JCHAIN,0
+681641,Camptothecin Derivative,IGLL5,0
+681641,Camptothecin Derivative,TLR7,5
+681642,Camptothecin Derivative,LINC01287,0
+681642,Camptothecin Derivative,PVALB,0
+681642,Camptothecin Derivative,JCHAIN,0
+681642,Camptothecin Derivative,IGLL5,0
+681642,Camptothecin Derivative,TLR7,5
+681643,Camptothecin Derivative,LINC01287,0
+681643,Camptothecin Derivative,PVALB,0
+681643,Camptothecin Derivative,JCHAIN,0
+681643,Camptothecin Derivative,IGLL5,0
+681643,Camptothecin Derivative,TLR7,5
+681644,Camptothecin Derivative,LINC01287,0
+681644,Camptothecin Derivative,PVALB,0
+681644,Camptothecin Derivative,IGLL5,0
+681644,Camptothecin Derivative,JCHAIN,0
+681644,Camptothecin Derivative,TLR7,5
+681645,Camptothecin Derivative,LINC01287,0
+681645,Camptothecin Derivative,JCHAIN,0
+681645,Camptothecin Derivative,PVALB,0
+681645,Camptothecin Derivative,IGLL5,0
+681645,Camptothecin Derivative,TLR7,5
+681646,Camptothecin Derivative,LINC01287,0
+681646,Camptothecin Derivative,PVALB,0
+681646,Camptothecin Derivative,JCHAIN,0
+681646,Camptothecin Derivative,IGLL5,0
+681646,Camptothecin Derivative,TLR7,5
+682298,Camptothecin Derivative,MIR658,0
+682298,Camptothecin Derivative,MIR5699,0
+682298,Camptothecin Derivative,TYROBP,0
+682298,Camptothecin Derivative,MPO,14
+682298,Camptothecin Derivative,RNASE2,0
+683555,Camptothecin Derivative,LINC01287,0
+683555,Camptothecin Derivative,JCHAIN,0
+683555,Camptothecin Derivative,PVALB,0
+683555,Camptothecin Derivative,IGLL5,0
+683555,Camptothecin Derivative,MIR5699,0
+683556,Camptothecin Derivative,LINC01287,0
+683556,Camptothecin Derivative,JCHAIN,0
+683556,Camptothecin Derivative,PVALB,0
+683556,Camptothecin Derivative,IGLL5,0
+683556,Camptothecin Derivative,MIR5699,0
+683557,Camptothecin Derivative,LINC01287,0
+683557,Camptothecin Derivative,JCHAIN,0
+683557,Camptothecin Derivative,PVALB,0
+683557,Camptothecin Derivative,IGLL5,0
+683557,Camptothecin Derivative,MIR5699,0
+683558,Camptothecin Derivative,LINC01287,0
+683558,Camptothecin Derivative,JCHAIN,0
+683558,Camptothecin Derivative,PVALB,0
+683558,Camptothecin Derivative,IGLL5,0
+683558,Camptothecin Derivative,MIR5699,0
+683863,Irofulven,MAPK8,0
+683863,Irofulven,MND1,0
+683863,Irofulven,REC8,0
+683863,Irofulven,FDX1,0
+683863,Irofulven,SLC35G2,0
+683864,Temsirolimus,MIR5699,0
+683864,Temsirolimus,JCHAIN,0
+683864,Temsirolimus,IGLL5,0
+683864,Temsirolimus,PVALB,0
+683864,Temsirolimus,LINC01287,0
+684363,Epothilone B,LINC01287,0
+684363,Epothilone B,TLR7,0
+684363,Epothilone B,PVALB,0
+684363,Epothilone B,JCHAIN,0
+684363,Epothilone B,IGLL5,0
+693255,Tyrphostin AG 1478,MAPK8,0
+693255,Tyrphostin AG 1478,FDX1,0
+693255,Tyrphostin AG 1478,THYN1,0
+693255,Tyrphostin AG 1478,MND1,0
+693255,Tyrphostin AG 1478,REC8,0
+694501,BN-2629,MIR658,0
+694501,BN-2629,MIR5699,0
+694501,BN-2629,RNASE2,0
+694501,BN-2629,MPO,0
+694501,BN-2629,TYROBP,0
+697286,LY-294002,MAPK8,0
+697286,LY-294002,MND1,0
+697286,LY-294002,FDX1,0
+697286,LY-294002,REC8,0
+697286,LY-294002,THYN1,0
+697726,RH1,CWC15,0
+697726,RH1,THYN1,0
+697726,RH1,CDK7,0
+697726,RH1,RPL5,0
+697726,RH1,MAPK8,0
+697887,XK-469,MAPK8,0
+697887,XK-469,FDX1,0
+697887,XK-469,REC8,0
+697887,XK-469,MND1,0
+697887,XK-469,THYN1,0
+697912,5-Fluoro deoxy uridine 10mer,LINC01287,0
+697912,5-Fluoro deoxy uridine 10mer,PVALB,0
+697912,5-Fluoro deoxy uridine 10mer,JCHAIN,0
+697912,5-Fluoro deoxy uridine 10mer,IGLL5,0
+697912,5-Fluoro deoxy uridine 10mer,TLR7,0
+698037,Pemetrexed,HPGDS,0
+698037,Pemetrexed,MIR330,0
+698037,Pemetrexed,MIR6807,0
+698037,Pemetrexed,MIR6728,0
+698037,Pemetrexed,MIR641,0
+701554,Seliciclib,MIR5699,0
+701554,Seliciclib,MIR641,0
+701554,Seliciclib,JCHAIN,0
+701554,Seliciclib,PVALB,0
+701554,Seliciclib,IGLL5,0
+701852,Vorinostat,HDAC2,114
+701852,Vorinostat,CWC15,0
+701852,Vorinostat,THYN1,0
+701852,Vorinostat,CDK7,0
+701852,Vorinostat,PARP2,0
+702294,Estramustine,LINC01287,0
+702294,Estramustine,PVALB,0
+702294,Estramustine,JCHAIN,0
+702294,Estramustine,IGLL5,0
+702294,Estramustine,TLR7,0
+706744,Indenoisoquinoline derivative,LINC01287,0
+706744,Indenoisoquinoline derivative,PVALB,0
+706744,Indenoisoquinoline derivative,IGLL5,0
+706744,Indenoisoquinoline derivative,JCHAIN,0
+706744,Indenoisoquinoline derivative,SNORD83B,0
+706995,Entinostat,FLT3,1
+706995,Entinostat,MIR2278,0
+706995,Entinostat,MIR3198-1,0
+706995,Entinostat,MIR658,0
+706995,Entinostat,RNASE2,0
+707389,Eribulin mesilate,LINC01287,0
+707389,Eribulin mesilate,JCHAIN,0
+707389,Eribulin mesilate,PVALB,0
+707389,Eribulin mesilate,IGLL5,0
+707389,Eribulin mesilate,MIR5699,0
+707545,Alvespimycin,LINC01287,0
+707545,Alvespimycin,JCHAIN,0
+707545,Alvespimycin,PVALB,0
+707545,Alvespimycin,IGLL5,0
+707545,Alvespimycin,TLR7,0
+708298,AR-67,LINC01287,0
+708298,AR-67,PVALB,0
+708298,AR-67,IGLL5,0
+708298,AR-67,JCHAIN,0
+708298,AR-67,TLR7,0
+709237,Camptothecin Derivative,LINC01287,0
+709237,Camptothecin Derivative,PVALB,0
+709237,Camptothecin Derivative,JCHAIN,0
+709237,Camptothecin Derivative,IGLL5,0
+709237,Camptothecin Derivative,TLR7,5
+710270,Karenitecin,LINC01287,0
+710270,Karenitecin,IGLL5,0
+710270,Karenitecin,PVALB,0
+710270,Karenitecin,JCHAIN,0
+710270,Karenitecin,TLR7,0
+710297,PX-316,MIR641,0
+710297,PX-316,HPGDS,0
+710297,PX-316,MIR330,0
+710297,PX-316,MIR6728,0
+710297,PX-316,MIR6807,0
+713200,Bardoxolone Methyl,LINC01287,0
+713200,Bardoxolone Methyl,TLR7,0
+713200,Bardoxolone Methyl,PVALB,0
+713200,Bardoxolone Methyl,IGLL5,0
+713200,Bardoxolone Methyl,JCHAIN,0
+713763,Rebimastat,MAPK8,0
+713763,Rebimastat,DKK3,0
+713763,Rebimastat,NEK11,0
+713763,Rebimastat,THYN1,0
+713763,Rebimastat,SPEG,0
+714597,Imexon,RRM1,0
+714597,Imexon,CWC15,0
+714597,Imexon,THYN1,0
+714597,Imexon,NUP37,0
+714597,Imexon,PARP2,0
+715055,Gefitinib,SOX10,4
+715055,Gefitinib,MIR330,0
+715055,Gefitinib,MIR6807,0
+715055,Gefitinib,MIR6728,0
+715055,Gefitinib,C10orf90,0
+718781,Erlotinib,FLT3,16
+718781,Erlotinib,MIR2278,0
+718781,Erlotinib,MIR3198-1,0
+718781,Erlotinib,SNAR-C4,0
+718781,Erlotinib,ITK,2
+719276,Fulvestrant,CD3E,0
+719276,Fulvestrant,MAPK8,0
+719276,Fulvestrant,SOX10,1
+719276,Fulvestrant,ZAP70,0
+719276,Fulvestrant,REC8,0
+719627,Celecoxib,SH2D1A,0
+719627,Celecoxib,ITK,0
+719627,Celecoxib,CD3E,0
+719627,Celecoxib,ZAP70,1
+719627,Celecoxib,MIR142,0
+721517,Zoledronate,MAPK8,0
+721517,Zoledronate,THYN1,0
+721517,Zoledronate,CDK7,2
+721517,Zoledronate,TTK,0
+721517,Zoledronate,CWC15,0
+722134,Sonolisib,LINC01287,0
+722134,Sonolisib,JCHAIN,0
+722134,Sonolisib,PVALB,0
+722134,Sonolisib,IGLL5,0
+722134,Sonolisib,TLR7,0
+724998,LMP-400,JCHAIN,0
+724998,LMP-400,PVALB,0
+724998,LMP-400,IGLL5,0
+724998,LMP-400,LINC01287,0
+724998,LMP-400,HBG1,0
+725776,LMP776,LINC01287,0
+725776,LMP776,PVALB,0
+725776,LMP776,IGLL5,0
+725776,LMP776,JCHAIN,0
+725776,LMP776,TLR7,0
+726630,Belinostat,MAPK8,0
+726630,Belinostat,REC8,0
+726630,Belinostat,SH2D1A,0
+726630,Belinostat,MND1,0
+726630,Belinostat,NEK11,0
+727989,Lapatinib,LINC01287,0
+727989,Lapatinib,JCHAIN,0
+727989,Lapatinib,PVALB,0
+727989,Lapatinib,IGLL5,0
+727989,Lapatinib,TLR7,1
+728073,Irinotecan,LINC01287,0
+728073,Irinotecan,JCHAIN,0
+728073,Irinotecan,PVALB,0
+728073,Irinotecan,IGLL5,0
+728073,Irinotecan,TLR7,2
+729998,N-(2-aminophenyl)-4-[1-(methylbenzylamine-4-ylmethyl)vinyl]b enzamide,MAPK8,0
+729998,N-(2-aminophenyl)-4-[1-(methylbenzylamine-4-ylmethyl)vinyl]b enzamide,REC8,0
+729998,N-(2-aminophenyl)-4-[1-(methylbenzylamine-4-ylmethyl)vinyl]b enzamide,MND1,0
+729998,N-(2-aminophenyl)-4-[1-(methylbenzylamine-4-ylmethyl)vinyl]b enzamide,NEK11,0
+729998,N-(2-aminophenyl)-4-[1-(methylbenzylamine-4-ylmethyl)vinyl]b enzamide,FDX1,0
+729999,N-(2-aminophenyl)-4-{1-[(4-pyridin-2-ylpiperazin-1-yl)methyl ]vinyl}benzamide,SH2D1A,0
+729999,N-(2-aminophenyl)-4-{1-[(4-pyridin-2-ylpiperazin-1-yl)methyl ]vinyl}benzamide,ITK,0
+729999,N-(2-aminophenyl)-4-{1-[(4-pyridin-2-ylpiperazin-1-yl)methyl ]vinyl}benzamide,CD3E,0
+729999,N-(2-aminophenyl)-4-{1-[(4-pyridin-2-ylpiperazin-1-yl)methyl ]vinyl}benzamide,ZAP70,0
+729999,N-(2-aminophenyl)-4-{1-[(4-pyridin-2-ylpiperazin-1-yl)methyl ]vinyl}benzamide,MIR142,0
+730001,"N-(2-aminophenyl)-4-[1-(1,3,4,5-tetrahydro-2H-indeno[1,2-c] pyridin-2-ylmethyl)vinyl]benzamide",SH2D1A,0
+730001,"N-(2-aminophenyl)-4-[1-(1,3,4,5-tetrahydro-2H-indeno[1,2-c] pyridin-2-ylmethyl)vinyl]benzamide",CD3E,0
+730001,"N-(2-aminophenyl)-4-[1-(1,3,4,5-tetrahydro-2H-indeno[1,2-c] pyridin-2-ylmethyl)vinyl]benzamide",ZAP70,0
+730001,"N-(2-aminophenyl)-4-[1-(1,3,4,5-tetrahydro-2H-indeno[1,2-c] pyridin-2-ylmethyl)vinyl]benzamide",ITK,0
+730001,"N-(2-aminophenyl)-4-[1-(1,3,4,5-tetrahydro-2H-indeno[1,2-c] pyridin-2-ylmethyl)vinyl]benzamide",MIR142,0
+730002,N-(2-aminophenyl)-4-{1-[(benzylamino)methyl]vinyl}benzamide,MAPK8,0
+730002,N-(2-aminophenyl)-4-{1-[(benzylamino)methyl]vinyl}benzamide,REC8,0
+730002,N-(2-aminophenyl)-4-{1-[(benzylamino)methyl]vinyl}benzamide,MND1,0
+730002,N-(2-aminophenyl)-4-{1-[(benzylamino)methyl]vinyl}benzamide,NEK11,0
+730002,N-(2-aminophenyl)-4-{1-[(benzylamino)methyl]vinyl}benzamide,SH2D1A,0
+730003,N-(2-aminophenyl)-4-[1-({4-[3-(trifluoromethyl)phenyl]pipera zin-1-yl}methyl)viny l]benzamide,MIR5699,0
+730003,N-(2-aminophenyl)-4-[1-({4-[3-(trifluoromethyl)phenyl]pipera zin-1-yl}methyl)viny l]benzamide,IGLL5,0
+730003,N-(2-aminophenyl)-4-[1-({4-[3-(trifluoromethyl)phenyl]pipera zin-1-yl}methyl)viny l]benzamide,PVALB,0
+730003,N-(2-aminophenyl)-4-[1-({4-[3-(trifluoromethyl)phenyl]pipera zin-1-yl}methyl)viny l]benzamide,JCHAIN,0
+730003,N-(2-aminophenyl)-4-[1-({4-[3-(trifluoromethyl)phenyl]pipera zin-1-yl}methyl)viny l]benzamide,MIR641,0
+730004,N-(2-aminophenyl)-4-(1-{[4-(2-methoxyphenyl)piperazin-1-yl]m ethyl}vinyl)benzamide,REC8,0
+730004,N-(2-aminophenyl)-4-(1-{[4-(2-methoxyphenyl)piperazin-1-yl]m ethyl}vinyl)benzamide,MAPK8,0
+730004,N-(2-aminophenyl)-4-(1-{[4-(2-methoxyphenyl)piperazin-1-yl]m ethyl}vinyl)benzamide,SH2D1A,0
+730004,N-(2-aminophenyl)-4-(1-{[4-(2-methoxyphenyl)piperazin-1-yl]m ethyl}vinyl)benzamide,NEK11,0
+730004,N-(2-aminophenyl)-4-(1-{[4-(2-methoxyphenyl)piperazin-1-yl]m ethyl}vinyl)benzamide,CD3E,0
+730006,"4,2-diyl}bi s[N-(2-aminophenyl)b enzamide]",REC8,0
+730006,"4,2-diyl}bi s[N-(2-aminophenyl)b enzamide]",MAPK8,0
+730006,"4,2-diyl}bi s[N-(2-aminophenyl)b enzamide]",NEK11,0
+730006,"4,2-diyl}bi s[N-(2-aminophenyl)b enzamide]",SH2D1A,0
+730006,"4,2-diyl}bi s[N-(2-aminophenyl)b enzamide]",ZAP70,0
+732011,SR16157,JCHAIN,0
+732011,SR16157,HPGDS,0
+732011,SR16157,PVALB,0
+732011,SR16157,IGLL5,0
+732011,SR16157,PRAP1,0
+732517,Dasatinib,LINC01287,0
+732517,Dasatinib,PVALB,0
+732517,Dasatinib,IGLL5,0
+732517,Dasatinib,JCHAIN,0
+732517,Dasatinib,TLR7,2
+733252,J3.566.338J,PVALB,0
+733252,J3.566.338J,MIR641,0
+733252,J3.566.338J,JCHAIN,0
+733252,J3.566.338J,IGLL5,0
+733252,J3.566.338J,HPGDS,0
+733253,"N-(2-Aminophenyl)-3-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]propanamide",IGLL5,0
+733253,"N-(2-Aminophenyl)-3-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]propanamide",PVALB,0
+733253,"N-(2-Aminophenyl)-3-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]propanamide",JCHAIN,0
+733253,"N-(2-Aminophenyl)-3-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]propanamide",MIR5699,0
+733253,"N-(2-Aminophenyl)-3-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]propanamide",LINC01287,0
+733254,"(E)-N-(2-Aminophenyl)-3-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]prop-2-enamide",IGLL5,0
+733254,"(E)-N-(2-Aminophenyl)-3-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]prop-2-enamide",LINC01287,0
+733254,"(E)-N-(2-Aminophenyl)-3-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]prop-2-enamide",PVALB,0
+733254,"(E)-N-(2-Aminophenyl)-3-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]prop-2-enamide",JCHAIN,0
+733254,"(E)-N-(2-Aminophenyl)-3-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]prop-2-enamide",SNORD83B,0
+733255,N-(2-Aminophenyl)-4-(3-benzamidoprop-1-en-2-yl)benzamide,MAPK8,0
+733255,N-(2-Aminophenyl)-4-(3-benzamidoprop-1-en-2-yl)benzamide,FDX1,0
+733255,N-(2-Aminophenyl)-4-(3-benzamidoprop-1-en-2-yl)benzamide,THYN1,0
+733255,N-(2-Aminophenyl)-4-(3-benzamidoprop-1-en-2-yl)benzamide,MND1,0
+733255,N-(2-Aminophenyl)-4-(3-benzamidoprop-1-en-2-yl)benzamide,TTK,0
+733504,Everolimus,MIR5699,0
+733504,Everolimus,JCHAIN,0
+733504,Everolimus,IGLL5,0
+733504,Everolimus,PVALB,0
+733504,Everolimus,LINC01287,0
+734294,Indenoisoquinoline derivative,LINC01287,0
+734294,Indenoisoquinoline derivative,PVALB,0
+734294,Indenoisoquinoline derivative,JCHAIN,0
+734294,Indenoisoquinoline derivative,IGLL5,0
+734294,Indenoisoquinoline derivative,HBG1,0
+734325,DMAPT,HPGDS,0
+734325,DMAPT,MIR330,0
+734325,DMAPT,MIR6807,0
+734325,DMAPT,MIR6728,0
+734325,DMAPT,MIR641,0
+734945,"N-(4-Aminophenyl)-4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]benzamide",MAPK8,0
+734945,"N-(4-Aminophenyl)-4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]benzamide",REC8,0
+734945,"N-(4-Aminophenyl)-4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]benzamide",MND1,0
+734945,"N-(4-Aminophenyl)-4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]benzamide",NEK11,0
+734945,"N-(4-Aminophenyl)-4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]benzamide",FDX1,0
+734948,"N-(2-aminophenyl)-4-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]butanamide",MIR641,0
+734948,"N-(2-aminophenyl)-4-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]butanamide",HPGDS,0
+734948,"N-(2-aminophenyl)-4-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]butanamide",MIR6807,0
+734948,"N-(2-aminophenyl)-4-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]butanamide",MIR6728,0
+734948,"N-(2-aminophenyl)-4-[4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]phenyl]butanamide",MIR330,0
+734949,"4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]-N-pyrazin-2-ylbenzamide",REC8,0
+734949,"4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]-N-pyrazin-2-ylbenzamide",MAPK8,0
+734949,"4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]-N-pyrazin-2-ylbenzamide",SH2D1A,0
+734949,"4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]-N-pyrazin-2-ylbenzamide",ITK,0
+734949,"4-[3-(3,4-dihydro-1H-isoquinolin-2-yl)prop-1-en-2-yl]-N-pyrazin-2-ylbenzamide",CD3E,0
+734950,Cyclopamine,HPGDS,0
+734950,Cyclopamine,MIR330,0
+734950,Cyclopamine,MIR6728,0
+734950,Cyclopamine,MIR6807,0
+734950,Cyclopamine,JCHAIN,0
+735037,Camptothecin Derivative,LINC01287,0
+735037,Camptothecin Derivative,PVALB,0
+735037,Camptothecin Derivative,JCHAIN,0
+735037,Camptothecin Derivative,IGLL5,0
+735037,Camptothecin Derivative,TLR7,5
+735403,"N-(2-Amino-phenyl)-4-{1-[4-(3,5-bis-trifluoromethylphenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide",FLT3,0
+735403,"N-(2-Amino-phenyl)-4-{1-[4-(3,5-bis-trifluoromethylphenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide",MIR2278,0
+735403,"N-(2-Amino-phenyl)-4-{1-[4-(3,5-bis-trifluoromethylphenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide",MIR3198-1,0
+735403,"N-(2-Amino-phenyl)-4-{1-[4-(3,5-bis-trifluoromethylphenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide",MIR5699,0
+735403,"N-(2-Amino-phenyl)-4-{1-[4-(3,5-bis-trifluoromethylphenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide",MIR658,0
+735405,AGN-PC-00AQFW,PVALB,0
+735405,AGN-PC-00AQFW,IGLL5,0
+735405,AGN-PC-00AQFW,JCHAIN,0
+735405,AGN-PC-00AQFW,MIR658,0
+735405,AGN-PC-00AQFW,MIR5699,0
+735406,N-(2-Amino-phenyl)-4-{1-[4-(2-fluorophenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide,SH2D1A,0
+735406,N-(2-Amino-phenyl)-4-{1-[4-(2-fluorophenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide,REC8,0
+735406,N-(2-Amino-phenyl)-4-{1-[4-(2-fluorophenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide,ITK,0
+735406,N-(2-Amino-phenyl)-4-{1-[4-(2-fluorophenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide,CD3E,0
+735406,N-(2-Amino-phenyl)-4-{1-[4-(2-fluorophenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide,ZAP70,0
+735407,N-(2-Amino-phenyl)-4-{1-[4-(3-fluorophenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide,SH2D1A,0
+735407,N-(2-Amino-phenyl)-4-{1-[4-(3-fluorophenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide,ITK,0
+735407,N-(2-Amino-phenyl)-4-{1-[4-(3-fluorophenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide,ZAP70,0
+735407,N-(2-Amino-phenyl)-4-{1-[4-(3-fluorophenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide,CD3E,0
+735407,N-(2-Amino-phenyl)-4-{1-[4-(3-fluorophenyl)-piperazin-1-ylmethyl]-vinyl}-benzamide,CD1E,0
+735408,N-(2-Amino-phenyl)-4-[1-(6-oxo-6H-phenanthridin-5-ylmethyl)-vinyl]-benzamide,MAPK8,0
+735408,N-(2-Amino-phenyl)-4-[1-(6-oxo-6H-phenanthridin-5-ylmethyl)-vinyl]-benzamide,REC8,0
+735408,N-(2-Amino-phenyl)-4-[1-(6-oxo-6H-phenanthridin-5-ylmethyl)-vinyl]-benzamide,NEK11,0
+735408,N-(2-Amino-phenyl)-4-[1-(6-oxo-6H-phenanthridin-5-ylmethyl)-vinyl]-benzamide,MND1,0
+735408,N-(2-Amino-phenyl)-4-[1-(6-oxo-6H-phenanthridin-5-ylmethyl)-vinyl]-benzamide,DKK3,0
+736098,VGHQGXLWUQBSQS-UHFFFAOYSA-N,REC8,0
+736098,VGHQGXLWUQBSQS-UHFFFAOYSA-N,MAPK8,0
+736098,VGHQGXLWUQBSQS-UHFFFAOYSA-N,SH2D1A,0
+736098,VGHQGXLWUQBSQS-UHFFFAOYSA-N,ITK,0
+736098,VGHQGXLWUQBSQS-UHFFFAOYSA-N,CD3E,0
+736099,"N-(2-Aminophenyl)-4-[3-(3-methyl-2,5-dioxoimidazolidin-1-yl)prop-1-en-2-yl]benzamide",REC8,0
+736099,"N-(2-Aminophenyl)-4-[3-(3-methyl-2,5-dioxoimidazolidin-1-yl)prop-1-en-2-yl]benzamide",SH2D1A,0
+736099,"N-(2-Aminophenyl)-4-[3-(3-methyl-2,5-dioxoimidazolidin-1-yl)prop-1-en-2-yl]benzamide",MAPK8,0
+736099,"N-(2-Aminophenyl)-4-[3-(3-methyl-2,5-dioxoimidazolidin-1-yl)prop-1-en-2-yl]benzamide",ITK,0
+736099,"N-(2-Aminophenyl)-4-[3-(3-methyl-2,5-dioxoimidazolidin-1-yl)prop-1-en-2-yl]benzamide",ZAP70,0
+736100,"4-[3-[(6Ar)-6,11-dioxo-6a,7,8,9-tetrahydropyrrolo[2,1-c][1,4]benzodiazepin-5-yl]but-1-en-2-yl]-N-(2-aminophenyl)-N-methylbenzamide",LINC01287,0
+736100,"4-[3-[(6Ar)-6,11-dioxo-6a,7,8,9-tetrahydropyrrolo[2,1-c][1,4]benzodiazepin-5-yl]but-1-en-2-yl]-N-(2-aminophenyl)-N-methylbenzamide",PVALB,0
+736100,"4-[3-[(6Ar)-6,11-dioxo-6a,7,8,9-tetrahydropyrrolo[2,1-c][1,4]benzodiazepin-5-yl]but-1-en-2-yl]-N-(2-aminophenyl)-N-methylbenzamide",JCHAIN,0
+736100,"4-[3-[(6Ar)-6,11-dioxo-6a,7,8,9-tetrahydropyrrolo[2,1-c][1,4]benzodiazepin-5-yl]but-1-en-2-yl]-N-(2-aminophenyl)-N-methylbenzamide",IGLL5,0
+736100,"4-[3-[(6Ar)-6,11-dioxo-6a,7,8,9-tetrahydropyrrolo[2,1-c][1,4]benzodiazepin-5-yl]but-1-en-2-yl]-N-(2-aminophenyl)-N-methylbenzamide",TLR7,0
+736101,N-(2-Aminophenyl)-4-(3-phenothiazin-10-ylprop-1-en-2-yl)benzamide,REC8,0
+736101,N-(2-Aminophenyl)-4-(3-phenothiazin-10-ylprop-1-en-2-yl)benzamide,SH2D1A,0
+736101,N-(2-Aminophenyl)-4-(3-phenothiazin-10-ylprop-1-en-2-yl)benzamide,ITK,0
+736101,N-(2-Aminophenyl)-4-(3-phenothiazin-10-ylprop-1-en-2-yl)benzamide,CD3E,0
+736101,N-(2-Aminophenyl)-4-(3-phenothiazin-10-ylprop-1-en-2-yl)benzamide,ZAP70,0
+736198,Indenoisoquinoline derivative,LINC01287,0
+736198,Indenoisoquinoline derivative,JCHAIN,0
+736198,Indenoisoquinoline derivative,PVALB,0
+736198,Indenoisoquinoline derivative,IGLL5,0
+736198,Indenoisoquinoline derivative,HBG1,0
+736201,Indenoisoquinoline derivative,LINC01287,0
+736201,Indenoisoquinoline derivative,PVALB,0
+736201,Indenoisoquinoline derivative,JCHAIN,0
+736201,Indenoisoquinoline derivative,IGLL5,0
+736201,Indenoisoquinoline derivative,TLR7,0
+736202,Indenoisoquinoline derivative,LINC01287,0
+736202,Indenoisoquinoline derivative,PVALB,0
+736202,Indenoisoquinoline derivative,IGLL5,0
+736202,Indenoisoquinoline derivative,JCHAIN,0
+736202,Indenoisoquinoline derivative,TLR7,0
+736493,Indenoisoquinoline derivative,LINC01287,0
+736493,Indenoisoquinoline derivative,PVALB,0
+736493,Indenoisoquinoline derivative,IGLL5,0
+736493,Indenoisoquinoline derivative,JCHAIN,0
+736493,Indenoisoquinoline derivative,HBG1,0
+736624,Indenoisoquinoline derivative,LINC01287,0
+736624,Indenoisoquinoline derivative,PVALB,0
+736624,Indenoisoquinoline derivative,JCHAIN,0
+736624,Indenoisoquinoline derivative,IGLL5,0
+736624,Indenoisoquinoline derivative,TLR7,0
+737518,Indenoisoquinoline derivative,LINC01287,0
+737518,Indenoisoquinoline derivative,PVALB,0
+737518,Indenoisoquinoline derivative,JCHAIN,0
+737518,Indenoisoquinoline derivative,IGLL5,0
+737518,Indenoisoquinoline derivative,TLR7,0
+737754,Pazopanib,LINC01287,0
+737754,Pazopanib,PVALB,0
+737754,Pazopanib,IGLL5,0
+737754,Pazopanib,JCHAIN,0
+737754,Pazopanib,TLR7,0
+740268,Indenoisoquinoline derivative,LINC01287,0
+740268,Indenoisoquinoline derivative,PVALB,0
+740268,Indenoisoquinoline derivative,IGLL5,0
+740268,Indenoisoquinoline derivative,JCHAIN,0
+740268,Indenoisoquinoline derivative,HBG1,0
+740521,Indenoisoquinoline derivative,LINC01287,0
+740521,Indenoisoquinoline derivative,PVALB,0
+740521,Indenoisoquinoline derivative,IGLL5,0
+740521,Indenoisoquinoline derivative,JCHAIN,0
+740521,Indenoisoquinoline derivative,TLR7,0
+740645,Indenoisoquinoline derivative,LINC01287,0
+740645,Indenoisoquinoline derivative,PVALB,0
+740645,Indenoisoquinoline derivative,IGLL5,0
+740645,Indenoisoquinoline derivative,JCHAIN,0
+740645,Indenoisoquinoline derivative,TLR7,0
+741078,Selumetinib,PVALB,0
+741078,Selumetinib,IGLL5,0
+741078,Selumetinib,JCHAIN,0
+741078,Selumetinib,LINC01287,0
+741078,Selumetinib,HBG1,0
+741899,BML-277,MAPK8,0
+741899,BML-277,REC8,0
+741899,BML-277,SH2D1A,0
+741899,BML-277,NEK11,0
+741899,BML-277,MND1,0
+742380,cyclo(-(R)-b2hPhe-D-Pro-Lys-Phe),MAPK8,0
+742380,cyclo(-(R)-b2hPhe-D-Pro-Lys-Phe),DKK3,0
+742380,cyclo(-(R)-b2hPhe-D-Pro-Lys-Phe),NEK11,0
+742380,cyclo(-(R)-b2hPhe-D-Pro-Lys-Phe),SPEG,0
+742380,cyclo(-(R)-b2hPhe-D-Pro-Lys-Phe),NCS1,0
+742611,N-(2-Aminophenyl)-4-[3-[4-[6-(trifluoromethyl)pyridin-2-yl]piperazin-1-yl]prop-1-en-2-yl]benzamide,IGLL5,0
+742611,N-(2-Aminophenyl)-4-[3-[4-[6-(trifluoromethyl)pyridin-2-yl]piperazin-1-yl]prop-1-en-2-yl]benzamide,LINC01287,0
+742611,N-(2-Aminophenyl)-4-[3-[4-[6-(trifluoromethyl)pyridin-2-yl]piperazin-1-yl]prop-1-en-2-yl]benzamide,PVALB,0
+742611,N-(2-Aminophenyl)-4-[3-[4-[6-(trifluoromethyl)pyridin-2-yl]piperazin-1-yl]prop-1-en-2-yl]benzamide,JCHAIN,0
+742611,N-(2-Aminophenyl)-4-[3-[4-[6-(trifluoromethyl)pyridin-2-yl]piperazin-1-yl]prop-1-en-2-yl]benzamide,SNORD83B,0
+743414,Imatinib,MIR330,0
+743414,Imatinib,MIR6728,0
+743414,Imatinib,MIR6807,0
+743414,Imatinib,SOX10,3
+743414,Imatinib,C10orf90,0
+744912,Obatoclax,LINC01287,0
+744912,Obatoclax,PVALB,0
+744912,Obatoclax,IGLL5,0
+744912,Obatoclax,JCHAIN,0
+744912,Obatoclax,TLR7,1
+745750,Lapatinib,JCHAIN,0
+745750,Lapatinib,PVALB,0
+745750,Lapatinib,LINC01287,0
+745750,Lapatinib,IGLL5,0
+745750,Lapatinib,TLR7,1
+747167,Nelfinavir,LINC01287,0
+747167,Nelfinavir,JCHAIN,0
+747167,Nelfinavir,PVALB,0
+747167,Nelfinavir,IGLL5,0
+747167,Nelfinavir,TLR7,1
+747599,Nilotinib,LINC01287,0
+747599,Nilotinib,PVALB,0
+747599,Nilotinib,JCHAIN,0
+747599,Nilotinib,IGLL5,0
+747599,Nilotinib,TLR7,1
+747856,Olaparib,SH2D1A,0
+747856,Olaparib,ZAP70,0
+747856,Olaparib,CD3E,0
+747856,Olaparib,ITK,0
+747856,Olaparib,CD1E,0
+747973,Ixabepilone,LINC01287,0
+747973,Ixabepilone,PVALB,0
+747973,Ixabepilone,JCHAIN,0
+747973,Ixabepilone,IGLL5,0
+747973,Ixabepilone,TLR7,0
+747974,Raloxifene,SH2D1A,0
+747974,Raloxifene,CD3E,0
+747974,Raloxifene,ZAP70,0
+747974,Raloxifene,ITK,0
+747974,Raloxifene,CD1E,0
+749226,Abiraterone,MIR641,0
+749226,Abiraterone,MIR5699,0
+749226,Abiraterone,MIR658,0
+749226,Abiraterone,FLT3,1
+749226,Abiraterone,HPGDS,0
+749227,Abiraterone,LINC01287,0
+749227,Abiraterone,PVALB,0
+749227,Abiraterone,JCHAIN,0
+749227,Abiraterone,IGLL5,0
+749227,Abiraterone,TLR7,0
+749712,AT-13387,PVALB,0
+749712,AT-13387,LINC01287,0
+749712,AT-13387,JCHAIN,0
+749712,AT-13387,IGLL5,0
+749712,AT-13387,MIR658,0
+750690,Sunitinib,LINC01287,0
+750690,Sunitinib,PVALB,0
+750690,Sunitinib,JCHAIN,0
+750690,Sunitinib,IGLL5,0
+750690,Sunitinib,HBG1,0
+750691,Afatinib,MIR330,0
+750691,Afatinib,MIR6807,0
+750691,Afatinib,MIR6728,0
+750691,Afatinib,HPGDS,0
+750691,Afatinib,RAB25,0
+751548,salinomycin,LINC01287,0
+751548,salinomycin,JCHAIN,0
+751548,salinomycin,PVALB,0
+751548,salinomycin,IGLL5,0
+751548,salinomycin,TLR7,0
+751858,"N-[4-(2-pyridinyl)-1,3-thiazol-2-yl]-2-pyridinamine",MAPK8,0
+751858,"N-[4-(2-pyridinyl)-1,3-thiazol-2-yl]-2-pyridinamine",THYN1,0
+751858,"N-[4-(2-pyridinyl)-1,3-thiazol-2-yl]-2-pyridinamine",FDX1,0
+751858,"N-[4-(2-pyridinyl)-1,3-thiazol-2-yl]-2-pyridinamine",CDK7,0
+751858,"N-[4-(2-pyridinyl)-1,3-thiazol-2-yl]-2-pyridinamine",TTK,0
+752631,"1-(5-phenyl-2,3-dihydro-1,3,4-thiadiazol-2-yl)-2-naphthol",MAPK8,0
+752631,"1-(5-phenyl-2,3-dihydro-1,3,4-thiadiazol-2-yl)-2-naphthol",REC8,0
+752631,"1-(5-phenyl-2,3-dihydro-1,3,4-thiadiazol-2-yl)-2-naphthol",SH2D1A,0
+752631,"1-(5-phenyl-2,3-dihydro-1,3,4-thiadiazol-2-yl)-2-naphthol",CD3E,0
+752631,"1-(5-phenyl-2,3-dihydro-1,3,4-thiadiazol-2-yl)-2-naphthol",ITK,0
+752782,Pazopanib,LINC01287,0
+752782,Pazopanib,PVALB,0
+752782,Pazopanib,IGLL5,0
+752782,Pazopanib,JCHAIN,0
+752782,Pazopanib,TLR7,0
+752840,Veliparib,MAPK8,0
+752840,Veliparib,REC8,0
+752840,Veliparib,MND1,0
+752840,Veliparib,NEK11,0
+752840,Veliparib,FDX1,0
+753686,Olaparib,SH2D1A,0
+753686,Olaparib,ZAP70,0
+753686,Olaparib,CD3E,0
+753686,Olaparib,ITK,0
+753686,Olaparib,CD1E,0
+754143,Depsipeptide,LINC01287,0
+754143,Depsipeptide,TLR7,3
+754143,Depsipeptide,PVALB,0
+754143,Depsipeptide,JCHAIN,0
+754143,Depsipeptide,IGLL5,0
+754230,pralatrexate,LINC01287,0
+754230,pralatrexate,TLR7,0
+754230,pralatrexate,PVALB,0
+754230,pralatrexate,JCHAIN,0
+754230,pralatrexate,IGLL5,0
+754344,Rigosertib,MIR5699,0
+754344,Rigosertib,PVALB,0
+754344,Rigosertib,IGLL5,0
+754344,Rigosertib,JCHAIN,0
+754344,Rigosertib,MIR658,0
+754345,JNJ-28312141,LINC01287,0
+754345,JNJ-28312141,PVALB,0
+754345,JNJ-28312141,JCHAIN,0
+754345,JNJ-28312141,IGLL5,0
+754345,JNJ-28312141,TLR7,0
+754346,AMG-458,LINC01287,0
+754346,AMG-458,PVALB,0
+754346,AMG-458,JCHAIN,0
+754346,AMG-458,IGLL5,0
+754346,AMG-458,TLR7,0
+754348,PF-03084014 diastereomer 1,LINC01287,0
+754348,PF-03084014 diastereomer 1,JCHAIN,0
+754348,PF-03084014 diastereomer 1,PVALB,0
+754348,PF-03084014 diastereomer 1,IGLL5,0
+754348,PF-03084014 diastereomer 1,TLR7,0
+754349,Amuvatinib,LINC01287,0
+754349,Amuvatinib,PVALB,0
+754349,Amuvatinib,JCHAIN,0
+754349,Amuvatinib,IGLL5,0
+754349,Amuvatinib,HBG1,0
+754351,XL-147,MIR658,0
+754351,XL-147,TYROBP,0
+754351,XL-147,RNASE2,0
+754351,XL-147,FLT3,0
+754351,XL-147,MPO,0
+754352,Adavosertib,LINC01287,0
+754352,Adavosertib,PVALB,0
+754352,Adavosertib,JCHAIN,0
+754352,Adavosertib,IGLL5,0
+754352,Adavosertib,TLR7,0
+754353,Buparlisib,FLT3,0
+754353,Buparlisib,MIR2278,0
+754353,Buparlisib,MIR3198-1,0
+754353,Buparlisib,ITK,0
+754353,Buparlisib,SH2D1A,0
+754354,GSK-461364,LINC01287,0
+754354,GSK-461364,PVALB,0
+754354,GSK-461364,JCHAIN,0
+754354,GSK-461364,TLR7,0
+754354,GSK-461364,IGLL5,0
+754356,PF-562271,LINC01287,0
+754356,PF-562271,JCHAIN,0
+754356,PF-562271,PVALB,0
+754356,PF-562271,IGLL5,0
+754356,PF-562271,TLR7,0
+754357,RAF-265,LINC01287,0
+754357,RAF-265,PVALB,0
+754357,RAF-265,JCHAIN,0
+754357,RAF-265,IGLL5,0
+754357,RAF-265,TLR7,0
+754359,AEG-40730,JCHAIN,0
+754359,AEG-40730,PVALB,0
+754359,AEG-40730,HPGDS,0
+754359,AEG-40730,IGLL5,0
+754359,AEG-40730,PRAP1,0
+754360,MI-219,HPGDS,0
+754360,MI-219,JCHAIN,0
+754360,MI-219,PVALB,0
+754360,MI-219,IGLL5,0
+754360,MI-219,MIR330,0
+754361,Astex FGF inhibitor,PVALB,0
+754361,Astex FGF inhibitor,IGLL5,0
+754361,Astex FGF inhibitor,JCHAIN,0
+754361,Astex FGF inhibitor,LINC01287,0
+754361,Astex FGF inhibitor,HBG1,0
+754362,SB-590885,JCHAIN,0
+754362,SB-590885,PVALB,0
+754362,SB-590885,IGLL5,0
+754362,SB-590885,HPGDS,0
+754362,SB-590885,PRAP1,0
+754365,XR-11576,FLT3,0
+754365,XR-11576,MIR658,0
+754365,XR-11576,MIR3198-1,0
+754365,XR-11576,MIR2278,0
+754365,XR-11576,MPO,0
+754366,XR-5944,MAPK8,0
+754366,XR-5944,FDX1,0
+754366,XR-5944,THYN1,0
+754366,XR-5944,CDK7,0
+754366,XR-5944,TTK,0
+754771,Itraconazole,LINC01287,0
+754771,Itraconazole,JCHAIN,0
+754771,Itraconazole,PVALB,0
+754771,Itraconazole,IGLL5,0
+754771,Itraconazole,TLR7,0
+755384,Pemetrexed,JCHAIN,0
+755384,Pemetrexed,PVALB,0
+755384,Pemetrexed,IGLL5,0
+755384,Pemetrexed,LINC01287,0
+755384,Pemetrexed,SNORD83B,0
+755385,Pictilisib,LINC01287,0
+755385,Pictilisib,PVALB,0
+755385,Pictilisib,JCHAIN,0
+755385,Pictilisib,IGLL5,0
+755385,Pictilisib,TLR7,0
+755386,Ispinesib,LINC01287,0
+755386,Ispinesib,PVALB,0
+755386,Ispinesib,IGLL5,0
+755386,Ispinesib,JCHAIN,0
+755386,Ispinesib,TLR7,0
+755387,Sepantronium bromide,LINC01287,0
+755387,Sepantronium bromide,IGLL5,0
+755387,Sepantronium bromide,PVALB,0
+755387,Sepantronium bromide,JCHAIN,0
+755387,Sepantronium bromide,SNORD83B,0
+755389,Bosutinib,LINC01287,0
+755389,Bosutinib,PVALB,0
+755389,Bosutinib,JCHAIN,0
+755389,Bosutinib,IGLL5,0
+755389,Bosutinib,HBG1,0
+755400,Masitinib,PVALB,0
+755400,Masitinib,JCHAIN,0
+755400,Masitinib,IGLL5,0
+755400,Masitinib,LINC01287,0
+755400,Masitinib,SNORD83B,0
+755606,Cediranib,PVALB,0
+755606,Cediranib,JCHAIN,0
+755606,Cediranib,IGLL5,0
+755606,Cediranib,LINC01287,0
+755606,Cediranib,HBG1,0
+755761,XAV-939,SH2D1A,0
+755761,XAV-939,REC8,0
+755761,XAV-939,CD3E,0
+755761,XAV-939,ITK,0
+755761,XAV-939,MIR142,0
+755762,Luminespib,LINC01287,0
+755762,Luminespib,PVALB,0
+755762,Luminespib,IGLL5,0
+755762,Luminespib,JCHAIN,0
+755762,Luminespib,TLR7,0
+755763,Pimasertib,ITK,0
+755763,Pimasertib,SH2D1A,0
+755763,Pimasertib,ZAP70,0
+755763,Pimasertib,CD3E,0
+755763,Pimasertib,MIR142,0
+755769,LY-294002,MAPK8,0
+755769,LY-294002,FDX1,0
+755769,LY-294002,MND1,0
+755769,LY-294002,REC8,0
+755769,LY-294002,THYN1,0
+755770,PD-0325901,PVALB,0
+755770,PD-0325901,IGLL5,0
+755770,PD-0325901,MIR5699,0
+755770,PD-0325901,JCHAIN,0
+755770,PD-0325901,MIR641,0
+755773,"1,9-Pyrazoleanthrone",TTK,300
+755773,"1,9-Pyrazoleanthrone",MAPK8,300
+755773,"1,9-Pyrazoleanthrone",THYN1,9
+755773,"1,9-Pyrazoleanthrone",CWC15,10
+755773,"1,9-Pyrazoleanthrone",CDK7,300
+755775,Foretinib,LINC01287,0
+755775,Foretinib,PVALB,0
+755775,Foretinib,JCHAIN,0
+755775,Foretinib,IGLL5,0
+755775,Foretinib,TLR7,0
+755806,XL-147,ITK,0
+755806,XL-147,MIR3198-1,0
+755806,XL-147,MIR2278,0
+755806,XL-147,ZAP70,0
+755806,XL-147,SH2D1A,0
+755809,Vismodegib,SH2D1A,0
+755809,Vismodegib,ITK,0
+755809,Vismodegib,ZAP70,0
+755809,Vismodegib,CD3E,0
+755809,Vismodegib,MIR142,0
+755841,Actinomycin D,LINC01287,0
+755841,Actinomycin D,JCHAIN,0
+755841,Actinomycin D,PVALB,0
+755841,Actinomycin D,IGLL5,0
+755841,Actinomycin D,TLR7,0
+755880,Mitomycin,LINC01287,0
+755880,Mitomycin,PVALB,0
+755880,Mitomycin,IGLL5,0
+755880,Mitomycin,JCHAIN,0
+755880,Mitomycin,TLR7,1
+755926,PF-03084014 diastereomer 1,JCHAIN,0
+755926,PF-03084014 diastereomer 1,PVALB,0
+755926,PF-03084014 diastereomer 1,LINC01287,0
+755926,PF-03084014 diastereomer 1,IGLL5,0
+755926,PF-03084014 diastereomer 1,SNORD83B,0
+755980,Lenvatinib,LINC01287,0
+755980,Lenvatinib,PVALB,0
+755980,Lenvatinib,IGLL5,0
+755980,Lenvatinib,JCHAIN,0
+755980,Lenvatinib,HBG1,0
+755983,BI-2536,LINC01287,0
+755983,BI-2536,TLR7,1
+755983,BI-2536,PVALB,0
+755983,BI-2536,JCHAIN,0
+755983,BI-2536,IGLL5,0
+755985,Nelarabine,MAPK8,0
+755985,Nelarabine,THYN1,0
+755985,Nelarabine,ACTB,0
+755985,Nelarabine,FDX1,0
+755985,Nelarabine,PLK2,0
+756236,GW441756X,MAPK8,0
+756236,GW441756X,REC8,0
+756236,GW441756X,SH2D1A,0
+756236,GW441756X,NEK11,0
+756236,GW441756X,MND1,0
+756404,GW843682X,LINC01287,0
+756404,GW843682X,IGLL5,0
+756404,GW843682X,PVALB,0
+756404,GW843682X,JCHAIN,0
+756404,GW843682X,TLR7,0
+756641,ICG-001,LINC01287,0
+756641,ICG-001,PVALB,0
+756641,ICG-001,IGLL5,0
+756641,ICG-001,JCHAIN,0
+756641,ICG-001,TLR7,0
+756642,Entinostat,FLT3,1
+756642,Entinostat,MIR3198-1,0
+756642,Entinostat,MIR2278,0
+756642,Entinostat,RNASE2,0
+756642,Entinostat,MIR658,0
+756643,KX-01,PVALB,0
+756643,KX-01,LINC01287,0
+756643,KX-01,IGLL5,0
+756643,KX-01,JCHAIN,0
+756643,KX-01,MIR5699,0
+756645,Crizotinib,PVALB,0
+756645,Crizotinib,JCHAIN,0
+756645,Crizotinib,IGLL5,0
+756645,Crizotinib,MIR641,0
+756645,Crizotinib,LINC01287,0
+756647,Quizartinib,LINC01287,0
+756647,Quizartinib,PVALB,0
+756647,Quizartinib,JCHAIN,0
+756647,Quizartinib,IGLL5,0
+756647,Quizartinib,TLR7,0
+756648,AZD-1480,SH2D1A,0
+756648,AZD-1480,CD3E,0
+756648,AZD-1480,ZAP70,0
+756648,AZD-1480,CD1E,0
+756648,AZD-1480,ITK,0
+756652,Linsitinib,HPGDS,0
+756652,Linsitinib,MIR330,0
+756652,Linsitinib,MIR6807,0
+756652,Linsitinib,MIR6728,0
+756652,Linsitinib,MIR641,0
+756656,MK-2206,MIR641,0
+756656,MK-2206,HPGDS,0
+756656,MK-2206,MIR5699,0
+756656,MK-2206,MIR330,0
+756656,MK-2206,MIR6728,0
+756657,OSU-03012,REC8,0
+756657,OSU-03012,SH2D1A,0
+756657,OSU-03012,CD3E,0
+756657,OSU-03012,MAPK8,0
+756657,OSU-03012,ZAP70,0
+756659,Intedanib,LINC01287,0
+756659,Intedanib,PVALB,0
+756659,Intedanib,IGLL5,0
+756659,Intedanib,JCHAIN,0
+756659,Intedanib,TLR7,0
+756660,Quercetin,MAPK8,53
+756660,Quercetin,REC8,0
+756660,Quercetin,MND1,0
+756660,Quercetin,NEK11,0
+756660,Quercetin,FDX1,2
+756663,Obatoclax,LINC01287,0
+756663,Obatoclax,IGLL5,0
+756663,Obatoclax,PVALB,0
+756663,Obatoclax,JCHAIN,0
+756663,Obatoclax,MIR658,0
+756702,COLCHICINE,LINC01287,0
+756702,COLCHICINE,IGLL5,0
+756702,COLCHICINE,PVALB,0
+756702,COLCHICINE,JCHAIN,0
+756702,COLCHICINE,MIR658,0
+756717,DAUNORUBICIN,LINC01287,0
+756717,DAUNORUBICIN,PVALB,0
+756717,DAUNORUBICIN,JCHAIN,2
+756717,DAUNORUBICIN,IGLL5,0
+756717,DAUNORUBICIN,TLR7,6
+756876,(-)-Nutlin-3,HPGDS,0
+756876,(-)-Nutlin-3,MIR330,0
+756876,(-)-Nutlin-3,MIR6728,0
+756876,(-)-Nutlin-3,MIR6807,0
+756876,(-)-Nutlin-3,PRAP1,0
+756877,1st Precursor Intermediate to TDP 665759,PVALB,0
+756877,1st Precursor Intermediate to TDP 665759,JCHAIN,0
+756877,1st Precursor Intermediate to TDP 665759,IGLL5,0
+756877,1st Precursor Intermediate to TDP 665759,LINC01287,0
+756877,1st Precursor Intermediate to TDP 665759,SNORD83B,0
+757000,WW-H1,MAPK8,0
+757000,WW-H1,REC8,0
+757000,WW-H1,MND1,0
+757000,WW-H1,FDX1,0
+757000,WW-H1,NEK11,0
+757027,ETHINYL ESTRADIOL,FLT3,0
+757027,ETHINYL ESTRADIOL,TYROBP,0
+757027,ETHINYL ESTRADIOL,MPO,5
+757027,ETHINYL ESTRADIOL,MIR658,0
+757027,ETHINYL ESTRADIOL,RNASE2,0
+757036,Fluorouracil,TYMS,230
+757036,Fluorouracil,CWC15,0
+757036,Fluorouracil,THYN1,0
+757036,Fluorouracil,RPL5,1
+757036,Fluorouracil,CDK7,5
+757087,Nitrogen mustard,CWC15,0
+757087,Nitrogen mustard,THYN1,0
+757087,Nitrogen mustard,RPL5,0
+757087,Nitrogen mustard,PSMA2,0
+757087,Nitrogen mustard,C14orf166,0
+757098,Melphalan,MAPK8,0
+757098,Melphalan,THYN1,0
+757098,Melphalan,CDK7,1
+757098,Melphalan,TTK,1
+757098,Melphalan,FDX1,0
+757113,DL-Amethopterin,LINC01287,0
+757113,DL-Amethopterin,PVALB,0
+757113,DL-Amethopterin,IGLL5,0
+757113,DL-Amethopterin,JCHAIN,0
+757113,DL-Amethopterin,TLR7,0
+757148,AZD-7762,LINC01287,0
+757148,AZD-7762,IGLL5,0
+757148,AZD-7762,PVALB,0
+757148,AZD-7762,JCHAIN,0
+757148,AZD-7762,HBG1,0
+757149,Volasertib,LINC01287,0
+757149,Volasertib,PVALB,0
+757149,Volasertib,JCHAIN,0
+757149,Volasertib,TLR7,0
+757149,Volasertib,IGLL5,0
+757306,malacid,MAPK8,0
+757306,malacid,THYN1,0
+757306,malacid,TTK,0
+757306,malacid,CDK7,0
+757306,malacid,CWC15,0
+757334,Cpd-401,LINC01287,0
+757334,Cpd-401,JCHAIN,0
+757334,Cpd-401,PVALB,0
+757334,Cpd-401,IGLL5,0
+757334,Cpd-401,TLR7,0
+757348,6-Thioguanine,MAPK8,0
+757348,6-Thioguanine,THYN1,0
+757348,6-Thioguanine,CDK7,0
+757348,6-Thioguanine,TTK,0
+757348,6-Thioguanine,CWC15,0
+757384,Vinblastine,LINC01287,0
+757384,Vinblastine,JCHAIN,0
+757384,Vinblastine,PVALB,0
+757384,Vinblastine,IGLL5,0
+757384,Vinblastine,TLR7,1
+757424,melbex,MIR5699,0
+757424,melbex,MIR658,0
+757424,melbex,MIR641,0
+757424,melbex,IGLL5,0
+757424,melbex,FLT3,0
+757436,Cabozantinib,LINC01287,0
+757436,Cabozantinib,PVALB,0
+757436,Cabozantinib,JCHAIN,0
+757436,Cabozantinib,IGLL5,0
+757436,Cabozantinib,TLR7,0
+757437,Salinomycin,LINC01287,0
+757437,Salinomycin,JCHAIN,0
+757437,Salinomycin,PVALB,0
+757437,Salinomycin,IGLL5,0
+757437,Salinomycin,TLR7,0
+757438,PLX-4720,SH2D1A,0
+757438,PLX-4720,CD3E,0
+757438,PLX-4720,ZAP70,0
+757438,PLX-4720,CD1E,0
+757438,PLX-4720,ITK,0
+757439,Neratinib,JCHAIN,0
+757439,Neratinib,LINC01287,0
+757439,Neratinib,PVALB,0
+757439,Neratinib,IGLL5,0
+757439,Neratinib,TLR7,0
+757440,Deforolimius,MIR5699,0
+757440,Deforolimius,JCHAIN,0
+757440,Deforolimius,IGLL5,0
+757440,Deforolimius,PVALB,0
+757440,Deforolimius,LINC01287,0
+757441,Axitinib,MIR641,0
+757441,Axitinib,HPGDS,0
+757441,Axitinib,MIR5699,0
+757441,Axitinib,MIR6728,0
+757441,Axitinib,MIR6807,0
+757442,Intedanib,LINC01287,0
+757442,Intedanib,PVALB,0
+757442,Intedanib,TLR7,0
+757442,Intedanib,IGLL5,0
+757442,Intedanib,JCHAIN,0
+757444,Barasertib,LINC01287,0
+757444,Barasertib,JCHAIN,0
+757444,Barasertib,PVALB,0
+757444,Barasertib,IGLL5,0
+757444,Barasertib,TLR7,0
+757804,Etoposide,LINC01287,0
+757804,Etoposide,JCHAIN,0
+757804,Etoposide,PVALB,0
+757804,Etoposide,IGLL5,0
+757804,Etoposide,TLR7,0
+758005,Sapitinib,MIR330,0
+758005,Sapitinib,MIR6807,0
+758005,Sapitinib,MIR6728,0
+758005,Sapitinib,HPGDS,0
+758005,Sapitinib,LGALS4,0
+758007,Tivozanib,PVALB,0
+758007,Tivozanib,IGLL5,0
+758007,Tivozanib,JCHAIN,0
+758007,Tivozanib,MIR641,0
+758007,Tivozanib,SNORD83B,0
+758186,Azacitidine,MAPK8,0
+758186,Azacitidine,FDX1,1
+758186,Azacitidine,MND1,0
+758186,Azacitidine,REC8,0
+758186,Azacitidine,THYN1,0
+758230,Floxuridine,MAPK8,0
+758230,Floxuridine,REC8,0
+758230,Floxuridine,SH2D1A,0
+758230,Floxuridine,ITK,0
+758230,Floxuridine,ZAP70,0
+758242,Tivantinib,IGLL5,0
+758242,Tivantinib,PVALB,0
+758242,Tivantinib,JCHAIN,0
+758242,Tivantinib,LINC01287,0
+758242,Tivantinib,MIR5699,0
+758243,BMS-754807,LINC01287,0
+758243,BMS-754807,PVALB,0
+758243,BMS-754807,JCHAIN,0
+758243,BMS-754807,IGLL5,0
+758243,BMS-754807,TLR7,0
+758244,tepotinib,LINC01287,0
+758244,tepotinib,PVALB,0
+758244,tepotinib,IGLL5,0
+758244,tepotinib,JCHAIN,0
+758244,tepotinib,TLR7,0
+758246,Trametinib,LINC01287,0
+758246,Trametinib,PVALB,0
+758246,Trametinib,JCHAIN,0
+758246,Trametinib,IGLL5,0
+758246,Trametinib,TLR7,0
+758247,Palbociclib,LINC01287,0
+758247,Palbociclib,PVALB,0
+758247,Palbociclib,JCHAIN,0
+758247,Palbociclib,IGLL5,0
+758247,Palbociclib,SNORD83B,0
+758249,Pracinostat,PVALB,0
+758249,Pracinostat,MIR641,0
+758249,Pracinostat,JCHAIN,0
+758249,Pracinostat,IGLL5,0
+758249,Pracinostat,MIR5699,0
+758250,SNS-314,PVALB,0
+758250,SNS-314,JCHAIN,0
+758250,SNS-314,IGLL5,0
+758250,SNS-314,LINC01287,0
+758250,SNS-314,HBG1,0
+758251,Amonafide,MAPK8,0
+758251,Amonafide,FDX1,0
+758251,Amonafide,MND1,0
+758251,Amonafide,THYN1,0
+758251,Amonafide,REC8,0
+758252,Carfilzomib,LINC01287,0
+758252,Carfilzomib,PVALB,0
+758252,Carfilzomib,IGLL5,1
+758252,Carfilzomib,JCHAIN,0
+758252,Carfilzomib,TLR7,0
+758253,Homoharringtonine,LINC01287,0
+758253,Homoharringtonine,TLR7,0
+758253,Homoharringtonine,PVALB,0
+758253,Homoharringtonine,JCHAIN,0
+758253,Homoharringtonine,IGLL5,0
+758254,Ixazomib citrate,LINC01287,0
+758254,Ixazomib citrate,PVALB,0
+758254,Ixazomib citrate,JCHAIN,0
+758254,Ixazomib citrate,IGLL5,0
+758254,Ixazomib citrate,TLR7,0
+758255,Teniposide,LINC01287,0
+758255,Teniposide,JCHAIN,0
+758255,Teniposide,PVALB,0
+758255,Teniposide,IGLL5,0
+758255,Teniposide,TLR7,0
+758256,PKI-587,LINC01287,0
+758256,PKI-587,IGLL5,0
+758256,PKI-587,PVALB,0
+758256,PKI-587,JCHAIN,0
+758256,PKI-587,HBG1,0
+758257,LY-2606368,LINC01287,0
+758257,LY-2606368,PVALB,0
+758257,LY-2606368,IGLL5,0
+758257,LY-2606368,JCHAIN,0
+758257,LY-2606368,HBG1,0
+758423,M-AMSA,MAPK8,0
+758423,M-AMSA,REC8,0
+758423,M-AMSA,MND1,0
+758423,M-AMSA,SH2D1A,0
+758423,M-AMSA,FDX1,0
+758440,niclosamide (usan),MAPK8,0
+758440,niclosamide (usan),REC8,0
+758440,niclosamide (usan),NEK11,0
+758440,niclosamide (usan),MND1,0
+758440,niclosamide (usan),SH2D1A,0
+758485,BX-912,PVALB,0
+758485,BX-912,JCHAIN,0
+758485,BX-912,LINC01287,0
+758485,BX-912,IGLL5,0
+758485,BX-912,HBG1,0
+758487,Ponatinib,LINC01287,0
+758487,Ponatinib,PVALB,0
+758487,Ponatinib,JCHAIN,0
+758487,Ponatinib,IGLL5,0
+758487,Ponatinib,TLR7,0
+758488,Lexibulin,LINC01287,0
+758488,Lexibulin,PVALB,0
+758488,Lexibulin,IGLL5,0
+758488,Lexibulin,TLR7,0
+758488,Lexibulin,JCHAIN,0
+758489,Indibulin,ITK,0
+758489,Indibulin,SH2D1A,0
+758489,Indibulin,MIR142,0
+758489,Indibulin,MIR2278,0
+758489,Indibulin,MIR3198-1,0
+758591,SGX-523,MIR330,0
+758591,SGX-523,MIR6807,0
+758591,SGX-523,MIR6728,0
+758591,SGX-523,HPGDS,0
+758591,SGX-523,MIR1296,0
+758612,Bleomycin,MIR5699,0
+758612,Bleomycin,MIR641,0
+758612,Bleomycin,MIR7110,0
+758612,Bleomycin,HPGDS,2
+758612,Bleomycin,MIR6126,0
+758645,Paclitaxel,LINC01287,0
+758645,Paclitaxel,JCHAIN,0
+758645,Paclitaxel,PVALB,0
+758645,Paclitaxel,IGLL5,0
+758645,Paclitaxel,TLR7,6
+758662,Lovastatin,LINC01287,0
+758662,Lovastatin,PVALB,0
+758662,Lovastatin,JCHAIN,0
+758662,Lovastatin,IGLL5,0
+758662,Lovastatin,TLR7,0
+758664,Rapamycin,MIR5699,0
+758664,Rapamycin,JCHAIN,0
+758664,Rapamycin,IGLL5,0
+758664,Rapamycin,PVALB,1
+758664,Rapamycin,LINC01287,0
+758667,Teniposide,LINC01287,0
+758667,Teniposide,JCHAIN,0
+758667,Teniposide,PVALB,0
+758667,Teniposide,IGLL5,0
+758667,Teniposide,TLR7,0
+758671,ANCITABINE HYDROCHLORIDE,SH2D1A,0
+758671,ANCITABINE HYDROCHLORIDE,REC8,0
+758671,ANCITABINE HYDROCHLORIDE,ITK,0
+758671,ANCITABINE HYDROCHLORIDE,CD3E,0
+758671,ANCITABINE HYDROCHLORIDE,ZAP70,0
+758706,Simvastatin,LINC01287,0
+758706,Simvastatin,JCHAIN,0
+758706,Simvastatin,PVALB,0
+758706,Simvastatin,IGLL5,0
+758706,Simvastatin,TLR7,0
+758773,Varbulin,MAPK8,0
+758773,Varbulin,REC8,0
+758773,Varbulin,MND1,0
+758773,Varbulin,FDX1,0
+758773,Varbulin,RBMS1,0
+758774,Belinostat,MAPK8,0
+758774,Belinostat,REC8,0
+758774,Belinostat,SH2D1A,0
+758774,Belinostat,MND1,0
+758774,Belinostat,NEK11,0
+758871,AZD-8055,HPGDS,0
+758871,AZD-8055,MIR330,0
+758871,AZD-8055,MIR6728,0
+758871,AZD-8055,MIR6807,0
+758871,AZD-8055,MIR641,0
+758872,Saracatinib,LINC01287,0
+758872,Saracatinib,PVALB,0
+758872,Saracatinib,JCHAIN,0
+758872,Saracatinib,IGLL5,0
+758872,Saracatinib,TLR7,0
+758873,ABT-737,LINC01287,0
+758873,ABT-737,JCHAIN,0
+758873,ABT-737,PVALB,0
+758873,ABT-737,IGLL5,0
+758873,ABT-737,TLR7,1
+758896,Fluvastatin,MIR641,0
+758896,Fluvastatin,MIR5699,0
+758896,Fluvastatin,PVALB,0
+758896,Fluvastatin,IGLL5,0
+758896,Fluvastatin,MIR658,0
+759094,ENMD-2076 Precursor,FLT3,0
+759094,ENMD-2076 Precursor,MIR658,0
+759094,ENMD-2076 Precursor,MPO,0
+759094,ENMD-2076 Precursor,MIR5699,0
+759094,ENMD-2076 Precursor,MIR2278,0
+759095,JNJ-38877605,MIR330,0
+759095,JNJ-38877605,MIR6807,0
+759095,JNJ-38877605,MIR6728,0
+759095,JNJ-38877605,HPGDS,0
+759095,JNJ-38877605,MIR6126,0
+759155,Doxorubicin,LINC01287,0
+759155,Doxorubicin,JCHAIN,2
+759155,Doxorubicin,PVALB,0
+759155,Doxorubicin,IGLL5,2
+759155,Doxorubicin,TLR7,12
+759174,Vincristine,LINC01287,0
+759174,Vincristine,JCHAIN,3
+759174,Vincristine,PVALB,0
+759174,Vincristine,IGLL5,2
+759174,Vincristine,MIR5699,0
+759195,Epirubicin,LINC01287,0
+759195,Epirubicin,PVALB,0
+759195,Epirubicin,JCHAIN,0
+759195,Epirubicin,IGLL5,0
+759195,Epirubicin,TLR7,1
+759224,Idelalisib,PVALB,0
+759224,Idelalisib,JCHAIN,0
+759224,Idelalisib,IGLL5,0
+759224,Idelalisib,LINC01287,0
+759224,Idelalisib,HBG1,0
+759263,Topotecan,LINC01287,0
+759263,Topotecan,PVALB,0
+759263,Topotecan,IGLL5,0
+759263,Topotecan,JCHAIN,0
+759263,Topotecan,TLR7,0
+759274,ARSENIC TRIOXIDE,CWC15,0
+759274,ARSENIC TRIOXIDE,PSMA2,0
+759274,ARSENIC TRIOXIDE,C14orf166,0
+759274,ARSENIC TRIOXIDE,RPL5,0
+759274,ARSENIC TRIOXIDE,THYN1,0
+759498,CYC-116,MIR5699,0
+759498,CYC-116,FLT3,0
+759498,CYC-116,MIR658,0
+759498,CYC-116,MIR2278,0
+759498,CYC-116,MIR3198-1,0
+759614,6-Mercaptopurine,HPRT1,4
+759614,6-Mercaptopurine,CWC15,0
+759614,6-Mercaptopurine,THYN1,0
+759614,6-Mercaptopurine,RPL5,0
+759614,6-Mercaptopurine,CDK7,0
+759657,Quisinostat,IGLL5,0
+759657,Quisinostat,PVALB,0
+759657,Quisinostat,JCHAIN,0
+759657,Quisinostat,LINC01287,0
+759657,Quisinostat,MIR5699,0
+759658,6-(4-pyrimidinyl)-1H-indazole derivative,LINC01287,0
+759658,6-(4-pyrimidinyl)-1H-indazole derivative,PVALB,0
+759658,6-(4-pyrimidinyl)-1H-indazole derivative,JCHAIN,0
+759658,6-(4-pyrimidinyl)-1H-indazole derivative,IGLL5,0
+759658,6-(4-pyrimidinyl)-1H-indazole derivative,TLR7,0
+759659,Navitoclax,MIR5699,0
+759659,Navitoclax,JCHAIN,0
+759659,Navitoclax,HPGDS,0
+759659,Navitoclax,IGLL5,0
+759659,Navitoclax,PVALB,0
+759660,OSI-027,LINC01287,0
+759660,OSI-027,PVALB,0
+759660,OSI-027,JCHAIN,0
+759660,OSI-027,IGLL5,0
+759660,OSI-027,HBG1,0
+759661,Dovitinib,MIR641,0
+759661,Dovitinib,MIR5699,0
+759661,Dovitinib,PVALB,0
+759661,Dovitinib,IGLL5,0
+759661,Dovitinib,HBG1,0
+759675,KW-2449,SH2D1A,0
+759675,KW-2449,ITK,0
+759675,KW-2449,ZAP70,0
+759675,KW-2449,MIR142,0
+759675,KW-2449,CD3E,0
+759676,PI-103,PVALB,0
+759676,PI-103,JCHAIN,0
+759676,PI-103,MIR5699,0
+759676,PI-103,IGLL5,0
+759676,PI-103,LINC01287,0
+759677,Alisertib,LINC01287,0
+759677,Alisertib,PVALB,0
+759677,Alisertib,JCHAIN,0
+759677,Alisertib,IGLL5,0
+759677,Alisertib,TLR7,0
+759850,Docetaxel,LINC01287,0
+759850,Docetaxel,JCHAIN,0
+759850,Docetaxel,PVALB,0
+759850,Docetaxel,IGLL5,0
+759850,Docetaxel,TLR7,0
+759852,Vorinostat,HDAC2,114
+759852,Vorinostat,CWC15,0
+759852,Vorinostat,THYN1,0
+759852,Vorinostat,CDK7,0
+759852,Vorinostat,PARP2,0
+759856,Gefitinib,MIR330,0
+759856,Gefitinib,MIR6728,0
+759856,Gefitinib,MIR6807,0
+759856,Gefitinib,SOX10,4
+759856,Gefitinib,HPGDS,0
+759857,Clofarabine,IGLL5,0
+759857,Clofarabine,MIR5699,0
+759857,Clofarabine,PVALB,0
+759857,Clofarabine,JCHAIN,0
+759857,Clofarabine,MIR658,0
+759877,Dasatinib,LINC01287,0
+759877,Dasatinib,PVALB,0
+759877,Dasatinib,IGLL5,0
+759877,Dasatinib,JCHAIN,0
+759877,Dasatinib,TLR7,2
+759878,Irinotecan,LINC01287,0
+759878,Irinotecan,PVALB,0
+759878,Irinotecan,JCHAIN,0
+759878,Irinotecan,IGLL5,0
+759878,Irinotecan,TLR7,2
+760087,VINORELBINE,LINC01287,0
+760087,VINORELBINE,JCHAIN,0
+760087,VINORELBINE,PVALB,0
+760087,VINORELBINE,IGLL5,1
+760087,VINORELBINE,TLR7,0
+760143,Mocetinostat,MIR5699,0
+760143,Mocetinostat,MIR658,0
+760143,Mocetinostat,MIR3198-1,0
+760143,Mocetinostat,MIR2278,0
+760143,Mocetinostat,FLT3,0
+760144,AT-9283,PVALB,0
+760144,AT-9283,JCHAIN,0
+760144,AT-9283,IGLL5,0
+760144,AT-9283,LINC01287,0
+760144,AT-9283,HBG1,0
+760183,(+)-JQ1,LINC01287,0
+760183,(+)-JQ1,PVALB,0
+760183,(+)-JQ1,JCHAIN,0
+760183,(+)-JQ1,IGLL5,1
+760183,(+)-JQ1,TLR7,3
+760419,Fenretinide,LINC01287,0
+760419,Fenretinide,PVALB,0
+760419,Fenretinide,JCHAIN,0
+760419,Fenretinide,IGLL5,0
+760419,Fenretinide,TLR7,0
+760443,Copanlisib,LINC01287,0
+760443,Copanlisib,PVALB,0
+760443,Copanlisib,JCHAIN,0
+760443,Copanlisib,IGLL5,0
+760443,Copanlisib,TLR7,0
+760444,Tipifarnib,HPGDS,0
+760444,Tipifarnib,MIR641,0
+760444,Tipifarnib,MIR330,0
+760444,Tipifarnib,MIR6728,0
+760444,Tipifarnib,MIR6807,0
+760536,PF-04691502,JCHAIN,0
+760536,PF-04691502,MIR641,0
+760536,PF-04691502,PVALB,0
+760536,PF-04691502,IGLL5,0
+760536,PF-04691502,SNORD83B,0
+760764,Voreloxin,LINC01287,0
+760764,Voreloxin,PVALB,0
+760764,Voreloxin,IGLL5,0
+760764,Voreloxin,JCHAIN,0
+760764,Voreloxin,TLR7,0
+760765,BMS-690514,PVALB,0
+760765,BMS-690514,JCHAIN,0
+760765,BMS-690514,IGLL5,0
+760765,BMS-690514,LINC01287,0
+760765,BMS-690514,HBG1,0
+760766,Vandetanib,MIR641,0
+760766,Vandetanib,PVALB,0
+760766,Vandetanib,JCHAIN,0
+760766,Vandetanib,MIR5699,0
+760766,Vandetanib,IGLL5,0
+760841,Tandutinib,LINC01287,0
+760841,Tandutinib,PVALB,0
+760841,Tandutinib,JCHAIN,0
+760841,Tandutinib,IGLL5,0
+760841,Tandutinib,TLR7,0
+760843,Motesanib,FLT3,0
+760843,Motesanib,MIR330,0
+760843,Motesanib,MIR6807,0
+760843,Motesanib,MIR6728,0
+760843,Motesanib,HPGDS,0
+761068,Cabozantinib,REC8,0
+761068,Cabozantinib,MAPK8,0
+761068,Cabozantinib,SH2D1A,0
+761068,Cabozantinib,NEK11,0
+761068,Cabozantinib,HHIP-AS1,0
+761069,AMG-900,LINC01287,0
+761069,AMG-900,PVALB,0
+761069,AMG-900,JCHAIN,0
+761069,AMG-900,IGLL5,0
+761069,AMG-900,TLR7,0
+761070,VE-821,MAPK8,0
+761070,VE-821,REC8,0
+761070,VE-821,SH2D1A,0
+761070,VE-821,NEK11,0
+761070,VE-821,CD3E,0
+761188,Rabusertib,PVALB,0
+761188,Rabusertib,JCHAIN,0
+761188,Rabusertib,LINC01287,0
+761188,Rabusertib,IGLL5,0
+761188,Rabusertib,SNORD83B,0
+761189,Teglarinad,LINC01287,0
+761189,Teglarinad,PVALB,0
+761189,Teglarinad,JCHAIN,0
+761189,Teglarinad,IGLL5,0
+761189,Teglarinad,TLR7,0
+761190,Panobinostat,LINC01287,0
+761190,Panobinostat,PVALB,0
+761190,Panobinostat,IGLL5,0
+761190,Panobinostat,JCHAIN,0
+761190,Panobinostat,MIR5699,0
+761191,brigatinib,PVALB,0
+761191,brigatinib,LINC01287,0
+761191,brigatinib,IGLL5,0
+761191,brigatinib,JCHAIN,0
+761191,brigatinib,SNORD83B,0
+761192,Pevonedistat,LINC01287,0
+761192,Pevonedistat,PVALB,0
+761192,Pevonedistat,JCHAIN,0
+761192,Pevonedistat,IGLL5,0
+761192,Pevonedistat,TLR7,0
+761193,Silmitasertib,REC8,0
+761193,Silmitasertib,SH2D1A,0
+761193,Silmitasertib,CD3E,0
+761193,Silmitasertib,ZAP70,0
+761193,Silmitasertib,ITK,0
+761194,CUDC-305,LINC01287,0
+761194,CUDC-305,PVALB,0
+761194,CUDC-305,JCHAIN,0
+761194,CUDC-305,TLR7,0
+761194,CUDC-305,IGLL5,0
+761215,TAK-733,LINC01287,0
+761215,TAK-733,PVALB,0
+761215,TAK-733,JCHAIN,0
+761215,TAK-733,IGLL5,0
+761215,TAK-733,HBG1,0
+761217,Avagacestat,LINC01287,0
+761217,Avagacestat,PVALB,0
+761217,Avagacestat,JCHAIN,0
+761217,Avagacestat,IGLL5,0
+761217,Avagacestat,TLR7,0
+761387,CCT-128930,SH2D1A,0
+761387,CCT-128930,ZAP70,0
+761387,CCT-128930,ITK,0
+761387,CCT-128930,CD3E,0
+761387,CCT-128930,MIR142,0
+761390,By-Product of CUDC-305,REC8,0
+761390,By-Product of CUDC-305,MAPK8,0
+761390,By-Product of CUDC-305,SH2D1A,0
+761390,By-Product of CUDC-305,ITK,0
+761390,By-Product of CUDC-305,CD3E,0
+761431,Vemurafenib,SOX10,11
+761431,Vemurafenib,PLP1,0
+761431,Vemurafenib,C10orf90,0
+761431,Vemurafenib,CD3E,0
+761431,Vemurafenib,MIA,3
+761691,SCH-1473759,LINC01287,0
+761691,SCH-1473759,PVALB,0
+761691,SCH-1473759,JCHAIN,0
+761691,SCH-1473759,IGLL5,0
+761691,SCH-1473759,TLR7,0
+761692,MK-8033,PVALB,0
+761692,MK-8033,IGLL5,0
+761692,MK-8033,LINC01287,0
+761692,MK-8033,JCHAIN,0
+761692,MK-8033,HBG1,0
+761693,Vertex ATR inhibitor Cpd 45,IGLL5,0
+761693,Vertex ATR inhibitor Cpd 45,PVALB,0
+761693,Vertex ATR inhibitor Cpd 45,LINC01287,0
+761693,Vertex ATR inhibitor Cpd 45,JCHAIN,0
+761693,Vertex ATR inhibitor Cpd 45,HBG1,0
+761759,TAK-960 analog,LINC01287,0
+761759,TAK-960 analog,TLR7,0
+761759,TAK-960 analog,PVALB,0
+761759,TAK-960 analog,IGLL5,0
+761759,TAK-960 analog,JCHAIN,0
+761760,BMS-536924,LINC01287,0
+761760,BMS-536924,JCHAIN,0
+761760,BMS-536924,PVALB,0
+761760,BMS-536924,IGLL5,0
+761760,BMS-536924,SNORD83B,0
+761879,ITRI-260,SH2D1A,0
+761879,ITRI-260,REC8,0
+761879,ITRI-260,ITK,0
+761879,ITRI-260,CD3E,0
+761879,ITRI-260,ZAP70,0
+761910,Ibrutinib,HPGDS,0
+761910,Ibrutinib,MIR330,0
+761910,Ibrutinib,MIR6728,0
+761910,Ibrutinib,MIR6807,0
+761910,Ibrutinib,MIR641,0
+761931,KHK-Indazole,MAPK8,0
+761931,KHK-Indazole,REC8,0
+761931,KHK-Indazole,MND1,0
+761931,KHK-Indazole,NEK11,0
+761931,KHK-Indazole,SH2D1A,0
+762151,TAK-901,LINC01287,0
+762151,TAK-901,PVALB,0
+762151,TAK-901,IGLL5,0
+762151,TAK-901,JCHAIN,0
+762151,TAK-901,TLR7,0
+762152,ONX-0914,LINC01287,0
+762152,ONX-0914,PVALB,0
+762152,ONX-0914,IGLL5,0
+762152,ONX-0914,JCHAIN,0
+762152,ONX-0914,TLR7,2
+762153,ST-3595,MAPK8,0
+762153,ST-3595,THYN1,0
+762153,ST-3595,CWC15,0
+762153,ST-3595,CDK7,0
+762153,ST-3595,TTK,0
+762154,Des-fluoro-TAK-960,LINC01287,0
+762154,Des-fluoro-TAK-960,TLR7,0
+762154,Des-fluoro-TAK-960,PVALB,0
+762154,Des-fluoro-TAK-960,IGLL5,0
+762154,Des-fluoro-TAK-960,JCHAIN,0
+762382,CH-5132799,FLT3,0
+762382,CH-5132799,MIR658,0
+762382,CH-5132799,RNASE2,0
+762382,CH-5132799,MIR3198-1,0
+762382,CH-5132799,MIR2278,0
+762418,TAK Plk inhibitor,LINC01287,0
+762418,TAK Plk inhibitor,JCHAIN,0
+762418,TAK Plk inhibitor,PVALB,0
+762418,TAK Plk inhibitor,IGLL5,0
+762418,TAK Plk inhibitor,TLR7,0
+762521,RO-4987655,LINC01287,0
+762521,RO-4987655,PVALB,0
+762521,RO-4987655,JCHAIN,0
+762521,RO-4987655,IGLL5,0
+762521,RO-4987655,TLR7,0
+762673,SB-1317,LINC01287,0
+762673,SB-1317,PVALB,0
+762673,SB-1317,JCHAIN,0
+762673,SB-1317,IGLL5,0
+762673,SB-1317,TLR7,0
+762831,MK-0752,SH2D1A,0
+762831,MK-0752,ITK,0
+762831,MK-0752,ZAP70,0
+762831,MK-0752,CD1E,0
+762831,MK-0752,CD3E,0
+763444,PF-477736,LINC01287,0
+763444,PF-477736,PVALB,0
+763444,PF-477736,IGLL5,0
+763444,PF-477736,JCHAIN,0
+763444,PF-477736,TLR7,0
+763526,Crenolanib,LINC01287,0
+763526,Crenolanib,PVALB,0
+763526,Crenolanib,JCHAIN,0
+763526,Crenolanib,IGLL5,0
+763526,Crenolanib,TLR7,0
+763579,AT-13387,FLT3,0
+763579,AT-13387,MIR658,0
+763579,AT-13387,RNASE2,0
+763579,AT-13387,MPO,0
+763579,AT-13387,TYROBP,0
+763930,AS-703569,LINC01287,0
+763930,AS-703569,PVALB,0
+763930,AS-703569,IGLL5,0
+763930,AS-703569,JCHAIN,0
+763930,AS-703569,TLR7,0
+763931,PF-04217903,MAPK8,0
+763931,PF-04217903,DKK3,0
+763931,PF-04217903,ACTB,0
+763931,PF-04217903,THYN1,0
+763931,PF-04217903,SPEG,0
+764036,Dinaciclib,LINC01287,0
+764036,Dinaciclib,TLR7,0
+764036,Dinaciclib,PVALB,0
+764036,Dinaciclib,JCHAIN,0
+764036,Dinaciclib,IGLL5,0
+764037,BP-1-102,LINC01287,0
+764037,BP-1-102,PVALB,0
+764037,BP-1-102,JCHAIN,0
+764037,BP-1-102,IGLL5,0
+764037,BP-1-102,TLR7,0
+764039,AZD-5363,PVALB,0
+764039,AZD-5363,IGLL5,0
+764039,AZD-5363,JCHAIN,0
+764039,AZD-5363,MIR641,0
+764039,AZD-5363,MIR5699,0
+764040,Alectinib,JCHAIN,0
+764040,Alectinib,PVALB,0
+764040,Alectinib,IGLL5,0
+764040,Alectinib,LINC01287,0
+764040,Alectinib,PRAP1,0
+764041,TAE-684,LINC01287,0
+764041,TAE-684,PVALB,0
+764041,TAE-684,JCHAIN,0
+764041,TAE-684,IGLL5,0
+764041,TAE-684,TLR7,0
+764042,ARRY-162,PVALB,0
+764042,ARRY-162,IGLL5,0
+764042,ARRY-162,JCHAIN,0
+764042,ARRY-162,MIR641,0
+764042,ARRY-162,SNORD83B,0
+764043,(+)-JQ1,LINC01287,0
+764043,(+)-JQ1,PVALB,0
+764043,(+)-JQ1,JCHAIN,0
+764043,(+)-JQ1,IGLL5,1
+764043,(+)-JQ1,HBG1,0
+764090,BMS-777607,LINC01287,0
+764090,BMS-777607,PVALB,0
+764090,BMS-777607,JCHAIN,0
+764090,BMS-777607,IGLL5,0
+764090,BMS-777607,TLR7,0
+764091,Apitolisib,PVALB,0
+764091,Apitolisib,JCHAIN,0
+764091,Apitolisib,IGLL5,0
+764091,Apitolisib,LINC01287,0
+764091,Apitolisib,SNORD83B,0
+764092,GSK-2126458,LINC01287,0
+764092,GSK-2126458,PVALB,0
+764092,GSK-2126458,IGLL5,0
+764092,GSK-2126458,JCHAIN,0
+764092,GSK-2126458,TLR7,0
+764134,Dabrafenib,SOX10,5
+764134,Dabrafenib,C10orf90,0
+764134,Dabrafenib,PLP1,0
+764134,Dabrafenib,MIR330,0
+764134,Dabrafenib,MIR6728,0
+764135,BMS-599626,JCHAIN,0
+764135,BMS-599626,PVALB,0
+764135,BMS-599626,IGLL5,0
+764135,BMS-599626,LINC01287,0
+764135,BMS-599626,SNORD83B,0
+764136,Abexinostat,MIR5699,0
+764136,Abexinostat,MIR641,0
+764136,Abexinostat,IGLL5,0
+764136,Abexinostat,PVALB,0
+764136,Abexinostat,JCHAIN,0
+764238,6-Bromoindirubin-3'-Acetoxime,CD3E,0
+764238,6-Bromoindirubin-3'-Acetoxime,ZAP70,0
+764238,6-Bromoindirubin-3'-Acetoxime,SH2D1A,0
+764238,6-Bromoindirubin-3'-Acetoxime,CD1E,0
+764238,6-Bromoindirubin-3'-Acetoxime,ITK,0
+764239,AZD-4547,IGLL5,0
+764239,AZD-4547,PVALB,0
+764239,AZD-4547,JCHAIN,0
+764239,AZD-4547,MIR5699,0
+764239,AZD-4547,HBG1,0
+764334,delanzomib,PVALB,0
+764334,delanzomib,IGLL5,0
+764334,delanzomib,LINC01287,0
+764334,delanzomib,JCHAIN,0
+764334,delanzomib,MIR5699,0
+764481,Brivanib,PVALB,0
+764481,Brivanib,JCHAIN,0
+764481,Brivanib,LINC01287,0
+764481,Brivanib,IGLL5,0
+764481,Brivanib,HBG1,0
+764487,NVP-BGJ398,LINC01287,0
+764487,NVP-BGJ398,PVALB,0
+764487,NVP-BGJ398,JCHAIN,0
+764487,NVP-BGJ398,IGLL5,0
+764487,NVP-BGJ398,TLR7,0
+764515,Pp-242,FLT3,0
+764515,Pp-242,MIR5699,0
+764515,Pp-242,MIR658,0
+764515,Pp-242,MIR641,0
+764515,Pp-242,MIR2278,0
+764516,ZSTK-474,MAPK8,0
+764516,ZSTK-474,FDX1,0
+764516,ZSTK-474,MND1,0
+764516,ZSTK-474,REC8,0
+764516,ZSTK-474,THYN1,0
+764517,UNC-0638,LINC01287,0
+764517,UNC-0638,PVALB,0
+764517,UNC-0638,JCHAIN,0
+764517,UNC-0638,IGLL5,0
+764517,UNC-0638,TLR7,0
+764580,MK-2461,LINC01287,0
+764580,MK-2461,PVALB,0
+764580,MK-2461,IGLL5,0
+764580,MK-2461,JCHAIN,0
+764580,MK-2461,TLR7,0
+764581,ARRY-380,MIR6807,0
+764581,ARRY-380,MIR6728,0
+764581,ARRY-380,MIR330,0
+764581,ARRY-380,HPGDS,0
+764581,ARRY-380,SOX10,0
+764658,INK-128,MIR658,0
+764658,INK-128,MIR5699,0
+764658,INK-128,FLT3,0
+764658,INK-128,RNASE2,0
+764658,INK-128,MPO,0
+764659,SCH-900776,PVALB,0
+764659,SCH-900776,JCHAIN,0
+764659,SCH-900776,IGLL5,0
+764659,SCH-900776,MIR641,0
+764659,SCH-900776,HBG1,0
+764757,SM-406,MIR6807,0
+764757,SM-406,MIR330,0
+764757,SM-406,MIR6728,0
+764757,SM-406,HPGDS,0
+764757,SM-406,SOX10,0
+764765,ARQ-680,HPGDS,0
+764765,ARQ-680,MIR330,0
+764765,ARQ-680,MIR6807,0
+764765,ARQ-680,MIR6728,0
+764765,ARQ-680,JCHAIN,0
+764820,Gandotinib,PVALB,0
+764820,Gandotinib,JCHAIN,0
+764820,Gandotinib,LINC01287,0
+764820,Gandotinib,IGLL5,0
+764820,Gandotinib,HBG1,0
+764821,Alectinib,HPGDS,0
+764821,Alectinib,MIR330,0
+764821,Alectinib,MIR6728,0
+764821,Alectinib,MIR6807,0
+764821,Alectinib,PRAP1,0
+764823,Varlitinib,HPGDS,0
+764823,Varlitinib,MIR330,0
+764823,Varlitinib,MIR6728,0
+764823,Varlitinib,MIR6807,0
+764823,Varlitinib,PRAP1,0
+765395,MPC-3100,LINC01287,0
+765395,MPC-3100,PVALB,0
+765395,MPC-3100,JCHAIN,0
+765395,MPC-3100,TLR7,0
+765395,MPC-3100,IGLL5,0
+765396,BMN-673,PVALB,0
+765396,BMN-673,IGLL5,0
+765396,BMN-673,JCHAIN,0
+765396,BMN-673,MIR641,0
+765396,BMN-673,HBG1,0
+765435,Ganetespib,LINC01287,0
+765435,Ganetespib,PVALB,0
+765435,Ganetespib,IGLL5,0
+765435,Ganetespib,JCHAIN,0
+765435,Ganetespib,SNORD83B,0
+765436,YK-4-279,MAPK8,0
+765436,YK-4-279,REC8,0
+765436,YK-4-279,MND1,0
+765436,YK-4-279,FDX1,0
+765436,YK-4-279,NEK11,0
+765672,S-49076,LINC01287,0
+765672,S-49076,PVALB,0
+765672,S-49076,JCHAIN,0
+765672,S-49076,IGLL5,0
+765672,S-49076,TLR7,0
+765694,Bosutinib,PVALB,0
+765694,Bosutinib,JCHAIN,0
+765694,Bosutinib,IGLL5,0
+765694,Bosutinib,LINC01287,0
+765694,Bosutinib,HBG1,0
+765695,PD 184352,SH2D1A,0
+765695,PD 184352,ITK,0
+765695,PD 184352,ZAP70,0
+765695,PD 184352,MIR142,0
+765695,PD 184352,CD3E,0
+765775,Gemcitabine elaidate,LINC01287,0
+765775,Gemcitabine elaidate,PVALB,0
+765775,Gemcitabine elaidate,JCHAIN,0
+765775,Gemcitabine elaidate,IGLL5,0
+765775,Gemcitabine elaidate,TLR7,0
+765776,AZD-3514,LINC01287,0
+765776,AZD-3514,PVALB,0
+765776,AZD-3514,JCHAIN,0
+765776,AZD-3514,IGLL5,0
+765776,AZD-3514,TLR7,0
+765865,ASP-3026,LINC01287,0
+765865,ASP-3026,PVALB,0
+765865,ASP-3026,IGLL5,0
+765865,ASP-3026,JCHAIN,0
+765865,ASP-3026,TLR7,0
+765866,Refametinib,MIR330,0
+765866,Refametinib,MIR6728,0
+765866,Refametinib,MIR6807,0
+765866,Refametinib,HPGDS,0
+765866,Refametinib,SOX10,0
+765888,Dacomitinib,SOX10,0
+765888,Dacomitinib,CD3E,0
+765888,Dacomitinib,ZAP70,0
+765888,Dacomitinib,C10orf90,0
+765888,Dacomitinib,MIA,0
+765889,ABT-348,JCHAIN,0
+765889,ABT-348,PVALB,0
+765889,ABT-348,IGLL5,0
+765889,ABT-348,LINC01287,0
+765889,ABT-348,PRAP1,0
+765898,GDC-0152,HPGDS,0
+765898,GDC-0152,MIR330,0
+765898,GDC-0152,MIR6728,0
+765898,GDC-0152,MIR6807,0
+765898,GDC-0152,PRAP1,0
+765949,AEE-788,SH2D1A,0
+765949,AEE-788,CD3E,0
+765949,AEE-788,ZAP70,0
+765949,AEE-788,CD1E,0
+765949,AEE-788,REC8,0
+765974,BYL-719,LINC01287,0
+765974,BYL-719,PVALB,0
+765974,BYL-719,IGLL5,0
+765974,BYL-719,JCHAIN,0
+765974,BYL-719,HBG1,0
+766255,CT-GSK183,LINC01287,0
+766255,CT-GSK183,PVALB,0
+766255,CT-GSK183,JCHAIN,0
+766255,CT-GSK183,IGLL5,0
+766255,CT-GSK183,TLR7,0
+766270,ABT-199,MIR5699,0
+766270,ABT-199,JCHAIN,0
+766270,ABT-199,PVALB,0
+766270,ABT-199,IGLL5,0
+766270,ABT-199,LINC01287,0
+766271,PHA-665752,LINC01287,0
+766271,PHA-665752,TLR7,0
+766271,PHA-665752,PVALB,0
+766271,PHA-665752,JCHAIN,0
+766271,PHA-665752,IGLL5,0
+766820,LY-2228820,MIR330,0
+766820,LY-2228820,MIR6807,0
+766820,LY-2228820,MIR6728,0
+766820,LY-2228820,CD3E,0
+766820,LY-2228820,ZAP70,0
+766821,BMS-911543,SOX10,0
+766821,BMS-911543,CD3E,0
+766821,BMS-911543,PLP1,0
+766821,BMS-911543,C10orf90,0
+766821,BMS-911543,ZAP70,0
+766824,CEP-14083,LINC01287,0
+766824,CEP-14083,PVALB,0
+766824,CEP-14083,JCHAIN,0
+766824,CEP-14083,IGLL5,0
+766824,CEP-14083,TLR7,0
+766906,MLN-2480,MIR6807,0
+766906,MLN-2480,MIR6728,0
+766906,MLN-2480,MIR330,0
+766906,MLN-2480,HPGDS,0
+766906,MLN-2480,LGALS4,0
+766907,Ixazomib,SH2D1A,0
+766907,Ixazomib,REC8,0
+766907,Ixazomib,ITK,0
+766907,Ixazomib,CD3E,0
+766907,Ixazomib,ZAP70,0
+766908,PD 173074,LINC01287,0
+766908,PD 173074,PVALB,0
+766908,PD 173074,JCHAIN,0
+766908,PD 173074,IGLL5,0
+766908,PD 173074,TLR7,1
+766991,GSK-690693,HPGDS,0
+766991,GSK-690693,MIR330,0
+766991,GSK-690693,MIR6807,0
+766991,GSK-690693,MIR6728,0
+766991,GSK-690693,PRAP1,0
+766992,BAY 61-3606,IGLL5,0
+766992,BAY 61-3606,LINC01287,0
+766992,BAY 61-3606,PVALB,0
+766992,BAY 61-3606,JCHAIN,0
+766992,BAY 61-3606,MIR5699,0
+767006,AEW-541,MIR330,0
+767006,AEW-541,MIR6807,0
+767006,AEW-541,MIR6728,0
+767006,AEW-541,HPGDS,0
+767006,AEW-541,LGALS4,0
+767048,BMS-387032,LINC01287,0
+767048,BMS-387032,PVALB,0
+767048,BMS-387032,IGLL5,0
+767048,BMS-387032,JCHAIN,0
+767048,BMS-387032,TLR7,0
+767124,Enzastaurin,PVALB,0
+767124,Enzastaurin,LINC01287,0
+767124,Enzastaurin,IGLL5,0
+767124,Enzastaurin,JCHAIN,0
+767124,Enzastaurin,SNORD83B,0
+767125,BMN-673,HPGDS,0
+767125,BMN-673,MIR330,0
+767125,BMN-673,MIR6728,0
+767125,BMN-673,MIR6807,0
+767125,BMN-673,MIR641,0
+767128,Birinapant,HPGDS,0
+767128,Birinapant,MIR330,0
+767128,Birinapant,MIR6728,0
+767128,Birinapant,MIR6807,0
+767128,Birinapant,PRAP1,0
+767189,AZD-2014,HPGDS,0
+767189,AZD-2014,MIR330,0
+767189,AZD-2014,MIR6807,0
+767189,AZD-2014,MIR6728,0
+767189,AZD-2014,MIR641,0
+767191,-,CWC15,15
+767191,-,THYN1,13
+767191,-,CDK7,300
+767191,-,RPL5,300
+767191,-,PARP2,300
+767193,-,MAPK8,300
+767193,-,THYN1,13
+767193,-,FDX1,300
+767193,-,CDK7,300
+767193,-,TTK,300
+767194,-,MAPK8,300
+767194,-,FDX1,300
+767194,-,THYN1,13
+767194,-,MND1,151
+767194,-,CDK7,300
+767195,-,MAPK8,300
+767195,-,MND1,151
+767195,-,FDX1,300
+767195,-,THYN1,13
+767195,-,REC8,300
+767196,-,MAPK8,300
+767196,-,THYN1,13
+767196,-,FDX1,300
+767196,-,ACTB,300
+767196,-,CDK7,300
+767197,-,SH2D1A,300
+767197,-,ITK,300
+767197,-,CD3E,300
+767197,-,ZAP70,300
+767197,-,MIR142,300
+767199,-,MAPK8,300
+767199,-,THYN1,13
+767199,-,CDK7,300
+767199,-,TTK,300
+767199,-,FDX1,300
+767200,-,MAPK8,300
+767200,-,THYN1,13
+767200,-,FDX1,300
+767200,-,TTK,300
+767200,-,CDK7,300
+767202,-,SH2D1A,300
+767202,-,ITK,300
+767202,-,MIR142,300
+767202,-,ZAP70,300
+767202,-,CD3E,300
+767203,-,MAPK8,300
+767203,-,REC8,300
+767203,-,MND1,151
+767203,-,FDX1,300
+767203,-,NEK11,27
+767206,-,MAPK8,300
+767206,-,FDX1,300
+767206,-,THYN1,13
+767206,-,MND1,151
+767206,-,REC8,300
+767207,-,REC8,300
+767207,-,MAPK8,300
+767207,-,SH2D1A,300
+767207,-,CD3E,300
+767207,-,ITK,300
+767211,-,MAPK8,300
+767211,-,FDX1,300
+767211,-,MND1,151
+767211,-,REC8,300
+767211,-,THYN1,13
+767213,-,MAPK8,300
+767213,-,THYN1,13
+767213,-,TTK,300
+767213,-,CDK7,300
+767213,-,FDX1,300
+767214,-,MAPK8,300
+767214,-,THYN1,13
+767214,-,CDK7,300
+767214,-,FDX1,300
+767214,-,TTK,300
+767215,-,MAPK8,300
+767215,-,THYN1,13
+767215,-,FDX1,300
+767215,-,CDK7,300
+767215,-,TTK,300
+767217,-,MAPK8,300
+767217,-,REC8,300
+767217,-,MND1,151
+767217,-,FDX1,300
+767217,-,SLC35G2,5
+767218,-,MAPK8,300
+767218,-,THYN1,13
+767218,-,FDX1,300
+767218,-,CDK7,300
+767218,-,TTK,300
+767219,-,MAPK8,300
+767219,-,THYN1,13
+767219,-,CDK7,300
+767219,-,TTK,300
+767219,-,CWC15,15
+767220,-,MAPK8,300
+767220,-,THYN1,13
+767220,-,CDK7,300
+767220,-,FDX1,300
+767220,-,TTK,300
+767221,-,MAPK8,300
+767221,-,REC8,300
+767221,-,MND1,151
+767221,-,FDX1,300
+767221,-,NEK11,27
+767222,-,MAPK8,300
+767222,-,THYN1,13
+767222,-,FDX1,300
+767222,-,MND1,151
+767222,-,CDK7,300
+767224,-,MAPK8,300
+767224,-,REC8,300
+767224,-,MND1,151
+767224,-,FDX1,300
+767224,-,NEK11,27
+767225,-,MAPK8,300
+767225,-,REC8,300
+767225,-,MND1,151
+767225,-,FDX1,300
+767225,-,NEK11,27
+767226,-,MAPK8,300
+767226,-,REC8,300
+767226,-,MND1,151
+767226,-,NEK11,27
+767226,-,SH2D1A,300
+767227,-,MAPK8,300
+767227,-,FDX1,300
+767227,-,MND1,151
+767227,-,REC8,300
+767227,-,THYN1,13
+767228,-,MAPK8,300
+767228,-,THYN1,13
+767228,-,FDX1,300
+767228,-,MND1,151
+767228,-,CDK7,300
+767229,-,THYN1,13
+767229,-,MAPK8,300
+767229,-,ACTB,300
+767229,-,CWC15,15
+767229,-,NUP37,36
+767230,-,MAPK8,300
+767230,-,THYN1,13
+767230,-,FDX1,300
+767230,-,CDK7,300
+767230,-,TTK,300
+767231,-,MAPK8,300
+767231,-,REC8,300
+767231,-,MND1,151
+767231,-,NEK11,27
+767231,-,FDX1,300
+767232,-,MAPK8,300
+767232,-,THYN1,13
+767232,-,FDX1,300
+767232,-,CDK7,300
+767232,-,TTK,300
+767236,-,MIR641,47
+767236,-,HPGDS,232
+767236,-,IGLL5,77
+767236,-,JCHAIN,248
+767236,-,PVALB,213
+767237,-,ITK,300
+767237,-,SH2D1A,300
+767237,-,ZAP70,300
+767237,-,MIR142,300
+767237,-,CD3E,300
+767238,-,SH2D1A,300
+767238,-,ZAP70,300
+767238,-,REC8,300
+767238,-,CD3E,300
+767238,-,ITK,300
+767239,-,MAPK8,300
+767239,-,THYN1,13
+767239,-,FDX1,300
+767239,-,DKK3,300
+767239,-,SPEG,300
+767240,-,SH2D1A,300
+767240,-,CD3E,300
+767240,-,ZAP70,300
+767240,-,ITK,300
+767240,-,CD1E,81
+767242,-,MIR7110,2
+767242,-,MIR1231,37
+767242,-,SNAR-C4,0
+767242,-,FLT3,300
+767242,-,MIR6728,3
+767243,-,REC8,300
+767243,-,MAPK8,300
+767243,-,NEK11,27
+767243,-,SH2D1A,300
+767243,-,CD3E,300
+767244,-,MAPK8,300
+767244,-,THYN1,13
+767244,-,FDX1,300
+767244,-,MND1,151
+767244,-,CDK7,300
+767246,-,MAPK8,300
+767246,-,REC8,300
+767246,-,MND1,151
+767246,-,FDX1,300
+767246,-,NEK11,27
+767247,-,SH2D1A,300
+767247,-,CD3E,300
+767247,-,ZAP70,300
+767247,-,ITK,300
+767247,-,MIR142,300
+767248,-,MIR330,74
+767248,-,MIR6728,3
+767248,-,MIR6807,1
+767248,-,CD1E,81
+767248,-,HPGDS,232
+767249,-,MAPK8,300
+767249,-,REC8,300
+767249,-,NEK11,27
+767249,-,DKK3,300
+767249,-,SPEG,300
+767250,-,SH2D1A,300
+767250,-,ZAP70,300
+767250,-,CD3E,300
+767250,-,ITK,300
+767250,-,CD1E,81
+767252,-,MAPK8,300
+767252,-,THYN1,13
+767252,-,FDX1,300
+767252,-,MND1,151
+767252,-,CDK7,300
+767253,-,MAPK8,300
+767253,-,FDX1,300
+767253,-,MND1,151
+767253,-,THYN1,13
+767253,-,REC8,300
+767254,-,PVALB,213
+767254,-,JCHAIN,248
+767254,-,IGLL5,77
+767254,-,LINC01287,11
+767254,-,MIR5699,0
+767255,-,HPGDS,232
+767255,-,MIR641,47
+767255,-,MIR330,74
+767255,-,MIR6807,1
+767255,-,MIR6728,3
+767256,-,MIR641,47
+767256,-,FLT3,300
+767256,-,HPGDS,232
+767256,-,MIR5699,0
+767256,-,MIR330,74
+767257,-,REC8,300
+767257,-,MAPK8,300
+767257,-,SH2D1A,300
+767257,-,ZAP70,300
+767257,-,CD3E,300
+767258,-,MAPK8,300
+767258,-,THYN1,13
+767258,-,ACTB,300
+767258,-,FDX1,300
+767258,-,PLK2,300
+767259,-,LINC01287,11
+767259,-,PVALB,213
+767259,-,JCHAIN,248
+767259,-,IGLL5,77
+767259,-,HBG1,130
+767260,-,ITK,300
+767260,-,SH2D1A,300
+767260,-,ZAP70,300
+767260,-,MIR142,300
+767260,-,CD3E,300
+767261,-,PVALB,213
+767261,-,LINC01287,11
+767261,-,JCHAIN,248
+767261,-,IGLL5,77
+767261,-,HBG1,130
+767262,-,SH2D1A,300
+767262,-,ITK,300
+767262,-,CD3E,300
+767262,-,CD1E,81
+767262,-,ZAP70,300
+767263,-,LINC01287,11
+767263,-,PVALB,213
+767263,-,JCHAIN,248
+767263,-,IGLL5,77
+767263,-,TLR7,300
+767264,-,LINC01287,11
+767264,-,PVALB,213
+767264,-,JCHAIN,248
+767264,-,IGLL5,77
+767264,-,HBG1,130
+767265,-,PVALB,213
+767265,-,JCHAIN,248
+767265,-,IGLL5,77
+767265,-,LINC01287,11
+767265,-,SNORD83B,2
+767268,-,MAPK8,300
+767268,-,THYN1,13
+767268,-,CDK7,300
+767268,-,TTK,300
+767268,-,FDX1,300
+767271,-,SH2D1A,300
+767271,-,ZAP70,300
+767271,-,ITK,300
+767271,-,CD3E,300
+767271,-,MIR142,300
+767272,-,MAPK8,300
+767272,-,THYN1,13
+767272,-,FDX1,300
+767272,-,CDK7,300
+767272,-,MND1,151
+767274,-,PVALB,213
+767274,-,JCHAIN,248
+767274,-,IGLL5,77
+767274,-,LINC01287,11
+767274,-,MIR5699,0
+767275,-,ZAP70,300
+767275,-,CD3E,300
+767275,-,SH2D1A,300
+767275,-,CD1E,81
+767275,-,MIR142,300
+767276,-,SH2D1A,300
+767276,-,CD3E,300
+767276,-,ZAP70,300
+767276,-,ITK,300
+767276,-,CD1E,81
+767287,-,LINC01287,11
+767287,-,PVALB,213
+767287,-,IGLL5,77
+767287,-,JCHAIN,248
+767287,-,TLR7,300
+767288,-,HPGDS,232
+767288,-,MIR330,74
+767288,-,MIR6728,3
+767288,-,MIR6807,1
+767288,-,MIR641,47
+767289,-,FLT3,300
+767289,-,MIR5699,0
+767289,-,MIR641,47
+767289,-,MIR2278,9
+767289,-,MIR3198-1,0
+767290,-,FLT3,300
+767290,-,MPO,300
+767290,-,TYROBP,300
+767290,-,MIR3198-1,0
+767290,-,MIR2278,9
+767291,-,LINC01287,11
+767291,-,PVALB,213
+767291,-,IGLL5,77
+767291,-,JCHAIN,248
+767291,-,TLR7,300
+767292,-,MIR641,47
+767292,-,MIR5699,0
+767292,-,HPGDS,232
+767292,-,MIR330,74
+767292,-,MIR6728,3
+767293,-,MIR641,47
+767293,-,MIR5699,0
+767293,-,HPGDS,232
+767293,-,MIR330,74
+767293,-,MIR6807,1
+767299,-,MIR641,47
+767299,-,JCHAIN,248
+767299,-,PVALB,213
+767299,-,HPGDS,232
+767299,-,IGLL5,77
+767304,-,MAPK8,300
+767304,-,FDX1,300
+767304,-,REC8,300
+767304,-,MND1,151
+767304,-,THYN1,13
+767307,-,MAPK8,300
+767307,-,THYN1,13
+767307,-,ACTB,300
+767307,-,FDX1,300
+767307,-,PLK2,300
+767309,-,THYN1,13
+767309,-,MAPK8,300
+767309,-,CWC15,15
+767309,-,CDK7,300
+767309,-,TTK,300
+767317,-,FLT3,300
+767317,-,MIR641,47
+767317,-,MIR5699,0
+767317,-,HPGDS,232
+767317,-,MIR1231,37
+767318,-,MAPK8,300
+767318,-,THYN1,13
+767318,-,ACTB,300
+767318,-,FDX1,300
+767318,-,PLK2,300
+767320,-,FLT3,300
+767320,-,MIR3198-1,0
+767320,-,MIR2278,9
+767320,-,ITK,300
+767320,-,MIR1231,37
+767327,-,MAPK8,300
+767327,-,THYN1,13
+767327,-,FDX1,300
+767327,-,DKK3,300
+767327,-,SPEG,300
+767329,-,SH2D1A,300
+767329,-,ZAP70,300
+767329,-,CD3E,300
+767329,-,ITK,300
+767329,-,CD1E,81
+767330,-,MAPK8,300
+767330,-,REC8,300
+767330,-,DKK3,300
+767330,-,NEK11,27
+767330,-,SPEG,300
+767331,-,MAPK8,300
+767331,-,REC8,300
+767331,-,MND1,151
+767331,-,FDX1,300
+767331,-,NEK11,27
+767332,-,MAPK8,300
+767332,-,THYN1,13
+767332,-,ACTB,300
+767332,-,FDX1,300
+767332,-,PLK2,300
+767337,-,REC8,300
+767337,-,SH2D1A,300
+767337,-,ITK,300
+767337,-,MAPK8,300
+767337,-,ZAP70,300
+767339,-,MAPK8,300
+767339,-,FDX1,300
+767339,-,REC8,300
+767339,-,MND1,151
+767339,-,DKK3,300
+767344,-,MIR6728,3
+767344,-,MIR330,74
+767344,-,MIR6807,1
+767344,-,HPGDS,232
+767344,-,C10orf90,16
+767346,-,MAPK8,300
+767346,-,DKK3,300
+767346,-,SPEG,300
+767346,-,NEK11,27
+767346,-,REC8,300
+767347,-,MAPK8,300
+767347,-,THYN1,13
+767347,-,ACTB,300
+767347,-,FDX1,300
+767347,-,DKK3,300
+767348,-,MAPK8,300
+767348,-,DKK3,300
+767348,-,SPEG,300
+767348,-,NEK11,27
+767348,-,FDX1,300
+767352,-,MAPK8,300
+767352,-,THYN1,13
+767352,-,ACTB,300
+767352,-,DKK3,300
+767352,-,FDX1,300
+767361,-,MAPK8,300
+767361,-,THYN1,13
+767361,-,FDX1,300
+767361,-,MND1,151
+767361,-,TTK,300
+767364,-,PVALB,213
+767364,-,MIR641,47
+767364,-,JCHAIN,248
+767364,-,IGLL5,77
+767364,-,MIR5699,0
+767365,-,PVALB,213
+767365,-,JCHAIN,248
+767365,-,IGLL5,77
+767365,-,LINC01287,11
+767365,-,SNORD83B,2
+767366,-,MAPK8,300
+767366,-,DKK3,300
+767366,-,NEK11,27
+767366,-,REC8,300
+767366,-,SPEG,300
+767367,-,MAPK8,300
+767367,-,THYN1,13
+767367,-,ACTB,300
+767367,-,FDX1,300
+767367,-,DKK3,300
+767369,-,SH2D1A,300
+767369,-,ITK,300
+767369,-,CD3E,300
+767369,-,ZAP70,300
+767369,-,MIR142,300
+767373,-,MIR330,74
+767373,-,MIR6728,3
+767373,-,MIR6807,1
+767373,-,HPGDS,232
+767373,-,MIR641,47
+767374,-,MIR6807,1
+767374,-,MIR330,74
+767374,-,MIR6728,3
+767374,-,HPGDS,232
+767374,-,MIR641,47
+767375,-,MIR641,47
+767375,-,HPGDS,232
+767375,-,MIR6807,1
+767375,-,MIR6728,3
+767375,-,MIR330,74
+767376,-,LINC01287,11
+767376,-,PVALB,213
+767376,-,IGLL5,77
+767376,-,JCHAIN,248
+767376,-,TLR7,300
+767378,-,MIR330,74
+767378,-,MIR6807,1
+767378,-,MIR6728,3
+767378,-,HPGDS,232
+767378,-,MIR6126,13
+767380,-,MIR641,47
+767380,-,MIR5699,0
+767380,-,PVALB,213
+767380,-,JCHAIN,248
+767380,-,IGLL5,77
+767381,-,IGLL5,77
+767381,-,PVALB,213
+767381,-,JCHAIN,248
+767381,-,MIR641,47
+767381,-,MIR5699,0
+767384,-,PVALB,213
+767384,-,LINC01287,11
+767384,-,IGLL5,77
+767384,-,JCHAIN,248
+767384,-,HBG1,130
+767385,-,MIR641,47
+767385,-,HPGDS,232
+767385,-,MIR5699,0
+767385,-,MIR330,74
+767385,-,MIR6728,3
+767386,-,IGLL5,77
+767386,-,PVALB,213
+767386,-,LINC01287,11
+767386,-,JCHAIN,248
+767386,-,HBG1,130
+767387,-,MAPK8,300
+767387,-,DKK3,300
+767387,-,NEK11,27
+767387,-,SPEG,300
+767387,-,REC8,300
+767389,-,PVALB,213
+767389,-,JCHAIN,248
+767389,-,IGLL5,77
+767389,-,LINC01287,11
+767389,-,HBG1,130
+767390,-,MIR658,10
+767390,-,MIR5699,0
+767390,-,TYROBP,300
+767390,-,IGLL5,77
+767390,-,RNASE2,85
+767391,-,FLT3,300
+767391,-,MIR641,47
+767391,-,MIR5699,0
+767391,-,HPGDS,232
+767391,-,MIR330,74
+767392,-,LINC01287,11
+767392,-,IGLL5,77
+767392,-,PVALB,213
+767392,-,JCHAIN,248
+767392,-,HBG1,130
+767395,-,FLT3,300
+767395,-,SNAR-C4,0
+767395,-,MIR330,74
+767395,-,MIR6728,3
+767395,-,MIR6807,1
+767398,-,MIR641,47
+767398,-,MIR5699,0
+767398,-,JCHAIN,248
+767398,-,PVALB,213
+767398,-,IGLL5,77
+767399,-,LINC01287,11
+767399,-,PVALB,213
+767399,-,IGLL5,77
+767399,-,JCHAIN,248
+767399,-,TLR7,300
+767400,-,MIR641,47
+767400,-,MIR5699,0
+767400,-,HPGDS,232
+767400,-,MIR1296,27
+767400,-,MIR126,300
+767401,-,MAPK8,300
+767401,-,THYN1,13
+767401,-,FDX1,300
+767401,-,CDK7,300
+767401,-,TTK,300
+767404,-,SH2D1A,300
+767404,-,CD3E,300
+767404,-,ZAP70,300
+767404,-,ITK,300
+767404,-,CD1E,81
+767408,-,SH2D1A,300
+767408,-,ITK,300
+767408,-,CD3E,300
+767408,-,ZAP70,300
+767408,-,CD1E,81
+767409,-,MIR641,47
+767409,-,MIR5699,0
+767409,-,PVALB,213
+767409,-,IGLL5,77
+767409,-,JCHAIN,248
+767411,-,MAPK8,300
+767411,-,DKK3,300
+767411,-,THYN1,13
+767411,-,ACTB,300
+767411,-,SPEG,300
+767416,-,MAPK8,300
+767416,-,THYN1,13
+767416,-,DKK3,300
+767416,-,ACTB,300
+767416,-,SPEG,300
+767420,-,LINC01287,11
+767420,-,JCHAIN,248
+767420,-,PVALB,213
+767420,-,IGLL5,77
+767420,-,TLR7,300
+767470,MLN-0905,LINC01287,0
+767470,MLN-0905,PVALB,0
+767470,MLN-0905,TLR7,0
+767470,MLN-0905,JCHAIN,0
+767470,MLN-0905,IGLL5,0
+767598,Momelotinib,MIR641,0
+767598,Momelotinib,MIR5699,0
+767598,Momelotinib,FLT3,3
+767598,Momelotinib,MIR658,0
+767598,Momelotinib,MIR1296,0
+767599,I-BET-151,LINC01287,0
+767599,I-BET-151,PVALB,0
+767599,I-BET-151,JCHAIN,0
+767599,I-BET-151,IGLL5,0
+767599,I-BET-151,TLR7,0
+767600,Fedratinib,LINC01287,0
+767600,Fedratinib,PVALB,0
+767600,Fedratinib,IGLL5,0
+767600,Fedratinib,JCHAIN,0
+767600,Fedratinib,TLR7,1
+767746,ADW-742,HPGDS,0
+767746,ADW-742,JCHAIN,0
+767746,ADW-742,PVALB,0
+767746,ADW-742,PRAP1,0
+767746,ADW-742,MIR6728,0
+767897,BPR1J-097,PVALB,0
+767897,BPR1J-097,IGLL5,0
+767897,BPR1J-097,JCHAIN,0
+767897,BPR1J-097,LINC01287,0
+767897,BPR1J-097,HBG1,0
+767898,Ipatasertib,PVALB,0
+767898,Ipatasertib,JCHAIN,0
+767898,Ipatasertib,IGLL5,0
+767898,Ipatasertib,LINC01287,0
+767898,Ipatasertib,HBG1,0
+767951,GSK-1904529A,HPGDS,0
+767951,GSK-1904529A,MIR330,0
+767951,GSK-1904529A,MIR6728,0
+767951,GSK-1904529A,MIR6807,0
+767951,GSK-1904529A,MIR5699,0
+767952,Rocilinostat,REC8,0
+767952,Rocilinostat,SH2D1A,0
+767952,Rocilinostat,ITK,0
+767952,Rocilinostat,CD3E,0
+767952,Rocilinostat,ZAP70,0
+767953,R-1530,PVALB,0
+767953,R-1530,IGLL5,0
+767953,R-1530,JCHAIN,0
+767953,R-1530,MIR5699,0
+767953,R-1530,LINC01287,0
+767954,EMD-1204831,PVALB,0
+767954,EMD-1204831,JCHAIN,0
+767954,EMD-1204831,IGLL5,0
+767954,EMD-1204831,MIR641,0
+767954,EMD-1204831,LINC01287,0
+768068,Cobimetinib (isomer 1),LINC01287,0
+768068,Cobimetinib (isomer 1),PVALB,0
+768068,Cobimetinib (isomer 1),JCHAIN,0
+768068,Cobimetinib (isomer 1),IGLL5,0
+768068,Cobimetinib (isomer 1),TLR7,0
+768069,Cobimetinib (isomer 1),LINC01287,0
+768069,Cobimetinib (isomer 1),PVALB,0
+768069,Cobimetinib (isomer 1),JCHAIN,0
+768069,Cobimetinib (isomer 1),IGLL5,0
+768069,Cobimetinib (isomer 1),HBG1,0
+768070,enantiomer of PF-4176340,PVALB,0
+768070,enantiomer of PF-4176340,JCHAIN,0
+768070,enantiomer of PF-4176340,IGLL5,0
+768070,enantiomer of PF-4176340,LINC01287,0
+768070,enantiomer of PF-4176340,HBG1,0
+768072,TAK-960,LINC01287,0
+768072,TAK-960,TLR7,0
+768072,TAK-960,PVALB,0
+768072,TAK-960,JCHAIN,0
+768072,TAK-960,IGLL5,0
+768073,LY-2835219,LINC01287,0
+768073,LY-2835219,PVALB,0
+768073,LY-2835219,JCHAIN,0
+768073,LY-2835219,IGLL5,0
+768073,LY-2835219,TLR7,0
+768100,SAR-245409,MIR330,0
+768100,SAR-245409,MIR6728,0
+768100,SAR-245409,MIR6807,0
+768100,SAR-245409,HPGDS,0
+768100,SAR-245409,MIR1296,0
+768112,SAR-402674,IGLL5,0
+768112,SAR-402674,PVALB,0
+768112,SAR-402674,JCHAIN,0
+768112,SAR-402674,LINC01287,0
+768112,SAR-402674,MIR5699,0
+768508,GSK-2636771,REC8,0
+768508,GSK-2636771,CD3E,0
+768508,GSK-2636771,SH2D1A,0
+768508,GSK-2636771,ZAP70,0
+768508,GSK-2636771,PDGFRB,0
+768509,SNX-5422,LINC01287,0
+768509,SNX-5422,TLR7,0
+768509,SNX-5422,PVALB,0
+768509,SNX-5422,IGLL5,0
+768509,SNX-5422,JCHAIN,0
+768593,CEP-9722,PVALB,0
+768593,CEP-9722,IGLL5,0
+768593,CEP-9722,JCHAIN,0
+768593,CEP-9722,LINC01287,0
+768593,CEP-9722,HBG1,0
+771532,GDC-0349,LINC01287,0
+771532,GDC-0349,PVALB,0
+771532,GDC-0349,JCHAIN,0
+771532,GDC-0349,IGLL5,0
+771532,GDC-0349,TLR7,0
+771650,AT-13148,MAPK8,0
+771650,AT-13148,FDX1,0
+771650,AT-13148,THYN1,0
+771650,AT-13148,MND1,0
+771650,AT-13148,REC8,0
+771651,VX-322,LINC01287,0
+771651,VX-322,PVALB,0
+771651,VX-322,IGLL5,0
+771651,VX-322,JCHAIN,0
+771651,VX-322,TLR7,0
+771652,SAR-125844,LINC01287,0
+771652,SAR-125844,PVALB,0
+771652,SAR-125844,JCHAIN,0
+771652,SAR-125844,IGLL5,0
+771652,SAR-125844,TLR7,0
+771750,LY-2874455,LINC01287,0
+771750,LY-2874455,PVALB,0
+771750,LY-2874455,IGLL5,0
+771750,LY-2874455,JCHAIN,0
+771750,LY-2874455,TLR7,0
+772196,Lestaurtinib,LINC01287,0
+772196,Lestaurtinib,JCHAIN,0
+772196,Lestaurtinib,IGLL5,0
+772196,Lestaurtinib,PVALB,0
+772196,Lestaurtinib,SNORD83B,0
+772197,LY-2801653,LINC01287,0
+772197,LY-2801653,PVALB,0
+772197,LY-2801653,JCHAIN,0
+772197,LY-2801653,IGLL5,0
+772197,LY-2801653,TLR7,0
+772198,LY-2090314,LINC01287,0
+772198,LY-2090314,JCHAIN,0
+772198,LY-2090314,PVALB,0
+772198,LY-2090314,IGLL5,0
+772198,LY-2090314,TLR7,0
+772351,XL-888,LINC01287,0
+772351,XL-888,PVALB,0
+772351,XL-888,IGLL5,0
+772351,XL-888,JCHAIN,0
+772351,XL-888,TLR7,0
+772469,IPI-145,PVALB,0
+772469,IPI-145,JCHAIN,0
+772469,IPI-145,IGLL5,0
+772469,IPI-145,MIR641,0
+772469,IPI-145,SNORD83B,0
+772563,ARRY-704,MIR658,0
+772563,ARRY-704,MIR5699,0
+772563,ARRY-704,TYROBP,0
+772563,ARRY-704,MIR641,0
+772563,ARRY-704,FLT3,0
+772868,LCL-161,MIR330,0
+772868,LCL-161,MIR6728,0
+772868,LCL-161,MIR6807,0
+772868,LCL-161,HPGDS,0
+772868,LCL-161,LGALS4,0
+772885,PF-4942847,LINC01287,0
+772885,PF-4942847,TLR7,0
+772885,PF-4942847,PVALB,0
+772885,PF-4942847,IGLL5,0
+772885,PF-4942847,JCHAIN,0
+772887,XL-019,PVALB,0
+772887,XL-019,IGLL5,0
+772887,XL-019,JCHAIN,0
+772887,XL-019,LINC01287,0
+772887,XL-019,HBG1,0
+772991,PKM2 (9),SH2D1A,0
+772991,PKM2 (9),ZAP70,0
+772991,PKM2 (9),CD3E,0
+772991,PKM2 (9),ITK,0
+772991,PKM2 (9),CD1E,0
+772992,Fostamatinib,LINC01287,0
+772992,Fostamatinib,PVALB,0
+772992,Fostamatinib,JCHAIN,0
+772992,Fostamatinib,IGLL5,0
+772992,Fostamatinib,TLR7,0
+773094,R-547,PVALB,0
+773094,R-547,LINC01287,0
+773094,R-547,JCHAIN,0
+773094,R-547,IGLL5,0
+773094,R-547,HBG1,0
+773261,GSK-921,LINC01287,0
+773261,GSK-921,PVALB,0
+773261,GSK-921,TLR7,0
+773261,GSK-921,JCHAIN,0
+773261,GSK-921,IGLL5,0
+773262,VX-689,HPGDS,0
+773262,VX-689,MIR330,0
+773262,VX-689,MIR6728,0
+773262,VX-689,MIR6807,0
+773262,VX-689,PRAP1,0
+773263,Bafetinib,JCHAIN,0
+773263,Bafetinib,PVALB,0
+773263,Bafetinib,IGLL5,0
+773263,Bafetinib,LINC01287,0
+773263,Bafetinib,PRAP1,0
+773264,R-306465,REC8,0
+773264,R-306465,SH2D1A,0
+773264,R-306465,ITK,0
+773264,R-306465,MAPK8,0
+773264,R-306465,ZAP70,0
+773265,B-7100,FLT3,0
+773265,B-7100,MIR2278,0
+773265,B-7100,MIR3198-1,0
+773265,B-7100,ITK,0
+773265,B-7100,SH2D1A,0
+773394,AT-7519,MIR658,0
+773394,AT-7519,RNASE2,0
+773394,AT-7519,TYROBP,0
+773394,AT-7519,MPO,0
+773394,AT-7519,MIR3198-1,0
+774769,NMS-E628,SOX10,1
+774769,NMS-E628,CD3E,0
+774769,NMS-E628,ZAP70,0
+774769,NMS-E628,CD1E,0
+774769,NMS-E628,PLP1,0
+774829,I-BET-762,LINC01287,0
+774829,I-BET-762,PVALB,0
+774829,I-BET-762,JCHAIN,0
+774829,I-BET-762,IGLL5,0
+774829,I-BET-762,SNORD83B,0
+774830,Milciclib,LINC01287,0
+774830,Milciclib,PVALB,0
+774830,Milciclib,JCHAIN,0
+774830,Milciclib,IGLL5,0
+774830,Milciclib,HBG1,0
+774831,Rebastinib,LINC01287,0
+774831,Rebastinib,JCHAIN,0
+774831,Rebastinib,PVALB,0
+774831,Rebastinib,IGLL5,0
+774831,Rebastinib,TLR7,0
+775636,SCH-772984,JCHAIN,0
+775636,SCH-772984,PVALB,0
+775636,SCH-772984,IGLL5,0
+775636,SCH-772984,LINC01287,0
+775636,SCH-772984,PRAP1,0
+775771,BMS-863233,REC8,0
+775771,BMS-863233,SH2D1A,0
+775771,BMS-863233,ZAP70,0
+775771,BMS-863233,CD3E,0
+775771,BMS-863233,ITK,0
+776017,Telatinib,LINC01287,0
+776017,Telatinib,PVALB,0
+776017,Telatinib,JCHAIN,0
+776017,Telatinib,IGLL5,0
+776017,Telatinib,HBG1,0
+776043,CEP-32496,PVALB,0
+776043,CEP-32496,JCHAIN,0
+776043,CEP-32496,LINC01287,0
+776043,CEP-32496,IGLL5,0
+776043,CEP-32496,HBG1,0
+776066,AZD-1208,SH2D1A,0
+776066,AZD-1208,CD3E,0
+776066,AZD-1208,ZAP70,0
+776066,AZD-1208,CD1E,0
+776066,AZD-1208,REC8,0
+776422,LDK-378,SOX10,0
+776422,LDK-378,MIR330,0
+776422,LDK-378,MIR6728,0
+776422,LDK-378,MIR6807,0
+776422,LDK-378,C10orf90,0
+776762,EXEL-7647,HPGDS,0
+776762,EXEL-7647,MIR330,0
+776762,EXEL-7647,MIR6807,0
+776762,EXEL-7647,MIR6728,0
+776762,EXEL-7647,MIR641,0
+776763,Ariad Alk/EGFR inhibitor related to AP-26113,LINC01287,0
+776763,Ariad Alk/EGFR inhibitor related to AP-26113,PVALB,0
+776763,Ariad Alk/EGFR inhibitor related to AP-26113,JCHAIN,0
+776763,Ariad Alk/EGFR inhibitor related to AP-26113,IGLL5,0
+776763,Ariad Alk/EGFR inhibitor related to AP-26113,TLR7,0
+776787,AZD-3463,LINC01287,0
+776787,AZD-3463,PVALB,0
+776787,AZD-3463,IGLL5,0
+776787,AZD-3463,JCHAIN,0
+776787,AZD-3463,TLR7,0
+776996,PI-103,PVALB,0
+776996,PI-103,JCHAIN,0
+776996,PI-103,IGLL5,0
+776996,PI-103,MIR5699,0
+776996,PI-103,LINC01287,0
+777193,LDK-378,JCHAIN,0
+777193,LDK-378,PVALB,0
+777193,LDK-378,IGLL5,0
+777193,LDK-378,LINC01287,0
+777193,LDK-378,SNORD83B,0
+777194,Daporinad,PVALB,0
+777194,Daporinad,IGLL5,0
+777194,Daporinad,JCHAIN,0
+777194,Daporinad,MIR5699,0
+777194,Daporinad,MIR641,0
+777425,GDC-0032,LINC01287,0
+777425,GDC-0032,PVALB,0
+777425,GDC-0032,JCHAIN,0
+777425,GDC-0032,IGLL5,0
+777425,GDC-0032,TLR7,0
+777445,GSK-1070916,PVALB,0
+777445,GSK-1070916,JCHAIN,0
+777445,GSK-1070916,HPGDS,0
+777445,GSK-1070916,IGLL5,0
+777445,GSK-1070916,PRAP1,0
+777448,PFI-1,REC8,0
+777448,PFI-1,SH2D1A,0
+777448,PFI-1,MAPK8,0
+777448,PFI-1,ITK,0
+777448,PFI-1,ZAP70,0
+777571,BIX-01294,LINC01287,0
+777571,BIX-01294,PVALB,0
+777571,BIX-01294,IGLL5,0
+777571,BIX-01294,JCHAIN,0
+777571,BIX-01294,TLR7,0
+777572,AZD-8186,LINC01287,0
+777572,AZD-8186,PVALB,0
+777572,AZD-8186,JCHAIN,0
+777572,AZD-8186,IGLL5,0
+777572,AZD-8186,HBG1,0
+777638,AZD-6738,JCHAIN,0
+777638,AZD-6738,PVALB,0
+777638,AZD-6738,IGLL5,0
+777638,AZD-6738,LINC01287,0
+777638,AZD-6738,HBG1,0
+777639,LGK-974,PVALB,0
+777639,LGK-974,IGLL5,0
+777639,LGK-974,JCHAIN,0
+777639,LGK-974,LINC01287,0
+777639,LGK-974,HBG1,0
+777718,VE-822,LINC01287,0
+777718,VE-822,PVALB,0
+777718,VE-822,IGLL5,0
+777718,VE-822,JCHAIN,0
+777718,VE-822,HBG1,0
+777877,PF-4989216,LINC01287,0
+777877,PF-4989216,PVALB,0
+777877,PF-4989216,JCHAIN,0
+777877,PF-4989216,IGLL5,0
+777877,PF-4989216,TLR7,0
+777879,AM-5992,LINC01287,0
+777879,AM-5992,PVALB,0
+777879,AM-5992,JCHAIN,0
+777879,AM-5992,IGLL5,0
+777879,AM-5992,TLR7,0
+778304,Encorafenib,LINC01287,0
+778304,Encorafenib,JCHAIN,0
+778304,Encorafenib,PVALB,0
+778304,Encorafenib,IGLL5,0
+778304,Encorafenib,SNORD83B,0
+778305,Afuresertib,HPGDS,0
+778305,Afuresertib,MIR330,0
+778305,Afuresertib,MIR6807,0
+778305,Afuresertib,MIR6728,0
+778305,Afuresertib,MIR641,0
+778364,Defactinib,LINC01287,0
+778364,Defactinib,PVALB,0
+778364,Defactinib,JCHAIN,0
+778364,Defactinib,IGLL5,0
+778364,Defactinib,TLR7,0
+778366,EXEL-2280,LINC01287,0
+778366,EXEL-2280,PVALB,0
+778366,EXEL-2280,JCHAIN,0
+778366,EXEL-2280,IGLL5,0
+778366,EXEL-2280,HBG1,0
+778367,ARRY-614,LINC01287,0
+778367,ARRY-614,PVALB,0
+778367,ARRY-614,JCHAIN,0
+778367,ARRY-614,IGLL5,0
+778367,ARRY-614,TLR7,0
+778368,GSK-2141795,PVALB,0
+778368,GSK-2141795,JCHAIN,0
+778368,GSK-2141795,IGLL5,0
+778368,GSK-2141795,MIR641,0
+778368,GSK-2141795,SNORD83B,0
+778448,Ombrabulin,SH2D1A,0
+778448,Ombrabulin,REC8,0
+778448,Ombrabulin,ITK,0
+778448,Ombrabulin,CD3E,0
+778448,Ombrabulin,ZAP70,0
+778590,Cobimetinib (isomer 1),LINC01287,0
+778590,Cobimetinib (isomer 1),PVALB,0
+778590,Cobimetinib (isomer 1),IGLL5,0
+778590,Cobimetinib (isomer 1),JCHAIN,0
+778590,Cobimetinib (isomer 1),HBG1,0
+778747,OTX-015,LINC01287,0
+778747,OTX-015,PVALB,0
+778747,OTX-015,JCHAIN,0
+778747,OTX-015,IGLL5,0
+778747,OTX-015,TLR7,0
+778809,TAK-632,JCHAIN,0
+778809,TAK-632,PVALB,0
+778809,TAK-632,LINC01287,0
+778809,TAK-632,IGLL5,0
+778809,TAK-632,TLR7,0
+778810,VS-5584,SH2D1A,0
+778810,VS-5584,ITK,0
+778810,VS-5584,ZAP70,0
+778810,VS-5584,CD3E,0
+778810,VS-5584,CD1E,0
+778909,LEE-011,HPGDS,0
+778909,LEE-011,MIR330,0
+778909,LEE-011,MIR6728,0
+778909,LEE-011,MIR6807,0
+778909,LEE-011,MIR641,0
+779217,Osimertinib,MIR6728,0
+779217,Osimertinib,MIR330,0
+779217,Osimertinib,MIR6807,0
+779217,Osimertinib,HPGDS,0
+779217,Osimertinib,SOX10,1
+779218,CEP-28122,LINC01287,0
+779218,CEP-28122,JCHAIN,0
+779218,CEP-28122,PVALB,0
+779218,CEP-28122,IGLL5,0
+779218,CEP-28122,TLR7,0
+779405,CO-1686,LINC01287,0
+779405,CO-1686,PVALB,0
+779405,CO-1686,JCHAIN,0
+779405,CO-1686,IGLL5,0
+779405,CO-1686,TLR7,0
+779704,K287,LINC01287,0
+779704,K287,JCHAIN,0
+779704,K287,PVALB,0
+779704,K287,IGLL5,0
+779704,K287,TLR7,0
+780019,PD183805,MIR330,0
+780019,PD183805,MIR6807,0
+780019,PD183805,MIR6728,0
+780019,PD183805,HPGDS,0
+780019,PD183805,SOX10,0
+780020,spebrutinib,MIR641,0
+780020,spebrutinib,HPGDS,0
+780020,spebrutinib,MIR5699,0
+780020,spebrutinib,MIR330,0
+780020,spebrutinib,MIR6807,0
+780042,CP-724714,HPGDS,0
+780042,CP-724714,JCHAIN,0
+780042,CP-724714,PVALB,0
+780042,CP-724714,IGLL5,0
+780042,CP-724714,PRAP1,0
+780108,PF-06463922,JCHAIN,0
+780108,PF-06463922,PVALB,0
+780108,PF-06463922,IGLL5,0
+780108,PF-06463922,LINC01287,0
+780108,PF-06463922,SNORD83B,0
+780163,SOMCL-12-81,MIR330,0
+780163,SOMCL-12-81,MIR6807,0
+780163,SOMCL-12-81,MIR6728,0
+780163,SOMCL-12-81,HPGDS,0
+780163,SOMCL-12-81,MIR6126,0
+780204,TAS-116,LINC01287,0
+780204,TAS-116,PVALB,0
+780204,TAS-116,JCHAIN,0
+780204,TAS-116,IGLL5,0
+780204,TAS-116,TLR7,0
+780249,AZD-6738,LINC01287,0
+780249,AZD-6738,PVALB,0
+780249,AZD-6738,JCHAIN,0
+780249,AZD-6738,IGLL5,0
+780249,AZD-6738,HBG1,0
+780250,"AZD-6738 ( R,S-isomer)",LINC01287,0
+780250,"AZD-6738 ( R,S-isomer)",PVALB,0
+780250,"AZD-6738 ( R,S-isomer)",JCHAIN,0
+780250,"AZD-6738 ( R,S-isomer)",IGLL5,0
+780250,"AZD-6738 ( R,S-isomer)",TLR7,0
+780290,SAR-260301 (enantiomer 1),SH2D1A,0
+780290,SAR-260301 (enantiomer 1),ZAP70,0
+780290,SAR-260301 (enantiomer 1),CD3E,0
+780290,SAR-260301 (enantiomer 1),ITK,0
+780290,SAR-260301 (enantiomer 1),CD1E,0
+780291,SAR-260301 (enantiomer 1),SH2D1A,0
+780291,SAR-260301 (enantiomer 1),ZAP70,0
+780291,SAR-260301 (enantiomer 1),CD3E,0
+780291,SAR-260301 (enantiomer 1),CD1E,0
+780291,SAR-260301 (enantiomer 1),ITK,0
+780404,AZ-505,MIR330,0
+780404,AZ-505,MIR6728,0
+780404,AZ-505,MIR6807,0
+780404,AZ-505,HPGDS,0
+780404,AZ-505,RAB25,0
+781008,maritoclax,SH2D1A,0
+781008,maritoclax,ITK,0
+781008,maritoclax,MIR142,0
+781008,maritoclax,CD3E,0
+781008,maritoclax,SNORD104,0
+781148,CEP-37440,LINC01287,0
+781148,CEP-37440,PVALB,0
+781148,CEP-37440,JCHAIN,0
+781148,CEP-37440,IGLL5,0
+781148,CEP-37440,TLR7,0
+781343,GDC-0994,JCHAIN,0
+781343,GDC-0994,PVALB,0
+781343,GDC-0994,IGLL5,0
+781343,GDC-0994,MIR641,0
+781343,GDC-0994,LINC01287,0
+781344,NMS-1286937,LINC01287,0
+781344,NMS-1286937,TLR7,0
+781344,NMS-1286937,PVALB,0
+781344,NMS-1286937,JCHAIN,0
+781344,NMS-1286937,IGLL5,0
+781468,CUDC-427,JCHAIN,0
+781468,CUDC-427,PVALB,0
+781468,CUDC-427,IGLL5,0
+781468,CUDC-427,LINC01287,0
+781468,CUDC-427,SNORD83B,0
+781470,PF-03758309,LINC01287,0
+781470,PF-03758309,PVALB,0
+781470,PF-03758309,JCHAIN,0
+781470,PF-03758309,IGLL5,0
+781470,PF-03758309,TLR7,0
+781516,entosplenitib,LINC01287,0
+781516,entosplenitib,PVALB,0
+781516,entosplenitib,IGLL5,0
+781516,entosplenitib,JCHAIN,0
+781516,entosplenitib,TLR7,0
+781556,JNJ-42756493,PVALB,0
+781556,JNJ-42756493,MIR641,0
+781556,JNJ-42756493,JCHAIN,0
+781556,JNJ-42756493,IGLL5,0
+781556,JNJ-42756493,HPGDS,0
+781627,GSK-2606414,PVALB,0
+781627,GSK-2606414,LINC01287,0
+781627,GSK-2606414,JCHAIN,0
+781627,GSK-2606414,IGLL5,0
+781627,GSK-2606414,HBG1,0
+781761,LY-3009120,PVALB,0
+781761,LY-3009120,JCHAIN,0
+781761,LY-3009120,LINC01287,0
+781761,LY-3009120,IGLL5,0
+781761,LY-3009120,HBG1,0
+782006,PTC-691,LINC01287,0
+782006,PTC-691,PVALB,0
+782006,PTC-691,IGLL5,0
+782006,PTC-691,JCHAIN,0
+782006,PTC-691,TLR7,0
+782007,AZ-628,JCHAIN,0
+782007,AZ-628,PVALB,0
+782007,AZ-628,IGLL5,0
+782007,AZ-628,LINC01287,0
+782007,AZ-628,SNORD83B,0
+782121,Volitinib,MAPK8,0
+782121,Volitinib,REC8,0
+782121,Volitinib,NEK11,0
+782121,Volitinib,DKK3,0
+782121,Volitinib,COL7A1,0
+782122,AMG-511,LINC01287,0
+782122,AMG-511,PVALB,0
+782122,AMG-511,JCHAIN,0
+782122,AMG-511,IGLL5,0
+782122,AMG-511,TLR7,0
+782153,MG-132,SH2D1A,0
+782153,MG-132,ITK,0
+782153,MG-132,MIR142,0
+782153,MG-132,CD3E,1
+782153,MG-132,ZAP70,0
+782154,"3,3-Bis(3-fluoro-4-hydroxyphenyl)-1,3-dihydro-2H-indol-2...",MAPK8,0
+782154,"3,3-Bis(3-fluoro-4-hydroxyphenyl)-1,3-dihydro-2H-indol-2...",THYN1,0
+782154,"3,3-Bis(3-fluoro-4-hydroxyphenyl)-1,3-dihydro-2H-indol-2...",FDX1,0
+782154,"3,3-Bis(3-fluoro-4-hydroxyphenyl)-1,3-dihydro-2H-indol-2...",CDK7,0
+782154,"3,3-Bis(3-fluoro-4-hydroxyphenyl)-1,3-dihydro-2H-indol-2...",TTK,0
+782164,CX-5461,LINC01287,0
+782164,CX-5461,PVALB,0
+782164,CX-5461,JCHAIN,0
+782164,CX-5461,IGLL5,0
+782164,CX-5461,TLR7,0
+782180,5-(((4-isopropylbenzyl)oxy)methyl)-7-(pyrrolidin-1-ylmet...,PVALB,0
+782180,5-(((4-isopropylbenzyl)oxy)methyl)-7-(pyrrolidin-1-ylmet...,JCHAIN,0
+782180,5-(((4-isopropylbenzyl)oxy)methyl)-7-(pyrrolidin-1-ylmet...,IGLL5,0
+782180,5-(((4-isopropylbenzyl)oxy)methyl)-7-(pyrrolidin-1-ylmet...,MIR5699,0
+782180,5-(((4-isopropylbenzyl)oxy)methyl)-7-(pyrrolidin-1-ylmet...,LINC01287,0
+782362,PWT-33597,LINC01287,0
+782362,PWT-33597,PVALB,0
+782362,PWT-33597,JCHAIN,0
+782362,PWT-33597,IGLL5,0
+782362,PWT-33597,TLR7,0
+782363,CH-5183284,FLT3,0
+782363,CH-5183284,MIR3198-1,0
+782363,CH-5183284,MIR2278,0
+782363,CH-5183284,MIR1231,0
+782363,CH-5183284,SNAR-C4,0
+782549,Defactinib,LINC01287,0
+782549,Defactinib,PVALB,0
+782549,Defactinib,IGLL5,0
+782549,Defactinib,JCHAIN,0
+782549,Defactinib,TLR7,0
+782762,E-3810,PVALB,0
+782762,E-3810,JCHAIN,0
+782762,E-3810,IGLL5,0
+782762,E-3810,MIR641,0
+782762,E-3810,SNORD83B,0
+782763,cs-1730,FLT3,0
+782763,cs-1730,MIR3198-1,0
+782763,cs-1730,MIR2278,0
+782763,cs-1730,RNASE2,0
+782763,cs-1730,MIR7110,0
+783102,VS-4718,LINC01287,0
+783102,VS-4718,PVALB,0
+783102,VS-4718,IGLL5,0
+783102,VS-4718,JCHAIN,0
+783102,VS-4718,HBG1,0
+783107,E-7449,MPO,0
+783107,E-7449,MIR658,0
+783107,E-7449,RNASE2,0
+783107,E-7449,TYROBP,0
+783107,E-7449,FLT3,0
+783249,JNJ-26483327,PVALB,0
+783249,JNJ-26483327,LINC01287,0
+783249,JNJ-26483327,JCHAIN,0
+783249,JNJ-26483327,IGLL5,0
+783249,JNJ-26483327,SNORD83B,0
+783296,Poziotinib,MIR330,0
+783296,Poziotinib,MIR6807,0
+783296,Poziotinib,MIR6728,0
+783296,Poziotinib,HPGDS,0
+783296,Poziotinib,SOX10,0
+783333,SGI-1027,MIR658,0
+783333,SGI-1027,IGLL5,0
+783333,SGI-1027,MIR5699,0
+783333,SGI-1027,PVALB,0
+783333,SGI-1027,JCHAIN,0
+783916,pyridoclax,SH2D1A,0
+783916,pyridoclax,ITK,0
+783916,pyridoclax,CD3E,0
+783916,pyridoclax,ZAP70,0
+783916,pyridoclax,MIR142,0
+784415,Danusertib,LINC01287,0
+784415,Danusertib,PVALB,0
+784415,Danusertib,IGLL5,0
+784415,Danusertib,JCHAIN,0
+784415,Danusertib,TLR7,0
+784590,Altiratinib,MIR6728,0
+784590,Altiratinib,MIR6807,0
+784590,Altiratinib,MIR330,0
+784590,Altiratinib,SOX10,0
+784590,Altiratinib,CD3E,0
+784722,aldoxorubicin,LINC01287,0
+784722,aldoxorubicin,JCHAIN,0
+784722,aldoxorubicin,PVALB,0
+784722,aldoxorubicin,IGLL5,0
+784722,aldoxorubicin,TLR7,0
+784815,AZD-3147,LINC01287,0
+784815,AZD-3147,PVALB,0
+784815,AZD-3147,JCHAIN,0
+784815,AZD-3147,IGLL5,0
+784815,AZD-3147,TLR7,0
+784817,A-1210477,LINC01287,0
+784817,A-1210477,JCHAIN,0
+784817,A-1210477,PVALB,0
+784817,A-1210477,IGLL5,0
+784817,A-1210477,TLR7,0
+784856,CPI-0610,SH2D1A,0
+784856,CPI-0610,REC8,0
+784856,CPI-0610,CD3E,0
+784856,CPI-0610,ZAP70,0
+784856,CPI-0610,ITK,0
+785117,PQR-309,MAPK8,0
+785117,PQR-309,REC8,0
+785117,PQR-309,SH2D1A,0
+785117,PQR-309,ITK,0
+785117,PQR-309,CD3E,0
+785299,EPZ-015666,PVALB,0
+785299,EPZ-015666,IGLL5,0
+785299,EPZ-015666,JCHAIN,0
+785299,EPZ-015666,MIR641,0
+785299,EPZ-015666,HBG1,0
+785306,TAS-115,LINC01287,0
+785306,TAS-115,PVALB,0
+785306,TAS-115,JCHAIN,0
+785306,TAS-115,IGLL5,0
+785306,TAS-115,TLR7,0
+785345,Bet-BAY-002,JCHAIN,0
+785345,Bet-BAY-002,PVALB,0
+785345,Bet-BAY-002,IGLL5,0
+785345,Bet-BAY-002,MIR641,0
+785345,Bet-BAY-002,MIR5699,0
+785570,LOXO-101,MAPK8,0
+785570,LOXO-101,DKK3,0
+785570,LOXO-101,THYN1,0
+785570,LOXO-101,ACTB,1
+785570,LOXO-101,NEK11,0
+785657,RX-3117,MAPK8,0
+785657,RX-3117,REC8,0
+785657,RX-3117,MND1,0
+785657,RX-3117,FDX1,0
+785657,RX-3117,NEK11,0
+786098,BAY-1143572,PVALB,0
+786098,BAY-1143572,IGLL5,0
+786098,BAY-1143572,JCHAIN,0
+786098,BAY-1143572,MIR5699,0
+786098,BAY-1143572,LINC01287,0
+786099,AZD-8835,LINC01287,0
+786099,AZD-8835,PVALB,0
+786099,AZD-8835,JCHAIN,0
+786099,AZD-8835,IGLL5,0
+786099,AZD-8835,TLR7,0
+787027,EGF-816,HPGDS,0
+787027,EGF-816,MIR6807,0
+787027,EGF-816,MIR6728,0
+787027,EGF-816,MIR330,0
+787027,EGF-816,PRAP1,0
+787039,MI-503,LINC01287,0
+787039,MI-503,JCHAIN,0
+787039,MI-503,PVALB,0
+787039,MI-503,IGLL5,0
+787039,MI-503,TLR7,0
+787048,azd5582,JCHAIN,0
+787048,azd5582,PVALB,0
+787048,azd5582,IGLL5,0
+787048,azd5582,LINC01287,0
+787048,azd5582,PRAP1,0
+787137,AMG-319,MIR330,0
+787137,AMG-319,MIR6807,0
+787137,AMG-319,MIR6728,0
+787137,AMG-319,HPGDS,0
+787137,AMG-319,LGALS4,0
+787252,TAE-226,LINC01287,0
+787252,TAE-226,IGLL5,0
+787252,TAE-226,PVALB,0
+787252,TAE-226,JCHAIN,0
+787252,TAE-226,SNORD83B,0
+787326,GDC-0810,MIR330,0
+787326,GDC-0810,MIR6807,0
+787326,GDC-0810,MIR6728,0
+787326,GDC-0810,HPGDS,0
+787326,GDC-0810,SOX10,0
+787457,brigatinib,LINC01287,0
+787457,brigatinib,PVALB,0
+787457,brigatinib,IGLL5,0
+787457,brigatinib,JCHAIN,0
+787457,brigatinib,TLR7,0
+787780,Sabutoclax,REC8,0
+787780,Sabutoclax,MAPK8,0
+787780,Sabutoclax,SH2D1A,0
+787780,Sabutoclax,CD3E,0
+787780,Sabutoclax,ZAP70,0
+787846,gilteritinib,LINC01287,0
+787846,gilteritinib,PVALB,0
+787846,gilteritinib,IGLL5,0
+787846,gilteritinib,JCHAIN,0
+787846,gilteritinib,TLR7,0
+787880,OTS-964,LINC01287,0
+787880,OTS-964,PVALB,0
+787880,OTS-964,IGLL5,0
+787880,OTS-964,JCHAIN,0
+787880,OTS-964,HBG1,0
+787960,UMI-77,REC8,0
+787960,UMI-77,SH2D1A,0
+787960,UMI-77,ZAP70,0
+787960,UMI-77,CD3E,0
+787960,UMI-77,ITK,0
+787962,KU-55933,MAPK8,0
+787962,KU-55933,REC8,0
+787962,KU-55933,NEK11,0
+787962,KU-55933,DKK3,0
+787962,KU-55933,GFPT2,0
+788121,AZD-3759,SOX10,0
+788121,AZD-3759,C10orf90,0
+788121,AZD-3759,MIR6728,0
+788121,AZD-3759,MIR330,0
+788121,AZD-3759,MIR6807,0
+788186,Bafetinib,JCHAIN,0
+788186,Bafetinib,PVALB,0
+788186,Bafetinib,IGLL5,0
+788186,Bafetinib,HPGDS,0
+788186,Bafetinib,LINC01287,0
+788203,sitravatinib,HPGDS,0
+788203,sitravatinib,MIR6728,0
+788203,sitravatinib,MIR6807,0
+788203,sitravatinib,MIR330,0
+788203,sitravatinib,JCHAIN,0
+788365,PF-06747775,MIR330,0
+788365,PF-06747775,MIR6728,0
+788365,PF-06747775,MIR6807,0
+788365,PF-06747775,HPGDS,0
+788365,PF-06747775,SOX10,0
+788794,A-911,LINC01287,0
+788794,A-911,PVALB,0
+788794,A-911,JCHAIN,0
+788794,A-911,IGLL5,0
+788794,A-911,TLR7,0
+789043,ARV-825,LINC01287,0
+789043,ARV-825,JCHAIN,0
+789043,ARV-825,PVALB,0
+789043,ARV-825,IGLL5,0
+789043,ARV-825,MIR5699,0
+789722,Litronesib,LINC01287,0
+789722,Litronesib,PVALB,0
+789722,Litronesib,IGLL5,0
+789722,Litronesib,JCHAIN,0
+789722,Litronesib,TLR7,0
+789797,SW-044248,SH2D1A,0
+789797,SW-044248,CD3E,0
+789797,SW-044248,ZAP70,0
+789797,SW-044248,CD1E,0
+789797,SW-044248,ITK,0
+789925,ABL-001,HPGDS,0
+789925,ABL-001,MIR6728,0
+789925,ABL-001,MIR6807,0
+789925,ABL-001,MIR330,0
+789925,ABL-001,PRAP1,0
+789968,LY-3023414,PVALB,0
+789968,LY-3023414,JCHAIN,0
+789968,LY-3023414,IGLL5,0
+789968,LY-3023414,MIR641,0
+789968,LY-3023414,SNORD83B,0
+789969,SB-202190,MAPK8,0
+789969,SB-202190,REC8,0
+789969,SB-202190,MND1,0
+789969,SB-202190,FDX1,0
+789969,SB-202190,NEK11,0
+790865,EPZ-020411,JCHAIN,0
+790865,EPZ-020411,PVALB,0
+790865,EPZ-020411,IGLL5,0
+790865,EPZ-020411,LINC01287,0
+790865,EPZ-020411,SNORD83B,0
+791059,MGCD-265,JCHAIN,0
+791059,MGCD-265,PVALB,0
+791059,MGCD-265,IGLL5,0
+791059,MGCD-265,LINC01287,0
+791059,MGCD-265,HPGDS,0
+791163,RG-7602,FLT3,0
+791163,RG-7602,MIR641,0
+791163,RG-7602,MIR5699,0
+791163,RG-7602,HPGDS,0
+791163,RG-7602,MIR330,0
+791164,Acalabrutinib,LINC01287,0
+791164,Acalabrutinib,PVALB,0
+791164,Acalabrutinib,JCHAIN,0
+791164,Acalabrutinib,IGLL5,0
+791164,Acalabrutinib,TLR7,0
+791226,SAR-245409,MAPK8,0
+791226,SAR-245409,REC8,0
+791226,SAR-245409,MND1,0
+791226,SAR-245409,NEK11,0
+791226,SAR-245409,FDX1,0
+791227,XL-147,PVALB,0
+791227,XL-147,JCHAIN,0
+791227,XL-147,IGLL5,0
+791227,XL-147,LINC01287,0
+791227,XL-147,SNORD83B,0
+791328,ARQ-092,HPGDS,0
+791328,ARQ-092,MIR6807,0
+791328,ARQ-092,MIR330,0
+791328,ARQ-092,MIR6728,0
+791328,ARQ-092,MIR641,0
+791496,APR-246,MAPK8,0
+791496,APR-246,THYN1,0
+791496,APR-246,CDK7,0
+791496,APR-246,CWC15,0
+791496,APR-246,TTK,0
+791785,Sapacitabine,PVALB,0
+791785,Sapacitabine,LINC01287,0
+791785,Sapacitabine,JCHAIN,0
+791785,Sapacitabine,IGLL5,0
+791785,Sapacitabine,SNORD83B,0
+791966,CFI-400945,LINC01287,0
+791966,CFI-400945,JCHAIN,0
+791966,CFI-400945,PVALB,0
+791966,CFI-400945,IGLL5,0
+791966,CFI-400945,TLR7,0
+791967,TAK-659 (isomer 1),LINC01287,0
+791967,TAK-659 (isomer 1),PVALB,0
+791967,TAK-659 (isomer 1),IGLL5,0
+791967,TAK-659 (isomer 1),JCHAIN,0
+791967,TAK-659 (isomer 1),HBG1,0
+791968,TAK-659 (isomer 1),LINC01287,0
+791968,TAK-659 (isomer 1),PVALB,0
+791968,TAK-659 (isomer 1),IGLL5,0
+791968,TAK-659 (isomer 1),JCHAIN,0
+791968,TAK-659 (isomer 1),HBG1,0
+792847,INCB-047775,PVALB,0
+792847,INCB-047775,JCHAIN,0
+792847,INCB-047775,LINC01287,0
+792847,INCB-047775,IGLL5,0
+792847,INCB-047775,HBG1,0
+792848,olmutinib,LINC01287,0
+792848,olmutinib,PVALB,0
+792848,olmutinib,IGLL5,0
+792848,olmutinib,JCHAIN,0
+792848,olmutinib,TLR7,0
+792956,AZD-0156,JCHAIN,1
+792956,AZD-0156,PVALB,0
+792956,AZD-0156,IGLL5,0
+792956,AZD-0156,LINC01287,0
+792956,AZD-0156,HBG1,0
+792970,KPT-9274,LINC01287,0
+792970,KPT-9274,PVALB,0
+792970,KPT-9274,JCHAIN,0
+792970,KPT-9274,IGLL5,0
+792970,KPT-9274,TLR7,0
+792971,CC-223,PVALB,0
+792971,CC-223,JCHAIN,0
+792971,CC-223,IGLL5,0
+792971,CC-223,LINC01287,0
+792971,CC-223,MIR641,0
+792987,GDC-0084,MIR641,0
+792987,GDC-0084,MIR5699,0
+792987,GDC-0084,HPGDS,0
+792987,GDC-0084,MIR330,0
+792987,GDC-0084,MIR6728,0
+792996,ARQ-087,HPGDS,0
+792996,ARQ-087,MIR330,0
+792996,ARQ-087,MIR6807,0
+792996,ARQ-087,MIR6728,0
+792996,ARQ-087,PRAP1,0
+793103,ABBV-075,LINC01287,0
+793103,ABBV-075,PVALB,0
+793103,ABBV-075,JCHAIN,0
+793103,ABBV-075,IGLL5,0
+793103,ABBV-075,HBG1,0
+793150,ensartinib,LINC01287,0
+793150,ensartinib,PVALB,0
+793150,ensartinib,JCHAIN,0
+793150,ensartinib,IGLL5,0
+793150,ensartinib,TLR7,0
+793151,CC-115,HPGDS,0
+793151,CC-115,MIR330,0
+793151,CC-115,MIR6728,0
+793151,CC-115,MIR6807,0
+793151,CC-115,MIR641,0
+793323,BGB-283,JCHAIN,0
+793323,BGB-283,PVALB,0
+793323,BGB-283,IGLL5,0
+793323,BGB-283,LINC01287,0
+793323,BGB-283,SNORD83B,0
+793324,BAY-1125976,SH2D1A,0
+793324,BAY-1125976,ZAP70,0
+793324,BAY-1125976,CD3E,0
+793324,BAY-1125976,CD1E,0
+793324,BAY-1125976,ITK,0
+793677,ASP-5878,MIR5699,0
+793677,ASP-5878,MIR658,0
+793677,ASP-5878,FLT3,0
+793677,ASP-5878,MIR641,0
+793677,ASP-5878,PVALB,0
+793726,CCT-245737,PVALB,0
+793726,CCT-245737,JCHAIN,0
+793726,CCT-245737,IGLL5,0
+793726,CCT-245737,LINC01287,0
+793726,CCT-245737,SNORD83B,0
+794109,LGH-447,CD3E,0
+794109,LGH-447,ZAP70,0
+794109,LGH-447,SOX10,0
+794109,LGH-447,CD1E,0
+794109,LGH-447,SH2D1A,0
+794442,PQR-620,REC8,0
+794442,PQR-620,SH2D1A,0
+794442,PQR-620,MAPK8,0
+794442,PQR-620,ITK,0
+794442,PQR-620,CD3E,0
+794589,NTRC-0066-0,JCHAIN,0
+794589,NTRC-0066-0,PVALB,0
+794589,NTRC-0066-0,HPGDS,0
+794589,NTRC-0066-0,IGLL5,0
+794589,NTRC-0066-0,PRAP1,0
+794590,BAY-1082439,LINC01287,0
+794590,BAY-1082439,PVALB,0
+794590,BAY-1082439,JCHAIN,0
+794590,BAY-1082439,IGLL5,0
+794590,BAY-1082439,TLR7,0
+795142,M2698,PVALB,0
+795142,M2698,JCHAIN,0
+795142,M2698,IGLL5,0
+795142,M2698,LINC01287,0
+795142,M2698,MIR641,0
+797771,ulixertinib,MIR641,0
+797771,ulixertinib,PVALB,0
+797771,ulixertinib,JCHAIN,0
+797771,ulixertinib,IGLL5,0
+797771,ulixertinib,HPGDS,0
+797932,PLX-8394,MIR330,0
+797932,PLX-8394,MIR6807,0
+797932,PLX-8394,MIR6728,0
+797932,PLX-8394,HPGDS,0
+797932,PLX-8394,SOX10,0
+797937,Sulfatinib,LINC01287,0
+797937,Sulfatinib,PVALB,0
+797937,Sulfatinib,JCHAIN,0
+797937,Sulfatinib,IGLL5,0
+797937,Sulfatinib,TLR7,0
+797938,AZD-5153,LINC01287,0
+797938,AZD-5153,PVALB,0
+797938,AZD-5153,JCHAIN,0
+797938,AZD-5153,IGLL5,0
+797938,AZD-5153,TLR7,0
+798200,TP-0903,LINC01287,0
+798200,TP-0903,PVALB,0
+798200,TP-0903,IGLL5,0
+798200,TP-0903,JCHAIN,0
+798200,TP-0903,HBG1,0
+798303,BPTES,MAPK8,0
+798303,BPTES,REC8,0
+798303,BPTES,MND1,0
+798303,BPTES,NEK11,0
+798303,BPTES,SH2D1A,0
+798517,SAR-20347,LINC01287,0
+798517,SAR-20347,PVALB,0
+798517,SAR-20347,IGLL5,0
+798517,SAR-20347,JCHAIN,0
+798517,SAR-20347,TLR7,0
+799318,zanubrutinib,HPGDS,0
+799318,zanubrutinib,MIR6728,0
+799318,zanubrutinib,MIR6807,0
+799318,zanubrutinib,MIR330,0
+799318,zanubrutinib,LGALS4,0
+799337,AT-13148,MAPK8,0
+799337,AT-13148,FDX1,0
+799337,AT-13148,REC8,0
+799337,AT-13148,MND1,0
+799337,AT-13148,THYN1,0
+799348,AZD-5438,SH2D1A,0
+799348,AZD-5438,ITK,0
+799348,AZD-5438,ZAP70,1
+799348,AZD-5438,FLT3,0
+799348,AZD-5438,CD3E,0
+799349,AZD-6482,SH2D1A,0
+799349,AZD-6482,CD3E,0
+799349,AZD-6482,ZAP70,0
+799349,AZD-6482,REC8,0
+799349,AZD-6482,CD1E,0
+800081,CUDC-101,LINC01287,0
+800081,CUDC-101,PVALB,0
+800081,CUDC-101,IGLL5,0
+800081,CUDC-101,JCHAIN,0
+800081,CUDC-101,TLR7,0
+800085,Dactolisib,LINC01287,0
+800085,Dactolisib,PVALB,0
+800085,Dactolisib,JCHAIN,0
+800085,Dactolisib,IGLL5,0
+800085,Dactolisib,HBG1,0
+800522,TPX-0005,LINC01287,0
+800522,TPX-0005,PVALB,0
+800522,TPX-0005,IGLL5,0
+800522,TPX-0005,JCHAIN,0
+800522,TPX-0005,HBG1,0
+800525,BAY-1895344,JCHAIN,0
+800525,BAY-1895344,LINC01287,0
+800525,BAY-1895344,PVALB,0
+800525,BAY-1895344,IGLL5,0
+800525,BAY-1895344,SNORD83B,0
+800773,IMD-0354,MAPK8,0
+800773,IMD-0354,THYN1,0
+800773,IMD-0354,FDX1,0
+800773,IMD-0354,MND1,0
+800773,IMD-0354,TTK,0
+800812,Osimertinib,SOX10,1
+800812,Osimertinib,PLP1,0
+800812,Osimertinib,C10orf90,0
+800812,Osimertinib,MIR6807,0
+800812,Osimertinib,MIR330,0
+800841,Pelitinib,JCHAIN,0
+800841,Pelitinib,PVALB,0
+800841,Pelitinib,IGLL5,0
+800841,Pelitinib,LINC01287,0
+800841,Pelitinib,PRAP1,0
+800851,PHA-793887,PVALB,0
+800851,PHA-793887,IGLL5,0
+800851,PHA-793887,JCHAIN,0
+800851,PHA-793887,LINC01287,0
+800851,PHA-793887,MIR5699,0
+800858,R-406,PVALB,0
+800858,R-406,JCHAIN,0
+800858,R-406,IGLL5,0
+800858,R-406,LINC01287,0
+800858,R-406,MIR641,0
+800888,CFI-402257,LINC01287,0
+800888,CFI-402257,PVALB,0
+800888,CFI-402257,JCHAIN,0
+800888,CFI-402257,IGLL5,0
+800888,CFI-402257,TLR7,0
+800955,Tozasertib,PVALB,0
+800955,Tozasertib,JCHAIN,0
+800955,Tozasertib,IGLL5,0
+800955,Tozasertib,LINC01287,0
+800955,Tozasertib,HBG1,0
+801011,Canertinib,MIR330,0
+801011,Canertinib,MIR6807,0
+801011,Canertinib,MIR6728,0
+801011,Canertinib,SOX10,0
+801011,Canertinib,HPGDS,0
+801012,GSK-1059615,REC8,0
+801012,GSK-1059615,SH2D1A,0
+801012,GSK-1059615,MAPK8,0
+801012,GSK-1059615,CD3E,0
+801012,GSK-1059615,ITK,0
+801089,PRN-1371,JCHAIN,0
+801089,PRN-1371,PVALB,0
+801089,PRN-1371,IGLL5,0
+801089,PRN-1371,MIR641,0
+801089,PRN-1371,HPGDS,0
+801661,TAK-931,PVALB,0
+801661,TAK-931,IGLL5,0
+801661,TAK-931,JCHAIN,0
+801661,TAK-931,LINC01287,0
+801661,TAK-931,HBG1,0
+802100,ON-123300,LINC01287,0
+802100,ON-123300,JCHAIN,0
+802100,ON-123300,IGLL5,0
+802100,ON-123300,PVALB,0
+802100,ON-123300,HBG1,0
+802820,FT-1518,PVALB,0
+802820,FT-1518,JCHAIN,0
+802820,FT-1518,IGLL5,0
+802820,FT-1518,MIR641,0
+802820,FT-1518,LINC01287,0
+802821,PQR-530,SH2D1A,0
+802821,PQR-530,ZAP70,0
+802821,PQR-530,CD3E,0
+802821,PQR-530,ITK,0
+802821,PQR-530,CD1E,0
+803248,MTX-211,HPGDS,0
+803248,MTX-211,MIR330,0
+803248,MTX-211,MIR6728,0
+803248,MTX-211,MIR6807,0
+803248,MTX-211,MIR641,0
+803409,BAY-1816032,LINC01287,0
+803409,BAY-1816032,PVALB,0
+803409,BAY-1816032,TLR7,0
+803409,BAY-1816032,IGLL5,0
+803409,BAY-1816032,JCHAIN,0
+803410,LY-3214996,LINC01287,0
+803410,LY-3214996,PVALB,0
+803410,LY-3214996,JCHAIN,0
+803410,LY-3214996,IGLL5,0
+803410,LY-3214996,HBG1,0
+803789,AZD-1390,JCHAIN,0
+803789,AZD-1390,PVALB,0
+803789,AZD-1390,IGLL5,0
+803789,AZD-1390,LINC01287,0
+803789,AZD-1390,MIR641,0
+804518,BAY-1163877,JCHAIN,0
+804518,BAY-1163877,PVALB,0
+804518,BAY-1163877,LINC01287,0
+804518,BAY-1163877,IGLL5,0
+804518,BAY-1163877,TLR7,0
+804521,S-222611,MIR330,0
+804521,S-222611,MIR6728,0
+804521,S-222611,MIR6807,0
+804521,S-222611,HPGDS,0
+804521,S-222611,RAB25,0
+804861,ASTX-660,LINC01287,0
+804861,ASTX-660,JCHAIN,0
+804861,ASTX-660,PVALB,0
+804861,ASTX-660,IGLL5,0
+804861,ASTX-660,TLR7,0
+804962,FGF-401,MIR6728,0
+804962,FGF-401,MIR6807,0
+804962,FGF-401,MIR330,0
+804962,FGF-401,HPGDS,0
+804962,FGF-401,RAB25,0
+805500,SEL-120,SH2D1A,0
+805500,SEL-120,ITK,0
+805500,SEL-120,ZAP70,0
+805500,SEL-120,CD3E,0
+805500,SEL-120,CD1E,0
+805746,CC-671,LINC01287,0
+805746,CC-671,PVALB,0
+805746,CC-671,JCHAIN,0
+805746,CC-671,IGLL5,0
+805746,CC-671,TLR7,0
+806387,CYC-065,LINC01287,0
+806387,CYC-065,PVALB,0
+806387,CYC-065,JCHAIN,0
+806387,CYC-065,IGLL5,0
+806387,CYC-065,TLR7,0
+806388,E-7090,LINC01287,0
+806388,E-7090,PVALB,0
+806388,E-7090,JCHAIN,0
+806388,E-7090,IGLL5,0
+806388,E-7090,TLR7,0
+807047,LXH-254,JCHAIN,0
+807047,LXH-254,PVALB,0
+807047,LXH-254,LINC01287,0
+807047,LXH-254,IGLL5,0
+807047,LXH-254,HBG1,0
+808507,PF-6459988,JCHAIN,0
+808507,PF-6459988,PVALB,0
+808507,PF-6459988,IGLL5,0
+808507,PF-6459988,LINC01287,0
+808507,PF-6459988,MIR641,0
+808790,AZD-0364,LINC01287,0
+808790,AZD-0364,PVALB,0
+808790,AZD-0364,JCHAIN,0
+808790,AZD-0364,IGLL5,0
+808790,AZD-0364,TLR7,0
+808792,CC-90003,LINC01287,0
+808792,CC-90003,PVALB,0
+808792,CC-90003,JCHAIN,0
+808792,CC-90003,IGLL5,0
+808792,CC-90003,SNORD83B,0
+809693,Copanlisib,LINC01287,0
+809693,Copanlisib,PVALB,0
+809693,Copanlisib,JCHAIN,0
+809693,Copanlisib,IGLL5,0
+809693,Copanlisib,TLR7,0
+810341,PF-6459988,LINC01287,0
+810341,PF-6459988,PVALB,0
+810341,PF-6459988,JCHAIN,0
+810341,PF-6459988,IGLL5,0
+810341,PF-6459988,TLR7,0
+810717,CG-806,LINC01287,0
+810717,CG-806,PVALB,0
+810717,CG-806,JCHAIN,0
+810717,CG-806,IGLL5,0
+810717,CG-806,HBG1,0
+811429,BLU-667,LINC01287,0
+811429,BLU-667,PVALB,0
+811429,BLU-667,JCHAIN,0
+811429,BLU-667,IGLL5,0
+811429,BLU-667,TLR7,0
+812926,TAS-6417,MIR330,0
+812926,TAS-6417,MIR6728,0
+812926,TAS-6417,MIR6807,0
+812926,TAS-6417,SOX10,0
+812926,TAS-6417,C10orf90,0
+812927,PF-06873600,PVALB,0
+812927,PF-06873600,JCHAIN,0
+812927,PF-06873600,LINC01287,0
+812927,PF-06873600,IGLL5,0
+812927,PF-06873600,HBG1,0
+813488,futibutinib,LINC01287,0
+813488,futibutinib,PVALB,0
+813488,futibutinib,JCHAIN,0
+813488,futibutinib,IGLL5,0
+813488,futibutinib,TLR7,0
+820919,NVP-BHG712,LINC01287,0
+820919,NVP-BHG712,PVALB,0
+820919,NVP-BHG712,JCHAIN,0
+820919,NVP-BHG712,IGLL5,0
+820919,NVP-BHG712,TLR7,0
