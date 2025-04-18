@@ -21,6 +21,16 @@ sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+if torch.cuda.is_available():
+    try:
+        total_mem_bytes = torch.cuda.get_device_properties(0).total_memory
+        limit_bytes = 80 * 1024 ** 3  # 80GB in bytes
+        mem_fraction = min(1.0, limit_bytes / total_mem_bytes)
+        torch.cuda.set_per_process_memory_fraction(mem_fraction, 0)
+        print(f"GPU memory usage limited to {mem_fraction:.2%} of total capacity.")
+    except Exception as e:
+        print(f"Warning: Could not set memory limit due to: {e}")
+
 from drGAT import drGAT
 from drGAT.load_data import load_data
 from drGAT.sampler import NewSampler
@@ -100,6 +110,9 @@ def drGAT_new(
 
 
 def objective(trial):
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        gc.collect()
     params = {
         "n_drug": S_d.shape[0],
         "n_cell": S_c.shape[0],
@@ -173,6 +186,9 @@ def objective(trial):
                     predict_datas = pd.concat(
                         [predict_datas, pd.DataFrame(predict_data).T], ignore_index=True
                     )
+                    if torch.cuda.is_available():
+                        torch.cuda.empty_cache()
+                        gc.collect()
                 else:
                     print(
                         f"Target {target_index} skipped: All labels are {'0' if tmp == 0 else '1'}."
