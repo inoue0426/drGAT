@@ -4,26 +4,29 @@ import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
+from packaging import version
 from sklearn.metrics import (accuracy_score, average_precision_score,
                              confusion_matrix, f1_score, precision_score,
                              recall_score, roc_auc_score)
-
 from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
 from torch_geometric.nn import GATConv, GATv2Conv, GraphNorm, TransformerConv
 from tqdm import tqdm
 
-from packaging import version
-
 # AMP（自動混合精度）の互換処理
 if version.parse(torch.__version__) >= version.parse("1.10"):
     from torch.cuda.amp import GradScaler, autocast
+
     use_autocast = True
 else:
     # fallback: autocast が使えない環境用
     class DummyAutocast:
-        def __enter__(self): return None
-        def __exit__(self, exc_type, exc_val, exc_tb): pass
+        def __enter__(self):
+            return None
+
+        def __exit__(self, exc_type, exc_val, exc_tb):
+            pass
+
     autocast = DummyAutocast
     GradScaler = lambda: None  # dummy scaler
     use_autocast = False
@@ -473,7 +476,6 @@ def train_one_epoch(
     predict = (torch.sigmoid(outputs) > 0.5).float().squeeze()
     train_acc = (predict == train_labels).sum().item() / len(predict)
     train_accs.append(train_acc)
-
 
     if scaler:
         scaler.scale(loss).backward()
