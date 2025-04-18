@@ -64,8 +64,7 @@ def objective(trial):
         "scheduler": trial.suggest_categorical(
             "scheduler", [None, "Cosine", "Step", "Plateau"]
         ),
-        "gnn_layer": 'GCN',
-        ),
+        "gnn_layer": "GCN",
     }
 
     # スケジューラ関連パラメータの条件付き追加

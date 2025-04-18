@@ -198,12 +198,10 @@ def _load_data(PATH, is_ctrp=False, is_zero_pad=False):
     A_cg = gene_norm_cell * (gene_norm_cell > 0).astype(int)
 
     if is_zero_pad:
-        A_dg = (
-            pd.DataFrame(
-                np.zeros([len(drugAct.index), len(A_cg.columns)]),
-                index=drugAct.index,
-                columns=A_cg.columns,
-            )
+        A_dg = pd.DataFrame(
+            np.zeros([len(drugAct.index), len(A_cg.columns)]),
+            index=drugAct.index,
+            columns=A_cg.columns,
         )
     else:
         A_dg = (
@@ -214,7 +212,7 @@ def _load_data(PATH, is_ctrp=False, is_zero_pad=False):
             )
             / 2
         )
-        
+
     for _, i in dti.iterrows():
         A_dg.loc[i["Drug Name"], i["Gene"]] = 1
 
@@ -318,12 +316,10 @@ def _load_nci(PATH, is_zero_pad):
     A_cg = min_max_scale(gene_norm_gene + gene_norm_cell)
 
     if is_zero_pad:
-        A_dg = (
-            pd.DataFrame(
-                np.zeros([len(drugAct.index), len(A_cg.columns)]),
-                index=drugAct.index,
-                columns=A_cg.columns,
-            )
+        A_dg = pd.DataFrame(
+            np.zeros([len(drugAct.index), len(A_cg.columns)]),
+            index=drugAct.index,
+            columns=A_cg.columns,
         )
     else:
         A_dg = (
@@ -334,7 +330,7 @@ def _load_nci(PATH, is_zero_pad):
             )
             / 2
         )
-        
+
     for _, i in dti.iterrows():
         A_dg.loc[int(i["NSC"]), i["Gene"]] = 1
 

@@ -49,7 +49,7 @@ def objective(trial):
         "lr": trial.suggest_float("lr", 1e-5, 1e-2, log=True),
         "weight_decay": trial.suggest_float("weight_decay", 1e-6, 1e-2, log=True),
         "scheduler": trial.suggest_categorical("scheduler", [None, "Cosine"]),
-        "n_layers": trial.suggest_int("n_layers", 2, 5), 
+        "n_layers": trial.suggest_int("n_layers", 2, 5),
         "gnn_layer": method,
     }
 

@@ -86,13 +86,13 @@ def drGAT_new(
         PATH,
         seed,
     )
-    
-    val_labels = sampler.test_labels['Label'] 
+
+    val_labels = sampler.test_labels["Label"]
 
     if len(np.unique(val_labels)) < 2:
         print(f"Target {target_index} skipped: Validation set has only one class.")
-        return None, None 
-   
+        return None, None
+
     (_, best_val_labels, best_val_prob, best_metrics, _, _, _) = No_atten_drGAT.train(
         sampler, params=params, device=device, verbose=False
     )
@@ -144,7 +144,7 @@ def objective(trial):
         for dim in target_dim:
             for seed, target_index in tqdm(enumerate(np.arange(res.shape[dim]))):
                 p = res.iloc[:, target_index].dropna() > 0
-                tmp = sum(p)*100/len(p)
+                tmp = sum(p) * 100 / len(p)
                 if 0 < tmp < 100:
                     if dim:
                         if drug_sum[target_index] < 10:
@@ -152,7 +152,7 @@ def objective(trial):
                     else:
                         if cell_sum[target_index] < 10:
                             continue
-        
+
                     true_data, predict_data = drGAT_new(
                         res_mat=res,
                         null_mask=null_mask.T.values,
@@ -175,7 +175,9 @@ def objective(trial):
                         [predict_datas, pd.DataFrame(predict_data).T], ignore_index=True
                     )
                 else:
-                    print(f"Target {target_index} skipped: All labels are {'0' if tmp == 0 else '1'}.")
+                    print(
+                        f"Target {target_index} skipped: All labels are {'0' if tmp == 0 else '1'}."
+                    )
 
         metrics_result = compute_metrics_stats(
             trial=trial,

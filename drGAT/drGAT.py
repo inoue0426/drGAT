@@ -32,7 +32,7 @@ def get_attention_mat(attention):
 
     tmp = attention[1].cpu().detach().numpy()
     edge = attention[0].cpu().detach().numpy()
-    
+
     idx = max(edge[0]) + 1
     graph = np.zeros((idx, idx))
     graph[edge[0], edge[1]] = tmp.mean(axis=1)
@@ -459,12 +459,11 @@ def train_one_epoch(
     train_acc = (predict == train_labels).sum().item() / len(predict)
     train_accs.append(train_acc)
 
-    
     scaler.scale(loss).backward()
 
     del outputs, loss, predict
-    torch.cuda.empty_cache() 
-    
+    torch.cuda.empty_cache()
+
     scaler.unscale_(optimizer)
     torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
     scaler.step(optimizer)
