@@ -7,11 +7,26 @@ import torch.nn as nn
 from sklearn.metrics import (accuracy_score, average_precision_score,
                              confusion_matrix, f1_score, precision_score,
                              recall_score, roc_auc_score)
-from torch.cuda.amp import GradScaler, autocast
+
 from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
 from torch_geometric.nn import GATConv, GATv2Conv, GraphNorm, TransformerConv
 from tqdm import tqdm
+
+from packaging import version
+
+# AMP（自動混合精度）の互換処理
+if version.parse(torch.__version__) >= version.parse("1.10"):
+    from torch.cuda.amp import GradScaler, autocast
+    use_autocast = True
+else:
+    # fallback: autocast が使えない環境用
+    class DummyAutocast:
+        def __enter__(self): return None
+        def __exit__(self, exc_type, exc_val, exc_tb): pass
+    autocast = DummyAutocast
+    GradScaler = lambda: None  # dummy scaler
+    use_autocast = False
 
 
 def set_seed(seed=42):
@@ -238,7 +253,7 @@ def get_model(params, device):
     scheduler = schedulers.get(params["scheduler"], lambda: None)()
 
     # Initialize scaler
-    scaler = GradScaler()
+    scaler = GradScaler() if use_autocast else None
 
     return model, criterion, optimizer, scheduler, scaler
 
@@ -447,7 +462,7 @@ def train_one_epoch(
     model.train()
     optimizer.zero_grad()
 
-    with autocast(device_type=device.type):
+    with autocast():
         outputs, attention = model(
             drug, cell, gene, edge_index, edge_attr, train_drug, train_cell
         )
@@ -459,15 +474,21 @@ def train_one_epoch(
     train_acc = (predict == train_labels).sum().item() / len(predict)
     train_accs.append(train_acc)
 
-    scaler.scale(loss).backward()
+
+    if scaler:
+        scaler.scale(loss).backward()
+        scaler.unscale_(optimizer)
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+        scaler.step(optimizer)
+        scaler.update()
+    else:
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+        optimizer.step()
 
     del outputs, loss, predict
     torch.cuda.empty_cache()
 
-    scaler.unscale_(optimizer)
-    torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
-    scaler.step(optimizer)
-    scaler.update()
     return attention
 
 
@@ -488,7 +509,7 @@ def validate_model(
 ):
     model.eval()
     with torch.no_grad():
-        with autocast(device_type=device.type):
+        with autocast():
             outputs, attention = model(
                 drug, cell, gene, edge_index, edge_attr, val_drug, val_cell
             )
@@ -549,7 +570,7 @@ def eval(model, data, device=None):
 
     model.eval()
     with torch.no_grad():
-        with autocast(device_type=device.type):
+        with autocast():
             outputs, test_attention = model(
                 drug, cell, gene, edge_index, edge_attr, test_drug, test_cell
             )
