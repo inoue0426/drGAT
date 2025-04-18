@@ -12,23 +12,23 @@ from .utility import (get_morgan_fingerprint, min_max_scale, natural_sort_key,
                       normalize_similarity_matrix)
 
 
-def load_data(data=None):
+def load_data(data=None, is_zero_pad=False):
     """Load data based on the specified dataset."""
     if data == "gdsc1":
         print("load gdsc1")
         PATH = "../gdsc1_data/"
-        return _load_data(PATH)
+        return _load_data(PATH, is_zero_pad=is_zero_pad)
     elif data == "gdsc2":
         print("load gdsc2")
         PATH = "../gdsc2_data/"
-        return _load_data(PATH)
+        return _load_data(PATH, is_zero_pad=is_zero_pad)
     elif data == "ctrp":
         PATH = "../ctrp_data/"
-        return _load_data(PATH, is_ctrp=True)
+        return _load_data(PATH, is_ctrp=True, is_zero_pad=is_zero_pad)
     elif data == "nci":
         print("load nci")
         PATH = "../nci_data/"
-        return _load_nci(PATH)
+        return _load_nci(PATH, is_zero_pad=is_zero_pad)
     else:
         raise NotImplementedError
 
@@ -149,7 +149,7 @@ def _get_normalized_gene_data(exprs):
     return gene_norm_cell, gene_norm_gene
 
 
-def _load_data(PATH, is_ctrp=False):
+def _load_data(PATH, is_ctrp=False, is_zero_pad=False):
     """Load and process GDSC1 dataset."""
     # Load original drug response data
     drugAct, exprs = _get_base_data(PATH)
@@ -197,14 +197,24 @@ def _load_data(PATH, is_ctrp=False):
     # Create adjacency matrices
     A_cg = gene_norm_cell * (gene_norm_cell > 0).astype(int)
 
-    A_dg = (
-        pd.DataFrame(
-            np.ones([len(drugAct.index), len(A_cg.columns)]),
-            index=drugAct.index,
-            columns=A_cg.columns,
+    if is_zero_pad:
+        A_dg = (
+            pd.DataFrame(
+                np.zeros([len(drugAct.index), len(A_cg.columns)]),
+                index=drugAct.index,
+                columns=A_cg.columns,
+            )
         )
-        / 2
-    )
+    else:
+        A_dg = (
+            pd.DataFrame(
+                np.ones([len(drugAct.index), len(A_cg.columns)]),
+                index=drugAct.index,
+                columns=A_cg.columns,
+            )
+            / 2
+        )
+        
     for _, i in dti.iterrows():
         A_dg.loc[i["Drug Name"], i["Gene"]] = 1
 
@@ -237,7 +247,7 @@ def _load_data(PATH, is_ctrp=False):
     )
 
 
-def _load_nci(PATH):
+def _load_nci(PATH, is_zero_pad):
     """Load and process NCI dataset."""
     # Load original drug response data
     drugAct, exprs = _get_base_data(PATH)
@@ -307,14 +317,24 @@ def _load_nci(PATH):
     # Create adjacency matrices
     A_cg = min_max_scale(gene_norm_gene + gene_norm_cell)
 
-    A_dg = (
-        pd.DataFrame(
-            np.ones([len(drugAct.index), len(A_cg.columns)]),
-            index=drugAct.index,
-            columns=A_cg.columns,
+    if is_zero_pad:
+        A_dg = (
+            pd.DataFrame(
+                np.zeros([len(drugAct.index), len(A_cg.columns)]),
+                index=drugAct.index,
+                columns=A_cg.columns,
+            )
         )
-        / 2
-    )
+    else:
+        A_dg = (
+            pd.DataFrame(
+                np.ones([len(drugAct.index), len(A_cg.columns)]),
+                index=drugAct.index,
+                columns=A_cg.columns,
+            )
+            / 2
+        )
+        
     for _, i in dti.iterrows():
         A_dg.loc[int(i["NSC"]), i["Gene"]] = 1
 
