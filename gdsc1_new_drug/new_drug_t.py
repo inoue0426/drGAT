@@ -24,7 +24,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 if torch.cuda.is_available():
     try:
         total_mem_bytes = torch.cuda.get_device_properties(0).total_memory
-        limit_bytes = 80 * 1024 ** 3  # 80GB in bytes
+        limit_bytes = 80 * 1024**3  # 80GB in bytes
         mem_fraction = min(1.0, limit_bytes / total_mem_bytes)
         torch.cuda.set_per_process_memory_fraction(mem_fraction, 0)
         print(f"GPU memory usage limited to {mem_fraction:.2%} of total capacity.")
