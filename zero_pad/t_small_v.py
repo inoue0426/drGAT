@@ -29,7 +29,9 @@ name = "nci"
 PATH = f"../{name}_data/"
 method = "GATv2"
 
-drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg, _, _, _ = load_data(name, is_zero_pad=True)
+drugAct, pos_num, null_mask, S_d, S_c, S_g, A_cg, A_dg, _, _, _ = load_data(
+    name, is_zero_pad=True
+)
 
 
 def objective(trial):
