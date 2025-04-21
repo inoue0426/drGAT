@@ -4,7 +4,7 @@
 #SBATCH --requeue
 #SBATCH --job-name='N D T'
 #SBATCH --partition gpu
-#SBATCH --gres=gpu:a100:1
+#SBATCH --gres=gpu:v100x:1
 #SBATCH --nodes=1
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=inoue019@umn.edu
