@@ -1,320 +1,0 @@
-Not a conda environment: /scratch.global/inoue019/myenv
-load nci
-unique drugs: 177
-unique genes: 251
-DTI unique genes:  251
-Top 90% variable genes:  2383
-Total:  2582
-Final gene exp shape: (60, 2582)
-Final drug Act shape: (1005, 60)
-  0%|          | 0/25 [00:00<?, ?it/s]  4%|▍         | 1/25 [00:03<01:23,  3.50s/it]  8%|▊         | 2/25 [00:03<00:35,  1.52s/it] 12%|█▏        | 3/25 [00:03<00:19,  1.13it/s] 16%|█▌        | 4/25 [00:03<00:12,  1.69it/s] 20%|██        | 5/25 [00:04<00:08,  2.34it/s] 24%|██▍       | 6/25 [00:04<00:06,  2.96it/s] 28%|██▊       | 7/25 [00:04<00:05,  3.58it/s] 32%|███▏      | 8/25 [00:04<00:04,  4.19it/s] 36%|███▌      | 9/25 [00:04<00:03,  4.79it/s] 40%|████      | 10/25 [00:04<00:02,  5.17it/s] 44%|████▍     | 11/25 [00:04<00:02,  5.54it/s] 48%|████▊     | 12/25 [00:05<00:02,  5.68it/s] 52%|█████▏    | 13/25 [00:05<00:02,  5.78it/s] 56%|█████▌    | 14/25 [00:05<00:01,  5.75it/s] 60%|██████    | 15/25 [00:05<00:01,  5.91it/s] 64%|██████▍   | 16/25 [00:05<00:01,  5.81it/s] 68%|██████▊   | 17/25 [00:05<00:01,  5.89it/s] 72%|███████▏  | 18/25 [00:06<00:01,  5.88it/s] 76%|███████▌  | 19/25 [00:06<00:00,  6.06it/s] 80%|████████  | 20/25 [00:06<00:00,  5.96it/s] 84%|████████▍ | 21/25 [00:06<00:00,  5.87it/s] 88%|████████▊ | 22/25 [00:06<00:00,  6.13it/s] 92%|█████████▏| 23/25 [00:06<00:00,  6.23it/s] 96%|█████████▌| 24/25 [00:07<00:00,  6.28it/s]100%|██████████| 25/25 [00:07<00:00,  6.32it/s]100%|██████████| 25/25 [00:07<00:00,  3.44it/s]
-[I 2025-04-19 12:08:06,718] Using an existing study with name 'Transformer' instead of creating a new one.
-Done!
-0it [00:00, ?it/s]0it [07:38, ?it/s]
-[I 2025-04-19 12:15:47,837] Trial 3 pruned. NaN input at trial 3
-Using device: cuda
-Pruned trial 3: Input contains NaN
-0it [00:00, ?it/s]0it [00:21, ?it/s]
-[I 2025-04-19 12:16:11,508] Trial 10 pruned. NaN input at trial 10
-Using device: cuda
-Pruned trial 10: Input contains NaN
-0it [00:00, ?it/s]0it [03:45, ?it/s]
-[I 2025-04-19 12:19:57,211] Trial 11 pruned. NaN input at trial 11
-Using device: cuda
-Pruned trial 11: Input contains NaN
-0it [00:00, ?it/s]0it [00:05, ?it/s]
-[I 2025-04-19 12:20:03,527] Trial 14 pruned. NaN input at trial 14
-Using device: cuda
-Pruned trial 14: Input contains NaN
-0it [00:00, ?it/s]1it [1:01:51, 3711.78s/it]2it [2:05:16, 3766.29s/it]3it [3:13:02, 3903.32s/it]4it [4:07:02, 3641.57s/it]5it [4:59:03, 3453.85s/it]5it [4:59:03, 3588.78s/it]
-[I 2025-04-19 17:19:09,333] Trial 15 finished with values: [0.6801883605284036, 0.6751159365316818, 0.5738617683757564, 0.6227867578041614] and parameters: {'dropout1': 0.5, 'dropout2': 0.45000000000000007, 'hidden1': 846, 'hidden2': 335, 'hidden3': 172, 'epochs': 7400, 'heads': 5, 'activation': 'gelu', 'optimizer': 'Adam', 'lr': 0.0005288222886644398, 'weight_decay': 0.004827484718678773, 'scheduler': 'Cosine', 'T_max': 3195}.
-Using device: cuda
-Best model found at epoch 7400
-Using device: cuda
-Best model found at epoch 7400
-Using device: cuda
-Best model found at epoch 7400
-Using device: cuda
-Best model found at epoch 7400
-Using device: cuda
-Best model found at epoch 7400
-ACC_mean: 0.6228
-ACC_std: 0.0132
-F1_mean: 0.5739
-F1_std: 0.0622
-AUROC_mean: 0.6802
-AUROC_std: 0.0053
-AUPR_mean: 0.6751
-AUPR_std: 0.0058
-0it [00:00, ?it/s]1it [04:56, 296.38s/it]2it [10:15, 309.58s/it]3it [15:09, 302.48s/it]4it [20:05, 300.02s/it]5it [25:00, 298.30s/it]5it [25:00, 300.15s/it]
-[I 2025-04-19 17:44:11,719] Trial 59 finished with values: [0.7172560957445695, 0.7060701035885606, 0.6496186415150002, 0.6585919297040126] and parameters: {'dropout1': 0.35, 'dropout2': 0.35, 'hidden1': 401, 'hidden2': 149, 'hidden3': 136, 'epochs': 1000, 'heads': 4, 'activation': 'gelu', 'optimizer': 'AdamW', 'lr': 0.0007732612641831245, 'weight_decay': 9.489329069128993e-06, 'scheduler': None}.
-Using device: cuda
-Best model found at epoch 1000
-Using device: cuda
-Best model found at epoch 1000
-Using device: cuda
-Best model found at epoch 1000
-Using device: cuda
-Best model found at epoch 1000
-Using device: cuda
-Best model found at epoch 1000
-ACC_mean: 0.6586
-ACC_std: 0.0052
-F1_mean: 0.6496
-F1_std: 0.0119
-AUROC_mean: 0.7173
-AUROC_std: 0.0039
-AUPR_mean: 0.7061
-AUPR_std: 0.0035
-0it [00:00, ?it/s]1it [02:29, 149.25s/it]2it [04:57, 148.63s/it]3it [07:22, 147.05s/it]4it [09:49, 147.05s/it]5it [12:16, 147.04s/it]5it [12:16, 147.34s/it]
-[I 2025-04-19 17:56:29,697] Trial 63 finished with values: [0.721270831736411, 0.7105312995001247, 0.6612800899084826, 0.6615618810110787] and parameters: {'dropout1': 0.15000000000000002, 'dropout2': 0.2, 'hidden1': 596, 'hidden2': 104, 'hidden3': 103, 'epochs': 500, 'heads': 6, 'activation': 'gelu', 'optimizer': 'AdamW', 'lr': 0.00011903523667246613, 'weight_decay': 4.3819283915833496e-06, 'scheduler': 'Cosine', 'T_max': 135}.
-Using device: cuda
-Best model found at epoch 500
-Using device: cuda
-Best model found at epoch 500
-Using device: cuda
-Best model found at epoch 500
-Using device: cuda
-Best model found at epoch 500
-Using device: cuda
-Best model found at epoch 500
-ACC_mean: 0.6616
-ACC_std: 0.0047
-F1_mean: 0.6613
-F1_std: 0.0099
-AUROC_mean: 0.7213
-AUROC_std: 0.0022
-AUPR_mean: 0.7105
-AUPR_std: 0.0026
-0it [00:00, ?it/s]0it [00:07, ?it/s]
-[I 2025-04-19 17:56:37,408] Trial 64 pruned. NaN input at trial 64
-Using device: cuda
-Pruned trial 64: Input contains NaN
-0it [00:00, ?it/s]1it [03:36, 216.62s/it]2it [06:55, 206.34s/it]3it [10:15, 203.13s/it]4it [13:44, 205.70s/it]5it [17:23, 210.34s/it]5it [17:23, 208.65s/it]
-[I 2025-04-19 18:14:02,328] Trial 65 finished with values: [0.7215670515308676, 0.7111301076473835, 0.6464672894068192, 0.66232283816149] and parameters: {'dropout1': 0.25, 'dropout2': 0.25, 'hidden1': 381, 'hidden2': 81, 'hidden3': 41, 'epochs': 800, 'heads': 8, 'activation': 'gelu', 'optimizer': 'AdamW', 'lr': 0.0004050499008794817, 'weight_decay': 2.2373339748999412e-05, 'scheduler': 'Cosine', 'T_max': 237}.
-Using device: cuda
-Best model found at epoch 800
-Using device: cuda
-Best model found at epoch 800
-Using device: cuda
-Best model found at epoch 800
-Using device: cuda
-Best model found at epoch 800
-Using device: cuda
-Best model found at epoch 800
-ACC_mean: 0.6623
-ACC_std: 0.0067
-F1_mean: 0.6465
-F1_std: 0.0137
-AUROC_mean: 0.7216
-AUROC_std: 0.0039
-AUPR_mean: 0.7111
-AUPR_std: 0.0035
-0it [00:00, ?it/s]0it [02:33, ?it/s]
-[I 2025-04-19 18:16:36,417] Trial 68 pruned. NaN input at trial 68
-Using device: cuda
-Pruned trial 68: Input contains NaN
-0it [00:00, ?it/s]1it [50:20, 3020.79s/it]2it [1:36:59, 2890.40s/it]3it [2:23:10, 2835.80s/it]4it [3:10:23, 2834.72s/it]5it [3:58:44, 2858.40s/it]5it [3:58:44, 2864.84s/it]
-[I 2025-04-19 22:15:21,885] Trial 70 finished with values: [0.7115837448173773, 0.703199720927819, 0.633598624060664, 0.6529863095309462] and parameters: {'dropout1': 0.1, 'dropout2': 0.5, 'hidden1': 358, 'hidden2': 323, 'hidden3': 255, 'epochs': 7600, 'heads': 6, 'activation': 'relu', 'optimizer': 'Adam', 'lr': 4.241903992065659e-05, 'weight_decay': 3.9876548278352885e-06, 'scheduler': 'Cosine', 'T_max': 2192}.
-Using device: cuda
-Best model found at epoch 7600
-Using device: cuda
-Best model found at epoch 7600
-Using device: cuda
-Best model found at epoch 7600
-Using device: cuda
-Best model found at epoch 7600
-Using device: cuda
-Best model found at epoch 7600
-ACC_mean: 0.6530
-ACC_std: 0.0043
-F1_mean: 0.6336
-F1_std: 0.0040
-AUROC_mean: 0.7116
-AUROC_std: 0.0017
-AUPR_mean: 0.7032
-AUPR_std: 0.0007
-0it [00:00, ?it/s]0it [13:16, ?it/s]
-[I 2025-04-19 22:28:39,194] Trial 94 pruned. NaN input at trial 94
-Using device: cuda
-Pruned trial 94: Input contains NaN
-0it [00:00, ?it/s]1it [33:32, 2012.24s/it]2it [1:07:25, 2024.66s/it]3it [1:40:11, 1997.81s/it]4it [2:14:27, 2020.90s/it]5it [2:49:42, 2054.89s/it]5it [2:49:42, 2036.58s/it]
-[I 2025-04-20 01:18:23,603] Trial 96 finished with values: [0.7183415877283803, 0.7063607617225287, 0.6369005263920753, 0.6581093827712761] and parameters: {'dropout1': 0.1, 'dropout2': 0.45000000000000007, 'hidden1': 778, 'hidden2': 248, 'hidden3': 148, 'epochs': 6700, 'heads': 5, 'activation': 'gelu', 'optimizer': 'Adam', 'lr': 0.0006377347994958218, 'weight_decay': 0.0013453430972380346, 'scheduler': 'Cosine', 'T_max': 2391}.
-Using device: cuda
-Best model found at epoch 6700
-Using device: cuda
-Best model found at epoch 6700
-Using device: cuda
-Best model found at epoch 6700
-Using device: cuda
-Best model found at epoch 6700
-Using device: cuda
-Best model found at epoch 6700
-ACC_mean: 0.6581
-ACC_std: 0.0076
-F1_mean: 0.6369
-F1_std: 0.0170
-AUROC_mean: 0.7183
-AUROC_std: 0.0061
-AUPR_mean: 0.7064
-AUPR_std: 0.0071
-0it [00:00, ?it/s]1it [06:49, 409.33s/it]2it [13:34, 406.72s/it]3it [20:18, 405.39s/it]4it [27:01, 404.61s/it]5it [33:46, 404.81s/it]5it [33:46, 405.32s/it]
-[I 2025-04-20 01:52:11,762] Trial 113 finished with values: [0.6472234813632818, 0.6325304043015727, 0.4845618536067115, 0.5907339895089626] and parameters: {'dropout1': 0.35, 'dropout2': 0.1, 'hidden1': 986, 'hidden2': 411, 'hidden3': 110, 'epochs': 1000, 'heads': 7, 'activation': 'gelu', 'optimizer': 'AdamW', 'lr': 0.0007732612641831245, 'weight_decay': 5.398136855290531e-05, 'scheduler': None}.
-Using device: cuda
-Best model found at epoch 1000
-Using device: cuda
-Best model found at epoch 1000
-Using device: cuda
-Best model found at epoch 1000
-Using device: cuda
-Best model found at epoch 1000
-Using device: cuda
-Best model found at epoch 1000
-ACC_mean: 0.5907
-ACC_std: 0.0469
-F1_mean: 0.4846
-F1_std: 0.1567
-AUROC_mean: 0.6472
-AUROC_std: 0.0432
-AUPR_mean: 0.6325
-AUPR_std: 0.0455
-0it [00:00, ?it/s]1it [14:26, 866.91s/it]2it [28:40, 859.03s/it]3it [43:30, 873.05s/it]4it [58:15, 877.93s/it]5it [1:12:50, 876.79s/it]5it [1:12:50, 874.07s/it]
-[I 2025-04-20 03:05:03,600] Trial 114 finished with values: [0.717959665855331, 0.7100853118024777, 0.6419687457767157, 0.6592602637518985] and parameters: {'dropout1': 0.15000000000000002, 'dropout2': 0.25, 'hidden1': 596, 'hidden2': 278, 'hidden3': 158, 'epochs': 2600, 'heads': 6, 'activation': 'relu', 'optimizer': 'AdamW', 'lr': 0.00011903523667246613, 'weight_decay': 8.8877617094542e-06, 'scheduler': 'Cosine', 'T_max': 802}.
-Using device: cuda
-Best model found at epoch 2600
-Using device: cuda
-Best model found at epoch 2600
-Using device: cuda
-Best model found at epoch 2600
-Using device: cuda
-Best model found at epoch 2600
-Using device: cuda
-Best model found at epoch 2600
-ACC_mean: 0.6593
-ACC_std: 0.0031
-F1_mean: 0.6420
-F1_std: 0.0034
-AUROC_mean: 0.7180
-AUROC_std: 0.0022
-AUPR_mean: 0.7101
-AUPR_std: 0.0019
-0it [00:00, ?it/s]1it [02:58, 178.81s/it]2it [06:00, 180.25s/it]3it [09:01, 180.76s/it]4it [12:02, 180.81s/it]5it [15:00, 180.03s/it]5it [15:00, 180.19s/it]
-[I 2025-04-20 03:20:06,510] Trial 127 finished with values: [0.720060907491551, 0.7102309354132826, 0.6549130007540895, 0.6616175224002241] and parameters: {'dropout1': 0.30000000000000004, 'dropout2': 0.45000000000000007, 'hidden1': 596, 'hidden2': 353, 'hidden3': 123, 'epochs': 500, 'heads': 6, 'activation': 'gelu', 'optimizer': 'Adam', 'lr': 0.00011903523667246613, 'weight_decay': 3.452080785551063e-06, 'scheduler': 'Cosine', 'T_max': 104}.
-Using device: cuda
-Best model found at epoch 500
-Using device: cuda
-Best model found at epoch 500
-Using device: cuda
-Best model found at epoch 500
-Using device: cuda
-Best model found at epoch 500
-Using device: cuda
-Best model found at epoch 500
-ACC_mean: 0.6616
-ACC_std: 0.0050
-F1_mean: 0.6549
-F1_std: 0.0046
-AUROC_mean: 0.7201
-AUROC_std: 0.0039
-AUPR_mean: 0.7102
-AUPR_std: 0.0031
-0it [00:00, ?it/s]1it [30:25, 1825.38s/it]2it [1:00:26, 1810.93s/it]3it [1:29:50, 1789.60s/it]4it [1:59:06, 1776.39s/it]5it [2:28:47, 1778.11s/it]5it [2:28:47, 1785.55s/it]
-[I 2025-04-20 05:48:56,034] Trial 129 finished with values: [0.7176480007105898, 0.7094983682357306, 0.6401576130686694, 0.6584063803136837] and parameters: {'dropout1': 0.35, 'dropout2': 0.25, 'hidden1': 946, 'hidden2': 284, 'hidden3': 103, 'epochs': 7000, 'heads': 3, 'activation': 'gelu', 'optimizer': 'Adam', 'lr': 6.928985475683915e-05, 'weight_decay': 6.802636807925919e-05, 'scheduler': 'Cosine', 'T_max': 2681}.
-Using device: cuda
-Best model found at epoch 7000
-Using device: cuda
-Best model found at epoch 7000
-Using device: cuda
-Best model found at epoch 7000
-Using device: cuda
-Best model found at epoch 7000
-Using device: cuda
-Best model found at epoch 7000
-ACC_mean: 0.6584
-ACC_std: 0.0042
-F1_mean: 0.6402
-F1_std: 0.0079
-AUROC_mean: 0.7176
-AUROC_std: 0.0025
-AUPR_mean: 0.7095
-AUPR_std: 0.0020
-0it [00:00, ?it/s]1it [48:41, 2921.60s/it]2it [1:39:05, 2982.03s/it]3it [2:30:25, 3026.42s/it]4it [3:21:24, 3039.39s/it]5it [4:12:29, 3048.61s/it]5it [4:12:29, 3029.88s/it]
-[I 2025-04-20 10:01:26,931] Trial 146 finished with values: [0.7134573682736581, 0.7030901840888044, 0.6417476514104263, 0.6547497798116917] and parameters: {'dropout1': 0.25, 'dropout2': 0.25, 'hidden1': 289, 'hidden2': 217, 'hidden3': 152, 'epochs': 9500, 'heads': 6, 'activation': 'relu', 'optimizer': 'AdamW', 'lr': 0.0006377347994958218, 'weight_decay': 1.1603102241170083e-05, 'scheduler': 'Cosine', 'T_max': 4293}.
-[W 2025-04-20 10:01:27,322] Trial 168 failed with parameters: {} because of the following error: ValueError('setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (100,) + inhomogeneous part.').
-Traceback (most recent call last):
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
-    value_or_values = func(trial)
-  File "/users/4/inoue019/drGAT/zero_pad/t_small_GT.py", line 40, in objective
-    "dropout1": trial.suggest_float("dropout1", 0.1, 0.5, step=0.05),
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/trial/_trial.py", line 161, in suggest_float
-    suggested_value = self._suggest(name, distribution)
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/trial/_trial.py", line 627, in _suggest
-    elif self._is_relative_param(name, distribution):
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/trial/_trial.py", line 659, in _is_relative_param
-    if name not in self.relative_params:
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/trial/_trial.py", line 71, in relative_params
-    self._relative_params = self.study.sampler.sample_relative(
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/samplers/nsgaii/_sampler.py", line 269, in sample_relative
-    parent_population = self.get_parent_population(study, generation)
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/samplers/_ga/_base.py", line 176, in get_parent_population
-    parent_population = self.select_parent(study, generation)
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/samplers/nsgaii/_sampler.py", line 256, in select_parent
-    return self._elite_population_selection_strategy(
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/samplers/nsgaii/_elite_population_selection_strategy.py", line 47, in __call__
-    population_per_rank = _rank_population(
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/samplers/nsgaii/_elite_population_selection_strategy.py", line 126, in _rank_population
-    objective_values = np.array([trial.values for trial in population], dtype=np.float64)
-ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (100,) + inhomogeneous part.
-[W 2025-04-20 10:01:27,386] Trial 168 failed with value None.
-Using device: cuda
-Best model found at epoch 9500
-Using device: cuda
-Best model found at epoch 9500
-Using device: cuda
-Best model found at epoch 9500
-Using device: cuda
-Best model found at epoch 9500
-Using device: cuda
-Best model found at epoch 9500
-ACC_mean: 0.6547
-ACC_std: 0.0040
-F1_mean: 0.6417
-F1_std: 0.0141
-AUROC_mean: 0.7135
-AUROC_std: 0.0048
-AUPR_mean: 0.7031
-AUPR_std: 0.0048
-Traceback (most recent call last):
-  File "/users/4/inoue019/drGAT/zero_pad/t_small_GT.py", line 162, in <module>
-    study.optimize(objective, n_trials=1000)
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/study/study.py", line 475, in optimize
-    _optimize(
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/study/_optimize.py", line 63, in _optimize
-    _optimize_sequential(
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
-    frozen_trial = _run_trial(study, func, catch)
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/study/_optimize.py", line 248, in _run_trial
-    raise func_err
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
-    value_or_values = func(trial)
-  File "/users/4/inoue019/drGAT/zero_pad/t_small_GT.py", line 40, in objective
-    "dropout1": trial.suggest_float("dropout1", 0.1, 0.5, step=0.05),
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/trial/_trial.py", line 161, in suggest_float
-    suggested_value = self._suggest(name, distribution)
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/trial/_trial.py", line 627, in _suggest
-    elif self._is_relative_param(name, distribution):
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/trial/_trial.py", line 659, in _is_relative_param
-    if name not in self.relative_params:
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/trial/_trial.py", line 71, in relative_params
-    self._relative_params = self.study.sampler.sample_relative(
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/samplers/nsgaii/_sampler.py", line 269, in sample_relative
-    parent_population = self.get_parent_population(study, generation)
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/samplers/_ga/_base.py", line 176, in get_parent_population
-    parent_population = self.select_parent(study, generation)
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/samplers/nsgaii/_sampler.py", line 256, in select_parent
-    return self._elite_population_selection_strategy(
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/samplers/nsgaii/_elite_population_selection_strategy.py", line 47, in __call__
-    population_per_rank = _rank_population(
-  File "/panfs/jay/groups/33/kuangr/inoue019/conda-envs/myenv/lib/python3.10/site-packages/optuna/samplers/nsgaii/_elite_population_selection_strategy.py", line 126, in _rank_population
-    objective_values = np.array([trial.values for trial in population], dtype=np.float64)
-ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (100,) + inhomogeneous part.

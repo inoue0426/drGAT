@@ -1,213 +1,0 @@
-Not a conda environment: /scratch.global/inoue019/myenv
-load nci
-unique drugs: 177
-unique genes: 251
-DTI unique genes:  251
-Top 90% variable genes:  2383
-Total:  2582
-Final gene exp shape: (60, 2582)
-Final drug Act shape: (1005, 60)
-  0%|          | 0/25 [00:00<?, ?it/s]  4%|▍         | 1/25 [00:00<00:03,  6.19it/s]  8%|▊         | 2/25 [00:00<00:03,  6.83it/s] 12%|█▏        | 3/25 [00:00<00:03,  6.91it/s] 16%|█▌        | 4/25 [00:00<00:02,  7.02it/s] 20%|██        | 5/25 [00:00<00:02,  7.18it/s] 24%|██▍       | 6/25 [00:00<00:02,  6.74it/s] 28%|██▊       | 7/25 [00:01<00:02,  6.41it/s] 32%|███▏      | 8/25 [00:01<00:02,  6.32it/s] 36%|███▌      | 9/25 [00:01<00:02,  6.30it/s] 40%|████      | 10/25 [00:01<00:02,  6.24it/s] 44%|████▍     | 11/25 [00:01<00:02,  6.00it/s] 48%|████▊     | 12/25 [00:01<00:02,  5.65it/s] 52%|█████▏    | 13/25 [00:02<00:02,  5.28it/s] 56%|█████▌    | 14/25 [00:02<00:02,  5.45it/s] 60%|██████    | 15/25 [00:02<00:01,  5.45it/s] 64%|██████▍   | 16/25 [00:02<00:01,  5.38it/s] 68%|██████▊   | 17/25 [00:02<00:01,  5.48it/s] 72%|███████▏  | 18/25 [00:03<00:01,  5.44it/s] 76%|███████▌  | 19/25 [00:03<00:01,  5.46it/s] 80%|████████  | 20/25 [00:03<00:00,  5.40it/s] 84%|████████▍ | 21/25 [00:03<00:00,  5.27it/s] 88%|████████▊ | 22/25 [00:03<00:00,  5.33it/s] 92%|█████████▏| 23/25 [00:03<00:00,  5.55it/s] 96%|█████████▌| 24/25 [00:04<00:00,  5.54it/s]100%|██████████| 25/25 [00:04<00:00,  5.34it/s]100%|██████████| 25/25 [00:04<00:00,  5.75it/s]
-[I 2025-04-19 12:06:44,625] Using an existing study with name 'GATv2' instead of creating a new one.
-Done!
-0it [00:00, ?it/s]1it [12:33, 753.41s/it]2it [25:01, 750.28s/it]3it [37:29, 749.25s/it]4it [49:57, 748.66s/it]5it [1:02:13, 744.29s/it]5it [1:02:13, 746.76s/it]
-[I 2025-04-19 13:09:00,216] Trial 5 finished with values: [0.7101590924990981, 0.6993009299930973, 0.6218793621205049, 0.6505354837713878] and parameters: {'dropout1': 0.5, 'dropout2': 0.15000000000000002, 'hidden1': 634, 'hidden2': 511, 'hidden3': 199, 'epochs': 2000, 'heads': 4, 'activation': 'gelu', 'optimizer': 'Adam', 'lr': 0.0017962185683323552, 'weight_decay': 0.0001869334647010499, 'scheduler': None}.
-Using device: cuda
-Best model found at epoch 2000
-Using device: cuda
-Best model found at epoch 2000
-Using device: cuda
-Best model found at epoch 2000
-Using device: cuda
-Best model found at epoch 2000
-Using device: cuda
-Best model found at epoch 2000
-ACC_mean: 0.6505
-ACC_std: 0.0241
-F1_mean: 0.6219
-F1_std: 0.0343
-AUROC_mean: 0.7102
-AUROC_std: 0.0298
-AUPR_mean: 0.6993
-AUPR_std: 0.0320
-0it [00:00, ?it/s]1it [34:39, 2079.19s/it]2it [1:09:54, 2100.17s/it]3it [1:45:42, 2122.16s/it]4it [2:20:24, 2106.35s/it]5it [2:54:56, 2094.06s/it]5it [2:54:56, 2099.35s/it]
-[I 2025-04-19 16:03:58,538] Trial 18 finished with values: [0.6418760609214951, 0.6292112310092774, 0.4612063013595943, 0.5886730083380086] and parameters: {'dropout1': 0.15000000000000002, 'dropout2': 0.4, 'hidden1': 326, 'hidden2': 151, 'hidden3': 71, 'epochs': 8800, 'heads': 3, 'activation': 'relu', 'optimizer': 'Adam', 'lr': 0.00462030028275561, 'weight_decay': 0.0004192718882163449, 'scheduler': None}.
-Using device: cuda
-Best model found at epoch 8800
-Using device: cuda
-Best model found at epoch 8800
-Using device: cuda
-Best model found at epoch 8800
-Using device: cuda
-Best model found at epoch 8800
-Using device: cuda
-Best model found at epoch 8800
-ACC_mean: 0.5887
-ACC_std: 0.0585
-F1_mean: 0.4612
-F1_std: 0.2623
-AUROC_mean: 0.6419
-AUROC_std: 0.0625
-AUPR_mean: 0.6292
-AUPR_std: 0.0648
-0it [00:00, ?it/s]1it [36:18, 2178.10s/it]2it [1:13:11, 2199.06s/it]3it [1:50:21, 2212.91s/it]4it [2:27:33, 2220.74s/it]5it [3:04:46, 2224.94s/it]5it [3:04:46, 2217.27s/it]
-[I 2025-04-19 19:08:46,682] Trial 32 finished with values: [0.7198435342809568, 0.7114018612718321, 0.6386807027311372, 0.6602626390707427] and parameters: {'dropout1': 0.1, 'dropout2': 0.1, 'hidden1': 599, 'hidden2': 146, 'hidden3': 84, 'epochs': 9200, 'heads': 3, 'activation': 'relu', 'optimizer': 'AdamW', 'lr': 1.78722357757296e-05, 'weight_decay': 0.00010616501940093691, 'scheduler': 'Cosine', 'T_max': 2941}.
-Using device: cuda
-Best model found at epoch 9200
-Using device: cuda
-Best model found at epoch 9200
-Using device: cuda
-Best model found at epoch 9200
-Using device: cuda
-Best model found at epoch 9200
-Using device: cuda
-Best model found at epoch 9200
-ACC_mean: 0.6603
-ACC_std: 0.0036
-F1_mean: 0.6387
-F1_std: 0.0035
-AUROC_mean: 0.7198
-AUROC_std: 0.0023
-AUPR_mean: 0.7114
-AUPR_std: 0.0013
-0it [00:00, ?it/s]1it [28:04, 1684.01s/it]2it [56:01, 1680.06s/it]3it [1:23:39, 1669.99s/it]4it [1:51:27, 1669.32s/it]5it [2:19:19, 1670.13s/it]5it [2:19:19, 1671.83s/it]
-[I 2025-04-19 21:28:07,502] Trial 51 finished with values: [0.7126292143488524, 0.7040906318185602, 0.6291931898716226, 0.6534132081839628] and parameters: {'dropout1': 0.4, 'dropout2': 0.30000000000000004, 'hidden1': 306, 'hidden2': 140, 'hidden3': 92, 'epochs': 6000, 'heads': 6, 'activation': 'gelu', 'optimizer': 'Adam', 'lr': 0.0016944408084280645, 'weight_decay': 2.0674232520232404e-06, 'scheduler': None}.
-Using device: cuda
-Best model found at epoch 6000
-Using device: cuda
-Best model found at epoch 6000
-Using device: cuda
-Best model found at epoch 6000
-Using device: cuda
-Best model found at epoch 6000
-Using device: cuda
-Best model found at epoch 6000
-ACC_mean: 0.6534
-ACC_std: 0.0044
-F1_mean: 0.6292
-F1_std: 0.0061
-AUROC_mean: 0.7126
-AUROC_std: 0.0025
-AUPR_mean: 0.7041
-AUPR_std: 0.0020
-0it [00:00, ?it/s]1it [51:42, 3102.66s/it]2it [1:43:39, 3110.81s/it]3it [2:35:23, 3107.76s/it]4it [3:26:51, 3099.91s/it]5it [4:15:03, 3024.88s/it]5it [4:15:03, 3060.61s/it]
-[I 2025-04-20 01:43:12,168] Trial 64 finished with values: [0.7126283408043248, 0.703704845444868, 0.6334149582314927, 0.6541000675414114] and parameters: {'dropout1': 0.1, 'dropout2': 0.45000000000000007, 'hidden1': 511, 'hidden2': 272, 'hidden3': 188, 'epochs': 7600, 'heads': 8, 'activation': 'relu', 'optimizer': 'AdamW', 'lr': 0.00024960975520969825, 'weight_decay': 0.002721639933927513, 'scheduler': 'Cosine', 'T_max': 3433}.
-Using device: cuda
-Best model found at epoch 7600
-Using device: cuda
-Best model found at epoch 7600
-Using device: cuda
-Best model found at epoch 7600
-Using device: cuda
-Best model found at epoch 7600
-Using device: cuda
-Best model found at epoch 7600
-ACC_mean: 0.6541
-ACC_std: 0.0049
-F1_mean: 0.6334
-F1_std: 0.0054
-AUROC_mean: 0.7126
-AUROC_std: 0.0042
-AUPR_mean: 0.7037
-AUPR_std: 0.0053
-0it [00:00, ?it/s]1it [18:20, 1100.66s/it]2it [36:55, 1108.90s/it]3it [55:28, 1110.65s/it]4it [1:14:00, 1111.37s/it]5it [1:32:38, 1113.67s/it]5it [1:32:38, 1111.66s/it]
-[I 2025-04-20 03:15:52,453] Trial 88 finished with values: [0.6820867996985983, 0.6701115287681373, 0.5386046924450038, 0.6246768251650396] and parameters: {'dropout1': 0.25, 'dropout2': 0.45000000000000007, 'hidden1': 998, 'hidden2': 380, 'hidden3': 99, 'epochs': 4300, 'heads': 3, 'activation': 'relu', 'optimizer': 'AdamW', 'lr': 0.005955373844448557, 'weight_decay': 0.006185887725062761, 'scheduler': None}.
-Using device: cuda
-Best model found at epoch 4300
-Using device: cuda
-Best model found at epoch 4300
-Using device: cuda
-Best model found at epoch 4300
-Using device: cuda
-Best model found at epoch 4300
-Using device: cuda
-Best model found at epoch 4300
-ACC_mean: 0.6247
-ACC_std: 0.0619
-F1_mean: 0.5386
-F1_std: 0.2309
-AUROC_mean: 0.6821
-AUROC_std: 0.0609
-AUPR_mean: 0.6701
-AUPR_std: 0.0608
-0it [00:00, ?it/s]1it [30:38, 1838.41s/it]2it [1:01:18, 1839.50s/it]3it [1:31:57, 1839.33s/it]4it [2:02:41, 1841.17s/it]5it [2:34:00, 1854.85s/it]5it [2:34:00, 1848.18s/it]
-[I 2025-04-20 05:49:55,347] Trial 101 finished with values: [0.7254902402972453, 0.7172619720275264, 0.641150255282704, 0.6631210113048145] and parameters: {'dropout1': 0.4, 'dropout2': 0.25, 'hidden1': 988, 'hidden2': 175, 'hidden3': 128, 'epochs': 8500, 'heads': 2, 'activation': 'relu', 'optimizer': 'AdamW', 'lr': 4.2158840523100805e-05, 'weight_decay': 1.4035829792744891e-05, 'scheduler': 'Cosine', 'T_max': 2945}.
-Using device: cuda
-Best model found at epoch 8500
-Using device: cuda
-Best model found at epoch 8500
-Using device: cuda
-Best model found at epoch 8500
-Using device: cuda
-Best model found at epoch 8500
-Using device: cuda
-Best model found at epoch 8500
-ACC_mean: 0.6631
-ACC_std: 0.0048
-F1_mean: 0.6412
-F1_std: 0.0128
-AUROC_mean: 0.7255
-AUROC_std: 0.0020
-AUPR_mean: 0.7173
-AUPR_std: 0.0020
-0it [00:00, ?it/s]1it [08:52, 532.47s/it]2it [17:45, 532.53s/it]3it [26:31, 529.68s/it]4it [35:20, 529.51s/it]5it [44:47, 543.04s/it]5it [44:47, 537.52s/it]
-[I 2025-04-20 06:34:44,846] Trial 116 finished with values: [0.6727339551078535, 0.656181345125799, 0.5874863107032903, 0.6214311647455056] and parameters: {'dropout1': 0.15000000000000002, 'dropout2': 0.15000000000000002, 'hidden1': 708, 'hidden2': 207, 'hidden3': 119, 'epochs': 2400, 'heads': 2, 'activation': 'relu', 'optimizer': 'Adam', 'lr': 0.0021420591434002335, 'weight_decay': 0.00014029289044614605, 'scheduler': None}.
-Using device: cuda
-Best model found at epoch 2400
-Using device: cuda
-Best model found at epoch 2400
-Using device: cuda
-Best model found at epoch 2400
-Using device: cuda
-Best model found at epoch 2400
-Using device: cuda
-Best model found at epoch 2400
-ACC_mean: 0.6214
-ACC_std: 0.0388
-F1_mean: 0.5875
-F1_std: 0.1004
-AUROC_mean: 0.6727
-AUROC_std: 0.0454
-AUPR_mean: 0.6562
-AUPR_std: 0.0487
-0it [00:00, ?it/s]1it [04:04, 244.52s/it]2it [08:07, 243.47s/it]3it [12:00, 238.92s/it]4it [15:54, 236.76s/it]5it [19:53, 237.62s/it]5it [19:53, 238.67s/it]
-[I 2025-04-20 06:54:40,159] Trial 121 finished with values: [0.7197289906691697, 0.7112579212240978, 0.633174285250377, 0.6580533210570858] and parameters: {'dropout1': 0.30000000000000004, 'dropout2': 0.15000000000000002, 'hidden1': 967, 'hidden2': 468, 'hidden3': 125, 'epochs': 900, 'heads': 2, 'activation': 'gelu', 'optimizer': 'Adam', 'lr': 0.0017305481617090877, 'weight_decay': 0.0002549456286365958, 'scheduler': 'Cosine', 'T_max': 425}.
-Using device: cuda
-Best model found at epoch 900
-Using device: cuda
-Best model found at epoch 900
-Using device: cuda
-Best model found at epoch 900
-Using device: cuda
-Best model found at epoch 900
-Using device: cuda
-Best model found at epoch 900
-ACC_mean: 0.6581
-ACC_std: 0.0100
-F1_mean: 0.6332
-F1_std: 0.0264
-AUROC_mean: 0.7197
-AUROC_std: 0.0064
-AUPR_mean: 0.7113
-AUPR_std: 0.0046
-0it [00:00, ?it/s]1it [52:13, 3133.48s/it]2it [1:44:32, 3136.83s/it]3it [2:38:47, 3190.70s/it]4it [3:34:21, 3247.42s/it]5it [4:28:53, 3256.02s/it]5it [4:28:53, 3226.62s/it]
-[I 2025-04-20 11:23:35,537] Trial 125 finished with values: [0.7193622490651941, 0.7121954301984252, 0.6356219707744801, 0.6584064767817269] and parameters: {'dropout1': 0.30000000000000004, 'dropout2': 0.1, 'hidden1': 372, 'hidden2': 364, 'hidden3': 128, 'epochs': 9500, 'heads': 5, 'activation': 'relu', 'optimizer': 'AdamW', 'lr': 1.1577047015162513e-05, 'weight_decay': 6.319756387644289e-05, 'scheduler': 'Cosine', 'T_max': 3135}.
-Using device: cuda
-Best model found at epoch 9500
-Using device: cuda
-Best model found at epoch 9500
-Using device: cuda
-Best model found at epoch 9500
-Using device: cuda
-Best model found at epoch 9500
-Using device: cuda
-Best model found at epoch 9500
-ACC_mean: 0.6584
-ACC_std: 0.0026
-F1_mean: 0.6356
-F1_std: 0.0060
-AUROC_mean: 0.7194
-AUROC_std: 0.0025
-AUPR_mean: 0.7122
-AUPR_std: 0.0015
-0it [00:00, ?it/s]1it [42:32, 2552.84s/it]slurmstepd: error: *** JOB 34492541 ON aga29 CANCELLED AT 2025-04-20T12:06:39 DUE TO TIME LIMIT ***
