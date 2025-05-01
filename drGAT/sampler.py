@@ -10,7 +10,6 @@ import torch
 
 from .myutils import mask, to_coo_matrix, to_tensor
 
-
 class RandomSampler(object):
     def __init__(
         self,
@@ -56,8 +55,8 @@ class RandomSampler(object):
 
         # Create unified graph representation
         self.edge_index, self.edge_attr = self.update_unified_matrix()
-        self.train_labels = self.get_train_labels(is_train=True)
-        self.test_labels = self.get_train_labels(is_train=False)
+        self.train_labels = self.get_labels(is_train=True)
+        self.test_labels = self.get_labels(is_train=False)
 
     def set_seed(self):
         np.random.seed(self.seed)  # NumPyのシードを設定
