@@ -1,5 +1,6 @@
-from pathlib import Path
 import glob
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 import torch
@@ -7,14 +8,8 @@ from scipy import sparse as sp
 from sklearn.preprocessing import StandardScaler
 from tqdm import tqdm
 
-from .utility import (
-    get_morgan_fingerprint,
-    min_max_scale,
-    natural_sort_key,
-    normalize_similarity_matrix,
-)
-
-from pathlib import Path
+from .utility import (get_morgan_fingerprint, min_max_scale, natural_sort_key,
+                      normalize_similarity_matrix)
 
 # カレントディレクトリの親をたどって "drGAT" ディレクトリを検出し、その1つ上をルートとする
 current = Path.cwd().resolve()
@@ -50,10 +45,12 @@ def load_data(data=None, is_zero_pad=False):
 
 def _get_base_data(path):
     drugAct = pd.read_csv(path / "drugAct.csv", index_col=0)
-    exprs = pd.concat([
-        pd.read_csv(path / "gene_exp_part1.csv.gz", index_col=0),
-        pd.read_csv(path / "gene_exp_part2.csv.gz", index_col=0),
-    ]).T.dropna()
+    exprs = pd.concat(
+        [
+            pd.read_csv(path / "gene_exp_part1.csv.gz", index_col=0),
+            pd.read_csv(path / "gene_exp_part2.csv.gz", index_col=0),
+        ]
+    ).T.dropna()
     return drugAct, exprs
 
 
@@ -64,7 +61,7 @@ def _process_gene_expression(exprs, dti):
 
     print("DTI unique genes: ", len(set(dti["Gene"])))
     print("Top 90% variable genes: ", len(variance))
-    print('overwrapped genes: ', len(set(dti['Gene']) & set(variance)))
+    print("overwrapped genes: ", len(set(dti["Gene"]) & set(variance)))
     print("Total: ", len(set(variance) | set(dti["Gene"])))
 
     genes = sorted(list(set(variance) | set(dti["Gene"])))
@@ -74,7 +71,9 @@ def _process_gene_expression(exprs, dti):
 
 def _get_gene_similarity(path, gene_norm_cell):
     sim_path = path / "gene_sim"
-    gene_sim_files = sorted(sim_path.glob("gene_sim_part_*.parquet"), key=lambda x: natural_sort_key(str(x)))
+    gene_sim_files = sorted(
+        sim_path.glob("gene_sim_part_*.parquet"), key=lambda x: natural_sort_key(str(x))
+    )
 
     if gene_sim_files:
         gene_sim = pd.concat([pd.read_parquet(f) for f in tqdm(gene_sim_files)])
@@ -82,7 +81,9 @@ def _get_gene_similarity(path, gene_norm_cell):
         gene_sim = normalize_similarity_matrix(gene_norm_cell.T)
         sim_path.mkdir(exist_ok=True)
         for i, chunk in enumerate(np.array_split(gene_sim, 25)):
-            chunk.to_parquet(sim_path / f"gene_sim_part_{i}.parquet", compression="gzip")
+            chunk.to_parquet(
+                sim_path / f"gene_sim_part_{i}.parquet", compression="gzip"
+            )
     return gene_sim
 
 
@@ -101,17 +102,29 @@ def _get_drug_features(path, drugAct, smiles_data, smiles_key="SMILES", drug_key
     if feat_file.exists():
         drug_feature = pd.read_csv(feat_file, index_col=0)
     else:
-        conv = dict(smiles_data[[drug_key, smiles_key]].values) if not isinstance(smiles_data, dict) else smiles_data
+        conv = (
+            dict(smiles_data[[drug_key, smiles_key]].values)
+            if not isinstance(smiles_data, dict)
+            else smiles_data
+        )
         SMILES = [conv[i] for i in drugAct.index]
-        drug_feature_df = pd.DataFrame(get_morgan_fingerprint(SMILES), index=drugAct.index)
+        drug_feature_df = pd.DataFrame(
+            get_morgan_fingerprint(SMILES), index=drugAct.index
+        )
         drug_feature_df.to_csv(feat_file)
         drug_feature = drug_feature_df
     return drug_feature
 
 
 def _get_normalized_gene_data(exprs):
-    gene_norm_cell = pd.DataFrame(StandardScaler().fit_transform(exprs), index=exprs.index, columns=exprs.columns)
-    gene_norm_gene = pd.DataFrame(StandardScaler().fit_transform(exprs.T), index=exprs.columns, columns=exprs.index).T
+    gene_norm_cell = pd.DataFrame(
+        StandardScaler().fit_transform(exprs), index=exprs.index, columns=exprs.columns
+    )
+    gene_norm_gene = pd.DataFrame(
+        StandardScaler().fit_transform(exprs.T),
+        index=exprs.columns,
+        columns=exprs.index,
+    ).T
     return gene_norm_cell, gene_norm_gene
 
 
@@ -137,7 +150,7 @@ def _load_data(path, is_ctrp=False, is_zero_pad=False):
     dti = dti[dti["Drug Name"].isin(drugAct.index)]
     dti = dti[dti.Gene.isin(set(exprs.columns) & set(dti.Gene))]
 
-    print('dtis: ', len(dti))
+    print("dtis: ", len(dti))
     print("unique drugs:", len(set(dti["Drug Name"])))
     print("unique genes:", len(set(dti.Gene)))
 
@@ -151,7 +164,11 @@ def _load_data(path, is_ctrp=False, is_zero_pad=False):
     A_cg = gene_norm_cell * (gene_norm_cell > 0).astype(int)
 
     A_dg = pd.DataFrame(
-        np.zeros([len(drugAct.index), len(A_cg.columns)]) if is_zero_pad else np.ones([len(drugAct.index), len(A_cg.columns)]) / 2,
+        (
+            np.zeros([len(drugAct.index), len(A_cg.columns)])
+            if is_zero_pad
+            else np.ones([len(drugAct.index), len(A_cg.columns)]) / 2
+        ),
         index=drugAct.index,
         columns=A_cg.columns,
     )
@@ -170,7 +187,19 @@ def _load_data(path, is_ctrp=False, is_zero_pad=False):
     gene = torch.tensor(gene_norm_cell.values).float()
 
     print("Done!")
-    return res, pos_num, null_mask, drug_sim, cell_sim, gene_sim, A_cg, A_dg, drug, cell, gene
+    return (
+        res,
+        pos_num,
+        null_mask,
+        drug_sim,
+        cell_sim,
+        gene_sim,
+        A_cg,
+        A_dg,
+        drug,
+        cell,
+        gene,
+    )
 
 
 def _load_nci(path, is_zero_pad):
@@ -189,12 +218,16 @@ def _load_nci(path, is_zero_pad):
     drug_feature = _get_drug_features(path, drugAct, moa, "SMILES", "NSC")
     drug_sim = normalize_similarity_matrix(drug_feature)
 
-    dti = pd.read_csv(DATA_DIR / "full_table.csv").dropna(subset=["NSC"]).reset_index(drop=True)
+    dti = (
+        pd.read_csv(DATA_DIR / "full_table.csv")
+        .dropna(subset=["NSC"])
+        .reset_index(drop=True)
+    )
     dti["NSC"] = dti["NSC"].astype(int)
     dti = dti[dti["NSC"].isin(drugAct.index)]
     dti = dti[dti.Gene.isin(set(exprs.columns) & set(dti.Gene))]
-    
-    print('dtis: ', len(dti))
+
+    print("dtis: ", len(dti))
     print("unique drugs:", len(set(dti["Drug Name"])))
     print("unique genes:", len(set(dti.Gene)))
 
@@ -208,7 +241,11 @@ def _load_nci(path, is_zero_pad):
     A_cg = min_max_scale(gene_norm_gene + gene_norm_cell)
 
     A_dg = pd.DataFrame(
-        np.zeros([len(drugAct.index), len(A_cg.columns)]) if is_zero_pad else np.ones([len(drugAct.index), len(A_cg.columns)]) / 2,
+        (
+            np.zeros([len(drugAct.index), len(A_cg.columns)])
+            if is_zero_pad
+            else np.ones([len(drugAct.index), len(A_cg.columns)]) / 2
+        ),
         index=drugAct.index,
         columns=A_cg.columns,
     )
@@ -227,4 +264,16 @@ def _load_nci(path, is_zero_pad):
     gene = torch.tensor(gene_norm_cell.T.values).float()
 
     print("Done!")
-    return res, pos_num, null_mask, drug_sim, cell_sim, gene_sim, A_cg, A_dg, drug, cell, gene
+    return (
+        res,
+        pos_num,
+        null_mask,
+        drug_sim,
+        cell_sim,
+        gene_sim,
+        A_cg,
+        A_dg,
+        drug,
+        cell,
+        gene,
+    )
