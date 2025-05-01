@@ -21,11 +21,12 @@ sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+from get_params import get_params
+from metrics import compute_metrics_stats
+
 from drGAT import No_atten_drGAT
 from drGAT.load_data import load_data
 from drGAT.sampler import NewSampler
-from get_params import get_params
-from metrics import compute_metrics_stats
 
 name = "ctrp"
 # task = "cell"

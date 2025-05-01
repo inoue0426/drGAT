@@ -17,10 +17,11 @@ sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+from metrics import compute_metrics_stats
+
 from drGAT import drGAT
 from drGAT.load_data import load_data
 from drGAT.sampler import RandomSampler
-from metrics import compute_metrics_stats
 
 name = "gdsc1"
 PATH = f"../{name}_data/"
