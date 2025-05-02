@@ -23,46 +23,49 @@ DATA_DIR = PROJECT_ROOT / "data"
 FIGS_DIR = PROJECT_ROOT / "Figs"
 
 
-def load_data(data=None, is_zero_pad=False):
+def load_data(data=None, is_zero_pad=False, is_verbose=False):
     if data == "gdsc1":
         print("load gdsc1")
         path = DATA_DIR / "gdsc1_data"
-        return _load_data(path, is_zero_pad=is_zero_pad)
+        return _load_data(path, is_zero_pad=is_zero_pad, is_verbose=is_verbose)
     elif data == "gdsc2":
         print("load gdsc2")
         path = DATA_DIR / "gdsc2_data"
-        return _load_data(path, is_zero_pad=is_zero_pad)
+        return _load_data(path, is_zero_pad=is_zero_pad, is_verbose=is_verbose)
     elif data == "ctrp":
+        print("load ctrp")
         path = DATA_DIR / "ctrp_data"
-        return _load_data(path, is_ctrp=True, is_zero_pad=is_zero_pad)
+        return _load_data(path, is_zero_pad=is_zero_pad, is_verbose=is_verbose)
     elif data == "nci":
         print("load nci")
         path = DATA_DIR / "nci_data"
-        return _load_nci(path, is_zero_pad=is_zero_pad)
+        return _load_nci(path, is_zero_pad=is_zero_pad, is_verbose=is_verbose)
     else:
         raise NotImplementedError
 
 
 def _get_base_data(path):
     drugAct = pd.read_csv(path / "drugAct.csv", index_col=0)
-    exprs = pd.concat(
-        [
-            pd.read_csv(path / "gene_exp_part1.csv.gz", index_col=0),
-            pd.read_csv(path / "gene_exp_part2.csv.gz", index_col=0),
-        ]
-    ).T.dropna()
+    gene_exp_files = sorted(
+        path.glob("gene_exp_part*.csv.gz"),
+        key=lambda x: natural_sort_key(str(x))
+    )
+    exprs = pd.concat([pd.read_csv(f, index_col=0) for f in gene_exp_files]).T.dropna()
     return drugAct, exprs
 
 
-def _process_gene_expression(exprs, dti):
+def _process_gene_expression(exprs, dti, is_verbose=False):
     variance = exprs.std().sort_values(ascending=False)
     variance = pd.DataFrame(variance > np.percentile(variance, 90))
     variance = list(variance[variance[0]].index)
 
-    print("DTI unique genes: ", len(set(dti["Gene"])))
-    print("Top 90% variable genes: ", len(variance))
-    print("overwrapped genes: ", len(set(dti["Gene"]) & set(variance)))
-    print("Total: ", len(set(variance) | set(dti["Gene"])))
+    if is_verbose:
+        print("DTI unique genes: ", len(set(dti["Gene"])))
+        print("Top 90% variable genes: ", len(variance))
+        print("overwrapped genes: ", len(set(dti["Gene"]) & set(variance)))
+        print("Total: ", len(set(variance) | set(dti["Gene"])))
+    else:
+        print(f"Selected {len(set(variance) | set(dti['Gene']))} genes")
 
     genes = sorted(list(set(variance) | set(dti["Gene"])))
     exprs = exprs[genes]
@@ -128,19 +131,42 @@ def _get_normalized_gene_data(exprs):
     return gene_norm_cell, gene_norm_gene
 
 
-def _load_data(path, is_ctrp=False, is_zero_pad=False):
+def _load_data(path, is_zero_pad=False, is_verbose=False):
     drugAct, exprs = _get_base_data(path)
     mut = pd.read_csv(path / "mut.csv", index_col=0).T
-    cells = sorted(set(drugAct.columns) & set(exprs.index) & set(mut.index))
+    met = pd.read_csv(path / "met_part1.csv.gz", index_col=0).T
+    cells = sorted(set(drugAct.columns) & set(exprs.index) & set(mut.index) & set(met.index))
 
     SMILES = pd.read_csv(path / "drug2smiles.csv", index_col=0)
     exprs = exprs.loc[cells]
     drugAct = drugAct.loc[sorted(SMILES.drugs), cells]
 
-    if is_ctrp:
-        drugAct = drugAct.apply(lambda x: (x - np.nanmean(x)) / np.nanstd(x))
+    if is_verbose:
+        print(f"unique drugs\t{len(drugAct.index)}")
+        print(f"unique cells\t{len(cells)}")
+        print(f"unique drug response\t{drugAct.notna().sum().sum()}")
+        print(f"n sensitive\t{(drugAct == 1).sum().sum()}")
+        print(f"n resistant\t{(drugAct == 0).sum().sum()}")
 
-    res = (drugAct > 0).astype(int)
+        # Calculate average binary ratios for drugs and cells
+        drug_binary_ratio = (drugAct == 1).sum(axis=1) / drugAct.notna().sum(axis=1)
+        cell_binary_ratio = (drugAct == 1).sum(axis=0) / drugAct.notna().sum(axis=0)
+
+        print(f"AVG Drug binary ratio\t{drug_binary_ratio.mean():.3f}")
+        print(f"AVG Cell binary ratio\t{cell_binary_ratio.mean():.3f}")
+
+        # Count drugs and cells with over 10 entries
+        drugs_over_10 = (drugAct.notna().sum(axis=1) > 9).sum()
+        cells_over_10 = (drugAct.notna().sum(axis=0) > 9).sum()
+
+        print(f"Over 10 entries (drugs)\t{drugs_over_10}")
+        print(f"Over 10 entries (cells)\t{cells_over_10}")
+    else:
+        print(f"Dataset size: {len(drugAct.index)} drugs x {len(cells)} cells")
+        print(f"Total responses: {drugAct.notna().sum().sum()}")
+        print(f"Responses distribution: {(drugAct == 1).sum().sum()} sensitive, {(drugAct == 0).sum().sum()} resistant")
+
+    res = drugAct
     pos_num = sp.coo_matrix(res).data.shape[0]
 
     drug_feature = _get_drug_features(path, drugAct, SMILES, "SMILES", "drugs")
@@ -150,12 +176,14 @@ def _load_data(path, is_ctrp=False, is_zero_pad=False):
     dti = dti[dti["Drug Name"].isin(drugAct.index)]
     dti = dti[dti.Gene.isin(set(exprs.columns) & set(dti.Gene))]
 
-    print("dtis: ", len(dti))
-    print("unique drugs:", len(set(dti["Drug Name"])))
-    print("unique genes:", len(set(dti.Gene)))
+    if is_verbose:
+        print(f"dtis\t{len(dti)}")
+        print(f"unique drugs\t{len(set(dti['Drug Name']))}")
+        print(f"unique genes\t{len(set(dti.Gene))}")
 
-    exprs = _process_gene_expression(exprs, dti)
-    print("Final drug Act shape:", drugAct.shape)
+    exprs = _process_gene_expression(exprs, dti, is_verbose)
+    if is_verbose:
+        print(f"Final drug Act shape\t{drugAct.shape}")
 
     gene_norm_cell, gene_norm_gene = _get_normalized_gene_data(exprs)
     gene_sim = _get_gene_similarity(path, gene_norm_cell)
@@ -202,7 +230,7 @@ def _load_data(path, is_ctrp=False, is_zero_pad=False):
     )
 
 
-def _load_nci(path, is_zero_pad):
+def _load_nci(path, is_zero_pad, is_verbose=False):
     drugAct, exprs = _get_base_data(path)
     mut = pd.read_csv(path / "mut.csv", index_col=0).T
     cells = sorted(set(drugAct.columns) & set(exprs.index) & set(mut.index))
@@ -211,6 +239,31 @@ def _load_nci(path, is_zero_pad):
 
     exprs = exprs.loc[cells]
     drugAct = drugAct.loc[:, cells]
+
+    if is_verbose:
+        print(f"unique drugs\t{len(drugAct.index)}")
+        print(f"unique cells\t{len(cells)}")
+        print(f"unique drug response\t{drugAct.notna().sum().sum()}")
+        print(f"n sensitive\t{(drugAct == 1).sum().sum()}")
+        print(f"n resistant\t{(drugAct == 0).sum().sum()}")
+
+        # Calculate average binary ratios for drugs and cells
+        drug_binary_ratio = (drugAct == 1).sum(axis=1) / drugAct.notna().sum(axis=1)
+        cell_binary_ratio = (drugAct == 1).sum(axis=0) / drugAct.notna().sum(axis=0)
+
+        print(f"AVG Drug binary ratio\t{drug_binary_ratio.mean():.3f}")
+        print(f"AVG Cell binary ratio\t{cell_binary_ratio.mean():.3f}")
+
+        # Count drugs and cells with over 10 entries
+        drugs_over_10 = (drugAct.notna().sum(axis=1) > 9).sum()
+        cells_over_10 = (drugAct.notna().sum(axis=0) > 9).sum()
+
+        print(f"Over 10 entries (drugs)\t{drugs_over_10}")
+        print(f"Over 10 entries (cells)\t{cells_over_10}")
+    else:
+        print(f"Dataset size: {len(drugAct.index)} drugs x {len(cells)} cells")
+        print(f"Total responses: {drugAct.notna().sum().sum()}")
+        print(f"Responses distribution: {(drugAct == 1).sum().sum()} sensitive, {(drugAct == 0).sum().sum()} resistant")
 
     res = drugAct
     pos_num = sp.coo_matrix(res).data.shape[0]
@@ -227,12 +280,14 @@ def _load_nci(path, is_zero_pad):
     dti = dti[dti["NSC"].isin(drugAct.index)]
     dti = dti[dti.Gene.isin(set(exprs.columns) & set(dti.Gene))]
 
-    print("dtis: ", len(dti))
-    print("unique drugs:", len(set(dti["Drug Name"])))
-    print("unique genes:", len(set(dti.Gene)))
+    if is_verbose:
+        print(f"dtis\t{len(dti)}")
+        print(f"unique drugs\t{len(set(dti['Drug Name']))}")
+        print(f"unique genes\t{len(set(dti.Gene))}")
 
-    exprs = _process_gene_expression(exprs, dti)
-    print("Final drug Act shape:", drugAct.shape)
+    exprs = _process_gene_expression(exprs, dti, is_verbose)
+    if is_verbose:
+        print(f"Final drug Act shape\t{drugAct.shape}")
 
     gene_norm_cell, gene_norm_gene = _get_normalized_gene_data(exprs)
     gene_sim = _get_gene_similarity(path, gene_norm_cell)
