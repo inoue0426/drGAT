@@ -11,324 +11,171 @@ from tqdm import tqdm
 from .utility import (get_morgan_fingerprint, min_max_scale, natural_sort_key,
                       normalize_similarity_matrix)
 
-# カレントディレクトリの親をたどって "drGAT" ディレクトリを検出し、その1つ上をルートとする
-current = Path.cwd().resolve()
-while current.name != "drGAT":
-    if current.parent == current:
-        raise RuntimeError("drGAT ディレクトリが見つかりませんでした")
-    current = current.parent
-
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 FIGS_DIR = PROJECT_ROOT / "Figs"
 
+def load_data(data=None, is_zero_pad=False, verbose=False):
+    dataset_paths = {
+        "gdsc1": "gdsc1_data",
+        "gdsc2": "gdsc2_data",
+        "ctrp": "ctrp_data",
+        "nci": "nci_data"
+    }
 
-def load_data(data=None, is_zero_pad=False, is_verbose=False):
-    if data == "gdsc1":
-        print("load gdsc1")
-        path = DATA_DIR / "gdsc1_data"
-        return _load_data(path, is_zero_pad=is_zero_pad, is_verbose=is_verbose)
-    elif data == "gdsc2":
-        print("load gdsc2")
-        path = DATA_DIR / "gdsc2_data"
-        return _load_data(path, is_zero_pad=is_zero_pad, is_verbose=is_verbose)
-    elif data == "ctrp":
-        print("load ctrp")
-        path = DATA_DIR / "ctrp_data"
-        return _load_data(path, is_zero_pad=is_zero_pad, is_verbose=is_verbose)
-    elif data == "nci":
-        print("load nci")
-        path = DATA_DIR / "nci_data"
-        return _load_nci(path, is_zero_pad=is_zero_pad, is_verbose=is_verbose)
-    else:
-        raise NotImplementedError
+    if data not in dataset_paths:
+        raise NotImplementedError(f"Dataset {data} not implemented")
 
+    print(f"load {data}")
+    path = DATA_DIR / dataset_paths[data]
+    return _load_dataset(path, is_zero_pad, verbose, data == "nci")
 
 def _get_base_data(path):
     drugAct = pd.read_csv(path / "drugAct.csv", index_col=0)
-    gene_exp_files = sorted(
-        path.glob("gene_exp_part*.csv.gz"),
-        key=lambda x: natural_sort_key(str(x))
-    )
-    exprs = pd.concat([pd.read_csv(f, index_col=0) for f in gene_exp_files]).T.dropna()
+    exprs = pd.concat([
+        pd.read_csv(f, index_col=0).T
+        for f in sorted(path.glob("gene_exp_part*.csv.gz"), key=lambda x: natural_sort_key(str(x)))
+    ], axis=1).fillna(0)
     return drugAct, exprs
 
-
-def _process_gene_expression(exprs, dti, is_verbose=False):
-    variance = exprs.std().sort_values(ascending=False)
-    variance = pd.DataFrame(variance > np.percentile(variance, 90))
-    variance = list(variance[variance[0]].index)
-
-    if is_verbose:
-        print("DTI unique genes: ", len(set(dti["Gene"])))
-        print("Top 90% variable genes: ", len(variance))
-        print("overwrapped genes: ", len(set(dti["Gene"]) & set(variance)))
-        print("Total: ", len(set(variance) | set(dti["Gene"])))
+def _process_gene_expression(exprs, dti, verbose=False):
+    selected_genes = sorted(set(exprs.std()[exprs.std() > np.percentile(exprs.std(), 90)].index) | set(dti["Gene"]))
+    if verbose:
+        print(f"Top 90% variable genes: \t{len(selected_genes) - len(set(dti['Gene']))}")
+        print(f"Total selected genes: \t{len(selected_genes)}")
     else:
-        print(f"Selected {len(set(variance) | set(dti['Gene']))} genes")
+        print(f"Selected {len(selected_genes)} genes")
+    return exprs[selected_genes]
 
-    genes = sorted(list(set(variance) | set(dti["Gene"])))
-    exprs = exprs[genes]
-    return exprs
-
-
-def _get_gene_similarity(path, gene_norm_cell):
-    sim_path = path / "gene_sim"
-    gene_sim_files = sorted(
-        sim_path.glob("gene_sim_part_*.parquet"), key=lambda x: natural_sort_key(str(x))
-    )
-
-    if gene_sim_files:
-        gene_sim = pd.concat([pd.read_parquet(f) for f in tqdm(gene_sim_files)])
-    else:
-        gene_sim = normalize_similarity_matrix(gene_norm_cell.T)
-        sim_path.mkdir(exist_ok=True)
-        for i, chunk in enumerate(np.array_split(gene_sim, 25)):
-            chunk.to_parquet(
-                sim_path / f"gene_sim_part_{i}.parquet", compression="gzip"
-            )
-    return gene_sim
-
-
-def _get_cell_similarity(path, gene_norm_gene):
-    sim_file = path / "cell_sim.csv"
-    if sim_file.exists():
-        cell_sim = pd.read_csv(sim_file, index_col=0)
-    else:
-        cell_sim = normalize_similarity_matrix(gene_norm_gene)
-        cell_sim.to_csv(sim_file)
-    return cell_sim
-
-
-def _get_drug_features(path, drugAct, smiles_data, smiles_key="SMILES", drug_key=None):
-    feat_file = path / "drug_feature.csv"
-    if feat_file.exists():
-        drug_feature = pd.read_csv(feat_file, index_col=0)
-    else:
-        conv = (
-            dict(smiles_data[[drug_key, smiles_key]].values)
-            if not isinstance(smiles_data, dict)
-            else smiles_data
-        )
-        SMILES = [conv[i] for i in drugAct.index]
-        drug_feature_df = pd.DataFrame(
-            get_morgan_fingerprint(SMILES), index=drugAct.index
-        )
-        drug_feature_df.to_csv(feat_file)
-        drug_feature = drug_feature_df
-    return drug_feature
-
+def _get_drug_features(drugAct, smiles_data, smiles_key="SMILES", drug_key=None):
+    smiles_dict = dict(smiles_data[[drug_key, smiles_key]].values) if not isinstance(smiles_data, dict) else smiles_data
+    return pd.DataFrame(get_morgan_fingerprint([smiles_dict[i] for i in drugAct.index]), index=drugAct.index)
 
 def _get_normalized_gene_data(exprs):
-    gene_norm_cell = pd.DataFrame(
-        StandardScaler().fit_transform(exprs), index=exprs.index, columns=exprs.columns
+    scaler = StandardScaler()
+    return (
+        pd.DataFrame(scaler.fit_transform(exprs), index=exprs.index, columns=exprs.columns),
+        pd.DataFrame(scaler.fit_transform(exprs.T), index=exprs.columns, columns=exprs.index).T
     )
-    gene_norm_gene = pd.DataFrame(
-        StandardScaler().fit_transform(exprs.T),
-        index=exprs.columns,
-        columns=exprs.index,
-    ).T
-    return gene_norm_cell, gene_norm_gene
 
-
-def _load_data(path, is_zero_pad=False, is_verbose=False):
-    drugAct, exprs = _get_base_data(path)
-    mut = pd.read_csv(path / "mut.csv", index_col=0).T
-    met = pd.read_csv(path / "met_part1.csv.gz", index_col=0).T
-    cells = sorted(set(drugAct.columns) & set(exprs.index) & set(mut.index) & set(met.index))
-
-    SMILES = pd.read_csv(path / "drug2smiles.csv", index_col=0)
-    exprs = exprs.loc[cells]
-    drugAct = drugAct.loc[sorted(SMILES.drugs), cells]
-
-    if is_verbose:
+def _print_dataset_stats(drugAct, cells, verbose):
+    if verbose:
         print(f"unique drugs\t{len(drugAct.index)}")
         print(f"unique cells\t{len(cells)}")
         print(f"unique drug response\t{drugAct.notna().sum().sum()}")
         print(f"n sensitive\t{(drugAct == 1).sum().sum()}")
         print(f"n resistant\t{(drugAct == 0).sum().sum()}")
-
-        # Calculate average binary ratios for drugs and cells
-        drug_binary_ratio = (drugAct == 1).sum(axis=1) / drugAct.notna().sum(axis=1)
-        cell_binary_ratio = (drugAct == 1).sum(axis=0) / drugAct.notna().sum(axis=0)
-
-        print(f"AVG Drug binary ratio\t{drug_binary_ratio.mean():.3f}")
-        print(f"AVG Cell binary ratio\t{cell_binary_ratio.mean():.3f}")
-
-        # Count drugs and cells with over 10 entries
-        drugs_over_10 = (drugAct.notna().sum(axis=1) > 9).sum()
-        cells_over_10 = (drugAct.notna().sum(axis=0) > 9).sum()
-
-        print(f"Over 10 entries (drugs)\t{drugs_over_10}")
-        print(f"Over 10 entries (cells)\t{cells_over_10}")
+        drug_sensitive_ratio = (drugAct == 1).sum(axis=1) / drugAct.notna().sum(axis=1)
+        cell_sensitive_ratio = (drugAct == 1).sum(axis=0) / drugAct.notna().sum(axis=0)
+        print(f"AVG Drug binary ratio\t{drug_sensitive_ratio.mean():.3f}")
+        print(f"AVG Cell binary ratio\t{cell_sensitive_ratio.mean():.3f}")
+        print(f"Over 10 entries (drugs)\t{(drugAct.notna().sum(axis=1) > 9).sum()}")
+        print(f"Over 10 entries (cells)\t{(drugAct.notna().sum(axis=0) > 9).sum()}")
     else:
         print(f"Dataset size: {len(drugAct.index)} drugs x {len(cells)} cells")
         print(f"Total responses: {drugAct.notna().sum().sum()}")
         print(f"Responses distribution: {(drugAct == 1).sum().sum()} sensitive, {(drugAct == 0).sum().sum()} resistant")
 
-    res = drugAct
-    pos_num = sp.coo_matrix(res).data.shape[0]
-
-    drug_feature = _get_drug_features(path, drugAct, SMILES, "SMILES", "drugs")
-    drug_sim = normalize_similarity_matrix(drug_feature)
-
+def _process_dti_data(drugAct, exprs, verbose, is_nci):
     dti = pd.read_csv(DATA_DIR / "full_table.csv")
-    dti = dti[dti["Drug Name"].isin(drugAct.index)]
-    dti = dti[dti.Gene.isin(set(exprs.columns) & set(dti.Gene))]
-
-    if is_verbose:
-        print(f"dtis\t{len(dti)}")
-        print(f"unique drugs\t{len(set(dti['Drug Name']))}")
-        print(f"unique genes\t{len(set(dti.Gene))}")
-
-    exprs = _process_gene_expression(exprs, dti, is_verbose)
-    if is_verbose:
-        print(f"Final drug Act shape\t{drugAct.shape}")
-
-    gene_norm_cell, gene_norm_gene = _get_normalized_gene_data(exprs)
-    gene_sim = _get_gene_similarity(path, gene_norm_cell)
-    cell_sim = _get_cell_similarity(path, gene_norm_gene)
-
-    A_cg = gene_norm_cell * (gene_norm_cell > 0).astype(int)
-
-    A_dg = pd.DataFrame(
-        (
-            np.zeros([len(drugAct.index), len(A_cg.columns)])
-            if is_zero_pad
-            else np.ones([len(drugAct.index), len(A_cg.columns)]) / 2
-        ),
-        index=drugAct.index,
-        columns=A_cg.columns,
-    )
-
-    for _, i in dti.iterrows():
-        A_dg.loc[i["Drug Name"], i["Gene"]] = 1
-
-    null_mask = (drugAct.isna()).astype(int)
-
-    drug_sim = torch.tensor(drug_sim.values).float()
-    cell_sim = torch.tensor(cell_sim.values).float()
-    gene_sim = torch.tensor(gene_sim.values).float()
-
-    drug = torch.tensor(drug_feature.values).float()
-    cell = torch.tensor(gene_norm_gene.values).float()
-    gene = torch.tensor(gene_norm_cell.values).float()
-
-    print("Done!")
-    return (
-        res,
-        pos_num,
-        null_mask,
-        drug_sim,
-        cell_sim,
-        gene_sim,
-        A_cg,
-        A_dg,
-        drug,
-        cell,
-        gene,
-    )
-
-
-def _load_nci(path, is_zero_pad, is_verbose=False):
-    drugAct, exprs = _get_base_data(path)
-    mut = pd.read_csv(path / "mut.csv", index_col=0).T
-    cells = sorted(set(drugAct.columns) & set(exprs.index) & set(mut.index))
-
-    moa = pd.read_csv(FIGS_DIR / "nsc_cid_smiles_class_name.csv", index_col=0)
-
-    exprs = exprs.loc[cells]
-    drugAct = drugAct.loc[:, cells]
-
-    if is_verbose:
-        print(f"unique drugs\t{len(drugAct.index)}")
-        print(f"unique cells\t{len(cells)}")
-        print(f"unique drug response\t{drugAct.notna().sum().sum()}")
-        print(f"n sensitive\t{(drugAct == 1).sum().sum()}")
-        print(f"n resistant\t{(drugAct == 0).sum().sum()}")
-
-        # Calculate average binary ratios for drugs and cells
-        drug_binary_ratio = (drugAct == 1).sum(axis=1) / drugAct.notna().sum(axis=1)
-        cell_binary_ratio = (drugAct == 1).sum(axis=0) / drugAct.notna().sum(axis=0)
-
-        print(f"AVG Drug binary ratio\t{drug_binary_ratio.mean():.3f}")
-        print(f"AVG Cell binary ratio\t{cell_binary_ratio.mean():.3f}")
-
-        # Count drugs and cells with over 10 entries
-        drugs_over_10 = (drugAct.notna().sum(axis=1) > 9).sum()
-        cells_over_10 = (drugAct.notna().sum(axis=0) > 9).sum()
-
-        print(f"Over 10 entries (drugs)\t{drugs_over_10}")
-        print(f"Over 10 entries (cells)\t{cells_over_10}")
+    drug_col = "NSC" if is_nci else "Drug Name"
+    if is_nci:
+        dti = dti[dti[drug_col].isin(drugAct.index) & dti.Gene.isin(set(exprs.columns) & set(dti.Gene))]
     else:
-        print(f"Dataset size: {len(drugAct.index)} drugs x {len(cells)} cells")
-        print(f"Total responses: {drugAct.notna().sum().sum()}")
-        print(f"Responses distribution: {(drugAct == 1).sum().sum()} sensitive, {(drugAct == 0).sum().sum()} resistant")
-
-    res = drugAct
-    pos_num = sp.coo_matrix(res).data.shape[0]
-
-    drug_feature = _get_drug_features(path, drugAct, moa, "SMILES", "NSC")
-    drug_sim = normalize_similarity_matrix(drug_feature)
-
-    dti = (
-        pd.read_csv(DATA_DIR / "full_table.csv")
-        .dropna(subset=["NSC"])
-        .reset_index(drop=True)
-    )
-    dti["NSC"] = dti["NSC"].astype(int)
-    dti = dti[dti["NSC"].isin(drugAct.index)]
-    dti = dti[dti.Gene.isin(set(exprs.columns) & set(dti.Gene))]
-
-    if is_verbose:
+        # Normalize drug names by removing special characters and converting to lowercase
+        normalized_drugAct = {i.replace('-', '').replace('.', '').replace('/', '').replace(' ', '').lower() for i in drugAct.index}
+        normalized_dti = {i.replace('-', '').replace('.', '').replace('/', '').replace(' ', '').lower() for i in dti[drug_col]}
+        # Create mapping between normalized and original names
+        drug_map = {i.replace('-', '').replace('.', '').replace('/', '').replace(' ', '').lower(): i for i in drugAct.index}
+        # Filter DTI data based on normalized drug names
+        dti = dti[dti[drug_col].apply(lambda x: x.replace('-', '').replace('.', '').replace('/', '').replace(' ', '').lower() in normalized_drugAct) &
+                 dti.Gene.isin(set(exprs.columns) & set(dti.Gene))]
+        # Update drug names to match drugAct index format
+        dti[drug_col] = dti[drug_col].apply(lambda x: drug_map[x.replace('-', '').replace('.', '').replace('/', '').replace(' ', '').lower()])
+    if verbose:
         print(f"dtis\t{len(dti)}")
-        print(f"unique drugs\t{len(set(dti['Drug Name']))}")
+        print(f"unique drugs\t{len(set(dti[drug_col]))}")
         print(f"unique genes\t{len(set(dti.Gene))}")
+    return dti
 
-    exprs = _process_gene_expression(exprs, dti, is_verbose)
-    if is_verbose:
-        print(f"Final drug Act shape\t{drugAct.shape}")
-
-    gene_norm_cell, gene_norm_gene = _get_normalized_gene_data(exprs)
-    gene_sim = _get_gene_similarity(path, gene_norm_cell)
-    cell_sim = _get_cell_similarity(path, gene_norm_gene)
-
-    A_cg = min_max_scale(gene_norm_gene + gene_norm_cell)
-
+def _create_drug_gene_adjacency(drugAct, A_cg, dti, is_zero_pad, is_nci):
     A_dg = pd.DataFrame(
-        (
-            np.zeros([len(drugAct.index), len(A_cg.columns)])
-            if is_zero_pad
-            else np.ones([len(drugAct.index), len(A_cg.columns)]) / 2
-        ),
+        np.zeros([len(drugAct.index), len(A_cg.columns)]) if is_zero_pad else np.ones([len(drugAct.index), len(A_cg.columns)]) / 2,
         index=drugAct.index,
         columns=A_cg.columns,
     )
-
     for _, i in dti.iterrows():
-        A_dg.loc[int(i["NSC"]), i["Gene"]] = 1
+        drug_col = "NSC" if is_nci else "Drug Name"
+        A_dg.loc[i[drug_col], i["Gene"]] = 1
+    return A_dg
 
-    null_mask = (drugAct.isna()).astype(int)
+def _convert_to_tensors(*args):
+    return tuple(torch.tensor(x.values).float() for x in args)
 
-    drug_sim = torch.tensor(drug_sim.values).float()
-    cell_sim = torch.tensor(cell_sim.values).float()
-    gene_sim = torch.tensor(gene_sim.values).float()
+def _calculate_similarity_matrix(data, axis='cell'):
+    return normalize_similarity_matrix(data.T if axis == 'gene' else data)
 
-    drug = torch.tensor(drug_feature.values).float()
-    cell = torch.tensor(gene_norm_gene.values).float()
-    gene = torch.tensor(gene_norm_cell.T.values).float()
+def _load_dataset(path, is_zero_pad, verbose, is_nci):
+    # Load base data
+    drugAct, exprs = _get_base_data(path)
+    smiles_data = pd.read_csv(FIGS_DIR / "nsc_cid_smiles_class_name.csv" if is_nci else path / "drug2smiles.csv", index_col=0)
+
+    # Filter and align data
+    cells = sorted(set(drugAct.columns) & set(exprs.index) & (set(pd.read_csv(path / "mut.csv", index_col=0).T.index) if is_nci else set(exprs.index)))
+    drugs = sorted(set(drugAct.index) & set(smiles_data["NSC" if is_nci else "Drug"]))
+    exprs, drugAct = exprs.loc[cells], drugAct.loc[drugs, cells]
+    smiles_data = smiles_data[smiles_data["NSC" if is_nci else "Drug"].isin(drugs)]
+
+    # Assert data consistency
+    assert set(drugAct.columns) == set(exprs.index), "DrugAct columns and Gene Exp index mismatch"
+    assert set(drugAct.index) == set(smiles_data["NSC" if is_nci else "Drug"]), "DrugAct index and SMILES data mismatch"
+
+    _print_dataset_stats(drugAct, cells, verbose)
+
+    # Process features and similarities
+    drug_feature = _get_drug_features(drugAct, smiles_data, "SMILES", "NSC" if is_nci else "Drug")
+    drug_sim = normalize_similarity_matrix(drug_feature)
+    assert drug_sim.index.equals(drug_sim.columns), "Drug similarity matrix should be symmetric"
+    assert drug_sim.index.equals(drugAct.index), "Drug similarity matrix index mismatch with drugAct"
+
+    dti = _process_dti_data(drugAct, exprs, verbose, is_nci)
+    assert set(dti["NSC" if is_nci else "Drug Name"]).issubset(set(drugAct.index)), "DTI contains drugs not in drugAct"
+    assert set(dti["Gene"]).issubset(set(exprs.columns)), "DTI contains genes not in gene expression data"
+
+    exprs = _process_gene_expression(exprs, dti, verbose)
+
+    gene_norm_cell, gene_norm_gene = _get_normalized_gene_data(exprs)
+    gene_sim = _calculate_similarity_matrix(gene_norm_cell, axis='gene')
+    cell_sim = _calculate_similarity_matrix(gene_norm_gene, axis='cell')
+
+    # Assert similarity matrices consistency
+    assert gene_sim.index.equals(gene_sim.columns), "Gene similarity matrix should be symmetric"
+    assert cell_sim.index.equals(cell_sim.columns), "Cell similarity matrix should be symmetric"
+    assert gene_sim.index.equals(exprs.columns), "Gene similarity matrix index mismatch with gene expression"
+    assert cell_sim.index.equals(exprs.index), "Cell similarity matrix index mismatch with gene expression"
+
+    # Create adjacency matrices
+    A_cg = gene_norm_cell * (gene_norm_cell > 0).astype(int)
+    A_dg = _create_drug_gene_adjacency(drugAct, A_cg, dti, is_zero_pad, is_nci)
+
+    # Assert adjacency matrices consistency
+    assert A_cg.index.equals(exprs.index), "A_cg index mismatch with gene expression"
+    assert A_cg.columns.equals(exprs.columns), "A_cg columns mismatch with gene expression"
+    assert A_dg.index.equals(drugAct.index), "A_dg index mismatch with drugAct"
+    tensors = _convert_to_tensors(drug_sim, cell_sim, gene_sim, drug_feature, gene_norm_gene, gene_norm_cell)
+
+    if verbose:
+        print("\nData Statistics:")
+        print("\nDrug Activity:")
+        print(f"Max: {drugAct.values[~np.isnan(drugAct.values)].max():.3f}")
+        print(f"Min: {drugAct.values[~np.isnan(drugAct.values)].min():.3f}")
+        print(f"Mean: {drugAct.values[~np.isnan(drugAct.values)].mean():.3f}")
+
+        print("\nGene Expression:")
+        print(f"Max: {exprs.values.max():.3f}")
+        print(f"Min: {exprs.values.min():.3f}")
+        print(f"Mean: {exprs.values.mean():.3f}")
+
 
     print("Done!")
-    return (
-        res,
-        pos_num,
-        null_mask,
-        drug_sim,
-        cell_sim,
-        gene_sim,
-        A_cg,
-        A_dg,
-        drug,
-        cell,
-        gene,
-    )
+    return (drugAct, sp.coo_matrix(drugAct).data.shape[0], (drugAct.isna()).astype(int), *tensors, A_cg, A_dg)
