@@ -298,5 +298,6 @@ def _load_dataset(path, is_zero_pad, verbose, is_nci):
         A_dg,
     )
 
+
 # How to use
 # res, null_mask, S_d, S_c, S_g, drug_feature, gene_norm_gene, gene_norm_cell, A_cg, A_dg = load_data(data="nci", is_zero_pad=True, verbose=True)

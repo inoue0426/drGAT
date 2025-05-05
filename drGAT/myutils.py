@@ -23,6 +23,7 @@ def init_seeds(seed=0):
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
+
 def get_all_edges_and_labels(res, null_mask):
     # 形状チェック
     assert res.shape == null_mask.shape, "res and null_mask must have the same shape"

@@ -8,6 +8,7 @@ import torch
 
 from .myutils import mask, to_coo_matrix
 
+
 class BalancedSampler:
     def __init__(
         self,
@@ -30,11 +31,21 @@ class BalancedSampler:
 
         self.all_edges, self.all_labels = all_edges, all_labels
 
-        self.train_edges, self.test_edges = all_edges[train_index], all_edges[test_index]
-        self.train_labels, self.test_labels = all_labels[train_index], all_labels[test_index]
+        self.train_edges, self.test_edges = (
+            all_edges[train_index],
+            all_edges[test_index],
+        )
+        self.train_labels, self.test_labels = (
+            all_labels[train_index],
+            all_labels[test_index],
+        )
 
-        self.train_pos, self.train_neg = self._create_coo_matrices(self.train_edges, self.train_labels)
-        self.test_pos, self.test_neg = self._create_coo_matrices(self.test_edges, self.test_labels)
+        self.train_pos, self.train_neg = self._create_coo_matrices(
+            self.train_edges, self.train_labels
+        )
+        self.test_pos, self.test_neg = self._create_coo_matrices(
+            self.test_edges, self.test_labels
+        )
 
         self.train_data = self._build_coo(self.train_edges, self.train_labels)
         self.test_data = self._build_coo(self.test_edges, self.test_labels)
@@ -52,7 +63,10 @@ class BalancedSampler:
 
     def _edge_list_to_coo(self, edge_list):
         data = np.ones(edge_list.shape[0])
-        return sp.coo_matrix((data, (edge_list[:, 0], edge_list[:, 1])), shape=self.adj_mat_original.shape)
+        return sp.coo_matrix(
+            (data, (edge_list[:, 0], edge_list[:, 1])),
+            shape=self.adj_mat_original.shape,
+        )
 
     def _create_coo_matrices(self, edges, labels):
         pos_edges = edges[labels == 1]
@@ -60,7 +74,9 @@ class BalancedSampler:
         return self._edge_list_to_coo(pos_edges), self._edge_list_to_coo(neg_edges)
 
     def _build_coo(self, edges, labels):
-        return sp.coo_matrix((labels, (edges[:, 0], edges[:, 1])), shape=self.null_mask.shape)
+        return sp.coo_matrix(
+            (labels, (edges[:, 0], edges[:, 1])), shape=self.null_mask.shape
+        )
 
     def _update_unified_matrix(self):
         A_dc = pd.DataFrame(
@@ -69,7 +85,9 @@ class BalancedSampler:
             columns=self.A_cg.index,
         )
         indexes = list(A_dc.index) + list(self.A_cg.index) + list(self.A_dg.columns)
-        base = pd.DataFrame(np.zeros([len(indexes), len(indexes)]), index=indexes, columns=indexes)
+        base = pd.DataFrame(
+            np.zeros([len(indexes), len(indexes)]), index=indexes, columns=indexes
+        )
 
         for df, transpose in [(self.A_cg, True), (A_dc, True), (self.A_dg, True)]:
             base.loc[df.index, df.columns] = df
@@ -80,6 +98,7 @@ class BalancedSampler:
         edge_attr = torch.tensor(base.values[base.values.nonzero()])
 
         return edge_index, edge_attr
+
 
 class RandomSampler(object):
     def __init__(

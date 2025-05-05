@@ -19,6 +19,7 @@ if version.parse(torch.__version__) >= version.parse("1.10"):
 
     if torch.cuda.is_available():
         from torch.cuda.amp import GradScaler
+
         autocast_device = "cuda"
         use_autocast = True
     else:
@@ -28,8 +29,11 @@ if version.parse(torch.__version__) >= version.parse("1.10"):
 else:
     # fallback: for environments where autocast is not available
     class DummyAutocast:
-        def __enter__(self): return None
-        def __exit__(self, exc_type, exc_val, exc_tb): pass
+        def __enter__(self):
+            return None
+
+        def __exit__(self, exc_type, exc_val, exc_tb):
+            pass
 
     autocast = DummyAutocast
     GradScaler = lambda: None
@@ -428,7 +432,9 @@ def get_data_dict(sampler, device):
         "edge_attr": sampler.edge_attr.to(device),
         "train_drug": torch.tensor(sampler.train_labels_df["Drug"].values).to(device),
         "train_cell": torch.tensor(sampler.train_labels_df["Cell"].values).to(device),
-        "train_labels": torch.tensor(sampler.train_labels_df["Label"].values).to(device),
+        "train_labels": torch.tensor(sampler.train_labels_df["Label"].values).to(
+            device
+        ),
         "val_drug": torch.tensor(sampler.test_labels_df["Drug"].values).to(device),
         "val_cell": torch.tensor(sampler.test_labels_df["Cell"].values).to(device),
         "val_labels": torch.tensor(sampler.test_labels_df["Label"].values).to(device),
