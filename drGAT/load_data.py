@@ -57,8 +57,8 @@ def _process_gene_expression(exprs, dti, verbose=False):
             f"Top 90% variable genes: \t{len(selected_genes) - len(set(dti['Gene']))}"
         )
         print(f"Total selected genes: \t{len(selected_genes)}")
-    else:
-        print(f"Selected {len(selected_genes)} genes")
+    # else:
+    #     print(f"Selected {len(selected_genes)} genes")
     return exprs[selected_genes]
 
 
@@ -99,12 +99,12 @@ def _print_dataset_stats(drugAct, cells, verbose):
         print(f"AVG Cell binary ratio\t{cell_sensitive_ratio.mean():.3f}")
         print(f"Over 10 entries (drugs)\t{(drugAct.notna().sum(axis=1) > 9).sum()}")
         print(f"Over 10 entries (cells)\t{(drugAct.notna().sum(axis=0) > 9).sum()}")
-    else:
-        print(f"Dataset size: {len(drugAct.index)} drugs x {len(cells)} cells")
-        print(f"Total responses: {drugAct.notna().sum().sum()}")
-        print(
-            f"Responses distribution: {(drugAct == 1).sum().sum()} sensitive, {(drugAct == 0).sum().sum()} resistant"
-        )
+    # else:
+    #     print(f"Dataset size: {len(drugAct.index)} drugs x {len(cells)} cells")
+    #     print(f"Total responses: {drugAct.notna().sum().sum()}")
+    #     print(
+    #         f"Responses distribution: {(drugAct == 1).sum().sum()} sensitive, {(drugAct == 0).sum().sum()} resistant"
+    #     )
 
 
 def _process_dti_data(drugAct, exprs, verbose, is_nci):
@@ -124,14 +124,6 @@ def _process_dti_data(drugAct, exprs, verbose, is_nci):
             .replace(" ", "")
             .lower()
             for i in drugAct.index
-        }
-        normalized_dti = {
-            i.replace("-", "")
-            .replace(".", "")
-            .replace("/", "")
-            .replace(" ", "")
-            .lower()
-            for i in dti[drug_col]
         }
         # Create mapping between normalized and original names
         drug_map = {
@@ -299,10 +291,12 @@ def _load_dataset(path, is_zero_pad, verbose, is_nci):
 
     print("Done!")
     return (
-        drugAct,
-        sp.coo_matrix(drugAct).data.shape[0],
-        (drugAct.isna()).astype(int),
+        drugAct.T,
+        (drugAct.isna()).astype(int).T,
         *tensors,
         A_cg,
         A_dg,
     )
+
+# How to use
+# res, null_mask, S_d, S_c, S_g, drug_feature, gene_norm_gene, gene_norm_cell, A_cg, A_dg = load_data(data="nci", is_zero_pad=True, verbose=True)
