@@ -8,11 +8,7 @@ methods = ["GAT", "GATv2", "Transformer"]
 datasets = ["nci", "ctrp", "gdsc1", "gdsc2"]
 
 # 略称マッピング
-method_short = {
-    "GAT": "G",
-    "GATv2": "v",
-    "Transformer": "t"
-}
+method_short = {"GAT": "G", "GATv2": "v", "Transformer": "t"}
 
 template = """#!/bin/bash
 #SBATCH --mem=50gb
@@ -38,4 +34,3 @@ for m in methods:
         short = method_short[m]
         with open(f"jobs/run_{short}_{d}.sh", "w") as f:
             f.write(template.format(method=m, data=d, short=short))
-
