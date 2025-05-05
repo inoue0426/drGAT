@@ -23,6 +23,27 @@ def init_seeds(seed=0):
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
+def get_all_edges_and_labels(res, null_mask):
+    # 形状チェック
+    assert res.shape == null_mask.shape, "res and null_mask must have the same shape"
+
+    # Positive: res == 1 AND null_mask == 0
+    pos_mask = np.logical_and(res == 1, null_mask == 0)
+    pos_row, pos_col = np.where(pos_mask)
+    pos_edges = np.vstack((pos_row, pos_col)).T
+    pos_labels = np.ones(len(pos_edges), dtype=int)
+
+    # Negative: res == 0 AND null_mask == 0
+    neg_mask = np.logical_and(res == 0, null_mask == 0)
+    neg_row, neg_col = np.where(neg_mask)
+    neg_edges = np.vstack((neg_row, neg_col)).T
+    neg_labels = np.zeros(len(neg_edges), dtype=int)
+
+    # 統合して返す
+    all_edges = np.vstack((pos_edges, neg_edges))
+    all_labels = np.concatenate((pos_labels, neg_labels))
+    return all_edges, all_labels
+
 
 def distribute_compute(
     lr_list,
