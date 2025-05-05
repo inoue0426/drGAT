@@ -1,14 +1,14 @@
+import argparse
 import gc
 import os
 import sys
-import argparse
 
 import numpy as np
 import optuna
 import pandas as pd
 import torch
-from tqdm import tqdm
 from sklearn.model_selection import KFold
+from tqdm import tqdm
 
 current_dir = os.getcwd()
 parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
@@ -18,17 +18,22 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 from drGAT import drGAT
 from drGAT.load_data import load_data
-from drGAT.sampler import BalancedSampler
-from drGAT.myutils import get_all_edges_and_labels
 from drGAT.metrics import compute_metrics_stats
+from drGAT.myutils import get_all_edges_and_labels
+from drGAT.sampler import BalancedSampler
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--method", type=str, choices=["GAT", "GATv2", "Transformer"], default="GATv2")
-parser.add_argument("--data", type=str, choices=["gdsc1", "gdsc2", "ctrp", "nci"], default="nci")
+parser.add_argument(
+    "--method", type=str, choices=["GAT", "GATv2", "Transformer"], default="GATv2"
+)
+parser.add_argument(
+    "--data", type=str, choices=["gdsc1", "gdsc2", "ctrp", "nci"], default="nci"
+)
 args = parser.parse_args()
 
 method = args.method
 data = args.data
+
 
 def suggest_hyperparams(trial, S_d, S_c, S_g):
     hidden1 = trial.suggest_int("hidden1", 256, 1024)
@@ -51,19 +56,24 @@ def suggest_hyperparams(trial, S_d, S_c, S_g):
         "lr": trial.suggest_float("lr", 1e-5, 1e-2, log=True),
         "weight_decay": trial.suggest_float("weight_decay", 1e-6, 1e-2, log=True),
         "scheduler": trial.suggest_categorical("scheduler", [None, "Cosine"]),
-        "norm_type": trial.suggest_categorical("norm_type", ["GraphNorm", "BatchNorm", "LayerNorm"]),
+        "norm_type": trial.suggest_categorical(
+            "norm_type", ["GraphNorm", "BatchNorm", "LayerNorm"]
+        ),
         "gnn_layer": method,
     }
 
     if params["scheduler"] == "Cosine":
         min_epoch_div = max(1, params["epochs"] // 5)
         max_epoch_div = max(min_epoch_div + 1, params["epochs"] // 2)
-        params["T_max"] = trial.suggest_int("T_max", low=min_epoch_div, high=max_epoch_div)
+        params["T_max"] = trial.suggest_int(
+            "T_max", low=min_epoch_div, high=max_epoch_div
+        )
 
         if params["T_max"] <= 0:
             raise optuna.TrialPruned(f"Invalid T_max: {params['T_max']}")
 
     return params
+
 
 def handle_optuna_errors(e, trial):
     msg = str(e)
@@ -83,12 +93,22 @@ def handle_optuna_errors(e, trial):
         print(f"Unexpected error in trial {trial.number}: {msg}")
         raise e
 
+
 def objective(trial):
     try:
         is_zero_pad = trial.suggest_categorical("is_zero_pad", [True, False])
-        drugAct, null_mask, S_d, S_c, S_g, drug_feature, gene_norm_gene, gene_norm_cell, A_cg, A_dg = load_data(
-            data, is_zero_pad=is_zero_pad
-        )
+        (
+            drugAct,
+            null_mask,
+            S_d,
+            S_c,
+            S_g,
+            drug_feature,
+            gene_norm_gene,
+            gene_norm_cell,
+            A_cg,
+            A_dg,
+        ) = load_data(data, is_zero_pad=is_zero_pad)
 
         params = suggest_hyperparams(trial, S_d, S_c, S_g)
 
@@ -100,8 +120,17 @@ def objective(trial):
 
         for train_idx, test_idx in tqdm(kf.split(all_edges)):
             sampler = BalancedSampler(
-                drugAct, all_edges, all_labels, train_idx, test_idx,
-                null_mask, S_d, S_c, S_g, A_cg, A_dg
+                drugAct,
+                all_edges,
+                all_labels,
+                train_idx,
+                test_idx,
+                null_mask,
+                S_d,
+                S_c,
+                S_g,
+                A_cg,
+                A_dg,
             )
 
             (
@@ -116,8 +145,12 @@ def objective(trial):
                 _,
             ) = drGAT.train(sampler, params=params, device=device, verbose=False)
 
-            true_datas = pd.concat([true_datas, pd.DataFrame(true_data).T], ignore_index=True)
-            predict_datas = pd.concat([predict_datas, pd.DataFrame(predict_data).T], ignore_index=True)
+            true_datas = pd.concat(
+                [true_datas, pd.DataFrame(true_data).T], ignore_index=True
+            )
+            predict_datas = pd.concat(
+                [predict_datas, pd.DataFrame(predict_data).T], ignore_index=True
+            )
 
         metrics_result = compute_metrics_stats(
             trial=trial,
@@ -129,6 +162,7 @@ def objective(trial):
 
     except Exception as e:
         handle_optuna_errors(e, trial)
+
 
 if __name__ == "__main__":
     study = optuna.create_study(
