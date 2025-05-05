@@ -50,7 +50,7 @@ cd $SLURM_SUBMIT_DIR
 source /data/$USER/conda/etc/profile.d/conda.sh && source /data/$USER/conda/etc/profile.d/mamba.sh
 conda activate genex
 
-python run_GAT.py --method {method} --data {data}
+python run_drGAT.py --method {method} --data {data}
 """
 
 # スクリプト生成
