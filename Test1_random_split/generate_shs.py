@@ -1,12 +1,23 @@
-import os
 import argparse
+import os
 
 # 引数
 parser = argparse.ArgumentParser(description="Generate Slurm job scripts.")
-parser.add_argument("-g", "--gpu", type=str, default="v100x", choices=["a100", "v100x"],
-                    help="GPU type to request (a100 or v100x)")
-parser.add_argument("-p", "--partition", type=str, default="gpu",
-                    help="Partition to submit to (default: gpu)")
+parser.add_argument(
+    "-g",
+    "--gpu",
+    type=str,
+    default="v100x",
+    choices=["a100", "v100x"],
+    help="GPU type to request (a100 or v100x)",
+)
+parser.add_argument(
+    "-p",
+    "--partition",
+    type=str,
+    default="gpu",
+    help="Partition to submit to (default: gpu)",
+)
 args = parser.parse_args()
 
 # ディレクトリ
@@ -51,14 +62,15 @@ for m in methods:
         p_short = args.partition
 
         with open(f"jobs/run_{m_short}_{d_short}.sh", "w") as f:
-            f.write(template.format(
-                m=m_short,
-                d=d_short,
-                g=g_short,
-                p=p_short,
-                method=m,
-                data=d,
-                gpu_type=args.gpu,
-                partition=args.partition
-            ))
-
+            f.write(
+                template.format(
+                    m=m_short,
+                    d=d_short,
+                    g=g_short,
+                    p=p_short,
+                    method=m,
+                    data=d,
+                    gpu_type=args.gpu,
+                    partition=args.partition,
+                )
+            )
