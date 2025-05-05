@@ -13,19 +13,27 @@ from torch.optim import lr_scheduler
 from torch_geometric.nn import GATConv, GATv2Conv, GraphNorm, TransformerConv
 from tqdm import tqdm
 
-# AMP（自動混合精度）の互換処理
+# Compatibility handling for AMP (Automatic Mixed Precision)
 if version.parse(torch.__version__) >= version.parse("1.10"):
-    from torch.cuda.amp import GradScaler, autocast
+    from torch.amp import autocast  # autocast is imported here for common use
 
-    use_autocast = True
+    if torch.cuda.is_available():
+        from torch.cuda.amp import GradScaler
+        autocast_device = "cuda"
+        use_autocast = True
+    else:
+        GradScaler = lambda: None  # dummy scaler
+        autocast_device = "cpu"
+        use_autocast = True
 else:
-    # fallback: autocast が使えない環境用
+    # fallback: for environments where autocast is not available
     class DummyAutocast:
-        def __enter__(self):
-            return None
+        def __enter__(self): return None
+        def __exit__(self, exc_type, exc_val, exc_tb): pass
 
-        def __exit__(self, exc_type, exc_val, exc_tb):
-            pass
+    autocast = DummyAutocast
+    GradScaler = lambda: None
+    use_autocast = False
 
     autocast = DummyAutocast
     GradScaler = lambda: None  # dummy scaler
@@ -411,12 +419,12 @@ def get_data_dict(sampler, device):
         "gene": sampler.S_g.to(device),
         "edge_index": sampler.edge_index.to(device),
         "edge_attr": sampler.edge_attr.to(device),
-        "train_drug": torch.tensor(sampler.train_labels["Drug"].values).to(device),
-        "train_cell": torch.tensor(sampler.train_labels["Cell"].values).to(device),
-        "train_labels": torch.tensor(sampler.train_labels["Label"].values).to(device),
-        "val_drug": torch.tensor(sampler.test_labels["Drug"].values).to(device),
-        "val_cell": torch.tensor(sampler.test_labels["Cell"].values).to(device),
-        "val_labels": torch.tensor(sampler.test_labels["Label"].values).to(device),
+        "train_drug": torch.tensor(sampler.train_labels_df["Drug"].values).to(device),
+        "train_cell": torch.tensor(sampler.train_labels_df["Cell"].values).to(device),
+        "train_labels": torch.tensor(sampler.train_labels_df["Label"].values).to(device),
+        "val_drug": torch.tensor(sampler.test_labels_df["Drug"].values).to(device),
+        "val_cell": torch.tensor(sampler.test_labels_df["Cell"].values).to(device),
+        "val_labels": torch.tensor(sampler.test_labels_df["Label"].values).to(device),
     }
 
 
@@ -465,7 +473,7 @@ def train_one_epoch(
     model.train()
     optimizer.zero_grad()
 
-    with autocast():
+    with autocast(autocast_device):
         outputs, attention = model(
             drug, cell, gene, edge_index, edge_attr, train_drug, train_cell
         )
@@ -511,7 +519,7 @@ def validate_model(
 ):
     model.eval()
     with torch.no_grad():
-        with autocast():
+        with autocast(autocast_device):
             outputs, attention = model(
                 drug, cell, gene, edge_index, edge_attr, val_drug, val_cell
             )
@@ -572,7 +580,7 @@ def eval(model, data, device=None):
 
     model.eval()
     with torch.no_grad():
-        with autocast():
+        with autocast(autocast_device):
             outputs, test_attention = model(
                 drug, cell, gene, edge_index, edge_attr, test_drug, test_cell
             )
