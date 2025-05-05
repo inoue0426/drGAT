@@ -78,6 +78,7 @@ class drGAT(Module):
         - n_layers: Number of GNN layers
         - gnn_layer: Type of GNN layer to use ("GAT", "GATv2", or "Transformer")
         - activation: Activation function to use ("relu", "gelu", or "swish")
+        - norm_type: Type of normalization to use ("GraphNorm", "BatchNorm", or "LayerNorm")
     """
 
     def __init__(self, params):
@@ -100,7 +101,7 @@ class drGAT(Module):
 
         # Initialize lists for GNN layers, normalization, and dropout
         self.gat_layers = nn.ModuleList()
-        self.graph_norms = nn.ModuleList()
+        self.norm_layers = nn.ModuleList()
         self.dropouts = nn.ModuleList()
 
         # Configure dimensions for each layer
@@ -125,7 +126,13 @@ class drGAT(Module):
                 )
 
             # Add normalization and dropout layers
-            self.graph_norms.append(GraphNorm(out_channels[i] * heads))
+            if params["norm_type"] == "GraphNorm":
+                self.norm_layers.append(GraphNorm(out_channels[i] * heads))
+            elif params["norm_type"] == "BatchNorm":
+                self.norm_layers.append(nn.BatchNorm1d(out_channels[i] * heads))
+            elif params["norm_type"] == "LayerNorm":
+                self.norm_layers.append(nn.LayerNorm(out_channels[i] * heads))
+
             self.dropouts.append(
                 Dropout(params["dropout1"] if i == 0 else params["dropout2"])
             )
@@ -193,7 +200,7 @@ class drGAT(Module):
 
             # Apply normalization, activation, and dropout
             x = x.to(torch.float32)
-            x = self.dropouts[i](self.activation(self.graph_norms[i](x)))
+            x = self.dropouts[i](self.activation(self.norm_layers[i](x)))
 
         # Extract and concatenate relevant node features
         x = torch.concat(
@@ -446,6 +453,7 @@ def initialize_params(params, drug, cell, gene, is_sample):
         "optimizer": "Adam",
         "weight_decay": 1e-4,
         "scheduler": None,
+        "norm_type": "GraphNorm",
     }
 
     if is_sample:
@@ -570,26 +578,26 @@ def print_binary_classification_metrics(y_true, y_pred):
     return metrics_df
 
 
-def eval(model, data, device=None):
-    if not device:
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# def eval(model, data, device=None):
+#     if not device:
+#         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    drug, cell, gene, edge_index, edge_attr, test_drug, test_cell, test_labels = [
-        x.to(device) if torch.is_tensor(x) else x for x in data
-    ]
+#     drug, cell, gene, edge_index, edge_attr, test_drug, test_cell, test_labels = [
+#         x.to(device) if torch.is_tensor(x) else x for x in data
+#     ]
 
-    model.eval()
-    with torch.no_grad():
-        with autocast(autocast_device):
-            outputs, test_attention = model(
-                drug, cell, gene, edge_index, edge_attr, test_drug, test_cell
-            )
+#     model.eval()
+#     with torch.no_grad():
+#         with autocast(autocast_device):
+#             outputs, test_attention = model(
+#                 drug, cell, gene, edge_index, edge_attr, test_drug, test_cell
+#             )
 
-    probability = outputs.squeeze().float()
-    predict = torch.round(outputs).squeeze().float()
+#     probability = outputs.squeeze().float()
+#     predict = torch.round(outputs).squeeze().float()
 
-    res = print_binary_classification_metrics(
-        test_labels.cpu().detach().numpy(), predict.cpu().detach().numpy()
-    )
+#     res = print_binary_classification_metrics(
+#         test_labels.cpu().detach().numpy(), predict.cpu().detach().numpy()
+#     )
 
-    return probability, res, test_attention
+#     return probability, res, test_attention
