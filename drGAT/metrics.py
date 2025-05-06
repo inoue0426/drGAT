@@ -14,6 +14,9 @@ def get_result(true, pred, data):
         pred_values = pred.loc[i].dropna()
 
         pred_labels = np.round(pred_values)
+        
+        print(pred_labels)
+        print(true_labels)
 
         # 主要メトリクスの計算
         metrics = {
@@ -91,6 +94,9 @@ def compute_metrics_stats(true, pred, trial=None, data=None, target_metrics=None
         ), f"Mismatch: {len(true_labels)} vs {len(pred_values)}"
 
         pred_labels = np.round(pred_values).astype(int)
+            
+        print(pred_labels)
+        print(true_labels)
 
         # メトリクス計算
         metrics = {
@@ -145,9 +151,9 @@ def get_parsed_df(df):
             std_column = base_name + "_std"
             if std_column in df.columns:
                 parsed_data[base_name] = (
-                    round(df[column], 4).astype(str)
+                    round(df[column], 3).astype(str)
                     + " (± "
-                    + round(df[std_column], 4).astype(str)
+                    + round(df[std_column], 3).astype(str)
                     + ")"
                 )
 

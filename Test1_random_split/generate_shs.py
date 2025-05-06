@@ -41,7 +41,7 @@ template = """#!/bin/bash
 #SBATCH --gres=gpu:{gpu_type}:1
 #SBATCH --nodes=1
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=inoue019@umn.edu
+#SBATCH --mail-user=inouey2slurm@gmail.com
 #SBATCH --time=10-00:00:00
 #SBATCH --output=Logs/slurm-%j.out
 
