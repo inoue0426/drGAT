@@ -7,7 +7,7 @@ parser.add_argument(
     "-g",
     "--gpu",
     type=str,
-    default="v100x",
+    default="a100",
     choices=["a100", "v100x"],
     help="GPU type to request (a100 or v100x)",
 )
