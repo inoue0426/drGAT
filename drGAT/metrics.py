@@ -14,7 +14,7 @@ def get_result(true, pred, data):
         pred_values = pred.loc[i].dropna()
 
         pred_labels = np.round(pred_values)
-        
+
         print(pred_labels)
         print(true_labels)
 
@@ -94,7 +94,7 @@ def compute_metrics_stats(true, pred, trial=None, data=None, target_metrics=None
         ), f"Mismatch: {len(true_labels)} vs {len(pred_values)}"
 
         pred_labels = np.round(pred_values).astype(int)
-            
+
         print(pred_labels)
         print(true_labels)
 
