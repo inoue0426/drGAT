@@ -66,6 +66,7 @@ def suggest_hyperparams(trial, S_d, S_c, S_g):
         "norm_type": trial.suggest_categorical(
             "norm_type", ["GraphNorm", "BatchNorm", "LayerNorm"]
         ),
+        "n_layers": trial.suggest_int("n_layers", 2, 4),
         "gnn_layer": method,
         "final_mlp_layers": final_mlp_layers,
         # "residual": trial.suggest_categorical("residual", [True, False]),
