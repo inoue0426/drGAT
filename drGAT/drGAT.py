@@ -108,6 +108,10 @@ class drGAT(Module):
         self.norm_layers = nn.ModuleList()
         self.dropouts = nn.ModuleList()
 
+        self.use_residual = params.get("residual", False)
+        self.attn_dropout = params.get("attention_dropout", 0.0)
+        self.final_mlp_layers = params.get("final_mlp_layers", 1)
+
         # Configure dimensions for each layer
         in_channels = [hidden1] + [hidden2 * heads] * (self.n_layers - 1)
         out_channels = [hidden2] * (self.n_layers - 1) + [hidden3]
@@ -116,17 +120,15 @@ class drGAT(Module):
         for i in range(self.n_layers):
             if self.gnn_layer == "GAT":
                 self.gat_layers.append(
-                    GATConv(in_channels[i], out_channels[i], heads=heads, edge_dim=1)
+                    GATConv(in_channels[i], out_channels[i], heads=heads, edge_dim=1, dropout=self.attn_dropout)
                 )
             elif self.gnn_layer == "GATv2":
                 self.gat_layers.append(
-                    GATv2Conv(in_channels[i], out_channels[i], heads=heads, edge_dim=1)
+                    GATv2Conv(in_channels[i], out_channels[i], heads=heads, edge_dim=1, dropout=self.attn_dropout)
                 )
             elif self.gnn_layer == "Transformer":
                 self.gat_layers.append(
-                    TransformerConv(
-                        in_channels[i], out_channels[i], heads=heads, edge_dim=1
-                    )
+                    TransformerConv(in_channels[i], out_channels[i], heads=heads, edge_dim=1, dropout=self.attn_dropout)
                 )
 
             # Add normalization and dropout layers
@@ -141,14 +143,18 @@ class drGAT(Module):
                 Dropout(params["dropout1"] if i == 0 else params["dropout2"])
             )
 
-        # Final linear layer for prediction
-        self.linear1 = Linear(
-            hidden3 * heads + hidden3 * heads,
-            1,
-        )
-
         # Set activation function
         self.activation = self._get_activation(params.get("activation", "relu"))
+
+        # Final linear layer for prediction
+        mlp_layers = []
+        in_dim = hidden3 * heads + hidden3 * heads
+        for _ in range(self.final_mlp_layers - 1):
+            mlp_layers.append(Linear(in_dim, in_dim))
+            mlp_layers.append(self.activation)
+            mlp_layers.append(Dropout(params["dropout3"]))
+        mlp_layers.append(Linear(in_dim, 1))
+        self.linear1 = nn.Sequential(*mlp_layers)
 
     def _get_activation(self, name):
         """Helper method to get activation function
@@ -192,12 +198,18 @@ class drGAT(Module):
 
         # Apply GNN layers sequentially
         for i in range(self.n_layers):
+            residual = x
+
             x, attention = self.gat_layers[i](
                 x=x,
                 edge_index=edge_index,
                 edge_attr=edge_attr,
                 return_attention_weights=True,
             )
+
+            if self.use_residual:
+                x = x + residual
+
             tmp = get_attention_mat(attention)
             all_attention += tmp
             del attention
