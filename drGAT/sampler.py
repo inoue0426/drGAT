@@ -1,11 +1,13 @@
 # type: ignore
 # ruff: noqa
 
+import os
+
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 import torch
-import os
+
 from .myutils import mask, to_coo_matrix
 
 
@@ -54,8 +56,12 @@ class BalancedSampler:
         self.train_labels = all_labels[train_index]
         self.test_labels = all_labels[test_index]
 
-        self.train_pos, self.train_neg = self._create_coo_matrices(self.train_edges, self.train_labels)
-        self.test_pos, self.test_neg = self._create_coo_matrices(self.test_edges, self.test_labels)
+        self.train_pos, self.train_neg = self._create_coo_matrices(
+            self.train_edges, self.train_labels
+        )
+        self.test_pos, self.test_neg = self._create_coo_matrices(
+            self.test_edges, self.test_labels
+        )
 
         self.train_data = self._build_coo(self.train_edges, self.train_labels)
         self.test_data = self._build_coo(self.test_edges, self.test_labels)
@@ -115,7 +121,10 @@ class BalancedSampler:
         return pd.DataFrame({"Drug": drugs, "Cell": cells, "Label": labels})
 
     def index_to_label(self, row_idx, col_idx):
-        return self.row_map.get(row_idx, f"row{row_idx}"), self.col_map.get(col_idx, f"col{col_idx}")
+        return self.row_map.get(row_idx, f"row{row_idx}"), self.col_map.get(
+            col_idx, f"col{col_idx}"
+        )
+
 
 # class RandomSampler(object):
 #     def __init__(
@@ -296,7 +305,9 @@ class NewSampler:
     ):
         self.adj_mat_original = original_adj_mat
         self.adj_mat = original_adj_mat.values  # ここで確実に NumPy に変換
-        self.null_mask = null_mask.values if isinstance(null_mask, pd.DataFrame) else null_mask
+        self.null_mask = (
+            null_mask.values if isinstance(null_mask, pd.DataFrame) else null_mask
+        )
         self.dim = target_dim  # 0 = row (Cell), 1 = col (Drug)
         self.target_index = target_index
         self.PATH = PATH
@@ -319,7 +330,12 @@ class NewSampler:
             os.makedirs(self.PATH, exist_ok=True)
             idxs_path = os.path.join(self.PATH, "idxs.npy")
             if not os.path.exists(idxs_path):
-                idxs = np.array([np.arange(len(self.adj_mat_original.index)), self.adj_mat_original.index])
+                idxs = np.array(
+                    [
+                        np.arange(len(self.adj_mat_original.index)),
+                        self.adj_mat_original.index,
+                    ]
+                )
                 np.save(idxs_path, idxs)
 
     def _get_target_indices(self, matrix, value):
@@ -344,7 +360,11 @@ class NewSampler:
         return torch.from_numpy(train_data), torch.from_numpy(test_data)
 
     def _sample_train_test_mask(self):
-        neg_value = np.ones(self.adj_mat.shape, dtype=np.float32) - self.adj_mat - self.null_mask
+        neg_value = (
+            np.ones(self.adj_mat.shape, dtype=np.float32)
+            - self.adj_mat
+            - self.null_mask
+        )
         neg_test_mask = np.zeros(self.adj_mat.shape, dtype=np.float32)
 
         target_neg_index = self._get_target_indices(neg_value, 1)
@@ -389,7 +409,9 @@ class NewSampler:
         )
 
         indexes = list(A_dc.columns) + list(self.A_cg.columns) + list(self.A_dg.index)
-        base = pd.DataFrame(np.zeros((len(indexes), len(indexes))), index=indexes, columns=indexes)
+        base = pd.DataFrame(
+            np.zeros((len(indexes), len(indexes))), index=indexes, columns=indexes
+        )
 
         base.loc[self.A_cg.index, self.A_cg.columns] = self.A_cg
         base.loc[self.A_cg.columns, self.A_cg.index] = self.A_cg.T

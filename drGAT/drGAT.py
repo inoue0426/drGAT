@@ -120,15 +120,33 @@ class drGAT(Module):
         for i in range(self.n_layers):
             if self.gnn_layer == "GAT":
                 self.gat_layers.append(
-                    GATConv(in_channels[i], out_channels[i], heads=heads, edge_dim=1, dropout=self.attn_dropout)
+                    GATConv(
+                        in_channels[i],
+                        out_channels[i],
+                        heads=heads,
+                        edge_dim=1,
+                        dropout=self.attn_dropout,
+                    )
                 )
             elif self.gnn_layer == "GATv2":
                 self.gat_layers.append(
-                    GATv2Conv(in_channels[i], out_channels[i], heads=heads, edge_dim=1, dropout=self.attn_dropout)
+                    GATv2Conv(
+                        in_channels[i],
+                        out_channels[i],
+                        heads=heads,
+                        edge_dim=1,
+                        dropout=self.attn_dropout,
+                    )
                 )
             elif self.gnn_layer == "Transformer":
                 self.gat_layers.append(
-                    TransformerConv(in_channels[i], out_channels[i], heads=heads, edge_dim=1, dropout=self.attn_dropout)
+                    TransformerConv(
+                        in_channels[i],
+                        out_channels[i],
+                        heads=heads,
+                        edge_dim=1,
+                        dropout=self.attn_dropout,
+                    )
                 )
 
             # Add normalization and dropout layers
