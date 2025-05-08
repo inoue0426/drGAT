@@ -68,7 +68,7 @@ def suggest_hyperparams(trial, S_d, S_c, S_g):
         ),
         "gnn_layer": method,
         "final_mlp_layers": final_mlp_layers,
-        "residual": trial.suggest_categorical("residual", [True, False]),
+        # "residual": trial.suggest_categorical("residual", [True, False]),
         "attention_dropout": trial.suggest_float(
             "attention_dropout", 0.0, 0.4, step=0.1
         ),
