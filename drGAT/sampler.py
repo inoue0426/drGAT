@@ -41,11 +41,11 @@ class BalancedSampler:
 
         # 保存する idxs
         self.idxs = np.array([np.arange(len(self.row_index)), self.row_index])
-        if self.PATH is not None:
-            os.makedirs(self.PATH, exist_ok=True)
-            idxs_path = os.path.join(self.PATH, "idxs.npy")
-            if not os.path.exists(idxs_path):
-                np.save(idxs_path, self.idxs)
+        # if self.PATH is not None:
+        #     os.makedirs(self.PATH, exist_ok=True)
+        #     idxs_path = os.path.join(self.PATH, "idxs.npy")
+        #     if not os.path.exists(idxs_path):
+        #         np.save(idxs_path, self.idxs)
 
         # 残りの処理はそのまま
         self.all_edges = all_edges
@@ -71,8 +71,8 @@ class BalancedSampler:
 
         self.edge_index, self.edge_attr = self._update_unified_matrix()
 
-        self.train_labels_df = self.get_label_df(self.train_edges, self.train_labels)
-        self.test_labels_df = self.get_label_df(self.test_edges, self.test_labels)
+        self.train_labels_df = self._get_labels(self.train_edges, self.train_labels)
+        self.test_labels_df = self._get_labels(self.test_edges, self.test_labels)
 
     def _get_labels(self, edges, labels):
         return pd.DataFrame({"Drug": edges[:, 0], "Cell": edges[:, 1], "Label": labels})
