@@ -40,12 +40,15 @@ def suggest_hyperparams(trial, S_d, S_c, S_g):
     hidden2 = trial.suggest_int("hidden2", 64, min(512, hidden1))
     hidden3 = trial.suggest_int("hidden3", 32, min(256, hidden2))
 
+    final_mlp_layers = trial.suggest_int("final_mlp_layers", 1, 3)
+
     params = {
         "n_drug": S_d.shape[0],
         "n_cell": S_c.shape[0],
         "n_gene": S_g.shape[0],
         "dropout1": trial.suggest_float("dropout1", 0.1, 0.5, step=0.05),
         "dropout2": trial.suggest_float("dropout2", 0.1, 0.5, step=0.05),
+        "dropout3": trial.suggest_float("dropout3", 0.1, 0.5, step=0.05) if final_mlp_layers >= 2 else 0.0,
         "hidden1": hidden1,
         "hidden2": hidden2,
         "hidden3": hidden3,
@@ -56,18 +59,17 @@ def suggest_hyperparams(trial, S_d, S_c, S_g):
         "lr": trial.suggest_float("lr", 1e-5, 1e-2, log=True),
         "weight_decay": trial.suggest_float("weight_decay", 1e-6, 1e-2, log=True),
         "scheduler": trial.suggest_categorical("scheduler", [None, "Cosine"]),
-        "norm_type": trial.suggest_categorical(
-            "norm_type", ["GraphNorm", "BatchNorm", "LayerNorm"]
-        ),
+        "norm_type": trial.suggest_categorical("norm_type", ["GraphNorm", "BatchNorm", "LayerNorm"]),
         "gnn_layer": method,
+        "final_mlp_layers": final_mlp_layers,
+        "residual": trial.suggest_categorical("residual", [True, False]),
+        "attention_dropout": trial.suggest_float("attention_dropout", 0.0, 0.4, step=0.05),
     }
 
     if params["scheduler"] == "Cosine":
         min_epoch_div = max(1, params["epochs"] // 5)
         max_epoch_div = max(min_epoch_div + 1, params["epochs"] // 2)
-        params["T_max"] = trial.suggest_int(
-            "T_max", low=min_epoch_div, high=max_epoch_div
-        )
+        params["T_max"] = trial.suggest_int("T_max", low=min_epoch_div, high=max_epoch_div)
 
         if params["T_max"] <= 0:
             raise optuna.TrialPruned(f"Invalid T_max: {params['T_max']}")
@@ -103,9 +105,9 @@ def objective(trial):
             S_d,
             S_c,
             S_g,
-            drug_feature,
-            gene_norm_gene,
-            gene_norm_cell,
+            _,
+            _,
+            _,
             A_cg,
             A_dg,
         ) = load_data(data, is_zero_pad=is_zero_pad)
