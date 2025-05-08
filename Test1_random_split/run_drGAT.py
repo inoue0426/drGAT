@@ -36,9 +36,9 @@ data = args.data
 
 
 def suggest_hyperparams(trial, S_d, S_c, S_g):
-    hidden1 = trial.suggest_int("hidden1", 256, 1024)
-    hidden2 = trial.suggest_int("hidden2", 64, min(512, hidden1))
-    hidden3 = trial.suggest_int("hidden3", 32, min(256, hidden2))
+    hidden1 = trial.suggest_int("hidden1", 256, 512)
+    hidden2 = trial.suggest_int("hidden2", 64, min(256, hidden1))
+    hidden3 = trial.suggest_int("hidden3", 32, min(128, hidden2))
 
     final_mlp_layers = trial.suggest_int("final_mlp_layers", 1, 3)
 
@@ -46,17 +46,17 @@ def suggest_hyperparams(trial, S_d, S_c, S_g):
         "n_drug": S_d.shape[0],
         "n_cell": S_c.shape[0],
         "n_gene": S_g.shape[0],
-        "dropout1": trial.suggest_float("dropout1", 0.1, 0.5, step=0.05),
-        "dropout2": trial.suggest_float("dropout2", 0.1, 0.5, step=0.05),
+        "dropout1": trial.suggest_float("dropout1", 0.1, 0.5, step=0.1),
+        "dropout2": trial.suggest_float("dropout2", 0.1, 0.5, step=0.1),
         "dropout3": (
-            trial.suggest_float("dropout3", 0.1, 0.5, step=0.05)
+            trial.suggest_float("dropout3", 0.1, 0.5, step=0.1)
             if final_mlp_layers >= 2
             else 0.0
         ),
         "hidden1": hidden1,
         "hidden2": hidden2,
         "hidden3": hidden3,
-        "epochs": trial.suggest_int("epochs", 100, 10000, step=100),
+        "epochs": trial.suggest_int("epochs", 300, 1000, step=100),
         "heads": trial.suggest_int("heads", 2, 8),
         "activation": trial.suggest_categorical("activation", ["relu", "gelu"]),
         "optimizer": trial.suggest_categorical("optimizer", ["Adam", "AdamW"]),
@@ -70,7 +70,7 @@ def suggest_hyperparams(trial, S_d, S_c, S_g):
         "final_mlp_layers": final_mlp_layers,
         "residual": trial.suggest_categorical("residual", [True, False]),
         "attention_dropout": trial.suggest_float(
-            "attention_dropout", 0.0, 0.4, step=0.05
+            "attention_dropout", 0.0, 0.4, step=0.1
         ),
     }
 
