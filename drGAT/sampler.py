@@ -333,11 +333,11 @@ class NewSampler:
         rows, cols = np.where(mask)
         values = data[mask]
 
-        return pd.DataFrame({
-            "Drug": cols,
-            "Cell": rows,
-            "Label": values.cpu().numpy()
-        }).sort_values(["Drug", "Cell"]).reset_index(drop=True)
+        return (
+            pd.DataFrame({"Drug": cols, "Cell": rows, "Label": values.cpu().numpy()})
+            .sort_values(["Drug", "Cell"])
+            .reset_index(drop=True)
+        )
 
     def _save_index_mapping(self):
         if self.PATH is not None:
@@ -418,9 +418,10 @@ class NewSampler:
         return pd.DataFrame({"Drug": col_labels, "Cell": row_labels, "Label": values})
 
     def _update_unified_matrix(self):
-        A_dc = pd.DataFrame(self.train_data.numpy(),
+        A_dc = pd.DataFrame(
+            self.train_data.numpy(),
             index=self.adj_mat_original.index,  # 正しいCell順
-            columns=self.adj_mat_original.columns   # 正しいDrug順
+            columns=self.adj_mat_original.columns,  # 正しいDrug順
         ).fillna(0)
 
         indexes = list(A_dc.index) + list(self.A_cg.columns) + list(self.A_dg.index)
