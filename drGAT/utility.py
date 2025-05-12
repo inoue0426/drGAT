@@ -101,3 +101,27 @@ def normalize_similarity_matrix(df, gamma=None):
     )
 
     return normalized_df
+
+# --- フィルター判定用関数 ---
+def filter_target(label_vec, min_total=10, min_pos_ratio=0.02, min_neg_ratio=0.02):
+    valid_idx = ~np.isnan(label_vec)
+    label_vec = label_vec[valid_idx]
+
+    pos_count = (label_vec == 1).sum()
+    neg_count = (label_vec == 0).sum()
+    total = pos_count + neg_count
+
+    if total == 0:
+        return False, 'no_valid_data', pos_count, neg_count, total
+    if total < min_total:
+        return False, 'few_total_samples', pos_count, neg_count, total
+    
+    pos_ratio = pos_count / total
+    if pos_ratio < min_pos_ratio:
+        return False, 'low_positive_ratio', pos_count, neg_count, total
+    
+    neg_ratio = neg_count / total
+    if neg_ratio < min_neg_ratio:
+        return False, 'low_negative_ratio', pos_count, neg_count, total
+
+    return True, 'passed', pos_count, neg_count, total
