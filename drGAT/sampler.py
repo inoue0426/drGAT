@@ -323,7 +323,21 @@ class NewSampler:
         self.train_labels = self._get_labels(is_train=True)
         self.test_labels = self._get_labels(is_train=False)
 
+        self.train_labels_df = self._get_label_df(self.train_data, self.train_mask)
+        self.test_labels_df = self._get_label_df(self.test_data, self.test_mask)
+
         self.edge_index, self.edge_attr = self._update_unified_matrix()
+
+    def _get_label_df(self, data, mask):
+        mask = mask.to(bool).cpu().numpy()
+        rows, cols = np.where(mask)
+        values = data[mask]
+
+        return pd.DataFrame({
+            "Drug": cols,
+            "Cell": rows,
+            "Label": values.cpu().numpy()
+        }).sort_values(["Drug", "Cell"]).reset_index(drop=True)
 
     def _save_index_mapping(self):
         if self.PATH is not None:
@@ -404,11 +418,12 @@ class NewSampler:
         return pd.DataFrame({"Drug": col_labels, "Cell": row_labels, "Label": values})
 
     def _update_unified_matrix(self):
-        A_dc = pd.DataFrame(
-            self.adj_mat.T, columns=self.A_cg.index, index=self.A_dg.index
-        )
+        A_dc = pd.DataFrame(self.train_data.numpy(),
+            index=self.adj_mat_original.index,  # 正しいCell順
+            columns=self.adj_mat_original.columns   # 正しいDrug順
+        ).fillna(0)
 
-        indexes = list(A_dc.columns) + list(self.A_cg.columns) + list(self.A_dg.index)
+        indexes = list(A_dc.index) + list(self.A_cg.columns) + list(self.A_dg.index)
         base = pd.DataFrame(
             np.zeros((len(indexes), len(indexes))), index=indexes, columns=indexes
         )
