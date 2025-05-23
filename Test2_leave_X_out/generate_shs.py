@@ -18,6 +18,15 @@ parser.add_argument(
     default="gpu",
     help="Partition to submit to (default: gpu)",
 )
+
+parser.add_argument(
+    "-j",
+    "--n_jobs",
+    type=int,
+    default=3,
+    help="Number of jobs to pass to run_drGAT.py (default: 3)",
+)
+
 args = parser.parse_args()
 
 # ディレクトリ
@@ -36,23 +45,25 @@ tasks = ['cell', 'drug']
 
 # テンプレート
 template = """#!/bin/bash
-#SBATCH --mem=50gb
+#SBATCH --mem=40gb
 #SBATCH --requeue
 #SBATCH --job-name={m}_{d}_{t}.{g}.{p}
 #SBATCH --partition={partition}
 #SBATCH --gres=gpu:{gpu_type}:1
 #SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=6
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=inouey2slurm@gmail.com
 #SBATCH --time=10-00:00:00
 #SBATCH --output=Logs/slurm-%j.out
 
+umask 002
+
 cd $SLURM_SUBMIT_DIR  
+module load singularity
 
-source /data/$USER/conda/etc/profile.d/conda.sh && source /data/$USER/conda/etc/profile.d/mamba.sh
-conda activate genex
-
-python run_drGAT.py --method {method} --data {data} --target_dim {target_dim}
+singularity exec --nv --bind /data/LunaLab/drGAT:/workspace ../../pyg_container.sif python /workspace/Test2_leave_X_out/run_drGAT.py --method {method} --data {data} --target_dim {target_dim} --n_jobs {n_jobs}
 """
 
 # スクリプト生成
@@ -78,5 +89,6 @@ for m in methods:
                         target_dim=i,
                         gpu_type=args.gpu,
                         partition=args.partition,
+                        n_jobs=args.n_jobs,
                     )
                 )

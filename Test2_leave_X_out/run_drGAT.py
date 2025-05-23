@@ -3,6 +3,11 @@ import os
 import sys
 import argparse
 from pathlib import Path
+from joblib import Parallel, delayed
+
+import time
+
+MAX_TRIAL_DURATION = 172800  # 48時間 = 2日（秒単位）
 
 import numpy as np
 import pandas as pd
@@ -11,10 +16,13 @@ from sklearn.model_selection import KFold
 from tqdm import tqdm
 import optuna
 
-# Add path to drGAT package
-current_dir = os.getcwd()
-parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
-sys.path.append(parent_dir)
+# Add path to drGAT package (Singularity/Local 両対応)
+if os.path.exists("/workspace/drGAT"):
+    sys.path.append("/workspace")
+else:
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
+    sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -35,30 +43,19 @@ parser.add_argument(
     "--target_dim", type=int, choices=[0, 1], default=0
 )
 
+parser.add_argument(
+    "--n_jobs", type=int, default=3, help="Number of parallel jobs for target processing"
+)
+
 args = parser.parse_args()
 
 method = args.method
 data = args.data
 target_dim = args.target_dim
-
-# Load data
-(
-    res,
-    null_mask,
-    S_d,
-    S_c,
-    S_g,
-    drug_feature,
-    gene_norm_gene,
-    gene_norm_cell,
-    A_cg,
-    A_dg,
-) = load_data(data)
-cell_sum = np.sum(res, axis=1)
-drug_sum = np.sum(res, axis=0)
+n_jobs = args.n_jobs
 
 def drGAT_new(
-    res_mat,
+    res,
     null_mask,
     target_dim,
     target_index,
@@ -163,7 +160,7 @@ def objective(trial):
         # Data Load
         is_zero_pad = trial.suggest_categorical("is_zero_pad", [True, False])
         (
-            drugAct,
+            res,
             null_mask,
             S_d,
             S_c,
@@ -178,6 +175,23 @@ def objective(trial):
         # Suggest Hyperparameters
         params = suggest_hyperparams(trial, S_d, S_c, S_g)
 
+
+        def run_single_target(target_index):
+            true_data, predict_data = drGAT_new(
+                res=res,
+                null_mask=null_mask.values,
+                target_dim=target_dim,
+                target_index=target_index,
+                S_d=S_d,
+                S_c=S_c,
+                S_g=S_g,
+                A_cg=A_cg,
+                A_dg=A_dg,
+                params=params,
+                device=device,
+            )
+            return true_data, predict_data
+    
         samples = res.shape[target_dim]
         
         passed_targets = []
@@ -197,25 +211,21 @@ def objective(trial):
         for idx, reason, pos, neg, total in skipped_targets:
             print(f"Target {idx}: skipped because {reason} (total={total}, pos={pos}, neg={neg})")
         
-        # Training
+    
+        # Joblib並列実行（注意: GPUメモリに余裕がないなら n_jobs=1）
+        try:
+            results = Parallel(n_jobs=n_jobs)(
+                delayed(run_single_target)(target_index)
+                for target_index in tqdm(passed_targets)
+            )
+        except Exception as e:
+            handle_optuna_errors(e, trial)
+        
+        # 結果を統合
         true_datas = pd.DataFrame()
         predict_datas = pd.DataFrame()
         
-        for target_index in tqdm(passed_targets):
-            true_data, predict_data = drGAT_new(
-                res_mat=res,
-                null_mask=null_mask.values,
-                target_dim=target_dim,
-                target_index=target_index,
-                S_d=S_d,
-                S_c=S_c,
-                S_g=S_g,
-                A_cg=A_cg,
-                A_dg=A_dg,
-                params=params,
-                device=device,
-            )
-        
+        for true_data, predict_data in results:
             true_datas = pd.concat([true_datas, pd.DataFrame(true_data).T], ignore_index=True)
             predict_datas = pd.concat([predict_datas, pd.DataFrame(predict_data).T], ignore_index=True)
 
@@ -232,12 +242,16 @@ def objective(trial):
         handle_optuna_errors(e, trial)
 
 # Create and run Optuna study
+optuna_db_path = f"/workspace/Test2_leave_X_out/{method}_{data}_{'cell' if target_dim == 0 else 'drug'}.sqlite3"
+
 study = optuna.create_study(
     directions=["maximize"] * 4,
     sampler=optuna.samplers.NSGAIISampler(),
     pruner=optuna.pruners.HyperbandPruner(),
-    storage=f"sqlite:///{method}_{data}_{'cell' if target_dim == 0 else 'drug'}.sqlite3",
+    storage=f"sqlite:///{optuna_db_path}",
     study_name=method,
     load_if_exists=True,
 )
+
 study.optimize(objective, n_trials=1000)
+
