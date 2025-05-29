@@ -34,7 +34,7 @@ gpu_short = {"a100": "a", "v100x": "v1"}
 
 # テンプレート
 template = """#!/bin/bash
-#SBATCH --mem=50gb
+#SBATCH --mem=20gb
 #SBATCH --requeue
 #SBATCH --job-name={m}_{d}.{g}.{p}
 #SBATCH --partition={partition}
