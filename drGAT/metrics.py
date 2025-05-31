@@ -15,9 +15,6 @@ def get_result(true, pred, data):
 
         pred_labels = np.round(pred_values)
 
-        print(pred_labels)
-        print(true_labels)
-
         # 主要メトリクスの計算
         metrics = {
             # 基本指標

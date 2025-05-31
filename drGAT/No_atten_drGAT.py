@@ -282,31 +282,23 @@ def train(
 
 
 def get_data_dict(sampler, device):
-    data = {
+    # Move tensors to device
+    return {
         "drug": sampler.S_d.to(device),
         "cell": sampler.S_c.to(device),
         "gene": sampler.S_g.to(device),
         "edge_index": sampler.edge_index.to(device),
         "edge_attr": sampler.edge_attr.to(device),
-        "train_drug": torch.tensor(sampler.train_labels["Drug"].values).to(device),
-        "train_cell": torch.tensor(sampler.train_labels["Cell"].values).to(device),
-        "train_labels": torch.tensor(sampler.train_labels["Label"].values)
-        .to(torch.float)
-        .to(device),
-        "val_drug": torch.tensor(sampler.test_labels["Drug"].values).to(device),
-        "val_cell": torch.tensor(sampler.test_labels["Cell"].values).to(device),
-        "val_labels": torch.tensor(sampler.test_labels["Label"].values)
-        .to(torch.float)
-        .to(device),
+        "train_drug": torch.tensor(sampler.train_labels_df["Drug"].values).to(device),
+        "train_cell": torch.tensor(sampler.train_labels_df["Cell"].values).to(device),
+        "train_labels": torch.tensor(sampler.train_labels_df["Label"].values).to(
+            device
+        ),
+        "val_drug": torch.tensor(sampler.test_labels_df["Drug"].values).to(device),
+        "val_cell": torch.tensor(sampler.test_labels_df["Cell"].values).to(device),
+        "val_labels": torch.tensor(sampler.test_labels_df["Label"].values).to(device),
     }
 
-    # NaNを検出して修正
-    for key, tensor in data.items():
-        if torch.is_tensor(tensor) and torch.isnan(tensor).any():
-            print(f"NaN detected in {key}, replacing with 0.")
-            data[key] = tensor.nan_to_num()
-
-    return data
 
 
 def initialize_params(params, drug, cell, gene, is_sample):
@@ -347,9 +339,9 @@ def train_one_epoch(
     model.train()
     optimizer.zero_grad()
 
-    with autocast(device_type=device.type):
-        outputs = model(drug, cell, gene, edge_index, edge_attr, train_drug, train_cell)
-        loss = criterion(outputs.squeeze(), train_labels)
+#     with autocast(device_type=device.type):
+    outputs = model(drug, cell, gene, edge_index, edge_attr, train_drug, train_cell)
+    loss = criterion(outputs.squeeze(), train_labels.float())
 
     train_losses.append(loss.item())
 
@@ -382,15 +374,15 @@ def validate_model(
 ):
     model.eval()
     with torch.no_grad():
-        with autocast(device_type=device.type):
-            outputs = model(drug, cell, gene, edge_index, edge_attr, val_drug, val_cell)
+#         with autocast(device_type=device.type):
+        outputs = model(drug, cell, gene, edge_index, edge_attr, val_drug, val_cell)
 
-            # NaNチェック
-            if torch.isnan(outputs).any():
-                print("NaN detected in model outputs!")
-                print("Outputs:", outputs)
+        # NaNチェック
+        if torch.isnan(outputs).any():
+            print("NaN detected in model outputs!")
+            print("Outputs:", outputs)
 
-            loss = criterion(outputs.squeeze(), val_labels)
+        loss = criterion(outputs.squeeze(), val_labels.float())
         val_losses.append(loss.item())
 
         outputs = outputs.squeeze().float().cpu()  # ここで次元を調整
