@@ -92,9 +92,6 @@ def compute_metrics_stats(true, pred, trial=None, data=None, target_metrics=None
 
         pred_labels = np.round(pred_values).astype(int)
 
-        print(pred_labels)
-        print(true_labels)
-
         # メトリクス計算
         metrics = {
             "ACC": accuracy_score(true_labels, pred_labels),
