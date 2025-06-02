@@ -14,7 +14,7 @@ def generate_slurm_script(data_name, data_type, partition, output_dir="slurm_scr
 #SBATCH --job-name={job_name}
 #SBATCH --partition={partition}
 #SBATCH --gres={gres}
-#SBATCH --time=01:00:00
+#SBATCH --time=24:00:00
 #SBATCH --mem=10G
 #SBATCH --cpus-per-task=8
 #SBATCH --requeue
