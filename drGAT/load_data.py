@@ -16,7 +16,7 @@ DATA_DIR = PROJECT_ROOT / "data"
 FIGS_DIR = PROJECT_ROOT / "Figs"
 
 
-def load_data(data=None, is_zero_pad=False, verbose=False):
+def load_data(data=None, is_zero_pad=True, verbose=False):
     dataset_paths = {
         "gdsc1": "gdsc1_data",
         "gdsc2": "gdsc2_data",
@@ -115,6 +115,7 @@ def _process_dti_data(drugAct, exprs, verbose, is_nci):
             dti[drug_col].isin(drugAct.index)
             & dti.Gene.isin(set(exprs.columns) & set(dti.Gene))
         ]
+        dti.to_csv('nci_dti.csv')
     else:
         # Normalize drug names by removing special characters and converting to lowercase
         normalized_drugAct = {
@@ -277,17 +278,17 @@ def _load_dataset(path, is_zero_pad, verbose, is_nci):
         drug_sim, cell_sim, gene_sim, drug_feature, gene_norm_gene, gene_norm_cell
     )
 
-    if verbose:
-        print("\nData Statistics:")
-        print("\nDrug Activity:")
-        print(f"Max: {drugAct.values[~np.isnan(drugAct.values)].max():.3f}")
-        print(f"Min: {drugAct.values[~np.isnan(drugAct.values)].min():.3f}")
-        print(f"Mean: {drugAct.values[~np.isnan(drugAct.values)].mean():.3f}")
+    # if verbose:
+    #     print("\nData Statistics:")
+    #     print("\nDrug Activity:")
+    #     print(f"Max: {drugAct.values[~np.isnan(drugAct.values)].max():.3f}")
+    #     print(f"Min: {drugAct.values[~np.isnan(drugAct.values)].min():.3f}")
+    #     print(f"Mean: {drugAct.values[~np.isnan(drugAct.values)].mean():.3f}")
 
-        print("\nGene Expression:")
-        print(f"Max: {exprs.values.max():.3f}")
-        print(f"Min: {exprs.values.min():.3f}")
-        print(f"Mean: {exprs.values.mean():.3f}")
+    #     print("\nGene Expression:")
+    #     print(f"Max: {exprs.values.max():.3f}")
+    #     print(f"Min: {exprs.values.min():.3f}")
+    #     print(f"Mean: {exprs.values.mean():.3f}")
 
     print("Done!")
     return (
