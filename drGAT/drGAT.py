@@ -334,17 +334,12 @@ def train(
 
     # Lists for recording losses
     train_losses, train_accs, val_losses, val_accs = [], [], [], []
-
-    # Best model and early stopping settings
     best_model_state = None
-    early_stopping_counter = 0
-    max_early_stopping = 10
-    early_stopping_epoch = None
 
     # Set epoch range
     epoch_range = range(params["epochs"])
-    if verbose:
-        epoch_range = tqdm(epoch_range)
+    # if verbose:
+    #     epoch_range = tqdm(epoch_range)
 
     for epoch in epoch_range:
         # Train one epoch
@@ -408,24 +403,13 @@ def train(
             best_val_attention = val_attention
             best_val_labels, best_val_prob = val_labels, val_prob
             best_epoch = epoch + 1
-            early_stopping_counter = 0
-        else:
-            early_stopping_counter += 1
-
-        # Early stopping
-        if early_stopping_counter >= max_early_stopping:
-            print(
-                f"Early stopping at epoch {epoch + 1} because validation accuracy did not improve for {max_early_stopping} epochs."
-            )
-            early_stopping_epoch = epoch + 1
-            break
 
         # Log output
-        if verbose:
+        if verbose and (epoch + 1) % 10 == 0:
             print(
                 "epoch:%4d" % (epoch + 1),
-                "train_loss:%.6f" % train_losses[-1],
-                "val_loss:%.6f" % val_losses[-1],
+                "train_loss:%.4f" % train_losses[-1],
+                "val_loss:%.4f" % val_losses[-1],
                 "train_acc:%.4f" % train_accs[-1],
                 "val_acc:%.4f" % val_accs[-1],
             )
@@ -441,14 +425,11 @@ def train(
 
     return (
         model,
-        best_train_attention,
-        best_val_attention,
+        train_attention,
+        val_attention,
         best_val_labels,
         best_val_prob,
         best_metrics,
-        early_stopping_epoch,
-        val_labels,
-        val_prob,
     )
 
 
