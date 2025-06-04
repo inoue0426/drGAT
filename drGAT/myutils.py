@@ -3,6 +3,7 @@
 import itertools as it
 import os
 import time
+import yaml
 
 import numpy as np
 import pandas as pd
@@ -22,6 +23,25 @@ def init_seeds(seed=0):
     # os.environ['PYTHONHASHSEED'] = str(seed)
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
+
+
+def get_model_params(config_type: str, data: str, method: str, config_dir: str = "configs") -> dict:
+    filename = f"{config_type}_params.yaml"
+    path = os.path.join(config_dir, filename)
+
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Config file not found: {path}")
+
+    with open(path, 'r') as f:
+        config = yaml.safe_load(f)
+
+    try:
+        return config[data][method]
+    except KeyError:
+        raise ValueError(f"No config found for data='{data}' and method='{method}' in {filename}")
+
+
+
 
 
 def get_all_edges_and_labels(res, null_mask):
