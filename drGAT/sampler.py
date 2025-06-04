@@ -39,14 +39,6 @@ class BalancedSampler:
         self.row_map = {i: name for i, name in enumerate(self.row_index)}
         self.col_map = {i: name for i, name in enumerate(self.col_index)}
 
-        # 保存する idxs
-        self.idxs = np.array([np.arange(len(self.row_index)), self.row_index])
-        # if self.PATH is not None:
-        #     os.makedirs(self.PATH, exist_ok=True)
-        #     idxs_path = os.path.join(self.PATH, "idxs.npy")
-        #     if not os.path.exists(idxs_path):
-        #         np.save(idxs_path, self.idxs)
-
         # 残りの処理はそのまま
         self.all_edges = all_edges
         self.all_labels = all_labels
@@ -69,7 +61,7 @@ class BalancedSampler:
         self.train_mask = mask(self.train_pos, self.train_neg, dtype=int)
         self.test_mask = mask(self.test_pos, self.test_neg, dtype=bool)
 
-        self.edge_index, self.edge_attr = self._update_unified_matrix()
+        self.edge_index, self.edge_attr, self.index = self._update_unified_matrix()
 
         self.train_labels_df = self._get_labels(self.train_edges, self.train_labels)
         self.test_labels_df = self._get_labels(self.test_edges, self.test_labels)
@@ -113,7 +105,7 @@ class BalancedSampler:
         edge_index = torch.tensor(np.array(base.values.nonzero())).type(torch.int64)
         edge_attr = torch.tensor(base.values[base.values.nonzero()])
 
-        return edge_index, edge_attr
+        return edge_index, edge_attr, base.index
 
     def get_label_df(self, edges, labels):
         drugs = [self.row_map[i] for i in edges[:, 0]]
