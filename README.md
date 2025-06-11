@@ -4,7 +4,7 @@ This is the official implementation of **drGAT: Attention-Guided Gene Assessment
 
 [![arXiv](https://img.shields.io/badge/arXiv-2405.08979-b31b1b.svg)](https://arxiv.org/abs/2405.08979)
 
-The model applies Graph Attention Networks (GAT, GATv2, Transformer) to a heterogeneous network of drugs, cells, and genes.\
+The model utilizes attention-based GNN model (e.g., GAT, GATv2, and Transformer) to analyze a heterogeneous network comprising drugs, cells, and genes.\
 It predicts drug sensitivity and identifies gene-level contributions via attention mechanisms.
 
 ---
