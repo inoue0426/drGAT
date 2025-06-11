@@ -1,131 +1,156 @@
 # drGAT
 
-[![arXiv](https://img.shields.io/badge/arXiv-2405.08979-b31b1b.svg)](https://arxiv.org/abs/2405.08979)
-
-![](Figs/Fig1.png)
-
-This is the official implementation for **drGAT: Attention-Guided Gene Assessment for Drug Response in Drug-Cell-Gene Heterogeneous Network**.  
-
-This model is created to understand how genes influence Drug Response using Graph Attention Networks (GAT) on heterogeneous networks of drugs, cells, and genes. It predicts Drug Response based on the attention coefficients generated during this process. This has been implemented in Python.
-
-## Quick start
-
-This quick start guide demonstrates how to run drGAT predictions on both CPU and GPU, completing the process within seconds.
-
-```shell
-git clone git@github.com:inoue0426/drGAT.git
-cd drGAT
-docker build -t drgat:latest .
-docker run -it -p 9999:9999 inoue0426/drgat
-```
-
-Then access http://localhost:9999/notebooks/Tutorial.ipynb and run all cells.
-
-\* This might require you to increase the memory usage on docker.
-If so, please follow this:
-1. Open Docker Desktop Dashboard
-2. Click on the Settings icon
-3. Navigate to Resources > Advanced
-4. Adjust the Memory slider to increase the limit
-5. Click "Apply & Restart" to save changes
-
-## Input
-
-The model takes the following data structure (please refer to the [notebook](https://github.com/inoue0426/drGAT/blob/main/create_dateset.ipynb) for detailed information):
-
-```python
-data = [
-    drug,          # Drug similarity matrix
-    cell,          # Cell line similarity matrix
-    gene,          # Gene similarity matrix
-    edge_index,    # Graph edge indices
-    train_drug,    # Training set drug indices
-    train_cell,    # Training set cell line indices
-    val_drug,      # Validation set drug indices
-    val_cell,      # Validation set cell line indices
-    train_labels,  # Training set binary labels
-    val_labels     # Validation set binary labels
-]
-```
-
-## Output
-
-### For multiple drugs and cell lines
-
-```python
-predict, res = drGAT.eval(model, test) # Probability of sensitivity and Metrics.
-res # Metrics
-
-| Accuracy | Precision | Recall | F1 Score | True Positive | True Negative | False Positive | False Negative |
-|-----------|-----------|---------|-----------|----------------|---------------|----------------|-----------------|
-| 0.771375 | 0.740881 | 0.783245 | 0.761474 | 1178 | 1312 | 412 | 326 |
-
-predict # Probability
-
-tensor([0.7653, 0.3292, 0.3037,  ..., 0.9121, 0.4277, 0.2037])
-```
-
-### For single drug and cell line
-
-```python
-predict, _ = drGAT.eval(model, test)
-predict
-
-# Probability of sensitivity.
-tensor(0.7653)
-```
 
 
-## Training
-
-Refer to model_training.ipynb to retrain the model. If you want to use your dataset, create_dataset.ipynb might be useful.
 
 
-## Requirement
+This is the official implementation of **drGAT: Attention-Guided Gene Assessment for Drug Response in Drug-Cell-Gene Heterogeneous Network**\
+[[arXiv:2405.08979](https://arxiv.org/abs/2405.08979)]
 
-```
-    "torch==2.0.1",
-    "torch-geometric==2.3.1",
-    "numpy==1.26.4",
-    "matplotlib",
-    "pandas==2.2.2",
-    "jupyter",
-    "ipykernel"
-```
-
-** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
-
-## Environment
-
-Our experiment was conducted on Ubuntu with an NVIDIA A100 Tensor Core GPU.  
-If you want to re-train the model, we recommend using GPUs.
+The model applies Graph Attention Networks (GAT, GATv2, Transformer) to a heterogeneous network of drugs, cells, and genes.\
+It predicts drug sensitivity and identifies gene-level contributions via attention mechanisms.
 
 ---
 
-## Installation
+## 🚀 Quick Start (with [uv](https://github.com/astral-sh/uv))
 
-```shell
-uv venv --python 3.10
-uv pip install -r pyproject.toml
-jupyter notebook --port 9999
+> Requires: Python 3.10 or 3.11
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/inoue0426/drGAT.git
+   cd drGAT
+   ```
+
+2. Run the prediction script (CPU or GPU):
+
+   ```bash
+   chmod +x run_drGAT.py
+   ./run_drGAT.py --task test2 --data nci --method GATv2 --cell_or_drug cell
+   ```
+
+3. Example output:
+
+   ```
+   Using device: cpu
+   Best model found at epoch 2
+   ACC           : 0.511 (±0.009)
+   Precision     : 0.215 (±0.296)
+   Recall        : 0.221 (±0.438)
+   F1            : 0.170 (±0.289)
+   AUROC         : 0.535 (±0.024)
+   AUPR          : 0.532 (±0.029)
+   ```
+
+---
+
+## 📁 Directory Overview
+
+```
+drGAT/                 # Model core implementation
+configs/               # YAML configs for hyperparameters
+Test1_random_split/    # Experiment scripts for random masking
+Test2_leave_X_out/     # Experiment scripts for leave-one-out for entire cell/drug
+preprocess/            # Data wrangling notebooks
+data/                  # Preprocessed input data
 ```
 
-Then access to http://localhost:9999/notebooks/Tutorial.ipynb 
+---
 
-** NOTE: Please ensure the version matches exactly with your GPU/CPU specifications.
+## 📦 Dependencies
 
-## Data
+This project supports two ways of managing dependencies:
 
-Data for this project came from [CellMinerCDB](https://pubmed.ncbi.nlm.nih.gov/30553813/) and is in the [data direcotry](https://github.com/inoue0426/drGAT/tree/main/data) as well as the preprocessing code [here](https://github.com/inoue0426/drGAT/tree/main/preprocess).
+- `uv` script headers for lightweight reproducibility
+- `pyproject.toml` for standard Python project environments
 
-## Citation 
+### 🌀 Option 1: Using [`uv`](https://github.com/astral-sh/uv)
 
+This method enables quick, isolated script execution with dependencies declared directly in your Python script.
+
+```python
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.9, <3.12"
+# dependencies = [
+#     "numpy<2",
+#     "pandas",
+#     "torch",
+#     "torch-geometric",
+#     "scikit-learn",
+#     "tqdm",
+#     "pubchempy",
+#     "seaborn",
+#     "pyyaml",
+#     "packaging",
+#     "rdkit-pypi"
+# ]
+# ///
 ```
+
+#### ✅ Setup & Run
+
+```bash
+# Install uv (if not yet installed)
+pip install uv
+
+# Run your script
+./run_drGAT.py
+```
+
+> Great for reproducible environments and one-file scripts.
+
+### 🧰 Option 2: Using `pyproject.toml`
+
+If you prefer a standard project-based setup with pip, use the following:
+
+```toml
+[project]
+name = "drgat"
+version = "0.1.0"
+description = "Drug response prediction with Graph Transformer"
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "torch>=2.0",
+    "torchvision",
+    "torch-geometric",
+    "scikit-learn",
+    "tqdm",
+    "rdkit",
+    "pubchempy",
+    "pyyaml",
+    "packaging",
+    "seaborn"
+]
+```
+
+#### ✅ Install via pip
+
+```bash
+# (Optional) Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate  # or .venv\Scripts\activate on Windows
+
+# Install dependencies
+pip install .
+```
+
+> Choose whichever workflow fits your development or deployment needs. If unsure, start with `uv` for prototyping.
+
+---
+
+## 📖 Citation
+
+```bibtex
 @article{inoue2024drgat,
   title={drGAT: Attention-Guided Gene Assessment of Drug Response Utilizing a Drug-Cell-Gene Heterogeneous Network},
   author={Inoue, Yoshitaka and Lee, Hunmin and Fu, Tianfan and Luna, Augustin},
-  journal={ArXiv},
-  year={2024},
-  publisher={arXiv}
+  journal={arXiv preprint arXiv:2405.08979},
+  year={2024}
 }
 ```

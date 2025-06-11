@@ -1,14 +1,18 @@
 [project]
 name = "drgat"
 version = "0.1.0"
-readme = "README.md"
-requires-python = ">=3.12"
+description = "Drug response prediction with Graph Transformer"
+requires-python = ">=3.9, <3.12"
 dependencies = [
-    "torch==2.7.0",
-    "torch-geometric==2.3.1",
-    "numpy==1.26.4",
-    "matplotlib",
-    "pandas==2.2.2",
-    "jupyter",
-    "ipykernel"
+    "numpy<2",
+    "pandas",
+    "torch",
+    "torch-geometric",
+    "scikit-learn",
+    "tqdm",
+    "pubchempy",
+    "seaborn",
+    "pyyaml",
+    "packaging",
+    "rdkit-pypi"
 ]
