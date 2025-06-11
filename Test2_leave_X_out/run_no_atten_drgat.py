@@ -9,14 +9,14 @@ import sys
 import numpy as np
 import optuna
 import pandas as pd
+import rdkit
 import torch
+from rdkit import RDLogger
 from sklearn.model_selection import KFold
 from tqdm import tqdm
-import rdkit
-from rdkit import RDLogger
 
 # RDKitのC++ログを抑制
-RDLogger.DisableLog('rdApp.*')
+RDLogger.DisableLog("rdApp.*")
 
 current_dir = os.getcwd()
 parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
@@ -24,14 +24,16 @@ sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+from joblib import Parallel, delayed
+
 from drGAT import No_atten_drGAT as drGAT
 from drGAT.load_data import load_data
 from drGAT.metrics import compute_metrics_stats
 from drGAT.sampler import NewSampler
 from drGAT.utility import filter_target
 
-from joblib import Parallel, delayed
-n_jobs = 1 
+n_jobs = 1
+
 
 def suggest_hyperparams(trial, S_d, S_c, S_g):
     params = {
@@ -60,6 +62,7 @@ def suggest_hyperparams(trial, S_d, S_c, S_g):
 
     return params
 
+
 def handle_optuna_errors(e, trial):
     msg = str(e)
     if "CUDA out of memory" in msg:
@@ -77,6 +80,7 @@ def handle_optuna_errors(e, trial):
     else:
         print(f"Unexpected error in trial {trial.number}: {msg}")
         raise e
+
 
 def drGAT_new(
     res,
@@ -103,11 +107,14 @@ def drGAT_new(
         A_dg,
     )
 
-    _, true_labels, pred_probs, *_ = drGAT.train(sampler, params=params, device=device, verbose=False)
+    _, true_labels, pred_probs, *_ = drGAT.train(
+        sampler, params=params, device=device, verbose=False
+    )
     return true_labels, pred_probs
 
+
 def objective(trial, data_name, data_type):
-    target_dim = 1 if data_type == 'cell' else 0
+    target_dim = 1 if data_type == "cell" else 0
     try:
         is_zero_pad = trial.suggest_categorical("is_zero_pad", [True, False])
         (
@@ -141,27 +148,30 @@ def objective(trial, data_name, data_type):
                 device=device,
             )
             return true_data, predict_data
-        
+
         samples = res.shape[target_dim]
-        
+
         passed_targets = []
         skipped_targets = []
-        
+
         for target_index in range(samples):
-            label_vec = res.iloc[target_index] if target_dim == 0 else res.iloc[:, target_index]
+            label_vec = (
+                res.iloc[target_index] if target_dim == 0 else res.iloc[:, target_index]
+            )
             passed, reason, pos, neg, total = filter_target(label_vec)
-        
+
             if passed:
                 passed_targets.append(target_index)
             else:
                 skipped_targets.append((target_index, reason, pos, neg, total))
-        
+
         # Display skipped targets
         print(f"\n🚫 Skipped Targets: {len(skipped_targets)}")
         for idx, reason, pos, neg, total in skipped_targets:
-            print(f"Target {idx}: skipped because {reason} (total={total}, pos={pos}, neg={neg})")
-        
-    
+            print(
+                f"Target {idx}: skipped because {reason} (total={total}, pos={pos}, neg={neg})"
+            )
+
         # Joblib並列実行（注意: GPUメモリに余裕がないなら n_jobs=1）
         try:
             results = Parallel(n_jobs=n_jobs)(
@@ -170,20 +180,24 @@ def objective(trial, data_name, data_type):
             )
         except Exception as e:
             handle_optuna_errors(e, trial)
-        
+
         # 結果を統合
         true_datas = pd.DataFrame()
         predict_datas = pd.DataFrame()
-        
+
         for true_data, predict_data in results:
-            true_datas = pd.concat([true_datas, pd.DataFrame(true_data).T], ignore_index=True)
-            predict_datas = pd.concat([predict_datas, pd.DataFrame(predict_data).T], ignore_index=True)
+            true_datas = pd.concat(
+                [true_datas, pd.DataFrame(true_data).T], ignore_index=True
+            )
+            predict_datas = pd.concat(
+                [predict_datas, pd.DataFrame(predict_data).T], ignore_index=True
+            )
 
         metrics = compute_metrics_stats(
             trial=trial,
             true=true_datas,
             pred=predict_datas,
-            target_metrics=["AUROC", "AUPR", "F1", "ACC"]
+            target_metrics=["AUROC", "AUPR", "F1", "ACC"],
         )
         return tuple(metrics["target_values"])
 
@@ -199,12 +213,23 @@ def objective(trial, data_name, data_type):
             raise optuna.TrialPruned("CUDA OOM")
         raise e  # それ以外のエラーは通常通り上げる
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_name", type=str, required=True, choices=["gdsc1", "gdsc2", "ctrp", "nci"],
-                      help="Dataset name to use")
-    parser.add_argument("--data_type", type=str, required=True, choices=["cell", "drug"],
-                      help="Specify whether the task is cell or drug prediction")
+    parser.add_argument(
+        "--data_name",
+        type=str,
+        required=True,
+        choices=["gdsc1", "gdsc2", "ctrp", "nci"],
+        help="Dataset name to use",
+    )
+    parser.add_argument(
+        "--data_type",
+        type=str,
+        required=True,
+        choices=["cell", "drug"],
+        help="Specify whether the task is cell or drug prediction",
+    )
 
     args = parser.parse_args()
 
@@ -215,10 +240,12 @@ if __name__ == "__main__":
         sampler=optuna.samplers.NSGAIISampler(),
         pruner=optuna.pruners.HyperbandPruner(),
         storage=storage_name,
-        study_name='MPNN_GCN',
+        study_name="MPNN_GCN",
         load_if_exists=True,
     )
 
-    study.optimize(lambda trial: objective(trial, args.data_name, args.data_type), n_trials=100, timeout=3600)
-
-
+    study.optimize(
+        lambda trial: objective(trial, args.data_name, args.data_type),
+        n_trials=100,
+        timeout=3600,
+    )

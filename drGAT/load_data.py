@@ -115,7 +115,7 @@ def _process_dti_data(drugAct, exprs, verbose, is_nci):
             dti[drug_col].isin(drugAct.index)
             & dti.Gene.isin(set(exprs.columns) & set(dti.Gene))
         ]
-        dti.to_csv('nci_dti.csv')
+        dti.to_csv("nci_dti.csv")
     else:
         # Normalize drug names by removing special characters and converting to lowercase
         normalized_drugAct = {

@@ -300,7 +300,6 @@ def get_data_dict(sampler, device):
     }
 
 
-
 def initialize_params(params, drug, cell, gene, is_sample):
     params = params or {
         "dropout1": 0.1,
@@ -339,7 +338,7 @@ def train_one_epoch(
     model.train()
     optimizer.zero_grad()
 
-#     with autocast(device_type=device.type):
+    #     with autocast(device_type=device.type):
     outputs = model(drug, cell, gene, edge_index, edge_attr, train_drug, train_cell)
     loss = criterion(outputs.squeeze(), train_labels.float())
 
@@ -374,7 +373,7 @@ def validate_model(
 ):
     model.eval()
     with torch.no_grad():
-#         with autocast(device_type=device.type):
+        #         with autocast(device_type=device.type):
         outputs = model(drug, cell, gene, edge_index, edge_attr, val_drug, val_cell)
 
         # NaNチェック

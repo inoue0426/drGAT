@@ -44,12 +44,13 @@ parser.add_argument(
 parser.add_argument(
     "--data", type=str, choices=["gdsc1", "gdsc2", "ctrp", "nci"], default="nci"
 )
+parser.add_argument("--task", type=str, choices=["test1", "test2"], default="test1")
 parser.add_argument(
-    "--task", type=str, choices=["test1", "test2"], default="test1"
-)
-parser.add_argument(
-    "--cell_or_drug", type=str, choices=["cell", "drug"], required=False,
-    help="Only required for test2"
+    "--cell_or_drug",
+    type=str,
+    choices=["cell", "drug"],
+    required=False,
+    help="Only required for test2",
 )
 args = parser.parse_args()
 
@@ -81,18 +82,22 @@ else:
 ) = load_data(data, is_zero_pad=params["is_zero_pad"])
 
 # Update parameters
-params.update({
-    "n_drug": S_d.shape[0],
-    "n_cell": S_c.shape[0],
-    "n_gene": S_g.shape[0],
-    'gnn_layer': method
-})
+params.update(
+    {
+        "n_drug": S_d.shape[0],
+        "n_cell": S_c.shape[0],
+        "n_gene": S_g.shape[0],
+        "gnn_layer": method,
+    }
+)
 
 ##### Sample #####
 
-params.update({
-    "epochs": 3,
-})
+params.update(
+    {
+        "epochs": 3,
+    }
+)
 
 # Training and evaluation
 all_edges, all_labels = get_all_edges_and_labels(drugAct, null_mask)
@@ -125,9 +130,7 @@ for train_idx, test_idx in tqdm(kf.split(all_edges)):
         _,
     ) = drGAT.train(sampler, params=params, device=device, verbose=True)
 
-    true_datas = pd.concat(
-        [true_datas, pd.DataFrame(true_data).T], ignore_index=True
-    )
+    true_datas = pd.concat([true_datas, pd.DataFrame(true_data).T], ignore_index=True)
     predict_datas = pd.concat(
         [predict_datas, pd.DataFrame(predict_data).T], ignore_index=True
     )

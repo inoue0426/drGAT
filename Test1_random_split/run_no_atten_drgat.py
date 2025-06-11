@@ -9,14 +9,14 @@ import sys
 import numpy as np
 import optuna
 import pandas as pd
+import rdkit
 import torch
+from rdkit import RDLogger
 from sklearn.model_selection import KFold
 from tqdm import tqdm
-import rdkit
-from rdkit import RDLogger
 
 # RDKitのC++ログを抑制
-RDLogger.DisableLog('rdApp.*')
+RDLogger.DisableLog("rdApp.*")
 
 current_dir = os.getcwd()
 parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
@@ -29,6 +29,7 @@ from drGAT.load_data import load_data
 from drGAT.metrics import compute_metrics_stats
 from drGAT.myutils import get_all_edges_and_labels
 from drGAT.sampler import BalancedSampler
+
 
 def suggest_hyperparams(trial, S_d, S_c, S_g):
     params = {
@@ -57,10 +58,13 @@ def suggest_hyperparams(trial, S_d, S_c, S_g):
 
     return params
 
+
 def objective(trial, data_name):
     try:
         is_zero_pad = trial.suggest_categorical("is_zero_pad", [True, False])
-        drugAct, null_mask, S_d, S_c, S_g, _, _, _, A_cg, A_dg = load_data(data_name, is_zero_pad=is_zero_pad)
+        drugAct, null_mask, S_d, S_c, S_g, _, _, _, A_cg, A_dg = load_data(
+            data_name, is_zero_pad=is_zero_pad
+        )
         params = suggest_hyperparams(trial, S_d, S_c, S_g)
 
         all_edges, all_labels = get_all_edges_and_labels(drugAct, null_mask)
@@ -71,20 +75,35 @@ def objective(trial, data_name):
 
         for train_idx, test_idx in kf.split(all_edges):
             sampler = BalancedSampler(
-                drugAct, all_edges, all_labels, train_idx, test_idx,
-                null_mask, S_d, S_c, S_g, A_cg, A_dg
+                drugAct,
+                all_edges,
+                all_labels,
+                train_idx,
+                test_idx,
+                null_mask,
+                S_d,
+                S_c,
+                S_g,
+                A_cg,
+                A_dg,
             )
 
-            _, true_labels, pred_probs, *_ = drGAT.train(sampler, params=params, device=device, verbose=False)
+            _, true_labels, pred_probs, *_ = drGAT.train(
+                sampler, params=params, device=device, verbose=False
+            )
 
-            true_datas = pd.concat([true_datas, pd.DataFrame(true_labels).T], ignore_index=True)
-            predict_datas = pd.concat([predict_datas, pd.DataFrame(pred_probs).T], ignore_index=True)
+            true_datas = pd.concat(
+                [true_datas, pd.DataFrame(true_labels).T], ignore_index=True
+            )
+            predict_datas = pd.concat(
+                [predict_datas, pd.DataFrame(pred_probs).T], ignore_index=True
+            )
 
         metrics = compute_metrics_stats(
             trial=trial,
             true=true_datas,
             pred=predict_datas,
-            target_metrics=["AUROC", "AUPR", "F1", "ACC"]
+            target_metrics=["AUROC", "AUPR", "F1", "ACC"],
         )
         return tuple(metrics["target_values"])
 
@@ -100,10 +119,16 @@ def objective(trial, data_name):
             raise optuna.TrialPruned("CUDA OOM")
         raise e  # それ以外のエラーは通常通り上げる
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_name", type=str, required=True, choices=["gdsc1", "gdsc2", "ctrp", "nci"],
-                      help="Dataset name to use")
+    parser.add_argument(
+        "--data_name",
+        type=str,
+        required=True,
+        choices=["gdsc1", "gdsc2", "ctrp", "nci"],
+        help="Dataset name to use",
+    )
     args = parser.parse_args()
 
     study = optuna.create_study(
@@ -111,9 +136,10 @@ if __name__ == "__main__":
         sampler=optuna.samplers.NSGAIISampler(),
         pruner=optuna.pruners.HyperbandPruner(),
         storage=f"sqlite:///no_atten_{args.data_name}.sqlite3",
-        study_name='MPNN_GCN',
+        study_name="MPNN_GCN",
         load_if_exists=True,
     )
 
-    study.optimize(lambda trial: objective(trial, args.data_name), n_trials=100, timeout=3600)
-
+    study.optimize(
+        lambda trial: objective(trial, args.data_name), n_trials=100, timeout=3600
+    )

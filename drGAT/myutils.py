@@ -3,7 +3,6 @@
 import itertools as it
 import os
 import time
-import yaml
 
 import numpy as np
 import pandas as pd
@@ -12,6 +11,7 @@ import scipy.sparse as sp
 import seaborn as sns
 import torch
 import torch.nn as nn
+import yaml
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 
@@ -24,12 +24,13 @@ def init_seeds(seed=0):
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
+
 def get_model_params(
     config_type: str,
     data: str,
     method: str,
     cell_or_drug: str = None,
-    config_dir: str = "configs"
+    config_dir: str = "configs",
 ) -> dict:
     """
     Retrieve model hyperparameter settings.
@@ -53,7 +54,7 @@ def get_model_params(
     if not os.path.exists(path):
         raise FileNotFoundError(f"Config file not found: {path}")
 
-    with open(path, 'r') as f:
+    with open(path, "r") as f:
         config = yaml.safe_load(f)
 
     try:
@@ -61,15 +62,14 @@ def get_model_params(
             return config[data][method]
         elif config_type == "test2":
             if cell_or_drug is None:
-                raise ValueError("`cell_or_drug` must be specified for test2 configuration.")
+                raise ValueError(
+                    "`cell_or_drug` must be specified for test2 configuration."
+                )
             return config[data][cell_or_drug][method]
         else:
             raise ValueError(f"Unknown config_type: {config_type}")
     except KeyError as e:
         raise ValueError(f"Missing key in {filename}: {e}")
-
-
-
 
 
 def get_all_edges_and_labels(res, null_mask):

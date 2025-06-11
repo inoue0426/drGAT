@@ -185,7 +185,7 @@ class drGAT(Module):
                 edge_attr=edge_attr,
                 return_attention_weights=True,
             )
-            
+
             tmp = get_attention_mat(attention)
             all_attention += tmp
             del attention
@@ -262,6 +262,7 @@ def get_model(params, device):
 
     return model, criterion, optimizer, scheduler, scaler
 
+
 def train(
     sampler,
     params=None,
@@ -301,7 +302,7 @@ def train(
         0.0,
     ]  # [best_val_acc, best_val_aupr, best_val_auroc, best_val_f1]
     best_epoch = None
-        
+
     for epoch in epoch_range:
         # Train one epoch
         train_attention = train_one_epoch(
@@ -320,8 +321,8 @@ def train(
             train_losses,
             train_accs,
             device,
-            sampler, 
-            params
+            sampler,
+            params,
         )
 
         # Validation
@@ -350,8 +351,6 @@ def train(
             else:
                 scheduler.step()
 
-
-        
         if val_acc > best_metrics[0]:
             best_metrics = [val_acc, val_aupr, val_auroc, val_f1]
             best_model_state = model.state_dict()
@@ -364,7 +363,8 @@ def train(
         # Log output
         if verbose and (epoch + 1) % 10 == 0:
             print(
-                "epoch:%4d  train_loss:%.4f  val_loss:%.4f  train_acc:%.4f  val_acc:%.4f" % (
+                "epoch:%4d  train_loss:%.4f  val_loss:%.4f  train_acc:%.4f  val_acc:%.4f"
+                % (
                     epoch + 1,
                     train_losses[-1],
                     val_losses[-1],
@@ -372,7 +372,7 @@ def train(
                     val_accs[-1],
                 )
             )
-            
+
     # Save best model
     if best_epoch is not None:
         print(f"Best model found at epoch {best_epoch}")
@@ -436,6 +436,7 @@ def initialize_params(params, drug, cell, gene, is_sample):
         params["epochs"] = 5
     return params
 
+
 def train_one_epoch(
     model,
     optimizer,
@@ -486,7 +487,6 @@ def train_one_epoch(
     torch.cuda.empty_cache()
 
     return attention
-
 
 
 def validate_model(

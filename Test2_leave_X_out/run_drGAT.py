@@ -1,20 +1,20 @@
+import argparse
 import gc
 import os
 import sys
-import argparse
-from pathlib import Path
-from joblib import Parallel, delayed
-
 import time
+from pathlib import Path
+
+from joblib import Parallel, delayed
 
 MAX_TRIAL_DURATION = 172800  # 48時間 = 2日（秒単位）
 
 import numpy as np
+import optuna
 import pandas as pd
 import torch
 from sklearn.model_selection import KFold
 from tqdm import tqdm
-import optuna
 
 # Add path to drGAT package (Singularity/Local 両対応)
 if os.path.exists("/workspace/drGAT"):
@@ -39,12 +39,13 @@ parser.add_argument(
 parser.add_argument(
     "--data", type=str, choices=["gdsc1", "gdsc2", "ctrp", "nci"], default="nci"
 )
-parser.add_argument(
-    "--target_dim", type=int, choices=[0, 1], default=0
-)
+parser.add_argument("--target_dim", type=int, choices=[0, 1], default=0)
 
 parser.add_argument(
-    "--n_jobs", type=int, default=3, help="Number of parallel jobs for target processing"
+    "--n_jobs",
+    type=int,
+    default=3,
+    help="Number of parallel jobs for target processing",
 )
 
 args = parser.parse_args()
@@ -53,6 +54,7 @@ method = args.method
 data = args.data
 target_dim = args.target_dim
 n_jobs = args.n_jobs
+
 
 def drGAT_new(
     res,
@@ -84,6 +86,7 @@ def drGAT_new(
     )
 
     return best_val_labels, best_val_prob
+
 
 def suggest_hyperparams(trial, S_d, S_c, S_g):
     hidden1 = trial.suggest_int("hidden1", 256, 512)
@@ -137,6 +140,7 @@ def suggest_hyperparams(trial, S_d, S_c, S_g):
 
     return params
 
+
 def handle_optuna_errors(e, trial):
     msg = str(e)
     if "CUDA out of memory" in msg:
@@ -154,6 +158,7 @@ def handle_optuna_errors(e, trial):
     else:
         print(f"Unexpected error in trial {trial.number}: {msg}")
         raise e
+
 
 def objective(trial):
     try:
@@ -175,7 +180,6 @@ def objective(trial):
         # Suggest Hyperparameters
         params = suggest_hyperparams(trial, S_d, S_c, S_g)
 
-
         def run_single_target(target_index):
             true_data, predict_data = drGAT_new(
                 res=res,
@@ -191,27 +195,30 @@ def objective(trial):
                 device=device,
             )
             return true_data, predict_data
-    
+
         samples = res.shape[target_dim]
-        
+
         passed_targets = []
         skipped_targets = []
-        
+
         for target_index in range(samples):
-            label_vec = res.iloc[target_index] if target_dim == 0 else res.iloc[:, target_index]
+            label_vec = (
+                res.iloc[target_index] if target_dim == 0 else res.iloc[:, target_index]
+            )
             passed, reason, pos, neg, total = filter_target(label_vec)
-        
+
             if passed:
                 passed_targets.append(target_index)
             else:
                 skipped_targets.append((target_index, reason, pos, neg, total))
-        
+
         # Display skipped targets
         print(f"\n🚫 Skipped Targets: {len(skipped_targets)}")
         for idx, reason, pos, neg, total in skipped_targets:
-            print(f"Target {idx}: skipped because {reason} (total={total}, pos={pos}, neg={neg})")
-        
-    
+            print(
+                f"Target {idx}: skipped because {reason} (total={total}, pos={pos}, neg={neg})"
+            )
+
         # Joblib並列実行（注意: GPUメモリに余裕がないなら n_jobs=1）
         try:
             results = Parallel(n_jobs=n_jobs)(
@@ -220,14 +227,18 @@ def objective(trial):
             )
         except Exception as e:
             handle_optuna_errors(e, trial)
-        
+
         # 結果を統合
         true_datas = pd.DataFrame()
         predict_datas = pd.DataFrame()
-        
+
         for true_data, predict_data in results:
-            true_datas = pd.concat([true_datas, pd.DataFrame(true_data).T], ignore_index=True)
-            predict_datas = pd.concat([predict_datas, pd.DataFrame(predict_data).T], ignore_index=True)
+            true_datas = pd.concat(
+                [true_datas, pd.DataFrame(true_data).T], ignore_index=True
+            )
+            predict_datas = pd.concat(
+                [predict_datas, pd.DataFrame(predict_data).T], ignore_index=True
+            )
 
         # Compute Final Metrics
         metrics_result = compute_metrics_stats(
@@ -240,6 +251,7 @@ def objective(trial):
 
     except Exception as e:
         handle_optuna_errors(e, trial)
+
 
 # Create and run Optuna study
 optuna_db_path = f"/workspace/Test2_leave_X_out/{method}_{data}_{'cell' if target_dim == 0 else 'drug'}.sqlite3"
@@ -254,4 +266,3 @@ study = optuna.create_study(
 )
 
 study.optimize(objective, n_trials=1000)
-
