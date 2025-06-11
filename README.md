@@ -44,6 +44,19 @@ It predicts drug sensitivity and identifies gene-level contributions via attenti
 
 ---
 
+### ⚡️ GPU Acceleration
+
+All experiments in this study were conducted on **Linux with an NVIDIA A100 GPU**.
+drGAT is implemented with PyTorch and PyTorch Geometric, and can benefit significantly from GPU acceleration.
+
+> ✅ To enable GPU support, make sure to install the appropriate **CUDA-compatible version of PyTorch** for your system.
+> For example, if using A100, `torch==2.x` with `CUDA 11.8` is recommended.
+
+To find the right PyTorch installation command for your setup, refer to the official guide:
+👉 https://pytorch.org/get-started/locally/
+
+---
+
 ## 📁 Directory Overview
 
 ```
