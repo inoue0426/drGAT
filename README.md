@@ -156,6 +156,18 @@ pip install .
 
 ---
 
+## ❓ Questions or Issues
+
+If you have any questions, suggestions, or run into issues using **drGAT**,
+feel free to:
+
+- Open a GitHub Issue in this repository and mention **@inoue0426**, or
+- Email us at **inoue019@umn.edu**
+
+We're happy to support and collaborate!
+
+---
+
 ## 📖 Citation
 
 ```bibtex
