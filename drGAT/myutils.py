@@ -24,8 +24,29 @@ def init_seeds(seed=0):
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
+def get_model_params(
+    config_type: str,
+    data: str,
+    method: str,
+    cell_or_drug: str = None,
+    config_dir: str = "configs"
+) -> dict:
+    """
+    Retrieve model hyperparameter settings.
 
-def get_model_params(config_type: str, data: str, method: str, config_dir: str = "configs") -> dict:
+    - For test1: config[data][method]
+    - For test2: config[data][cell_or_drug][method]
+
+    Args:
+        config_type: "test1" or "test2"
+        data: e.g., "nci", "gdsc1"
+        method: e.g., "GAT", "GATv2", "Transformer"
+        cell_or_drug: "cell" or "drug" for test2
+        config_dir: Directory where YAML config is stored (default: "configs")
+
+    Returns:
+        dict: Parameter settings
+    """
     filename = f"{config_type}_params.yaml"
     path = os.path.join(config_dir, filename)
 
@@ -36,9 +57,16 @@ def get_model_params(config_type: str, data: str, method: str, config_dir: str =
         config = yaml.safe_load(f)
 
     try:
-        return config[data][method]
-    except KeyError:
-        raise ValueError(f"No config found for data='{data}' and method='{method}' in {filename}")
+        if config_type == "test1":
+            return config[data][method]
+        elif config_type == "test2":
+            if cell_or_drug is None:
+                raise ValueError("`cell_or_drug` must be specified for test2 configuration.")
+            return config[data][cell_or_drug][method]
+        else:
+            raise ValueError(f"Unknown config_type: {config_type}")
+    except KeyError as e:
+        raise ValueError(f"Missing key in {filename}: {e}")
 
 
 

@@ -193,7 +193,7 @@ def _load_dataset(path, is_zero_pad, verbose, is_nci):
     drugAct, exprs = _get_base_data(path)
     smiles_data = pd.read_csv(
         (
-            FIGS_DIR / "nsc_cid_smiles_class_name.csv"
+            DATA_DIR / "nsc_cid_smiles_class_name.csv"
             if is_nci
             else path / "drug2smiles.csv"
         ),
