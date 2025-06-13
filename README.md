@@ -1,83 +1,200 @@
 # 🧬 drGT
 
-Official implementation of **drGT: Attention-Guided Gene Assessment for Drug Response in Drug-Cell-Gene Heterogeneous Network**\
+Official implementation of **drGT: Attention-Guided Gene Assessment for Drug Response in Drug-Cell-Gene Heterogeneous Network**
+[![arXiv](https://img.shields.io/badge/arXiv-2405.08979-b31b1b.svg)](https://arxiv.org/abs/2405.08979)
 
+![](Figs/Fig1.png)
 
-
-
-drGT uses attention-based GNNs (e.g., GAT, GATv2, Transformer) to predict drug sensitivity and highlight gene-level importance in a heterogeneous network.
+`drGT` utilizes attention-based GNNs (e.g., GAT, GATv2, Transformer) to model a heterogeneous graph of drugs, cells, and genes. It predicts drug sensitivity and uncovers gene-level contributions via attention mechanisms.
 
 ---
 
 ## 🚀 Quick Start
 
-> Requires Python 3.10 or 3.11
+> Requires: Python 3.10 or 3.11
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/inoue0426/drGT.git
 cd drGT
+```
+
+### 2. Setup environment using [`uv`](https://github.com/astral-sh/uv)
+
+```bash
+# Create virtual environment
+uv venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# Install dependencies
+uv sync
+```
+
+> Alternatively, see [📦 Dependency Management](#-dependency-management) for `pip`-based setup via `pyproject.toml`.
+
+### 3. Run the prediction script (CPU or GPU)
+
+```bash
 chmod +x run_drGT.py
 ./run_drGT.py --task test2 --data nci --method GATv2 --cell_or_drug cell
+```
+
+### Example Output
+
+```
+Using device: cpu
+Best model found at epoch 2
+ACC           : 0.511 (±0.009)
+Precision     : 0.215 (±0.296)
+Recall        : 0.221 (±0.438)
+F1            : 0.170 (±0.289)
+AUROC         : 0.535 (±0.024)
+AUPR          : 0.532 (±0.029)
 ```
 
 ---
 
 ## 🧠 Using Pretrained Models
 
+To evaluate without retraining:
+
 ```python
 from drGT import drGT
-probs, labels, attn = drGT.predict('best_model.pt', sampler, params)
+from drGT.metrics import evaluate_predictions
+
+probs, true_labels, attention = drGT.predict('best_model.pt', sampler, params)
+evaluate_predictions(true_labels, probs)
 ```
 
-Make sure `params` matches the pretrained architecture.
+✅ Ensure that `params` match the pretrained model's configuration (e.g., GNN layer, hidden sizes, etc.).
 
 ---
 
-## ⚙️ Environment Setup (with [uv](https://github.com/astral-sh/uv))
+## ⚙️ Interactive Use with Jupyter
+
+To analyze results or explore predictions interactively:
 
 ```bash
-uv venv && source .venv/bin/activate
-uv sync
+# Activate virtual environment
+source .venv/bin/activate
+
+# Register Jupyter kernel
+python -m ipykernel install --user --name=drGT --display-name "Python (drGT)"
+
+# Launch notebook
 jupyter notebook
 ```
 
-> Kernel: **Python (drGT)**
+---
+
+## ⚡️ GPU Acceleration
+
+All experiments were conducted on **Linux with NVIDIA A100**.
+`drGT` benefits significantly from GPU acceleration via PyTorch and PyTorch Geometric.
+
+> ✅ Ensure you install a **CUDA-compatible PyTorch version**
+> (e.g., `torch==2.x` with `CUDA 11.8` for A100)
+
+👉 [PyTorch Installation Guide](https://pytorch.org/get-started/locally/)
 
 ---
 
-## ⚡️ GPU Support
-
-drGT supports PyTorch CUDA acceleration (tested on NVIDIA A100). \
-It also runs on Apple Silicon Macs (e.g., M3), using the Metal backend for PyTorch. \
-Use [PyTorch guide](https://pytorch.org/get-started/locally/) to install the right CUDA version.
-
----
-
-## 📁 Directory Structure
+## 📁 Directory Overview
 
 ```
-drGT/                  # Model code
-configs/               # YAML configs
-Test1_random_split/    # Experiment: random masking
-Test2_leave_X_out/     # Experiment: leave-out
-preprocess/            # Data notebooks
-data/                  # Input data
+drGT/                 # Core model implementation
+configs/              # YAML configs for experiments
+Test1_random_split/   # Scripts for random masking experiments
+Test2_leave_X_out/    # Scripts for leave-X-out experiments
+preprocess/           # Data preprocessing notebooks
+data/                 # Preprocessed datasets
 ```
 
 ---
 
-## 📦 Dependencies
+## 📦 Dependency Management
 
-**Option 1: **``** (lightweight)**\
-Include `#!/usr/bin/env -S uv run --script` headers in scripts.
+This project supports two options:
 
-**Option 2: **``** (standard)**\
-Install with pip:
+### 🌀 Option 1: Using [`uv`](https://github.com/astral-sh/uv) (Recommended)
+
+Inline dependency specification for reproducible script execution:
+
+```python
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.9, <3.12"
+# dependencies = [
+#     "numpy<2",
+#     "pandas",
+#     "torch",
+#     "torch-geometric",
+#     "scikit-learn",
+#     "tqdm",
+#     "pubchempy",
+#     "seaborn",
+#     "pyyaml",
+#     "packaging",
+#     "rdkit-pypi"
+# ]
+# ///
+```
+
+Run a script:
 
 ```bash
-python -m venv .venv && source .venv/bin/activate
+pip install uv
+./run_drGT.py
+```
+
+---
+
+### 🧰 Option 2: Using `pyproject.toml`
+
+For a conventional `pip`-based setup:
+
+```toml
+[project]
+name = "drgt"
+version = "0.1.0"
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "torch>=2.0",
+    "torchvision",
+    "torch-geometric",
+    "scikit-learn",
+    "tqdm",
+    "rdkit",
+    "pubchempy",
+    "pyyaml",
+    "packaging",
+    "seaborn"
+]
+```
+
+Install via:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install .
 ```
+
+---
+
+## ❓ Questions or Issues
+
+Please feel free to:
+
+- Open a GitHub Issue and mention **@inoue0426**
+- Or email **inoue019@umn.edu**
+
+We're happy to help and collaborate!
 
 ---
 
