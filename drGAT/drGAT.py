@@ -57,7 +57,7 @@ set_seed(42)
 
 def get_attention_mat(attention):
 
-    tmp = attention[1].cpu().detach().numpy()
+    tmp = attention[1].to(torch.float32).cpu().detach().numpy()
     edge = attention[0].cpu().detach().numpy()
 
     idx = edge.max() + 1
@@ -523,3 +523,39 @@ def validate_model(
         val_auroc = roc_auc_score(val_labels, probabilities)
         val_aupr = average_precision_score(val_labels, probabilities)
     return val_acc, val_f1, val_auroc, val_aupr, attention, val_labels, probabilities
+
+def predict(
+    model_path,
+    sampler,
+    params,
+    device=None,
+):
+    device = device or torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Using device for prediction: {device}")
+
+    # Initialize model with the same parameters used during training
+    model = drGAT(params).to(device)
+
+    # Load pretrained weights
+    model.load_state_dict(torch.load(model_path, map_location=device))
+    model.eval()
+
+    # Prepare tensors
+    data = get_data_dict(sampler, device)
+    true_labels = data["val_labels"].cpu().numpy() if "val_labels" in data else None
+
+    with torch.no_grad():
+        with autocast(autocast_device):
+            outputs, attention = model(
+                data["drug"],
+                data["cell"],
+                data["gene"],
+                data["edge_index"],
+                data["edge_attr"],
+                data["val_drug"],
+                data["val_cell"],
+            )
+        outputs = outputs.squeeze().float().cpu()
+        probs = torch.sigmoid(outputs).numpy()
+
+    return probs, true_labels, attention

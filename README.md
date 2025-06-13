@@ -44,6 +44,27 @@ It predicts drug sensitivity and identifies gene-level contributions via attenti
 
 ---
 
+## 🧠 Using Pretrained Models
+
+If you want to skip training and simply evaluate the performance using a pretrained model (`best_model.pt`), you can do so with:
+
+```python
+from drGAT import drGAT
+from drGAT.metrics import evaluate_predictions
+
+# Load pretrained model and predict
+probs, true_labels, attention = drGAT.predict('best_model.pt', sampler, params)
+
+# Evaluate results
+evaluate_predictions(true_labels, probs)
+```
+
+This is especially useful when running evaluations on benchmark datasets like NCI without re-training the model from scratch.
+
+✅ Make sure that params matches the model architecture used in training (e.g., same GNN layer, hidden sizes, etc.).
+
+---
+
 ### ⚡️ GPU Acceleration
 
 All experiments in this study were conducted on **Linux with an NVIDIA A100 GPU**.
