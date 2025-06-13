@@ -23,8 +23,8 @@ class MPNNConv(MessagePassing):
         return self.lin(torch.cat([x_j, edge_attr], dim=-1))
 
 
-class drGAT(Module):
-    """A class to generate a drGAT model.
+class drGT(Module):
+    """A class to generate a drGT model.
     params: contains params for the model
         - dropout1: dropout rate for dropout 1
         - dropout2: dropout rate for dropout 2
@@ -35,7 +35,7 @@ class drGAT(Module):
     """
 
     def __init__(self, params):
-        super(drGAT, self).__init__()
+        super(drGT, self).__init__()
         self.linear_drug = Linear(params["n_drug"], params["hidden1"])
         self.linear_cell = Linear(params["n_cell"], params["hidden1"])
         self.linear_gene = Linear(params["n_gene"], params["hidden1"])
@@ -110,7 +110,7 @@ def get_model(params, device):
     device: device to use
     """
     # Initialize model and criterion
-    model = drGAT(params).to(device)
+    model = drGT(params).to(device)
     criterion = nn.BCEWithLogitsLoss().to(device)
 
     # Select optimizer class dynamically

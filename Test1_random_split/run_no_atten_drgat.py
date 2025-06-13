@@ -24,11 +24,11 @@ sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-from drGAT import No_atten_drGAT as drGAT
-from drGAT.load_data import load_data
-from drGAT.metrics import compute_metrics_stats
-from drGAT.myutils import get_all_edges_and_labels
-from drGAT.sampler import BalancedSampler
+from drGT import No_atten_drGT as drGT
+from drGT.load_data import load_data
+from drGT.metrics import compute_metrics_stats
+from drGT.myutils import get_all_edges_and_labels
+from drGT.sampler import BalancedSampler
 
 
 def suggest_hyperparams(trial, S_d, S_c, S_g):
@@ -88,7 +88,7 @@ def objective(trial, data_name):
                 A_dg,
             )
 
-            _, true_labels, pred_probs, *_ = drGAT.train(
+            _, true_labels, pred_probs, *_ = drGT.train(
                 sampler, params=params, device=device, verbose=False
             )
 
