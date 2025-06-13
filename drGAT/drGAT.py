@@ -5,9 +5,15 @@ import pandas as pd
 import torch
 import torch.nn as nn
 from packaging import version
-from sklearn.metrics import (accuracy_score, average_precision_score,
-                             confusion_matrix, f1_score, precision_score,
-                             recall_score, roc_auc_score)
+from sklearn.metrics import (
+    accuracy_score,
+    average_precision_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 from torch.nn import Dropout, Linear, Module
 from torch.optim import lr_scheduler
 from torch_geometric.nn import GATConv, GATv2Conv, GraphNorm, TransformerConv
@@ -523,6 +529,7 @@ def validate_model(
         val_auroc = roc_auc_score(val_labels, probabilities)
         val_aupr = average_precision_score(val_labels, probabilities)
     return val_acc, val_f1, val_auroc, val_aupr, attention, val_labels, probabilities
+
 
 def predict(
     model_path,

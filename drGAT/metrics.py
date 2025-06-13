@@ -1,10 +1,20 @@
 import numpy as np
 import pandas as pd
-from sklearn.metrics import (accuracy_score, average_precision_score,
-                             balanced_accuracy_score, brier_score_loss,
-                             cohen_kappa_score, f1_score, fbeta_score,
-                             log_loss, matthews_corrcoef, precision_score,
-                             recall_score, roc_auc_score)
+from sklearn.metrics import (
+    accuracy_score,
+    average_precision_score,
+    balanced_accuracy_score,
+    brier_score_loss,
+    cohen_kappa_score,
+    f1_score,
+    fbeta_score,
+    log_loss,
+    matthews_corrcoef,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
+
 
 def evaluate_predictions(true_labels, pred_probs, threshold=0.5):
     pred_labels = (pred_probs >= threshold).astype(int)
@@ -20,6 +30,7 @@ def evaluate_predictions(true_labels, pred_probs, threshold=0.5):
     df = pd.DataFrame(metrics, index=["Score"]).T
     df.index.name = "Metric"
     display(df)
+
 
 def get_result(true, pred, data):
     res = pd.DataFrame()
