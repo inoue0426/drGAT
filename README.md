@@ -65,6 +65,31 @@ This is especially useful when running evaluations on benchmark datasets like NC
 
 ---
 
+
+### ✅ Setup Environment with `uv` and Run Jupyter
+
+To run `drGAT` interactively (e.g., for analysis or pretrained model evaluation in a notebook), you can use `uv` to set up the environment and launch Jupyter:
+
+```bash
+# Step 1: Create a virtual environment
+uv venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Step 2: Install dependencies from pyproject.toml
+uv sync
+
+# Step 3: Register the virtual environment as a Jupyter kernel
+python -m ipykernel install --user --name=drgat --display-name "Python (drGAT)"
+
+# Step 4: Launch Jupyter Notebook
+jupyter notebook
+```
+
+> You can then select the `Python (drGAT)` kernel in the Jupyter interface when running your notebook.
+
+---
+
+
 ### ⚡️ GPU Acceleration
 
 All experiments in this study were conducted on **Linux with an NVIDIA A100 GPU**.

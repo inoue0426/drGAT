@@ -14,5 +14,6 @@ dependencies = [
     "seaborn",
     "pyyaml",
     "packaging",
-    "rdkit-pypi"
+    "rdkit-pypi",
+    "ipykernel"
 ]
