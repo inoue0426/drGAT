@@ -31,11 +31,11 @@ sys.path.append(parent_dir)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-from drGAT import drGAT
-from drGAT.load_data import load_data
-from drGAT.metrics import compute_metrics_stats
-from drGAT.myutils import get_all_edges_and_labels, get_model_params
-from drGAT.sampler import BalancedSampler
+from drGT import drGT
+from drGT.load_data import load_data
+from drGT.metrics import compute_metrics_stats
+from drGT.myutils import get_all_edges_and_labels, get_model_params
+from drGT.sampler import BalancedSampler
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -128,7 +128,7 @@ for train_idx, test_idx in tqdm(kf.split(all_edges)):
         true_data,
         predict_data,
         _,
-    ) = drGAT.train(sampler, params=params, device=device, verbose=True)
+    ) = drGT.train(sampler, params=params, device=device, verbose=True)
 
     true_datas = pd.concat([true_datas, pd.DataFrame(true_data).T], ignore_index=True)
     predict_datas = pd.concat(

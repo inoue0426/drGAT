@@ -67,9 +67,9 @@ def get_attention_mat(attention):
     return graph
 
 
-class drGAT(Module):
+class drGT(Module):
     def __init__(self, params):
-        super(drGAT, self).__init__()
+        super(drGT, self).__init__()
 
         # Initialize hidden layer dimensions and number of attention heads
         hidden1: int = int(params["hidden1"])
@@ -211,7 +211,7 @@ class drGAT(Module):
 
 def get_model(params, device):
     # Initialize model and criterion
-    model = drGAT(params).to(device)
+    model = drGT(params).to(device)
     criterion = nn.BCEWithLogitsLoss().to(device)
 
     # Select optimizer class dynamically
@@ -535,7 +535,7 @@ def predict(
     print(f"Using device for prediction: {device}")
 
     # Initialize model with the same parameters used during training
-    model = drGAT(params).to(device)
+    model = drGT(params).to(device)
 
     # Load pretrained weights
     model.load_state_dict(torch.load(model_path, map_location=device))

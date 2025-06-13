@@ -26,11 +26,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 from joblib import Parallel, delayed
 
-from drGAT import No_atten_drGAT as drGAT
-from drGAT.load_data import load_data
-from drGAT.metrics import compute_metrics_stats
-from drGAT.sampler import NewSampler
-from drGAT.utility import filter_target
+from drGT import No_atten_drGT as drGT
+from drGT.load_data import load_data
+from drGT.metrics import compute_metrics_stats
+from drGT.sampler import NewSampler
+from drGT.utility import filter_target
 
 n_jobs = 1
 
@@ -82,7 +82,7 @@ def handle_optuna_errors(e, trial):
         raise e
 
 
-def drGAT_new(
+def drGT_new(
     res,
     null_mask,
     target_dim,
@@ -107,7 +107,7 @@ def drGAT_new(
         A_dg,
     )
 
-    _, true_labels, pred_probs, *_ = drGAT.train(
+    _, true_labels, pred_probs, *_ = drGT.train(
         sampler, params=params, device=device, verbose=False
     )
     return true_labels, pred_probs
@@ -134,7 +134,7 @@ def objective(trial, data_name, data_type):
         params = suggest_hyperparams(trial, S_d, S_c, S_g)
 
         def run_single_target(target_index):
-            true_data, predict_data = drGAT_new(
+            true_data, predict_data = drGT_new(
                 res=res,
                 null_mask=null_mask.values,
                 target_dim=target_dim,

@@ -16,8 +16,8 @@ import torch
 from sklearn.model_selection import KFold
 from tqdm import tqdm
 
-# Add path to drGAT package (Singularity/Local 両対応)
-if os.path.exists("/workspace/drGAT"):
+# Add path to drGT package (Singularity/Local 両対応)
+if os.path.exists("/workspace/drGT"):
     sys.path.append("/workspace")
 else:
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -26,11 +26,11 @@ else:
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-from drGAT import drGAT
-from drGAT.load_data import load_data
-from drGAT.metrics import compute_metrics_stats
-from drGAT.sampler import NewSampler
-from drGAT.utility import filter_target
+from drGT import drGT
+from drGT.load_data import load_data
+from drGT.metrics import compute_metrics_stats
+from drGT.sampler import NewSampler
+from drGT.utility import filter_target
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -56,7 +56,7 @@ target_dim = args.target_dim
 n_jobs = args.n_jobs
 
 
-def drGAT_new(
+def drGT_new(
     res,
     null_mask,
     target_dim,
@@ -81,7 +81,7 @@ def drGAT_new(
         A_dg,
     )
 
-    (_, _, _, best_val_labels, best_val_prob, best_metrics, _, _, _) = drGAT.train(
+    (_, _, _, best_val_labels, best_val_prob, best_metrics, _, _, _) = drGT.train(
         sampler, params=params, device=device, verbose=False
     )
 
@@ -181,7 +181,7 @@ def objective(trial):
         params = suggest_hyperparams(trial, S_d, S_c, S_g)
 
         def run_single_target(target_index):
-            true_data, predict_data = drGAT_new(
+            true_data, predict_data = drGT_new(
                 res=res,
                 null_mask=null_mask.values,
                 target_dim=target_dim,

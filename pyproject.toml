@@ -1,5 +1,5 @@
 [project]
-name = "drgat"
+name = "drgt"
 version = "0.1.0"
 description = "Drug response prediction with Graph Transformer"
 requires-python = ">=3.9, <3.12"

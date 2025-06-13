@@ -1,6 +1,6 @@
-# drGAT
+# drGT
 
-This is the official implementation of **drGAT: Attention-Guided Gene Assessment for Drug Response in Drug-Cell-Gene Heterogeneous Network**
+This is the official implementation of **drGT: Attention-Guided Gene Assessment for Drug Response in Drug-Cell-Gene Heterogeneous Network**
 
 [![arXiv](https://img.shields.io/badge/arXiv-2405.08979-b31b1b.svg)](https://arxiv.org/abs/2405.08979)
 
@@ -18,15 +18,15 @@ It predicts drug sensitivity and identifies gene-level contributions via attenti
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/inoue0426/drGAT.git
-   cd drGAT
+   git clone https://github.com/inoue0426/drGT.git
+   cd drGT
    ```
 
 2. Run the prediction script (CPU or GPU):
 
    ```bash
-   chmod +x run_drGAT.py
-   ./run_drGAT.py --task test2 --data nci --method GATv2 --cell_or_drug cell
+   chmod +x run_drGT.py
+   ./run_drGT.py --task test2 --data nci --method GATv2 --cell_or_drug cell
    ```
 
 3. Example output:
@@ -49,11 +49,11 @@ It predicts drug sensitivity and identifies gene-level contributions via attenti
 If you want to skip training and simply evaluate the performance using a pretrained model (`best_model.pt`), you can do so with:
 
 ```python
-from drGAT import drGAT
-from drGAT.metrics import evaluate_predictions
+from drGT import drGT
+from drGT.metrics import evaluate_predictions
 
 # Load pretrained model and predict
-probs, true_labels, attention = drGAT.predict('best_model.pt', sampler, params)
+probs, true_labels, attention = drGT.predict('best_model.pt', sampler, params)
 
 # Evaluate results
 evaluate_predictions(true_labels, probs)
@@ -68,7 +68,7 @@ This is especially useful when running evaluations on benchmark datasets like NC
 
 ### ✅ Setup Environment with `uv` and Run Jupyter
 
-To run `drGAT` interactively (e.g., for analysis or pretrained model evaluation in a notebook), you can use `uv` to set up the environment and launch Jupyter:
+To run `drGT` interactively (e.g., for analysis or pretrained model evaluation in a notebook), you can use `uv` to set up the environment and launch Jupyter:
 
 ```bash
 # Step 1: Create a virtual environment
@@ -79,13 +79,13 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 uv sync
 
 # Step 3: Register the virtual environment as a Jupyter kernel
-python -m ipykernel install --user --name=drgat --display-name "Python (drGAT)"
+python -m ipykernel install --user --name=drGT --display-name "Python (drGT)"
 
 # Step 4: Launch Jupyter Notebook
 jupyter notebook
 ```
 
-> You can then select the `Python (drGAT)` kernel in the Jupyter interface when running your notebook.
+> You can then select the `Python (drGT)` kernel in the Jupyter interface when running your notebook.
 
 ---
 
@@ -93,7 +93,7 @@ jupyter notebook
 ### ⚡️ GPU Acceleration
 
 All experiments in this study were conducted on **Linux with an NVIDIA A100 GPU**.
-drGAT is implemented with PyTorch and PyTorch Geometric, and can benefit significantly from GPU acceleration.
+drGT is implemented with PyTorch and PyTorch Geometric, and can benefit significantly from GPU acceleration.
 
 > ✅ To enable GPU support, make sure to install the appropriate **CUDA-compatible version of PyTorch** for your system.
 > For example, if using A100, `torch==2.x` with `CUDA 11.8` is recommended.
@@ -106,7 +106,7 @@ To find the right PyTorch installation command for your setup, refer to the offi
 ## 📁 Directory Overview
 
 ```
-drGAT/                 # Model core implementation
+drGT/                 # Model core implementation
 configs/               # YAML configs for hyperparameters
 Test1_random_split/    # Experiment scripts for random masking
 Test2_leave_X_out/     # Experiment scripts for leave-one-out for entire cell/drug
@@ -154,7 +154,7 @@ This method enables quick, isolated script execution with dependencies declared 
 pip install uv
 
 # Run your script
-./run_drGAT.py
+./run_drGT.py
 ```
 
 > Great for reproducible environments and one-file scripts.
@@ -165,7 +165,7 @@ If you prefer a standard project-based setup with pip, use the following:
 
 ```toml
 [project]
-name = "drgat"
+name = "drgt"
 version = "0.1.0"
 description = "Drug response prediction with Graph Transformer"
 requires-python = ">=3.9"
@@ -204,7 +204,7 @@ pip install .
 
 ## ❓ Questions or Issues
 
-If you have any questions, suggestions, or run into issues using **drGAT**,
+If you have any questions, suggestions, or run into issues using **drGT**,
 feel free to:
 
 - Open a GitHub Issue in this repository and mention **@inoue0426**, or
@@ -218,7 +218,7 @@ We're happy to support and collaborate!
 
 ```bibtex
 @article{inoue2024drgat,
-  title={drGAT: Attention-Guided Gene Assessment of Drug Response Utilizing a Drug-Cell-Gene Heterogeneous Network},
+  title={drGT: Attention-Guided Gene Assessment of Drug Response Utilizing a Drug-Cell-Gene Heterogeneous Network},
   author={Inoue, Yoshitaka and Lee, Hunmin and Fu, Tianfan and Luna, Augustin},
   journal={arXiv preprint arXiv:2405.08979},
   year={2024}
