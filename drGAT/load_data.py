@@ -8,12 +8,8 @@ from scipy import sparse as sp
 from sklearn.preprocessing import StandardScaler
 from tqdm import tqdm
 
-from .utility import (
-    get_morgan_fingerprint,
-    min_max_scale,
-    natural_sort_key,
-    normalize_similarity_matrix,
-)
+from .utility import (get_morgan_fingerprint, min_max_scale, natural_sort_key,
+                      normalize_similarity_matrix)
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"

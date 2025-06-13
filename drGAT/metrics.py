@@ -1,19 +1,10 @@
 import numpy as np
 import pandas as pd
-from sklearn.metrics import (
-    accuracy_score,
-    average_precision_score,
-    balanced_accuracy_score,
-    brier_score_loss,
-    cohen_kappa_score,
-    f1_score,
-    fbeta_score,
-    log_loss,
-    matthews_corrcoef,
-    precision_score,
-    recall_score,
-    roc_auc_score,
-)
+from sklearn.metrics import (accuracy_score, average_precision_score,
+                             balanced_accuracy_score, brier_score_loss,
+                             cohen_kappa_score, f1_score, fbeta_score,
+                             log_loss, matthews_corrcoef, precision_score,
+                             recall_score, roc_auc_score)
 
 
 def evaluate_predictions(true_labels, pred_probs, threshold=0.5):
