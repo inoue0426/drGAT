@@ -12,35 +12,27 @@ Official implementation of **drGT: Attention-Guided Gene Assessment for Drug Res
 ## 🚀 Quick Start
 
 > Requires: Python 3.10 or 3.11
+> Uses [`uv`](https://github.com/astral-sh/uv) for lightweight execution
 
-### 1. Clone the repository
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/inoue0426/drGT.git
 cd drGT
 ```
 
-### 2. Setup environment using [`uv`](https://github.com/astral-sh/uv)
+2. Run the prediction script directly (CPU or GPU):
 
 ```bash
-# Create virtual environment
-uv venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-
-# Install dependencies
-uv sync
-```
-
-> Alternatively, see [📦 Dependency Management](#-dependency-management) for `pip`-based setup via `pyproject.toml`.
-
-### 3. Run the prediction script (CPU or GPU)
-
-```bash
-chmod +x run_drGT.py
 ./run_drGT.py --task test2 --data nci --method GATv2 --cell_or_drug cell
 ```
 
-### Example Output
+> ✅ If `uv` is not installed:
+> ```bash
+> pip install uv
+> ```
+
+3. Example output:
 
 ```
 Using device: cpu
@@ -68,6 +60,8 @@ evaluate_predictions(true_labels, probs)
 ```
 
 ✅ Ensure that `params` match the pretrained model's configuration (e.g., GNN layer, hidden sizes, etc.).
+
+📓 For a full example, see [`predict_with_pretrained_model.ipynb`](predict_with_pretrained_model.ipynb).
 
 ---
 
