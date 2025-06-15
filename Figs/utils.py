@@ -1,7 +1,8 @@
 import ast
 import json
-from typing import Any, List
 import os
+from typing import Any, List
+
 import autogen
 import numpy as np
 import pandas as pd
@@ -11,6 +12,7 @@ from sklearn.metrics import (accuracy_score, average_precision_score,
                              balanced_accuracy_score, confusion_matrix,
                              f1_score, log_loss, matthews_corrcoef,
                              precision_score, recall_score, roc_auc_score)
+
 
 def get_smiles_from_compound_name(compound_name):
     # First try to get SMILES from local file
