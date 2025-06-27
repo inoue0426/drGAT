@@ -107,7 +107,6 @@ def plot_heatmap(
     # --- Pivot for heatmap ---
     pivot = df.pivot_table(index="drug", columns="gene", values="num", aggfunc="sum")
     pivot = pivot.loc[(pivot.sum(axis=1) > 0), (pivot.sum() > 0)]
-    log_pivot = np.log1p(pivot)
 
     # --- Marker categories (based on model prediction vs DTI existence) ---
     predicted_df = df[df["rank"] <= 5]
@@ -154,6 +153,11 @@ def plot_heatmap(
         fn_missing["num"] = []
 
     fn = pd.concat([fn_df, fn_missing], ignore_index=True).drop_duplicates("key")
+
+    for i, j, k in zip(fn.drug, fn.gene, fn.num):
+        pivot.loc[i, j] = k
+    log_pivot = np.log1p(pivot)
+
 
     # --- Plotting ---
     base_cmap = plt.get_cmap("YlOrRd", 256)
