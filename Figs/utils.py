@@ -158,7 +158,6 @@ def plot_heatmap(
         pivot.loc[i, j] = k
     log_pivot = np.log1p(pivot)
 
-
     # --- Plotting ---
     base_cmap = plt.get_cmap("YlOrRd", 256)
     colors = base_cmap(np.linspace(0, 1, 256))
